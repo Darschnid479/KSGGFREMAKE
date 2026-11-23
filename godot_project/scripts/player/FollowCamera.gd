@@ -14,6 +14,7 @@ var yaw: float = 0.0
 var pitch: float = -0.32
 var distance: float = 9.5
 var top_down_mode: bool = false
+var side_2d_mode: bool = false
 var _rotating: bool = false
 
 @onready var spring_arm: SpringArm3D = $SpringArm3D
@@ -28,12 +29,13 @@ func _ready() -> void:
 		target = get_node_or_null(target_path)
 
 
-func set_target(node: Node3D, dist: float = 9.5, height: float = 2.6, is_top_down: bool = false) -> void:
+func set_target(node: Node3D, dist: float = 9.5, height: float = 2.6, is_top_down: bool = false, is_side_2d: bool = false) -> void:
 	target = node
 	default_distance = dist
 	distance = dist
 	follow_height = height
 	top_down_mode = is_top_down
+	side_2d_mode = is_side_2d
 	if top_down_mode:
 		# 1:1 originalt fugleperspektiv for verdenskartet (ovenfra ned på Den Sorte Dame og øyene)
 		pitch = -1.00
@@ -43,6 +45,15 @@ func set_target(node: Node3D, dist: float = 9.5, height: float = 2.6, is_top_dow
 			spring_arm.spring_length = distance
 		if camera:
 			camera.fov = 42.0
+	elif side_2d_mode:
+		# 1:1 originalt 2D side-scrolling undervannskamera (mapManager_swimming.ls: rett langs -Z!)
+		pitch = 0.0
+		yaw = 0.0
+		if spring_arm:
+			spring_arm.collision_mask = 0
+			spring_arm.spring_length = distance
+		if camera:
+			camera.fov = 52.0
 	else:
 		if spring_arm:
 			spring_arm.collision_mask = 1
@@ -54,14 +65,15 @@ func set_target(node: Node3D, dist: float = 9.5, height: float = 2.6, is_top_dow
 
 
 func _unhandled_input(event: InputEvent) -> void:
+	var lock_orbit := top_down_mode or side_2d_mode
 	if event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_RIGHT and not top_down_mode:
+		if event.button_index == MOUSE_BUTTON_RIGHT and not lock_orbit:
 			_rotating = event.pressed
 		elif event.button_index == MOUSE_BUTTON_WHEEL_UP and event.pressed:
 			distance = clampf(distance - (4.0 if top_down_mode else 1.2), min_distance, max_distance)
 		elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN and event.pressed:
 			distance = clampf(distance + (4.0 if top_down_mode else 1.2), min_distance, max_distance)
-	elif event is InputEventMouseMotion and not top_down_mode and (_rotating or Input.mouse_mode == Input.MOUSE_MODE_CAPTURED):
+	elif event is InputEventMouseMotion and not lock_orbit and (_rotating or Input.mouse_mode == Input.MOUSE_MODE_CAPTURED):
 		yaw -= event.relative.x * GameState.mouse_sensitivity
 		pitch = clampf(pitch - event.relative.y * GameState.mouse_sensitivity, -1.15, 0.25)
 
@@ -70,9 +82,11 @@ func _physics_process(delta: float) -> void:
 	if not is_instance_valid(target):
 		return
 	var desired := target.global_position + Vector3(0.0, follow_height, 0.0)
+	if side_2d_mode:
+		desired.z = 0.0
 	global_position = global_position.lerp(desired, clampf(delta * smooth_speed, 0.0, 1.0))
 
-	if not top_down_mode:
+	if not top_down_mode and not side_2d_mode:
 		if Input.is_key_pressed(KEY_Q):
 			yaw += 1.8 * delta
 		if Input.is_key_pressed(KEY_R):

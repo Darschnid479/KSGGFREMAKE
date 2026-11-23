@@ -78,6 +78,9 @@ var _boss_panel: PanelContainer
 var _boss_name_lbl: Label
 var _boss_bar: ProgressBar
 
+var _air_panel: PanelContainer
+var _air_bar: ProgressBar
+
 var _pause_panel: PanelContainer
 var _is_paused: bool = false
 
@@ -86,12 +89,14 @@ func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	_build_ui()
 	GameState.health_changed.connect(_on_health_changed)
+	GameState.air_changed.connect(_on_air_changed)
 	GameState.coins_changed.connect(_on_coins_changed)
 	GameState.dialogue_requested.connect(_on_dialogue_requested)
 	GameState.boss_health_changed.connect(_on_boss_health_changed)
 	GameState.level_change_requested.connect(_on_level_changed)
 
 	_on_health_changed(GameState.health, GameState.max_health)
+	_on_air_changed(GameState.air, GameState.max_air)
 	_on_coins_changed(GameState.coins)
 	_on_level_changed(GameState.current_level_id)
 
@@ -186,6 +191,41 @@ func _build_ui() -> void:
 	bfill.set_corner_radius_all(6)
 	_boss_bar.add_theme_stylebox_override("fill", bfill)
 	bv.add_child(_boss_bar)
+
+	# 3B. Undervanns-luftmåler (1:1 swimming_hud: kun synlig i 2D-svømmenivåer!)
+	_air_panel = PanelContainer.new()
+	_air_panel.set_anchors_preset(Control.PRESET_TOP_LEFT)
+	_air_panel.offset_left = 26
+	_air_panel.offset_right = 310
+	_air_panel.offset_top = 24
+	_air_panel.offset_bottom = 84
+	_air_panel.add_theme_stylebox_override("panel", _make_panel_style(Color(0.04, 0.14, 0.22, 0.90), Color(0.32, 0.86, 0.98, 0.95)))
+	_air_panel.visible = false
+	add_child(_air_panel)
+
+	var av := VBoxContainer.new()
+	av.add_theme_constant_override("separation", 4)
+	_air_panel.add_child(av)
+	var air_lbl := Label.new()
+	air_lbl.text = "LUFT"
+	air_lbl.add_theme_font_size_override("font_size", 14)
+	air_lbl.add_theme_color_override("font_color", Color(0.68, 0.96, 1.0))
+	av.add_child(air_lbl)
+
+	_air_bar = ProgressBar.new()
+	_air_bar.show_percentage = false
+	_air_bar.max_value = 100.0
+	_air_bar.value = 100.0
+	_air_bar.custom_minimum_size = Vector2(246, 16)
+	var abg := StyleBoxFlat.new()
+	abg.bg_color = Color(0.02, 0.08, 0.14, 0.95)
+	abg.set_corner_radius_all(6)
+	var afill := StyleBoxFlat.new()
+	afill.bg_color = Color(0.18, 0.84, 0.98)
+	afill.set_corner_radius_all(6)
+	_air_bar.add_theme_stylebox_override("background", abg)
+	_air_bar.add_theme_stylebox_override("fill", afill)
+	av.add_child(_air_bar)
 
 	# 4. Dialogboks (kun synlig når man snakker med karakterer)
 	_dialogue_panel = PanelContainer.new()
@@ -321,14 +361,23 @@ func _on_health_changed(cur: float, mx: float) -> void:
 		_medallion.set_ratio(cur / mx)
 
 
+func _on_air_changed(cur: float, mx: float) -> void:
+	if is_instance_valid(_air_bar) and mx > 0.0:
+		_air_bar.max_value = mx
+		_air_bar.value = cur
+
+
 func _on_coins_changed(coins: int) -> void:
 	if is_instance_valid(_coin_label):
 		_coin_label.text = "%d" % coins
 
 
-func _on_level_changed(_level_id: String) -> void:
+func _on_level_changed(level_id: String) -> void:
 	if is_instance_valid(_boss_panel):
 		_boss_panel.visible = false
+	if is_instance_valid(_air_panel):
+		var cfg := LevelCatalog.get_level(level_id)
+		_air_panel.visible = (str(cfg.get("mode", "")) == "swimming")
 
 
 func _on_dialogue_requested(speaker: String, lines: Array) -> void:

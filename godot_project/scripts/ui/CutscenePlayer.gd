@@ -43,8 +43,8 @@ const CUTSCENES := {
 		],
 	},
 	"graal_boss": {
-		"chapter": "KAPITTEL 4 – GRAL-BORGEN",
-		"title": "Greven av Gral på dragen",
+		"chapter": "KAPITTEL 4 – BRØNNEN PÅ GRAL",
+		"title": "Dragen løfter Pinky opp til borgen!",
 		"image": "res://assets/cutscenes/03_graal_dragon.jpg",
 		"music": "boss",
 		"mood": Color(1.0, 0.46, 0.14),
@@ -53,10 +53,10 @@ const CUTSCENES := {
 		"zoom_from": 1.05,
 		"zoom_to": 1.16,
 		"lines": [
-			"Etter klatreturen opp det forheksede Gral-fjellet når Pinky endelig toppen av den mørke borgen under fullmånen.",
-			"Plutselig flerrer et mektig brøl gjennom stormskyene – Greven av Gral stiger opp på sin ildsprutende drage!",
-			"«Ingen frekk liten sjørøver slipper levende fra borgen min!» tordner Greven av Gral over brystvernet.",
-			"Bruk katapulten og våpnene dine oppe på borgen for å beseire Greven av Gral og åpne veien til Fata Morgana!"
+			"Pinky bryter vannflaten opp fra den undersjøiske tunnelen i borggårdsbrønnen på Gral – rett under uværshimmelen!",
+			"Plutselig stuper en mektig ildsprutende drage ned fra tordenskyene med selveste Greven av Gral på ryggen!",
+			"Dragen griper Pinky rett opp av brønnen i de skarpe klørne sine og flyr ham høyt opp til brystvernet på toppen av Gral-borgen!",
+			"«Ingen frekk liten sjørøver slipper levende fra borgen min!» tordner Greven av Gral. Slå til katapulten med sverdet og beseire ham!"
 		],
 	},
 	"fatamorgana_arrival": {

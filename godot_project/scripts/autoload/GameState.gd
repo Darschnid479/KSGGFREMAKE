@@ -2,6 +2,7 @@ extends Node
 ## Global spilltilstand og 100% tro original historieprogresjon (port av gameManager.ls + inventoryManager.ls + serialisation.ls).
 
 signal health_changed(current: float, maximum: float)
+signal air_changed(current: float, maximum: float)
 signal coins_changed(coins: int)
 signal weapon_changed(weapon_id: String)
 signal objective_changed(text: String)
@@ -26,14 +27,17 @@ const CANONICAL_STORY_ORDER := [
 	"abra",
 	"world_map",
 	"graal_mountain",
+	"graal_underwater",
 	"graal_bosslevel",
 	"fatamorgana_city",
+	"fatamorgana_underwater",
 	"fatamorgana_palace",
 	"fatamorgana_bosslevel",
 	"magakhan_beach",
 	"magakhan_jungle",
 	"magakhan_palace",
 	"magakhan_dungeon",
+	"magakhan_dungeon_underwater",
 	"magakhan_endboss_level",
 	"cave_end",
 	"cave_end_bosslevel",
@@ -53,6 +57,8 @@ const LEVEL_CUTSCENES := {
 var current_level_id: String = "cave"
 var max_health: float = 100.0
 var health: float = 100.0
+var max_air: float = 100.0
+var air: float = 100.0
 var coins: int = 25
 var equipped_weapon: String = "sword"
 var unlocked_weapons: Array[String] = ["woodensword", "sword", "slingshot", "lamp", "goldsword", "rapier"]
@@ -196,6 +202,12 @@ func heal(amount: float) -> void:
 	health = clampf(health + amount, 0.0, max_health)
 	emit_signal("health_changed", health, max_health)
 	AudioManager.play_sfx("pickup")
+
+
+func set_air(cur: float, mx: float = 100.0) -> void:
+	max_air = maxf(mx, 1.0)
+	air = clampf(cur, 0.0, max_air)
+	emit_signal("air_changed", air, max_air)
 
 
 func equip_weapon(weapon_id: String) -> void:

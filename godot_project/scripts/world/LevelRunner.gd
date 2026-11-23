@@ -5,12 +5,14 @@ class_name LevelRunner
 
 const PINKY_SCRIPT := preload("res://scripts/player/PinkyController.gd")
 const BOAT_SCRIPT := preload("res://scripts/player/BoatController.gd")
+const SWIMMER_SCRIPT := preload("res://scripts/player/SwimmingController.gd")
 const CAMERA_SCRIPT := preload("res://scripts/player/FollowCamera.gd")
 const NPC_SCRIPT := preload("res://scripts/world/NpcActor.gd")
 const ENEMY_SCRIPT := preload("res://scripts/world/EnemyActor.gd")
 const PORTAL_SCRIPT := preload("res://scripts/world/PortalTrigger.gd")
 const COIN_SCRIPT := preload("res://scripts/world/CollectibleCoin.gd")
 const BARREL_SCRIPT := preload("res://scripts/world/BreakableBarrel.gd")
+const HAZARD_SCRIPT := preload("res://scripts/world/UnderwaterHazard.gd")
 const CUTSCENE_SCRIPT := preload("res://scripts/ui/CutscenePlayer.gd")
 const OCEAN_SHADER := preload("res://shaders/ocean_water.gdshader")
 const ISLAND_TERRAIN_SHADER := preload("res://shaders/island_terrain.gdshader")
@@ -85,6 +87,9 @@ func load_level(level_id: String) -> void:
 		_spawn_world_map_seabed()
 		_build_world_map_islands()
 		_spawn_modern_ocean(0.0, level_bounds, true)
+	elif mode == "swimming":
+		# 1:1 2D side-scrolling undervanns-svømmenivå (graal_underwater, fatamorgana_underwater, magakhan_dungeon_underwater, world_map_underwater!)
+		level_bounds = _load_underwater_world(str(cfg.get("w3d", level_id)))
 	else:
 		# 2. Last original HD .glb nivå-geometri med automatisk kollisjon og AAA PBR-oppgradering
 		level_bounds = _load_level_geometry(str(cfg.get("w3d", level_id)), water_y)
@@ -93,20 +98,29 @@ func load_level(level_id: String) -> void:
 		if bool(cfg.get("has_water", false)):
 			_spawn_modern_ocean(water_y, level_bounds, false)
 
-	# 4. Les originale gameplay-data (spawns, NPC-er, fiender, portaler)
+	# 4. Les originale gameplay-data (spawns, NPC-er, fiender, portaler, 2D-svømmehindre)
 	var gp_data := _read_gameplay_json(level_id)
+	if gp_data.is_empty() and level_id == "world_map_underwater":
+		gp_data = _read_gameplay_json("world_map_underwater1")
 
 	# 5. Opprett kamera-rigg
 	_camera_rig = _create_camera_rig()
 	_world_root.add_child(_camera_rig)
 
-	# 6. Spawn spiller (Pinky eller Den Sorte Dame på verdenskartet)
+	# 6. Spawn spiller (Pinky i 3D, Pinky i 2D-svømming, eller Den Sorte Dame på verdenskartet)
 	if mode == "boat":
 		_player_node = _spawn_boat(Vector3(0.0, 0.0, 8.0))
-		_camera_rig.set_target(_player_node, 74.0, 2.0, true)
+		_camera_rig.set_target(_player_node, 74.0, 2.0, true, false)
+	elif mode == "swimming":
+		_build_underwater_spline_walls(gp_data)
+		var swim_pos := _find_swimmer_spawn(level_id, gp_data)
+		_player_node = _spawn_swimmer(swim_pos)
+		var cam_dist := 14.5 if "world_map" in level_id else 11.8
+		_camera_rig.set_target(_player_node, cam_dist, 0.35, false, true)
+		_populate_underwater_entities(level_id, cfg, gp_data)
 	else:
 		var spawn_pos := _find_player_spawn(level_id, gp_data, level_bounds)
-		_player_node = _spawn_pinky(spawn_pos, mode == "swimming")
+		_player_node = _spawn_pinky(spawn_pos, false)
 		if level_id == "graal_bosslevel":
 			_camera_rig.set_target(_player_node, 3.8, 1.75, false)
 			_camera_rig.yaw = -1.52
@@ -142,14 +156,15 @@ func _setup_modern_environment(cfg: Dictionary) -> void:
 	var env := Environment.new()
 	var is_cave := current_level_id in ["cave", "cave_end", "cave_end_bosslevel", "magakhan_dungeon"]
 	var is_graal := current_level_id in ["graal_bosslevel", "graal_mountain"]
+	var is_swim := str(cfg.get("mode", "")) == "swimming"
 
 	env.background_mode = Environment.BG_SKY
 	env.sky = VisualEnhancer.create_biome_sky(current_level_id, cfg)
 
-	if is_cave:
+	if is_cave or is_swim:
 		env.ambient_light_source = Environment.AMBIENT_SOURCE_COLOR
-		env.ambient_light_color = cfg.get("ambient_color", Color(0.10, 0.28, 0.24))
-		env.ambient_light_energy = float(cfg.get("ambient_energy", 0.55))
+		env.ambient_light_color = cfg.get("ambient_color", Color(0.10, 0.36, 0.48))
+		env.ambient_light_energy = float(cfg.get("ambient_energy", 0.80 if is_swim else 0.55))
 	else:
 		env.ambient_light_source = Environment.AMBIENT_SOURCE_SKY
 		env.ambient_light_sky_contribution = 0.78
@@ -158,7 +173,7 @@ func _setup_modern_environment(cfg: Dictionary) -> void:
 
 	# Moderne AAA animasjons-pipeline: AgX tonemapping + SSAO + SSIL indirekte lys + Glow + Volumetrisk tåke!
 	env.tonemap_mode = Environment.TONE_MAPPER_AGX
-	env.tonemap_exposure = 1.10 if not is_cave else 1.05
+	env.tonemap_exposure = 1.12 if is_swim else (1.10 if not is_cave else 1.05)
 	env.ssao_enabled = GameState.ssao_enabled
 	env.ssao_radius = 1.65
 	env.ssao_intensity = 1.70
@@ -172,24 +187,24 @@ func _setup_modern_environment(cfg: Dictionary) -> void:
 
 	env.glow_enabled = GameState.glow_enabled
 	env.glow_normalized = true
-	env.glow_intensity = 0.42
-	env.glow_bloom = 0.16
-	env.glow_hdr_threshold = 1.18
+	env.glow_intensity = 0.45 if is_swim else 0.42
+	env.glow_bloom = 0.18 if is_swim else 0.16
+	env.glow_hdr_threshold = 1.15
 
 	env.fog_enabled = GameState.fog_enabled
 	env.fog_light_color = cfg.get("fog_color", Color(0.62, 0.78, 0.94))
 	env.fog_density = float(cfg.get("fog_density", 0.0011))
-	env.fog_sky_affect = 0.08 if is_graal else (0.28 if is_cave else 0.14)
+	env.fog_sky_affect = 0.08 if is_graal else (0.35 if is_swim else (0.28 if is_cave else 0.14))
 
-	# Volumetrisk tåke for magisk dybde og lysstråler i grottene og på Gral-borgen!
-	if GameState.volumetric_fog_enabled and (is_cave or is_graal):
+	# Volumetrisk tåke for magisk dybde og lysstråler i grottene, under vann og på Gral-borgen!
+	if GameState.volumetric_fog_enabled and (is_cave or is_graal or is_swim):
 		env.volumetric_fog_enabled = true
-		env.volumetric_fog_density = 0.022 if is_cave else 0.008
-		env.volumetric_fog_albedo = Color(0.24, 0.85, 0.64) if "end" in current_level_id else Color(0.38, 0.48, 0.72)
-		env.volumetric_fog_emission = Color(0.04, 0.18, 0.13) if "end" in current_level_id else Color(0.03, 0.04, 0.08)
-		env.volumetric_fog_emission_energy = 0.45 if is_cave else 0.25
+		env.volumetric_fog_density = 0.018 if is_swim else (0.022 if is_cave else 0.008)
+		env.volumetric_fog_albedo = Color(0.18, 0.72, 0.88) if is_swim else (Color(0.24, 0.85, 0.64) if "end" in current_level_id else Color(0.38, 0.48, 0.72))
+		env.volumetric_fog_emission = Color(0.02, 0.14, 0.22) if is_swim else (Color(0.04, 0.18, 0.13) if "end" in current_level_id else Color(0.03, 0.04, 0.08))
+		env.volumetric_fog_emission_energy = 0.35 if is_swim else (0.45 if is_cave else 0.25)
 		env.volumetric_fog_anisotropy = 0.62
-		env.volumetric_fog_length = 55.0
+		env.volumetric_fog_length = 48.0 if is_swim else 55.0
 
 	env.adjustment_enabled = true
 	env.adjustment_contrast = 1.08
@@ -567,6 +582,14 @@ func _build_world_map_islands() -> void:
 		portal.position = (isl["pos"] as Vector3) + Vector3(0.0, 0.25, r * 0.95 + 2.8)
 		_world_root.add_child(portal)
 
+	# 1:1 original dykkebøye ute på havet (world_map_underwater1..10 skipsvrak-dykk i 2D!)
+	var dive_buoy: PortalTrigger = PORTAL_SCRIPT.new()
+	dive_buoy.is_world_map_buoy = true
+	dive_buoy.target_level_id = "world_map_underwater"
+	dive_buoy.portal_label = "Dykk til skipsvraket (2D)"
+	dive_buoy.position = Vector3(-9.5, 0.25, 11.5)
+	_world_root.add_child(dive_buoy)
+
 	# Plasser 2 originale fiendeskip fra world_map.glb ute på havet med skummende kjølvann!
 	if ResourceLoader.exists("res://assets/levels/world_map.glb"):
 		var sc := load("res://assets/levels/world_map.glb") as PackedScene
@@ -790,13 +813,32 @@ func _populate_entities(level_id: String, cfg: Dictionary, gp_data: Dictionary, 
 	var next_info := LevelCatalog.get_level(next_id)
 	var portal: PortalTrigger = PORTAL_SCRIPT.new()
 	portal.target_level_id = next_id
-	portal.portal_label = "Reis til " + str(next_info.get("title", next_id))
+	if level_id == "graal_mountain":
+		portal.portal_label = "Hopp i brønnen → Undervannstunnel (2D)"
+	else:
+		portal.portal_label = "Reis til " + str(next_info.get("title", next_id))
 	var portal_raw := spawn_pos + Vector3(6.5, 2.0, -5.5)
 	if level_id == "graal_bosslevel":
 		portal_raw = Vector3(-6.2, 26.5, -5.5)
 	var phit := _raycast_ground(portal_raw, bounds)
 	portal.position = (phit + Vector3(0.0, 0.25, 0.0)) if phit.y > -5000.0 else spawn_pos + Vector3(6.0, 0.25, -5.0)
 	_world_root.add_child(portal)
+
+	# 1:1 originale undervanns-brønner (2D side-scrolling dykk!) i Fata Morgana og Maga Khans fangehull
+	if level_id == "fatamorgana_city":
+		var well_p: PortalTrigger = PORTAL_SCRIPT.new()
+		well_p.target_level_id = "fatamorgana_underwater"
+		well_p.portal_label = "Dykk i brønnen etter kaken (2D)"
+		var wh := _raycast_ground(spawn_pos + Vector3(-5.5, 2.5, -4.5), bounds)
+		well_p.position = (wh + Vector3(0.0, 0.25, 0.0)) if wh.y > -5000.0 else spawn_pos + Vector3(-5.5, 0.25, -4.5)
+		_world_root.add_child(well_p)
+	elif level_id == "magakhan_dungeon":
+		var key_p: PortalTrigger = PORTAL_SCRIPT.new()
+		key_p.target_level_id = "magakhan_dungeon_underwater"
+		key_p.portal_label = "Dykk etter fangehullsnøkkelen (2D)"
+		var kh := _raycast_ground(spawn_pos + Vector3(-5.5, 2.5, -4.5), bounds)
+		key_p.position = (kh + Vector3(0.0, 0.25, 0.0)) if kh.y > -5000.0 else spawn_pos + Vector3(-5.5, 0.25, -4.5)
+		_world_root.add_child(key_p)
 
 	# Plasser pregede dubloner og håndlagde eiketønner KUN på flatt, tørt dekke (normal.y > 0.88)!
 	var min_dry_y: float = float(cfg.get("water_y", -99.0)) + 0.45 if bool(cfg.get("has_water", false)) else -999.0
@@ -825,6 +867,232 @@ func _populate_entities(level_id: String, cfg: Dictionary, gp_data: Dictionary, 
 					var barrel: BreakableBarrel = BARREL_SCRIPT.new()
 					barrel.position = hit_pos
 					_world_root.add_child(barrel)
+
+
+# ==============================================================================
+# 1:1 2D SIDE-SCROLLING UNDERVANNS-SVØMMING (graal_underwater, fatamorgana_underwater,
+# magakhan_dungeon_underwater, world_map_underwater)
+# ==============================================================================
+
+func _load_underwater_world(w3d_name: String) -> AABB:
+	var bounds := AABB(Vector3(-26, -20, -14), Vector3(52, 42, 18))
+	var glb_path := "res://assets/levels/%s.glb" % w3d_name
+	if ResourceLoader.exists(glb_path):
+		var scene := load(glb_path) as PackedScene
+		if scene:
+			var inst := scene.instantiate()
+			inst.name = "UnderwaterGeometry_" + w3d_name
+			_world_root.add_child(inst)
+			var all_meshes := _find_all_meshes(inst)
+			var first := true
+			for mi in all_meshes:
+				if mi.mesh == null:
+					continue
+				var aabb := mi.global_transform * mi.get_aabb()
+				if first:
+					bounds = aabb
+					first = false
+				else:
+					bounds = bounds.merge(aabb)
+			VisualEnhancer.enhance_world_node(inst, "cave", -999.0)
+
+	# Dyp havblå bakgrunnsvegg bak undervannstunnelen slik at himmelen aldri skinner gjennom baksiden
+	var bg := MeshInstance3D.new()
+	bg.name = "UnderwaterBackdrop"
+	var pm := PlaneMesh.new()
+	pm.size = Vector2(120.0, 90.0)
+	bg.mesh = pm
+	bg.position = Vector3(bounds.get_center().x, bounds.get_center().y, -6.5)
+	bg.rotation_degrees.x = 90.0
+	var bg_mat := StandardMaterial3D.new()
+	bg_mat.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
+	bg_mat.albedo_color = Color(0.015, 0.14, 0.24)
+	bg.material_override = bg_mat
+	_world_root.add_child(bg)
+
+	# Ekte volumetriske undervanns-lyskjegler (SpotLight3D) som skinner ned brønnsjaktene uten harde kanter!
+	for rx in [-12.5, -0.4, 11.0]:
+		var sl := SpotLight3D.new()
+		sl.position = Vector3(rx, 13.0, 1.5)
+		sl.rotation_degrees = Vector3(-86.0, 0.0, 0.0)
+		sl.light_color = Color(0.42, 0.92, 1.0)
+		sl.light_energy = 7.5
+		sl.light_volumetric_fog_energy = 2.6
+		sl.spot_range = 24.0
+		sl.spot_angle = 28.0
+		sl.spot_attenuation = 0.75
+		sl.shadow_enabled = false
+		_world_root.add_child(sl)
+
+	# Myke flytende undervanns-støvpartikler og lysende plankton
+	VisualEnhancer.spawn_ambient_particles(_world_root, Vector3(0.0, 0.0, 0.0), "cave_end")
+	return bounds
+
+
+func _find_swimmer_spawn(level_id: String, gp_data: Dictionary) -> Vector3:
+	for n in gp_data.get("nodes", []):
+		if str(n.get("name", "")).to_lower() == "swimmer_pinky":
+			var sp: Array = n.get("sw_pos", [0, 0, 0])
+			return Vector3(float(sp[0]) * WORLD_SCALE, float(sp[1]) * WORLD_SCALE - 3.0, 0.0)
+	if level_id == "graal_underwater":
+		return Vector3(-12.8, 5.5, 0.0)
+	return Vector3(0.0, 2.0, 0.0)
+
+
+func _spawn_swimmer(pos: Vector3) -> CharacterBody3D:
+	var sw: SwimmingController = SWIMMER_SCRIPT.new()
+	sw.name = "PinkySwimmer"
+	sw.position = Vector3(pos.x, pos.y, 0.0)
+	sw.camera_rig = _camera_rig
+
+	var col := CollisionShape3D.new()
+	var sph := SphereShape3D.new()
+	sph.radius = 0.65
+	col.shape = sph
+	sw.add_child(col)
+
+	_world_root.add_child(sw)
+	return sw
+
+
+func _build_underwater_spline_walls(gp_data: Dictionary) -> void:
+	# Konverter originalspillets 2D XY-splines (Line01..03 + Circle01..06) direkte til ekte kollisjonsvegger!
+	var body := StaticBody3D.new()
+	body.name = "UnderwaterSplineCollision"
+	_world_root.add_child(body)
+
+	var re_vec := RegEx.new()
+	re_vec.compile("vector\\(([\\-\\d.]+),([\\-\\d.]+),([\\-\\d.]+)\\)")
+	var re_rad := RegEx.new()
+	re_rad.compile("#radius:([\\d.]+)")
+
+	for n in gp_data.get("nodes", []):
+		var ud := str(n.get("userdata", ""))
+		if "#linearSplines" in ud:
+			var pts: Array[Vector2] = []
+			for m in re_vec.search_all(ud):
+				pts.append(Vector2(float(m.get_string(1)) * WORLD_SCALE, float(m.get_string(2)) * WORLD_SCALE))
+			for i in range(pts.size() - 1):
+				var a := pts[i]
+				var b := pts[i + 1]
+				var seg := b - a
+				var seg_len := seg.length()
+				if seg_len < 0.1:
+					continue
+				var cs := CollisionShape3D.new()
+				var bx := BoxShape3D.new()
+				bx.size = Vector3(seg_len + 0.35, 0.55, 4.0)
+				cs.shape = bx
+				var mid := (a + b) * 0.5
+				cs.position = Vector3(mid.x, mid.y, 0.0)
+				cs.rotation.z = atan2(seg.y, seg.x)
+				body.add_child(cs)
+		elif "#type:#circle" in ud and not ("3dsound" in str(n.get("name", "")).to_lower()):
+			var rm := re_rad.search(ud)
+			var vm := re_vec.search(ud)
+			if rm and vm:
+				var rad := float(rm.get_string(1)) * WORLD_SCALE * 0.85
+				var cx := float(vm.get_string(1)) * WORLD_SCALE
+				var cy := float(vm.get_string(2)) * WORLD_SCALE
+				var cs := CollisionShape3D.new()
+				var sph := SphereShape3D.new()
+				sph.radius = maxf(rad, 0.4)
+				cs.shape = sph
+				cs.position = Vector3(cx, cy, 0.0)
+				body.add_child(cs)
+
+
+func _populate_underwater_entities(level_id: String, cfg: Dictionary, gp_data: Dictionary) -> void:
+	var next_id := str(cfg.get("next_level", "world_map"))
+	var ret_id := str(cfg.get("return_level", next_id))
+	var has_bubbles := false
+	var has_exit := false
+
+	for n in gp_data.get("nodes", []):
+		var nm := str(n.get("name", "")).to_lower()
+		var sp: Array = n.get("sw_pos", [0, 0, 0])
+		var pos := Vector3(float(sp[0]) * WORLD_SCALE, float(sp[1]) * WORLD_SCALE, 0.0)
+
+		if nm == "bubbles" or nm == "bubbles3" or nm == "bubbles4" or (nm.begins_with("areatrigger_air") and not has_bubbles):
+			if nm.begins_with("areatrigger_air"):
+				pos.y -= 7.5
+			var bub: UnderwaterHazard = HAZARD_SCRIPT.new()
+			bub.kind = "bubble_column"
+			bub.column_height = 12.5
+			bub.position = pos
+			_world_root.add_child(bub)
+			has_bubbles = true
+		elif nm.begins_with("mine_"):
+			var mine: UnderwaterHazard = HAZARD_SCRIPT.new()
+			mine.kind = "mine"
+			mine.position = pos
+			_world_root.add_child(mine)
+		elif nm.begins_with("shark_"):
+			var sh: UnderwaterHazard = HAZARD_SCRIPT.new()
+			sh.kind = "shark"
+			sh.patrol_range = 6.5
+			sh.patrol_speed = 3.2
+			sh.position = pos
+			_world_root.add_child(sh)
+		elif nm.begins_with("piraya_"):
+			var pr: UnderwaterHazard = HAZARD_SCRIPT.new()
+			pr.kind = "piraya"
+			pr.patrol_range = 4.2
+			pr.patrol_speed = 3.8
+			pr.position = pos
+			_world_root.add_child(pr)
+		elif nm.begins_with("object_coppercoin") or nm.begins_with("object_goldcoin"):
+			var coin: CollectibleCoin = COIN_SCRIPT.new()
+			coin.position = pos
+			_world_root.add_child(coin)
+		elif nm == "walkoverpickup_cake":
+			var pk: UnderwaterHazard = HAZARD_SCRIPT.new()
+			pk.kind = "pickup"
+			pk.pickup_flag = "wellcake"
+			pk.pickup_label = "brønnkaken i Fata Morgana"
+			pk.position = pos
+			_world_root.add_child(pk)
+		elif nm == "walkoverpickup_key2":
+			var pk: UnderwaterHazard = HAZARD_SCRIPT.new()
+			pk.kind = "pickup"
+			pk.pickup_flag = "key2"
+			pk.pickup_label = "fangehullsnøkkelen"
+			pk.position = pos
+			_world_root.add_child(pk)
+		elif nm == "areatrigger_leave":
+			var ex: UnderwaterHazard = HAZARD_SCRIPT.new()
+			ex.kind = "exit"
+			ex.target_level_id = next_id
+			ex.position = pos
+			_world_root.add_child(ex)
+			has_exit = true
+		elif nm == "areatrigger_leave2":
+			var ex2: UnderwaterHazard = HAZARD_SCRIPT.new()
+			ex2.kind = "exit"
+			ex2.target_level_id = ret_id
+			ex2.position = pos
+			_world_root.add_child(ex2)
+
+	# Sørg for luftbobler, skattkiste og utgang også i world_map_underwater!
+	if not has_bubbles:
+		var bub: UnderwaterHazard = HAZARD_SCRIPT.new()
+		bub.kind = "bubble_column"
+		bub.column_height = 14.0
+		bub.position = Vector3(-0.1, -6.2, 0.0)
+		_world_root.add_child(bub)
+	if "world_map" in level_id:
+		var chest: UnderwaterHazard = HAZARD_SCRIPT.new()
+		chest.kind = "pickup"
+		chest.pickup_flag = "underwater_treasure"
+		chest.pickup_label = "den sunkne sjørøverskatten"
+		chest.position = Vector3(2.5, -9.5, 0.0)
+		_world_root.add_child(chest)
+	if not has_exit:
+		var ex: UnderwaterHazard = HAZARD_SCRIPT.new()
+		ex.kind = "exit"
+		ex.target_level_id = next_id
+		ex.position = Vector3(0.0, 12.5, 0.0)
+		_world_root.add_child(ex)
 
 
 func _raycast_ground(pos: Vector3, bounds: AABB) -> Vector3:

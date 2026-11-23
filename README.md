@@ -17,8 +17,10 @@ En moderne, frittstående **Godot 4 (Forward+ PBR)** nyversjon (*recompile / HD 
 | Abra Havn – ombord på *Den Sorte Dame* | De Syv Hav – Verdenskartet |
 | :---: | :---: |
 | ![Abra Havn](docs/screenshots/02_abra_havn.png) | ![Verdenskartet](docs/screenshots/03_world_map_sailing.png) |
-| **Fata Morgana – Ørkenbyen** | **Gral – Bosskamp mot Greven av Gral på dragen** |
-| ![Fata Morgana](docs/screenshots/04_fatamorgana_city.png) | ![Gral Bossarena](docs/screenshots/05_graal_bosslevel.png) |
+| **Gral – 2D Undervanns-svømming i brønnen** | **Dragen løfter Pinky opp av brønnen til borgen** |
+| ![Gral 2D Undervannsbrønn](docs/screenshots/08_graal_underwater_2d.png) | ![Dragen løfter Pinky fra brønnen](docs/screenshots/09_graal_well_dragon_cutscene.png) |
+| **Gral – Bosskamp mot Greven av Gral på dragen** | **Fata Morgana – Ørkenbyen** |
+| ![Gral Bossarena](docs/screenshots/05_graal_bosslevel.png) | ![Fata Morgana](docs/screenshots/04_fatamorgana_city.png) |
 | **Finalen – Grusomme Gabriels spøkelse** | **Oppskalerte animerte historie-filmsekvenser** |
 | ![Grusomme Gabriels finale](docs/screenshots/06_grusomme_gabriel_finale.png) | ![Animert filmsekvens](docs/screenshots/07_animated_cutscene.png) |
 
@@ -28,38 +30,41 @@ En moderne, frittstående **Godot 4 (Forward+ PBR)** nyversjon (*recompile / HD 
 
 - **Moderne AAA animasjonsspill-grafikk (Godot 4.7 Forward+ PBR):**
   - **AgX Filmic tonemapping**, **SSAO**, **SSIL (sanntids indirekte bounce-lys)**, **Volumetrisk tåke**, **4K PCF5 myke skygger**, **MSAA 4x** og 16x anisotropisk filtrering.
-  - **Malte volumetriske skyhimler** ([`stylized_sky.gdshader`](godot_project/shaders/stylized_sky.gdshader) & [`storm_sky.gdshader`](godot_project/shaders/storm_sky.gdshader)) som erstatter originalens gamle 2005-bakgrunnskupler med gyllen solnedgang, karibiske skyer og månelyst uvær over Gral-borgen.
-  - **Neste-generasjons skumhav** ([`ocean_water.gdshader`](godot_project/shaders/ocean_water.gdshader) & [`ship_wake.gdshader`](godot_project/shaders/ship_wake.gdshader)) med ekte `DEPTH_TEXTURE`-absorpsjon (turkis grunne → safirblått dyp), automatisk hvitt kystskum rundt bryggestolper og øystrender, undervanns-kaustikk, solglimt og organiske V-kjølvann bak skipene.
-  - **Triplanar PBR mikrodetalj & Pixar karakter-kantglød** ([`world_pbr_enhance.gdshader`](godot_project/shaders/world_pbr_enhance.gdshader) & [`VisualEnhancer.gd`](godot_project/scripts/world/VisualEnhancer.gd)): skarpe nærdetaljer på treverk, stein og grotter, våt glans langs vannlinjen, varme glødende husvinduer, brennende smijerns-fakkelfat på Gral-borgen, håndlagde buede eiketønner og pregede 3D-gullmynter.
+  - **Malte volumetriske skyhimler** ([`stylized_sky.gdshader`](godot_project/shaders/stylized_sky.gdshader) & [`storm_sky.gdshader`](godot_project/shaders/storm_sky.gdshader)) + skummel normalmappet gotisk fjellkjede, forankrede ruin-vakttårn og forgrenede 3D-lynnedslag bak Gral-borgen.
+  - **Neste-generasjons skumhav & skulpturerte øyer** ([`ocean_water.gdshader`](godot_project/shaders/ocean_water.gdshader), [`island_terrain.gdshader`](godot_project/shaders/island_terrain.gdshader) & [`ship_wake.gdshader`](godot_project/shaders/ship_wake.gdshader)) med ekte `DEPTH_TEXTURE`-absorpsjon, automatisk kystskum, bratte klippeterrasser og organiske V-kjølvann.
+  - **Triplanar PBR mikrodetalj & Pixar karakter-kantglød** ([`world_pbr_enhance.gdshader`](godot_project/shaders/world_pbr_enhance.gdshader) & [`VisualEnhancer.gd`](godot_project/scripts/world/VisualEnhancer.gd)): skarpe nærdetaljer på treverk, stein og grotter, varme vinduer, brennende smijerns-fakkelfat, håndlagde eiketønner og pregede 3D-gullmynter.
 - **4x Oppskalerte HD-teksturer + automatisk PBR-syntese:**
-  - **14 originale 3D-verdener (177 MB)** og **22 karaktermodeller (24 MB)** konvertert fra Shockwave 3D (`.w3d`) til moderne glTF 2.0 (`.glb`) med 4x oppskalering, Normal Maps og ORM-kart, samt fikset T-pose på alle 19 humanoide karakterer og Greven av Gral på dragen.
+  - **18 originale 3D- og 2D-undervannsverdener** (inkludert `graal_underwater`, `fatamorgana_underwater`, `magakhan_dungeon_underwater` og `world_map_underwater`) og **22 karaktermodeller** konvertert fra Shockwave 3D (`.w3d`) til moderne glTF 2.0 (`.glb`) med 4x oppskalering, Normal Maps og ORM-kart, samt fikset T-pose på alle 19 humanoide karakterer og Greven av Gral på dragen.
+- **Komplett 1:1 2D side-scrolling undervanns-svømming (`SwimmingController.gd` + `UnderwaterHazard.gd`):**
+  - Tro port av originalens `mapManager_swimming.ls` og `swimmer.ls`: 2D XY-svømmekontroll med ekte originale spline-tunnelvegger, **luftmåler (`LUFT`)** i HUD, stigende luftboblesøyler, sjøminer, patruljerende haier og pirajaer, brønnkaken (`wellcake`), fangehullsnøkkelen (`key2`) og sunkne skattkister!
 - **100 % original historieflyt + 7 oppskalerte animerte historie-filmsekvenser:**
-  - Følger den eksakte originale historien steg-for-steg fra `gameplayw3ds/*.w3d` – fra forbannelsen slippes løs i **Grusomme Gabriels grotte**, via **Abra Havn** (Miriams spådom), **Gral**, **Fata Morgana** og **Maga Khans øy**, helt til oppgjøret mot **Grusomme Gabriels spøkelse** og seiersseilasen i **Outro**.
-  - [`CutscenePlayer.gd`](godot_project/scripts/ui/CutscenePlayer.gd) spiller automatisk av **7 oppskalerte Pixar-stil 2.5D animerte filmsekvenser** (med Ken Burns kamera-panorering, sanntids lyspartikkel-shader, 2.39:1 filmstriper, norsk fortellertekst og original musikk) ved hvert hovedkapittel.
+  - Følger den eksakte originale historien steg-for-steg fra `gameplayw3ds/*.w3d` – inkludert hoppet ned i brønnen på Gral, 2D-svømmetunnelen og dragen med Greven av Gral som løfter Pinky rett opp av brønnen og flyr ham opp til Gral-borgen!
+  - [`CutscenePlayer.gd`](godot_project/scripts/ui/CutscenePlayer.gd) spiller automatisk av **7 oppskalerte Pixar-stil 2.5D animerte filmsekvenser** (med autentisk Kaptein Sabeltann i hvit sminke, hatt og uniform, Ken Burns kamera-panorering, sanntids lyspartikler og norsk fortellertekst).
 - **Original musikk og lydeffekter:** **92 rene OGG-lydspor og bakgrunnsmusikk** ekstrahert fra spillets originale `.cct`-arkiver for alle biomer (renset for russisk dubbing).
 
 ---
 
 ## 100 % Original historierekkefølge (fra start til slutt)
 
-| # | Kapittel / Nivå | Historie & Animert filmsekvens |
+| # | Kapittel / Nivå | Historie, 2D-dykk & Animert filmsekvens |
 |---:|---|---|
 | 1 | **Grusomme Gabriels grotte** (`cave`) | *Filmsekvens 1:* Kisten åpnes og forbannelsen slippes løs! |
 | 2 | **Abra Havn** (`abra`) | *Filmsekvens 2:* Miriam av Gral avslører de 3 øyene i krystallkulen |
-| 3 | **De Syv Hav – Verdenskartet** (`world_map`) | Seil *Den Sorte Dame* ovenfra mot neste opplåste historie-øy |
-| 4 | **Gral-fjellet** (`graal_mountain`) | Klatretur med Pelle opp det forheksede fjellet til borgen |
-| 5 | **Gral – Bosskamp** (`graal_bosslevel`) | *Filmsekvens 3:* Bosskamp oppe på borgen mot Greven av Gral på dragen |
-| 6 | **Fata Morgana – Byen** (`fatamorgana_city`) | *Filmsekvens 4:* Ørkenbyen, kakeoppdrag, kappkjøring og flygende teppe |
-| 7 | **Fata Morgana – Palasset** (`fatamorgana_palace`) | Mørke haller, flisgåte og nøkkeljakten mot palassvokteren |
-| 8 | **Fata Morgana – Bosskamp** (`fatamorgana_bosslevel`) | Oppgjøret i ørkenarenaen – låser opp Maga Khans øy |
-| 9 | **Maga Khans strand** (`magakhan_beach`) | Landgang, Skalkens kokosnøtter, Malena Pirat og Benjamin |
-| 10 | **Maga Khans jungel** (`magakhan_jungle`) | Panterfelle, kjøttetende plante og redning av Langemann |
-| 11 | **Maga Khans palass** (`magakhan_palace`) | Storming av festningen og jakten på de 5 hellige gongene |
-| 12 | **Maga Khans fangehull** (`magakhan_dungeon`) | Blå flammer, spaker, nøkkeldykk og møtet med Sirikit |
-| 13 | **Maga Khans drage – Sluttkamp** (`magakhan_endboss_level`) | *Filmsekvens 5:* Sabeltann mot Maga Khan mens Pinky distraherer dragen |
-| 14 | **Tilbake til Gabriels grotte** (`cave_end`) | Siste kamp gjennom skjelettvaktene til skattkammeret |
-| 15 | **Grusomme Gabriels spøkelse – Finale** (`cave_end_bosslevel`) | *Filmsekvens 6:* Finalen mot Grusomme Gabriels gjenferd og vokterstatuene |
-| 16 | **Forbannelsen er brutt! (Outro)** (`outro`) | *Filmsekvens 7:* Seiersseilas mot solnedgangen → fritt spill, Skattejakt-øya & Undervannsdykk |
+| 3 | **De Syv Hav – Verdenskartet** (`world_map`) | Seil *Den Sorte Dame* ovenfra + **2D skipsvrak-dykk** (`world_map_underwater`) blant haier & pirajaer |
+| 4 | **Gral-fjellet** (`graal_mountain`) | Klatretur med Pelle opp det forheksede fjellet til **brønnen (`actionable_well`)** |
+| 5 | **Gral – Undervannsbrønnen (2D)** (`graal_underwater`) | **2D side-scrolling undervanns-svømming** gjennom U-tunnelen med luftmåler og boblesøyle! |
+| 6 | **Gral – Bosskamp** (`graal_bosslevel`) | *Filmsekvens 3:* **Dragen med Greven av Gral løfter Pinky rett opp av brønnen og flyr ham opp til borgen** → Bosskamp med sverd & katapult! |
+| 7 | **Fata Morgana – Byen & Brønndykk (2D)** (`fatamorgana_city` / `fatamorgana_underwater`) | *Filmsekvens 4:* Ørkenbyen, **2D brønndykk etter kaken (`wellcake`)**, kappkjøring og flygende teppe |
+| 8 | **Fata Morgana – Palasset** (`fatamorgana_palace`) | Mørke haller, flisgåte og nøkkeljakten mot palassvokteren |
+| 9 | **Fata Morgana – Bosskamp** (`fatamorgana_bosslevel`) | Oppgjøret i ørkenarenaen – låser opp Maga Khans øy |
+| 10 | **Maga Khans strand** (`magakhan_beach`) | Landgang, Skalkens kokosnøtter, Malena Pirat og Benjamin |
+| 11 | **Maga Khans jungel** (`magakhan_jungle`) | Panterfelle, kjøttetende plante og redning av Langemann |
+| 12 | **Maga Khans palass** (`magakhan_palace`) | Storming av festningen og jakten på de 5 hellige gongene |
+| 13 | **Maga Khans fangehull & Nøkkeldykk (2D)** (`magakhan_dungeon` / `magakhan_dungeon_underwater`) | Blå flammer, spaker, **2D undervanns-nøkkeldykk med sjøminer (`key2`)** og møtet med Sirikit |
+| 14 | **Maga Khans drage – Sluttkamp** (`magakhan_endboss_level`) | *Filmsekvens 5:* Sabeltann mot Maga Khan mens Pinky distraherer dragen |
+| 15 | **Tilbake til Gabriels grotte** (`cave_end`) | Siste kamp gjennom skjelettvaktene til skattkammeret |
+| 16 | **Grusomme Gabriels spøkelse – Finale** (`cave_end_bosslevel`) | *Filmsekvens 6:* Finalen mot Grusomme Gabriels gjenferd og vokterstatuene |
+| 17 | **Forbannelsen er brutt! (Outro)** (`outro`) | *Filmsekvens 7:* Seiersseilas mot solnedgangen → fritt spill, Skattejakt-øya & Skipsvrak-dykk |
 
 ---
 
