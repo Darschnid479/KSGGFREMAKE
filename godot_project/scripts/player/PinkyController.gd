@@ -179,13 +179,11 @@ func _on_weapon_changed(weapon_id: String) -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventKey and event.pressed and not event.echo:
-		match event.keycode:
-			KEY_1: GameState.equip_weapon("woodensword")
-			KEY_2: GameState.equip_weapon("sword")
-			KEY_3: GameState.equip_weapon("goldsword")
-			KEY_4: GameState.equip_weapon("rapier")
-			KEY_5: GameState.equip_weapon("slingshot")
-			KEY_6, KEY_L: GameState.equip_weapon("lamp")
+		if event.keycode == KEY_L:
+			GameState.lamp_enabled = not GameState.lamp_enabled
+			if is_instance_valid(_lamp_light):
+				_lamp_light.visible = GameState.lamp_enabled
+			AudioManager.play_sfx("switch")
 
 	if event.is_action_pressed("attack"):
 		_perform_attack()

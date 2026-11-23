@@ -32,19 +32,19 @@ En moderne, frittstående **Godot 4 (Forward+ PBR)** nyversjon (*recompile / HD 
   - Alle teksturer er oppskalert **4x** (opptil `1024×1024`) med kantbevarende Lanczos + detaljskarphet, samt automatisk genererte **tangent-space PBR Normal Maps** og **ORM (Occlusion / Roughness / Metallic)**-kart.
 - **Animert Gerstner-havshader:** Egen spesialskrevet vannshader ([`ocean_water.gdshader`](godot_project/shaders/ocean_water.gdshader)) med bølgebevegelse, Fresnel-refleksjon, solglimt og bølgeskum.
 - **Original musikk og lydeffekter:** **92 rene OGG-lydspor og bakgrunnsmusikk** ekstrahert fra spillets originale `.cct`-arkiver for alle biomer (renset for russisk dubbing).
-- **Norsk UI, dialoger og alle 18 verdener:** Moderne sjørøver-HUD, oppdragsbanner, dialoger med mannskapet (Kaptein Sabeltann, Langemann, Sunniva, Pelle, Skalken, Miriam av Gral m.fl.), 6 våpen/verktøy, boss-helsebar, grafikkvalg (`Medium` / `High` / `Ultra`) og hurtigreise til alle 18 brett.
+- **Norsk 1:1 UI og historieflyt:** Original-tro HUD med Pinkys runde helsemedaljong og gullmynter nederst til venstre, kontekstuelt `[E]`-handlingsikon nederst til høyre, fugleperspektiv på verdenskartet med *Den Sorte Dame*, og steg-for-steg historieflyt gjennom alle 18 verdener fra Grusomme Gabriels grotte til finalen.
 
 ---
 
-## Alle 18 spillbare verdener
+## Alle 18 spillbare verdener (historieflyt)
 
 | # | Nivå | Biom / Modus |
 |---:|---|---|
-| 1 | **Abra Havn** | Sjørøverlandsbyen & *Den Sorte Dame* |
-| 2 | **Grusomme Gabriels grotte** | Intro-grotte og skattkammer |
-| 3 | **De Syv Hav – Verdenskartet** | Seil *Den Sorte Dame* med bredsider |
+| 1 | **Grusomme Gabriels grotte** | Intro-grotte og skattkammer |
+| 2 | **Abra Havn** | Sjørøverlandsbyen & *Den Sorte Dame* |
+| 3 | **De Syv Hav – Verdenskartet** | Seil *Den Sorte Dame* sett ovenfra mellom øyene |
 | 4 | **Gral-fjellet** | Forhekset fjellandskap |
-| 5 | **Gral – Bosskamp** | Arena på Gral |
+| 5 | **Gral – Bosskamp** | Bosskamp oppe på Gral-borgen |
 | 6 | **Fata Morgana – Byen** | Ørkenbyen og basaren |
 | 7 | **Fata Morgana – Palasset** | Sultanens indre haller |
 | 8 | **Fata Morgana – Bosskamp** | Ørkenarena |
@@ -68,11 +68,11 @@ En moderne, frittstående **Godot 4 (Forward+ PBR)** nyversjon (*recompile / HD 
 | `W A S D` / Piltaster | Beveg Pinky / styr *Den Sorte Dame* |
 | `Shift` | Løp |
 | `Mellomrom (Space)` | Hopp / avfyr bredsider på skipet |
-| `Venstreklikk` / `F` | Sverdangrep / skyt sprettert / kanoner |
-| `E` | Snakk med NPC-er / bruk nivåportal |
-| `1` – `6` / `L` | Bytt våpen (Tresverd, Sabel, Gullsverd, Kårde, Sprettert, Lykt) |
+| `Venstreklikk` / `F` | Angrip |
+| `E` | Snakk med NPC-er / bruk portal / gå i land |
+| `L` | Slå av/på lykten i mørke grotter |
 | `Høyreklikk + mus` / `Q` `R` | Roter kamera (scrollhjul for zoom) |
-| `ESC` | Pause, grafikkvalg (`Medium` / `High` / `Ultra`) og nivåvelger |
+| `ESC` | Pause og grafikkvalg (`Medium` / `High` / `Ultra`) |
 
 ---
 

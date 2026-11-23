@@ -1,13 +1,79 @@
 extends CanvasLayer
 class_name GameHUD
-## Moderne norsk sjørøver-HUD: Helse, gullmynter, våpenlinje (1-6), oppdragsbanner, dialogboks, boss-HP og pausemeny.
+## 1:1 original-tro HUD fra Kaptein Sabeltann og Grusomme Gabriels forbannelse (getWidgetData_hud.ls):
+## - Bunn-venstre: Pinkys runde helsemedaljong med buet rød helsemåler + gullmynt-teller
+## - Bunn-høyre: Kontekstuell handlingsmedaljong ([E]) når spilleren er nær NPC/portal
+## - Dialogboks og boss-helsebar kun når aktivt i bruk (ingen våpenlinje 1-6 eller RPG-bokser).
 
-var _hp_bar: ProgressBar
-var _hp_label: Label
+class PirateHealthMedallion extends Control:
+	var health_ratio: float = 1.0
+
+	func _init() -> void:
+		custom_minimum_size = Vector2(156, 156)
+
+	func set_ratio(r: float) -> void:
+		health_ratio = clampf(r, 0.0, 1.0)
+		queue_redraw()
+
+	func _draw() -> void:
+		var c := Vector2(78, 78)
+		# Ytre mørk treramme + messingkant
+		draw_circle(c, 68.0, Color(0.14, 0.09, 0.05, 0.94))
+		draw_arc(c, 68.0, 0.0, TAU, 64, Color(0.82, 0.62, 0.24, 0.95), 4.0, true)
+
+		# Bakgrunnsspor for buet helsemåler (tilsvarer healthbar_bottom)
+		var start_a := PI * 0.72
+		var sweep := PI * 1.56
+		draw_arc(c, 55.0, start_a, start_a + sweep, 48, Color(0.24, 0.12, 0.10, 0.9), 14.0, true)
+
+		# Aktiv rød-gull helsebue (tilsvarer healthbar_top / healthbar_amount22)
+		if health_ratio > 0.01:
+			var fill_col := Color(0.86, 0.14, 0.14, 1.0) if health_ratio > 0.3 else Color(1.0, 0.35, 0.12, 1.0)
+			draw_arc(c, 55.0, start_a, start_a + sweep * health_ratio, 48, fill_col, 11.0, true)
+
+		# Indre portrettmedaljong (Pinkys blå bandana + rød/hvit piratskjorte-ikon)
+		draw_circle(c, 42.0, Color(0.16, 0.24, 0.38, 0.98))
+		draw_arc(c, 42.0, 0.0, TAU, 48, Color(0.90, 0.72, 0.28, 0.95), 3.0, true)
+
+		# Stilisert Pinky-portrett i medaljongen
+		# Skuldre (rød/hvit sjørøvertrøye)
+		draw_circle(c + Vector2(0, 26), 21.0, Color(0.76, 0.16, 0.16))
+		draw_rect(Rect2(c.x - 16, c.y + 18, 32, 6), Color(0.95, 0.92, 0.86))
+		# Ansikt
+		draw_circle(c + Vector2(0, 2), 16.0, Color(0.92, 0.76, 0.62))
+		# Blå bandana
+		draw_arc(c + Vector2(0, -1), 15.5, PI * 1.05, PI * 1.95, 24, Color(0.10, 0.44, 0.82), 9.0, true)
+		# Øyne
+		draw_circle(c + Vector2(-5.5, 2), 2.2, Color(0.10, 0.10, 0.14))
+		draw_circle(c + Vector2(5.5, 2), 2.2, Color(0.10, 0.10, 0.14))
+		# Smil
+		draw_arc(c + Vector2(0, 6), 5.5, 0.2, PI - 0.2, 12, Color(0.45, 0.18, 0.14), 2.0, true)
+
+
+class GoldCoinBadge extends Control:
+	var coin_count: int = 0
+
+	func _init() -> void:
+		custom_minimum_size = Vector2(140, 62)
+
+	func set_coins(v: int) -> void:
+		coin_count = v
+		queue_redraw()
+
+	func _draw() -> void:
+		# Gullmynt-ikon (tilsvarer goldcoin nederst til venstre ved siden av helsemedaljongen)
+		var cc := Vector2(30, 31)
+		draw_circle(cc, 24.0, Color(0.68, 0.46, 0.10, 0.96))
+		draw_circle(cc, 20.0, Color(0.98, 0.80, 0.22, 1.0))
+		draw_arc(cc, 15.0, 0.0, TAU, 32, Color(0.76, 0.54, 0.12, 0.9), 2.2, true)
+		draw_circle(cc, 6.0, Color(0.84, 0.60, 0.12, 0.8))
+
+
+var _medallion: PirateHealthMedallion
+var _coin_badge: GoldCoinBadge
 var _coin_label: Label
-var _level_label: Label
-var _obj_label: Label
-var _weapon_buttons: Dictionary = {}
+var _action_panel: PanelContainer
+var _action_label: Label
 
 var _dialogue_panel: PanelContainer
 var _dialogue_speaker: Label
@@ -27,106 +93,86 @@ func _ready() -> void:
 	_build_ui()
 	GameState.health_changed.connect(_on_health_changed)
 	GameState.coins_changed.connect(_on_coins_changed)
-	GameState.weapon_changed.connect(_on_weapon_changed)
-	GameState.objective_changed.connect(_on_objective_changed)
 	GameState.dialogue_requested.connect(_on_dialogue_requested)
 	GameState.boss_health_changed.connect(_on_boss_health_changed)
 	GameState.level_change_requested.connect(_on_level_changed)
 
 	_on_health_changed(GameState.health, GameState.max_health)
 	_on_coins_changed(GameState.coins)
-	_on_weapon_changed(GameState.equipped_weapon)
 	_on_level_changed(GameState.current_level_id)
 
 
-func _make_panel_style(bg: Color = Color(0.07, 0.09, 0.14, 0.86), border: Color = Color(0.84, 0.65, 0.28, 0.9)) -> StyleBoxFlat:
+func _make_panel_style(bg: Color = Color(0.11, 0.07, 0.04, 0.92), border: Color = Color(0.84, 0.64, 0.26, 0.95)) -> StyleBoxFlat:
 	var st := StyleBoxFlat.new()
 	st.bg_color = bg
 	st.border_color = border
-	st.set_border_width_all(2)
-	st.set_corner_radius_all(10)
-	st.content_margin_left = 14
-	st.content_margin_right = 14
-	st.content_margin_top = 10
-	st.content_margin_bottom = 10
+	st.set_border_width_all(3)
+	st.set_corner_radius_all(12)
+	st.content_margin_left = 18
+	st.content_margin_right = 18
+	st.content_margin_top = 12
+	st.content_margin_bottom = 12
 	return st
 
 
 func _build_ui() -> void:
-	# 1. Topp-venstre: Helse og gullmynter
-	var top_left := PanelContainer.new()
-	top_left.position = Vector2(20, 20)
-	top_left.custom_minimum_size = Vector2(310, 88)
-	top_left.add_theme_stylebox_override("panel", _make_panel_style())
-	add_child(top_left)
+	# 1. Bunn-venstre: Original 1:1 Pinky-helsemedaljong + Gullmynter (rect 34,704 + 241,864 i originalen)
+	var bl := HBoxContainer.new()
+	bl.set_anchors_preset(Control.PRESET_BOTTOM_LEFT)
+	bl.offset_left = 22
+	bl.offset_right = 360
+	bl.offset_top = -176
+	bl.offset_bottom = -16
+	bl.alignment = BoxContainer.ALIGNMENT_BEGIN
+	bl.add_theme_constant_override("separation", 6)
+	add_child(bl)
 
-	var v1 := VBoxContainer.new()
-	v1.add_theme_constant_override("separation", 6)
-	top_left.add_child(v1)
+	_medallion = PirateHealthMedallion.new()
+	bl.add_child(_medallion)
 
-	var h_row := HBoxContainer.new()
-	v1.add_child(h_row)
-	_hp_label = Label.new()
-	_hp_label.text = "Helse: 100 / 100"
-	_hp_label.add_theme_font_size_override("font_size", 17)
-	_hp_label.add_theme_color_override("font_color", Color(1.0, 0.94, 0.82))
-	h_row.add_child(_hp_label)
+	var coin_wrap := HBoxContainer.new()
+	coin_wrap.size_flags_vertical = Control.SIZE_SHRINK_END
+	coin_wrap.add_theme_constant_override("separation", -76)
+	bl.add_child(coin_wrap)
 
-	var spacer := Control.new()
-	spacer.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	h_row.add_child(spacer)
+	_coin_badge = GoldCoinBadge.new()
+	coin_wrap.add_child(_coin_badge)
 
 	_coin_label = Label.new()
-	_coin_label.text = "Gull: 25"
-	_coin_label.add_theme_font_size_override("font_size", 18)
-	_coin_label.add_theme_color_override("font_color", Color(1.0, 0.84, 0.22))
-	h_row.add_child(_coin_label)
+	_coin_label.text = "25"
+	_coin_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	_coin_label.add_theme_font_size_override("font_size", 28)
+	_coin_label.add_theme_color_override("font_color", Color(1.0, 0.88, 0.32))
+	_coin_label.add_theme_color_override("font_outline_color", Color(0.12, 0.07, 0.02, 0.95))
+	_coin_label.add_theme_constant_override("outline_size", 6)
+	coin_wrap.add_child(_coin_label)
 
-	_hp_bar = ProgressBar.new()
-	_hp_bar.min_value = 0.0
-	_hp_bar.max_value = 100.0
-	_hp_bar.value = 100.0
-	_hp_bar.show_percentage = false
-	_hp_bar.custom_minimum_size = Vector2(280, 18)
-	var fill := StyleBoxFlat.new()
-	fill.bg_color = Color(0.82, 0.16, 0.18)
-	fill.set_corner_radius_all(6)
-	_hp_bar.add_theme_stylebox_override("fill", fill)
-	v1.add_child(_hp_bar)
+	# 2. Bunn-høyre: Kontekstuelt handlingsikon (tilsvarer actionicon i originalen, skjult til man er nær NPC/portal)
+	_action_panel = PanelContainer.new()
+	_action_panel.set_anchors_preset(Control.PRESET_BOTTOM_RIGHT)
+	_action_panel.offset_left = -210
+	_action_panel.offset_right = -26
+	_action_panel.offset_top = -84
+	_action_panel.offset_bottom = -26
+	_action_panel.add_theme_stylebox_override("panel", _make_panel_style())
+	_action_panel.visible = false
+	add_child(_action_panel)
 
-	# 2. Topp-høyre: Nivånavn og gjeldende oppdrag
-	var top_right := PanelContainer.new()
-	top_right.set_anchors_preset(Control.PRESET_TOP_RIGHT)
-	top_right.offset_left = -450
-	top_right.offset_right = -20
-	top_right.offset_top = 20
-	top_right.offset_bottom = 115
-	top_right.add_theme_stylebox_override("panel", _make_panel_style())
-	add_child(top_right)
+	_action_label = Label.new()
+	_action_label.text = "[E] Snakk"
+	_action_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	_action_label.add_theme_font_size_override("font_size", 18)
+	_action_label.add_theme_color_override("font_color", Color(1.0, 0.90, 0.50))
+	_action_panel.add_child(_action_label)
 
-	var v2 := VBoxContainer.new()
-	top_right.add_child(v2)
-	_level_label = Label.new()
-	_level_label.text = "Abra Havn"
-	_level_label.add_theme_font_size_override("font_size", 20)
-	_level_label.add_theme_color_override("font_color", Color(1.0, 0.86, 0.36))
-	v2.add_child(_level_label)
-
-	_obj_label = Label.new()
-	_obj_label.text = "Utforsk Abra Havn og snakk med Kaptein Sabeltann."
-	_obj_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	_obj_label.add_theme_font_size_override("font_size", 14)
-	_obj_label.add_theme_color_override("font_color", Color(0.92, 0.94, 0.98))
-	v2.add_child(_obj_label)
-
-	# 3. Boss-helsebar (topp-senter, skjult til boss-kamp starter)
+	# 3. Boss-helsebar (topp-senter, kun synlig i bosskamper som i cave_boss_hud / graal_boss_hud)
 	_boss_panel = PanelContainer.new()
 	_boss_panel.set_anchors_preset(Control.PRESET_CENTER_TOP)
 	_boss_panel.offset_left = -260
 	_boss_panel.offset_right = 260
-	_boss_panel.offset_top = 20
+	_boss_panel.offset_top = 22
 	_boss_panel.offset_bottom = 86
-	_boss_panel.add_theme_stylebox_override("panel", _make_panel_style(Color(0.16, 0.04, 0.06, 0.9), Color(1.0, 0.35, 0.28)))
+	_boss_panel.add_theme_stylebox_override("panel", _make_panel_style(Color(0.16, 0.05, 0.05, 0.92), Color(0.95, 0.35, 0.25)))
 	_boss_panel.visible = false
 	add_child(_boss_panel)
 
@@ -135,64 +181,26 @@ func _build_ui() -> void:
 	_boss_name_lbl = Label.new()
 	_boss_name_lbl.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	_boss_name_lbl.add_theme_font_size_override("font_size", 18)
-	_boss_name_lbl.add_theme_color_override("font_color", Color(1.0, 0.82, 0.72))
+	_boss_name_lbl.add_theme_color_override("font_color", Color(1.0, 0.84, 0.68))
 	bv.add_child(_boss_name_lbl)
 
 	_boss_bar = ProgressBar.new()
 	_boss_bar.show_percentage = false
 	_boss_bar.custom_minimum_size = Vector2(480, 18)
 	var bfill := StyleBoxFlat.new()
-	bfill.bg_color = Color(0.95, 0.22, 0.16)
+	bfill.bg_color = Color(0.92, 0.18, 0.14)
 	bfill.set_corner_radius_all(6)
 	_boss_bar.add_theme_stylebox_override("fill", bfill)
 	bv.add_child(_boss_bar)
 
-	# 4. Bunn-senter: Våpenlinje (1-6) + hurtigtips
-	var hotbar_wrap := VBoxContainer.new()
-	hotbar_wrap.set_anchors_preset(Control.PRESET_CENTER_BOTTOM)
-	hotbar_wrap.offset_left = -380
-	hotbar_wrap.offset_right = 380
-	hotbar_wrap.offset_top = -102
-	hotbar_wrap.offset_bottom = -16
-	hotbar_wrap.alignment = BoxContainer.ALIGNMENT_CENTER
-	add_child(hotbar_wrap)
-
-	var hbar := HBoxContainer.new()
-	hbar.alignment = BoxContainer.ALIGNMENT_CENTER
-	hbar.add_theme_constant_override("separation", 8)
-	hotbar_wrap.add_child(hbar)
-
-	var slots := [
-		["1", "woodensword", "Tresverd"],
-		["2", "sword", "Sabel"],
-		["3", "goldsword", "Gullsverd"],
-		["4", "rapier", "Kårde"],
-		["5", "slingshot", "Sprettert"],
-		["6", "lamp", "Lykte"],
-	]
-	for s in slots:
-		var btn := Button.new()
-		btn.text = "[%s] %s" % [s[0], s[2]]
-		btn.custom_minimum_size = Vector2(114, 42)
-		btn.pressed.connect(func(): GameState.equip_weapon(s[1]))
-		hbar.add_child(btn)
-		_weapon_buttons[s[1]] = btn
-
-	var hint := Label.new()
-	hint.text = "WASD: Beveg  |  Space: Hopp  |  Venstreklikk/F: Angrip  |  E: Snakk/Portal  |  Høyreklikk: Roter kamera  |  ESC: Meny"
-	hint.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	hint.add_theme_font_size_override("font_size", 13)
-	hint.add_theme_color_override("font_color", Color(0.92, 0.90, 0.82, 0.9))
-	hotbar_wrap.add_child(hint)
-
-	# 5. Dialogboks (bunn-senter over våpenlinjen)
+	# 4. Dialogboks (kun synlig når man snakker med karakterer)
 	_dialogue_panel = PanelContainer.new()
 	_dialogue_panel.set_anchors_preset(Control.PRESET_CENTER_BOTTOM)
-	_dialogue_panel.offset_left = -380
-	_dialogue_panel.offset_right = 380
-	_dialogue_panel.offset_top = -250
-	_dialogue_panel.offset_bottom = -114
-	_dialogue_panel.add_theme_stylebox_override("panel", _make_panel_style(Color(0.06, 0.08, 0.12, 0.94), Color(0.94, 0.74, 0.30)))
+	_dialogue_panel.offset_left = -360
+	_dialogue_panel.offset_right = 360
+	_dialogue_panel.offset_top = -170
+	_dialogue_panel.offset_bottom = -28
+	_dialogue_panel.add_theme_stylebox_override("panel", _make_panel_style())
 	_dialogue_panel.visible = false
 	add_child(_dialogue_panel)
 
@@ -210,43 +218,42 @@ func _build_ui() -> void:
 	dv.add_child(_dialogue_text)
 
 	var next_btn := Button.new()
-	next_btn.text = "Neste [Enter / Mellomrom]"
+	next_btn.text = "Neste [Enter / E]"
 	next_btn.pressed.connect(_advance_dialogue)
 	dv.add_child(next_btn)
 
-	# 6. Pause- og Nivåvelger-meny (ESC)
+	# 5. Pausemeny (ESC – enkel 1:1 uten jukse-nivåvelger)
 	_build_pause_menu()
 
 
 func _build_pause_menu() -> void:
 	_pause_panel = PanelContainer.new()
 	_pause_panel.set_anchors_preset(Control.PRESET_CENTER)
-	_pause_panel.offset_left = -320
-	_pause_panel.offset_right = 320
-	_pause_panel.offset_top = -280
-	_pause_panel.offset_bottom = 280
-	_pause_panel.add_theme_stylebox_override("panel", _make_panel_style(Color(0.05, 0.07, 0.11, 0.96), Color(0.92, 0.72, 0.28)))
+	_pause_panel.offset_left = -220
+	_pause_panel.offset_right = 220
+	_pause_panel.offset_top = -155
+	_pause_panel.offset_bottom = 155
+	_pause_panel.add_theme_stylebox_override("panel", _make_panel_style())
 	_pause_panel.visible = false
 	add_child(_pause_panel)
 
 	var pv := VBoxContainer.new()
-	pv.add_theme_constant_override("separation", 10)
+	pv.add_theme_constant_override("separation", 12)
 	_pause_panel.add_child(pv)
 
 	var title := Label.new()
-	title.text = "PAUSE – KAPTEIN SABELTANN HD"
+	title.text = "PAUSE"
 	title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	title.add_theme_font_size_override("font_size", 24)
+	title.add_theme_font_size_override("font_size", 26)
 	title.add_theme_color_override("font_color", Color(1.0, 0.84, 0.30))
 	pv.add_child(title)
 
 	var resume_btn := Button.new()
 	resume_btn.text = "Fortsett spillet"
-	resume_btn.custom_minimum_size = Vector2(0, 40)
+	resume_btn.custom_minimum_size = Vector2(0, 44)
 	resume_btn.pressed.connect(_toggle_pause)
 	pv.add_child(resume_btn)
 
-	# Grafikk-kvalitet
 	var gfx_row := HBoxContainer.new()
 	gfx_row.alignment = BoxContainer.ALIGNMENT_CENTER
 	var gfx_lbl := Label.new()
@@ -259,40 +266,42 @@ func _build_pause_menu() -> void:
 		gfx_row.add_child(gb)
 	pv.add_child(gfx_row)
 
-	var sep := Label.new()
-	sep.text = "Hurtigreise til nivå:"
-	sep.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	sep.add_theme_color_override("font_color", Color(0.85, 0.88, 0.95))
-	pv.add_child(sep)
-
-	var scroll := ScrollContainer.new()
-	scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
-	pv.add_child(scroll)
-
-	var grid := GridContainer.new()
-	grid.columns = 2
-	grid.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	scroll.add_child(grid)
-
-	for lid in LevelCatalog.ORDERED_LEVEL_IDS:
-		var info := LevelCatalog.get_level(lid)
-		var lb := Button.new()
-		lb.text = str(info.get("title", lid))
-		lb.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-		lb.pressed.connect(func():
-			_toggle_pause()
-			GameState.request_level(lid)
-		)
-		grid.add_child(lb)
-
 	var menu_btn := Button.new()
 	menu_btn.text = "Tilbake til hovedmeny"
-	menu_btn.custom_minimum_size = Vector2(0, 38)
+	menu_btn.custom_minimum_size = Vector2(0, 42)
 	menu_btn.pressed.connect(func():
 		get_tree().paused = false
 		get_tree().change_scene_to_file("res://scenes/MainMenu.tscn")
 	)
 	pv.add_child(menu_btn)
+
+
+func _process(_delta: float) -> void:
+	# Vis kontekstuelt handlingsikon nederst til høyre når Pinky er nær NPC/portal
+	var players := get_tree().get_nodes_in_group("player")
+	if players.is_empty() or _dialogue_panel.visible or _is_paused:
+		_action_panel.visible = false
+		return
+	var p := players[0] as Node3D
+	if not is_instance_valid(p):
+		_action_panel.visible = false
+		return
+	var nearest_txt := ""
+	var best_d := 5.0
+	for node in get_tree().get_nodes_in_group("interactable"):
+		if node is Node3D:
+			var d := p.global_position.distance_to((node as Node3D).global_position)
+			if d < best_d:
+				best_d = d
+				if node is PortalTrigger:
+					nearest_txt = "[E] " + (node as PortalTrigger).portal_label
+				elif node is NpcActor:
+					nearest_txt = "[E] " + (node as NpcActor).display_name
+				else:
+					nearest_txt = "[E] Bruk"
+	_action_panel.visible = (nearest_txt != "")
+	if nearest_txt != "":
+		_action_label.text = nearest_txt
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -314,32 +323,20 @@ func _toggle_pause() -> void:
 
 
 func _on_health_changed(cur: float, mx: float) -> void:
-	_hp_bar.max_value = mx
-	_hp_bar.value = cur
-	_hp_label.text = "Helse: %d / %d" % [int(cur), int(mx)]
+	if is_instance_valid(_medallion) and mx > 0.0:
+		_medallion.set_ratio(cur / mx)
 
 
 func _on_coins_changed(coins: int) -> void:
-	_coin_label.text = "Gull: %d" % coins
+	if is_instance_valid(_coin_badge):
+		_coin_badge.set_coins(coins)
+	if is_instance_valid(_coin_label):
+		_coin_label.text = "%d" % coins
 
 
-func _on_weapon_changed(weapon_id: String) -> void:
-	for k in _weapon_buttons.keys():
-		var b: Button = _weapon_buttons[k]
-		if k == weapon_id:
-			b.modulate = Color(1.0, 0.88, 0.35)
-		else:
-			b.modulate = Color(0.75, 0.78, 0.85)
-
-
-func _on_objective_changed(text: String) -> void:
-	_obj_label.text = text
-
-
-func _on_level_changed(level_id: String) -> void:
-	var info := LevelCatalog.get_level(level_id)
-	_level_label.text = str(info.get("title", level_id))
-	_boss_panel.visible = false
+func _on_level_changed(_level_id: String) -> void:
+	if is_instance_valid(_boss_panel):
+		_boss_panel.visible = false
 
 
 func _on_dialogue_requested(speaker: String, lines: Array) -> void:

@@ -73,14 +73,20 @@ func load_level(level_id: String) -> void:
 	# 1. Moderne HD belysning, himmel og post-processing
 	_setup_modern_environment(cfg)
 
-	# 2. Last original HD .glb nivå-geometri med automatisk kollisjon
-	var level_bounds := _load_level_geometry(str(cfg.get("w3d", level_id)))
-	# Vent én fysikk-frame slik at trimesh-kollisjonene er registrert før raycast til bakken
-	await get_tree().physics_frame
+	var mode := str(cfg.get("mode", "adventure"))
+	var level_bounds := AABB(Vector3(-250, -5, -250), Vector3(500, 40, 500))
 
-	# 3. Moderne animert Gerstner-hav hvis nivået har sjø
-	if bool(cfg.get("has_water", false)):
-		_spawn_modern_ocean(float(cfg.get("water_y", -0.2)), level_bounds)
+	if mode == "boat":
+		# 1:1 Verdenskart: åpent glitrende hav med 3D-øyer og fiendeskip sett ovenfra
+		_spawn_modern_ocean(0.0, level_bounds)
+		_build_world_map_islands()
+	else:
+		# 2. Last original HD .glb nivå-geometri med automatisk kollisjon
+		level_bounds = _load_level_geometry(str(cfg.get("w3d", level_id)))
+		await get_tree().physics_frame
+		# 3. Moderne animert Gerstner-hav hvis nivået har sjø
+		if bool(cfg.get("has_water", false)):
+			_spawn_modern_ocean(float(cfg.get("water_y", -0.2)), level_bounds)
 
 	# 4. Les originale gameplay-data (spawns, NPC-er, fiender, portaler)
 	var gp_data := _read_gameplay_json(level_id)
@@ -90,19 +96,18 @@ func load_level(level_id: String) -> void:
 	_world_root.add_child(_camera_rig)
 
 	# 6. Spawn spiller (Pinky eller Den Sorte Dame på verdenskartet)
-	var spawn_pos := _find_player_spawn(gp_data, level_bounds)
-	var mode := str(cfg.get("mode", "adventure"))
 	if mode == "boat":
-		_player_node = _spawn_boat(spawn_pos)
-		_camera_rig.set_target(_player_node, 20.0, 7.5)
+		_player_node = _spawn_boat(Vector3(0.0, 0.0, 8.0))
+		# 1:1 fugleperspektiv (ovenfra ned på Den Sorte Dame og øyene)
+		_camera_rig.set_target(_player_node, 74.0, 2.0, true)
 	else:
+		var spawn_pos := _find_player_spawn(level_id, gp_data, level_bounds)
 		_player_node = _spawn_pinky(spawn_pos, mode == "swimming")
-		_camera_rig.set_target(_player_node, 9.5, 2.4)
-	if _camera_rig.spring_arm and _player_node:
-		_camera_rig.spring_arm.add_excluded_object(_player_node.get_rid())
-
-	# 7. Spawn NPC-er, fiender, tønner, mynter og portaler
-	_populate_entities(level_id, cfg, gp_data, spawn_pos, level_bounds)
+		_camera_rig.set_target(_player_node, 9.5, 2.4, false)
+		if _camera_rig.spring_arm and _player_node:
+			_camera_rig.spring_arm.add_excluded_object(_player_node.get_rid())
+		# 7. Spawn NPC-er, fiender, tønner, mynter og portaler
+		_populate_entities(level_id, cfg, gp_data, spawn_pos, level_bounds)
 
 
 func _setup_modern_environment(cfg: Dictionary) -> void:
@@ -314,7 +319,11 @@ func _create_camera_rig() -> FollowCamera:
 	return rig
 
 
-func _find_player_spawn(gp_data: Dictionary, bounds: AABB) -> Vector3:
+func _find_player_spawn(level_id: String, gp_data: Dictionary, bounds: AABB) -> Vector3:
+	# 1:1 Gral-bosskampen skjer oppe på borggårdens brystvern (Y = 21.41m, Z = -12.4)
+	if level_id == "graal_bosslevel":
+		return Vector3(-3.5, 21.8, -12.4)
+
 	var nodes: Array = gp_data.get("nodes", [])
 	for n in nodes:
 		var nm := str(n.get("name", "")).to_lower()
@@ -326,6 +335,141 @@ func _find_player_spawn(gp_data: Dictionary, bounds: AABB) -> Vector3:
 				return hit + Vector3(0.0, 0.5, 0.0)
 	var center := bounds.get_center()
 	return _snap_to_surface(Vector3(center.x, bounds.position.y + bounds.size.y + 4.0, center.z), bounds)
+
+
+func _build_world_map_islands() -> void:
+	# Bygger organiske 3D-øyer med landemerker (borg, kupler, palmer/hus) og fiendeskip sett ovenfra
+	var islands := [
+		{"name": "Abra Havn", "id": "abra", "pos": Vector3(-34.0, 0.0, 22.0), "r": 12.0, "col": Color(0.24, 0.44, 0.22), "theme": "harbor"},
+		{"name": "Gral", "id": "graal_mountain", "pos": Vector3(-28.0, 0.0, -26.0), "r": 13.0, "col": Color(0.28, 0.24, 0.34), "theme": "castle"},
+		{"name": "Fata Morgana", "id": "fatamorgana_city", "pos": Vector3(34.0, 0.0, -22.0), "r": 12.5, "col": Color(0.78, 0.62, 0.36), "theme": "desert"},
+		{"name": "Maga Khans øy", "id": "magakhan_beach", "pos": Vector3(40.0, 0.0, 22.0), "r": 13.5, "col": Color(0.16, 0.40, 0.18), "theme": "jungle"},
+		{"name": "Skattejakt-øya", "id": "treasurehunt", "pos": Vector3(4.0, 0.0, -40.0), "r": 9.5, "col": Color(0.36, 0.54, 0.24), "theme": "palm"},
+	]
+
+	for isl in islands:
+		var root := Node3D.new()
+		root.position = isl["pos"]
+		_world_root.add_child(root)
+
+		var r: float = isl["r"]
+		var sand_mat := StandardMaterial3D.new()
+		sand_mat.albedo_color = Color(0.82, 0.72, 0.48)
+		sand_mat.roughness = 0.90
+
+		var land_mat := StandardMaterial3D.new()
+		land_mat.albedo_color = isl["col"]
+		land_mat.roughness = 0.88
+
+		# Organisk flerlags øyform (flere overlappende klipper/koller istedenfor én flat kjegle)
+		var lobes := [
+			[Vector3(0.0, -0.4, 0.0), Vector3(r * 1.15, 2.2, r * 0.92)],
+			[Vector3(r * 0.38, -0.5, -r * 0.22), Vector3(r * 0.75, 1.8, r * 0.68)],
+			[Vector3(-r * 0.34, -0.5, r * 0.26), Vector3(r * 0.68, 1.7, r * 0.72)],
+		]
+		for lb in lobes:
+			var smi := MeshInstance3D.new()
+			var sph := SphereMesh.new()
+			sph.radius = 1.0; sph.height = 2.0
+			smi.mesh = sph
+			smi.position = lb[0]
+			smi.scale = lb[1]
+			smi.material_override = sand_mat
+			root.add_child(smi)
+
+		var hills := [
+			[Vector3(-r * 0.1, 0.5, -r * 0.1), Vector3(r * 0.72, r * 0.45, r * 0.64)],
+			[Vector3(r * 0.28, 0.4, r * 0.12), Vector3(r * 0.48, r * 0.32, r * 0.44)],
+		]
+		for hl in hills:
+			var hmi := MeshInstance3D.new()
+			var hsp := SphereMesh.new()
+			hsp.radius = 1.0; hsp.height = 2.0
+			hmi.mesh = hsp
+			hmi.position = hl[0]
+			hmi.scale = hl[1]
+			hmi.material_override = land_mat
+			root.add_child(hmi)
+
+		# Landemerker per øy (borg på Gral, kupler på Fata Morgana, hus i Abra Havn, trær i jungelen)
+		var theme: String = isl["theme"]
+		if theme == "castle":
+			var keep := MeshInstance3D.new()
+			var kb := BoxMesh.new()
+			kb.size = Vector3(5.5, 6.5, 5.5)
+			keep.mesh = kb
+			keep.position = Vector3(-1.0, 5.8, -1.0)
+			var kmat := StandardMaterial3D.new()
+			kmat.albedo_color = Color(0.42, 0.38, 0.44); kmat.roughness = 0.85
+			keep.material_override = kmat
+			root.add_child(keep)
+		elif theme == "desert":
+			var dome := MeshInstance3D.new()
+			var ds := SphereMesh.new()
+			ds.radius = 3.2; ds.height = 6.4
+			dome.mesh = ds
+			dome.position = Vector3(0.0, 5.2, 0.0)
+			var dmat := StandardMaterial3D.new()
+			dmat.albedo_color = Color(0.92, 0.82, 0.58); dmat.roughness = 0.75
+			dome.material_override = dmat
+			root.add_child(dome)
+		elif theme == "harbor":
+			for hx in [-3.2, 0.5, 3.6]:
+				var house := MeshInstance3D.new()
+				var hb := BoxMesh.new()
+				hb.size = Vector3(2.4, 2.6, 2.2)
+				house.mesh = hb
+				house.position = Vector3(hx, 3.8, 1.5)
+				var hst := StandardMaterial3D.new()
+				hst.albedo_color = Color(0.55, 0.34, 0.22); hst.roughness = 0.85
+				house.material_override = hst
+				root.add_child(house)
+		else:
+			var tmat := StandardMaterial3D.new()
+			tmat.albedo_color = Color(0.12, 0.36, 0.14); tmat.roughness = 0.9
+			for ti in range(5):
+				var ang := float(ti) * 1.25
+				var tree := MeshInstance3D.new()
+				var ts := SphereMesh.new()
+				ts.radius = 2.0; ts.height = 3.2
+				tree.mesh = ts
+				tree.position = Vector3(cos(ang) * r * 0.32, 4.2, sin(ang) * r * 0.32)
+				tree.material_override = tmat
+				root.add_child(tree)
+
+		# Navneskilt over øya (tydelig lesbart ovenfra)
+		var lbl := Label3D.new()
+		lbl.text = str(isl["name"])
+		lbl.position = Vector3(0.0, 9.5, 0.0)
+		lbl.billboard = BaseMaterial3D.BILLBOARD_ENABLED
+		lbl.font_size = 76
+		lbl.outline_size = 16
+		lbl.modulate = Color(1.0, 0.94, 0.72)
+		root.add_child(lbl)
+
+		# Portal / havn ved øya
+		var portal: PortalTrigger = PORTAL_SCRIPT.new()
+		portal.target_level_id = isl["id"]
+		portal.portal_label = "Gå i land: " + str(isl["name"])
+		portal.position = (isl["pos"] as Vector3) + Vector3(0.0, 0.5, r + 3.5)
+		_world_root.add_child(portal)
+
+	# Plasser 2 originale fiendeskip fra world_map.glb ute på havet
+	if ResourceLoader.exists("res://assets/levels/world_map.glb"):
+		var sc := load("res://assets/levels/world_map.glb") as PackedScene
+		if sc:
+			for sp_info in [
+				[Vector3(19.0, 0.0, -4.0), -0.6],
+				[Vector3(-17.0, 0.0, -9.0), 1.1],
+			]:
+				var ship := sc.instantiate()
+				ship.position = sp_info[0]
+				ship.rotation.y = sp_info[1]
+				ship.scale = Vector3.ONE * 0.42
+				for mi in _find_all_meshes(ship):
+					var nm := mi.name.to_lower()
+					mi.visible = (nm in ["enemyship", "enemyrailing"])
+				_world_root.add_child(ship)
 
 
 func _snap_to_surface(pos: Vector3, bounds: AABB) -> Vector3:
@@ -367,9 +511,9 @@ func _spawn_boat(pos: Vector3) -> CharacterBody3D:
 
 	var col := CollisionShape3D.new()
 	var box := BoxShape3D.new()
-	box.size = Vector3(3.0, 2.0, 7.2)
+	box.size = Vector3(4.5, 2.5, 11.0)
 	col.shape = box
-	col.position.y = 1.0
+	col.position.y = 1.2
 	boat.add_child(col)
 
 	_world_root.add_child(boat)
@@ -377,6 +521,18 @@ func _spawn_boat(pos: Vector3) -> CharacterBody3D:
 
 
 func _populate_entities(level_id: String, cfg: Dictionary, gp_data: Dictionary, spawn_pos: Vector3, bounds: AABB) -> void:
+	# Spesiell 1:1 boss-plassering oppe på Gral-borgen
+	if level_id == "graal_bosslevel":
+		var boss: EnemyActor = ENEMY_SCRIPT.new()
+		boss.enemy_name = "Gral-vokteren"
+		boss.model_resource = "maga_khan"
+		boss.max_hp = 240.0
+		boss.attack_damage = 18.0
+		boss.is_boss = true
+		boss.coin_drop = 30
+		boss.position = Vector3(4.5, 21.8, -12.4)
+		_world_root.add_child(boss)
+
 	var nodes: Array = gp_data.get("nodes", [])
 	var spawned_chars := 0
 
@@ -421,39 +577,36 @@ func _populate_entities(level_id: String, cfg: Dictionary, gp_data: Dictionary, 
 			enemy.position = pos
 			_world_root.add_child(enemy)
 
-	# Portal til neste nivå + retur til Abra Havn / Verdenskartet
+	# Portal til neste nivå i historien
 	var next_id := str(cfg.get("next_level", "world_map"))
 	var next_info := LevelCatalog.get_level(next_id)
 	var portal: PortalTrigger = PORTAL_SCRIPT.new()
 	portal.target_level_id = next_id
 	portal.portal_label = "Reis til " + str(next_info.get("title", next_id))
-	portal.position = _snap_to_surface(spawn_pos + Vector3(8.5, 2.0, -7.5), bounds)
+	var portal_raw := spawn_pos + Vector3(6.5, 2.0, -5.5)
+	if level_id == "graal_bosslevel":
+		portal_raw = Vector3(-6.2, 26.5, -5.5)
+	var phit := _raycast_ground(portal_raw, bounds)
+	portal.position = (phit + Vector3(0.0, 0.4, 0.0)) if phit.y > -5000.0 else spawn_pos + Vector3(6.0, 0.4, -5.0)
 	_world_root.add_child(portal)
-
-	if level_id != "abra":
-		var home_portal: PortalTrigger = PORTAL_SCRIPT.new()
-		home_portal.target_level_id = "abra"
-		home_portal.portal_label = "Tilbake til Abra Havn"
-		home_portal.position = _snap_to_surface(spawn_pos + Vector3(-8.5, 2.0, -7.5), bounds)
-		_world_root.add_child(home_portal)
 
 	# Plasser gullmynter og knusbare tønner kun på fast grunn over vannlinjen
 	var min_dry_y: float = float(cfg.get("water_y", -99.0)) + 0.35 if bool(cfg.get("has_water", false)) else -999.0
-	for i in range(12):
-		var ang := (float(i) / 12.0) * TAU + 0.2
-		var rad := 7.0 + float(i % 4) * 4.5
+	for i in range(10):
+		var ang := (float(i) / 10.0) * TAU + 0.2
+		var rad := 6.0 + float(i % 3) * 3.5
 		var cand := spawn_pos + Vector3(cos(ang) * rad, 3.0, sin(ang) * rad)
 		var hit_pos := _raycast_ground(cand, bounds)
-		if hit_pos.y > min_dry_y and absf(hit_pos.y - spawn_pos.y) < 4.0:
+		if hit_pos.y > min_dry_y and absf(hit_pos.y - spawn_pos.y) < 3.0:
 			var coin: CollectibleCoin = COIN_SCRIPT.new()
 			coin.position = hit_pos + Vector3(0.0, 0.55, 0.0)
 			_world_root.add_child(coin)
 
-	for i in range(5):
-		var ang := (float(i) / 5.0) * TAU + 0.5
-		var cand := spawn_pos + Vector3(cos(ang) * 9.5, 3.0, sin(ang) * 9.5)
+	for i in range(4):
+		var ang := (float(i) / 4.0) * TAU + 0.5
+		var cand := spawn_pos + Vector3(cos(ang) * 7.5, 3.0, sin(ang) * 7.5)
 		var hit_pos := _raycast_ground(cand, bounds)
-		if hit_pos.y > min_dry_y and absf(hit_pos.y - spawn_pos.y) < 4.0:
+		if hit_pos.y > min_dry_y and absf(hit_pos.y - spawn_pos.y) < 3.0:
 			var barrel: BreakableBarrel = BARREL_SCRIPT.new()
 			barrel.position = hit_pos
 			_world_root.add_child(barrel)

@@ -1,10 +1,10 @@
 extends Node3D
-## Hovedmeny med ekte 3D-bakgrunn (Abra Havn / Kaptein Sabeltann + animert hav) og norsk HD-meny.
+## Hovedmeny (1:1 tro mot originalen) med 3D-bakgrunn av Abra Havn i solnedgang og ren historieflyt.
 
 const OCEAN_SHADER := preload("res://shaders/ocean_water.gdshader")
 
 var _cam_pivot: Node3D
-var _level_select_panel: PanelContainer
+var _settings_panel: PanelContainer
 
 
 func _ready() -> void:
@@ -58,11 +58,11 @@ func _setup_3d_backdrop() -> void:
 	water.material_override = wmat
 	add_child(water)
 
-	# Last hovedmeny eller full HD Abra Havn som 3D-blikkfang
+	# Last full HD Abra Havn som 3D-bakgrunn
 	var hero_loaded := false
-	var hero_center := Vector3(0.0, 3.0, 0.0)
-	var cam_dist := 24.0
-	for cand in ["res://assets/levels/mainmenu.glb", "res://assets/levels/abra.glb", "res://assets/models/sabeltann.glb"]:
+	var hero_center := Vector3(0.0, 5.0, 0.0)
+	var cam_dist := 32.0
+	for cand in ["res://assets/levels/abra.glb", "res://assets/models/sabeltann.glb"]:
 		if ResourceLoader.exists(cand):
 			var sc := load(cand) as PackedScene
 			if sc:
@@ -70,9 +70,6 @@ func _setup_3d_backdrop() -> void:
 				add_child(inst)
 				_clean_menu_backdrop(inst)
 				hero_loaded = true
-				if cand.ends_with("abra.glb"):
-					hero_center = Vector3(0.0, 5.0, 0.0)
-					cam_dist = 32.0
 				break
 
 	if not hero_loaded:
@@ -105,20 +102,43 @@ func _clean_menu_backdrop(node: Node) -> void:
 
 func _process(delta: float) -> void:
 	if is_instance_valid(_cam_pivot):
-		_cam_pivot.rotate_y(delta * 0.14)
+		_cam_pivot.rotate_y(delta * 0.12)
 
 
 func _make_style() -> StyleBoxFlat:
 	var st := StyleBoxFlat.new()
-	st.bg_color = Color(0.05, 0.07, 0.12, 0.88)
-	st.border_color = Color(0.90, 0.70, 0.28, 0.95)
-	st.set_border_width_all(2)
-	st.set_corner_radius_all(14)
-	st.content_margin_left = 28
-	st.content_margin_right = 28
-	st.content_margin_top = 24
-	st.content_margin_bottom = 24
+	st.bg_color = Color(0.11, 0.07, 0.04, 0.86)
+	st.border_color = Color(0.84, 0.64, 0.26, 0.95)
+	st.set_border_width_all(3)
+	st.set_corner_radius_all(12)
+	st.content_margin_left = 30
+	st.content_margin_right = 30
+	st.content_margin_top = 26
+	st.content_margin_bottom = 26
 	return st
+
+
+func _make_btn_style(hover: bool = false) -> StyleBoxFlat:
+	var st := StyleBoxFlat.new()
+	st.bg_color = Color(0.32, 0.20, 0.10, 0.94) if hover else Color(0.20, 0.12, 0.06, 0.90)
+	st.border_color = Color(0.96, 0.78, 0.34, 1.0) if hover else Color(0.72, 0.54, 0.22, 0.85)
+	st.set_border_width_all(2)
+	st.set_corner_radius_all(8)
+	st.content_margin_left = 18
+	st.content_margin_right = 18
+	st.content_margin_top = 10
+	st.content_margin_bottom = 10
+	return st
+
+
+func _style_button(btn: Button) -> void:
+	btn.add_theme_stylebox_override("normal", _make_btn_style(false))
+	btn.add_theme_stylebox_override("hover", _make_btn_style(true))
+	btn.add_theme_stylebox_override("pressed", _make_btn_style(true))
+	btn.add_theme_font_size_override("font_size", 20)
+	btn.add_theme_color_override("font_color", Color(0.98, 0.92, 0.78))
+	btn.add_theme_color_override("font_hover_color", Color(1.0, 0.88, 0.42))
+	btn.custom_minimum_size = Vector2(0, 50)
 
 
 func _setup_menu_ui() -> void:
@@ -127,116 +147,109 @@ func _setup_menu_ui() -> void:
 
 	var panel := PanelContainer.new()
 	panel.set_anchors_preset(Control.PRESET_CENTER_LEFT)
-	panel.offset_left = 70
-	panel.offset_right = 560
-	panel.offset_top = -270
-	panel.offset_bottom = 270
+	panel.offset_left = 72
+	panel.offset_right = 510
+	panel.offset_top = -195
+	panel.offset_bottom = 195
 	panel.add_theme_stylebox_override("panel", _make_style())
 	ui.add_child(panel)
 
 	var vb := VBoxContainer.new()
-	vb.add_theme_constant_override("separation", 14)
+	vb.add_theme_constant_override("separation", 16)
 	panel.add_child(vb)
 
 	var title := Label.new()
 	title.text = "KAPTEIN SABELTANN"
-	title.add_theme_font_size_override("font_size", 36)
+	title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	title.add_theme_font_size_override("font_size", 34)
 	title.add_theme_color_override("font_color", Color(1.0, 0.84, 0.28))
 	vb.add_child(title)
 
 	var sub := Label.new()
-	sub.text = "og Grusomme Gabriels forbannelse\nHD REMAKE EDITION (Godot 4)"
-	sub.add_theme_font_size_override("font_size", 18)
-	sub.add_theme_color_override("font_color", Color(0.92, 0.94, 0.98))
+	sub.text = "og Grusomme Gabriels forbannelse"
+	sub.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	sub.add_theme_font_size_override("font_size", 19)
+	sub.add_theme_color_override("font_color", Color(0.95, 0.88, 0.74))
 	vb.add_child(sub)
 
-	var start_btn := Button.new()
-	start_btn.text = "Start nytt eventyr (Abra Havn)"
-	start_btn.custom_minimum_size = Vector2(0, 48)
-	start_btn.pressed.connect(func():
-		GameState.reset_new_game("abra")
-		get_tree().change_scene_to_file("res://scenes/GameLevel.tscn")
-	)
-	vb.add_child(start_btn)
-
-	var cave_btn := Button.new()
-	cave_btn.text = "Start fra original intro (Gabriels grotte)"
-	cave_btn.custom_minimum_size = Vector2(0, 44)
-	cave_btn.pressed.connect(func():
-		GameState.reset_new_game("cave")
-		get_tree().change_scene_to_file("res://scenes/GameLevel.tscn")
-	)
-	vb.add_child(cave_btn)
+	var sep := Control.new()
+	sep.custom_minimum_size = Vector2(0, 6)
+	vb.add_child(sep)
 
 	if GameState.has_save():
 		var cont_btn := Button.new()
-		cont_btn.text = "Fortsett lagret spill (%s)" % LevelCatalog.get_level(GameState.current_level_id).get("title", "")
-		cont_btn.custom_minimum_size = Vector2(0, 44)
+		cont_btn.text = "Fortsett spill"
+		_style_button(cont_btn)
 		cont_btn.pressed.connect(func():
+			AudioManager.play_sfx("menu_select")
 			get_tree().change_scene_to_file("res://scenes/GameLevel.tscn")
 		)
 		vb.add_child(cont_btn)
 
-	var levels_btn := Button.new()
-	levels_btn.text = "Velg nivå (alle 18 verdener)"
-	levels_btn.custom_minimum_size = Vector2(0, 44)
-	levels_btn.pressed.connect(func(): _level_select_panel.visible = not _level_select_panel.visible)
-	vb.add_child(levels_btn)
+	var start_btn := Button.new()
+	start_btn.text = "Nytt spill"
+	_style_button(start_btn)
+	start_btn.pressed.connect(func():
+		AudioManager.play_sfx("menu_select")
+		# 1:1 historieflyt: starter alltid i Grusomme Gabriels grotte
+		GameState.reset_new_game("cave")
+		get_tree().change_scene_to_file("res://scenes/GameLevel.tscn")
+	)
+	vb.add_child(start_btn)
 
-	# Grafikk-kvalitet
-	var gfx_box := HBoxContainer.new()
-	var glbl := Label.new()
-	glbl.text = "HD-grafikk: "
-	gfx_box.add_child(glbl)
-	for preset in ["Medium", "High", "Ultra"]:
-		var gb := Button.new()
-		gb.text = preset
-		gb.pressed.connect(func(): GameState.apply_graphics_preset(preset))
-		gfx_box.add_child(gb)
-	vb.add_child(gfx_box)
+	var opt_btn := Button.new()
+	opt_btn.text = "Innstillinger"
+	_style_button(opt_btn)
+	opt_btn.pressed.connect(func():
+		AudioManager.play_sfx("menu_select")
+		_settings_panel.visible = not _settings_panel.visible
+	)
+	vb.add_child(opt_btn)
 
 	var quit_btn := Button.new()
 	quit_btn.text = "Avslutt"
-	quit_btn.custom_minimum_size = Vector2(0, 40)
+	_style_button(quit_btn)
 	quit_btn.pressed.connect(func(): get_tree().quit())
 	vb.add_child(quit_btn)
 
-	# Nivåvelger-panel til høyre
-	_level_select_panel = PanelContainer.new()
-	_level_select_panel.set_anchors_preset(Control.PRESET_CENTER_RIGHT)
-	_level_select_panel.offset_left = -620
-	_level_select_panel.offset_right = -60
-	_level_select_panel.offset_top = -300
-	_level_select_panel.offset_bottom = 300
-	_level_select_panel.add_theme_stylebox_override("panel", _make_style())
-	_level_select_panel.visible = false
-	ui.add_child(_level_select_panel)
+	# Skjult innstillingspanel (åpnes kun ved klikk på Innstillinger)
+	_settings_panel = PanelContainer.new()
+	_settings_panel.set_anchors_preset(Control.PRESET_CENTER)
+	_settings_panel.offset_left = 40
+	_settings_panel.offset_right = 420
+	_settings_panel.offset_top = -120
+	_settings_panel.offset_bottom = 120
+	_settings_panel.add_theme_stylebox_override("panel", _make_style())
+	_settings_panel.visible = false
+	ui.add_child(_settings_panel)
 
-	var lv := VBoxContainer.new()
-	_level_select_panel.add_child(lv)
-	var ltitle := Label.new()
-	ltitle.text = "VELG NIVÅ"
-	ltitle.add_theme_font_size_override("font_size", 22)
-	ltitle.add_theme_color_override("font_color", Color(1.0, 0.84, 0.30))
-	lv.add_child(ltitle)
+	var sv := VBoxContainer.new()
+	sv.add_theme_constant_override("separation", 12)
+	_settings_panel.add_child(sv)
 
-	var sc := ScrollContainer.new()
-	sc.size_flags_vertical = Control.SIZE_EXPAND_FILL
-	lv.add_child(sc)
+	var stitle := Label.new()
+	stitle.text = "INNSTILLINGER"
+	stitle.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	stitle.add_theme_font_size_override("font_size", 22)
+	stitle.add_theme_color_override("font_color", Color(1.0, 0.84, 0.28))
+	sv.add_child(stitle)
 
-	var grid := GridContainer.new()
-	grid.columns = 2
-	grid.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	sc.add_child(grid)
+	var glbl := Label.new()
+	glbl.text = "Grafikkvalitet:"
+	glbl.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	sv.add_child(glbl)
 
-	for lid in LevelCatalog.ORDERED_LEVEL_IDS:
-		var info := LevelCatalog.get_level(lid)
-		var b := Button.new()
-		b.text = str(info.get("title", lid))
-		b.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-		b.custom_minimum_size = Vector2(0, 38)
-		b.pressed.connect(func():
-			GameState.reset_new_game(lid)
-			get_tree().change_scene_to_file("res://scenes/GameLevel.tscn")
+	var grow := HBoxContainer.new()
+	grow.alignment = BoxContainer.ALIGNMENT_CENTER
+	grow.add_theme_constant_override("separation", 8)
+	for preset in ["Medium", "High", "Ultra"]:
+		var gb := Button.new()
+		gb.text = preset
+		_style_button(gb)
+		gb.custom_minimum_size = Vector2(96, 40)
+		gb.pressed.connect(func():
+			AudioManager.play_sfx("menu_select")
+			GameState.apply_graphics_preset(preset)
 		)
-		grid.add_child(b)
+		grow.add_child(gb)
+	sv.add_child(grow)
