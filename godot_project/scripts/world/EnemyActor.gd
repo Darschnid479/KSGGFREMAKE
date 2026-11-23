@@ -25,6 +25,8 @@ const COIN_SCRIPT := preload("res://scripts/world/CollectibleCoin.gd")
 
 
 func _ready() -> void:
+	collision_layer = 4
+	collision_mask = 1
 	add_to_group("hittable")
 	add_to_group("enemy")
 	hp = max_hp

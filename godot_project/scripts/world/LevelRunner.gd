@@ -881,7 +881,7 @@ func _spawn_pinky(pos: Vector3, is_swim: bool) -> CharacterBody3D:
 
 	var col := CollisionShape3D.new()
 	var cap := CapsuleShape3D.new()
-	cap.radius = 0.38
+	cap.radius = 0.25
 	cap.height = 1.6
 	col.shape = cap
 	col.position.y = 0.85
@@ -1158,7 +1158,7 @@ func _build_3d_spline_walls(gp_data: Dictionary, spawn_pos: Vector3) -> void:
 					hy = spawn_pos.y
 				var cs := CollisionShape3D.new()
 				var bx := BoxShape3D.new()
-				bx.size = Vector3(seg_len + 0.14, 16.0, 0.24)
+				bx.size = Vector3(seg_len + 0.06, 16.0, 0.08)
 				cs.shape = bx
 				cs.position = Vector3(mid.x, hy + 5.5, mid.y)
 				cs.rotation.y = -atan2(seg.y, seg.x)
@@ -1167,7 +1167,7 @@ func _build_3d_spline_walls(gp_data: Dictionary, spawn_pos: Vector3) -> void:
 			var rm := re_rad.search(ud)
 			var vm := re_vec.search(ud)
 			if rm and vm:
-				var rad := maxf(float(rm.get_string(1)) * WORLD_SCALE * 0.85, 0.24)
+				var rad := maxf(float(rm.get_string(1)) * WORLD_SCALE * 0.78, 0.22)
 				var cx := float(vm.get_string(1)) * WORLD_SCALE
 				var cz := -float(vm.get_string(2)) * WORLD_SCALE
 				var hy := _heightmap.sample_y(cx, cz) if (_heightmap and _heightmap.valid) else spawn_pos.y

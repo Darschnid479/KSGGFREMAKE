@@ -37,6 +37,9 @@ var _leap_dur: float = 0.65
 var _leap_arc: float = 1.6
 var _leap_is_climb: bool = false
 var _leap_cb: Callable
+var _leap_cooldown: float = 0.0
+var _edge_push_timer: float = 0.0
+var _crate_push_timer: float = 0.0
 
 const ROCK_SCENE := preload("res://scripts/world/SlingshotRock.gd")
 
@@ -44,8 +47,8 @@ const ROCK_SCENE := preload("res://scripts/world/SlingshotRock.gd")
 func _ready() -> void:
 	add_to_group("player")
 	collision_layer = 2
-	collision_mask = 1
-	floor_max_angle = deg_to_rad(62.0)
+	collision_mask = 1 | 4
+	floor_max_angle = deg_to_rad(46.0)
 	floor_snap_length = 0.35
 	_last_safe_pos = global_position
 	_setup_visuals()
@@ -293,13 +296,20 @@ func _physics_process(delta: float) -> void:
 	elif is_instance_valid(_sword_pivot):
 		_sword_pivot.rotation = _sword_pivot.rotation.lerp(Vector3(0.32, -0.35, -0.22), delta * 10.0)
 
-	# 0. Assistert hopp over kløft / stige-klatring / Pelle-kast
+	_leap_cooldown = maxf(0.0, _leap_cooldown - delta)
+
+	# 0. Assistert hopp over kløft / stige-klatring / Pelle-kast (med animasjon og fremover-retning)
 	if _leap_active:
 		_leap_t += delta / _leap_dur
+		var ldir := Vector3(_leap_to.x - _leap_from.x, 0.0, _leap_to.z - _leap_from.z)
+		if ldir.length_squared() > 0.01 and is_instance_valid(_visual_root):
+			_visual_root.rotation.y = lerp_angle(_visual_root.rotation.y, atan2(-ldir.x, -ldir.z), delta * 14.0)
 		if _leap_t >= 1.0:
 			global_position = _leap_to
 			_last_safe_pos = _leap_to
 			_leap_active = false
+			_leap_cooldown = 0.68
+			_edge_push_timer = 0.0
 			velocity = Vector3.ZERO
 			var lcb := _leap_cb
 			_leap_cb = Callable()
@@ -317,7 +327,7 @@ func _physics_process(delta: float) -> void:
 	var move_dir := Vector3.ZERO
 	var spd := sprint_speed if Input.is_action_pressed("sprint") else walk_speed
 
-	# Historie-styrt spline-gange (f.eks. pinky_end, pinky_chestwalk)
+	# Historie-styrt spline-gange kun når eksplisitt satt (aldri ufrivillig teleportering)
 	if _spline_idx < _spline_pts.size():
 		var tgt := _spline_pts[_spline_idx]
 		var diff := Vector3(tgt.x - global_position.x, 0.0, tgt.z - global_position.z)
@@ -345,6 +355,14 @@ func _physics_process(delta: float) -> void:
 	if heightmap_sampler.is_valid() and not is_swimming:
 		hm_floor_y = heightmap_sampler.call(global_position)
 	var grounded := is_on_floor() or (hm_floor_y > -5000.0 and global_position.y <= hm_floor_y + 0.16 and velocity.y <= 0.1)
+
+	# 1. Original 1:1 hopp ved kant-kollisjon: hold piltast / WASD mot kanten så hopper Pinky over med animasjon!
+	if grounded and not input_locked and _leap_cooldown <= 0.0 and move_dir.length_squared() > 0.05:
+		if _try_directional_edge_leap(move_dir, delta):
+			return
+	else:
+		_edge_push_timer = 0.0
+
 	if is_swimming:
 		spd *= 0.72
 		var vy := 0.0
@@ -357,9 +375,16 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = lerp(velocity.x, move_dir.x * spd, delta * 12.0)
 		velocity.z = lerp(velocity.z, move_dir.z * spd, delta * 12.0)
+		# Sikre mot klipping opp bratte stup/klippevegger uten spline-vegg
+		if heightmap_sampler.is_valid() and hm_floor_y > -5000.0 and grounded:
+			var next_probe := global_position + Vector3(velocity.x, 0.0, velocity.z) * maxf(delta * 2.0, 0.14)
+			var next_hm: float = heightmap_sampler.call(next_probe)
+			if next_hm > -5000.0 and next_hm > hm_floor_y + 1.35:
+				velocity.x = 0.0
+				velocity.z = 0.0
 		if grounded:
 			if not input_locked and Input.is_action_just_pressed("jump"):
-				if _try_nearby_leap():
+				if _try_nearby_leap(move_dir):
 					return
 				velocity.y = jump_velocity
 				grounded = false
@@ -368,6 +393,25 @@ func _physics_process(delta: float) -> void:
 			velocity.y -= gravity * delta
 
 	move_and_slide()
+
+	# Automatisk dytting hvis spilleren presser inn mot skyvbar trekasse (f.eks. cratepuzzle1)
+	var pushing_crate_now := false
+	if move_dir.length_squared() > 0.05 and not input_locked:
+		for si in range(get_slide_collision_count()):
+			var col := get_slide_collision(si)
+			var obj := col.get_collider()
+			if obj and obj.has_meta("pushable") and obj.has_method("interact"):
+				pushing_crate_now = true
+				_crate_push_timer += delta
+				if _crate_push_timer >= 0.14:
+					_crate_push_timer = 0.0
+					obj.interact(self)
+				break
+	if not pushing_crate_now:
+		_crate_push_timer = 0.0
+		is_pushing = false
+	else:
+		is_pushing = true
 
 	# Nøyaktig original heightmap-gulv (mykt steg opp/ned uten å sette seg fast i trimesh!)
 	if heightmap_sampler.is_valid() and not is_swimming:
@@ -378,16 +422,16 @@ func _physics_process(delta: float) -> void:
 				velocity.y = 0.0
 				grounded = true
 			_safe_tick += delta
-			if grounded and _safe_tick >= 0.25:
+			if grounded and _safe_tick >= 0.35:
 				_safe_tick = 0.0
 				# Ikke lagre trygg posisjon midt nede i lava!
 				var in_cave_lava := ("cave" in GameState.current_level_id) and hm_y < -10.55 and global_position.x > -20.0 and global_position.x < 10.0 and global_position.z > -28.0 and global_position.z < 5.0
 				if not in_cave_lava:
 					_last_safe_pos = global_position
 
-	# Sikkerhetsnett mot å falle i avgrunner, vann eller glødende lava!
+	# Sikkerhetsnett mot å falle i dype avgrunner, vann eller glødende lava (aldri plutselig teleportering på vanlig terreng!)
 	if not is_swimming and _last_safe_pos != Vector3.ZERO:
-		var fell_void := (hm_floor_y <= -5000.0 and global_position.y < _last_safe_pos.y - 3.6) or (global_position.y < _last_safe_pos.y - 7.5)
+		var fell_void := (hm_floor_y <= -5000.0 and global_position.y < _last_safe_pos.y - 4.5) or (global_position.y < _last_safe_pos.y - 9.0)
 		var fell_lava := ("cave" in GameState.current_level_id) and hm_floor_y > -5000.0 and hm_floor_y < -10.55 and global_position.y <= -10.50 and global_position.x > -20.0 and global_position.x < 10.0 and global_position.z > -28.0 and global_position.z < 5.0
 		if fell_void or fell_lava:
 			GameState.take_damage(12.0)
@@ -409,13 +453,63 @@ func _physics_process(delta: float) -> void:
 		_animator.update_anim(delta, horiz_speed, grounded or is_swimming, is_talking, is_pushing, GameState.health <= 0.0)
 
 
-func _try_nearby_leap() -> bool:
+func _try_directional_edge_leap(move_dir: Vector3, delta: float) -> bool:
+	var inp := Vector2(move_dir.x, move_dir.z)
+	if inp.length_squared() < 0.01:
+		_edge_push_timer = 0.0
+		return false
+	inp = inp.normalized()
+
+	var best: Node = null
+	var best_score := -1.0
+	for node in get_tree().get_nodes_in_group("leap_interactable"):
+		if not (node is Node3D) or not node.has_meta("leap_dest"):
+			continue
+		var np := (node as Node3D).global_position
+		if absf(np.y - global_position.y) > 1.8:
+			continue
+		var dist_xz := Vector2(np.x - global_position.x, np.z - global_position.z).length()
+		var max_edge_d := 2.25 if is_on_wall() else 1.25
+		if dist_xz > max_edge_d:
+			continue
+		var dest: Vector3 = node.get_meta("leap_dest")
+		var to_dest := Vector2(dest.x - global_position.x, dest.z - global_position.z)
+		if to_dest.length() < 0.25:
+			continue
+		var dir_dot := inp.dot(to_dest.normalized())
+		if dir_dot > 0.55 and (is_on_wall() or dist_xz <= 1.25):
+			var score := dir_dot * 2.0 - dist_xz * 0.4
+			if score > best_score:
+				best_score = score
+				best = node
+	if best and best.has_method("interact"):
+		_edge_push_timer += delta
+		if is_on_wall() or _edge_push_timer >= 0.06:
+			_edge_push_timer = 0.0
+			best.interact(self)
+			return true
+	else:
+		_edge_push_timer = 0.0
+	return false
+
+
+func _try_nearby_leap(move_dir: Vector3 = Vector3.ZERO) -> bool:
+	var inp := Vector2(move_dir.x, move_dir.z)
+	var has_inp := inp.length_squared() > 0.05
+	if has_inp:
+		inp = inp.normalized()
 	var best: Node = null
 	var best_d := 3.4
 	for node in get_tree().get_nodes_in_group("leap_interactable"):
 		if node is Node3D:
-			var d := global_position.distance_to((node as Node3D).global_position)
+			var np := (node as Node3D).global_position
+			var d := global_position.distance_to(np)
 			if d < best_d:
+				if has_inp and node.has_meta("leap_dest"):
+					var dest: Vector3 = node.get_meta("leap_dest")
+					var td := Vector2(dest.x - global_position.x, dest.z - global_position.z)
+					if td.length() > 0.25 and inp.dot(td.normalized()) < -0.25:
+						continue
 				best_d = d
 				best = node
 	if best and best.has_method("interact"):

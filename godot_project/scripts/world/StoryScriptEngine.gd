@@ -367,10 +367,13 @@ func _spawn_story_interactables() -> void:
 	# 2. Generer ALLE originale hopp (jump_*) og stiger (ladder_*) fra gameplay-JSON på tvers av alle brett!
 	_spawn_jumps_and_ladders()
 
-	# 3. Generer originale oppdragsskatter (pickup_*) på alle brett (kake, nøkler, kokosnøtter, klubbe osv.)
+	# 3. Generer ALLE originale kaste-sekvenser med Pelle på tvers av alle baner (cave, graal_mountain, magakhan_palace)
+	_spawn_all_throws()
+
+	# 4. Generer originale oppdragsskatter (pickup_*) på alle brett (kake, nøkler, kokosnøtter, klubbe osv.)
 	_spawn_all_pickups()
 
-	# 4. I Grusomme Gabriels grotte (cave): plasser ekte originale historie-objekter!
+	# 5. I Grusomme Gabriels grotte (cave): plasser ekte originale historie-objekter!
 	if level_id == "cave":
 		_spawn_cave_story_objects()
 
@@ -411,10 +414,12 @@ func _spawn_jumps_and_ladders() -> void:
 			trig.is_blocking = false
 			trig.add_to_group("interactable")
 			trig.add_to_group("leap_interactable")
+			trig.set_meta("leap_dest", to_p + Vector3(0.0, 0.12, 0.0))
+			trig.set_meta("leap_is_climb", is_climb)
 			if is_climb:
-				trig.prompt_text = "[Space / E] Klatre ned stigen" if is_rev else "[Space / E] Klatre opp stigen"
+				trig.prompt_text = "[Piltast / Space] Klatre ned stigen" if is_rev else "[Piltast / Space] Klatre opp stigen"
 			else:
-				trig.prompt_text = "[Space / E] Hopp over kløften"
+				trig.prompt_text = "[Piltast / Space] Hopp over kløften"
 
 			var ring := MeshInstance3D.new()
 			var tm := TorusMesh.new()
@@ -441,6 +446,110 @@ func _spawn_jumps_and_ladders() -> void:
 						emit_event(ev_base + "_finished")
 					)
 			world_root.add_child(trig)
+
+	# Støtte for toveis punkthopp i Maga Khans palass (actionable_jump_togong <-> actionable_jump_fromgong)
+	if nodes_by_name.has("actionable_jump_togong") and nodes_by_name.has("jump_togong") and nodes_by_name.has("actionable_jump_fromgong") and nodes_by_name.has("jump_fromgong"):
+		for jp_info in [
+			["actionable_jump_togong", "jump_togong"],
+			["actionable_jump_fromgong", "jump_fromgong"],
+		]:
+			var an: Dictionary = nodes_by_name[jp_info[0]]
+			var dn: Dictionary = nodes_by_name[jp_info[1]]
+			var agp: Array = an.get("godot_pos", [0, 0, 0])
+			var dgp: Array = dn.get("godot_pos", [0, 0, 0])
+			var fp := Vector3(float(agp[0]) * WORLD_SCALE, _sample_floor_y(float(agp[0]) * WORLD_SCALE, float(agp[2]) * WORLD_SCALE, float(agp[1]) * WORLD_SCALE), float(agp[2]) * WORLD_SCALE)
+			var tp := Vector3(float(dgp[0]) * WORLD_SCALE, _sample_floor_y(float(dgp[0]) * WORLD_SCALE, float(dgp[2]) * WORLD_SCALE, float(dgp[1]) * WORLD_SCALE), float(dgp[2]) * WORLD_SCALE)
+			var jt := StoryInteractable.new()
+			jt.name = "Jump_" + str(jp_info[1])
+			jt.position = fp
+			jt.is_blocking = false
+			jt.add_to_group("interactable")
+			jt.add_to_group("leap_interactable")
+			jt.set_meta("leap_dest", tp + Vector3(0.0, 0.12, 0.0))
+			jt.set_meta("leap_is_climb", false)
+			jt.prompt_text = "[Piltast / Space] Hopp over til gongen"
+			jt.on_interact_cb = func(p):
+				var actor: Node = p if (p != null and p.has_method("leap_to")) else player
+				if is_instance_valid(actor) and actor.has_method("leap_to"):
+					actor.leap_to(tp + Vector3(0.0, 0.12, 0.0), 0.72, 1.8, false, func():
+						emit_event(str(jp_info[0]) + "_actioned")
+					)
+			world_root.add_child(jt)
+
+
+func _spawn_all_throws() -> void:
+	for low in nodes_by_name.keys():
+		if not low.begins_with("actionable_throw"):
+			continue
+		var suffix: String = str(low).substr(16) # "", "1", "2"
+		var target_key := "throw" + suffix
+		if not nodes_by_name.has(target_key):
+			continue
+		var src_n: Dictionary = nodes_by_name[low]
+		var dst_n: Dictionary = nodes_by_name[target_key]
+		var sgp: Array = src_n.get("godot_pos", [0, 0, 0])
+		var dgp: Array = dst_n.get("godot_pos", [0, 0, 0])
+		var spos := Vector3(float(sgp[0]) * WORLD_SCALE, _sample_floor_y(float(sgp[0]) * WORLD_SCALE, float(sgp[2]) * WORLD_SCALE, float(sgp[1]) * WORLD_SCALE), float(sgp[2]) * WORLD_SCALE)
+		var dpos := Vector3(float(dgp[0]) * WORLD_SCALE, _sample_floor_y(float(dgp[0]) * WORLD_SCALE, float(dgp[2]) * WORLD_SCALE, float(dgp[1]) * WORLD_SCALE) + 0.14, float(dgp[2]) * WORLD_SCALE)
+
+		var trig := StoryInteractable.new()
+		trig.name = "ActionableThrow" + suffix
+		trig.position = spos
+		trig.is_blocking = false
+		trig.add_to_group("interactable")
+		trig.add_to_group("leap_interactable")
+		trig.set_meta("leap_dest", dpos)
+		trig.set_meta("leap_is_climb", false)
+		trig.prompt_text = "[E / Piltast] La Pelle kaste deg over til stenen"
+
+		var ring := MeshInstance3D.new()
+		var tm := TorusMesh.new()
+		tm.inner_radius = 0.65
+		tm.outer_radius = 0.78
+		ring.mesh = tm
+		ring.position.y = 0.05
+		var rmat := StandardMaterial3D.new()
+		rmat.albedo_color = Color(1.0, 0.72, 0.18, 0.65)
+		rmat.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
+		rmat.emission_enabled = true
+		rmat.emission = Color(1.0, 0.65, 0.12)
+		rmat.emission_energy_multiplier = 0.75
+		ring.material_override = rmat
+		trig.add_child(ring)
+
+		var cs := CollisionShape3D.new()
+		var sp := SphereShape3D.new()
+		sp.radius = 2.0
+		cs.shape = sp
+		trig.add_child(cs)
+
+		var act_ev := str(low) + "_actioned"
+		trig.on_interact_cb = func(p):
+			# Flytt Pelle synlig til kastepunktet og animer at han kaster Pinky mot stenen!
+			if actors.has("pelle") and is_instance_valid(actors["pelle"]):
+				var pelle = actors["pelle"]
+				if level_id == "cave" and nodes_by_name.has("teleport_throw") and pelle.global_position.distance_to(spos) > 8.0 and pelle.has_method("zap_to"):
+					pelle.zap_to(spos + Vector3(-1.2, 0.0, 0.6))
+				if pelle.has_method("face_toward"):
+					pelle.face_toward(dpos)
+				if pelle.get("_animator") != null and pelle.get("_animator").has_method("trigger_attack"):
+					pelle.get("_animator").trigger_attack()
+			AudioManager.play_sfx("jump")
+			var actor: Node = p if (p != null and p.has_method("leap_to")) else player
+			var dist := spos.distance_to(dpos)
+			var dur := clampf(dist * 0.08, 0.75, 1.35)
+			var arc := clampf(dist * 0.30, 2.8, 5.2)
+			if is_instance_valid(actor) and actor.has_method("leap_to"):
+				actor.leap_to(dpos, dur, arc, false, func():
+					emit_event(act_ev)
+					if level_id == "cave":
+						emit_event("areatrigger_lava_enter")
+				)
+			else:
+				if is_instance_valid(player):
+					player.global_position = dpos
+				emit_event(act_ev)
+		world_root.add_child(trig)
 
 
 func _spawn_all_pickups() -> void:
@@ -540,23 +649,24 @@ func _spawn_cave_story_objects() -> void:
 		)
 		world_root.add_child(area)
 
-	# B) Skyvbar trekasse (cratepuzzle1) med movablecrate.glb
+	# B) Skyvbar trekasse (cratepuzzle1) — skyv med [E] eller ved å gå rett mot den slik at hele åpningen blir fri!
 	if nodes_by_name.has("cratepuzzle1"):
-		var n: Dictionary = nodes_by_name["cratepuzzle1"]
-		var gp: Array = n.get("godot_pos", [-506, 0, -176])
+		var start_n: Dictionary = nodes_by_name.get("startposition", nodes_by_name["cratepuzzle1"])
+		var gp: Array = start_n.get("godot_pos", [-511, -89, -170])
 		var pos := Vector3(float(gp[0]) * WORLD_SCALE, 0.0, float(gp[2]) * WORLD_SCALE)
-		pos.y = _sample_floor_y(pos.x, pos.z, -6.5)
+		pos.y = _sample_floor_y(pos.x, pos.z, -8.9)
 		var crate := StoryInteractable.new()
 		crate.name = "CratePuzzle1"
 		crate.position = pos
 		crate.is_blocking = true
+		crate.set_meta("pushable", true)
 		crate.add_to_group("interactable")
-		crate.prompt_text = "[E] Dytt kassen på plass"
+		crate.prompt_text = "[E / Gå mot kassen] Dytt kassen til side"
 		var cs := CollisionShape3D.new()
 		var bx := BoxShape3D.new()
-		bx.size = Vector3(1.5, 1.4, 1.5)
+		bx.size = Vector3(1.15, 1.3, 1.15)
 		cs.shape = bx
-		cs.position.y = 0.7
+		cs.position.y = 0.65
 		crate.add_child(cs)
 		if ResourceLoader.exists("res://assets/models/movablecrate.glb"):
 			var sc := load("res://assets/models/movablecrate.glb") as PackedScene
@@ -567,22 +677,23 @@ func _spawn_cave_story_objects() -> void:
 		else:
 			var mi := MeshInstance3D.new()
 			var m := BoxMesh.new()
-			m.size = Vector3(1.4, 1.3, 1.4)
+			m.size = Vector3(1.15, 1.25, 1.15)
 			mi.mesh = m
-			mi.position.y = 0.65
+			mi.position.y = 0.62
 			crate.add_child(mi)
-		var dest_crate := crate.position + Vector3(1.8, 0.0, -2.2)
+		var dest_crate := pos + Vector3(-1.4, 0.0, -1.2)
 		if nodes_by_name.has("correctposition1"):
 			var cp: Array = nodes_by_name["correctposition1"].get("godot_pos", [])
 			if cp.size() >= 3:
-				var dx := float(cp[0]) * WORLD_SCALE
-				var dz := float(cp[2]) * WORLD_SCALE
-				dest_crate = Vector3(dx, _sample_floor_y(dx, dz, crate.position.y), dz)
+				var dx := float(cp[0]) * WORLD_SCALE - 0.55
+				var dz := float(cp[2]) * WORLD_SCALE - 0.35
+				dest_crate = Vector3(dx, _sample_floor_y(dx, dz, pos.y), dz)
 		crate.on_interact_cb = func(_p):
 			if not crate.get_meta("solved", false):
 				crate.set_meta("solved", true)
+				crate.set_blocking(false)
 				AudioManager.play_sfx("bashbarrel_01")
-				_moving_meshes.append({"node": crate, "target_pos": dest_crate, "speed": 3.0})
+				_moving_meshes.append({"node": crate, "target_pos": dest_crate, "speed": 3.4})
 				emit_event("cratepuzzle1_in_correctposition")
 		world_root.add_child(crate)
 
@@ -622,37 +733,6 @@ func _spawn_cave_story_objects() -> void:
 		wall.on_hit_cb = crush_fn
 		wall.on_interact_cb = func(_p): crush_fn.call()
 		world_root.add_child(wall)
-
-	# D) Pelle kaster Pinky over lavaen (actionable_throw)
-	if nodes_by_name.has("actionable_throw"):
-		var n: Dictionary = nodes_by_name["actionable_throw"]
-		var gp: Array = n.get("godot_pos", [-218, 0, -267])
-		var pos := Vector3(float(gp[0]) * WORLD_SCALE, 0.0, float(gp[2]) * WORLD_SCALE)
-		pos.y = _sample_floor_y(pos.x, pos.z, -7.0)
-		var trig := StoryInteractable.new()
-		trig.name = "ActionableThrow"
-		trig.position = pos
-		trig.is_blocking = false
-		trig.add_to_group("interactable")
-		trig.prompt_text = "[E] La Pelle kaste deg over lavaen"
-		var cs := CollisionShape3D.new()
-		var sp := SphereShape3D.new()
-		sp.radius = 2.0
-		cs.shape = sp
-		trig.add_child(cs)
-		trig.on_interact_cb = func(p):
-			AudioManager.play_sfx("jump")
-			var actor: Node = p if (p != null and p.has_method("leap_to")) else player
-			var dest := Vector3(-5.7, _sample_floor_y(-5.7, -23.5, -8.5) + 0.15, -23.5)
-			if is_instance_valid(actor) and actor.has_method("leap_to"):
-				actor.leap_to(dest, 0.92, 3.8, false, func():
-					emit_event("actionable_throw_actioned")
-				)
-			else:
-				if is_instance_valid(player):
-					player.global_position = dest
-				emit_event("actionable_throw_actioned")
-		world_root.add_child(trig)
 
 
 func _disable_collider(cname: String) -> void:
@@ -874,6 +954,8 @@ func _execute_target_action(target: String, sub: String, parts: PackedStringArra
 					else:
 						emit_event(jname + "_finished")
 		"zapto":
+			if target == "pinky" or target == "treasureseeker":
+				return
 			if parts.size() >= 3:
 				var dest_name := parts[2].strip_edges().to_lower()
 				if actors.has(target) and nodes_by_name.has(dest_name):
@@ -920,7 +1002,7 @@ func _execute_target_action(target: String, sub: String, parts: PackedStringArra
 						mi.add_child(gl)
 
 
-func start_conversation(conv_name: String, no_camera: bool = false, dont_lock: bool = false) -> void:
+func start_conversation(conv_name: String, _no_camera: bool = false, _dont_lock: bool = false) -> void:
 	var clips := AudioManager.get_conversation_clips(conv_name)
 	if clips.is_empty():
 		emit_event(conv_name + "_finished")
@@ -928,10 +1010,7 @@ func start_conversation(conv_name: String, no_camera: bool = false, dont_lock: b
 	_set_active_speaker(null)
 	_conv_name = conv_name.to_lower()
 	_conv_queue = clips
-	_conv_locked = not dont_lock
-	if _conv_locked and player and "input_locked" in player:
-		player.input_locked = true
-		_input_lock_failsafe = 18.0
+	_conv_locked = false
 	_play_next_conv_line()
 
 
@@ -958,7 +1037,7 @@ func _play_next_conv_line() -> void:
 	if actors.has(sp):
 		_set_active_speaker(actors[sp])
 	if _conv_locked:
-		_input_lock_failsafe = 14.0
+		_input_lock_failsafe = 4.0
 
 
 func _set_active_speaker(node: Node3D) -> void:
@@ -978,12 +1057,15 @@ func _set_active_speaker(node: Node3D) -> void:
 
 func _run_spline(sp: Dictionary) -> void:
 	var tname := str(sp["target"])
+	var sname := str(sp["name"])
+	if tname == "pinky" or tname == "treasureseeker":
+		emit_event(sname + "_finished")
+		return
 	var act = actors.get(tname, null)
 	if not is_instance_valid(act):
-		emit_event(str(sp["name"]) + "_finished")
+		emit_event(sname + "_finished")
 		return
 	var pts: Array[Vector3] = sp["points"]
-	var sname := str(sp["name"])
 	if act.has_method("walk_spline"):
 		act.walk_spline(pts, float(sp["speed"]), func(): emit_event(sname + "_finished"))
 	else:

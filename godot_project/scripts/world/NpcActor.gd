@@ -32,10 +32,10 @@ func _ready() -> void:
 	collision_mask = 0
 	var col := CollisionShape3D.new()
 	var cap := CapsuleShape3D.new()
-	cap.radius = 0.36
-	cap.height = 1.8
+	cap.radius = 0.28
+	cap.height = 1.7
 	col.shape = cap
-	col.position.y = 0.9
+	col.position.y = 0.85
 	add_child(col)
 
 	_visual = Node3D.new()
