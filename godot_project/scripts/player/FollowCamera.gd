@@ -15,6 +15,11 @@ var pitch: float = -0.32
 var distance: float = 9.5
 var top_down_mode: bool = false
 var side_2d_mode: bool = false
+var side_2d_clamp_enabled: bool = false
+var side_2d_min_x: float = -999.0
+var side_2d_max_x: float = 999.0
+var side_2d_min_y: float = -999.0
+var side_2d_max_y: float = 999.0
 var _rotating: bool = false
 
 @onready var spring_arm: SpringArm3D = $SpringArm3D
@@ -29,6 +34,32 @@ func _ready() -> void:
 		target = get_node_or_null(target_path)
 
 
+func set_side_2d_bounds(bounds: AABB, cam_dist: float) -> void:
+	var half_h := cam_dist * tan(deg_to_rad(26.0))
+	var half_w := half_h * (16.0 / 9.0)
+	var bx0 := bounds.position.x + half_w - 0.4
+	var bx1 := bounds.position.x + bounds.size.x - half_w + 0.4
+	var by0 := bounds.position.y + half_h - 0.4
+	var by1 := bounds.position.y + bounds.size.y - half_h + 0.4
+	if bx0 <= bx1:
+		side_2d_min_x = bx0
+		side_2d_max_x = bx1
+	else:
+		var cx := bounds.get_center().x
+		side_2d_min_x = cx
+		side_2d_max_x = cx
+	if by0 <= by1:
+		side_2d_min_y = by0
+		side_2d_max_y = by1
+	else:
+		var cy := bounds.get_center().y
+		side_2d_min_y = cy
+		side_2d_max_y = cy
+	side_2d_clamp_enabled = true
+	global_position.x = clampf(global_position.x, side_2d_min_x, side_2d_max_x)
+	global_position.y = clampf(global_position.y, side_2d_min_y, side_2d_max_y)
+
+
 func set_target(node: Node3D, dist: float = 9.5, height: float = 2.6, is_top_down: bool = false, is_side_2d: bool = false) -> void:
 	target = node
 	default_distance = dist
@@ -36,6 +67,7 @@ func set_target(node: Node3D, dist: float = 9.5, height: float = 2.6, is_top_dow
 	follow_height = height
 	top_down_mode = is_top_down
 	side_2d_mode = is_side_2d
+	side_2d_clamp_enabled = false
 	if top_down_mode:
 		# 1:1 originalt fugleperspektiv for verdenskartet (ovenfra ned på Den Sorte Dame og øyene)
 		pitch = -1.00
@@ -84,6 +116,9 @@ func _physics_process(delta: float) -> void:
 	var desired := target.global_position + Vector3(0.0, follow_height, 0.0)
 	if side_2d_mode:
 		desired.z = 0.0
+		if side_2d_clamp_enabled:
+			desired.x = clampf(desired.x, side_2d_min_x, side_2d_max_x)
+			desired.y = clampf(desired.y, side_2d_min_y, side_2d_max_y)
 	global_position = global_position.lerp(desired, clampf(delta * smooth_speed, 0.0, 1.0))
 
 	if not top_down_mode and not side_2d_mode:

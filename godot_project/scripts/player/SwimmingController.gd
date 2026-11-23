@@ -56,10 +56,10 @@ func _setup_visuals() -> void:
 
 	# Subtil undervanns-lykt på Pinky (scene_light festet til pinky i mapManager_swimming.ls!)
 	var swim_light := OmniLight3D.new()
-	swim_light.position = Vector3(0.0, 0.35, 2.2)
-	swim_light.light_color = Color(0.58, 0.94, 1.0)
-	swim_light.light_energy = 2.8
-	swim_light.omni_range = 16.0
+	swim_light.position = Vector3(0.0, 0.45, 2.4)
+	swim_light.light_color = Color(0.92, 0.98, 1.0)
+	swim_light.light_energy = 2.6
+	swim_light.omni_range = 14.0
 	swim_light.shadow_enabled = false
 	add_child(swim_light)
 
@@ -110,6 +110,8 @@ func _make_bubble_emitter(amt: int, life: float, pos: Vector3, rad: float, dir: 
 func _apply_swim_shader(mi: MeshInstance3D) -> void:
 	if mi.mesh == null:
 		return
+	var fab := VisualEnhancer.get_pbr_pack("fabric_detail")
+	var fab_nrm: Texture2D = fab.get("normal", null)
 	for si in range(mi.mesh.get_surface_count()):
 		var orig := mi.get_active_material(si)
 		var sm := ShaderMaterial.new()
@@ -120,6 +122,9 @@ func _apply_swim_shader(mi: MeshInstance3D) -> void:
 			if std.albedo_texture:
 				sm.set_shader_parameter("has_albedo_tex", true)
 				sm.set_shader_parameter("albedo_tex", std.albedo_texture)
+		if fab_nrm:
+			sm.set_shader_parameter("has_fabric_normal", true)
+			sm.set_shader_parameter("fabric_normal_tex", fab_nrm)
 		sm.set_shader_parameter("swim_phase", _swim_phase)
 		sm.set_shader_parameter("swim_intensity", _swim_intensity)
 		mi.set_surface_override_material(si, sm)

@@ -19,45 +19,45 @@ func _setup_3d_backdrop() -> void:
 	env.background_mode = Environment.BG_SKY
 	env.sky = VisualEnhancer.create_biome_sky("menu", {})
 	env.ambient_light_source = Environment.AMBIENT_SOURCE_SKY
-	env.ambient_light_sky_contribution = 0.78
-	env.ambient_light_energy = 0.74
-	# Moderne AgX kinematisk tonemapping (Pixar / Blender) + SSAO + SSIL indirekte lys
-	env.tonemap_mode = Environment.TONE_MAPPER_AGX
-	env.tonemap_exposure = 1.12
+	env.ambient_light_sky_contribution = 0.72
+	env.ambient_light_energy = 0.40
+	# Moderne ACES kinematisk tonemapping med dyp kontrast og null blass tåke-vask!
+	env.tonemap_mode = Environment.TONE_MAPPER_ACES
+	env.tonemap_exposure = 1.02
 	env.ssao_enabled = true
-	env.ssao_radius = 1.5
-	env.ssao_intensity = 1.65
+	env.ssao_radius = 1.65
+	env.ssao_intensity = 2.05
 	env.ssil_enabled = true
-	env.ssil_radius = 4.5
-	env.ssil_intensity = 0.95
+	env.ssil_radius = 4.2
+	env.ssil_intensity = 0.65
 	env.glow_enabled = true
 	env.glow_normalized = true
-	env.glow_intensity = 0.42
-	env.glow_bloom = 0.16
-	env.glow_hdr_threshold = 1.15
+	env.glow_intensity = 0.36
+	env.glow_bloom = 0.12
+	env.glow_hdr_threshold = 1.25
 	env.fog_enabled = true
-	env.fog_light_color = Color(0.92, 0.66, 0.44)
-	env.fog_density = 0.0011
-	env.fog_sky_affect = 0.12
+	env.fog_light_color = Color(0.92, 0.64, 0.42)
+	env.fog_density = 0.0008
+	env.fog_sky_affect = 0.10
 	env.adjustment_enabled = true
-	env.adjustment_contrast = 1.08
-	env.adjustment_saturation = 1.16
+	env.adjustment_contrast = 1.14
+	env.adjustment_saturation = 1.18
 	env_node.environment = env
 	add_child(env_node)
 
 	var sun := DirectionalLight3D.new()
 	sun.light_color = Color(1.0, 0.80, 0.48)
-	sun.light_energy = 2.45
+	sun.light_energy = 2.60
 	sun.shadow_enabled = true
-	sun.shadow_blur = 1.8
+	sun.shadow_blur = 1.6
 	sun.directional_shadow_mode = DirectionalLight3D.SHADOW_PARALLEL_4_SPLITS
 	sun.rotation_degrees = Vector3(-16.0, 32.0, 0.0)
 	add_child(sun)
 
 	# Kald motsatt himmel-kantbelysning for myk Pixar-dybde på skutesiden
 	var fill := DirectionalLight3D.new()
-	fill.light_color = Color(0.42, 0.64, 0.98)
-	fill.light_energy = 0.48
+	fill.light_color = Color(0.36, 0.60, 0.98)
+	fill.light_energy = 0.24
 	fill.shadow_enabled = false
 	fill.rotation_degrees = Vector3(-28.0, -145.0, 0.0)
 	add_child(fill)

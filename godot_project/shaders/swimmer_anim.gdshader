@@ -1,13 +1,14 @@
 shader_type spatial;
 render_mode blend_mix, depth_draw_opaque, cull_back, diffuse_burley, specular_schlick_ggx;
-// Ekte sanntids 3D svømmeanimasjon direkte på Pinkys mesh:
-// Vekslende crawl-armtak (én arm strakt langt frem foran hodet, én drar bakover gjennom vannet),
-// skarpt saks-beinspark, løftet hode (ser rett frem i svømmeretningen!) og null tøy-strekk.
+// Ekte sanntids 3D svømmeanimasjon direkte på Pinkys mesh + rik, skarp og mettet karakter-shading
+// (ingen blass/fadet vask i undervannsmiljøet!).
 
-uniform sampler2D albedo_tex : source_color, filter_linear_mipmap;
+uniform sampler2D albedo_tex : source_color, filter_linear_mipmap_anisotropic;
+uniform sampler2D fabric_normal_tex : hint_normal, filter_linear_mipmap_anisotropic, repeat_enable;
 uniform bool has_albedo_tex = false;
+uniform bool has_fabric_normal = false;
 uniform vec4 albedo_color : source_color = vec4(1.0);
-uniform float roughness_val : hint_range(0.0, 1.0) = 0.58;
+uniform float roughness_val : hint_range(0.0, 1.0) = 0.56;
 uniform float swim_phase = 0.0;
 uniform float swim_intensity : hint_range(0.0, 1.5) = 1.0;
 
@@ -32,7 +33,6 @@ void vertex() {
 	if (arm_w > 0.001) {
 		vec3 sh = vec3(sx * 0.21, 0.94, 0.02);
 		vec3 d = v - sh;
-		// Crawl-armtak i motfase: én arm strakt rett frem foran hodet (+3.05 rad), én drar bakover (+0.85 rad)!
 		float ph = swim_phase + (sx > 0.0 ? 0.0 : 3.14159);
 		float reach = 0.5 + 0.5 * sin(ph);
 		float pitch_ang = mix(0.45, mix(0.80, 3.05, reach), clamp(swim_intensity, 0.20, 1.0)) * arm_w;
@@ -51,7 +51,7 @@ void vertex() {
 		v = sh + d;
 	}
 
-	// 2. BEIN: Dynamisk saks-/beinspark (venstre og høyre bein sparker i motfase med naturlig knebøy!)
+	// 2. BEIN: Dynamisk saks-/beinspark i motfase med naturlig knebøy!
 	float leg_w = (1.0 - smoothstep(0.30, 0.44, v.y)) * (1.0 - arm_w);
 	if (leg_w > 0.001) {
 		float leg_side = smoothstep(-0.025, 0.025, v.x) * 2.0 - 1.0;
@@ -71,7 +71,7 @@ void vertex() {
 		v = hip + d;
 	}
 
-	// 3. HODE: Løft haken mot +Z (oppover i horisontal svømming!) slik at Pinky ser rett fremover!
+	// 3. HODE: Løft haken fremover slik at Pinky ser rett frem i svømmeretningen!
 	float head_w = smoothstep(0.98, 1.12, v.y);
 	if (head_w > 0.001) {
 		vec3 neck = vec3(0.0, 1.02, 0.0);
@@ -86,7 +86,6 @@ void vertex() {
 		v = neck + d;
 	}
 
-	// 4. Subtil myk undervanns-bølge gjennom overkroppen
 	v.z += sin(swim_phase * 2.0 - v.y * 3.0) * 0.03 * swim_intensity;
 
 	VERTEX = v;
@@ -98,9 +97,20 @@ void fragment() {
 	if (has_albedo_tex) {
 		alb *= texture(albedo_tex, UV).rgb;
 	}
-	float fres = pow(1.0 - clamp(dot(NORMAL, VIEW), 0.0, 1.0), 2.5);
-	ALBEDO = alb;
+	// Dyp, skarp og rik fargekontrast (fjerner blass 2005-vask slik at rød-hvite striper og bandana popper!)
+	alb = pow(max(alb, vec3(0.0001)), vec3(1.26)) * 1.10;
+	float lum = dot(alb, vec3(0.299, 0.587, 0.114));
+	alb = mix(vec3(lum), alb, 1.28);
+
+	if (has_fabric_normal) {
+		NORMAL_MAP = texture(fabric_normal_tex, UV * 7.0).rgb;
+		NORMAL_MAP_DEPTH = 0.42;
+	}
+
+	float fres = pow(1.0 - clamp(dot(NORMAL, VIEW), 0.0, 1.0), 3.4);
+	ALBEDO = clamp(alb, vec3(0.0), vec3(1.05));
 	ROUGHNESS = roughness_val;
 	METALLIC = 0.04;
-	EMISSION = vec3(0.28, 0.84, 1.0) * fres * 0.45;
+	SPECULAR = 0.55;
+	EMISSION = vec3(0.24, 0.78, 0.96) * fres * 0.16;
 }

@@ -19,29 +19,30 @@ func _ready() -> void:
 	col.shape = sph
 	add_child(col)
 
-	# Stilren gyllen kompassring (ingen blendende neon-strek!)
+	# Slank smidd antikk messing-kompassring som ligger lavt og diskret på dekket (ingen tykk gul smultring!)
 	_ring = MeshInstance3D.new()
 	var torus := TorusMesh.new()
-	torus.inner_radius = 1.15 if is_world_map_buoy else 0.85
-	torus.outer_radius = 1.42 if is_world_map_buoy else 1.05
+	torus.inner_radius = 1.25 if is_world_map_buoy else 0.72
+	torus.outer_radius = 1.38 if is_world_map_buoy else 0.78
 	_ring.mesh = torus
-	_ring.position.y = 0.14
+	_ring.scale = Vector3(1.0, 0.35, 1.0)
+	_ring.position.y = 0.06
 	var mat := StandardMaterial3D.new()
-	mat.albedo_color = Color(0.95, 0.76, 0.24)
-	mat.metallic = 0.82
+	mat.albedo_color = Color(0.76, 0.56, 0.16)
+	mat.metallic = 0.88
 	mat.roughness = 0.24
 	mat.emission_enabled = true
-	mat.emission = Color(1.0, 0.76, 0.22)
-	mat.emission_energy_multiplier = 1.15
+	mat.emission = Color(0.95, 0.68, 0.18)
+	mat.emission_energy_multiplier = 0.65 if is_world_map_buoy else 0.35
 	_ring.material_override = mat
 	add_child(_ring)
 
 	# Diskret varm glød i sentrum
 	var light := OmniLight3D.new()
-	light.position.y = 1.2
-	light.light_color = Color(1.0, 0.80, 0.34)
-	light.light_energy = 1.6
-	light.omni_range = 7.0
+	light.position.y = 0.85
+	light.light_color = Color(1.0, 0.76, 0.28)
+	light.light_energy = 1.1
+	light.omni_range = 5.5
 	add_child(light)
 
 	# Flytende tekst vises KUN når Pinky er rett i nærheten (holder spillbildet rent og kinoaktig!)

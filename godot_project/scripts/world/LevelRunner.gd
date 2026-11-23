@@ -115,8 +115,9 @@ func load_level(level_id: String) -> void:
 		_build_underwater_spline_walls(gp_data)
 		var swim_pos := _find_swimmer_spawn(level_id, gp_data)
 		_player_node = _spawn_swimmer(swim_pos)
-		var cam_dist := 14.5 if "world_map" in level_id else 11.8
+		var cam_dist := 12.5 if "world_map" in level_id else 9.2
 		_camera_rig.set_target(_player_node, cam_dist, 0.35, false, true)
+		_camera_rig.set_side_2d_bounds(level_bounds, cam_dist)
 		_populate_underwater_entities(level_id, cfg, gp_data)
 	else:
 		var spawn_pos := _find_player_spawn(level_id, gp_data, level_bounds)
@@ -161,75 +162,92 @@ func _setup_modern_environment(cfg: Dictionary) -> void:
 	env.background_mode = Environment.BG_SKY
 	env.sky = VisualEnhancer.create_biome_sky(current_level_id, cfg)
 
-	if is_cave or is_swim:
+	if is_swim:
 		env.ambient_light_source = Environment.AMBIENT_SOURCE_COLOR
-		env.ambient_light_color = cfg.get("ambient_color", Color(0.10, 0.36, 0.48))
-		env.ambient_light_energy = float(cfg.get("ambient_energy", 0.80 if is_swim else 0.55))
+		env.ambient_light_color = Color(0.08, 0.28, 0.40)
+		env.ambient_light_energy = 0.42
+	elif is_cave:
+		env.ambient_light_source = Environment.AMBIENT_SOURCE_COLOR
+		env.ambient_light_color = cfg.get("ambient_color", Color(0.16, 0.22, 0.30))
+		env.ambient_light_energy = 0.36
 	else:
 		env.ambient_light_source = Environment.AMBIENT_SOURCE_SKY
-		env.ambient_light_sky_contribution = 0.78
+		env.ambient_light_sky_contribution = 0.72
 		env.ambient_light_color = cfg.get("ambient_color", Color(0.36, 0.56, 0.86))
-		env.ambient_light_energy = float(cfg.get("ambient_energy", 0.68))
+		env.ambient_light_energy = clampf(float(cfg.get("ambient_energy", 0.65)) * 0.58, 0.32, 0.44)
 
-	# Moderne AAA animasjons-pipeline: AgX tonemapping + SSAO + SSIL indirekte lys + Glow + Volumetrisk tåke!
-	env.tonemap_mode = Environment.TONE_MAPPER_AGX
-	env.tonemap_exposure = 1.12 if is_swim else (1.10 if not is_cave else 1.05)
+	# Moderne AAA animasjons-pipeline: ACES kinokontrast + dyp SSAO + kontrollert SSIL – null melkeaktig «fade»!
+	env.tonemap_mode = Environment.TONE_MAPPER_ACES
+	env.tonemap_exposure = 1.02 if is_swim else (1.00 if not is_cave else 0.98)
 	env.ssao_enabled = GameState.ssao_enabled
-	env.ssao_radius = 1.65
-	env.ssao_intensity = 1.70
-	env.ssao_power = 1.45
-	env.ssao_detail = 0.65
+	env.ssao_radius = 1.70
+	env.ssao_intensity = 2.05
+	env.ssao_power = 1.55
+	env.ssao_detail = 0.72
 
-	# Sanntids indirekte bounce-lys (varme vegger i Fata Morgana, smaragdglød i grotten, havrefleks på skuta!)
+	# Sanntids indirekte bounce-lys (dempet slik at dype skygger og skarpe PBR-teksturer bevares!)
 	env.ssil_enabled = GameState.ssil_enabled
-	env.ssil_radius = 4.5
-	env.ssil_intensity = 1.05
+	env.ssil_radius = 4.0
+	env.ssil_intensity = 0.62
 
 	env.glow_enabled = GameState.glow_enabled
 	env.glow_normalized = true
-	env.glow_intensity = 0.45 if is_swim else 0.42
-	env.glow_bloom = 0.18 if is_swim else 0.16
-	env.glow_hdr_threshold = 1.15
+	env.glow_intensity = 0.34 if is_swim else 0.36
+	env.glow_bloom = 0.10 if is_swim else 0.12
+	env.glow_hdr_threshold = 1.25
 
 	env.fog_enabled = GameState.fog_enabled
 	env.fog_light_color = cfg.get("fog_color", Color(0.62, 0.78, 0.94))
-	env.fog_density = float(cfg.get("fog_density", 0.0011))
-	env.fog_sky_affect = 0.08 if is_graal else (0.35 if is_swim else (0.28 if is_cave else 0.14))
+	if is_swim:
+		# Dybde-tåke starter BAK Pinky (11.2m) slik at Pinky og forgrunnssteinene har NULL gråblå slør over seg!
+		env.fog_mode = Environment.FOG_MODE_DEPTH
+		env.fog_depth_begin = 11.2
+		env.fog_depth_end = 36.0
+		env.fog_density = 0.48
+		env.fog_sky_affect = 0.20
+	else:
+		env.fog_mode = Environment.FOG_MODE_EXPONENTIAL
+		env.fog_density = float(cfg.get("fog_density", 0.0011)) * 0.68
+		env.fog_sky_affect = 0.08 if is_graal else (0.24 if is_cave else 0.10)
 
-	# Volumetrisk tåke for magisk dybde og lysstråler i grottene, under vann og på Gral-borgen!
+	# Diskret volumetrisk tåke for lysstråler uten å bleke teksturene i forgrunnen!
 	if GameState.volumetric_fog_enabled and (is_cave or is_graal or is_swim):
 		env.volumetric_fog_enabled = true
-		env.volumetric_fog_density = 0.018 if is_swim else (0.022 if is_cave else 0.008)
-		env.volumetric_fog_albedo = Color(0.18, 0.72, 0.88) if is_swim else (Color(0.24, 0.85, 0.64) if "end" in current_level_id else Color(0.38, 0.48, 0.72))
-		env.volumetric_fog_emission = Color(0.02, 0.14, 0.22) if is_swim else (Color(0.04, 0.18, 0.13) if "end" in current_level_id else Color(0.03, 0.04, 0.08))
-		env.volumetric_fog_emission_energy = 0.35 if is_swim else (0.45 if is_cave else 0.25)
-		env.volumetric_fog_anisotropy = 0.62
-		env.volumetric_fog_length = 48.0 if is_swim else 55.0
+		env.volumetric_fog_density = 0.0035 if is_swim else (0.015 if is_cave else 0.006)
+		env.volumetric_fog_albedo = Color(0.14, 0.66, 0.84) if is_swim else (Color(0.24, 0.85, 0.64) if "end" in current_level_id else Color(0.36, 0.46, 0.70))
+		env.volumetric_fog_emission = Color(0.01, 0.08, 0.14) if is_swim else (Color(0.03, 0.15, 0.11) if "end" in current_level_id else Color(0.02, 0.03, 0.07))
+		env.volumetric_fog_emission_energy = 0.06 if is_swim else (0.35 if is_cave else 0.20)
+		env.volumetric_fog_anisotropy = 0.68
+		env.volumetric_fog_length = 42.0 if is_swim else 55.0
 
 	env.adjustment_enabled = true
-	env.adjustment_contrast = 1.08
+	env.adjustment_contrast = 1.14
 	env.adjustment_saturation = 1.18
 
 	_env_node.environment = env
 	_world_root.add_child(_env_node)
 
-	# Hovedlys (varm sol / sølvblått måneskinn på Gral) med 4K myke skygger
+	# Hovedlys (skarp varm sol / sølvblått måneskinn / krystallklart undervannslys) med 4K skygger
 	_sun_node = DirectionalLight3D.new()
-	_sun_node.light_color = cfg.get("sun_color", Color(1.0, 0.90, 0.68))
-	_sun_node.light_energy = float(cfg.get("sun_energy", 2.25))
+	if is_swim:
+		_sun_node.light_color = Color(0.80, 0.96, 1.0)
+		_sun_node.light_energy = 2.05
+	else:
+		_sun_node.light_color = cfg.get("sun_color", Color(1.0, 0.90, 0.68))
+		_sun_node.light_energy = float(cfg.get("sun_energy", 2.25)) * 1.08
 	_sun_node.shadow_enabled = true
-	_sun_node.shadow_blur = 1.8
+	_sun_node.shadow_blur = 1.6
 	_sun_node.directional_shadow_mode = DirectionalLight3D.SHADOW_PARALLEL_4_SPLITS
 	_sun_node.directional_shadow_max_distance = 220.0
-	var sang: Vector3 = cfg.get("sun_angles", Vector3(-36.0, 36.0, 0.0))
+	var sang: Vector3 = Vector3(-30.0, 18.0, 0.0) if is_swim else cfg.get("sun_angles", Vector3(-36.0, 36.0, 0.0))
 	_sun_node.rotation_degrees = sang
 	_world_root.add_child(_sun_node)
 
-	# Kald / varm motsatt Pixar-fyllbelysning (hindrer flate grå skygger og skaper kinokontrast!)
+	# Dempet motsatt Pixar-fyllbelysning (bevarer dype skygger og 3D-dybde!)
 	if not is_cave:
 		var fill := DirectionalLight3D.new()
-		fill.light_color = Color(1.0, 0.62, 0.28) if is_graal else Color(0.38, 0.64, 1.0)
-		fill.light_energy = 0.42 if is_graal else 0.52
+		fill.light_color = Color(1.0, 0.60, 0.26) if is_graal else (Color(0.24, 0.72, 0.90) if is_swim else Color(0.36, 0.62, 1.0))
+		fill.light_energy = 0.24 if is_graal else (0.18 if is_swim else 0.26)
 		fill.shadow_enabled = false
 		fill.rotation_degrees = Vector3(-24.0, sang.y + 165.0, 0.0)
 		_world_root.add_child(fill)
@@ -766,6 +784,7 @@ func _populate_entities(level_id: String, cfg: Dictionary, gp_data: Dictionary, 
 
 	var nodes: Array = gp_data.get("nodes", [])
 	var spawned_chars := 0
+	var occupied_positions: Array[Vector3] = [spawn_pos]
 
 	for n in nodes:
 		var nm := str(n.get("name", "")).to_lower()
@@ -789,6 +808,7 @@ func _populate_entities(level_id: String, cfg: Dictionary, gp_data: Dictionary, 
 		if spawned_chars > 24:
 			continue
 
+		occupied_positions.append(pos)
 		if matched_role["role"] == "npc":
 			var npc: NpcActor = NPC_SCRIPT.new()
 			npc.npc_id = key
@@ -823,6 +843,7 @@ func _populate_entities(level_id: String, cfg: Dictionary, gp_data: Dictionary, 
 	var phit := _raycast_ground(portal_raw, bounds)
 	portal.position = (phit + Vector3(0.0, 0.25, 0.0)) if phit.y > -5000.0 else spawn_pos + Vector3(6.0, 0.25, -5.0)
 	_world_root.add_child(portal)
+	occupied_positions.append(portal.position)
 
 	# 1:1 originale undervanns-brønner (2D side-scrolling dykk!) i Fata Morgana og Maga Khans fangehull
 	if level_id == "fatamorgana_city":
@@ -840,7 +861,7 @@ func _populate_entities(level_id: String, cfg: Dictionary, gp_data: Dictionary, 
 		key_p.position = (kh + Vector3(0.0, 0.25, 0.0)) if kh.y > -5000.0 else spawn_pos + Vector3(-5.5, 0.25, -4.5)
 		_world_root.add_child(key_p)
 
-	# Plasser pregede dubloner og håndlagde eiketønner KUN på flatt, tørt dekke (normal.y > 0.88)!
+	# Plasser pregede dubloner og håndlagde eiketønner KUN på flatt, tørt dekke og med klar avstand fra NPC-er!
 	var min_dry_y: float = float(cfg.get("water_y", -99.0)) + 0.45 if bool(cfg.get("has_water", false)) else -999.0
 	for i in range(10):
 		var ang := (float(i) / 10.0) * TAU + 0.2
@@ -851,6 +872,13 @@ func _populate_entities(level_id: String, cfg: Dictionary, gp_data: Dictionary, 
 			var hit_pos: Vector3 = info["position"]
 			var hit_nrm: Vector3 = info["normal"]
 			if hit_pos.y > min_dry_y and hit_nrm.y > 0.86 and absf(hit_pos.y - spawn_pos.y) < 2.6:
+				var too_close := false
+				for occ in occupied_positions:
+					if hit_pos.distance_to(occ) < 2.8:
+						too_close = true
+						break
+				if too_close:
+					continue
 				var coin: CollectibleCoin = COIN_SCRIPT.new()
 				coin.position = hit_pos + Vector3(0.0, 0.60, 0.0)
 				_world_root.add_child(coin)
@@ -864,6 +892,13 @@ func _populate_entities(level_id: String, cfg: Dictionary, gp_data: Dictionary, 
 				var hit_pos: Vector3 = info["position"]
 				var hit_nrm: Vector3 = info["normal"]
 				if hit_pos.y > min_dry_y and hit_nrm.y > 0.90 and absf(hit_pos.y - spawn_pos.y) < 2.2:
+					var too_close := false
+					for occ in occupied_positions:
+						if hit_pos.distance_to(occ) < 3.0:
+							too_close = true
+							break
+					if too_close:
+						continue
 					var barrel: BreakableBarrel = BARREL_SCRIPT.new()
 					barrel.position = hit_pos
 					_world_root.add_child(barrel)
@@ -906,21 +941,21 @@ func _load_underwater_world(w3d_name: String) -> AABB:
 	bg.rotation_degrees.x = 90.0
 	var bg_mat := StandardMaterial3D.new()
 	bg_mat.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
-	bg_mat.albedo_color = Color(0.015, 0.14, 0.24)
+	bg_mat.albedo_color = Color(0.012, 0.11, 0.20)
 	bg.material_override = bg_mat
 	_world_root.add_child(bg)
 
 	# Ekte volumetriske undervanns-lyskjegler (SpotLight3D) som skinner ned brønnsjaktene uten harde kanter!
 	for rx in [-12.5, -0.4, 11.0]:
 		var sl := SpotLight3D.new()
-		sl.position = Vector3(rx, 13.0, 1.5)
+		sl.position = Vector3(rx, 13.0, 1.2)
 		sl.rotation_degrees = Vector3(-86.0, 0.0, 0.0)
-		sl.light_color = Color(0.42, 0.92, 1.0)
-		sl.light_energy = 7.5
-		sl.light_volumetric_fog_energy = 2.6
+		sl.light_color = Color(0.42, 0.94, 1.0)
+		sl.light_energy = 7.2
+		sl.light_volumetric_fog_energy = 3.2
 		sl.spot_range = 24.0
-		sl.spot_angle = 28.0
-		sl.spot_attenuation = 0.75
+		sl.spot_angle = 26.0
+		sl.spot_attenuation = 0.72
 		sl.shadow_enabled = false
 		_world_root.add_child(sl)
 
