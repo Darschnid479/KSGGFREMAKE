@@ -1,0 +1,257 @@
+{
+  "file": "miriam.w3d",
+  "nodes": [
+    {
+      "name": "DefaultView",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "miriam",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "collisionradius=4.5;",
+      "sw_pos": [
+        0.0,
+        -0.352,
+        9.425
+      ],
+      "godot_pos": [
+        0.0,
+        9.425,
+        0.352
+      ]
+    },
+    {
+      "name": "miriam_proxy",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        -0.136,
+        6.958
+      ],
+      "godot_pos": [
+        0.0,
+        6.958,
+        0.136
+      ]
+    },
+    {
+      "name": "hiddenassets",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "userdata",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"miriam_stand\", #startxform: [#position: vector( 0.3485, -0.3515, 9.4294 ), #rotation: vector( 0.0000, 0.0000, ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"miriam_stand\", #startxform: [#position: vector( 0.3485, -0.3515, 9.4294 ), #rotation: vector( 0.0000, 0.0000, ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"miriam_stand_mumbojumbo\", #startxform: [#position: vector( 0.3485, -0.6178, 9.4294 ), #rotation: vector( 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"miriam_stand_mumbojumbo\", #startxform: [#position: vector( 0.3485, -0.6178, 9.4294 ), #rotation: vector( 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"miriam_stand_talk\", #startxform: [#position: vector( 0.3485, -0.3515, 9.4294 ), #rotation: vector( 0.0000, 0. ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0000, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"miriam_stand_talk\", #startxform: [#position: vector( 0.3485, -0.3515, 9.4294 ), #rotation: vector( 0.0000, 0. ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"miriam_stand_talk_mumbojumbo\", #startxform: [#position: vector( 0.3485, -0.6178, 9.4294 ), #rotation: vector( ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz 0.0000, 0.0000, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"miriam_stand_talk_mumbojumbo\", #startxform: [#position: vector( 0.3485, -0.6178, 9.4294 ), #rotation: vector( ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "TestLight",
+      "kind": "light",
+      "parent": "DefaultView",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    }
+  ],
+  "skeletons": [],
+  "animations": [
+    {
+      "name": "miriam",
+      "tracks": 29,
+      "size": 2097
+    },
+    {
+      "name": "miriam_stand",
+      "tracks": 29,
+      "size": 12210
+    },
+    {
+      "name": "miriam_stand_mumbojumbo",
+      "tracks": 29,
+      "size": 14701
+    },
+    {
+      "name": "miriam_stand_talk",
+      "tracks": 29,
+      "size": 11604
+    },
+    {
+      "name": "miriam_stand_talk_mumbojumbo",
+      "tracks": 29,
+      "size": 15323
+    }
+  ]
+}

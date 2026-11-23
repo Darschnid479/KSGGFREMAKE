@@ -1,0 +1,1015 @@
+{
+  "file": "cave_end.w3d",
+  "nodes": [
+    {
+      "name": "DefaultView",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "UIAmbient",
+      "kind": "light",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "Default MAX Light",
+      "kind": "light",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -0.0,
+        -241.481,
+        64.705
+      ],
+      "godot_pos": [
+        -0.0,
+        64.705,
+        241.481
+      ]
+    },
+    {
+      "name": "cave_background",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "fog=none;",
+      "sw_pos": [
+        -434.831,
+        -633.67,
+        0.0
+      ],
+      "godot_pos": [
+        -434.831,
+        0.0,
+        633.67
+      ]
+    },
+    {
+      "name": "cave_water_outside",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -703.615,
+        -54.48,
+        -51.722
+      ],
+      "godot_pos": [
+        -703.615,
+        -51.722,
+        54.48
+      ]
+    },
+    {
+      "name": "cave_darklady",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -514.166,
+        -927.674,
+        -78.524
+      ],
+      "godot_pos": [
+        -514.166,
+        -78.524,
+        927.674
+      ]
+    },
+    {
+      "name": "cave_lava",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        474.848,
+        918.723,
+        -113.356
+      ],
+      "godot_pos": [
+        474.848,
+        -113.356,
+        -918.723
+      ]
+    },
+    {
+      "name": "cave_coffin",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "portal=portal7;",
+      "sw_pos": [
+        -277.453,
+        218.592,
+        165.163
+      ],
+      "godot_pos": [
+        -277.453,
+        165.163,
+        -218.592
+      ]
+    },
+    {
+      "name": "cave_coffin_top",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "portal=portal7;",
+      "sw_pos": [
+        462.717,
+        943.004,
+        -66.977
+      ],
+      "godot_pos": [
+        462.717,
+        -66.977,
+        -943.004
+      ]
+    },
+    {
+      "name": "MapExportCamera",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -210.776,
+        113.594,
+        2219.236
+      ],
+      "godot_pos": [
+        -210.776,
+        2219.236,
+        -113.594
+      ]
+    },
+    {
+      "name": "MapExportCamera.Target",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -211.029,
+        113.594,
+        0.022
+      ],
+      "godot_pos": [
+        -211.029,
+        0.022,
+        -113.594
+      ]
+    },
+    {
+      "name": "scene_light",
+      "kind": "light",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -18.286,
+        -1691.579,
+        1452.291
+      ],
+      "godot_pos": [
+        -18.286,
+        1452.291,
+        1691.579
+      ]
+    },
+    {
+      "name": "scene_light.Target",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -212.552,
+        -299.362,
+        -65.911
+      ],
+      "godot_pos": [
+        -212.552,
+        -65.911,
+        299.362
+      ]
+    },
+    {
+      "name": "cave_water",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -587.589,
+        -150.349,
+        -96.607
+      ],
+      "godot_pos": [
+        -587.589,
+        -96.607,
+        150.349
+      ]
+    },
+    {
+      "name": "topwater_outside",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -444.493,
+        -1224.43,
+        -51.62
+      ],
+      "godot_pos": [
+        -444.493,
+        -51.62,
+        1224.43
+      ]
+    },
+    {
+      "name": "mk_torch_1",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -331.141,
+        -371.883,
+        -22.053
+      ],
+      "godot_pos": [
+        -331.141,
+        -22.053,
+        371.883
+      ]
+    },
+    {
+      "name": "mk_torch_02",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -373.591,
+        -271.905,
+        -24.871
+      ],
+      "godot_pos": [
+        -373.591,
+        -24.871,
+        271.905
+      ]
+    },
+    {
+      "name": "mk_torch_03",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -371.377,
+        -174.256,
+        -26.127
+      ],
+      "godot_pos": [
+        -371.377,
+        -26.127,
+        174.256
+      ]
+    },
+    {
+      "name": "mk_torch_04",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -620.303,
+        -221.948,
+        -27.658
+      ],
+      "godot_pos": [
+        -620.303,
+        -27.658,
+        221.948
+      ]
+    },
+    {
+      "name": "mk_torch_05",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -857.464,
+        -259.538,
+        -58.11
+      ],
+      "godot_pos": [
+        -857.464,
+        -58.11,
+        259.538
+      ]
+    },
+    {
+      "name": "mk_torch_06",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -972.877,
+        -303.179,
+        -58.627
+      ],
+      "godot_pos": [
+        -972.877,
+        -58.627,
+        303.179
+      ]
+    },
+    {
+      "name": "mk_torch_07",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -1025.734,
+        -119.662,
+        -72.511
+      ],
+      "godot_pos": [
+        -1025.734,
+        -72.511,
+        119.662
+      ]
+    },
+    {
+      "name": "mk_torch_08",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -1008.529,
+        -13.738,
+        -58.332
+      ],
+      "godot_pos": [
+        -1008.529,
+        -58.332,
+        13.738
+      ]
+    },
+    {
+      "name": "mk_torch_09",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -907.977,
+        30.7,
+        -78.416
+      ],
+      "godot_pos": [
+        -907.977,
+        -78.416,
+        -30.7
+      ]
+    },
+    {
+      "name": "mk_torch_10",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -755.715,
+        82.036,
+        -58.474
+      ],
+      "godot_pos": [
+        -755.715,
+        -58.474,
+        -82.036
+      ]
+    },
+    {
+      "name": "mk_torch_11",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -603.988,
+        33.576,
+        -78.108
+      ],
+      "godot_pos": [
+        -603.988,
+        -78.108,
+        -33.576
+      ]
+    },
+    {
+      "name": "mk_torch_12",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -571.429,
+        158.341,
+        -68.575
+      ],
+      "godot_pos": [
+        -571.429,
+        -68.575,
+        -158.341
+      ]
+    },
+    {
+      "name": "mk_torch_13",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -525.081,
+        165.92,
+        -79.031
+      ],
+      "godot_pos": [
+        -525.081,
+        -79.031,
+        -165.92
+      ]
+    },
+    {
+      "name": "mk_torch_17",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -385.973,
+        163.255,
+        -50.262
+      ],
+      "godot_pos": [
+        -385.973,
+        -50.262,
+        -163.255
+      ]
+    },
+    {
+      "name": "mk_torch_18",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -168.978,
+        271.847,
+        -72.018
+      ],
+      "godot_pos": [
+        -168.978,
+        -72.018,
+        -271.847
+      ]
+    },
+    {
+      "name": "mk_torch_19",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -143.33,
+        62.106,
+        -72.04
+      ],
+      "godot_pos": [
+        -143.33,
+        -72.04,
+        -62.106
+      ]
+    },
+    {
+      "name": "mk_torch_20",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        130.566,
+        -46.18,
+        -49.854
+      ],
+      "godot_pos": [
+        130.566,
+        -49.854,
+        46.18
+      ]
+    },
+    {
+      "name": "mk_torch_21",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        182.994,
+        -222.367,
+        -61.66
+      ],
+      "godot_pos": [
+        182.994,
+        -61.66,
+        222.367
+      ]
+    },
+    {
+      "name": "mk_torch_22",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        447.12,
+        -192.806,
+        -61.777
+      ],
+      "godot_pos": [
+        447.12,
+        -61.777,
+        192.806
+      ]
+    },
+    {
+      "name": "mk_torch_23",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        474.135,
+        -30.126,
+        -73.599
+      ],
+      "godot_pos": [
+        474.135,
+        -73.599,
+        30.126
+      ]
+    },
+    {
+      "name": "mk_torch_24",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        456.199,
+        184.757,
+        -73.332
+      ],
+      "godot_pos": [
+        456.199,
+        -73.332,
+        -184.757
+      ]
+    },
+    {
+      "name": "mk_torch_25",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        505.267,
+        367.885,
+        -73.731
+      ],
+      "godot_pos": [
+        505.267,
+        -73.731,
+        -367.885
+      ]
+    },
+    {
+      "name": "mk_torch_26",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        416.035,
+        537.956,
+        -28.506
+      ],
+      "godot_pos": [
+        416.035,
+        -28.506,
+        -537.956
+      ]
+    },
+    {
+      "name": "mk_torch_27",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        506.366,
+        602.701,
+        -82.77
+      ],
+      "godot_pos": [
+        506.366,
+        -82.77,
+        -602.701
+      ]
+    },
+    {
+      "name": "mk_torch_28",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -512.18,
+        155.76,
+        -79.031
+      ],
+      "godot_pos": [
+        -512.18,
+        -79.031,
+        -155.76
+      ]
+    },
+    {
+      "name": "mk_torch_29",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -492.838,
+        178.757,
+        -79.031
+      ],
+      "godot_pos": [
+        -492.838,
+        -79.031,
+        -178.757
+      ]
+    },
+    {
+      "name": "mk_torch_30",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -505.3,
+        189.472,
+        -79.031
+      ],
+      "godot_pos": [
+        -505.3,
+        -79.031,
+        -189.472
+      ]
+    },
+    {
+      "name": "mk_torch_31",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -439.168,
+        267.821,
+        -72.055
+      ],
+      "godot_pos": [
+        -439.168,
+        -72.055,
+        -267.821
+      ]
+    },
+    {
+      "name": "mk_torch_32",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        571.224,
+        720.61,
+        -82.77
+      ],
+      "godot_pos": [
+        571.224,
+        -82.77,
+        -720.61
+      ]
+    },
+    {
+      "name": "mk_torch_33",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        571.11,
+        770.311,
+        -82.77
+      ],
+      "godot_pos": [
+        571.11,
+        -82.77,
+        -770.311
+      ]
+    },
+    {
+      "name": "mk_torch_34",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        332.116,
+        721.127,
+        -82.77
+      ],
+      "godot_pos": [
+        332.116,
+        -82.77,
+        -721.127
+      ]
+    },
+    {
+      "name": "mk_torch_35",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        331.7,
+        771.418,
+        -82.77
+      ],
+      "godot_pos": [
+        331.7,
+        -82.77,
+        -771.418
+      ]
+    },
+    {
+      "name": "mk_torch_36",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        412.555,
+        917.048,
+        -82.77
+      ],
+      "godot_pos": [
+        412.555,
+        -82.77,
+        -917.048
+      ]
+    },
+    {
+      "name": "mk_torch_37",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        502.21,
+        917.048,
+        -82.77
+      ],
+      "godot_pos": [
+        502.21,
+        -82.77,
+        -917.048
+      ]
+    },
+    {
+      "name": "mk_torch_38",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        480.569,
+        964.902,
+        -68.085
+      ],
+      "godot_pos": [
+        480.569,
+        -68.085,
+        -964.902
+      ]
+    },
+    {
+      "name": "mk_torch_39",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        436.847,
+        964.902,
+        -68.085
+      ],
+      "godot_pos": [
+        436.847,
+        -68.085,
+        -964.902
+      ]
+    },
+    {
+      "name": "foginfo",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "color=#6e923e;\r\nfar=1700;\r\ndecaymode=exponential;",
+      "sw_pos": [
+        160.892,
+        -384.292,
+        -1243.749
+      ],
+      "godot_pos": [
+        160.892,
+        -1243.749,
+        384.292
+      ]
+    },
+    {
+      "name": "light_smoke_02",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "flarebillboard=1;",
+      "sw_pos": [
+        501.098,
+        912.218,
+        0.509
+      ],
+      "godot_pos": [
+        501.098,
+        0.509,
+        -912.218
+      ]
+    },
+    {
+      "name": "portal5",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "portal=portal5;\r\nalwaysmovecamerainfront=1;",
+      "sw_pos": [
+        -352.598,
+        51.208,
+        -57.212
+      ],
+      "godot_pos": [
+        -352.598,
+        -57.212,
+        -51.208
+      ]
+    },
+    {
+      "name": "portal2",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "portal=portal2;\r\nalwaysmovecamerainfront=1;",
+      "sw_pos": [
+        -437.045,
+        -249.577,
+        -23.338
+      ],
+      "godot_pos": [
+        -437.045,
+        -23.338,
+        249.577
+      ]
+    },
+    {
+      "name": "portal3",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "portal=portal3;\r\nalwaysmovecamerainfront=1;",
+      "sw_pos": [
+        -737.027,
+        -266.107,
+        -48.762
+      ],
+      "godot_pos": [
+        -737.027,
+        -48.762,
+        266.107
+      ]
+    },
+    {
+      "name": "portal4",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "portal=portal4;\r\nalwaysmovecamerainfront=1;",
+      "sw_pos": [
+        -993.573,
+        -116.539,
+        -54.615
+      ],
+      "godot_pos": [
+        -993.573,
+        -54.615,
+        116.539
+      ]
+    },
+    {
+      "name": "portal6",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "portal=portal6;\r\nalwaysmovecamerainfront=1;",
+      "sw_pos": [
+        334.144,
+        -120.647,
+        -46.779
+      ],
+      "godot_pos": [
+        334.144,
+        -46.779,
+        120.647
+      ]
+    },
+    {
+      "name": "portal7",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "portal=portal7;\r\nalwaysmovecamerainfront=1;",
+      "sw_pos": [
+        454.067,
+        523.209,
+        -28.776
+      ],
+      "godot_pos": [
+        454.067,
+        -28.776,
+        -523.209
+      ]
+    },
+    {
+      "name": "portal1",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "portal=portal1;\r\nalwaysmovecamerainfront=1;",
+      "sw_pos": [
+        -452.633,
+        -567.001,
+        -2.639
+      ],
+      "godot_pos": [
+        -452.633,
+        -2.639,
+        567.001
+      ]
+    },
+    {
+      "name": "cave_bigroom_lava",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "animateuv_u=-0.02;\r\nanimateuv_v=-0.02;\r\nportal=portal5;",
+      "sw_pos": [
+        -61.99,
+        89.349,
+        -110.64
+      ],
+      "godot_pos": [
+        -61.99,
+        -110.64,
+        -89.349
+      ]
+    },
+    {
+      "name": "cave_fence",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        456.278,
+        835.822,
+        -55.482
+      ],
+      "godot_pos": [
+        456.278,
+        -55.482,
+        -835.822
+      ]
+    },
+    {
+      "name": "TestLight",
+      "kind": "light",
+      "parent": "DefaultView",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    }
+  ],
+  "skeletons": [],
+  "animations": []
+}

@@ -1,0 +1,194 @@
+{
+  "abra": {
+    "baseHeight": -4144.83,
+    "unitsPerColor": 0.05,
+    "topLeft": [
+      -760.473,
+      778.377
+    ],
+    "bottomRight": [
+      564.223,
+      -547.095
+    ]
+  },
+  "cave": {
+    "baseHeight": -390.619,
+    "unitsPerColor": 0.05,
+    "topLeft": [
+      -1130.04,
+      1033.04
+    ],
+    "bottomRight": [
+      707.978,
+      -805.856
+    ]
+  },
+  "cave_end": {
+    "baseHeight": -390.619,
+    "unitsPerColor": 0.05,
+    "topLeft": [
+      -1130.04,
+      1033.04
+    ],
+    "bottomRight": [
+      707.978,
+      -805.856
+    ]
+  },
+  "cave_end_bosslevel": {
+    "baseHeight": -97.2772,
+    "unitsPerColor": 0.05,
+    "topLeft": [
+      -172.034,
+      392.894
+    ],
+    "bottomRight": [
+      179.054,
+      -311.497
+    ]
+  },
+  "fatamorgana_bosslevel": {
+    "baseHeight": -0.0678711,
+    "unitsPerColor": 0.05,
+    "topLeft": [
+      -240.853,
+      304.806
+    ],
+    "bottomRight": [
+      225.241,
+      -162.175
+    ]
+  },
+  "fatamorgana_city": {
+    "baseHeight": -21.0918,
+    "unitsPerColor": 0.05,
+    "topLeft": [
+      -619.785,
+      328.64
+    ],
+    "bottomRight": [
+      511.34,
+      -237.513
+    ]
+  },
+  "fatamorgana_palace": {
+    "baseHeight": -52.7036,
+    "unitsPerColor": 0.05,
+    "topLeft": [
+      -619.977,
+      691.99
+    ],
+    "bottomRight": [
+      604.387,
+      -533.261
+    ]
+  },
+  "graal_bosslevel": {
+    "baseHeight": -12.4112,
+    "unitsPerColor": 0.05,
+    "topLeft": [
+      -265.505,
+      180.774
+    ],
+    "bottomRight": [
+      244.029,
+      -329.425
+    ]
+  },
+  "graal_mountain": {
+    "baseHeight": 12.469,
+    "unitsPerColor": 0.05,
+    "topLeft": [
+      -686.952,
+      1687.13
+    ],
+    "bottomRight": [
+      725.504,
+      -1141.11
+    ]
+  },
+  "magakhan_beach": {
+    "baseHeight": -49.7364,
+    "unitsPerColor": 0.05,
+    "topLeft": [
+      -446.731,
+      646.675
+    ],
+    "bottomRight": [
+      450.453,
+      -252.207
+    ]
+  },
+  "magakhan_dungeon": {
+    "baseHeight": -45.5769,
+    "unitsPerColor": 0.05,
+    "topLeft": [
+      -531.004,
+      339.988
+    ],
+    "bottomRight": [
+      815.683,
+      -1007.58
+    ]
+  },
+  "magakhan_endboss_level": {
+    "baseHeight": 0.0307922,
+    "unitsPerColor": 0.05,
+    "topLeft": [
+      -204.679,
+      246.87
+    ],
+    "bottomRight": [
+      194.367,
+      -152.509
+    ]
+  },
+  "magakhan_jungle": {
+    "baseHeight": -4.47583,
+    "unitsPerColor": 0.05,
+    "topLeft": [
+      -989.148,
+      1905.15
+    ],
+    "bottomRight": [
+      907.818,
+      -1893.64
+    ]
+  },
+  "magakhan_palace": {
+    "baseHeight": -56.7352,
+    "unitsPerColor": 0.05,
+    "topLeft": [
+      -559.767,
+      858.066
+    ],
+    "bottomRight": [
+      611.053,
+      -1483.57
+    ]
+  },
+  "testlevel": {
+    "baseHeight": -2.37238,
+    "unitsPerColor": 0.05,
+    "topLeft": [
+      -309.009,
+      257.009
+    ],
+    "bottomRight": [
+      298.303,
+      -350.303
+    ]
+  },
+  "treasurehunt": {
+    "baseHeight": 20.7276,
+    "unitsPerColor": 0.05,
+    "topLeft": [
+      -644.573,
+      623.174
+    ],
+    "bottomRight": [
+      705.879,
+      -729.562
+    ]
+  }
+}

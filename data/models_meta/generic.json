@@ -1,0 +1,1340 @@
+{
+  "file": "generic.w3d",
+  "nodes": [
+    {
+      "name": "DefaultView",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "apple",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        -0.014,
+        2.816
+      ],
+      "godot_pos": [
+        0.0,
+        2.816,
+        0.014
+      ]
+    },
+    {
+      "name": "hiddenassets",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "userdata",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"barrel_debris05\", #startxform: [#position: vector( 3.0077, 0.0229, 9.4935 ), #rotation: vector( 0.0000, 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"barrel_debris05\", #startxform: [#position: vector( 3.0077, 0.0229, 9.4935 ), #rotation: vector( 0.0000, 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"barrel_debris06\", #startxform: [#position: vector( 1.6857, 2.7567, 8.9130 ), #rotation: vector( 0.0000, 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000 )]]  ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"barrel_debris06\", #startxform: [#position: vector( 1.6857, 2.7567, 8.9130 ), #rotation: vector( 0.0000, 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"barrel_debris09\", #startxform: [#position: vector( -0.0146, -3.2744, 8.9101 ), #rotation: vector( 0.0000, 0.0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz000, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"barrel_debris09\", #startxform: [#position: vector( -0.0146, -3.2744, 8.9101 ), #rotation: vector( 0.0000, 0.0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"barrel_debris08\", #startxform: [#position: vector( 2.7183, -0.6959, 8.9155 ), #rotation: vector( 0.0000, 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"barrel_debris08\", #startxform: [#position: vector( 2.7183, -0.6959, 8.9155 ), #rotation: vector( 0.0000, 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"barrel_debris02\", #startxform: [#position: vector( -1.9793, 0.2853, 8.9073 ), #rotation: vector( 0.0000, 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000 )]]  ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"barrel_debris02\", #startxform: [#position: vector( -1.9793, 0.2853, 8.9073 ), #rotation: vector( 0.0000, 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"barrel_debris04\", #startxform: [#position: vector( -0.0137, 0.0229, 7.8124 ), #rotation: vector( 0.0000, 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000 )]]   ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"barrel_debris04\", #startxform: [#position: vector( -0.0137, 0.0229, 7.8124 ), #rotation: vector( 0.0000, 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"barrel_debris07\", #startxform: [#position: vector( -0.0137, 0.0229, 4.8601 ), #rotation: vector( 0.0000, 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000 )]]    ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"barrel_debris07\", #startxform: [#position: vector( -0.0137, 0.0229, 4.8601 ), #rotation: vector( 0.0000, 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"barrel_debris10\", #startxform: [#position: vector( 2.6576, -2.6728, 6.3550 ), #rotation: vector( 0.0000, 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000 )]]     ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"barrel_debris10\", #startxform: [#position: vector( 2.6576, -2.6728, 6.3550 ), #rotation: vector( 0.0000, 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"barrel_debris11\", #startxform: [#position: vector( -0.9556, 3.0574, 6.3575 ), #rotation: vector( 0.0000, 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000 )]]      ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"barrel_debris11\", #startxform: [#position: vector( -0.9556, 3.0574, 6.3575 ), #rotation: vector( 0.0000, 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"barrel_debris12\", #startxform: [#position: vector( -3.7194, 1.0814, 6.3627 ), #rotation: vector( 0.0000, 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000 )]]       ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"barrel_debris12\", #startxform: [#position: vector( -3.7194, 1.0814, 6.3627 ), #rotation: vector( 0.0000, 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"barrel_debris01\", #startxform: [#position: vector( 2.7532, -2.7469, 3.3922 ), #rotation: vector( 0.0000, 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000 )]]        ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"barrel_debris01\", #startxform: [#position: vector( 2.7532, -2.7469, 3.3922 ), #rotation: vector( 0.0000, 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"barrel_debris03\", #startxform: [#position: vector( 0.0972, 3.8566, 4.1404 ), #rotation: vector( 0.0000, 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000 )]]   ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"barrel_debris03\", #startxform: [#position: vector( 0.0972, 3.8566, 4.1404 ), #rotation: vector( 0.0000, 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"barrel_debris13\", #startxform: [#position: vector( 2.8943, 0.8692, 3.3922 ), #rotation: vector( 0.0000, 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000 )]]    ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"barrel_debris13\", #startxform: [#position: vector( 2.8943, 0.8692, 3.3922 ), #rotation: vector( 0.0000, 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"barrel_debris14\", #startxform: [#position: vector( -1.0811, -2.1041, 3.3922 ), #rotation: vector( 0.0000, 0.0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz000, 0.0000 )]]  ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"barrel_debris14\", #startxform: [#position: vector( -1.0811, -2.1041, 3.3922 ), #rotation: vector( 0.0000, 0.0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"barrel_debris15\", #startxform: [#position: vector( 0.0786, -3.4016, 1.2342 ), #rotation: vector( 0.0000, 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000 )]]         ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"barrel_debris15\", #startxform: [#position: vector( 0.0786, -3.4016, 1.2342 ), #rotation: vector( 0.0000, 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"barrel_debris16\", #startxform: [#position: vector( -2.6605, 1.9963, 3.4369 ), #rotation: vector( 0.0000, 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000 )]]          ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"barrel_debris16\", #startxform: [#position: vector( -2.6605, 1.9963, 3.4369 ), #rotation: vector( 0.0000, 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"barrel_base\", #startxform: [#position: vector( -0.0190, 0.0969, 1.9715 ), #rotation: vector( 0.0000, 0.0000,  ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"barrel_base\", #startxform: [#position: vector( -0.0190, 0.0969, 1.9715 ), #rotation: vector( 0.0000, 0.0000,  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "breakablebarrel",
+      "kind": "group",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        -0.001,
+        0.023,
+        -0.008
+      ],
+      "godot_pos": [
+        -0.001,
+        -0.008,
+        -0.023
+      ]
+    },
+    {
+      "name": "barrel_debris05",
+      "kind": "model",
+      "parent": "breakablebarrel",
+      "userdata": "",
+      "sw_pos": [
+        3.008,
+        0.023,
+        9.494
+      ],
+      "godot_pos": [
+        3.008,
+        9.494,
+        -0.023
+      ]
+    },
+    {
+      "name": "barrel_debris06",
+      "kind": "model",
+      "parent": "breakablebarrel",
+      "userdata": "",
+      "sw_pos": [
+        1.686,
+        2.757,
+        8.913
+      ],
+      "godot_pos": [
+        1.686,
+        8.913,
+        -2.757
+      ]
+    },
+    {
+      "name": "barrel_debris09",
+      "kind": "model",
+      "parent": "breakablebarrel",
+      "userdata": "",
+      "sw_pos": [
+        -0.015,
+        -3.274,
+        8.91
+      ],
+      "godot_pos": [
+        -0.015,
+        8.91,
+        3.274
+      ]
+    },
+    {
+      "name": "barrel_debris08",
+      "kind": "model",
+      "parent": "breakablebarrel",
+      "userdata": "",
+      "sw_pos": [
+        2.718,
+        -0.696,
+        8.915
+      ],
+      "godot_pos": [
+        2.718,
+        8.915,
+        0.696
+      ]
+    },
+    {
+      "name": "barrel_debris02",
+      "kind": "model",
+      "parent": "breakablebarrel",
+      "userdata": "",
+      "sw_pos": [
+        -1.979,
+        0.285,
+        8.907
+      ],
+      "godot_pos": [
+        -1.979,
+        8.907,
+        -0.285
+      ]
+    },
+    {
+      "name": "barrel_debris04",
+      "kind": "model",
+      "parent": "breakablebarrel",
+      "userdata": "",
+      "sw_pos": [
+        -0.014,
+        0.023,
+        7.812
+      ],
+      "godot_pos": [
+        -0.014,
+        7.812,
+        -0.023
+      ]
+    },
+    {
+      "name": "barrel_debris07",
+      "kind": "model",
+      "parent": "breakablebarrel",
+      "userdata": "",
+      "sw_pos": [
+        -0.014,
+        0.023,
+        4.86
+      ],
+      "godot_pos": [
+        -0.014,
+        4.86,
+        -0.023
+      ]
+    },
+    {
+      "name": "barrel_debris10",
+      "kind": "model",
+      "parent": "breakablebarrel",
+      "userdata": "",
+      "sw_pos": [
+        2.658,
+        -2.673,
+        6.355
+      ],
+      "godot_pos": [
+        2.658,
+        6.355,
+        2.673
+      ]
+    },
+    {
+      "name": "barrel_debris11",
+      "kind": "model",
+      "parent": "breakablebarrel",
+      "userdata": "",
+      "sw_pos": [
+        -0.956,
+        3.057,
+        6.357
+      ],
+      "godot_pos": [
+        -0.956,
+        6.357,
+        -3.057
+      ]
+    },
+    {
+      "name": "barrel_debris12",
+      "kind": "model",
+      "parent": "breakablebarrel",
+      "userdata": "",
+      "sw_pos": [
+        -3.719,
+        1.081,
+        6.363
+      ],
+      "godot_pos": [
+        -3.719,
+        6.363,
+        -1.081
+      ]
+    },
+    {
+      "name": "barrel_debris01",
+      "kind": "model",
+      "parent": "breakablebarrel",
+      "userdata": "",
+      "sw_pos": [
+        2.753,
+        -2.747,
+        3.392
+      ],
+      "godot_pos": [
+        2.753,
+        3.392,
+        2.747
+      ]
+    },
+    {
+      "name": "barrel_debris03",
+      "kind": "model",
+      "parent": "breakablebarrel",
+      "userdata": "",
+      "sw_pos": [
+        0.097,
+        3.857,
+        4.14
+      ],
+      "godot_pos": [
+        0.097,
+        4.14,
+        -3.857
+      ]
+    },
+    {
+      "name": "barrel_debris13",
+      "kind": "model",
+      "parent": "breakablebarrel",
+      "userdata": "",
+      "sw_pos": [
+        2.894,
+        0.869,
+        3.392
+      ],
+      "godot_pos": [
+        2.894,
+        3.392,
+        -0.869
+      ]
+    },
+    {
+      "name": "barrel_debris14",
+      "kind": "model",
+      "parent": "breakablebarrel",
+      "userdata": "",
+      "sw_pos": [
+        -1.081,
+        -2.104,
+        3.392
+      ],
+      "godot_pos": [
+        -1.081,
+        3.392,
+        2.104
+      ]
+    },
+    {
+      "name": "barrel_debris15",
+      "kind": "model",
+      "parent": "breakablebarrel",
+      "userdata": "",
+      "sw_pos": [
+        0.079,
+        -3.402,
+        1.234
+      ],
+      "godot_pos": [
+        0.079,
+        1.234,
+        3.402
+      ]
+    },
+    {
+      "name": "barrel_debris16",
+      "kind": "model",
+      "parent": "breakablebarrel",
+      "userdata": "",
+      "sw_pos": [
+        -2.66,
+        1.996,
+        3.437
+      ],
+      "godot_pos": [
+        -2.66,
+        3.437,
+        -1.996
+      ]
+    },
+    {
+      "name": "barrel_base",
+      "kind": "model",
+      "parent": "breakablebarrel",
+      "userdata": "",
+      "sw_pos": [
+        -0.019,
+        0.097,
+        1.972
+      ],
+      "godot_pos": [
+        -0.019,
+        1.972,
+        -0.097
+      ]
+    },
+    {
+      "name": "breakablebarrel_impostor",
+      "kind": "model",
+      "parent": "breakablebarrel",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"coppercoin\", #startxform: [#position: vector( 0.0000, 0.0000, -4.7612 ), #rotation: vector( 0.0000, 0.0000, 0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"coppercoin\", #startxform: [#position: vector( 0.0000, 0.0000, -4.7612 ), #rotation: vector( 0.0000, 0.0000, 0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "coppercoin",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        -0.0,
+        0.0,
+        -4.761
+      ],
+      "godot_pos": [
+        -0.0,
+        -4.761,
+        -0.0
+      ]
+    },
+    {
+      "name": "dizzystars",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        -0.015,
+        -0.004,
+        19.304
+      ],
+      "godot_pos": [
+        -0.015,
+        19.304,
+        0.004
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"goldcoin\", #startxform: [#position: vector( 0.0000, 0.0000, -4.7612 ), #rotation: vector( 0.0000, 0.0000, 0.0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"goldcoin\", #startxform: [#position: vector( 0.0000, 0.0000, -4.7612 ), #rotation: vector( 0.0000, 0.0000, 0.0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "goldcoin",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        -0.0,
+        0.0,
+        -4.761
+      ],
+      "godot_pos": [
+        -0.0,
+        -4.761,
+        -0.0
+      ]
+    },
+    {
+      "name": "goldsword",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        0.031,
+        -0.0,
+        -0.0
+      ],
+      "godot_pos": [
+        0.031,
+        -0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "healthbar",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        -0.006,
+        0.082,
+        -0.003
+      ],
+      "godot_pos": [
+        -0.006,
+        -0.003,
+        -0.082
+      ]
+    },
+    {
+      "name": "healthbar_meter",
+      "kind": "model",
+      "parent": "healthbar",
+      "userdata": "",
+      "sw_pos": [
+        -3.754,
+        -0.026,
+        -0.013
+      ],
+      "godot_pos": [
+        -3.754,
+        -0.013,
+        0.026
+      ]
+    },
+    {
+      "name": "key",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        -0.0,
+        0.004,
+        -0.066
+      ],
+      "godot_pos": [
+        -0.0,
+        -0.066,
+        -0.004
+      ]
+    },
+    {
+      "name": "sword",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "linktobone=right_hand;",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "swordstick",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "woodensword",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        -0.033,
+        -0.662,
+        -0.0
+      ],
+      "godot_pos": [
+        -0.033,
+        -0.0,
+        0.662
+      ]
+    },
+    {
+      "name": "TestLight",
+      "kind": "light",
+      "parent": "DefaultView",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    }
+  ],
+  "skeletons": [],
+  "animations": [
+    {
+      "name": "breakablebarrel_barrel_debris05_breakablebarrel",
+      "tracks": 1,
+      "size": 961
+    },
+    {
+      "name": "breakablebarrel_barrel_debris06_breakablebarrel",
+      "tracks": 1,
+      "size": 700
+    },
+    {
+      "name": "breakablebarrel_barrel_debris09_breakablebarrel",
+      "tracks": 1,
+      "size": 349
+    },
+    {
+      "name": "breakablebarrel_barrel_debris08_breakablebarrel",
+      "tracks": 1,
+      "size": 738
+    },
+    {
+      "name": "breakablebarrel_barrel_debris02_breakablebarrel",
+      "tracks": 1,
+      "size": 1133
+    },
+    {
+      "name": "breakablebarrel_barrel_debris04_breakablebarrel",
+      "tracks": 1,
+      "size": 930
+    },
+    {
+      "name": "breakablebarrel_barrel_debris07_breakablebarrel",
+      "tracks": 1,
+      "size": 1078
+    },
+    {
+      "name": "breakablebarrel_barrel_debris10_breakablebarrel",
+      "tracks": 1,
+      "size": 1148
+    },
+    {
+      "name": "breakablebarrel_barrel_debris11_breakablebarrel",
+      "tracks": 1,
+      "size": 816
+    },
+    {
+      "name": "breakablebarrel_barrel_debris12_breakablebarrel",
+      "tracks": 1,
+      "size": 434
+    },
+    {
+      "name": "breakablebarrel_barrel_debris01_breakablebarrel",
+      "tracks": 1,
+      "size": 833
+    },
+    {
+      "name": "breakablebarrel_barrel_debris03_breakablebarrel",
+      "tracks": 1,
+      "size": 303
+    },
+    {
+      "name": "breakablebarrel_barrel_debris13_breakablebarrel",
+      "tracks": 1,
+      "size": 599
+    },
+    {
+      "name": "breakablebarrel_barrel_debris14_breakablebarrel",
+      "tracks": 1,
+      "size": 913
+    },
+    {
+      "name": "breakablebarrel_barrel_debris15_breakablebarrel",
+      "tracks": 1,
+      "size": 364
+    },
+    {
+      "name": "breakablebarrel_barrel_debris16_breakablebarrel",
+      "tracks": 1,
+      "size": 325
+    },
+    {
+      "name": "breakablebarrel_barrel_base_breakablebarrel",
+      "tracks": 1,
+      "size": 353
+    },
+    {
+      "name": "barrel_debris05-Key",
+      "tracks": 1,
+      "size": 930
+    },
+    {
+      "name": "barrel_debris06-Key",
+      "tracks": 1,
+      "size": 672
+    },
+    {
+      "name": "barrel_debris09-Key",
+      "tracks": 1,
+      "size": 321
+    },
+    {
+      "name": "barrel_debris08-Key",
+      "tracks": 1,
+      "size": 708
+    },
+    {
+      "name": "barrel_debris02-Key",
+      "tracks": 1,
+      "size": 1108
+    },
+    {
+      "name": "barrel_debris04-Key",
+      "tracks": 1,
+      "size": 902
+    },
+    {
+      "name": "barrel_debris07-Key",
+      "tracks": 1,
+      "size": 1050
+    },
+    {
+      "name": "barrel_debris10-Key",
+      "tracks": 1,
+      "size": 1120
+    },
+    {
+      "name": "barrel_debris11-Key",
+      "tracks": 1,
+      "size": 784
+    },
+    {
+      "name": "barrel_debris12-Key",
+      "tracks": 1,
+      "size": 406
+    },
+    {
+      "name": "barrel_debris01-Key",
+      "tracks": 1,
+      "size": 802
+    },
+    {
+      "name": "barrel_debris03-Key",
+      "tracks": 1,
+      "size": 269
+    },
+    {
+      "name": "barrel_debris13-Key",
+      "tracks": 1,
+      "size": 571
+    },
+    {
+      "name": "barrel_debris14-Key",
+      "tracks": 1,
+      "size": 885
+    },
+    {
+      "name": "barrel_debris15-Key",
+      "tracks": 1,
+      "size": 330
+    },
+    {
+      "name": "barrel_debris16-Key",
+      "tracks": 1,
+      "size": 292
+    },
+    {
+      "name": "barrel_base-Key",
+      "tracks": 1,
+      "size": 325
+    },
+    {
+      "name": "coppercoin-key",
+      "tracks": 1,
+      "size": 357
+    },
+    {
+      "name": "goldcoin-key",
+      "tracks": 1,
+      "size": 353
+    }
+  ]
+}

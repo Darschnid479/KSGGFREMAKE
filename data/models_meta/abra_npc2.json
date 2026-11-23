@@ -1,0 +1,348 @@
+{
+  "file": "abra_npc2.w3d",
+  "nodes": [
+    {
+      "name": "DefaultView",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "abra_npc2",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "collisionradius=2.8;",
+      "sw_pos": [
+        -0.251,
+        -0.145,
+        8.479
+      ],
+      "godot_pos": [
+        -0.251,
+        8.479,
+        0.145
+      ]
+    },
+    {
+      "name": "abra_npc2_proxy",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        -0.136,
+        6.958
+      ],
+      "godot_pos": [
+        0.0,
+        6.958,
+        0.136
+      ]
+    },
+    {
+      "name": "hiddenassets",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "userdata",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"abra_npc2_stand\", #startxform: [#position: vector( -0.2506, -0.1447, 8.4793 ), #rotation: vector( 0.0000, 0.0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz000, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"abra_npc2_stand\", #startxform: [#position: vector( -0.2506, -0.1447, 8.4793 ), #rotation: vector( 0.0000, 0.0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"abra_npc2_stand_breathe\", #startxform: [#position: vector( -0.2506, -0.1447, 8.4793 ), #rotation: vector( 0.0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz000, 0.0000, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"abra_npc2_stand_breathe\", #startxform: [#position: vector( -0.2506, -0.1447, 8.4793 ), #rotation: vector( 0.0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"abra_npc2_turnleft\", #startxform: [#position: vector( -0.2506, -0.1447, 8.4793 ), #rotation: vector( 0.0000,  ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0.0000, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"abra_npc2_turnleft\", #startxform: [#position: vector( -0.2506, -0.1447, 8.4793 ), #rotation: vector( 0.0000,  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"abra_npc2_turnright\", #startxform: [#position: vector( -0.2506, -0.1447, 8.4793 ), #rotation: vector( 0.0000, ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz 0.0000, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"abra_npc2_turnright\", #startxform: [#position: vector( -0.2506, -0.1447, 8.4793 ), #rotation: vector( 0.0000, ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "TestLight",
+      "kind": "light",
+      "parent": "DefaultView",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    }
+  ],
+  "skeletons": [
+    {
+      "name": "abra_npc2",
+      "bones": [
+        {
+          "name": "Center",
+          "parent": -1,
+          "length": 0.0,
+          "pos": [
+            -0.05415773391723633,
+            -0.36364975571632385,
+            -5.328947067260742
+          ],
+          "rot": [
+            1.0,
+            -0.0,
+            -0.0,
+            -0.0
+          ],
+          "flags": 12
+        },
+        {
+          "name": "Stomach",
+          "parent": 0,
+          "length": 2.3312864303588867,
+          "pos": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rot": [
+            0.706105649471283,
+            -0.037613872438669205,
+            -0.706105649471283,
+            0.037613872438669205
+          ],
+          "flags": 6
+        },
+        {
+          "name": "Shoulders",
+          "parent": 1,
+          "length": 2.843111038208008,
+          "pos": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rot": [
+            0.9961661696434021,
+            0.058526039123535156,
+            0.0035444130189716816,
+            -0.06492369621992111
+          ],
+          "flags": 0
+        },
+        {
+          "name": "Head",
+          "parent": 2,
+          "length": 1.1746165752410889,
+          "pos": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rot": [
+            0.9925196766853333,
+            0.01939278282225132,
+            9.149980178335682e-05,
+            0.12053432315587997
+          ],
+          "flags": 34
+        },
+        {
+          "name": "HeadTip",
+          "parent": 3,
+          "length": 2.7169432640075684,
+          "pos": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rot": [
+            0.9688175916671753,
+            0.24703994393348694,
+            0.012986497022211552,
+            -0.0139683922752738
+          ],
+          "flags": 36
+        }
+      ]
+    }
+  ],
+  "animations": [
+    {
+      "name": "abra_npc2",
+      "tracks": 5,
+      "size": 391
+    },
+    {
+      "name": "abra_npc2_stand",
+      "tracks": 5,
+      "size": 2403
+    },
+    {
+      "name": "abra_npc2_stand_breathe",
+      "tracks": 5,
+      "size": 1039
+    },
+    {
+      "name": "abra_npc2_turnleft",
+      "tracks": 5,
+      "size": 1034
+    },
+    {
+      "name": "abra_npc2_turnright",
+      "tracks": 5,
+      "size": 1035
+    }
+  ]
+}

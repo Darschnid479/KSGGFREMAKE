@@ -1,0 +1,858 @@
+{
+  "file": "testlevel.w3d",
+  "nodes": [
+    {
+      "name": "DefaultView",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "userdata",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"crush_rock_1\", #startxform: [#position: vector( -8.3874, -0.0078, 42.0452 ), #rotation: vector( 0.0000, 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"crush_rock_1\", #startxform: [#position: vector( -8.3874, -0.0078, 42.0452 ), #rotation: vector( 0.0000, 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"crush_rock_2\", #startxform: [#position: vector( 4.2545, -0.0081, 36.0282 ), #rotation: vector( 0.0000, 0.0000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"crush_rock_2\", #startxform: [#position: vector( 4.2545, -0.0081, 36.0282 ), #rotation: vector( 0.0000, 0.0000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"crush_rock_3\", #startxform: [#position: vector( -16.1062, -0.0077, 29.2818 ), #rotation: vector( 0.0000, 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"crush_rock_3\", #startxform: [#position: vector( -16.1062, -0.0077, 29.2818 ), #rotation: vector( 0.0000, 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"crush_rock_4\", #startxform: [#position: vector( 3.3428, -0.0075, 23.2648 ), #rotation: vector( 0.0000, 0.0000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, 0.0000 )]]  ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"crush_rock_4\", #startxform: [#position: vector( 3.3428, -0.0075, 23.2648 ), #rotation: vector( 0.0000, 0.0000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"crush_rock_5\", #startxform: [#position: vector( -13.7144, 0.0000, 20.4082 ), #rotation: vector( 0.0000, 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000 )]]  ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"crush_rock_5\", #startxform: [#position: vector( -13.7144, 0.0000, 20.4082 ), #rotation: vector( 0.0000, 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"crush_rock_6\", #startxform: [#position: vector( 17.0786, 0.0000, 17.8556 ), #rotation: vector( 0.0000, 0.0000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, 0.0000 )]]   ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"crush_rock_6\", #startxform: [#position: vector( 17.0786, 0.0000, 17.8556 ), #rotation: vector( 0.0000, 0.0000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"crush_rock_7\", #startxform: [#position: vector( -23.2780, 0.0000, 14.5735 ), #rotation: vector( 0.0000, 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000 )]]   ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"crush_rock_7\", #startxform: [#position: vector( -23.2780, 0.0000, 14.5735 ), #rotation: vector( 0.0000, 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"crush_rock_8\", #startxform: [#position: vector( -13.0065, 0.0000, 14.7559 ), #rotation: vector( 0.0000, 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000 )]]    ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"crush_rock_8\", #startxform: [#position: vector( -13.0065, 0.0000, 14.7559 ), #rotation: vector( 0.0000, 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"crush_rock_9\", #startxform: [#position: vector( 1.0332, 0.0000, 14.8167 ), #rotation: vector( 0.0000, 0.0000, ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"crush_rock_9\", #startxform: [#position: vector( 1.0332, 0.0000, 14.8167 ), #rotation: vector( 0.0000, 0.0000, ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"crush_rock_10\", #startxform: [#position: vector( -11.4263, 0.0000, 24.4196 ), #rotation: vector( 0.0000, 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000 )]]  ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"crush_rock_10\", #startxform: [#position: vector( -11.4263, 0.0000, 24.4196 ), #rotation: vector( 0.0000, 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"crush_rock_11\", #startxform: [#position: vector( 2.5527, 0.0000, 5.8823 ), #rotation: vector( 0.0000, 0.0000, ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz 0.0000 )]]  ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"crush_rock_11\", #startxform: [#position: vector( 2.5527, 0.0000, 5.8823 ), #rotation: vector( 0.0000, 0.0000, ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"crush_rock_12\", #startxform: [#position: vector( 19.5705, 0.0000, 6.3077 ), #rotation: vector( 0.0000, 0.0000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, 0.0000 )]]    ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"crush_rock_12\", #startxform: [#position: vector( 19.5705, 0.0000, 6.3077 ), #rotation: vector( 0.0000, 0.0000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "crushablewall",
+      "kind": "group",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "crush_rock_1",
+      "kind": "model",
+      "parent": "crushablewall",
+      "userdata": "",
+      "sw_pos": [
+        -8.387,
+        -0.008,
+        42.045
+      ],
+      "godot_pos": [
+        -8.387,
+        42.045,
+        0.008
+      ]
+    },
+    {
+      "name": "crush_rock_2",
+      "kind": "model",
+      "parent": "crushablewall",
+      "userdata": "",
+      "sw_pos": [
+        4.254,
+        -0.008,
+        36.028
+      ],
+      "godot_pos": [
+        4.254,
+        36.028,
+        0.008
+      ]
+    },
+    {
+      "name": "crush_rock_3",
+      "kind": "model",
+      "parent": "crushablewall",
+      "userdata": "",
+      "sw_pos": [
+        -16.106,
+        -0.008,
+        29.282
+      ],
+      "godot_pos": [
+        -16.106,
+        29.282,
+        0.008
+      ]
+    },
+    {
+      "name": "crush_rock_4",
+      "kind": "model",
+      "parent": "crushablewall",
+      "userdata": "",
+      "sw_pos": [
+        3.343,
+        -0.008,
+        23.265
+      ],
+      "godot_pos": [
+        3.343,
+        23.265,
+        0.008
+      ]
+    },
+    {
+      "name": "crush_rock_5",
+      "kind": "model",
+      "parent": "crushablewall",
+      "userdata": "",
+      "sw_pos": [
+        -13.714,
+        -0.0,
+        20.408
+      ],
+      "godot_pos": [
+        -13.714,
+        20.408,
+        0.0
+      ]
+    },
+    {
+      "name": "crush_rock_6",
+      "kind": "model",
+      "parent": "crushablewall",
+      "userdata": "",
+      "sw_pos": [
+        17.079,
+        -0.0,
+        17.856
+      ],
+      "godot_pos": [
+        17.079,
+        17.856,
+        0.0
+      ]
+    },
+    {
+      "name": "crush_rock_7",
+      "kind": "model",
+      "parent": "crushablewall",
+      "userdata": "",
+      "sw_pos": [
+        -23.278,
+        -0.0,
+        14.574
+      ],
+      "godot_pos": [
+        -23.278,
+        14.574,
+        0.0
+      ]
+    },
+    {
+      "name": "crush_rock_8",
+      "kind": "model",
+      "parent": "crushablewall",
+      "userdata": "",
+      "sw_pos": [
+        -13.007,
+        -0.0,
+        14.756
+      ],
+      "godot_pos": [
+        -13.007,
+        14.756,
+        0.0
+      ]
+    },
+    {
+      "name": "crush_rock_9",
+      "kind": "model",
+      "parent": "crushablewall",
+      "userdata": "",
+      "sw_pos": [
+        1.033,
+        -0.0,
+        14.817
+      ],
+      "godot_pos": [
+        1.033,
+        14.817,
+        0.0
+      ]
+    },
+    {
+      "name": "crush_rock_10",
+      "kind": "model",
+      "parent": "crushablewall",
+      "userdata": "",
+      "sw_pos": [
+        -11.426,
+        0.0,
+        24.42
+      ],
+      "godot_pos": [
+        -11.426,
+        24.42,
+        -0.0
+      ]
+    },
+    {
+      "name": "crush_rock_11",
+      "kind": "model",
+      "parent": "crushablewall",
+      "userdata": "",
+      "sw_pos": [
+        2.553,
+        -0.0,
+        5.882
+      ],
+      "godot_pos": [
+        2.553,
+        5.882,
+        0.0
+      ]
+    },
+    {
+      "name": "crush_rock_12",
+      "kind": "model",
+      "parent": "crushablewall",
+      "userdata": "",
+      "sw_pos": [
+        19.571,
+        -0.0,
+        6.308
+      ],
+      "godot_pos": [
+        19.571,
+        6.308,
+        0.0
+      ]
+    },
+    {
+      "name": "hiddenassets",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_test1\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0.0000,  ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_test1\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0.0000,  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_test2\", #startxform: [#position: vector( -12.1200, 22.8346, 6.9287 ), #rotation: vector( 0.0000, 0.0000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_test2\", #startxform: [#position: vector( -12.1200, 22.8346, 6.9287 ), #rotation: vector( 0.0000, 0.0000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "TestLight",
+      "kind": "light",
+      "parent": "DefaultView",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    }
+  ],
+  "skeletons": [],
+  "animations": [
+    {
+      "name": "crushablewall_crush_rock_1_cave_crushablewall",
+      "tracks": 1,
+      "size": 905
+    },
+    {
+      "name": "crushablewall_crush_rock_2_cave_crushablewall",
+      "tracks": 1,
+      "size": 496
+    },
+    {
+      "name": "crushablewall_crush_rock_3_cave_crushablewall",
+      "tracks": 1,
+      "size": 314
+    },
+    {
+      "name": "crushablewall_crush_rock_4_cave_crushablewall",
+      "tracks": 1,
+      "size": 503
+    },
+    {
+      "name": "crushablewall_crush_rock_5_cave_crushablewall",
+      "tracks": 1,
+      "size": 539
+    },
+    {
+      "name": "crushablewall_crush_rock_6_cave_crushablewall",
+      "tracks": 1,
+      "size": 364
+    },
+    {
+      "name": "crushablewall_crush_rock_7_cave_crushablewall",
+      "tracks": 1,
+      "size": 356
+    },
+    {
+      "name": "crushablewall_crush_rock_8_cave_crushablewall",
+      "tracks": 1,
+      "size": 557
+    },
+    {
+      "name": "crushablewall_crush_rock_9_cave_crushablewall",
+      "tracks": 1,
+      "size": 321
+    },
+    {
+      "name": "crushablewall_crush_rock_10_cave_crushablewall",
+      "tracks": 1,
+      "size": 231
+    },
+    {
+      "name": "crushablewall_crush_rock_11_cave_crushablewall",
+      "tracks": 1,
+      "size": 375
+    },
+    {
+      "name": "crushablewall_crush_rock_12_cave_crushablewall",
+      "tracks": 1,
+      "size": 422
+    },
+    {
+      "name": "crush_rock_1-Key",
+      "tracks": 1,
+      "size": 876
+    },
+    {
+      "name": "crush_rock_2-Key",
+      "tracks": 1,
+      "size": 464
+    },
+    {
+      "name": "crush_rock_3-Key",
+      "tracks": 1,
+      "size": 281
+    },
+    {
+      "name": "crush_rock_4-Key",
+      "tracks": 1,
+      "size": 474
+    },
+    {
+      "name": "crush_rock_5-Key",
+      "tracks": 1,
+      "size": 509
+    },
+    {
+      "name": "crush_rock_6-Key",
+      "tracks": 1,
+      "size": 335
+    },
+    {
+      "name": "crush_rock_7-Key",
+      "tracks": 1,
+      "size": 327
+    },
+    {
+      "name": "crush_rock_8-Key",
+      "tracks": 1,
+      "size": 526
+    },
+    {
+      "name": "crush_rock_9-Key",
+      "tracks": 1,
+      "size": 292
+    },
+    {
+      "name": "crush_rock_10-Key",
+      "tracks": 1,
+      "size": 203
+    },
+    {
+      "name": "crush_rock_11-Key",
+      "tracks": 1,
+      "size": 346
+    },
+    {
+      "name": "crush_rock_12-Key",
+      "tracks": 1,
+      "size": 393
+    },
+    {
+      "name": "pinky_test1",
+      "tracks": 39,
+      "size": 24228
+    },
+    {
+      "name": "pinky_test2",
+      "tracks": 39,
+      "size": 24287
+    }
+  ]
+}

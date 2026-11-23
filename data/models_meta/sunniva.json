@@ -1,0 +1,368 @@
+{
+  "file": "sunniva.w3d",
+  "nodes": [
+    {
+      "name": "DefaultView",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "sunniva",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "collisionradius=2.7;",
+      "sw_pos": [
+        0.0,
+        -0.066,
+        7.987
+      ],
+      "godot_pos": [
+        0.0,
+        7.987,
+        0.066
+      ]
+    },
+    {
+      "name": "sunniva_proxy",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        -0.136,
+        6.958
+      ],
+      "godot_pos": [
+        0.0,
+        6.958,
+        0.136
+      ]
+    },
+    {
+      "name": "hiddenassets",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "userdata",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"sunniva_stand\", #startxform: [#position: vector( -0.2049, -0.5374, 7.9166 ), #rotation: vector( 0.0000, 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"sunniva_stand\", #startxform: [#position: vector( -0.2049, -0.5374, 7.9166 ), #rotation: vector( 0.0000, 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"sunniva_stand_breathe\", #startxform: [#position: vector( -0.2049, -0.5374, 7.9166 ), #rotation: vector( 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"sunniva_stand_breathe\", #startxform: [#position: vector( -0.2049, -0.5374, 7.9166 ), #rotation: vector( 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"sunniva_stand_talk\", #startxform: [#position: vector( -0.2049, -0.5374, 7.9166 ), #rotation: vector( 0.0000,  ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0.0000, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"sunniva_stand_talk\", #startxform: [#position: vector( -0.2049, -0.5374, 7.9166 ), #rotation: vector( 0.0000,  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"sunniva_turnleft\", #startxform: [#position: vector( -0.2049, -0.5374, 7.9166 ), #rotation: vector( 0.0000, 0. ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0000, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"sunniva_turnleft\", #startxform: [#position: vector( -0.2049, -0.5374, 7.9166 ), #rotation: vector( 0.0000, 0. ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"sunniva_turnright\", #startxform: [#position: vector( -0.2049, -0.5374, 7.9166 ), #rotation: vector( 0.0000, 0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz.0000, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"sunniva_turnright\", #startxform: [#position: vector( -0.2049, -0.5374, 7.9166 ), #rotation: vector( 0.0000, 0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"sunniva_walk\", #startxform: [#position: vector( 0.2353, 0.9935, 7.8914 ), #rotation: vector( 0.0000, 0.0000,  ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0.0000 )], #distancepercycle: \"12.13\", #minimumspeed: \"0.6\", #maximumspeed: \"1.7\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"sunniva_walk\", #startxform: [#position: vector( 0.2353, 0.9935, 7.8914 ), #rotation: vector( 0.0000, 0.0000,  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"sunniva_walk_talk\", #startxform: [#position: vector( 0.2353, 0.9935, 7.8914 ), #rotation: vector( 0.0000, 0.0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz000, 0.0000 )], #distancepercycle: \"12.13\", #minimumspeed: \"0.6\", #maximumspeed: \"1.7\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"sunniva_walk_talk\", #startxform: [#position: vector( 0.2353, 0.9935, 7.8914 ), #rotation: vector( 0.0000, 0.0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "TestLight",
+      "kind": "light",
+      "parent": "DefaultView",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    }
+  ],
+  "skeletons": [],
+  "animations": [
+    {
+      "name": "sunniva",
+      "tracks": 29,
+      "size": 2099
+    },
+    {
+      "name": "sunniva_stand",
+      "tracks": 29,
+      "size": 17047
+    },
+    {
+      "name": "sunniva_stand_breathe",
+      "tracks": 29,
+      "size": 5891
+    },
+    {
+      "name": "sunniva_stand_talk",
+      "tracks": 29,
+      "size": 14096
+    },
+    {
+      "name": "sunniva_turnleft",
+      "tracks": 29,
+      "size": 17050
+    },
+    {
+      "name": "sunniva_turnright",
+      "tracks": 29,
+      "size": 17051
+    },
+    {
+      "name": "sunniva_walk",
+      "tracks": 29,
+      "size": 7804
+    },
+    {
+      "name": "sunniva_walk_talk",
+      "tracks": 29,
+      "size": 7949
+    }
+  ]
+}

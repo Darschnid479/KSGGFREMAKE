@@ -1,0 +1,405 @@
+{
+  "file": "arab_guard2.w3d",
+  "nodes": [
+    {
+      "name": "DefaultView",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "arab_guard2",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "collisionradius=3.5;",
+      "sw_pos": [
+        0.0,
+        -0.352,
+        9.425
+      ],
+      "godot_pos": [
+        0.0,
+        9.425,
+        0.352
+      ]
+    },
+    {
+      "name": "arab_guard2_proxy",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        -0.136,
+        6.958
+      ],
+      "godot_pos": [
+        0.0,
+        6.958,
+        0.136
+      ]
+    },
+    {
+      "name": "hiddenassets",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "userdata",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"arab_guard2_hit\", #startxform: [#position: vector( 0.5376, -0.3515, 9.1779 ), #rotation: vector( 0.0000, 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"arab_guard2_hit\", #startxform: [#position: vector( 0.5376, -0.3515, 9.1779 ), #rotation: vector( 0.0000, 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"arab_guard2_run\", #startxform: [#position: vector( -0.4807, 0.7358, 8.0463 ), #rotation: vector( 0.0000, 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000 )], #distancepercycle: \"17.716\", #minimumspeed: \"0.7\", #maximumspeed: \"1.5\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"arab_guard2_run\", #startxform: [#position: vector( -0.4807, 0.7358, 8.0463 ), #rotation: vector( 0.0000, 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"arab_guard2_stand\", #startxform: [#position: vector( 0.5376, -0.3515, 9.1779 ), #rotation: vector( 0.0000, 0. ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0000, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"arab_guard2_stand\", #startxform: [#position: vector( 0.5376, -0.3515, 9.1779 ), #rotation: vector( 0.0000, 0. ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"arab_guard2_stand_lookaround\", #startxform: [#position: vector( 0.5376, -0.3515, 9.1779 ), #rotation: vector( ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz 0.0000, 0.0000, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"arab_guard2_stand_lookaround\", #startxform: [#position: vector( 0.5376, -0.3515, 9.1779 ), #rotation: vector( ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"arab_guard2_stand_talk\", #startxform: [#position: vector( 0.5376, -0.3515, 9.1779 ), #rotation: vector( 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"arab_guard2_stand_talk\", #startxform: [#position: vector( 0.5376, -0.3515, 9.1779 ), #rotation: vector( 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"arab_guard2_turnleft\", #startxform: [#position: vector( 0.5376, -0.3515, 9.1779 ), #rotation: vector( 0.0000, ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz 0.0000, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"arab_guard2_turnleft\", #startxform: [#position: vector( 0.5376, -0.3515, 9.1779 ), #rotation: vector( 0.0000, ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"arab_guard2_turnright\", #startxform: [#position: vector( 0.5376, -0.3515, 9.1779 ), #rotation: vector( 0.0000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, 0.0000, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"arab_guard2_turnright\", #startxform: [#position: vector( 0.5376, -0.3515, 9.1779 ), #rotation: vector( 0.0000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"arab_guard2_walk\", #startxform: [#position: vector( -0.4807, 0.1033, 8.5739 ), #rotation: vector( 0.0000, 0.0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz000, 0.0000 )], #distancepercycle: \"17.716\", #minimumspeed: \"0.1\", #maximumspeed: \"1.7\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"arab_guard2_walk\", #startxform: [#position: vector( -0.4807, 0.1033, 8.5739 ), #rotation: vector( 0.0000, 0.0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "TestLight",
+      "kind": "light",
+      "parent": "DefaultView",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    }
+  ],
+  "skeletons": [],
+  "animations": [
+    {
+      "name": "arab_guard2",
+      "tracks": 27,
+      "size": 1968
+    },
+    {
+      "name": "arab_guard2_hit",
+      "tracks": 27,
+      "size": 7866
+    },
+    {
+      "name": "arab_guard2_run",
+      "tracks": 27,
+      "size": 8033
+    },
+    {
+      "name": "arab_guard2_stand",
+      "tracks": 27,
+      "size": 4555
+    },
+    {
+      "name": "arab_guard2_stand_lookaround",
+      "tracks": 27,
+      "size": 8223
+    },
+    {
+      "name": "arab_guard2_stand_talk",
+      "tracks": 27,
+      "size": 7761
+    },
+    {
+      "name": "arab_guard2_turnleft",
+      "tracks": 27,
+      "size": 4558
+    },
+    {
+      "name": "arab_guard2_turnright",
+      "tracks": 27,
+      "size": 4559
+    },
+    {
+      "name": "arab_guard2_walk",
+      "tracks": 27,
+      "size": 8655
+    }
+  ]
+}

@@ -1,0 +1,527 @@
+{
+  "file": "arab_boy.w3d",
+  "nodes": [
+    {
+      "name": "DefaultView",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "arab_boy",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "collisionradius=2.5;",
+      "sw_pos": [
+        0.021,
+        0.031,
+        7.807
+      ],
+      "godot_pos": [
+        0.021,
+        7.807,
+        -0.031
+      ]
+    },
+    {
+      "name": "arab_boy_proxy",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        -0.136,
+        6.958
+      ],
+      "godot_pos": [
+        0.0,
+        6.958,
+        0.136
+      ]
+    },
+    {
+      "name": "hiddenassets",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "userdata",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"arab_boy_give\", #startxform: [#position: vector( 0.2456, -0.4054, 7.7074 ), #rotation: vector( 0.0000, 0.0000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, 0.0000 )], #mountstart: \"10\", #mountend: \"35\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"arab_boy_give\", #startxform: [#position: vector( 0.2456, -0.4054, 7.7074 ), #rotation: vector( 0.0000, 0.0000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"arab_boy_run\", #startxform: [#position: vector( -0.6492, 0.7895, 7.0338 ), #rotation: vector( 0.0000, 0.0000, ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz 0.0000 )], #distancepercycle: \"26.194\", #minimumspeed: \"0.8\", #maximumspeed: \"1.5\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"arab_boy_run\", #startxform: [#position: vector( -0.6492, 0.7895, 7.0338 ), #rotation: vector( 0.0000, 0.0000, ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"arab_boy_run_talk\", #startxform: [#position: vector( -0.6492, 0.7895, 7.0338 ), #rotation: vector( 0.0000, 0. ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0000, 0.0000 )], #distancepercycle: \"26.194\", #minimumspeed: \"0.8\", #maximumspeed: \"1.5\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"arab_boy_run_talk\", #startxform: [#position: vector( -0.6492, 0.7895, 7.0338 ), #rotation: vector( 0.0000, 0. ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"arab_boy_stand\", #startxform: [#position: vector( 0.2456, -0.4054, 7.7074 ), #rotation: vector( 0.0000, 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"arab_boy_stand\", #startxform: [#position: vector( 0.2456, -0.4054, 7.7074 ), #rotation: vector( 0.0000, 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"arab_boy_stand_breathe\", #startxform: [#position: vector( 0.2456, -0.4054, 7.7074 ), #rotation: vector( 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"arab_boy_stand_breathe\", #startxform: [#position: vector( 0.2456, -0.4054, 7.7074 ), #rotation: vector( 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"arab_boy_stand_talk\", #startxform: [#position: vector( 0.2456, -0.4054, 7.7074 ), #rotation: vector( 0.0000,  ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0.0000, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"arab_boy_stand_talk\", #startxform: [#position: vector( 0.2456, -0.4054, 7.7074 ), #rotation: vector( 0.0000,  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"arab_boy_turnleft\", #startxform: [#position: vector( 0.2456, -0.4054, 7.7074 ), #rotation: vector( 0.0000, 0. ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0000, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"arab_boy_turnleft\", #startxform: [#position: vector( 0.2456, -0.4054, 7.7074 ), #rotation: vector( 0.0000, 0. ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"arab_boy_turnright\", #startxform: [#position: vector( 0.2456, -0.4054, 7.7074 ), #rotation: vector( 0.0000, 0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz.0000, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"arab_boy_turnright\", #startxform: [#position: vector( 0.2456, -0.4054, 7.7074 ), #rotation: vector( 0.0000, 0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"arab_boy_walk\", #startxform: [#position: vector( -0.6492, 0.2863, 7.4640 ), #rotation: vector( 0.0000, 0.0000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, 0.0000 )], #distancepercycle: \"13.411\", #minimumspeed: \"0.8\", #maximumspeed: \"1.5\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"arab_boy_walk\", #startxform: [#position: vector( -0.6492, 0.2863, 7.4640 ), #rotation: vector( 0.0000, 0.0000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"arab_boy_walk_talk\", #startxform: [#position: vector( -0.6492, 0.2863, 7.4640 ), #rotation: vector( 0.0000, 0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz.0000, 0.0000 )], #distancepercycle: \"13.411\", #minimumspeed: \"0.8\", #maximumspeed: \"1.5\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"arab_boy_walk_talk\", #startxform: [#position: vector( -0.6492, 0.2863, 7.4640 ), #rotation: vector( 0.0000, 0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "objectlinkedtobonesplayerinfo",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[[#bonedmodel: \"arab_boy\", #object: \"cake\", #boneid: 7, #xform: [#rotation: vector( -172.5469, 22.1917, 90.3684 ), #positio ",
+      "kind": "group",
+      "parent": "objectlinkedtobonesplayerinfo",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzzn: vector( 1.0468, 0.0351, -0.2888 )]]] ",
+      "kind": "group",
+      "parent": "zzz[[#bonedmodel: \"arab_boy\", #object: \"cake\", #boneid: 7, #xform: [#rotation: vector( -172.5469, 22.1917, 90.3684 ), #positio ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "TestLight",
+      "kind": "light",
+      "parent": "DefaultView",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    }
+  ],
+  "skeletons": [],
+  "animations": [
+    {
+      "name": "arab_boy",
+      "tracks": 31,
+      "size": 2253
+    },
+    {
+      "name": "arab_boy_give",
+      "tracks": 31,
+      "size": 8119
+    },
+    {
+      "name": "arab_boy_run",
+      "tracks": 31,
+      "size": 9170
+    },
+    {
+      "name": "arab_boy_run_talk",
+      "tracks": 31,
+      "size": 9347
+    },
+    {
+      "name": "arab_boy_stand",
+      "tracks": 31,
+      "size": 9237
+    },
+    {
+      "name": "arab_boy_stand_breathe",
+      "tracks": 31,
+      "size": 4019
+    },
+    {
+      "name": "arab_boy_stand_talk",
+      "tracks": 31,
+      "size": 9346
+    },
+    {
+      "name": "arab_boy_turnleft",
+      "tracks": 31,
+      "size": 4014
+    },
+    {
+      "name": "arab_boy_turnright",
+      "tracks": 31,
+      "size": 4015
+    },
+    {
+      "name": "arab_boy_walk",
+      "tracks": 31,
+      "size": 9731
+    },
+    {
+      "name": "arab_boy_walk_talk",
+      "tracks": 31,
+      "size": 9928
+    }
+  ]
+}

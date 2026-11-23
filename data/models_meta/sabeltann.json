@@ -1,0 +1,1004 @@
+{
+  "file": "sabeltann.w3d",
+  "nodes": [
+    {
+      "name": "DefaultView",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "rapier",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "hiddenassets",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "LookAt",
+      "kind": "group",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        -0.0,
+        30.025,
+        18.713
+      ],
+      "godot_pos": [
+        -0.0,
+        18.713,
+        -30.025
+      ]
+    },
+    {
+      "name": "sabeltann",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "collisionradius=2.2;",
+      "sw_pos": [
+        0.0,
+        -0.136,
+        10.82
+      ],
+      "godot_pos": [
+        0.0,
+        10.82,
+        0.136
+      ]
+    },
+    {
+      "name": "sabeltann_proxy",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        -0.136,
+        10.82
+      ],
+      "godot_pos": [
+        0.0,
+        10.82,
+        0.136
+      ]
+    },
+    {
+      "name": "userdata",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"Sabeltann_climb_down\", #startxform: [#position: vector( -0.4377, 0.9463, 10.6373 ), #rotation: vector( 0.0000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, 0.0000, -180.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"Sabeltann_climb_down\", #startxform: [#position: vector( -0.4377, 0.9463, 10.6373 ), #rotation: vector( 0.0000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"sabeltann_climb_up\", #startxform: [#position: vector( 0.0000, -0.1360, 10.6359 ), #rotation: vector( 0.0000,  ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0.0000, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"sabeltann_climb_up\", #startxform: [#position: vector( 0.0000, -0.1360, 10.6359 ), #rotation: vector( 0.0000,  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"sabeltann_die\", #startxform: [#position: vector( -0.4333, -0.6125, 9.9725 ), #rotation: vector( 0.0000, 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"sabeltann_die\", #startxform: [#position: vector( -0.4333, -0.6125, 9.9725 ), #rotation: vector( 0.0000, 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"sabeltann_hit\", #startxform: [#position: vector( -0.4333, -0.6125, 9.9725 ), #rotation: vector( 0.0000, 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"sabeltann_hit\", #startxform: [#position: vector( -0.4333, -0.6125, 9.9725 ), #rotation: vector( 0.0000, 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"sabeltann_jump\", #startxform: [#position: vector( -0.4333, 0.5172, 10.6359 ), #rotation: vector( 0.0000, 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000 )], #startmoving: \"12\", #stopmoving: \"39\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"sabeltann_jump\", #startxform: [#position: vector( -0.4333, 0.5172, 10.6359 ), #rotation: vector( 0.0000, 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"sabeltann_run\", #startxform: [#position: vector( -0.5293, 0.5172, 9.9480 ), #rotation: vector( 0.0000, 0.0000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, 0.0000 )], #distancepercycle: \"25.000\", #minimumspeed: \"0.7\", #maximumspeed: \"1.5\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"sabeltann_run\", #startxform: [#position: vector( -0.5293, 0.5172, 9.9480 ), #rotation: vector( 0.0000, 0.0000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"sabeltann_run_talk\", #startxform: [#position: vector( -0.5293, 0.5172, 9.9480 ), #rotation: vector( 0.0000, 0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz.0000, 0.0000 )], #distancepercycle: \"25.000\", #minimumspeed: \"0.7\", #maximumspeed: \"1.5\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"sabeltann_run_talk\", #startxform: [#position: vector( -0.5293, 0.5172, 9.9480 ), #rotation: vector( 0.0000, 0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"sabeltann_stand\", #startxform: [#position: vector( -0.4333, 0.5172, 10.6359 ), #rotation: vector( 0.0000, 0.0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"sabeltann_stand\", #startxform: [#position: vector( -0.4333, 0.5172, 10.6359 ), #rotation: vector( 0.0000, 0.0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"sabeltann_stand_rapier\", #startxform: [#position: vector( -0.4333, -0.6125, 9.9725 ), #rotation: vector( 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"sabeltann_stand_rapier\", #startxform: [#position: vector( -0.4333, -0.6125, 9.9725 ), #rotation: vector( 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"sabeltann_stand_rapier_talk\", #startxform: [#position: vector( -0.4333, -0.6096, 10.2911 ), #rotation: vector ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz( 0.0000, 0.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"sabeltann_stand_rapier_talk\", #startxform: [#position: vector( -0.4333, -0.6096, 10.2911 ), #rotation: vector ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"sabeltann_stand_talk\", #startxform: [#position: vector( -0.4333, 0.5172, 10.6359 ), #rotation: vector( 0.0000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, 0.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"sabeltann_stand_talk\", #startxform: [#position: vector( -0.4333, 0.5172, 10.6359 ), #rotation: vector( 0.0000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"sabeltann_swordswing\", #startxform: [#position: vector( -0.4333, -0.6125, 9.9725 ), #rotation: vector( 0.0000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, 0.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #impact: \"12\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"sabeltann_swordswing\", #startxform: [#position: vector( -0.4333, -0.6125, 9.9725 ), #rotation: vector( 0.0000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"sabeltann_turnleft\", #startxform: [#position: vector( -0.4333, 0.5172, 10.6359 ), #rotation: vector( 0.0000,  ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0.0000, 0.0000 )]]  ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"sabeltann_turnleft\", #startxform: [#position: vector( -0.4333, 0.5172, 10.6359 ), #rotation: vector( 0.0000,  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"Box01\", #startxform: [#position: vector( 1.7980, 0.0897, 1.2117 ), #rotation: vector( 0.0000, 0.0000, -39.096 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz4 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"Box01\", #startxform: [#position: vector( 1.7980, 0.0897, 1.2117 ), #rotation: vector( 0.0000, 0.0000, -39.096 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"Box02\", #startxform: [#position: vector( -1.3327, -0.8448, 1.2117 ), #rotation: vector( 0.0000, 0.0000, 15.99 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz97 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"Box02\", #startxform: [#position: vector( -1.3327, -0.8448, 1.2117 ), #rotation: vector( 0.0000, 0.0000, 15.99 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"sabeltann_turnright\", #startxform: [#position: vector( -0.4333, 0.5172, 10.6359 ), #rotation: vector( 0.0000, ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz 0.0000, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"sabeltann_turnright\", #startxform: [#position: vector( -0.4333, 0.5172, 10.6359 ), #rotation: vector( 0.0000, ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"Box01\", #startxform: [#position: vector( 1.7980, 0.0897, 1.2117 ), #rotation: vector( 0.0000, 0.0000, -39.096  ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz4 )]]  ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"Box01\", #startxform: [#position: vector( 1.7980, 0.0897, 1.2117 ), #rotation: vector( 0.0000, 0.0000, -39.096  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"Box02\", #startxform: [#position: vector( -1.3327, -0.8448, 1.2117 ), #rotation: vector( 0.0000, 0.0000, 15.99  ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz97 )]]  ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"Box02\", #startxform: [#position: vector( -1.3327, -0.8448, 1.2117 ), #rotation: vector( 0.0000, 0.0000, 15.99  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"sabeltann_walk\", #startxform: [#position: vector( -0.9325, 0.5172, 10.5777 ), #rotation: vector( 0.0000, 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000 )], #distancepercycle: \"16.522\", #minimumspeed: \"0.1\", #maximumspeed: \"1.5\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"sabeltann_walk\", #startxform: [#position: vector( -0.9325, 0.5172, 10.5777 ), #rotation: vector( 0.0000, 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"sabeltann_walk_talk\", #startxform: [#position: vector( -0.9325, 0.5172, 10.5777 ), #rotation: vector( 0.0000, ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz 0.0000, 0.0000 )], #distancepercycle: \"16.522\", #minimumspeed: \"0.1\", #maximumspeed: \"1.5\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"sabeltann_walk_talk\", #startxform: [#position: vector( -0.9325, 0.5172, 10.5777 ), #rotation: vector( 0.0000, ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"sabeltann_win\", #startxform: [#position: vector( -0.4333, -0.6125, 9.9725 ), #rotation: vector( 0.0000, 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000 )]]  ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"sabeltann_win\", #startxform: [#position: vector( -0.4333, -0.6125, 9.9725 ), #rotation: vector( 0.0000, 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "objectlinkedtobonesplayerinfo",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[[#bonedmodel: \"sabeltann\", #object: \"rapier_hand\", #boneid: 24, #xform: [#rotation: vector( -126.0246, 3.8284, -127.1193 ) ",
+      "kind": "group",
+      "parent": "objectlinkedtobonesplayerinfo",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, #position: vector( 1.8061, -1.2097, -0.7616 )]], [#bonedmodel: \"sabeltann\", #object: \"rapier_belt\", #boneid: 1, #xform: [ ",
+      "kind": "group",
+      "parent": "zzz[[#bonedmodel: \"sabeltann\", #object: \"rapier_hand\", #boneid: 24, #xform: [#rotation: vector( -126.0246, 3.8284, -127.1193 ) ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz#rotation: vector( -131.6129, 25.5212, 166.3342 ), #position: vector( 1.9675, 0.5639, 1.1314 )]], [#bonedmodel: \"sabeltann\" ",
+      "kind": "group",
+      "parent": "zzz, #position: vector( 1.8061, -1.2097, -0.7616 )]], [#bonedmodel: \"sabeltann\", #object: \"rapier_belt\", #boneid: 1, #xform: [ ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, #object: \"treasuremap\", #boneid: 24, #xform: [#rotation: vector( -168.4469, 10.1587, 64.4872 ), #position: vector( 0.2139 ",
+      "kind": "group",
+      "parent": "zzz#rotation: vector( -131.6129, 25.5212, 166.3342 ), #position: vector( 1.9675, 0.5639, 1.1314 )]], [#bonedmodel: \"sabeltann\" ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, -4.5138, 0.2281 )]]] ",
+      "kind": "group",
+      "parent": "zzz, #object: \"treasuremap\", #boneid: 24, #xform: [#rotation: vector( -168.4469, 10.1587, 64.4872 ), #position: vector( 0.2139 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "TestLight",
+      "kind": "light",
+      "parent": "DefaultView",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    }
+  ],
+  "skeletons": [],
+  "animations": [
+    {
+      "name": "sabeltann",
+      "tracks": 35,
+      "size": 2591
+    },
+    {
+      "name": "sabeltann_climb_down",
+      "tracks": 35,
+      "size": 8861
+    },
+    {
+      "name": "sabeltann_climb_up",
+      "tracks": 35,
+      "size": 8403
+    },
+    {
+      "name": "sabeltann_die",
+      "tracks": 35,
+      "size": 15913
+    },
+    {
+      "name": "sabeltann_hit",
+      "tracks": 35,
+      "size": 6504
+    },
+    {
+      "name": "sabeltann_jump",
+      "tracks": 35,
+      "size": 6979
+    },
+    {
+      "name": "sabeltann_run",
+      "tracks": 35,
+      "size": 7034
+    },
+    {
+      "name": "sabeltann_run_talk",
+      "tracks": 35,
+      "size": 7186
+    },
+    {
+      "name": "sabeltann_stand",
+      "tracks": 35,
+      "size": 4501
+    },
+    {
+      "name": "sabeltann_stand_rapier",
+      "tracks": 35,
+      "size": 5575
+    },
+    {
+      "name": "sabeltann_stand_rapier_talk",
+      "tracks": 35,
+      "size": 10742
+    },
+    {
+      "name": "sabeltann_stand_talk",
+      "tracks": 35,
+      "size": 12570
+    },
+    {
+      "name": "sabeltann_swordswing",
+      "tracks": 35,
+      "size": 8856
+    },
+    {
+      "name": "sabeltann_turnleft",
+      "tracks": 35,
+      "size": 5008
+    },
+    {
+      "name": "box01-key",
+      "tracks": 1,
+      "size": 229
+    },
+    {
+      "name": "box02-key",
+      "tracks": 1,
+      "size": 224
+    },
+    {
+      "name": "sabeltann_turnright",
+      "tracks": 35,
+      "size": 4838
+    },
+    {
+      "name": "sabeltann_walk",
+      "tracks": 35,
+      "size": 8477
+    },
+    {
+      "name": "sabeltann_walk_talk",
+      "tracks": 35,
+      "size": 8671
+    },
+    {
+      "name": "sabeltann_win",
+      "tracks": 35,
+      "size": 13947
+    }
+  ]
+}

@@ -1,0 +1,1257 @@
+{
+  "file": "magakhan_endboss_level.w3d",
+  "nodes": [
+    {
+      "name": "DefaultView",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "userdata",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"door_1\", #startxform: [#position: vector( -29.0375, -0.9501, 1.8922 ), #rotation: vector( 0.0000, 0.0008, 0.0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"door_1\", #startxform: [#position: vector( -29.0375, -0.9501, 1.8922 ), #rotation: vector( 0.0000, 0.0008, 0.0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"door_2\", #startxform: [#position: vector( 29.9660, -0.9501, 1.8567 ), #rotation: vector( 0.0000, 0.0004, 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"door_2\", #startxform: [#position: vector( 29.9660, -0.9501, 1.8567 ), #rotation: vector( 0.0000, 0.0004, 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "maga_dungeon_door01",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -50.409,
+        192.756,
+        0.098
+      ],
+      "godot_pos": [
+        -50.409,
+        0.098,
+        -192.756
+      ]
+    },
+    {
+      "name": "scene_light",
+      "kind": "light",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -247.898,
+        105.106,
+        325.817
+      ],
+      "godot_pos": [
+        -247.898,
+        325.817,
+        -105.106
+      ]
+    },
+    {
+      "name": "scene_light.Target",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -0.046,
+        -1.759,
+        135.978
+      ],
+      "godot_pos": [
+        -0.046,
+        135.978,
+        1.759
+      ]
+    },
+    {
+      "name": "MapExportCamera",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -5.101,
+        47.18,
+        481.874
+      ],
+      "godot_pos": [
+        -5.101,
+        481.874,
+        -47.18
+      ]
+    },
+    {
+      "name": "MapExportCamera.Target",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -5.156,
+        47.181,
+        -0.017
+      ],
+      "godot_pos": [
+        -5.156,
+        -0.017,
+        -47.181
+      ]
+    },
+    {
+      "name": "walls",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "alwaysmovecamerainfront=1;",
+      "sw_pos": [
+        2.225,
+        -100.871,
+        49.341
+      ],
+      "godot_pos": [
+        2.225,
+        49.341,
+        100.871
+      ]
+    },
+    {
+      "name": "door_1",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -29.037,
+        -0.95,
+        1.892
+      ],
+      "godot_pos": [
+        -29.037,
+        1.892,
+        0.95
+      ]
+    },
+    {
+      "name": "door_2",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        29.966,
+        -0.95,
+        1.857
+      ],
+      "godot_pos": [
+        29.966,
+        1.857,
+        0.95
+      ]
+    },
+    {
+      "name": "gameplay_area_2",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "alwaysmovecamerainfront=1;",
+      "sw_pos": [
+        232.537,
+        -210.811,
+        49.341
+      ],
+      "godot_pos": [
+        232.537,
+        49.341,
+        210.811
+      ]
+    },
+    {
+      "name": "endbossarea",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "alwaysmovecamerainfront=1;",
+      "sw_pos": [
+        2.225,
+        -100.871,
+        49.341
+      ],
+      "godot_pos": [
+        2.225,
+        49.341,
+        100.871
+      ]
+    },
+    {
+      "name": "maga_dungeon_door02",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        55.133,
+        192.756,
+        0.098
+      ],
+      "godot_pos": [
+        55.133,
+        0.098,
+        -192.756
+      ]
+    },
+    {
+      "name": "maga_dungeon_door03",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        2.312,
+        140.025,
+        0.098
+      ],
+      "godot_pos": [
+        2.312,
+        0.098,
+        -140.025
+      ]
+    },
+    {
+      "name": "lamp_fire_03",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -45.258,
+        107.424,
+        10.319
+      ],
+      "godot_pos": [
+        -45.258,
+        10.319,
+        -107.424
+      ]
+    },
+    {
+      "name": "lamp_fire_04",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -108.304,
+        44.647,
+        10.319
+      ],
+      "godot_pos": [
+        -108.304,
+        10.319,
+        -44.647
+      ]
+    },
+    {
+      "name": "lamp_fire_05",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -100.024,
+        -44.929,
+        10.319
+      ],
+      "godot_pos": [
+        -100.024,
+        10.319,
+        44.929
+      ]
+    },
+    {
+      "name": "lamp_fire_06",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -45.531,
+        -111.861,
+        10.319
+      ],
+      "godot_pos": [
+        -45.531,
+        10.319,
+        111.861
+      ]
+    },
+    {
+      "name": "lamp_fire_07",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        47.588,
+        -110.274,
+        10.319
+      ],
+      "godot_pos": [
+        47.588,
+        10.319,
+        110.274
+      ]
+    },
+    {
+      "name": "lamp_fire_08",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        108.452,
+        -45.734,
+        10.319
+      ],
+      "godot_pos": [
+        108.452,
+        10.319,
+        45.734
+      ]
+    },
+    {
+      "name": "lamp_fire_09",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        109.005,
+        44.299,
+        10.319
+      ],
+      "godot_pos": [
+        109.005,
+        10.319,
+        -44.299
+      ]
+    },
+    {
+      "name": "lamp_fire_10",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        46.109,
+        107.441,
+        10.319
+      ],
+      "godot_pos": [
+        46.109,
+        10.319,
+        -107.441
+      ]
+    },
+    {
+      "name": "foginfo",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "color=52383c;\r\nfar=1800;\r\ndecaymode=exponential;",
+      "sw_pos": [
+        -250.253,
+        86.578,
+        -1243.749
+      ],
+      "godot_pos": [
+        -250.253,
+        -1243.749,
+        -86.578
+      ]
+    },
+    {
+      "name": "windows",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "alwaysmovecamerainfront=1;",
+      "sw_pos": [
+        2.225,
+        -100.871,
+        49.341
+      ],
+      "godot_pos": [
+        2.225,
+        49.341,
+        100.871
+      ]
+    },
+    {
+      "name": "skybox",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "fog=none;",
+      "sw_pos": [
+        4.813,
+        -1.611,
+        30.892
+      ],
+      "godot_pos": [
+        4.813,
+        30.892,
+        1.611
+      ]
+    },
+    {
+      "name": "light_smoke_3",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "flarebillboard=1;\r\n visibility=both_nodepth;",
+      "sw_pos": [
+        -39.951,
+        76.316,
+        144.015
+      ],
+      "godot_pos": [
+        -39.951,
+        144.015,
+        -76.316
+      ]
+    },
+    {
+      "name": "light_smoke_1",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "flarebillboard=1;\r\n visibility=both_nodepth;",
+      "sw_pos": [
+        -82.45,
+        28.298,
+        170.147
+      ],
+      "godot_pos": [
+        -82.45,
+        170.147,
+        -28.298
+      ]
+    },
+    {
+      "name": "mk_bossdragon",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "collisionradius=40;",
+      "sw_pos": [
+        0.0,
+        0.0,
+        17.1
+      ],
+      "godot_pos": [
+        0.0,
+        17.1,
+        -0.0
+      ]
+    },
+    {
+      "name": "IK left_leg",
+      "kind": "group",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        -10.042,
+        -17.125,
+        5.293
+      ],
+      "godot_pos": [
+        -10.042,
+        5.293,
+        17.125
+      ]
+    },
+    {
+      "name": "IK right_arm",
+      "kind": "group",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        12.86,
+        13.171,
+        5.13
+      ],
+      "godot_pos": [
+        12.86,
+        5.13,
+        -13.171
+      ]
+    },
+    {
+      "name": "IK left_arm",
+      "kind": "group",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        -12.653,
+        13.171,
+        5.13
+      ],
+      "godot_pos": [
+        -12.653,
+        5.13,
+        -13.171
+      ]
+    },
+    {
+      "name": "IK right_leg",
+      "kind": "group",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        10.249,
+        -17.125,
+        5.293
+      ],
+      "godot_pos": [
+        10.249,
+        5.293,
+        17.125
+      ]
+    },
+    {
+      "name": "hiddenassets",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"mk_bossdragon_die\", #startxform: [#position: vector( 0.0000, 0.0000, 15.9963 ), #rotation: vector( 0.0000, 0. ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0000, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"mk_bossdragon_die\", #startxform: [#position: vector( 0.0000, 0.0000, 15.9963 ), #rotation: vector( 0.0000, 0. ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"mk_bossdragon_hittail\", #startxform: [#position: vector( 0.0000, 0.0000, 15.9963 ), #rotation: vector( 0.0000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, 0.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"mk_bossdragon_hittail\", #startxform: [#position: vector( 0.0000, 0.0000, 15.9963 ), #rotation: vector( 0.0000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"mk_bossdragon_jumpout\", #startxform: [#position: vector( 0.0000, 0.0000, -109.7685 ), #rotation: vector( 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000, 0.0000 )], #startfire: \"105\", #stopfire: \"140\", #startfire: \"169\", #stopfire: \"208\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"mk_bossdragon_jumpout\", #startxform: [#position: vector( 0.0000, 0.0000, -109.7685 ), #rotation: vector( 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"mk_bossdragon_stand\", #startxform: [#position: vector( 0.0000, 0.0000, 15.9963 ), #rotation: vector( 0.0000,  ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"mk_bossdragon_stand\", #startxform: [#position: vector( 0.0000, 0.0000, 15.9963 ), #rotation: vector( 0.0000,  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"mk_bossdragon_stand_blowlvl1\", #startxform: [#position: vector( 0.0000, 0.0000, 15.9963 ), #rotation: vector( ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz 0.0000, 0.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #impact: \"10\", #loopstart: \"10\", #loopend: \"40\", #start ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"mk_bossdragon_stand_blowlvl1\", #startxform: [#position: vector( 0.0000, 0.0000, 15.9963 ), #rotation: vector( ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzzfire: \"10\", #stopfire: \"40\"] ",
+      "kind": "group",
+      "parent": "zzz 0.0000, 0.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #impact: \"10\", #loopstart: \"10\", #loopend: \"40\", #start ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"mk_bossdragon_stand_blowlvl2\", #startxform: [#position: vector( 0.0000, 0.0000, 15.9963 ), #rotation: vector( ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz 0.0000, 0.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #impact: \"10\", #loopstart: \"10\", #loopend: \"40\", #start  ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"mk_bossdragon_stand_blowlvl2\", #startxform: [#position: vector( 0.0000, 0.0000, 15.9963 ), #rotation: vector( ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzzfire: \"10\", #stopfire: \"40\"]  ",
+      "kind": "group",
+      "parent": "zzz 0.0000, 0.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #impact: \"10\", #loopstart: \"10\", #loopend: \"40\", #start  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"mk_bossdragon_turnleft\", #startxform: [#position: vector( 0.0000, 0.0000, 15.9963 ), #rotation: vector( 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000, 0.0000 )], #minimumspeed: \"0.5\", #maximumspeed: \"1.8\", #foot1up: \" 1->12\", #foot2up: \" 13->24\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"mk_bossdragon_turnleft\", #startxform: [#position: vector( 0.0000, 0.0000, 15.9963 ), #rotation: vector( 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"mk_bossdragon_turnleft_blowlvl1\", #startxform: [#position: vector( 0.0000, 0.0000, 15.9963 ), #rotation: vect ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzzor( 0.0000, 0.0000, 0.0000 )], #minimumspeed: \"0.5\", #maximumspeed: \"1.8\", #startfire: \"0\", #foot1up: \" 1->12\", #foot2up: \" ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"mk_bossdragon_turnleft_blowlvl1\", #startxform: [#position: vector( 0.0000, 0.0000, 15.9963 ), #rotation: vect ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz 13->24\"] ",
+      "kind": "group",
+      "parent": "zzzor( 0.0000, 0.0000, 0.0000 )], #minimumspeed: \"0.5\", #maximumspeed: \"1.8\", #startfire: \"0\", #foot1up: \" 1->12\", #foot2up: \" ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"mk_bossdragon_turnright\", #startxform: [#position: vector( 0.0000, 0.0000, 15.9963 ), #rotation: vector( 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000, 0.0000 )], #minimumspeed: \"0.5\", #maximumspeed: \"1.8\", #foot1up: \" 11->19\", #foot2up: \" 1->9\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"mk_bossdragon_turnright\", #startxform: [#position: vector( 0.0000, 0.0000, 15.9963 ), #rotation: vector( 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"mk_bossdragon_turnright_blowlvl1\", #startxform: [#position: vector( 0.0000, 0.0000, 15.9963 ), #rotation: vec ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzztor( 0.0000, 0.0000, 0.0000 )], #minimumspeed: \"0.5\", #maximumspeed: \"1.8\", #startfire: \"0\", #foot1up: \" 11->19\", #foot2up: ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"mk_bossdragon_turnright_blowlvl1\", #startxform: [#position: vector( 0.0000, 0.0000, 15.9963 ), #rotation: vec ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz \" 1->9\"] ",
+      "kind": "group",
+      "parent": "zzztor( 0.0000, 0.0000, 0.0000 )], #minimumspeed: \"0.5\", #maximumspeed: \"1.8\", #startfire: \"0\", #foot1up: \" 11->19\", #foot2up: ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "objectlinkedtobonesplayerinfo",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[[#bonedmodel: \"mk_bossdragon\", #object: \"tail1\", #boneid: 49, #xform: [#rotation: vector( -89.9773, 90.0000, 0.0000 ), #po ",
+      "kind": "group",
+      "parent": "objectlinkedtobonesplayerinfo",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzzsition: vector( 24.4826, 0.1481, 0.0338 )]], [#bonedmodel: \"mk_bossdragon\", #object: \"fire_emitter\", #boneid: 10, #xform: [ ",
+      "kind": "group",
+      "parent": "zzz[[#bonedmodel: \"mk_bossdragon\", #object: \"tail1\", #boneid: 49, #xform: [#rotation: vector( -89.9773, 90.0000, 0.0000 ), #po ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz#rotation: vector( 15.5439, 90.0000, 0.0000 ), #position: vector( 5.3329, -0.5613, 0.1222 )]], [#bonedmodel: \"mk_bossdragon ",
+      "kind": "group",
+      "parent": "zzzsition: vector( 24.4826, 0.1481, 0.0338 )]], [#bonedmodel: \"mk_bossdragon\", #object: \"fire_emitter\", #boneid: 10, #xform: [ ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz\", #object: \"tail2\", #boneid: 49, #xform: [#rotation: vector( -89.9773, 90.0000, 0.0000 ), #position: vector( 12.8402, 0.19 ",
+      "kind": "group",
+      "parent": "zzz#rotation: vector( 15.5439, 90.0000, 0.0000 ), #position: vector( 5.3329, -0.5613, 0.1222 )]], [#bonedmodel: \"mk_bossdragon ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz21, 0.0338 )]], [#bonedmodel: \"mk_bossdragon\", #object: \"tail3\", #boneid: 49, #xform: [#rotation: vector( -89.9773, 90.0000 ",
+      "kind": "group",
+      "parent": "zzz\", #object: \"tail2\", #boneid: 49, #xform: [#rotation: vector( -89.9773, 90.0000, 0.0000 ), #position: vector( 12.8402, 0.19 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, 0.0000 ), #position: vector( 1.9262, 0.2991, 0.0338 )]], [#bonedmodel: \"mk_bossdragon\", #object: \"tail4\", #boneid: 48, #x ",
+      "kind": "group",
+      "parent": "zzz21, 0.0338 )]], [#bonedmodel: \"mk_bossdragon\", #object: \"tail3\", #boneid: 49, #xform: [#rotation: vector( -89.9773, 90.0000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzzform: [#rotation: vector( -91.0019, 90.0000, 0.0000 ), #position: vector( 0.1482, 0.4715, 0.0338 )]], [#bonedmodel: \"mk_bos ",
+      "kind": "group",
+      "parent": "zzz, 0.0000 ), #position: vector( 1.9262, 0.2991, 0.0338 )]], [#bonedmodel: \"mk_bossdragon\", #object: \"tail4\", #boneid: 48, #x ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzzsdragon\", #object: \"tail5\", #boneid: 47, #xform: [#rotation: vector( -91.7034, 90.0000, 0.0000 ), #position: vector( -1.242 ",
+      "kind": "group",
+      "parent": "zzzform: [#rotation: vector( -91.0019, 90.0000, 0.0000 ), #position: vector( 0.1482, 0.4715, 0.0338 )]], [#bonedmodel: \"mk_bos ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz6, 0.3768, 0.0338 )]], [#bonedmodel: \"mk_bossdragon\", #object: \"tail6\", #boneid: 46, #xform: [#rotation: vector( -95.7163,  ",
+      "kind": "group",
+      "parent": "zzzsdragon\", #object: \"tail5\", #boneid: 47, #xform: [#rotation: vector( -91.7034, 90.0000, 0.0000 ), #position: vector( -1.242 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz90.0000, 0.0000 ), #position: vector( 0.3479, 0.2269, 0.0338 )]], [#bonedmodel: \"mk_bossdragon\", #object: \"dizzystars\", #bo ",
+      "kind": "group",
+      "parent": "zzz6, 0.3768, 0.0338 )]], [#bonedmodel: \"mk_bossdragon\", #object: \"tail6\", #boneid: 46, #xform: [#rotation: vector( -95.7163,  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzzneid: 49, #xform: [#rotation: vector( -89.9773, 90.0000, 0.0000 ), #position: vector( 7.64195e3, 5.9469, -1.26381e4 )]]] ",
+      "kind": "group",
+      "parent": "zzz90.0000, 0.0000 ), #position: vector( 0.3479, 0.2269, 0.0338 )]], [#bonedmodel: \"mk_bossdragon\", #object: \"dizzystars\", #bo ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "TestLight",
+      "kind": "light",
+      "parent": "DefaultView",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    }
+  ],
+  "skeletons": [],
+  "animations": [
+    {
+      "name": "door_1-key",
+      "tracks": 1,
+      "size": 270
+    },
+    {
+      "name": "door_2-key",
+      "tracks": 1,
+      "size": 272
+    },
+    {
+      "name": "mk_bossdragon",
+      "tracks": 51,
+      "size": 4055
+    },
+    {
+      "name": "mk_bossdragon_die",
+      "tracks": 51,
+      "size": 24389
+    },
+    {
+      "name": "mk_bossdragon_hittail",
+      "tracks": 51,
+      "size": 22092
+    },
+    {
+      "name": "mk_bossdragon_jumpout",
+      "tracks": 51,
+      "size": 53585
+    },
+    {
+      "name": "mk_bossdragon_stand",
+      "tracks": 51,
+      "size": 9226
+    },
+    {
+      "name": "mk_bossdragon_stand_blowlvl1",
+      "tracks": 51,
+      "size": 10417
+    },
+    {
+      "name": "mk_bossdragon_stand_blowlvl2",
+      "tracks": 51,
+      "size": 10668
+    },
+    {
+      "name": "mk_bossdragon_turnleft",
+      "tracks": 51,
+      "size": 9912
+    },
+    {
+      "name": "mk_bossdragon_turnleft_blowlvl1",
+      "tracks": 51,
+      "size": 10191
+    },
+    {
+      "name": "mk_bossdragon_turnright",
+      "tracks": 51,
+      "size": 9348
+    },
+    {
+      "name": "mk_bossdragon_turnright_blowlvl1",
+      "tracks": 51,
+      "size": 9515
+    }
+  ]
+}

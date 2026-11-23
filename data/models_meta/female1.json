@@ -1,0 +1,331 @@
+{
+  "file": "female1.w3d",
+  "nodes": [
+    {
+      "name": "DefaultView",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "female1",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "collisionradius=2;",
+      "sw_pos": [
+        -0.001,
+        -0.136,
+        8.191
+      ],
+      "godot_pos": [
+        -0.001,
+        8.191,
+        0.136
+      ]
+    },
+    {
+      "name": "female1_proxy",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        -0.001,
+        -0.136,
+        8.191
+      ],
+      "godot_pos": [
+        -0.001,
+        8.191,
+        0.136
+      ]
+    },
+    {
+      "name": "hiddenassets",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "userdata",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"female1_stand\", #startxform: [#position: vector( 0.5862, -0.0998, 8.0608 ), #rotation: vector( 0.0000, 0.0000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"female1_stand\", #startxform: [#position: vector( 0.5862, -0.0998, 8.0608 ), #rotation: vector( 0.0000, 0.0000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"female1_stand_talk\", #startxform: [#position: vector( 0.5862, -0.0998, 8.0608 ), #rotation: vector( 0.0000, 0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"female1_stand_talk\", #startxform: [#position: vector( 0.5862, -0.0998, 8.0608 ), #rotation: vector( 0.0000, 0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"female1_turnleft\", #startxform: [#position: vector( 0.5862, -0.0998, 8.0608 ), #rotation: vector( 0.0000, 0.0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"female1_turnleft\", #startxform: [#position: vector( 0.5862, -0.0998, 8.0608 ), #rotation: vector( 0.0000, 0.0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"female1_turnright\", #startxform: [#position: vector( 0.5862, -0.0998, 8.0608 ), #rotation: vector( 0.0000, 0. ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"female1_turnright\", #startxform: [#position: vector( 0.5862, -0.0998, 8.0608 ), #rotation: vector( 0.0000, 0. ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"female1_walk\", #startxform: [#position: vector( 0.2089, 0.7993, 7.6967 ), #rotation: vector( 0.0000, 0.0000,  ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0.0000 )], #distancepercycle: \"7.423\", #minimumspeed: \"0.8\", #maximumspeed: \"1.3\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"female1_walk\", #startxform: [#position: vector( 0.2089, 0.7993, 7.6967 ), #rotation: vector( 0.0000, 0.0000,  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"female1_walk_talk\", #startxform: [#position: vector( 0.2089, 0.7993, 7.6967 ), #rotation: vector( 0.0000, 0.0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz000, 0.0000 )], #distancepercycle: \"7.423\", #minimumspeed: \"0.8\", #maximumspeed: \"1.3\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"female1_walk_talk\", #startxform: [#position: vector( 0.2089, 0.7993, 7.6967 ), #rotation: vector( 0.0000, 0.0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "TestLight",
+      "kind": "light",
+      "parent": "DefaultView",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    }
+  ],
+  "skeletons": [],
+  "animations": [
+    {
+      "name": "female1",
+      "tracks": 31,
+      "size": 2312
+    },
+    {
+      "name": "female1_stand",
+      "tracks": 31,
+      "size": 14315
+    },
+    {
+      "name": "female1_stand_talk",
+      "tracks": 31,
+      "size": 10393
+    },
+    {
+      "name": "female1_turnleft",
+      "tracks": 31,
+      "size": 14318
+    },
+    {
+      "name": "female1_turnright",
+      "tracks": 31,
+      "size": 14319
+    },
+    {
+      "name": "female1_walk",
+      "tracks": 31,
+      "size": 7458
+    },
+    {
+      "name": "female1_walk_talk",
+      "tracks": 31,
+      "size": 7609
+    }
+  ]
+}

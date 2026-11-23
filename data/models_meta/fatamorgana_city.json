@@ -1,0 +1,801 @@
+{
+  "file": "fatamorgana_city.w3d",
+  "nodes": [
+    {
+      "name": "DefaultView",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "userdata",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"bullseye_anim\", #startxform: [#position: vector( -0.0046, 0.0707, 0.0000 ), #rotation: vector( 0.0000, 0.0000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"bullseye_anim\", #startxform: [#position: vector( -0.0046, 0.0707, 0.0000 ), #rotation: vector( 0.0000, 0.0000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "bullseye_anim",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        -0.005,
+        0.071,
+        0.0
+      ],
+      "godot_pos": [
+        -0.005,
+        0.0,
+        -0.071
+      ]
+    },
+    {
+      "name": "hiddenassets",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "cake",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "houses_1",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "alwaysmovecamerainfront=1;",
+      "sw_pos": [
+        351.602,
+        -54.832,
+        38.884
+      ],
+      "godot_pos": [
+        351.602,
+        38.884,
+        54.832
+      ]
+    },
+    {
+      "name": "sultan_background",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "fog=none;",
+      "sw_pos": [
+        61.509,
+        103.934,
+        -22.445
+      ],
+      "godot_pos": [
+        61.509,
+        -22.445,
+        -103.934
+      ]
+    },
+    {
+      "name": "bottom_water",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "fog=none;",
+      "sw_pos": [
+        115.116,
+        23.662,
+        -18.092
+      ],
+      "godot_pos": [
+        115.116,
+        -18.092,
+        -23.662
+      ]
+    },
+    {
+      "name": "gate_door_1",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -405.776,
+        35.72,
+        39.089
+      ],
+      "godot_pos": [
+        -405.776,
+        39.089,
+        -35.72
+      ]
+    },
+    {
+      "name": "rowboat",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -323.693,
+        -314.343,
+        -10.881
+      ],
+      "godot_pos": [
+        -323.693,
+        -10.881,
+        314.343
+      ]
+    },
+    {
+      "name": "objects",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        181.961,
+        -29.913,
+        -0.548
+      ],
+      "godot_pos": [
+        181.961,
+        -0.548,
+        29.913
+      ]
+    },
+    {
+      "name": "scene_light",
+      "kind": "light",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        91.254,
+        -549.711,
+        652.303
+      ],
+      "godot_pos": [
+        91.254,
+        652.303,
+        549.711
+      ]
+    },
+    {
+      "name": "scene_light.Target",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        141.036,
+        -123.111
+      ],
+      "godot_pos": [
+        0.0,
+        -123.111,
+        -141.036
+      ]
+    },
+    {
+      "name": "gate_door_2",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -360.453,
+        59.192,
+        39.089
+      ],
+      "godot_pos": [
+        -360.453,
+        39.089,
+        -59.192
+      ]
+    },
+    {
+      "name": "ground",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        25.058,
+        28.378,
+        -21.038
+      ],
+      "godot_pos": [
+        25.058,
+        -21.038,
+        -28.378
+      ]
+    },
+    {
+      "name": "houses_2",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "alwaysmovecamerainfront=1;",
+      "sw_pos": [
+        351.602,
+        -54.832,
+        38.884
+      ],
+      "godot_pos": [
+        351.602,
+        38.884,
+        54.832
+      ]
+    },
+    {
+      "name": "well_water",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -70.998,
+        -28.596,
+        5.822
+      ],
+      "godot_pos": [
+        -70.998,
+        5.822,
+        28.596
+      ]
+    },
+    {
+      "name": "beach_water",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "fog=none;",
+      "sw_pos": [
+        59.041,
+        227.343,
+        -17.219
+      ],
+      "godot_pos": [
+        59.041,
+        -17.219,
+        -227.343
+      ]
+    },
+    {
+      "name": "foginfo",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "color=#fdd2a6;\r\nfar=5000;\r\ndecaymode=exponential;",
+      "sw_pos": [
+        3.164,
+        -806.088,
+        -97.301
+      ],
+      "godot_pos": [
+        3.164,
+        -97.301,
+        806.088
+      ]
+    },
+    {
+      "name": "Rectangle01",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -530.722,
+        226.364,
+        107.27
+      ],
+      "godot_pos": [
+        -530.722,
+        107.27,
+        -226.364
+      ]
+    },
+    {
+      "name": "MapExportCamera",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -53.985,
+        45.563,
+        2081.823
+      ],
+      "godot_pos": [
+        -53.985,
+        2081.823,
+        -45.563
+      ]
+    },
+    {
+      "name": "MapExportCamera.Target",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -54.223,
+        45.563,
+        0.004
+      ],
+      "godot_pos": [
+        -54.223,
+        0.004,
+        -45.563
+      ]
+    },
+    {
+      "name": "shop_obj",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        137.855,
+        -126.658,
+        7.3
+      ],
+      "godot_pos": [
+        137.855,
+        7.3,
+        126.658
+      ]
+    },
+    {
+      "name": "flyingcarpet",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        -0.025
+      ],
+      "godot_pos": [
+        0.0,
+        -0.025,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"flyingcarpet_fly\", #startxform: [#position: vector( -0.0155, -0.0067, 0.1320 ), #rotation: vector( 0.0000, 0. ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0000, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"flyingcarpet_fly\", #startxform: [#position: vector( -0.0155, -0.0067, 0.1320 ), #rotation: vector( 0.0000, 0. ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pelle_pickup\", #startxform: [#position: vector( 0.0000, -0.0708, 7.8118 ), #rotation: vector( 0.0000, 0.0000, ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #mountstart: \"50\", #mountend: \"79\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pelle_pickup\", #startxform: [#position: vector( 0.0000, -0.0708, 7.8118 ), #rotation: vector( 0.0000, 0.0000, ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pelle_pickup_high\", #startxform: [#position: vector( 0.0000, -0.0708, 7.8118 ), #rotation: vector( 0.0000, 0. ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #mountstart: \"50\", #mountend: \"79\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pelle_pickup_high\", #startxform: [#position: vector( 0.0000, -0.0708, 7.8118 ), #rotation: vector( 0.0000, 0. ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "texturerenderformatinfo",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[\"cake\", #rgba8880] ",
+      "kind": "group",
+      "parent": "texturerenderformatinfo",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[\"magapalace_stonework\", #rgba5550] ",
+      "kind": "group",
+      "parent": "texturerenderformatinfo",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[\"maga_ride_wellbrick\", #rgba5550] ",
+      "kind": "group",
+      "parent": "texturerenderformatinfo",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[\"maga_ride_welltop\", #rgba5550] ",
+      "kind": "group",
+      "parent": "texturerenderformatinfo",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[\"maga_ride_wellwater\", #rgba5550] ",
+      "kind": "group",
+      "parent": "texturerenderformatinfo",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[\"shop_objcompletemap\", #rgba5550] ",
+      "kind": "group",
+      "parent": "texturerenderformatinfo",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[\"sultan_bullseye\", #rgba5550] ",
+      "kind": "group",
+      "parent": "texturerenderformatinfo",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[\"sultan_carpets\", #rgba5550] ",
+      "kind": "group",
+      "parent": "texturerenderformatinfo",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[\"sultan_ground\", #rgba5550] ",
+      "kind": "group",
+      "parent": "texturerenderformatinfo",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[\"sultan_plank02\", #rgba5550] ",
+      "kind": "group",
+      "parent": "texturerenderformatinfo",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[\"sultan_pole\", #rgba5550] ",
+      "kind": "group",
+      "parent": "texturerenderformatinfo",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[\"sultan_rocks\", #rgba5550] ",
+      "kind": "group",
+      "parent": "texturerenderformatinfo",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[\"sultan_scaffold\", #rgba5550] ",
+      "kind": "group",
+      "parent": "texturerenderformatinfo",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[\"sultan_flying carpet\", #rgba5550] ",
+      "kind": "group",
+      "parent": "texturerenderformatinfo",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "TestLight",
+      "kind": "light",
+      "parent": "DefaultView",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    }
+  ],
+  "skeletons": [],
+  "animations": [
+    {
+      "name": "bullseye_anim-key",
+      "tracks": 1,
+      "size": 592
+    },
+    {
+      "name": "flyingcarpet",
+      "tracks": 7,
+      "size": 538
+    },
+    {
+      "name": "flyingcarpet_fly",
+      "tracks": 7,
+      "size": 1051
+    },
+    {
+      "name": "pelle_pickup",
+      "tracks": 37,
+      "size": 13299
+    },
+    {
+      "name": "pelle_pickup_high",
+      "tracks": 37,
+      "size": 13304
+    }
+  ]
+}

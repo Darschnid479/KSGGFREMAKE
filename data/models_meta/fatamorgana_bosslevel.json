@@ -1,0 +1,1850 @@
+{
+  "file": "fatamorgana_bosslevel.w3d",
+  "nodes": [
+    {
+      "name": "DefaultView",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "fatamorgana_boss",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "collisionradius=13;",
+      "sw_pos": [
+        0.0,
+        -5.39,
+        14.974
+      ],
+      "godot_pos": [
+        0.0,
+        14.974,
+        5.39
+      ]
+    },
+    {
+      "name": "fatamorgana_boss_proxy",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        -0.136,
+        6.958
+      ],
+      "godot_pos": [
+        0.0,
+        6.958,
+        0.136
+      ]
+    },
+    {
+      "name": "hiddenassets",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "userdata",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"fatamorgana_boss_die\", #startxform: [#position: vector( 0.0000, -6.2638, 14.0536 ), #rotation: vector( 0.0000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, 0.0000, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"fatamorgana_boss_die\", #startxform: [#position: vector( 0.0000, -6.2638, 14.0536 ), #rotation: vector( 0.0000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"fatamorgana_boss_hitvase\", #startxform: [#position: vector( 0.0000, -5.3904, 14.9744 ), #rotation: vector( 0. ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0000, 0.0000, 0.0000 )], #relocating: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"fatamorgana_boss_hitvase\", #startxform: [#position: vector( 0.0000, -5.3904, 14.9744 ), #rotation: vector( 0. ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"fatamorgana_boss_intro\", #startxform: [#position: vector( -155.9043, 70.4798, 14.9744 ), #rotation: vector( 0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz.0000, 0.0000, -90.0000 )], #startatoriginalmotionstartposition: \"1\", #relocating: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"fatamorgana_boss_intro\", #startxform: [#position: vector( -155.9043, 70.4798, 14.9744 ), #rotation: vector( 0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"fatamorgana_boss_run\", #startxform: [#position: vector( 0.0000, -5.3904, 14.9744 ), #rotation: vector( 0.0000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, 0.0000, 0.0000 )], #distancepercycle: \"285.572\", #minimumspeed: \"0.1\", #maximumspeed: \"1\", #foot1up: \" 0->32\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"fatamorgana_boss_run\", #startxform: [#position: vector( 0.0000, -5.3904, 14.9744 ), #rotation: vector( 0.0000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"fatamorgana_boss_stand\", #startxform: [#position: vector( 0.0000, -6.2638, 14.0536 ), #rotation: vector( 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"fatamorgana_boss_stand\", #startxform: [#position: vector( 0.0000, -6.2638, 14.0536 ), #rotation: vector( 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"fatamorgana_boss_walk\", #startxform: [#position: vector( 0.0000, -5.3904, 14.9744 ), #rotation: vector( 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000, 0.0000 )], #distancepercycle: \"285.572\", #minimumspeed: \"0.1\", #maximumspeed: \"1\", #foot1up: \" 0->32\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"fatamorgana_boss_walk\", #startxform: [#position: vector( 0.0000, -5.3904, 14.9744 ), #rotation: vector( 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "Particle View 01",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "bossroom",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "alwaysmovecamerainfront=1;",
+      "sw_pos": [
+        19.053,
+        95.846,
+        88.862
+      ],
+      "godot_pos": [
+        19.053,
+        88.862,
+        -95.846
+      ]
+    },
+    {
+      "name": "MapExportCamera",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -7.728,
+        71.315,
+        682.206
+      ],
+      "godot_pos": [
+        -7.728,
+        682.206,
+        -71.315
+      ]
+    },
+    {
+      "name": "MapExportCamera.Target",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -7.792,
+        71.315,
+        119.045
+      ],
+      "godot_pos": [
+        -7.792,
+        119.045,
+        -71.315
+      ]
+    },
+    {
+      "name": "foginfo",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "color=#fa8f3d;\r\nfar=3500;\r\ndecaymode=exponential;",
+      "sw_pos": [
+        3.164,
+        -806.088,
+        -44.467
+      ],
+      "godot_pos": [
+        3.164,
+        -44.467,
+        806.088
+      ]
+    },
+    {
+      "name": "scene_light",
+      "kind": "light",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        548.464,
+        464.12,
+        854.071
+      ],
+      "godot_pos": [
+        548.464,
+        854.071,
+        -464.12
+      ]
+    },
+    {
+      "name": "scene_light.Target",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -0.0,
+        70.085,
+        -71.871
+      ],
+      "godot_pos": [
+        -0.0,
+        -71.871,
+        -70.085
+      ]
+    },
+    {
+      "name": "door1_1",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -17.634,
+        -158.627,
+        -0.427
+      ],
+      "godot_pos": [
+        -17.634,
+        -0.427,
+        158.627
+      ]
+    },
+    {
+      "name": "door1_2",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        22.072,
+        -158.627,
+        -0.427
+      ],
+      "godot_pos": [
+        22.072,
+        -0.427,
+        158.627
+      ]
+    },
+    {
+      "name": "mk_flame_05",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        27.088,
+        -138.678,
+        2.422
+      ],
+      "godot_pos": [
+        27.088,
+        2.422,
+        138.678
+      ]
+    },
+    {
+      "name": "mk_flame_06",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -21.106,
+        -138.678,
+        2.422
+      ],
+      "godot_pos": [
+        -21.106,
+        2.422,
+        138.678
+      ]
+    },
+    {
+      "name": "mk_flame_07",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -21.106,
+        -49.884,
+        2.422
+      ],
+      "godot_pos": [
+        -21.106,
+        2.422,
+        49.884
+      ]
+    },
+    {
+      "name": "mk_flame_08",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        26.895,
+        -49.884,
+        2.422
+      ],
+      "godot_pos": [
+        26.895,
+        2.422,
+        49.884
+      ]
+    },
+    {
+      "name": "mk_flame_29",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -84.507,
+        275.575,
+        30.007
+      ],
+      "godot_pos": [
+        -84.507,
+        30.007,
+        -275.575
+      ]
+    },
+    {
+      "name": "mk_flame_30",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -154.361,
+        237.644,
+        30.007
+      ],
+      "godot_pos": [
+        -154.361,
+        30.007,
+        -237.644
+      ]
+    },
+    {
+      "name": "mk_flame_31",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -154.361,
+        160.008,
+        30.007
+      ],
+      "godot_pos": [
+        -154.361,
+        30.007,
+        -160.008
+      ]
+    },
+    {
+      "name": "mk_flame_32",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -154.361,
+        89.553,
+        30.007
+      ],
+      "godot_pos": [
+        -154.361,
+        30.007,
+        -89.553
+      ]
+    },
+    {
+      "name": "mk_flame_33",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -154.361,
+        21.968,
+        30.007
+      ],
+      "godot_pos": [
+        -154.361,
+        30.007,
+        -21.968
+      ]
+    },
+    {
+      "name": "mk_flame_34",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -84.455,
+        -16.158,
+        30.007
+      ],
+      "godot_pos": [
+        -84.455,
+        30.007,
+        16.158
+      ]
+    },
+    {
+      "name": "mk_flame_35",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        101.913,
+        -16.158,
+        30.007
+      ],
+      "godot_pos": [
+        101.913,
+        30.007,
+        16.158
+      ]
+    },
+    {
+      "name": "mk_flame_36",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        161.799,
+        21.863,
+        30.007
+      ],
+      "godot_pos": [
+        161.799,
+        30.007,
+        -21.863
+      ]
+    },
+    {
+      "name": "mk_flame_37",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        161.799,
+        89.558,
+        30.007
+      ],
+      "godot_pos": [
+        161.799,
+        30.007,
+        -89.558
+      ]
+    },
+    {
+      "name": "mk_flame_38",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        161.799,
+        159.994,
+        30.007
+      ],
+      "godot_pos": [
+        161.799,
+        30.007,
+        -159.994
+      ]
+    },
+    {
+      "name": "mk_flame_39",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        161.799,
+        237.587,
+        30.007
+      ],
+      "godot_pos": [
+        161.799,
+        30.007,
+        -237.587
+      ]
+    },
+    {
+      "name": "mk_flame_40",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        101.958,
+        275.593,
+        30.007
+      ],
+      "godot_pos": [
+        101.958,
+        30.007,
+        -275.593
+      ]
+    },
+    {
+      "name": "light_smoke_1",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "flarebillboard=1;",
+      "sw_pos": [
+        37.232,
+        126.451,
+        173.511
+      ],
+      "godot_pos": [
+        37.232,
+        173.511,
+        -126.451
+      ]
+    },
+    {
+      "name": "door_right",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        20.721,
+        -6.909,
+        123.314
+      ],
+      "godot_pos": [
+        20.721,
+        123.314,
+        6.909
+      ]
+    },
+    {
+      "name": "door_left",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -16.478,
+        -6.701,
+        123.314
+      ],
+      "godot_pos": [
+        -16.478,
+        123.314,
+        6.701
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_intro\", #startxform: [#position: vector( -1.5990, 23.6754, 7.0478 ), #rotation: vector( 0.0000, 0.0000, ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz 0.0000 )], #startatoriginalmotionstartposition: \"1\", #relocating: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_intro\", #startxform: [#position: vector( -1.5990, 23.6754, 7.0478 ), #rotation: vector( 0.0000, 0.0000, ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"door_right\", #startxform: [#position: vector( 20.7207, -6.9094, 123.3141 ), #rotation: vector( 0.0000, 0.0000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"door_right\", #startxform: [#position: vector( 20.7207, -6.9094, 123.3141 ), #rotation: vector( 0.0000, 0.0000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"door_left\", #startxform: [#position: vector( -16.4782, -6.7007, 123.3141 ), #rotation: vector( 0.0000, 0.0000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, 0.0000 )]]  ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"door_left\", #startxform: [#position: vector( -16.4782, -6.7007, 123.3141 ), #rotation: vector( 0.0000, 0.0000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"vase_piece_00\", #startxform: [#position: vector( -0.3883, -0.3240, 2.7125 ), #rotation: vector( 0.0000, 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"vase_piece_00\", #startxform: [#position: vector( -0.3883, -0.3240, 2.7125 ), #rotation: vector( 0.0000, 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"vase_piece_01\", #startxform: [#position: vector( 1.3787, 5.5030, 13.2681 ), #rotation: vector( 0.0000, 0.0000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, 0.0000 )]]   ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"vase_piece_01\", #startxform: [#position: vector( 1.3787, 5.5030, 13.2681 ), #rotation: vector( 0.0000, 0.0000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"vase_piece_02\", #startxform: [#position: vector( 2.0913, -3.5471, 4.0717 ), #rotation: vector( 0.0000, 0.0000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, 0.0000 )]]    ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"vase_piece_02\", #startxform: [#position: vector( 2.0913, -3.5471, 4.0717 ), #rotation: vector( 0.0000, 0.0000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"vase_piece_03\", #startxform: [#position: vector( 2.0601, -3.5009, 23.0282 ), #rotation: vector( 0.0000, 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000 )]]  ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"vase_piece_03\", #startxform: [#position: vector( 2.0601, -3.5009, 23.0282 ), #rotation: vector( 0.0000, 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"vase_piece_04\", #startxform: [#position: vector( -4.9083, 0.0000, 23.5805 ), #rotation: vector( 0.0000, 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000 )]]   ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"vase_piece_04\", #startxform: [#position: vector( -4.9083, 0.0000, 23.5805 ), #rotation: vector( 0.0000, 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"vase_piece_05\", #startxform: [#position: vector( 2.0913, 3.5963, 22.6025 ), #rotation: vector( 0.0000, 0.0000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, 0.0000 )]]     ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"vase_piece_05\", #startxform: [#position: vector( 2.0913, 3.5963, 22.6025 ), #rotation: vector( 0.0000, 0.0000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"vase_piece_06\", #startxform: [#position: vector( 6.6110, 3.9447, 14.7589 ), #rotation: vector( 0.0000, 0.0000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, 0.0000 )]]      ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"vase_piece_06\", #startxform: [#position: vector( 6.6110, 3.9447, 14.7589 ), #rotation: vector( 0.0000, 0.0000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"vase_piece_07\", #startxform: [#position: vector( 1.7007, 3.5999, 4.9696 ), #rotation: vector( 0.0000, 0.0000, ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"vase_piece_07\", #startxform: [#position: vector( 1.7007, 3.5999, 4.9696 ), #rotation: vector( 0.0000, 0.0000, ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"vase_piece_08\", #startxform: [#position: vector( 0.0000, 7.3110, 16.1472 ), #rotation: vector( 0.0000, 0.0000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, 0.0000 )]]       ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"vase_piece_08\", #startxform: [#position: vector( 0.0000, 7.3110, 16.1472 ), #rotation: vector( 0.0000, 0.0000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"vase_piece_09\", #startxform: [#position: vector( -5.5832, -1.6889, 6.3989 ), #rotation: vector( 0.0000, 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000 )]]    ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"vase_piece_09\", #startxform: [#position: vector( -5.5832, -1.6889, 6.3989 ), #rotation: vector( 0.0000, 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"vase_piece_10\", #startxform: [#position: vector( -6.5680, -3.9104, 14.7589 ), #rotation: vector( 0.0000, 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"vase_piece_10\", #startxform: [#position: vector( -6.5680, -3.9104, 14.7589 ), #rotation: vector( 0.0000, 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"vase_piece_11\", #startxform: [#position: vector( -0.5484, -6.1427, 14.7589 ), #rotation: vector( 0.0000, 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000 )]]  ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"vase_piece_11\", #startxform: [#position: vector( -0.5484, -6.1427, 14.7589 ), #rotation: vector( 0.0000, 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"vase_piece_12\", #startxform: [#position: vector( -6.5885, 3.9688, 13.3998 ), #rotation: vector( 0.0000, 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000 )]]     ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"vase_piece_12\", #startxform: [#position: vector( -6.5885, 3.9688, 13.3998 ), #rotation: vector( 0.0000, 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"vase_piece_13\", #startxform: [#position: vector( 2.0096, -4.7015, 14.7589 ), #rotation: vector( 0.0000, 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000 )]]      ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"vase_piece_13\", #startxform: [#position: vector( 2.0096, -4.7015, 14.7589 ), #rotation: vector( 0.0000, 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"vase_piece_14\", #startxform: [#position: vector( 7.2149, -2.6561, 14.7589 ), #rotation: vector( 0.0000, 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000 )]]       ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"vase_piece_14\", #startxform: [#position: vector( 7.2149, -2.6561, 14.7589 ), #rotation: vector( 0.0000, 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"vase_piece_15\", #startxform: [#position: vector( -0.0001, 0.0000, 24.9912 ), #rotation: vector( 0.0000, 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000 )]]        ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"vase_piece_15\", #startxform: [#position: vector( -0.0001, 0.0000, 24.9912 ), #rotation: vector( 0.0000, 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "vase",
+      "kind": "group",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "vase_piece_00",
+      "kind": "model",
+      "parent": "vase",
+      "userdata": "",
+      "sw_pos": [
+        -0.388,
+        -0.324,
+        2.713
+      ],
+      "godot_pos": [
+        -0.388,
+        2.713,
+        0.324
+      ]
+    },
+    {
+      "name": "vase_piece_01",
+      "kind": "model",
+      "parent": "vase",
+      "userdata": "",
+      "sw_pos": [
+        1.379,
+        5.503,
+        13.268
+      ],
+      "godot_pos": [
+        1.379,
+        13.268,
+        -5.503
+      ]
+    },
+    {
+      "name": "vase_piece_02",
+      "kind": "model",
+      "parent": "vase",
+      "userdata": "",
+      "sw_pos": [
+        2.091,
+        -3.547,
+        4.072
+      ],
+      "godot_pos": [
+        2.091,
+        4.072,
+        3.547
+      ]
+    },
+    {
+      "name": "vase_piece_03",
+      "kind": "model",
+      "parent": "vase",
+      "userdata": "",
+      "sw_pos": [
+        2.06,
+        -3.501,
+        23.028
+      ],
+      "godot_pos": [
+        2.06,
+        23.028,
+        3.501
+      ]
+    },
+    {
+      "name": "vase_piece_04",
+      "kind": "model",
+      "parent": "vase",
+      "userdata": "",
+      "sw_pos": [
+        -4.908,
+        0.0,
+        23.581
+      ],
+      "godot_pos": [
+        -4.908,
+        23.581,
+        -0.0
+      ]
+    },
+    {
+      "name": "vase_piece_05",
+      "kind": "model",
+      "parent": "vase",
+      "userdata": "",
+      "sw_pos": [
+        2.091,
+        3.596,
+        22.603
+      ],
+      "godot_pos": [
+        2.091,
+        22.603,
+        -3.596
+      ]
+    },
+    {
+      "name": "vase_piece_06",
+      "kind": "model",
+      "parent": "vase",
+      "userdata": "",
+      "sw_pos": [
+        6.611,
+        3.945,
+        14.759
+      ],
+      "godot_pos": [
+        6.611,
+        14.759,
+        -3.945
+      ]
+    },
+    {
+      "name": "vase_piece_07",
+      "kind": "model",
+      "parent": "vase",
+      "userdata": "",
+      "sw_pos": [
+        1.701,
+        3.6,
+        4.97
+      ],
+      "godot_pos": [
+        1.701,
+        4.97,
+        -3.6
+      ]
+    },
+    {
+      "name": "vase_piece_08",
+      "kind": "model",
+      "parent": "vase",
+      "userdata": "",
+      "sw_pos": [
+        -0.0,
+        7.311,
+        16.147
+      ],
+      "godot_pos": [
+        -0.0,
+        16.147,
+        -7.311
+      ]
+    },
+    {
+      "name": "vase_piece_09",
+      "kind": "model",
+      "parent": "vase",
+      "userdata": "",
+      "sw_pos": [
+        -5.583,
+        -1.689,
+        6.399
+      ],
+      "godot_pos": [
+        -5.583,
+        6.399,
+        1.689
+      ]
+    },
+    {
+      "name": "vase_piece_10",
+      "kind": "model",
+      "parent": "vase",
+      "userdata": "",
+      "sw_pos": [
+        -6.568,
+        -3.91,
+        14.759
+      ],
+      "godot_pos": [
+        -6.568,
+        14.759,
+        3.91
+      ]
+    },
+    {
+      "name": "vase_piece_11",
+      "kind": "model",
+      "parent": "vase",
+      "userdata": "",
+      "sw_pos": [
+        -0.548,
+        -6.143,
+        14.759
+      ],
+      "godot_pos": [
+        -0.548,
+        14.759,
+        6.143
+      ]
+    },
+    {
+      "name": "vase_piece_12",
+      "kind": "model",
+      "parent": "vase",
+      "userdata": "",
+      "sw_pos": [
+        -6.588,
+        3.969,
+        13.4
+      ],
+      "godot_pos": [
+        -6.588,
+        13.4,
+        -3.969
+      ]
+    },
+    {
+      "name": "vase_piece_13",
+      "kind": "model",
+      "parent": "vase",
+      "userdata": "",
+      "sw_pos": [
+        2.01,
+        -4.701,
+        14.759
+      ],
+      "godot_pos": [
+        2.01,
+        14.759,
+        4.701
+      ]
+    },
+    {
+      "name": "vase_piece_14",
+      "kind": "model",
+      "parent": "vase",
+      "userdata": "",
+      "sw_pos": [
+        7.215,
+        -2.656,
+        14.759
+      ],
+      "godot_pos": [
+        7.215,
+        14.759,
+        2.656
+      ]
+    },
+    {
+      "name": "vase_piece_15",
+      "kind": "model",
+      "parent": "vase",
+      "userdata": "",
+      "sw_pos": [
+        -0.0,
+        -0.0,
+        24.991
+      ],
+      "godot_pos": [
+        -0.0,
+        24.991,
+        0.0
+      ]
+    },
+    {
+      "name": "vase_impostor",
+      "kind": "model",
+      "parent": "vase",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "TestLight",
+      "kind": "light",
+      "parent": "DefaultView",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    }
+  ],
+  "skeletons": [],
+  "animations": [
+    {
+      "name": "fatamorgana_boss",
+      "tracks": 31,
+      "size": 2289
+    },
+    {
+      "name": "fatamorgana_boss_die",
+      "tracks": 31,
+      "size": 26853
+    },
+    {
+      "name": "fatamorgana_boss_hitvase",
+      "tracks": 31,
+      "size": 16351
+    },
+    {
+      "name": "fatamorgana_boss_intro",
+      "tracks": 31,
+      "size": 21126
+    },
+    {
+      "name": "fatamorgana_boss_run",
+      "tracks": 31,
+      "size": 12681
+    },
+    {
+      "name": "fatamorgana_boss_stand",
+      "tracks": 31,
+      "size": 9019
+    },
+    {
+      "name": "fatamorgana_boss_walk",
+      "tracks": 31,
+      "size": 12682
+    },
+    {
+      "name": "pinky_intro",
+      "tracks": 39,
+      "size": 27296
+    },
+    {
+      "name": "door_right-key",
+      "tracks": 1,
+      "size": 260
+    },
+    {
+      "name": "door_left-key",
+      "tracks": 1,
+      "size": 259
+    },
+    {
+      "name": "vase_vase_piece_00_vase",
+      "tracks": 1,
+      "size": 509
+    },
+    {
+      "name": "vase_vase_piece_01_vase",
+      "tracks": 1,
+      "size": 798
+    },
+    {
+      "name": "vase_vase_piece_02_vase",
+      "tracks": 1,
+      "size": 579
+    },
+    {
+      "name": "vase_vase_piece_03_vase",
+      "tracks": 1,
+      "size": 290
+    },
+    {
+      "name": "vase_vase_piece_04_vase",
+      "tracks": 1,
+      "size": 422
+    },
+    {
+      "name": "vase_vase_piece_05_vase",
+      "tracks": 1,
+      "size": 669
+    },
+    {
+      "name": "vase_vase_piece_06_vase",
+      "tracks": 1,
+      "size": 742
+    },
+    {
+      "name": "vase_vase_piece_07_vase",
+      "tracks": 1,
+      "size": 595
+    },
+    {
+      "name": "vase_vase_piece_08_vase",
+      "tracks": 1,
+      "size": 471
+    },
+    {
+      "name": "vase_vase_piece_09_vase",
+      "tracks": 1,
+      "size": 470
+    },
+    {
+      "name": "vase_vase_piece_10_vase",
+      "tracks": 1,
+      "size": 689
+    },
+    {
+      "name": "vase_vase_piece_11_vase",
+      "tracks": 1,
+      "size": 460
+    },
+    {
+      "name": "vase_vase_piece_12_vase",
+      "tracks": 1,
+      "size": 1018
+    },
+    {
+      "name": "vase_vase_piece_13_vase",
+      "tracks": 1,
+      "size": 858
+    },
+    {
+      "name": "vase_vase_piece_14_vase",
+      "tracks": 1,
+      "size": 738
+    },
+    {
+      "name": "vase_vase_piece_15_vase",
+      "tracks": 1,
+      "size": 1002
+    },
+    {
+      "name": "vase_piece_00-Key",
+      "tracks": 1,
+      "size": 503
+    },
+    {
+      "name": "vase_piece_01-Key",
+      "tracks": 1,
+      "size": 792
+    },
+    {
+      "name": "vase_piece_02-Key",
+      "tracks": 1,
+      "size": 573
+    },
+    {
+      "name": "vase_piece_03-Key",
+      "tracks": 1,
+      "size": 284
+    },
+    {
+      "name": "vase_piece_04-Key",
+      "tracks": 1,
+      "size": 416
+    },
+    {
+      "name": "vase_piece_05-Key",
+      "tracks": 1,
+      "size": 663
+    },
+    {
+      "name": "vase_piece_06-Key",
+      "tracks": 1,
+      "size": 733
+    },
+    {
+      "name": "vase_piece_07-Key",
+      "tracks": 1,
+      "size": 589
+    },
+    {
+      "name": "vase_piece_08-Key",
+      "tracks": 1,
+      "size": 461
+    },
+    {
+      "name": "vase_piece_09-Key",
+      "tracks": 1,
+      "size": 464
+    },
+    {
+      "name": "vase_piece_10-Key",
+      "tracks": 1,
+      "size": 682
+    },
+    {
+      "name": "vase_piece_11-Key",
+      "tracks": 1,
+      "size": 454
+    },
+    {
+      "name": "vase_piece_12-Key",
+      "tracks": 1,
+      "size": 1012
+    },
+    {
+      "name": "vase_piece_13-Key",
+      "tracks": 1,
+      "size": 852
+    },
+    {
+      "name": "vase_piece_14-Key",
+      "tracks": 1,
+      "size": 732
+    },
+    {
+      "name": "vase_piece_15-Key",
+      "tracks": 1,
+      "size": 996
+    }
+  ]
+}

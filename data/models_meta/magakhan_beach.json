@@ -1,0 +1,525 @@
+{
+  "file": "magakhan_beach.w3d",
+  "nodes": [
+    {
+      "name": "DefaultView",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "UIAmbient",
+      "kind": "light",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "beach_hotsauce",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "linktobone=right_upper_fingers;",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "hiddenassets",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "coconut",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        -0.078,
+        0.279,
+        0.258
+      ],
+      "godot_pos": [
+        -0.078,
+        0.258,
+        -0.279
+      ]
+    },
+    {
+      "name": "beach_background",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -57.23,
+        -739.948,
+        1.969
+      ],
+      "godot_pos": [
+        -57.23,
+        1.969,
+        739.948
+      ]
+    },
+    {
+      "name": "beach_bar",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -157.199,
+        201.658,
+        8.685
+      ],
+      "godot_pos": [
+        -157.199,
+        8.685,
+        -201.658
+      ]
+    },
+    {
+      "name": "beach_rowboat",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -43.961,
+        -4.241,
+        -28.684
+      ],
+      "godot_pos": [
+        -43.961,
+        -28.684,
+        4.241
+      ]
+    },
+    {
+      "name": "water_edge_1",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -15.135,
+        -234.525,
+        -33.624
+      ],
+      "godot_pos": [
+        -15.135,
+        -33.624,
+        234.525
+      ]
+    },
+    {
+      "name": "beach_waterground",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -153.224,
+        -328.36,
+        -51.027
+      ],
+      "godot_pos": [
+        -153.224,
+        -51.027,
+        328.36
+      ]
+    },
+    {
+      "name": "scene_light",
+      "kind": "light",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        441.806,
+        -638.603,
+        1209.909
+      ],
+      "godot_pos": [
+        441.806,
+        1209.909,
+        638.603
+      ]
+    },
+    {
+      "name": "scene_light.Target",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -4.879,
+        0.0,
+        -12.397
+      ],
+      "godot_pos": [
+        -4.879,
+        -12.397,
+        -0.0
+      ]
+    },
+    {
+      "name": "beach_ground",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "alwaysmovecamerainfront=1;",
+      "sw_pos": [
+        30.16,
+        51.271,
+        131.952
+      ],
+      "godot_pos": [
+        30.16,
+        131.952,
+        -51.271
+      ]
+    },
+    {
+      "name": "shadowlightsource",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        303.227,
+        -508.179,
+        9821.364
+      ],
+      "godot_pos": [
+        303.227,
+        9821.364,
+        508.179
+      ]
+    },
+    {
+      "name": "beach_palmset_top",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "alwaysmovecamerainfront=1;",
+      "sw_pos": [
+        30.16,
+        51.271,
+        131.952
+      ],
+      "godot_pos": [
+        30.16,
+        131.952,
+        -51.271
+      ]
+    },
+    {
+      "name": "palm_alpha_trunk",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        22.822,
+        -0.079,
+        -453.038
+      ],
+      "godot_pos": [
+        22.822,
+        -453.038,
+        0.079
+      ]
+    },
+    {
+      "name": "beach_flag",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -63.134,
+        138.428,
+        -27.192
+      ],
+      "godot_pos": [
+        -63.134,
+        -27.192,
+        -138.428
+      ]
+    },
+    {
+      "name": "beach_vegetation",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        22.822,
+        -0.079,
+        -453.038
+      ],
+      "godot_pos": [
+        22.822,
+        -453.038,
+        0.079
+      ]
+    },
+    {
+      "name": "palmwall_sideleafs",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        30.16,
+        51.271,
+        131.952
+      ],
+      "godot_pos": [
+        30.16,
+        131.952,
+        -51.271
+      ]
+    },
+    {
+      "name": "orange_drink",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -157.199,
+        201.658,
+        8.685
+      ],
+      "godot_pos": [
+        -157.199,
+        8.685,
+        -201.658
+      ]
+    },
+    {
+      "name": "scene_light_2",
+      "kind": "light",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        441.806,
+        -638.603,
+        1209.909
+      ],
+      "godot_pos": [
+        441.806,
+        1209.909,
+        638.603
+      ]
+    },
+    {
+      "name": "scene_light_2.Target",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -4.879,
+        0.0,
+        -12.397
+      ],
+      "godot_pos": [
+        -4.879,
+        -12.397,
+        -0.0
+      ]
+    },
+    {
+      "name": "beach_water",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        271.537,
+        -1.012
+      ],
+      "godot_pos": [
+        0.0,
+        -1.012,
+        -271.537
+      ]
+    },
+    {
+      "name": "statues",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        352.65,
+        510.231,
+        -3.332
+      ],
+      "godot_pos": [
+        352.65,
+        -3.332,
+        -510.231
+      ]
+    },
+    {
+      "name": "MapExportCamera",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        1.926,
+        197.234,
+        566.079
+      ],
+      "godot_pos": [
+        1.926,
+        566.079,
+        -197.234
+      ]
+    },
+    {
+      "name": "MapExportCamera.Target",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        1.861,
+        197.234,
+        -0.002
+      ],
+      "godot_pos": [
+        1.861,
+        -0.002,
+        -197.234
+      ]
+    },
+    {
+      "name": "userdata",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"sabeltann_stand_rapier_talk\", #startxform: [#position: vector( -0.4333, 0.5172, 10.6359 ), #rotation: vector( ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz 0.0000, 0.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"sabeltann_stand_rapier_talk\", #startxform: [#position: vector( -0.4333, 0.5172, 10.6359 ), #rotation: vector( ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "texturerenderformatinfo",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[\"beach_flag\", #rgba8880] ",
+      "kind": "group",
+      "parent": "texturerenderformatinfo",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "TestLight",
+      "kind": "light",
+      "parent": "DefaultView",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    }
+  ],
+  "skeletons": [],
+  "animations": [
+    {
+      "name": "sabeltann_stand_rapier_talk",
+      "tracks": 35,
+      "size": 4590
+    }
+  ]
+}

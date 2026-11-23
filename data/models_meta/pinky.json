@@ -1,0 +1,3510 @@
+{
+  "file": "pinky.w3d",
+  "nodes": [
+    {
+      "name": "DefaultView",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "crosshair",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        -0.015,
+        0.0,
+        -0.038
+      ],
+      "godot_pos": [
+        -0.015,
+        -0.038,
+        -0.0
+      ]
+    },
+    {
+      "name": "hiddenassets",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "userdata",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"crosshair_move\", #startxform: [#position: vector( 0.0000, -0.0056, -0.0400 ), #rotation: vector( 0.0000, 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"crosshair_move\", #startxform: [#position: vector( 0.0000, -0.0056, -0.0400 ), #rotation: vector( 0.0000, 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "lamp",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        -0.0,
+        3.944
+      ],
+      "godot_pos": [
+        0.0,
+        3.944,
+        0.0
+      ]
+    },
+    {
+      "name": "pinky",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "collisionradius=2.7742;",
+      "sw_pos": [
+        0.0,
+        -0.136,
+        6.958
+      ],
+      "godot_pos": [
+        0.0,
+        6.958,
+        0.136
+      ]
+    },
+    {
+      "name": "pinky_proxy",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        -0.136,
+        6.958
+      ],
+      "godot_pos": [
+        0.0,
+        6.958,
+        0.136
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_climbintowell\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000,  ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_climbintowell\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000,  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_climboncrate\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #foot1up: \" 18->26, 37->42, 57->63\", #foot2up: \" 1->8, 18->33, 47 ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_climboncrate\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz->54\"] ",
+      "kind": "group",
+      "parent": "zzz.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #foot1up: \" 18->26, 37->42, 57->63\", #foot2up: \" 1->8, 18->33, 47 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_climboutofwell\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz 0.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_climboutofwell\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_climb_down\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9577 ), #rotation: vector( 0.0000, 0.0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz000, 0.0000 )], #collisionradius: \"2.7742\", #foot1up: \" 1->8,  20->28, 37->50\", #foot2up: \" 9->20, 28->50\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_climb_down\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9577 ), #rotation: vector( 0.0000, 0.0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_climb_up\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9577 ), #rotation: vector( 0.0000, 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000 )], #foot1up: \" 7->12,  21->27, 40->46, 57->67\", #foot2up: \" 9->20, 31->36, 48->53, 61->70\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_climb_up\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9577 ), #rotation: vector( 0.0000, 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_die\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0.0000, 0. ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_die\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0.0000, 0. ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_dig\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0.0000, 0. ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0000 )], #mountstart: \"7\", #mountend: \"145\", #mountitem: \"shovel\", #pickup1: \"28\", #drop1: \"48\", #pickup2: \"68\", #drop2: \"8 ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_dig\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0.0000, 0. ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz8r\", #pickup3: \"108\", #drop3: \"129\", #foot1up: \" 10->18, 138->152\", #spawncontainingitem: \"119\", #playsfx_dig: \"0\"] ",
+      "kind": "group",
+      "parent": "zzz0000 )], #mountstart: \"7\", #mountend: \"145\", #mountitem: \"shovel\", #pickup1: \"28\", #drop1: \"48\", #pickup2: \"68\", #drop2: \"8 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_divein\", #startxform: [#position: vector( 0.0000, -12.9862, 35.2833 ), #rotation: vector( 0.0000, 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_divein\", #startxform: [#position: vector( 0.0000, -12.9862, 35.2833 ), #rotation: vector( 0.0000, 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_float\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0.0000,  ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_float\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0.0000,  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_float_hit\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_float_hit\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_give\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0.0000, 0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #mountstart: \"0\", #mountend: \"35\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_give\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0.0000, 0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_gong\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0.0000, 0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #mountitem: \"gong_club\", #mountstart: \"11\", #mountstop: \"80\", #foot1up: \" ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_gong\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0.0000, 0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz 20->24, 33->35\", #playsfx_bashgong: \"0\"] ",
+      "kind": "group",
+      "parent": "zzz.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #mountitem: \"gong_club\", #mountstart: \"11\", #mountstop: \"80\", #foot1up: \" ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_hit\", #startxform: [#position: vector( 0.0054, -0.8531, 6.1973 ), #rotation: vector( 0.0000, 0.0000, 0. ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0000 )], #minimumspeed: \"0\", #maximumspeed: \"0\", #allowstopat: \"22\", #foot2up: \" 1->16\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_hit\", #startxform: [#position: vector( 0.0054, -0.8531, 6.1973 ), #rotation: vector( 0.0000, 0.0000, 0. ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_hit_speedvariation1\", #startxform: [#position: vector( -0.4005, -0.0024, 5.6183 ), #rotation: vector( 0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz.0000, 0.0000, 0.0000 )], #distancepercycle: \"24.8547\", #minimumspeed: \"0.7\", #maximumspeed: \"1.5\", #foot1up: \" 0->8, 16->2 ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_hit_speedvariation1\", #startxform: [#position: vector( -0.4005, -0.0024, 5.6183 ), #rotation: vector( 0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz2\", #foot2up: \" 5->20\"] ",
+      "kind": "group",
+      "parent": "zzz.0000, 0.0000, 0.0000 )], #distancepercycle: \"24.8547\", #minimumspeed: \"0.7\", #maximumspeed: \"1.5\", #foot1up: \" 0->8, 16->2 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_hit_speedvariation2\", #startxform: [#position: vector( 0.0054, -0.2808, 6.6332 ), #rotation: vector( 0. ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0000, 0.0000, 0.0000 )], #distancepercycle: \"13.6958\", #minimumspeed: \"0.1\", #maximumspeed: \"1.5\", #foot1up: \" 0->8, 25->30 ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_hit_speedvariation2\", #startxform: [#position: vector( 0.0054, -0.2808, 6.6332 ), #rotation: vector( 0. ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz\", #foot2up: \" 11->23\"] ",
+      "kind": "group",
+      "parent": "zzz0000, 0.0000, 0.0000 )], #distancepercycle: \"13.6958\", #minimumspeed: \"0.1\", #maximumspeed: \"1.5\", #foot1up: \" 0->8, 25->30 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_jump\", #startxform: [#position: vector( 0.0000, -0.5037, 6.9013 ), #rotation: vector( 0.0000, 0.0000, 0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz.0000 )], #startmoving: \"5\", #stopmoving: \"32\", #allowstopat: \"35\", #foot1up: \" 1->2, 6->31\", #foot2up: \" 10->33\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_jump\", #startxform: [#position: vector( 0.0000, -0.5037, 6.9013 ), #rotation: vector( 0.0000, 0.0000, 0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_magicswitch\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0. ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_magicswitch\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0. ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_pickup\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0.0000, ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #mountstart: \"25\", #mountend: \"57\", #pickupmodelposition: \"vector(1.184 ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_pickup\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0.0000, ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz,5.822,0)\", #foot2up: \" 2->9, 51->59\"] ",
+      "kind": "group",
+      "parent": "zzz 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #mountstart: \"25\", #mountend: \"57\", #pickupmodelposition: \"vector(1.184 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_pickup_high\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0. ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #mountstart: \"20\", #mountend: \"53\", #pickupmodelposition: \"vector( ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_pickup_high\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0. ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz1.833,4.257,0)\"] ",
+      "kind": "group",
+      "parent": "zzz0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #mountstart: \"20\", #mountend: \"53\", #pickupmodelposition: \"vector( ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_pull\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0.0000, 0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #foot1up: \" 6->9, 28->31, 47->52\", #foot2up: \" 13->19, 42->45, 54->59\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_pull\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0.0000, 0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"movablecrate_pull\", #startxform: [#position: vector( 0.0000, 10.0000, 0.0000 ), #rotation: vector( 0.0000, 0. ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0000, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"movablecrate_pull\", #startxform: [#position: vector( 0.0000, 10.0000, 0.0000 ), #rotation: vector( 0.0000, 0. ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_push\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0.0000, 0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #foot1up: \" 23->29, 41->48\", #foot2up: \" 3->11, 29->37\", #playsfx_pushcra ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_push\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0.0000, 0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzzte: \"0\"] ",
+      "kind": "group",
+      "parent": "zzz.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #foot1up: \" 23->29, 41->48\", #foot2up: \" 3->11, 29->37\", #playsfx_pushcra ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"movablecrate_push\", #startxform: [#position: vector( 0.0000, 10.0000, 0.0000 ), #rotation: vector( 0.0000, 0. ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0000, 0.0000 )]]  ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"movablecrate_push\", #startxform: [#position: vector( 0.0000, 10.0000, 0.0000 ), #rotation: vector( 0.0000, 0. ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_putsomethinginjug\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #mountitem: \"beach_hotsauce\", #mountstart: \"10\", #playsfx_pu ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_putsomethinginjug\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzztsomethinginjug: \"0\"] ",
+      "kind": "group",
+      "parent": "zzz00, 0.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #mountitem: \"beach_hotsauce\", #mountstart: \"10\", #playsfx_pu ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_receive\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0.0000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #mountstart: \"35\", #mountend: \"65\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_receive\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0.0000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_run\", #startxform: [#position: vector( 0.0000, -0.1360, 6.0831 ), #rotation: vector( 0.0000, 0.0000, 0. ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0000 )], #distancepercycle: \"24.8547\", #minimumspeed: \"0.9\", #maximumspeed: \"1.5\", #foot1up: \" 0->8, 16->22\", #foot2up: \" 5 ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_run\", #startxform: [#position: vector( 0.0000, -0.1360, 6.0831 ), #rotation: vector( 0.0000, 0.0000, 0. ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz->20\"] ",
+      "kind": "group",
+      "parent": "zzz0000 )], #distancepercycle: \"24.8547\", #minimumspeed: \"0.9\", #maximumspeed: \"1.5\", #foot1up: \" 0->8, 16->22\", #foot2up: \" 5 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_run_talk\", #startxform: [#position: vector( 0.0000, -0.1360, 6.0831 ), #rotation: vector( 0.0000, 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000 )], #distancepercycle: \"24.8547\", #minimumspeed: \"0.9\", #maximumspeed: \"1.5\", #foot1up: \" 0->8, 16->22\", #foot2up ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_run_talk\", #startxform: [#position: vector( 0.0000, -0.1360, 6.0831 ), #rotation: vector( 0.0000, 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz: \" 5->20\"] ",
+      "kind": "group",
+      "parent": "zzz0, 0.0000 )], #distancepercycle: \"24.8547\", #minimumspeed: \"0.9\", #maximumspeed: \"1.5\", #foot1up: \" 0->8, 16->22\", #foot2up ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_shadow\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0.0000, ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_shadow\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0.0000, ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_slingshot_shoot\", #startxform: [#position: vector( 0.0054, -1.6550, 6.5300 ), #rotation: vector( 0.0000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, 0.0000, 0.0000 )], #shoot: \"17\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_slingshot_shoot\", #startxform: [#position: vector( 0.0054, -1.6550, 6.5300 ), #rotation: vector( 0.0000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_slingshot_shoot_end\", #startxform: [#position: vector( -0.0484, -1.7148, 6.4335 ), #rotation: vector( 0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz.0000, 0.0000, 0.0000 )], #shoot: \"17\", #playsfx_slingshot: \"0\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_slingshot_shoot_end\", #startxform: [#position: vector( -0.0484, -1.7148, 6.4335 ), #rotation: vector( 0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_slingshot_shoot_loop\", #startxform: [#position: vector( -0.0629, -1.7934, 6.5790 ), #rotation: vector(  ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0.0000, 0.0000, 0.0000 )], #shoot: \"17\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_slingshot_shoot_loop\", #startxform: [#position: vector( -0.0629, -1.7934, 6.5790 ), #rotation: vector(  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_slingshot_shoot_start\", #startxform: [#position: vector( 0.0054, -1.6550, 6.5300 ), #rotation: vector(  ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0.0000, 0.0000, 0.0000 )], #shoot: \"17\"]  ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_slingshot_shoot_start\", #startxform: [#position: vector( 0.0054, -1.6550, 6.5300 ), #rotation: vector(  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_slingshot_stand\", #startxform: [#position: vector( 0.0054, -1.6550, 6.5300 ), #rotation: vector( 0.0000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, 0.0000, 0.0000 )], #minimumspeed: \"0\", #maximumspeed: \"0\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_slingshot_stand\", #startxform: [#position: vector( 0.0054, -1.6550, 6.5300 ), #rotation: vector( 0.0000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_stand\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0.0000,  ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"]  ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_stand\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0.0000,  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_stand_breathe\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000,  ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"]  ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_stand_breathe\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000,  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_stand_lamp\", #startxform: [#position: vector( 0.0054, -0.8531, 6.1973 ), #rotation: vector( 0.0000, 0.0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz000, 0.0000 )], #minimumspeed: \"0\", #maximumspeed: \"0\", #mountitem: \"lamp\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_stand_lamp\", #startxform: [#position: vector( 0.0054, -0.8531, 6.1973 ), #rotation: vector( 0.0000, 0.0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_stand_lamp_talk\", #startxform: [#position: vector( 0.0054, -0.8531, 6.1973 ), #rotation: vector( 0.0000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, 0.0000, 0.0000 )], #minimumspeed: \"0\", #maximumspeed: \"0\", #mountitem: \"lamp\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_stand_lamp_talk\", #startxform: [#position: vector( 0.0054, -0.8531, 6.1973 ), #rotation: vector( 0.0000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_stand_sword\", #startxform: [#position: vector( 0.0054, -0.8531, 6.1973 ), #rotation: vector( 0.0000, 0. ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0000, 0.0000 )], #minimumspeed: \"0\", #maximumspeed: \"0\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_stand_sword\", #startxform: [#position: vector( 0.0054, -0.8531, 6.1973 ), #rotation: vector( 0.0000, 0. ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_stand_sword_talk\", #startxform: [#position: vector( 0.0054, -0.8531, 6.1973 ), #rotation: vector( 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000, 0.0000 )], #minimumspeed: \"0\", #maximumspeed: \"0\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_stand_sword_talk\", #startxform: [#position: vector( 0.0054, -0.8531, 6.1973 ), #rotation: vector( 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_stand_talk\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0.0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_stand_talk\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0.0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_swim\", #startxform: [#position: vector( 0.0000, 0.2534, 7.1181 ), #rotation: vector( 0.0000, 0.0000, 0. ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #foot1up: \" 0->11, 53->71, 120->250\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_swim\", #startxform: [#position: vector( 0.0000, 0.2534, 7.1181 ), #rotation: vector( 0.0000, 0.0000, 0. ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_swordswing\", #startxform: [#position: vector( 0.0054, -0.8531, 6.1973 ), #rotation: vector( 0.0000, 0.0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz000, 0.0000 )], #impact: \"6\", #allowstopat: \"18\", #playsfx_sword_swing: \"0\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_swordswing\", #startxform: [#position: vector( 0.0054, -0.8531, 6.1973 ), #rotation: vector( 0.0000, 0.0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_swordswing_speedvariation1\", #startxform: [#position: vector( 0.0000, -0.1360, 6.0831 ), #rotation: vec ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzztor( 0.0000, 0.0000, 0.0000 )], #distancepercycle: \"24.8547\", #minimumspeed: \"0.7\", #maximumspeed: \"1.5\", #foot1up: \" 0->8, ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_swordswing_speedvariation1\", #startxform: [#position: vector( 0.0000, -0.1360, 6.0831 ), #rotation: vec ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz 16->22\", #foot2up: \" 5->20\", #impact: \"6\"] ",
+      "kind": "group",
+      "parent": "zzztor( 0.0000, 0.0000, 0.0000 )], #distancepercycle: \"24.8547\", #minimumspeed: \"0.7\", #maximumspeed: \"1.5\", #foot1up: \" 0->8, ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_swordswing_speedvariation2\", #startxform: [#position: vector( 0.0000, 0.0297, 6.7262 ), #rotation: vect ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzzor( 0.0000, 0.0000, 0.0000 )], #distancepercycle: \"13.6958\", #minimumspeed: \"0.1\", #maximumspeed: \"1.5\", #foot1up: \" 0->8,  ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_swordswing_speedvariation2\", #startxform: [#position: vector( 0.0000, 0.0297, 6.7262 ), #rotation: vect ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz25->30\", #foot2up: \" 11->23\", #inpact: \"6\"] ",
+      "kind": "group",
+      "parent": "zzzor( 0.0000, 0.0000, 0.0000 )], #distancepercycle: \"13.6958\", #minimumspeed: \"0.1\", #maximumspeed: \"1.5\", #foot1up: \" 0->8,  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_thrown\", #startxform: [#position: vector( 2.2578, 0.2261, 6.9287 ), #rotation: vector( 0.0000, 0.0000,  ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0.0000 )], #startmoving: \"70\", #stopmoving: \"105\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_thrown\", #startxform: [#position: vector( 2.2578, 0.2261, 6.9287 ), #rotation: vector( 0.0000, 0.0000,  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_turnleft\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #foot1up: \" 12->19\", #foot2up: \" 2->11\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_turnleft\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_turnleft\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0.000  ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #foot1up: \" 12->19\", #foot2up: \" 2->11\"]  ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_turnleft\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0.000  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_turnleft_lamp\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000,  ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #foot1up: \" 12->19\", #foot2up: \" 2->11\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_turnleft_lamp\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000,  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_turnright\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #foot1up: \" 2->11\", #foot2up: \" 12->19\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_turnright\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_turnright\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0.00  ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #foot1up: \" 2->11\", #foot2up: \" 12->19\"]  ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_turnright\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0.00  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_turnright_lamp\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz 0.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #foot1up: \" 2->11\", #foot2up: \" 12->19\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_turnright_lamp\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_turnright_lamp\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000,  ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz 0.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #foot1up: \" 2->11\", #foot2up: \" 12->19\"]  ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_turnright_lamp\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000,  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_walk\", #startxform: [#position: vector( 0.0000, 0.0297, 6.7262 ), #rotation: vector( 0.0000, 0.0000, 0. ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0000 )], #distancepercycle: \"13.6958\", #minimumspeed: \"0.1\", #maximumspeed: \"1.9\", #foot1up: \" 0->8, 25->30\", #foot2up: \" 1 ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_walk\", #startxform: [#position: vector( 0.0000, 0.0297, 6.7262 ), #rotation: vector( 0.0000, 0.0000, 0. ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz1->23\"] ",
+      "kind": "group",
+      "parent": "zzz0000 )], #distancepercycle: \"13.6958\", #minimumspeed: \"0.1\", #maximumspeed: \"1.9\", #foot1up: \" 0->8, 25->30\", #foot2up: \" 1 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_walkbackwards\", #startxform: [#position: vector( 0.0000, 0.0297, 6.7262 ), #rotation: vector( 0.0000, 0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz.0000, 0.0000 )], #distancepercycle: \"-13.6958\", #minimumspeed: \"0.1\", #maximumspeed: \"1.5\", #foot1up: \" 0->6, 24->30\", #fo ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_walkbackwards\", #startxform: [#position: vector( 0.0000, 0.0297, 6.7262 ), #rotation: vector( 0.0000, 0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzzot2up: \" 8->23\"] ",
+      "kind": "group",
+      "parent": "zzz.0000, 0.0000 )], #distancepercycle: \"-13.6958\", #minimumspeed: \"0.1\", #maximumspeed: \"1.5\", #foot1up: \" 0->6, 24->30\", #fo ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_walkbackwards_lamp\", #startxform: [#position: vector( 0.0000, 0.0297, 6.7262 ), #rotation: vector( 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000, 0.0000 )], #distancepercycle: \"-13.6958\", #minimumspeed: \"0.1\", #maximumspeed: \"1.5\", #foot1up: \" 0->6, 24->30\" ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_walkbackwards_lamp\", #startxform: [#position: vector( 0.0000, 0.0297, 6.7262 ), #rotation: vector( 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, #foot2up: \" 8->23\", #mountitem: \"lamp\"] ",
+      "kind": "group",
+      "parent": "zzz00, 0.0000, 0.0000 )], #distancepercycle: \"-13.6958\", #minimumspeed: \"0.1\", #maximumspeed: \"1.5\", #foot1up: \" 0->6, 24->30\" ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_walk_lamp\", #startxform: [#position: vector( 0.0000, -0.7257, 6.6883 ), #rotation: vector( 0.0000, 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000 )], #distancepercycle: \"13.6958\", #minimumspeed: \"0.1\", #maximumspeed: \"1.1\", #foot1up: \" 0->8, 25->30\", #foot2u ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_walk_lamp\", #startxform: [#position: vector( 0.0000, -0.7257, 6.6883 ), #rotation: vector( 0.0000, 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzzp: \" 11->23\", #mountitem: \"lamp\"] ",
+      "kind": "group",
+      "parent": "zzz00, 0.0000 )], #distancepercycle: \"13.6958\", #minimumspeed: \"0.1\", #maximumspeed: \"1.1\", #foot1up: \" 0->8, 25->30\", #foot2u ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_walk_lamp_talk\", #startxform: [#position: vector( 0.0000, -0.7257, 6.6883 ), #rotation: vector( 0.0000, ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz 0.0000, 0.0000 )], #distancepercycle: \"13.6958\", #minimumspeed: \"0.1\", #maximumspeed: \"1.1\", #foot1up: \" 0->8, 25->30\", #f ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_walk_lamp_talk\", #startxform: [#position: vector( 0.0000, -0.7257, 6.6883 ), #rotation: vector( 0.0000, ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzzoot2up: \" 11->23\", #mountitem: \"lamp\"] ",
+      "kind": "group",
+      "parent": "zzz 0.0000, 0.0000 )], #distancepercycle: \"13.6958\", #minimumspeed: \"0.1\", #maximumspeed: \"1.1\", #foot1up: \" 0->8, 25->30\", #f ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_walk_talk\", #startxform: [#position: vector( 0.0000, 0.0297, 6.7262 ), #rotation: vector( 0.0000, 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000 )], #distancepercycle: \"13.6958\", #minimumspeed: \"0.1\", #maximumspeed: \"1.9\", #foot1up: \" 0->8, 25->30\", #foot2up ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_walk_talk\", #startxform: [#position: vector( 0.0000, 0.0297, 6.7262 ), #rotation: vector( 0.0000, 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz: \" 11->23\"] ",
+      "kind": "group",
+      "parent": "zzz0, 0.0000 )], #distancepercycle: \"13.6958\", #minimumspeed: \"0.1\", #maximumspeed: \"1.9\", #foot1up: \" 0->8, 25->30\", #foot2up ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_win\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0.0000, 0. ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"]  ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_win\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0.0000, 0. ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "objectlinkedtobonesplayerinfo",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[[#bonedmodel: \"pinky\", #object: \"coconut_hand\", #boneid: 24, #xform: [#rotation: vector( -0.7591, 13.8958, 0.0119 ), #posi ",
+      "kind": "group",
+      "parent": "objectlinkedtobonesplayerinfo",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzztion: vector( 0.4543, -0.1851, -1.5185 )]], [#bonedmodel: \"pinky\", #object: \"sword_hand\", #boneid: 24, #xform: [#rotation:  ",
+      "kind": "group",
+      "parent": "zzz[[#bonedmodel: \"pinky\", #object: \"coconut_hand\", #boneid: 24, #xform: [#rotation: vector( -0.7591, 13.8958, 0.0119 ), #posi ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzzvector( 81.3465, -76.0313, 8.5736 ), #position: vector( 1.3048, 2.4786, -0.5377 )]], [#bonedmodel: \"pinky\", #object: \"beach ",
+      "kind": "group",
+      "parent": "zzztion: vector( 0.4543, -0.1851, -1.5185 )]], [#bonedmodel: \"pinky\", #object: \"sword_hand\", #boneid: 24, #xform: [#rotation:  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz_hotsauce_hand\", #boneid: 24, #xform: [#rotation: vector( -95.7591, 13.8958, 0.0119 ), #position: vector( 0.9680, -1.1925,  ",
+      "kind": "group",
+      "parent": "zzzvector( 81.3465, -76.0313, 8.5736 ), #position: vector( 1.3048, 2.4786, -0.5377 )]], [#bonedmodel: \"pinky\", #object: \"beach ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz-0.8908 )]], [#bonedmodel: \"pinky\", #object: \"sword_belt\", #boneid: 40, #xform: [#rotation: vector( 38.5534, 74.1111, -10.3 ",
+      "kind": "group",
+      "parent": "zzz_hotsauce_hand\", #boneid: 24, #xform: [#rotation: vector( -95.7591, 13.8958, 0.0119 ), #position: vector( 0.9680, -1.1925,  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz815 ), #position: vector( 0.3280, 0.6041, -2.4901 )]], [#bonedmodel: \"pinky\", #object: \"shovel_hand\", #boneid: 24, #xform:  ",
+      "kind": "group",
+      "parent": "zzz-0.8908 )]], [#bonedmodel: \"pinky\", #object: \"sword_belt\", #boneid: 40, #xform: [#rotation: vector( 38.5534, 74.1111, -10.3 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#rotation: vector( -16.3111, -18.1552, -95.1178 ), #position: vector( -0.4477, -0.5619, -2.8485 )]], [#bonedmodel: \"pinky\" ",
+      "kind": "group",
+      "parent": "zzz815 ), #position: vector( 0.3280, 0.6041, -2.4901 )]], [#bonedmodel: \"pinky\", #object: \"shovel_hand\", #boneid: 24, #xform:  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, #object: \"gong_club_hand\", #boneid: 24, #xform: [#rotation: vector( -92.7025, -76.5896, 2.6584 ), #position: vector( 0.83 ",
+      "kind": "group",
+      "parent": "zzz[#rotation: vector( -16.3111, -18.1552, -95.1178 ), #position: vector( -0.4477, -0.5619, -2.8485 )]], [#bonedmodel: \"pinky\" ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz26, 2.3599, -0.4668 )]], [#bonedmodel: \"pinky\", #object: \"bubble_emitter\", #boneid: 39, #xform: [#rotation: vector( 77.2381 ",
+      "kind": "group",
+      "parent": "zzz, #object: \"gong_club_hand\", #boneid: 24, #xform: [#rotation: vector( -92.7025, -76.5896, 2.6584 ), #position: vector( 0.83 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, 90.0000, 0.0000 ), #position: vector( 0.5546, 0.9469, -0.3529 )]], [#bonedmodel: \"pinky\", #object: \"swordstick_hand\", #bo ",
+      "kind": "group",
+      "parent": "zzz26, 2.3599, -0.4668 )]], [#bonedmodel: \"pinky\", #object: \"bubble_emitter\", #boneid: 39, #xform: [#rotation: vector( 77.2381 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzzneid: 24, #xform: [#rotation: vector( -1.9910, 13.7757, -5.1361 ), #position: vector( 1.3060, 2.5088, -0.5213 )]], [#bonedm ",
+      "kind": "group",
+      "parent": "zzz, 90.0000, 0.0000 ), #position: vector( 0.5546, 0.9469, -0.3529 )]], [#bonedmodel: \"pinky\", #object: \"swordstick_hand\", #bo ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzzodel: \"pinky\", #object: \"swordstick_belt\", #boneid: 40, #xform: [#rotation: vector( -110.5638, 78.5701, -67.3935 ), #positi ",
+      "kind": "group",
+      "parent": "zzzneid: 24, #xform: [#rotation: vector( -1.9910, 13.7757, -5.1361 ), #position: vector( 1.3060, 2.5088, -0.5213 )]], [#bonedm ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzzon: vector( 0.1413, 0.5827, -2.6383 )]], [#bonedmodel: \"pinky\", #object: \"lamp\", #boneid: 18, #xform: [#rotation: vector( 1 ",
+      "kind": "group",
+      "parent": "zzzodel: \"pinky\", #object: \"swordstick_belt\", #boneid: 40, #xform: [#rotation: vector( -110.5638, 78.5701, -67.3935 ), #positi ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz72.8494, -9.1716, 83.3955 ), #position: vector( 0.8637, 0.0352, 0.5576 )]], [#bonedmodel: \"pinky\", #object: \"goldsword_hand ",
+      "kind": "group",
+      "parent": "zzzon: vector( 0.1413, 0.5827, -2.6383 )]], [#bonedmodel: \"pinky\", #object: \"lamp\", #boneid: 18, #xform: [#rotation: vector( 1 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz\", #boneid: 24, #xform: [#rotation: vector( -2.4191, 13.7083, -6.9381 ), #position: vector( 1.4727, 2.7595, -0.5382 )]], [# ",
+      "kind": "group",
+      "parent": "zzz72.8494, -9.1716, 83.3955 ), #position: vector( 0.8637, 0.0352, 0.5576 )]], [#bonedmodel: \"pinky\", #object: \"goldsword_hand ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzzbonedmodel: \"pinky\", #object: \"goldsword_belt\", #boneid: 40, #xform: [#rotation: vector( -163.8621, 6.0000, -136.2074 ), #p ",
+      "kind": "group",
+      "parent": "zzz\", #boneid: 24, #xform: [#rotation: vector( -2.4191, 13.7083, -6.9381 ), #position: vector( 1.4727, 2.7595, -0.5382 )]], [# ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzzosition: vector( 0.1493, 0.5364, -2.5885 )]], [#bonedmodel: \"pinky\", #object: \"woodensword_hand\", #boneid: 24, #xform: [#ro ",
+      "kind": "group",
+      "parent": "zzzbonedmodel: \"pinky\", #object: \"goldsword_belt\", #boneid: 40, #xform: [#rotation: vector( -163.8621, 6.0000, -136.2074 ), #p ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzztation: vector( -2.7291, 13.6510, -8.2489 ), #position: vector( 1.2850, 2.0074, -0.5151 )]], [#bonedmodel: \"pinky\", #object ",
+      "kind": "group",
+      "parent": "zzzosition: vector( 0.1493, 0.5364, -2.5885 )]], [#bonedmodel: \"pinky\", #object: \"woodensword_hand\", #boneid: 24, #xform: [#ro ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz: \"woodensword_belt\", #boneid: 40, #xform: [#rotation: vector( -15.9129, -7.5178, 50.6848 ), #position: vector( 0.5813, 0.1 ",
+      "kind": "group",
+      "parent": "zzztation: vector( -2.7291, 13.6510, -8.2489 ), #position: vector( 1.2850, 2.0074, -0.5151 )]], [#bonedmodel: \"pinky\", #object ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz930, -2.4378 )]], [#bonedmodel: \"pinky\", #object: \"meat_hand\", #boneid: 24, #xform: [#rotation: vector( -2.7923, 13.6385, - ",
+      "kind": "group",
+      "parent": "zzz: \"woodensword_belt\", #boneid: 40, #xform: [#rotation: vector( -15.9129, -7.5178, 50.6848 ), #position: vector( 0.5813, 0.1 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz8.5167 ), #position: vector( 1.1727, 1.0643, -0.5792 )]], [#bonedmodel: \"pinky\", #object: \"cake\", #boneid: 24, #xform: [#ro ",
+      "kind": "group",
+      "parent": "zzz930, -2.4378 )]], [#bonedmodel: \"pinky\", #object: \"meat_hand\", #boneid: 24, #xform: [#rotation: vector( -2.7923, 13.6385, - ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzztation: vector( -117.8632, -82.1260, 25.2034 ), #position: vector( 1.1849, -0.9546, -1.3884 )]], [#bonedmodel: \"pinky\", #ob ",
+      "kind": "group",
+      "parent": "zzz8.5167 ), #position: vector( 1.1727, 1.0643, -0.5792 )]], [#bonedmodel: \"pinky\", #object: \"cake\", #boneid: 24, #xform: [#ro ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzzject: \"key\", #boneid: 24, #xform: [#rotation: vector( 92.6551, -73.8805, 177.6434 ), #position: vector( 1.3251, -0.0568, -1 ",
+      "kind": "group",
+      "parent": "zzztation: vector( -117.8632, -82.1260, 25.2034 ), #position: vector( 1.1849, -0.9546, -1.3884 )]], [#bonedmodel: \"pinky\", #ob ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz.4884 )]], [#bonedmodel: \"pinky\", #object: \"dizzystars\", #boneid: 33, #xform: [#rotation: vector( -108.5537, 90.0000, 0.000 ",
+      "kind": "group",
+      "parent": "zzzject: \"key\", #boneid: 24, #xform: [#rotation: vector( 92.6551, -73.8805, 177.6434 ), #position: vector( 1.3251, -0.0568, -1 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0 ), #position: vector( -2.3766, 1.9343, 0.1234 )]], [#bonedmodel: \"pinky\", #object: \"slingshot_belt\", #boneid: 40, #xform: ",
+      "kind": "group",
+      "parent": "zzz.4884 )]], [#bonedmodel: \"pinky\", #object: \"dizzystars\", #boneid: 33, #xform: [#rotation: vector( -108.5537, 90.0000, 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz [#rotation: vector( -102.4279, -13.0108, -144.7905 ), #position: vector( 0.5157, -1.8245, 2.1430 )]], [#bonedmodel: \"pinky ",
+      "kind": "group",
+      "parent": "zzz0 ), #position: vector( -2.3766, 1.9343, 0.1234 )]], [#bonedmodel: \"pinky\", #object: \"slingshot_belt\", #boneid: 40, #xform: ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz\", #object: \"slingshot_hand\", #boneid: 18, #xform: [#rotation: vector( 88.8747, 48.8943, 179.3518 ), #position: vector( 1.2 ",
+      "kind": "group",
+      "parent": "zzz [#rotation: vector( -102.4279, -13.0108, -144.7905 ), #position: vector( 0.5157, -1.8245, 2.1430 )]], [#bonedmodel: \"pinky ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz010, 0.6265, 0.4040 )]], [#bonedmodel: \"pinky\", #object: \"shop_slingshot\", #boneid: 24, #xform: [#rotation: vector( -13.322 ",
+      "kind": "group",
+      "parent": "zzz\", #object: \"slingshot_hand\", #boneid: 18, #xform: [#rotation: vector( 88.8747, 48.8943, 179.3518 ), #position: vector( 1.2 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz4, -4.0582, -103.4692 ), #position: vector( 1.1882, 0.5455, -0.6220 )]], [#bonedmodel: \"pinky\", #object: \"shop_sword\", #bon ",
+      "kind": "group",
+      "parent": "zzz010, 0.6265, 0.4040 )]], [#bonedmodel: \"pinky\", #object: \"shop_slingshot\", #boneid: 24, #xform: [#rotation: vector( -13.322 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzzeid: 24, #xform: [#rotation: vector( -14.7668, 6.5991, -97.2645 ), #position: vector( 1.1460, 2.5694, -1.0473 )]], [#bonedm ",
+      "kind": "group",
+      "parent": "zzz4, -4.0582, -103.4692 ), #position: vector( 1.1882, 0.5455, -0.6220 )]], [#bonedmodel: \"pinky\", #object: \"shop_sword\", #bon ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzzodel: \"pinky\", #object: \"shop_lamp\", #boneid: 24, #xform: [#rotation: vector( 108.5491, 76.0894, -172.9122 ), #position: ve ",
+      "kind": "group",
+      "parent": "zzzeid: 24, #xform: [#rotation: vector( -14.7668, 6.5991, -97.2645 ), #position: vector( 1.1460, 2.5694, -1.0473 )]], [#bonedm ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzzctor( 0.7663, -1.0836, -1.0253 )]]] ",
+      "kind": "group",
+      "parent": "zzzodel: \"pinky\", #object: \"shop_lamp\", #boneid: 24, #xform: [#rotation: vector( 108.5491, 76.0894, -172.9122 ), #position: ve ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "shovel",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        -0.0,
+        8.622
+      ],
+      "godot_pos": [
+        0.0,
+        8.622,
+        0.0
+      ]
+    },
+    {
+      "name": "slingshot",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "godot_pos": [
+        0.0,
+        -0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "slingshot_mounted",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "godot_pos": [
+        0.0,
+        -0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "slingshot_rock",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"slingshot_shoot\", #startxform: [#position: vector( 0.2987, 3.3344, 11.4561 ), #rotation: vector( -1.0003, -2. ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz9810, 175.4536 )], #linktobone: \"left_upper_fingers\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"slingshot_shoot\", #startxform: [#position: vector( 0.2987, 3.3344, 11.4561 ), #rotation: vector( -1.0003, -2. ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"slingshot_shoot_end\", #startxform: [#position: vector( 0.2987, 3.3344, 11.4561 ), #rotation: vector( -1.0003, ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz -2.9810, 175.4536 )], #linktobone: \"left_upper_fingers\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"slingshot_shoot_end\", #startxform: [#position: vector( 0.2987, 3.3344, 11.4561 ), #rotation: vector( -1.0003, ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"slingshot_shoot_start\", #startxform: [#position: vector( 0.2987, 3.3344, 11.4561 ), #rotation: vector( -1.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz3, -2.9810, 175.4536 )], #linktobone: \"left_upper_fingers\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"slingshot_shoot_start\", #startxform: [#position: vector( 0.2987, 3.3344, 11.4561 ), #rotation: vector( -1.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"slingshot_stand\", #startxform: [#position: vector( 0.2987, 3.3344, 11.4561 ), #rotation: vector( -1.0003, -2. ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz9810, 175.4536 )], #linktobone: \"left_upper_fingers\"]  ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"slingshot_stand\", #startxform: [#position: vector( 0.2987, 3.3344, 11.4561 ), #rotation: vector( -1.0003, -2. ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "swoosh_pinky_swordswing",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "startframe=3;\r\nstopframe=12;\r\nstartoffset=0.05;\r\nstopoffset=-0.55;",
+      "sw_pos": [
+        0.0,
+        -0.136,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        0.136
+      ]
+    },
+    {
+      "name": "TestLight",
+      "kind": "light",
+      "parent": "DefaultView",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    }
+  ],
+  "skeletons": [
+    {
+      "name": "slingshot",
+      "bones": [
+        {
+          "name": "slingshot_center",
+          "parent": -1,
+          "length": 0.0,
+          "pos": [
+            0.0,
+            -2.2351741790771484e-08,
+            9.5367431640625e-07
+          ],
+          "rot": [
+            1.0,
+            -0.0,
+            -0.0,
+            -0.0
+          ],
+          "flags": 20
+        },
+        {
+          "name": "slingshot_rigid",
+          "parent": 0,
+          "length": 0.42606449127197266,
+          "pos": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rot": [
+            0.7071067690849304,
+            0.0,
+            -0.7071067690849304,
+            0.0
+          ],
+          "flags": 10
+        },
+        {
+          "name": "slingshot_wire",
+          "parent": 1,
+          "length": 1.4640156030654907,
+          "pos": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rot": [
+            0.7672871351242065,
+            0.03425683081150055,
+            -0.04113006964325905,
+            0.6390659213066101
+          ],
+          "flags": 20
+        },
+        {
+          "name": "none01",
+          "parent": 2,
+          "length": 0.4198707938194275,
+          "pos": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rot": [
+            0.7672871351242065,
+            -0.034256838262081146,
+            0.04113006219267845,
+            -0.6390659213066101
+          ],
+          "flags": 8
+        }
+      ]
+    }
+  ],
+  "animations": [
+    {
+      "name": "crosshair",
+      "tracks": 9,
+      "size": 745
+    },
+    {
+      "name": "crosshair_move",
+      "tracks": 9,
+      "size": 1025
+    },
+    {
+      "name": "pinky",
+      "tracks": 40,
+      "size": 2937
+    },
+    {
+      "name": "pinky_climbintowell",
+      "tracks": 39,
+      "size": 20465
+    },
+    {
+      "name": "pinky_climboncrate",
+      "tracks": 39,
+      "size": 16188
+    },
+    {
+      "name": "pinky_climboutofwell",
+      "tracks": 39,
+      "size": 22757
+    },
+    {
+      "name": "pinky_climb_down",
+      "tracks": 40,
+      "size": 17948
+    },
+    {
+      "name": "pinky_climb_up",
+      "tracks": 39,
+      "size": 20375
+    },
+    {
+      "name": "pinky_die",
+      "tracks": 39,
+      "size": 21229
+    },
+    {
+      "name": "pinky_dig",
+      "tracks": 39,
+      "size": 25289
+    },
+    {
+      "name": "pinky_divein",
+      "tracks": 39,
+      "size": 13460
+    },
+    {
+      "name": "pinky_float",
+      "tracks": 39,
+      "size": 7821
+    },
+    {
+      "name": "pinky_float_hit",
+      "tracks": 39,
+      "size": 9657
+    },
+    {
+      "name": "pinky_give",
+      "tracks": 39,
+      "size": 7585
+    },
+    {
+      "name": "pinky_gong",
+      "tracks": 39,
+      "size": 14297
+    },
+    {
+      "name": "pinky_hit",
+      "tracks": 39,
+      "size": 11046
+    },
+    {
+      "name": "pinky_hit_speedvariation1",
+      "tracks": 45,
+      "size": 8822
+    },
+    {
+      "name": "pinky_hit_speedvariation2",
+      "tracks": 45,
+      "size": 10441
+    },
+    {
+      "name": "pinky_jump",
+      "tracks": 39,
+      "size": 14033
+    },
+    {
+      "name": "pinky_magicswitch",
+      "tracks": 39,
+      "size": 7771
+    },
+    {
+      "name": "pinky_pickup",
+      "tracks": 39,
+      "size": 12312
+    },
+    {
+      "name": "pinky_pickup_high",
+      "tracks": 39,
+      "size": 9708
+    },
+    {
+      "name": "pinky_pull",
+      "tracks": 39,
+      "size": 14900
+    },
+    {
+      "name": "movablecrate_pull-key",
+      "tracks": 1,
+      "size": 567
+    },
+    {
+      "name": "pinky_push",
+      "tracks": 39,
+      "size": 13764
+    },
+    {
+      "name": "movablecrate_push-key",
+      "tracks": 1,
+      "size": 358
+    },
+    {
+      "name": "pinky_putsomethinginjug",
+      "tracks": 39,
+      "size": 9366
+    },
+    {
+      "name": "pinky_receive",
+      "tracks": 39,
+      "size": 9256
+    },
+    {
+      "name": "pinky_run",
+      "tracks": 45,
+      "size": 8333
+    },
+    {
+      "name": "pinky_run_talk",
+      "tracks": 45,
+      "size": 8483
+    },
+    {
+      "name": "pinky_shadow",
+      "tracks": 39,
+      "size": 31694
+    },
+    {
+      "name": "pinky_slingshot_shoot",
+      "tracks": 44,
+      "size": 9439
+    },
+    {
+      "name": "pinky_slingshot_shoot_end",
+      "tracks": 45,
+      "size": 7850
+    },
+    {
+      "name": "pinky_slingshot_shoot_loop",
+      "tracks": 44,
+      "size": 4827
+    },
+    {
+      "name": "pinky_slingshot_shoot_start",
+      "tracks": 44,
+      "size": 5666
+    },
+    {
+      "name": "pinky_slingshot_stand",
+      "tracks": 44,
+      "size": 5376
+    },
+    {
+      "name": "pinky_stand",
+      "tracks": 39,
+      "size": 31693
+    },
+    {
+      "name": "pinky_stand_breathe",
+      "tracks": 39,
+      "size": 4955
+    },
+    {
+      "name": "pinky_stand_lamp",
+      "tracks": 39,
+      "size": 5653
+    },
+    {
+      "name": "pinky_stand_lamp_talk",
+      "tracks": 39,
+      "size": 5925
+    },
+    {
+      "name": "pinky_stand_sword",
+      "tracks": 39,
+      "size": 5532
+    },
+    {
+      "name": "pinky_stand_sword_talk",
+      "tracks": 39,
+      "size": 5712
+    },
+    {
+      "name": "pinky_stand_talk",
+      "tracks": 39,
+      "size": 11012
+    },
+    {
+      "name": "pinky_swim",
+      "tracks": 39,
+      "size": 27298
+    },
+    {
+      "name": "pinky_swordswing",
+      "tracks": 39,
+      "size": 9356
+    },
+    {
+      "name": "pinky_swordswing_speedvariation1",
+      "tracks": 45,
+      "size": 9055
+    },
+    {
+      "name": "pinky_swordswing_speedvariation2",
+      "tracks": 45,
+      "size": 10190
+    },
+    {
+      "name": "pinky_thrown",
+      "tracks": 39,
+      "size": 21316
+    },
+    {
+      "name": "pinky_turnleft",
+      "tracks": 39,
+      "size": 6188
+    },
+    {
+      "name": "pinky_turnleft-key",
+      "tracks": 1,
+      "size": 132
+    },
+    {
+      "name": "pinky_turnleft_lamp",
+      "tracks": 39,
+      "size": 6370
+    },
+    {
+      "name": "pinky_turnright",
+      "tracks": 39,
+      "size": 6320
+    },
+    {
+      "name": "pinky_turnright-key",
+      "tracks": 1,
+      "size": 134
+    },
+    {
+      "name": "pinky_turnright_lamp",
+      "tracks": 39,
+      "size": 6530
+    },
+    {
+      "name": "pinky_turnright_lamp-key",
+      "tracks": 1,
+      "size": 144
+    },
+    {
+      "name": "pinky_walk",
+      "tracks": 45,
+      "size": 9206
+    },
+    {
+      "name": "pinky_walkbackwards",
+      "tracks": 39,
+      "size": 8096
+    },
+    {
+      "name": "pinky_walkbackwards_lamp",
+      "tracks": 39,
+      "size": 8151
+    },
+    {
+      "name": "pinky_walk_lamp",
+      "tracks": 44,
+      "size": 8991
+    },
+    {
+      "name": "pinky_walk_lamp_talk",
+      "tracks": 44,
+      "size": 9209
+    },
+    {
+      "name": "pinky_walk_talk",
+      "tracks": 45,
+      "size": 9365
+    },
+    {
+      "name": "pinky_win",
+      "tracks": 39,
+      "size": 10009
+    },
+    {
+      "name": "slingshot",
+      "tracks": 4,
+      "size": 344
+    },
+    {
+      "name": "slingshot_mounted",
+      "tracks": 4,
+      "size": 352
+    },
+    {
+      "name": "slingshot_shoot",
+      "tracks": 4,
+      "size": 593
+    },
+    {
+      "name": "slingshot_shoot_end",
+      "tracks": 4,
+      "size": 484
+    },
+    {
+      "name": "slingshot_shoot_start",
+      "tracks": 4,
+      "size": 475
+    },
+    {
+      "name": "slingshot_stand",
+      "tracks": 4,
+      "size": 371
+    }
+  ]
+}

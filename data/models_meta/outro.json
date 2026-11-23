@@ -1,0 +1,919 @@
+{
+  "file": "outro.w3d",
+  "nodes": [
+    {
+      "name": "DefaultView",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "UIAmbient",
+      "kind": "light",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "Default MAX Light",
+      "kind": "light",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -0.0,
+        -241.481,
+        64.705
+      ],
+      "godot_pos": [
+        -0.0,
+        64.705,
+        241.481
+      ]
+    },
+    {
+      "name": "userdata",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"island_cave\", #startxform: [#position: vector( 1.06105e3, 4.56970e3, 246.5912 ), #rotation: vector( 0.0000, 0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz.0000, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"island_cave\", #startxform: [#position: vector( 1.06105e3, 4.56970e3, 246.5912 ), #rotation: vector( 0.0000, 0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"darklady\", #startxform: [#position: vector( 1.03677e3, 3.76845e3, -38.2563 ), #rotation: vector( 0.0213, 1.43 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz65, -176.5297 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"darklady\", #startxform: [#position: vector( 1.03677e3, 3.76845e3, -38.2563 ), #rotation: vector( 0.0213, 1.43 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"water_edge_animate\", #startxform: [#position: vector( 1.06253e3, 4.57361e3, -27.8061 ), #rotation: vector( 0. ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0000, 0.0000, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"water_edge_animate\", #startxform: [#position: vector( 1.06253e3, 4.57361e3, -27.8061 ), #rotation: vector( 0. ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "beach_water",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        580.39,
+        -15.801
+      ],
+      "godot_pos": [
+        0.0,
+        -15.801,
+        -580.39
+      ]
+    },
+    {
+      "name": "bottom",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -940.04,
+        -1288.461,
+        -31.641
+      ],
+      "godot_pos": [
+        -940.04,
+        -31.641,
+        1288.461
+      ]
+    },
+    {
+      "name": "skybox",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -265.456,
+        -620.676,
+        -260.452
+      ],
+      "godot_pos": [
+        -265.456,
+        -260.452,
+        620.676
+      ]
+    },
+    {
+      "name": "water_edge_01",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -1361.254,
+        -2631.631,
+        22.184
+      ],
+      "godot_pos": [
+        -1361.254,
+        22.184,
+        2631.631
+      ]
+    },
+    {
+      "name": "water_edge_02",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        3049.043,
+        -218.446,
+        22.184
+      ],
+      "godot_pos": [
+        3049.043,
+        22.184,
+        218.446
+      ]
+    },
+    {
+      "name": "water_edge_03",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        3695.305,
+        315.166,
+        22.184
+      ],
+      "godot_pos": [
+        3695.305,
+        22.184,
+        -315.166
+      ]
+    },
+    {
+      "name": "water_edge_04",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        5959.629,
+        2827.679,
+        22.184
+      ],
+      "godot_pos": [
+        5959.629,
+        22.184,
+        -2827.679
+      ]
+    },
+    {
+      "name": "water_edge_05",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        2962.79,
+        1321.717,
+        22.185
+      ],
+      "godot_pos": [
+        2962.79,
+        22.185,
+        -1321.717
+      ]
+    },
+    {
+      "name": "water_edge_06",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -77.86,
+        387.426,
+        22.184
+      ],
+      "godot_pos": [
+        -77.86,
+        22.184,
+        -387.426
+      ]
+    },
+    {
+      "name": "water_edge_07",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -1475.751,
+        -1588.961,
+        22.184
+      ],
+      "godot_pos": [
+        -1475.751,
+        22.184,
+        1588.961
+      ]
+    },
+    {
+      "name": "water_edge_08",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -3889.773,
+        -2861.367,
+        22.184
+      ],
+      "godot_pos": [
+        -3889.773,
+        22.184,
+        2861.367
+      ]
+    },
+    {
+      "name": "water_edge_09",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -4057.965,
+        -56.992,
+        27.531
+      ],
+      "godot_pos": [
+        -4057.965,
+        27.531,
+        56.992
+      ]
+    },
+    {
+      "name": "water_edge_10",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -3996.802,
+        4095.612,
+        22.184
+      ],
+      "godot_pos": [
+        -3996.802,
+        22.184,
+        -4095.612
+      ]
+    },
+    {
+      "name": "water_edge_11",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -1971.411,
+        4026.335,
+        22.184
+      ],
+      "godot_pos": [
+        -1971.411,
+        22.184,
+        -4026.335
+      ]
+    },
+    {
+      "name": "water_edge_13",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        5462.863,
+        -2854.188,
+        22.184
+      ],
+      "godot_pos": [
+        5462.863,
+        22.184,
+        2854.188
+      ]
+    },
+    {
+      "name": "scene_sun",
+      "kind": "light",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -4015.741,
+        -6943.432,
+        9113.927
+      ],
+      "godot_pos": [
+        -4015.741,
+        9113.927,
+        6943.432
+      ]
+    },
+    {
+      "name": "scene_sun.Target",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        200.0,
+        0.0,
+        -243.23
+      ],
+      "godot_pos": [
+        200.0,
+        -243.23,
+        -0.0
+      ]
+    },
+    {
+      "name": "foginfo",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "enabled = 0;\r\ncolor=#dee7f1;\r\nfar=10000;\r\nnear=3000;\r\ndecaymode=linear;",
+      "sw_pos": [
+        64.153,
+        0.0,
+        -1486.535
+      ],
+      "godot_pos": [
+        64.153,
+        -1486.535,
+        -0.0
+      ]
+    },
+    {
+      "name": "treasurehunt2_Xindicator",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -1335.143,
+        -2634.503,
+        344.32
+      ],
+      "godot_pos": [
+        -1335.143,
+        344.32,
+        2634.503
+      ]
+    },
+    {
+      "name": "treasurehunt3_Xindicator",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -1467.252,
+        -1598.285,
+        282.519
+      ],
+      "godot_pos": [
+        -1467.252,
+        282.519,
+        1598.285
+      ]
+    },
+    {
+      "name": "treasurehunt1_Xindicator",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -3696.762,
+        -16.236,
+        297.766
+      ],
+      "godot_pos": [
+        -3696.762,
+        297.766,
+        16.236
+      ]
+    },
+    {
+      "name": "treasurehunt4_Xindicator",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -102.269,
+        276.026,
+        357.745
+      ],
+      "godot_pos": [
+        -102.269,
+        357.745,
+        -276.026
+      ]
+    },
+    {
+      "name": "treasurehunt8_Xindicator",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -1983.367,
+        3979.934,
+        279.563
+      ],
+      "godot_pos": [
+        -1983.367,
+        279.563,
+        -3979.934
+      ]
+    },
+    {
+      "name": "treasurehunt6_Xindicator",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        3690.886,
+        321.702,
+        310.469
+      ],
+      "godot_pos": [
+        3690.886,
+        310.469,
+        -321.702
+      ]
+    },
+    {
+      "name": "treasurehunt7_Xindicator",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        2956.128,
+        1283.585,
+        279.754
+      ],
+      "godot_pos": [
+        2956.128,
+        279.754,
+        -1283.585
+      ]
+    },
+    {
+      "name": "treasurehunt5_Xindicator",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        3033.239,
+        -224.558,
+        310.469
+      ],
+      "godot_pos": [
+        3033.239,
+        310.469,
+        224.558
+      ]
+    },
+    {
+      "name": "island_fatamorgana",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        5959.87,
+        2786.805,
+        243.947
+      ],
+      "godot_pos": [
+        5959.87,
+        243.947,
+        -2786.805
+      ]
+    },
+    {
+      "name": "island_abra",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        5425.403,
+        -2846.188,
+        255.45
+      ],
+      "godot_pos": [
+        5425.403,
+        255.45,
+        2846.188
+      ]
+    },
+    {
+      "name": "island_treasurehunt6",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        3683.035,
+        285.891,
+        103.324
+      ],
+      "godot_pos": [
+        3683.035,
+        103.324,
+        -285.891
+      ]
+    },
+    {
+      "name": "island_treasurehunt5",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        3048.676,
+        -228.063,
+        105.34
+      ],
+      "godot_pos": [
+        3048.676,
+        105.34,
+        228.063
+      ]
+    },
+    {
+      "name": "island_treasurehunt7",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        2963.62,
+        1313.87,
+        114.444
+      ],
+      "godot_pos": [
+        2963.62,
+        114.444,
+        -1313.87
+      ]
+    },
+    {
+      "name": "island_treasurehunt4",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -79.174,
+        369.951,
+        131.745
+      ],
+      "godot_pos": [
+        -79.174,
+        131.745,
+        -369.951
+      ]
+    },
+    {
+      "name": "island_treasurehunt3",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -1466.058,
+        -1592.284,
+        105.401
+      ],
+      "godot_pos": [
+        -1466.058,
+        105.401,
+        1592.284
+      ]
+    },
+    {
+      "name": "island_treasurehunt2",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -1338.93,
+        -2634.295,
+        112.964
+      ],
+      "godot_pos": [
+        -1338.93,
+        112.964,
+        2634.295
+      ]
+    },
+    {
+      "name": "island_treasurehunt1",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -4042.957,
+        12.842,
+        122.016
+      ],
+      "godot_pos": [
+        -4042.957,
+        122.016,
+        -12.842
+      ]
+    },
+    {
+      "name": "island_shangrila",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -3924.594,
+        -2822.691,
+        206.647
+      ],
+      "godot_pos": [
+        -3924.594,
+        206.647,
+        2822.691
+      ]
+    },
+    {
+      "name": "island_treasurehunt8",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -1931.579,
+        3974.363,
+        103.673
+      ],
+      "godot_pos": [
+        -1931.579,
+        103.673,
+        -3974.363
+      ]
+    },
+    {
+      "name": "island_graal",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -3958.865,
+        4098.497,
+        302.895
+      ],
+      "godot_pos": [
+        -3958.865,
+        302.895,
+        -4098.497
+      ]
+    },
+    {
+      "name": "island_cave",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        1061.047,
+        4569.698,
+        246.591
+      ],
+      "godot_pos": [
+        1061.047,
+        246.591,
+        -4569.698
+      ]
+    },
+    {
+      "name": "darklady",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        1036.766,
+        3768.446,
+        -38.256
+      ],
+      "godot_pos": [
+        1036.766,
+        -38.256,
+        -3768.446
+      ]
+    },
+    {
+      "name": "railing",
+      "kind": "model",
+      "parent": "darklady",
+      "userdata": "",
+      "sw_pos": [
+        1037.034,
+        3743.595,
+        16.058
+      ],
+      "godot_pos": [
+        1037.034,
+        16.058,
+        -3743.595
+      ]
+    },
+    {
+      "name": "front_decoration",
+      "kind": "model",
+      "parent": "darklady",
+      "userdata": "",
+      "sw_pos": [
+        1042.771,
+        3658.175,
+        15.732
+      ],
+      "godot_pos": [
+        1042.771,
+        15.732,
+        -3658.175
+      ]
+    },
+    {
+      "name": "water_edge_animate",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        1062.528,
+        4573.606,
+        -27.806
+      ],
+      "godot_pos": [
+        1062.528,
+        -27.806,
+        -4573.606
+      ]
+    },
+    {
+      "name": "Line01",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        997.065,
+        400.515,
+        -38.256
+      ],
+      "godot_pos": [
+        997.065,
+        -38.256,
+        -400.515
+      ]
+    },
+    {
+      "name": "Ambient Light",
+      "kind": "light",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "TestLight",
+      "kind": "light",
+      "parent": "DefaultView",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    }
+  ],
+  "skeletons": [],
+  "animations": [
+    {
+      "name": "island_cave-key",
+      "tracks": 1,
+      "size": 4463
+    },
+    {
+      "name": "darklady-key",
+      "tracks": 1,
+      "size": 22341
+    },
+    {
+      "name": "water_edge_animate-key",
+      "tracks": 1,
+      "size": 7473
+    }
+  ]
+}

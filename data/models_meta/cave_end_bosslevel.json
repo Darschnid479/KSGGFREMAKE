@@ -1,0 +1,2216 @@
+{
+  "file": "cave_end_bosslevel.w3d",
+  "nodes": [
+    {
+      "name": "DefaultView",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "cave_tunnel",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "alwaysmovecamerainfront=1;",
+      "sw_pos": [
+        -452.861,
+        -622.312,
+        0.0
+      ],
+      "godot_pos": [
+        -452.861,
+        0.0,
+        622.312
+      ]
+    },
+    {
+      "name": "cave_objects",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -466.48,
+        -559.211,
+        -62.226
+      ],
+      "godot_pos": [
+        -466.48,
+        -62.226,
+        559.211
+      ]
+    },
+    {
+      "name": "cave_alter",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        3.416,
+        213.511,
+        -55.482
+      ],
+      "godot_pos": [
+        3.416,
+        -55.482,
+        -213.511
+      ]
+    },
+    {
+      "name": "cave_lava",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        21.987,
+        296.411,
+        -113.356
+      ],
+      "godot_pos": [
+        21.987,
+        -113.356,
+        -296.411
+      ]
+    },
+    {
+      "name": "MapExportCamera",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        3.559,
+        40.698,
+        424.817
+      ],
+      "godot_pos": [
+        3.559,
+        424.817,
+        -40.698
+      ]
+    },
+    {
+      "name": "MapExportCamera.Target",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        3.51,
+        40.698,
+        -0.054
+      ],
+      "godot_pos": [
+        3.51,
+        -0.054,
+        -40.698
+      ]
+    },
+    {
+      "name": "cave_fence",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        3.416,
+        213.511,
+        -55.482
+      ],
+      "godot_pos": [
+        3.416,
+        -55.482,
+        -213.511
+      ]
+    },
+    {
+      "name": "cave_puzzlearea",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -961.969,
+        -449.74,
+        -100.12
+      ],
+      "godot_pos": [
+        -961.969,
+        -100.12,
+        449.74
+      ]
+    },
+    {
+      "name": "mk_torch_22",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -5.741,
+        -815.118,
+        -61.777
+      ],
+      "godot_pos": [
+        -5.741,
+        -61.777,
+        815.118
+      ]
+    },
+    {
+      "name": "mk_torch_23",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        21.274,
+        -652.438,
+        -73.599
+      ],
+      "godot_pos": [
+        21.274,
+        -73.599,
+        652.438
+      ]
+    },
+    {
+      "name": "mk_torch_24",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        3.338,
+        -437.555,
+        -73.332
+      ],
+      "godot_pos": [
+        3.338,
+        -73.332,
+        437.555
+      ]
+    },
+    {
+      "name": "mk_torch_25",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        52.406,
+        -254.427,
+        -73.731
+      ],
+      "godot_pos": [
+        52.406,
+        -73.731,
+        254.427
+      ]
+    },
+    {
+      "name": "mk_torch_26",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -36.827,
+        -84.356,
+        -28.506
+      ],
+      "godot_pos": [
+        -36.827,
+        -28.506,
+        84.356
+      ]
+    },
+    {
+      "name": "mk_torch_27",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        53.505,
+        -19.61,
+        -82.77
+      ],
+      "godot_pos": [
+        53.505,
+        -82.77,
+        19.61
+      ]
+    },
+    {
+      "name": "mk_torch_32",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        84.199,
+        98.298,
+        -82.77
+      ],
+      "godot_pos": [
+        84.199,
+        -82.77,
+        -98.298
+      ]
+    },
+    {
+      "name": "mk_torch_33",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        84.085,
+        147.999,
+        -82.77
+      ],
+      "godot_pos": [
+        84.085,
+        -82.77,
+        -147.999
+      ]
+    },
+    {
+      "name": "mk_torch_34",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -84.658,
+        98.815,
+        -82.77
+      ],
+      "godot_pos": [
+        -84.658,
+        -82.77,
+        -98.815
+      ]
+    },
+    {
+      "name": "mk_torch_35",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -85.073,
+        149.106,
+        -82.77
+      ],
+      "godot_pos": [
+        -85.073,
+        -82.77,
+        -149.106
+      ]
+    },
+    {
+      "name": "mk_torch_36",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -40.306,
+        294.736,
+        -82.77
+      ],
+      "godot_pos": [
+        -40.306,
+        -82.77,
+        -294.736
+      ]
+    },
+    {
+      "name": "mk_torch_37",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        49.348,
+        294.736,
+        -82.77
+      ],
+      "godot_pos": [
+        49.348,
+        -82.77,
+        -294.736
+      ]
+    },
+    {
+      "name": "mk_torch_38",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        27.708,
+        342.59,
+        -68.085
+      ],
+      "godot_pos": [
+        27.708,
+        -68.085,
+        -342.59
+      ]
+    },
+    {
+      "name": "mk_torch_39",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -16.014,
+        342.59,
+        -68.085
+      ],
+      "godot_pos": [
+        -16.014,
+        -68.085,
+        -342.59
+      ]
+    },
+    {
+      "name": "light_smoke_02",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "flarebillboard=1;",
+      "sw_pos": [
+        48.237,
+        289.906,
+        0.509
+      ],
+      "godot_pos": [
+        48.237,
+        0.509,
+        -289.906
+      ]
+    },
+    {
+      "name": "foginfo",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "color=#6e923e;\r\nfar=1700;\r\ndecaymode=exponential;",
+      "sw_pos": [
+        160.892,
+        -384.292,
+        -1243.749
+      ],
+      "godot_pos": [
+        160.892,
+        -1243.749,
+        384.292
+      ]
+    },
+    {
+      "name": "cave_coffin",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "dynamiclightingonce=1;",
+      "sw_pos": [
+        -730.314,
+        -403.72,
+        165.163
+      ],
+      "godot_pos": [
+        -730.314,
+        165.163,
+        403.72
+      ]
+    },
+    {
+      "name": "cave_coffin_top",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "dynamiclightingonce=1;",
+      "sw_pos": [
+        17.526,
+        338.136,
+        -71.097
+      ],
+      "godot_pos": [
+        17.526,
+        -71.097,
+        -338.136
+      ]
+    },
+    {
+      "name": "light_scene",
+      "kind": "light",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -13977.479,
+        -4798.014,
+        18002.93
+      ],
+      "godot_pos": [
+        -13977.479,
+        18002.93,
+        4798.014
+      ]
+    },
+    {
+      "name": "light_scene.Target",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        89.725,
+        -0.003,
+        118.033
+      ],
+      "godot_pos": [
+        89.725,
+        118.033,
+        0.003
+      ]
+    },
+    {
+      "name": "curse",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "hiddenassets",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "userdata",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_intro\", #startxform: [#position: vector( -1.2532, -9.3590, -80.5445 ), #rotation: vector( 0.0000, 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000 )], #startatoriginalmotionstartposition: \"1\", #relocating: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_intro\", #startxform: [#position: vector( -1.2532, -9.3590, -80.5445 ), #rotation: vector( 0.0000, 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "skeleton_boss",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "collisionradius=4.5;",
+      "sw_pos": [
+        0.0,
+        -0.352,
+        9.005
+      ],
+      "godot_pos": [
+        0.0,
+        9.005,
+        0.352
+      ]
+    },
+    {
+      "name": "skeleton_boss_proxy",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        -0.136,
+        6.958
+      ],
+      "godot_pos": [
+        0.0,
+        6.958,
+        0.136
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"skeleton_boss_castmagic\", #startxform: [#position: vector( 0.0000, -0.3515, 12.9668 ), #rotation: vector( 0.0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz000, 0.0000, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"skeleton_boss_castmagic\", #startxform: [#position: vector( 0.0000, -0.3515, 12.9668 ), #rotation: vector( 0.0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"skeleton_boss_die\", #startxform: [#position: vector( 11.2304, 309.8608, -64.0100 ), #rotation: vector( 0.0000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, 0.0000, -180.0000 )], #startatoriginalmotionstartposition: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"skeleton_boss_die\", #startxform: [#position: vector( 11.2304, 309.8608, -64.0100 ), #rotation: vector( 0.0000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"cave_coffin_top_close\", #startxform: [#position: vector( 17.5258, 338.1363, -71.0970 ), #rotation: vector( -6 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz1.5400, 0.2871, -25.8827 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"cave_coffin_top_close\", #startxform: [#position: vector( 17.5258, 338.1363, -71.0970 ), #rotation: vector( -6 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"curse_1\", #startxform: [#position: vector( 26.0503, 281.9371, -58.0915 ), #rotation: vector( 0.0000, 0.0000,  ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"curse_1\", #startxform: [#position: vector( 26.0503, 281.9371, -58.0915 ), #rotation: vector( 0.0000, 0.0000,  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"curse_2\", #startxform: [#position: vector( -22.0507, 305.1115, -62.7891 ), #rotation: vector( 0.0000, 0.0000, ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"curse_2\", #startxform: [#position: vector( -22.0507, 305.1115, -62.7891 ), #rotation: vector( 0.0000, 0.0000, ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"curse_3\", #startxform: [#position: vector( 6.0905, 294.8937, -34.2227 ), #rotation: vector( 0.0000, 0.0000, 0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"curse_3\", #startxform: [#position: vector( 6.0905, 294.8937, -34.2227 ), #rotation: vector( 0.0000, 0.0000, 0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"curse_4\", #startxform: [#position: vector( 32.7574, 282.5948, -28.1321 ), #rotation: vector( 0.0000, 0.0000,  ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0.0000 )]]  ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"curse_4\", #startxform: [#position: vector( 32.7574, 282.5948, -28.1321 ), #rotation: vector( 0.0000, 0.0000,  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"skeleton_boss_fire\", #startxform: [#position: vector( 0.0000, -0.3515, 12.9668 ), #rotation: vector( 0.0000,  ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0.0000, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"skeleton_boss_fire\", #startxform: [#position: vector( 0.0000, -0.3515, 12.9668 ), #rotation: vector( 0.0000,  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"skeleton_boss_hit\", #startxform: [#position: vector( 0.0000, -0.3515, 12.9668 ), #rotation: vector( 0.0000, 0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz.0000, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"skeleton_boss_hit\", #startxform: [#position: vector( 0.0000, -0.3515, 12.9668 ), #rotation: vector( 0.0000, 0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"skeleton_boss_intro\", #startxform: [#position: vector( 11.2249, 328.3217, -83.8129 ), #rotation: vector( 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000, -180.0000 )], #startatoriginalmotionstartposition: \"1\", #relocating: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"skeleton_boss_intro\", #startxform: [#position: vector( 11.2249, 328.3217, -83.8129 ), #rotation: vector( 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"skeleton_boss_laugh\", #startxform: [#position: vector( 0.0000, -0.3515, 12.9668 ), #rotation: vector( 0.0000, ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz 0.0000, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"skeleton_boss_laugh\", #startxform: [#position: vector( 0.0000, -0.3515, 12.9668 ), #rotation: vector( 0.0000, ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"skeleton_boss_stand\", #startxform: [#position: vector( 0.0000, -0.3515, 12.9668 ), #rotation: vector( 0.0000, ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz 0.0000, 0.0000 )]]  ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"skeleton_boss_stand\", #startxform: [#position: vector( 0.0000, -0.3515, 12.9668 ), #rotation: vector( 0.0000, ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "statue",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "collisionradius=9;",
+      "sw_pos": [
+        0.0,
+        -0.352,
+        15.319
+      ],
+      "godot_pos": [
+        0.0,
+        15.319,
+        0.352
+      ]
+    },
+    {
+      "name": "statue_proxy",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        -0.136,
+        6.958
+      ],
+      "godot_pos": [
+        0.0,
+        6.958,
+        0.136
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"statue_charge\", #startxform: [#position: vector( 0.0000, -0.3520, 14.0047 ), #rotation: vector( 0.0000, 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"statue_charge\", #startxform: [#position: vector( 0.0000, -0.3520, 14.0047 ), #rotation: vector( 0.0000, 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"statue_piece02\", #startxform: [#position: vector( -0.0101, 1.9577, 26.8108 ), #rotation: vector( 0.0000, 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"statue_piece02\", #startxform: [#position: vector( -0.0101, 1.9577, 26.8108 ), #rotation: vector( 0.0000, 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"statue_piece03\", #startxform: [#position: vector( 6.3480, -0.2097, 21.3832 ), #rotation: vector( 0.0000, 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000 )]]  ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"statue_piece03\", #startxform: [#position: vector( 6.3480, -0.2097, 21.3832 ), #rotation: vector( 0.0000, 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"statue_piece01\", #startxform: [#position: vector( 8.2835, -0.3953, 16.6408 ), #rotation: vector( 0.0000, 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000 )]]   ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"statue_piece01\", #startxform: [#position: vector( 8.2835, -0.3953, 16.6408 ), #rotation: vector( 0.0000, 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"statue_piece06\", #startxform: [#position: vector( -8.1285, -0.2714, 18.0990 ), #rotation: vector( 0.0000, 0.0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz000, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"statue_piece06\", #startxform: [#position: vector( -8.1285, -0.2714, 18.0990 ), #rotation: vector( 0.0000, 0.0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"statue_piece13\", #startxform: [#position: vector( -0.1814, 1.4459, 22.3145 ), #rotation: vector( 0.0000, 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000 )]]    ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"statue_piece13\", #startxform: [#position: vector( -0.1814, 1.4459, 22.3145 ), #rotation: vector( 0.0000, 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"statue_piece07\", #startxform: [#position: vector( -0.1677, -0.3902, 15.1500 ), #rotation: vector( 0.0000, 0.0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz000, 0.0000 )]]  ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"statue_piece07\", #startxform: [#position: vector( -0.1677, -0.3902, 15.1500 ), #rotation: vector( 0.0000, 0.0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"statue_piece11\", #startxform: [#position: vector( -4.1725, 0.7710, 13.3488 ), #rotation: vector( 0.0000, 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000 )]]     ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"statue_piece11\", #startxform: [#position: vector( -4.1725, 0.7710, 13.3488 ), #rotation: vector( 0.0000, 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"statue_piece12\", #startxform: [#position: vector( 3.9937, 0.5723, 10.5960 ), #rotation: vector( 0.0000, 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000 )]]  ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"statue_piece12\", #startxform: [#position: vector( 3.9937, 0.5723, 10.5960 ), #rotation: vector( 0.0000, 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"statue_piece09\", #startxform: [#position: vector( -0.0101, -8.4402, 6.0798 ), #rotation: vector( 0.0000, 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000 )]]      ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"statue_piece09\", #startxform: [#position: vector( -0.0101, -8.4402, 6.0798 ), #rotation: vector( 0.0000, 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"statue_piece04\", #startxform: [#position: vector( 5.2164, 0.8399, 0.3692 ), #rotation: vector( 0.0000, 0.0000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"statue_piece04\", #startxform: [#position: vector( 5.2164, 0.8399, 0.3692 ), #rotation: vector( 0.0000, 0.0000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"statue_piece05\", #startxform: [#position: vector( -4.0138, 0.5723, 1.8781 ), #rotation: vector( 0.0000, 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000 )]]   ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"statue_piece05\", #startxform: [#position: vector( -4.0138, 0.5723, 1.8781 ), #rotation: vector( 0.0000, 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"statue_piece08\", #startxform: [#position: vector( -0.2895, -4.0389, 21.2988 ), #rotation: vector( 0.0000, 0.0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz000, 0.0000 )]]   ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"statue_piece08\", #startxform: [#position: vector( -0.2895, -4.0389, 21.2988 ), #rotation: vector( 0.0000, 0.0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "statue_die",
+      "kind": "group",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        -0.352,
+        15.319
+      ],
+      "godot_pos": [
+        0.0,
+        15.319,
+        0.352
+      ]
+    },
+    {
+      "name": "statue_piece02",
+      "kind": "model",
+      "parent": "statue_die",
+      "userdata": "",
+      "sw_pos": [
+        -0.01,
+        1.958,
+        26.811
+      ],
+      "godot_pos": [
+        -0.01,
+        26.811,
+        -1.958
+      ]
+    },
+    {
+      "name": "statue_piece03",
+      "kind": "model",
+      "parent": "statue_die",
+      "userdata": "",
+      "sw_pos": [
+        6.348,
+        -0.21,
+        21.383
+      ],
+      "godot_pos": [
+        6.348,
+        21.383,
+        0.21
+      ]
+    },
+    {
+      "name": "statue_piece01",
+      "kind": "model",
+      "parent": "statue_die",
+      "userdata": "",
+      "sw_pos": [
+        8.284,
+        -0.395,
+        16.641
+      ],
+      "godot_pos": [
+        8.284,
+        16.641,
+        0.395
+      ]
+    },
+    {
+      "name": "statue_piece06",
+      "kind": "model",
+      "parent": "statue_die",
+      "userdata": "",
+      "sw_pos": [
+        -8.128,
+        -0.271,
+        18.099
+      ],
+      "godot_pos": [
+        -8.128,
+        18.099,
+        0.271
+      ]
+    },
+    {
+      "name": "statue_piece13",
+      "kind": "model",
+      "parent": "statue_die",
+      "userdata": "",
+      "sw_pos": [
+        -0.181,
+        1.446,
+        22.315
+      ],
+      "godot_pos": [
+        -0.181,
+        22.315,
+        -1.446
+      ]
+    },
+    {
+      "name": "statue_piece07",
+      "kind": "model",
+      "parent": "statue_die",
+      "userdata": "",
+      "sw_pos": [
+        -0.168,
+        -0.39,
+        15.15
+      ],
+      "godot_pos": [
+        -0.168,
+        15.15,
+        0.39
+      ]
+    },
+    {
+      "name": "statue_piece11",
+      "kind": "model",
+      "parent": "statue_die",
+      "userdata": "",
+      "sw_pos": [
+        -4.172,
+        0.771,
+        13.349
+      ],
+      "godot_pos": [
+        -4.172,
+        13.349,
+        -0.771
+      ]
+    },
+    {
+      "name": "statue_piece12",
+      "kind": "model",
+      "parent": "statue_die",
+      "userdata": "",
+      "sw_pos": [
+        3.994,
+        0.572,
+        10.596
+      ],
+      "godot_pos": [
+        3.994,
+        10.596,
+        -0.572
+      ]
+    },
+    {
+      "name": "statue_piece09",
+      "kind": "model",
+      "parent": "statue_die",
+      "userdata": "",
+      "sw_pos": [
+        -0.01,
+        -8.44,
+        6.08
+      ],
+      "godot_pos": [
+        -0.01,
+        6.08,
+        8.44
+      ]
+    },
+    {
+      "name": "statue_piece04",
+      "kind": "model",
+      "parent": "statue_die",
+      "userdata": "",
+      "sw_pos": [
+        5.216,
+        0.84,
+        0.369
+      ],
+      "godot_pos": [
+        5.216,
+        0.369,
+        -0.84
+      ]
+    },
+    {
+      "name": "statue_piece05",
+      "kind": "model",
+      "parent": "statue_die",
+      "userdata": "",
+      "sw_pos": [
+        -4.014,
+        0.572,
+        1.878
+      ],
+      "godot_pos": [
+        -4.014,
+        1.878,
+        -0.572
+      ]
+    },
+    {
+      "name": "statue_piece10",
+      "kind": "model",
+      "parent": "statue_die",
+      "userdata": "",
+      "sw_pos": [
+        -3.688,
+        0.84,
+        0.996
+      ],
+      "godot_pos": [
+        -3.688,
+        0.996,
+        -0.84
+      ]
+    },
+    {
+      "name": "statue_piece08",
+      "kind": "model",
+      "parent": "statue_die",
+      "userdata": "",
+      "sw_pos": [
+        -0.289,
+        -4.039,
+        21.299
+      ],
+      "godot_pos": [
+        -0.289,
+        21.299,
+        4.039
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"statue_hit\", #startxform: [#position: vector( 0.0000, -0.3515, 15.3194 ), #rotation: vector( 0.0000, 0.0000,  ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0.0000 )], #collisionradius: \"9\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"statue_hit\", #startxform: [#position: vector( 0.0000, -0.3515, 15.3194 ), #rotation: vector( 0.0000, 0.0000,  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"statue_hitwall\", #startxform: [#position: vector( -1.1965, 0.1949, 12.8917 ), #rotation: vector( 0.0000, 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000 )]]       ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"statue_hitwall\", #startxform: [#position: vector( -1.1965, 0.1949, 12.8917 ), #rotation: vector( 0.0000, 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"statue_jumpdown\", #startxform: [#position: vector( 0.0000, -0.3515, 15.3194 ), #rotation: vector( 0.0000, 0.0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz000, 0.0000 )], #relocating: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"statue_jumpdown\", #startxform: [#position: vector( 0.0000, -0.3515, 15.3194 ), #rotation: vector( 0.0000, 0.0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"statue_run\", #startxform: [#position: vector( -1.1965, 0.1949, 12.9005 ), #rotation: vector( 0.0000, 0.0000,  ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0.0000 )], #distancepercycle: \"45.616\", #minimumspeed: \" .1\", #maximumspeed: \" 1\", #foot1up: \" 0->10, 17->26\", #foot2up: \"  ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"statue_run\", #startxform: [#position: vector( -1.1965, 0.1949, 12.9005 ), #rotation: vector( 0.0000, 0.0000,  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz4->22\"] ",
+      "kind": "group",
+      "parent": "zzz0.0000 )], #distancepercycle: \"45.616\", #minimumspeed: \" .1\", #maximumspeed: \" 1\", #foot1up: \" 0->10, 17->26\", #foot2up: \"  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "statue_stand",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "collisionradius=9;",
+      "sw_pos": [
+        0.0,
+        -0.352,
+        15.319
+      ],
+      "godot_pos": [
+        0.0,
+        15.319,
+        0.352
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"statue_turnleft\", #startxform: [#position: vector( 0.0000, -0.3520, 15.3190 ), #rotation: vector( 0.0000, 0.0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz000, 0.0000 )]]    ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"statue_turnleft\", #startxform: [#position: vector( 0.0000, -0.3520, 15.3190 ), #rotation: vector( 0.0000, 0.0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"statue_turnright\", #startxform: [#position: vector( 0.0000, -0.3520, 15.3190 ), #rotation: vector( 0.0000, 0. ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0000, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"statue_turnright\", #startxform: [#position: vector( 0.0000, -0.3520, 15.3190 ), #rotation: vector( 0.0000, 0. ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"statue_walk\", #startxform: [#position: vector( -1.1965, 0.1949, 12.9005 ), #rotation: vector( 0.0000, 0.0000, ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz 0.0000 )], #distancepercycle: \"45.616\", #minimumspeed: \" .1\", #maximumspeed: \" 1\", #foot1up: \" 0->10, 17->26\", #foot2up: \" ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"statue_walk\", #startxform: [#position: vector( -1.1965, 0.1949, 12.9005 ), #rotation: vector( 0.0000, 0.0000, ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz 4->22\"] ",
+      "kind": "group",
+      "parent": "zzz 0.0000 )], #distancepercycle: \"45.616\", #minimumspeed: \" .1\", #maximumspeed: \" 1\", #foot1up: \" 0->10, 17->26\", #foot2up: \" ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "texturerenderformatinfo",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[\"cave_stonewall\", #rgba5550] ",
+      "kind": "group",
+      "parent": "texturerenderformatinfo",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[\"statue_completemap\", #rgba8880] ",
+      "kind": "group",
+      "parent": "texturerenderformatinfo",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "TestLight",
+      "kind": "light",
+      "parent": "DefaultView",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    }
+  ],
+  "skeletons": [],
+  "animations": [
+    {
+      "name": "pinky_intro",
+      "tracks": 39,
+      "size": 15044
+    },
+    {
+      "name": "skeleton_boss",
+      "tracks": 36,
+      "size": 2640
+    },
+    {
+      "name": "skeleton_boss_castmagic",
+      "tracks": 36,
+      "size": 11424
+    },
+    {
+      "name": "skeleton_boss_die",
+      "tracks": 36,
+      "size": 25855
+    },
+    {
+      "name": "cave_coffin_top_close-key",
+      "tracks": 1,
+      "size": 1464
+    },
+    {
+      "name": "curse_1-key",
+      "tracks": 1,
+      "size": 893
+    },
+    {
+      "name": "curse_2-key",
+      "tracks": 1,
+      "size": 994
+    },
+    {
+      "name": "curse_3-key",
+      "tracks": 1,
+      "size": 1106
+    },
+    {
+      "name": "curse_4-key",
+      "tracks": 1,
+      "size": 952
+    },
+    {
+      "name": "skeleton_boss_fire",
+      "tracks": 36,
+      "size": 12822
+    },
+    {
+      "name": "skeleton_boss_hit",
+      "tracks": 36,
+      "size": 11787
+    },
+    {
+      "name": "skeleton_boss_intro",
+      "tracks": 36,
+      "size": 23279
+    },
+    {
+      "name": "skeleton_boss_laugh",
+      "tracks": 36,
+      "size": 16260
+    },
+    {
+      "name": "skeleton_boss_stand",
+      "tracks": 36,
+      "size": 7238
+    },
+    {
+      "name": "statue",
+      "tracks": 27,
+      "size": 1940
+    },
+    {
+      "name": "statue_charge",
+      "tracks": 27,
+      "size": 10530
+    },
+    {
+      "name": "statue_die_statue_piece02_statue_die",
+      "tracks": 1,
+      "size": 715
+    },
+    {
+      "name": "statue_die_statue_piece03_statue_die",
+      "tracks": 1,
+      "size": 869
+    },
+    {
+      "name": "statue_die_statue_piece01_statue_die",
+      "tracks": 1,
+      "size": 394
+    },
+    {
+      "name": "statue_die_statue_piece06_statue_die",
+      "tracks": 1,
+      "size": 416
+    },
+    {
+      "name": "statue_die_statue_piece13_statue_die",
+      "tracks": 1,
+      "size": 553
+    },
+    {
+      "name": "statue_die_statue_piece07_statue_die",
+      "tracks": 1,
+      "size": 371
+    },
+    {
+      "name": "statue_die_statue_piece11_statue_die",
+      "tracks": 1,
+      "size": 846
+    },
+    {
+      "name": "statue_die_statue_piece12_statue_die",
+      "tracks": 1,
+      "size": 677
+    },
+    {
+      "name": "statue_die_statue_piece09_statue_die",
+      "tracks": 1,
+      "size": 396
+    },
+    {
+      "name": "statue_die_statue_piece04_statue_die",
+      "tracks": 1,
+      "size": 234
+    },
+    {
+      "name": "statue_die_statue_piece05_statue_die",
+      "tracks": 1,
+      "size": 238
+    },
+    {
+      "name": "statue_die_statue_piece08_statue_die",
+      "tracks": 1,
+      "size": 395
+    },
+    {
+      "name": "statue_piece02-Key",
+      "tracks": 1,
+      "size": 697
+    },
+    {
+      "name": "statue_piece03-Key",
+      "tracks": 1,
+      "size": 842
+    },
+    {
+      "name": "statue_piece01-Key",
+      "tracks": 1,
+      "size": 376
+    },
+    {
+      "name": "statue_piece06-Key",
+      "tracks": 1,
+      "size": 392
+    },
+    {
+      "name": "statue_piece13-Key",
+      "tracks": 1,
+      "size": 538
+    },
+    {
+      "name": "statue_piece07-Key",
+      "tracks": 1,
+      "size": 353
+    },
+    {
+      "name": "statue_piece11-Key",
+      "tracks": 1,
+      "size": 828
+    },
+    {
+      "name": "statue_piece12-Key",
+      "tracks": 1,
+      "size": 659
+    },
+    {
+      "name": "statue_piece09-Key",
+      "tracks": 1,
+      "size": 378
+    },
+    {
+      "name": "statue_piece04-Key",
+      "tracks": 1,
+      "size": 216
+    },
+    {
+      "name": "statue_piece05-Key",
+      "tracks": 1,
+      "size": 220
+    },
+    {
+      "name": "statue_piece08-Key",
+      "tracks": 1,
+      "size": 377
+    },
+    {
+      "name": "statue_hit",
+      "tracks": 27,
+      "size": 1971
+    },
+    {
+      "name": "statue_hitwall",
+      "tracks": 27,
+      "size": 17415
+    },
+    {
+      "name": "statue_jumpdown",
+      "tracks": 27,
+      "size": 15132
+    },
+    {
+      "name": "statue_run",
+      "tracks": 27,
+      "size": 7539
+    },
+    {
+      "name": "statue_stand",
+      "tracks": 27,
+      "size": 1946
+    },
+    {
+      "name": "statue_turnleft",
+      "tracks": 27,
+      "size": 3891
+    },
+    {
+      "name": "statue_turnright",
+      "tracks": 27,
+      "size": 3892
+    },
+    {
+      "name": "statue_walk",
+      "tracks": 27,
+      "size": 7540
+    }
+  ]
+}

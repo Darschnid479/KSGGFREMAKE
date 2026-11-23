@@ -1,0 +1,199 @@
+{
+  "file": "world_map_underwater_generic_gameplay.w3d",
+  "nodes": [
+    {
+      "name": "scriptingdata",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "swimmer_pinky",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        0.095,
+        244.105,
+        0.0
+      ],
+      "godot_pos": [
+        0.095,
+        0.0,
+        -244.105
+      ]
+    },
+    {
+      "name": "validcameraarea",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#rectangle,#width:11.6456,#length:387,#transform:[1,0,0,0,0,1,0,0,0,0,1,0,-0.404617,46.507,-4.12527,1]]];",
+      "sw_pos": [
+        -0.405,
+        46.507,
+        -4.125
+      ],
+      "godot_pos": [
+        -0.405,
+        -4.125,
+        -46.507
+      ]
+    },
+    {
+      "name": "Global",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "trigger=startmap;\r\naction=pinky|starttakeair|1;\r\n\r\ntrigger = resumemap;\r\naction = playambience|underwater_ambience;\r\nonce = 0;\r\n\r\ntrigger=startmap_breathing;\r\naction=pinky|playcustomanimation|divein;\r\n\r\ntrigger=areatrigger_air1_enter;\r\naction=pinky|starttakeair|-15;\r\nonce=0;\r\n\r\ntrigger=areatrigger_air1_leave;\r\naction=pinky|stoptakeair|-15;\r\nonce=0;\r\n\r\ntrigger=areatrigger_air2_enter;\r\naction=pinky|starttakeair|-15;\r\nonce=0;\r\n\r\ntrigger=areatrigger_air2_leave;\r\naction=pinky|stoptakeair|-15;\r\nonce=0;\r\n\r\ntrigger = areatrigger_leave_enter;\r\naction = resumemap|world_map;",
+      "sw_pos": [
+        -1.296,
+        240.475,
+        0.0
+      ],
+      "godot_pos": [
+        -1.296,
+        0.0,
+        -240.475
+      ]
+    },
+    {
+      "name": "object_goldcoin_1",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "resource = goldcoin;\r\ntrigger = chest_opened;",
+      "sw_pos": [
+        7.411,
+        -159.543,
+        0.598
+      ],
+      "godot_pos": [
+        7.411,
+        0.598,
+        159.543
+      ]
+    },
+    {
+      "name": "areatrigger_leave",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#rectangle,#width:135.275,#length:36.7044,#transform:[1,0,0,0,0,1,0,0,0,0,1,0,1.75317,272.928,0,1]]];",
+      "sw_pos": [
+        1.753,
+        272.928,
+        0.0
+      ],
+      "godot_pos": [
+        1.753,
+        0.0,
+        -272.928
+      ]
+    },
+    {
+      "name": "areatrigger_chest",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#rectangle,#width:33.2103,#length:42.9815,#transform:[1,0,0,0,0,1,0,0,0,0,1,0,7.8186,-158.955,0,1]]];",
+      "sw_pos": [
+        7.819,
+        -158.955,
+        0.0
+      ],
+      "godot_pos": [
+        7.819,
+        0.0,
+        158.955
+      ]
+    },
+    {
+      "name": "behaviour",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "trigger = resumemap;\r\nrequirements = difficulty_1;\r\naction = queue|savegame;\r\n\r\ntrigger = resumemap_breathing;\r\naction = pinky|playcustomanimation|divein;\r\naction = playambience|underwater_ambience;\r\naction = playambience|swimming_music;\r\nonce = 0;\r\n\r\ntrigger=areatrigger_chest_enter;\r\naction=chest|open;\r\n\r\ntrigger=pinky_receiveditem_goldcoin+2;\r\naction=resumemap|world_map;",
+      "sw_pos": [
+        145.826,
+        252.428,
+        0.0
+      ],
+      "godot_pos": [
+        145.826,
+        0.0,
+        -252.428
+      ]
+    },
+    {
+      "name": "collisiondata",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -3.471,
+        40.137,
+        4.749
+      ],
+      "godot_pos": [
+        -3.471,
+        4.749,
+        -40.137
+      ]
+    },
+    {
+      "name": "Shape05",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(58.7254,357.888,3.43763),vector(-52.8178,357.399,3.43763),vector(-52.8124,-173.318,3.43764),vector(56.5226,-173.025,3.43764)],#closed:1]]];",
+      "sw_pos": [
+        -0.482,
+        17.248,
+        4.749
+      ],
+      "godot_pos": [
+        -0.482,
+        4.749,
+        -17.248
+      ]
+    },
+    {
+      "name": "defaultview",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        24.073,
+        259.573,
+        -2.0
+      ],
+      "godot_pos": [
+        24.073,
+        -2.0,
+        -259.573
+      ]
+    },
+    {
+      "name": "Default MAX Light",
+      "kind": "light",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        24.073,
+        259.573,
+        -2.0
+      ],
+      "godot_pos": [
+        24.073,
+        -2.0,
+        -259.573
+      ]
+    }
+  ],
+  "skeletons": [],
+  "animations": []
+}

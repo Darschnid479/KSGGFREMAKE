@@ -1,0 +1,442 @@
+{
+  "file": "tribesman.w3d",
+  "nodes": [
+    {
+      "name": "DefaultView",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "tribesman",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "collisionradius=2.7742;",
+      "sw_pos": [
+        0.0,
+        -0.136,
+        8.179
+      ],
+      "godot_pos": [
+        0.0,
+        8.179,
+        0.136
+      ]
+    },
+    {
+      "name": "tribesman_proxy",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        -0.136,
+        8.179
+      ],
+      "godot_pos": [
+        0.0,
+        8.179,
+        0.136
+      ]
+    },
+    {
+      "name": "hiddenassets",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "userdata",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"tribesman_attack\", #startxform: [#position: vector( 0.0000, -1.9433, 3.6800 ), #rotation: vector( 0.0000, 0.0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz000, 0.0000 )], #minimumspeed: \"0.7\", #maximumspeed: \"1.5\", #impact: \"40\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"tribesman_attack\", #startxform: [#position: vector( 0.0000, -1.9433, 3.6800 ), #rotation: vector( 0.0000, 0.0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"tribesman_die\", #startxform: [#position: vector( 0.1385, -0.5808, 7.6902 ), #rotation: vector( 0.0000, 0.0000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #loop: \"0\", #relocating: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"tribesman_die\", #startxform: [#position: vector( 0.1385, -0.5808, 7.6902 ), #rotation: vector( 0.0000, 0.0000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"tribesman_hide\", #startxform: [#position: vector( 0.0000, -1.9433, 3.6800 ), #rotation: vector( 0.0000, 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"tribesman_hide\", #startxform: [#position: vector( 0.0000, -1.9433, 3.6800 ), #rotation: vector( 0.0000, 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"tribesman_hit\", #startxform: [#position: vector( 0.1385, -0.5808, 7.6902 ), #rotation: vector( 0.0000, 0.0000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"tribesman_hit\", #startxform: [#position: vector( 0.1385, -0.5808, 7.6902 ), #rotation: vector( 0.0000, 0.0000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"tribesman_runaway\", #startxform: [#position: vector( 0.4314, 0.9233, 7.0243 ), #rotation: vector( 0.0000, 0.0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz000, 0.0000 )], #distancepercycle: \"32.3\", #minimumspeed: \"0.7\", #maximumspeed: \"1.5\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"tribesman_runaway\", #startxform: [#position: vector( 0.4314, 0.9233, 7.0243 ), #rotation: vector( 0.0000, 0.0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"tribesman_stand\", #startxform: [#position: vector( 0.0000, -1.9433, 3.6800 ), #rotation: vector( 0.0000, 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"tribesman_stand\", #startxform: [#position: vector( 0.0000, -1.9433, 3.6800 ), #rotation: vector( 0.0000, 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"tribesman_turn\", #startxform: [#position: vector( 0.1385, -0.5808, 7.6902 ), #rotation: vector( 0.0000, 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"]  ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"tribesman_turn\", #startxform: [#position: vector( 0.1385, -0.5808, 7.6902 ), #rotation: vector( 0.0000, 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"tribesman_turnleft\", #startxform: [#position: vector( -0.0689, 0.4273, 8.0588 ), #rotation: vector( 0.0000, 0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"tribesman_turnleft\", #startxform: [#position: vector( -0.0689, 0.4273, 8.0588 ), #rotation: vector( 0.0000, 0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"tribesman_turnright\", #startxform: [#position: vector( -0.0689, 0.4273, 8.0588 ), #rotation: vector( 0.0000,  ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"tribesman_turnright\", #startxform: [#position: vector( -0.0689, 0.4273, 8.0588 ), #rotation: vector( 0.0000,  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "TestLight",
+      "kind": "light",
+      "parent": "DefaultView",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    }
+  ],
+  "skeletons": [],
+  "animations": [
+    {
+      "name": "tribesman",
+      "tracks": 38,
+      "size": 2879
+    },
+    {
+      "name": "tribesman_attack",
+      "tracks": 38,
+      "size": 7250
+    },
+    {
+      "name": "tribesman_die",
+      "tracks": 38,
+      "size": 11373
+    },
+    {
+      "name": "tribesman_hide",
+      "tracks": 38,
+      "size": 7311
+    },
+    {
+      "name": "tribesman_hit",
+      "tracks": 38,
+      "size": 7198
+    },
+    {
+      "name": "tribesman_runaway",
+      "tracks": 38,
+      "size": 5027
+    },
+    {
+      "name": "tribesman_stand",
+      "tracks": 38,
+      "size": 7306
+    },
+    {
+      "name": "tribesman_turn",
+      "tracks": 38,
+      "size": 4151
+    },
+    {
+      "name": "tribesman_turnleft",
+      "tracks": 38,
+      "size": 9705
+    },
+    {
+      "name": "tribesman_turnright",
+      "tracks": 38,
+      "size": 9706
+    }
+  ]
+}

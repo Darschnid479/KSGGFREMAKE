@@ -1,0 +1,215 @@
+{
+  "file": "fatamorgana_underwater.w3d",
+  "nodes": [
+    {
+      "name": "DefaultView",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "UIAmbient",
+      "kind": "light",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "cake",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "hiddenassets",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "scene_light",
+      "kind": "light",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -129.696,
+        92.387,
+        22.574
+      ],
+      "godot_pos": [
+        -129.696,
+        22.574,
+        -92.387
+      ]
+    },
+    {
+      "name": "Camera01",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -124.888,
+        95.52,
+        119.897
+      ],
+      "godot_pos": [
+        -124.888,
+        119.897,
+        -95.52
+      ]
+    },
+    {
+      "name": "background_wall",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -12.301,
+        26.044,
+        -2.073
+      ],
+      "godot_pos": [
+        -12.301,
+        -2.073,
+        -26.044
+      ]
+    },
+    {
+      "name": "black_wall",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -11.209,
+        15.666,
+        18.674
+      ],
+      "godot_pos": [
+        -11.209,
+        18.674,
+        -15.666
+      ]
+    },
+    {
+      "name": "underwater_plant_18",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -125.796,
+        -54.266,
+        17.199
+      ],
+      "godot_pos": [
+        -125.796,
+        17.199,
+        54.266
+      ]
+    },
+    {
+      "name": "underwater_plant_19",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -102.408,
+        -56.251,
+        17.708
+      ],
+      "godot_pos": [
+        -102.408,
+        17.708,
+        56.251
+      ]
+    },
+    {
+      "name": "dots",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -11.069,
+        28.74,
+        13.716
+      ],
+      "godot_pos": [
+        -11.069,
+        13.716,
+        -28.74
+      ]
+    },
+    {
+      "name": "underwater_top",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -134.187,
+        115.431,
+        0.284
+      ],
+      "godot_pos": [
+        -134.187,
+        0.284,
+        -115.431
+      ]
+    },
+    {
+      "name": "TestLight",
+      "kind": "light",
+      "parent": "DefaultView",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    }
+  ],
+  "skeletons": [],
+  "animations": []
+}

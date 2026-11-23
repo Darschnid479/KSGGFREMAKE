@@ -1,0 +1,1169 @@
+{
+  "file": "magakhan_jungle.w3d",
+  "nodes": [
+    {
+      "name": "DefaultView",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "crocodile",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "collisionradius=10;",
+      "sw_pos": [
+        -0.0,
+        0.0,
+        0.673
+      ],
+      "godot_pos": [
+        -0.0,
+        0.673,
+        -0.0
+      ]
+    },
+    {
+      "name": "hiddenassets",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "userdata",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"crocodile_attack\", #startxform: [#position: vector( 0.0000, 0.0000, 0.6727 ), #rotation: vector( 0.0000, 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"crocodile_attack\", #startxform: [#position: vector( 0.0000, 0.0000, 0.6727 ), #rotation: vector( 0.0000, 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"crocodile_swim\", #startxform: [#position: vector( 0.0000, 0.0000, 0.6727 ), #rotation: vector( 0.0000, 0.0000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, 0.0000 )], #distancepercycle: \"16\", #minimumspeed: \"0.7\", #maximumspeed: \"1.5\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"crocodile_swim\", #startxform: [#position: vector( 0.0000, 0.0000, 0.6727 ), #rotation: vector( 0.0000, 0.0000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"jungle_gatedoor02\", #startxform: [#position: vector( -613.3723, 1.54958e3, 43.0882 ), #rotation: vector( 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"jungle_gatedoor02\", #startxform: [#position: vector( -613.3723, 1.54958e3, 43.0882 ), #rotation: vector( 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"jungle_gatedoor01\", #startxform: [#position: vector( -578.8694, 1.54958e3, 43.0986 ), #rotation: vector( 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000, 0.0000 )]]  ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"jungle_gatedoor01\", #startxform: [#position: vector( -578.8694, 1.54958e3, 43.0986 ), #rotation: vector( 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "MapExportCamera",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -40.525,
+        5.752,
+        2292.206
+      ],
+      "godot_pos": [
+        -40.525,
+        2292.206,
+        -5.752
+      ]
+    },
+    {
+      "name": "MapExportCamera.Target",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -40.665,
+        5.752,
+        0.021
+      ],
+      "godot_pos": [
+        -40.665,
+        0.021,
+        -5.752
+      ]
+    },
+    {
+      "name": "jungle_gatedoor02",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -613.372,
+        1549.584,
+        43.088
+      ],
+      "godot_pos": [
+        -613.372,
+        43.088,
+        -1549.584
+      ]
+    },
+    {
+      "name": "jungle_gatedoor01",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -578.869,
+        1549.584,
+        43.099
+      ],
+      "godot_pos": [
+        -578.869,
+        43.099,
+        -1549.584
+      ]
+    },
+    {
+      "name": "shadowlightsource",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        1396.677,
+        -172.527,
+        9816.108
+      ],
+      "godot_pos": [
+        1396.677,
+        9816.108,
+        172.527
+      ]
+    },
+    {
+      "name": "foginfo",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "color=#77a889;\r\nfar=3000;\r\ndecaymode=exponential;\r\nlowfog_enabled=0;\r\nlowfog_color=b17561;\r\nlowfog_far=13000;\r\nlowfog_decaymode=exponential;",
+      "sw_pos": [
+        -250.253,
+        86.578,
+        -1243.749
+      ],
+      "godot_pos": [
+        -250.253,
+        -1243.749,
+        -86.578
+      ]
+    },
+    {
+      "name": "jungle_branchroof",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        305.367,
+        7.286,
+        266.704
+      ],
+      "godot_pos": [
+        305.367,
+        266.704,
+        -7.286
+      ]
+    },
+    {
+      "name": "jungle_water01",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "animateuv_u=0.3;\r\nanimateuv_v=0;\r\nportal=portal2;",
+      "sw_pos": [
+        230.334,
+        -617.56,
+        45.665
+      ],
+      "godot_pos": [
+        230.334,
+        45.665,
+        617.56
+      ]
+    },
+    {
+      "name": "portal11_veg",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "portal=portal11;",
+      "sw_pos": [
+        -114.713,
+        214.239,
+        48.569
+      ],
+      "godot_pos": [
+        -114.713,
+        48.569,
+        -214.239
+      ]
+    },
+    {
+      "name": "waterfall_2",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "animateuv_u=0;\r\nanimateuv_v=-0.8;\r\nportal=portal2;",
+      "sw_pos": [
+        7.685,
+        -579.53,
+        120.547
+      ],
+      "godot_pos": [
+        7.685,
+        120.547,
+        579.53
+      ]
+    },
+    {
+      "name": "waterfall_03",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "portal=portal2;\r\nanimateuv_u=0;\r\nanimateuv_v=-0.8;",
+      "sw_pos": [
+        11.117,
+        -653.965,
+        120.547
+      ],
+      "godot_pos": [
+        11.117,
+        120.547,
+        653.965
+      ]
+    },
+    {
+      "name": "waterfall_05",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "portal=portal2;\r\nanimateuv_u=0;\r\nanimateuv_v=-0.8;",
+      "sw_pos": [
+        9.605,
+        -579.12,
+        120.547
+      ],
+      "godot_pos": [
+        9.605,
+        120.547,
+        579.12
+      ]
+    },
+    {
+      "name": "waterfall_06",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "portal=portal2;\r\nanimateuv_u=0;\r\nanimateuv_v=-0.8;",
+      "sw_pos": [
+        12.969,
+        -652.198,
+        120.547
+      ],
+      "godot_pos": [
+        12.969,
+        120.547,
+        652.198
+      ]
+    },
+    {
+      "name": "scene_light",
+      "kind": "light",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        4152.825,
+        -0.0,
+        7779.603
+      ],
+      "godot_pos": [
+        4152.825,
+        7779.603,
+        0.0
+      ]
+    },
+    {
+      "name": "scene_light.Target",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        303.697,
+        0.0,
+        -3.117
+      ],
+      "godot_pos": [
+        303.697,
+        -3.117,
+        -0.0
+      ]
+    },
+    {
+      "name": "scene_light01",
+      "kind": "light",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        4183.107,
+        -34.356,
+        7779.603
+      ],
+      "godot_pos": [
+        4183.107,
+        7779.603,
+        34.356
+      ]
+    },
+    {
+      "name": "scene_light01.Target",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        303.697,
+        0.0,
+        -3.117
+      ],
+      "godot_pos": [
+        303.697,
+        -3.117,
+        -0.0
+      ]
+    },
+    {
+      "name": "light_smoke_5",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "flarebillboard=1;\r\nportal=portal1;",
+      "sw_pos": [
+        -68.863,
+        -1356.8,
+        228.511
+      ],
+      "godot_pos": [
+        -68.863,
+        228.511,
+        1356.8
+      ]
+    },
+    {
+      "name": "mk_torch_1",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -619.684,
+        1538.206,
+        53.909
+      ],
+      "godot_pos": [
+        -619.684,
+        53.909,
+        -1538.206
+      ]
+    },
+    {
+      "name": "mk_torch_02",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -572.697,
+        1538.206,
+        53.909
+      ],
+      "godot_pos": [
+        -572.697,
+        53.909,
+        -1538.206
+      ]
+    },
+    {
+      "name": "light_smoke_1",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "flarebillboard=1;\r\nportal=portal2;",
+      "sw_pos": [
+        281.875,
+        -613.159,
+        202.093
+      ],
+      "godot_pos": [
+        281.875,
+        202.093,
+        613.159
+      ]
+    },
+    {
+      "name": "light_smoke_2",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "flarebillboard=1;\r\nportal=portal7;",
+      "sw_pos": [
+        -46.145,
+        659.538,
+        168.757
+      ],
+      "godot_pos": [
+        -46.145,
+        168.757,
+        -659.538
+      ]
+    },
+    {
+      "name": "light_smoke_3",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "flarebillboard=1;\r\nportal=portal8;",
+      "sw_pos": [
+        679.567,
+        390.35,
+        151.658
+      ],
+      "godot_pos": [
+        679.567,
+        151.658,
+        -390.35
+      ]
+    },
+    {
+      "name": "light_smoke_08",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "flarebillboard=1;\r\nportal=portal10;",
+      "sw_pos": [
+        -801.996,
+        1159.792,
+        165.141
+      ],
+      "godot_pos": [
+        -801.996,
+        165.141,
+        -1159.792
+      ]
+    },
+    {
+      "name": "light_smoke_6",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "flarebillboard=1;\r\nportal=portal11;",
+      "sw_pos": [
+        -533.791,
+        1497.678,
+        145.319
+      ],
+      "godot_pos": [
+        -533.791,
+        145.319,
+        -1497.678
+      ]
+    },
+    {
+      "name": "Line03",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -128.088,
+        -1419.162,
+        0.0
+      ],
+      "godot_pos": [
+        -128.088,
+        0.0,
+        1419.162
+      ]
+    },
+    {
+      "name": "portal1",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "alwaysmovecamerainfront=1;\r\nportal=portal1;",
+      "sw_pos": [
+        -114.713,
+        214.239,
+        48.569
+      ],
+      "godot_pos": [
+        -114.713,
+        48.569,
+        -214.239
+      ]
+    },
+    {
+      "name": "portal2",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "portal=portal2;\r\nalwaysmovecamerainfront=1;",
+      "sw_pos": [
+        178.313,
+        -753.433,
+        107.183
+      ],
+      "godot_pos": [
+        178.313,
+        107.183,
+        753.433
+      ]
+    },
+    {
+      "name": "portal3",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "portal=portal3;\r\nalwaysmovecamerainfront=1;",
+      "sw_pos": [
+        288.214,
+        -181.534,
+        134.789
+      ],
+      "godot_pos": [
+        288.214,
+        134.789,
+        181.534
+      ]
+    },
+    {
+      "name": "plantevegg_00",
+      "kind": "model",
+      "parent": "portal3",
+      "userdata": "portal=portal3;\r\nalwaysmovecamerainfront=1;",
+      "sw_pos": [
+        288.405,
+        -324.264,
+        53.804
+      ],
+      "godot_pos": [
+        288.405,
+        53.804,
+        324.264
+      ]
+    },
+    {
+      "name": "portal4",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "portal=portal4;\r\nalwaysmovecamerainfront=1;",
+      "sw_pos": [
+        65.754,
+        163.569,
+        133.009
+      ],
+      "godot_pos": [
+        65.754,
+        133.009,
+        -163.569
+      ]
+    },
+    {
+      "name": "plantevegg_02",
+      "kind": "model",
+      "parent": "portal4",
+      "userdata": "portal=portal4;\r\nalwaysmovecamerainfront=1;",
+      "sw_pos": [
+        -26.788,
+        224.346,
+        53.11
+      ],
+      "godot_pos": [
+        -26.788,
+        53.11,
+        -224.346
+      ]
+    },
+    {
+      "name": "portal6",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "portal=portal6;\r\nalwaysmovecamerainfront=1;",
+      "sw_pos": [
+        -430.862,
+        399.316,
+        134.452
+      ],
+      "godot_pos": [
+        -430.862,
+        134.452,
+        -399.316
+      ]
+    },
+    {
+      "name": "portal7",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "portal=portal7;\r\nalwaysmovecamerainfront=1;",
+      "sw_pos": [
+        -7.898,
+        617.839,
+        117.825
+      ],
+      "godot_pos": [
+        -7.898,
+        117.825,
+        -617.839
+      ]
+    },
+    {
+      "name": "plantevegg_04",
+      "kind": "model",
+      "parent": "portal7",
+      "userdata": "portal=portal7;\r\nalwaysmovecamerainfront=1;",
+      "sw_pos": [
+        -109.868,
+        521.877,
+        15.203
+      ],
+      "godot_pos": [
+        -109.868,
+        15.203,
+        -521.877
+      ]
+    },
+    {
+      "name": "plantevegg_03",
+      "kind": "model",
+      "parent": "portal7",
+      "userdata": "portal=portal7;\r\nalwaysmovecamerainfront=1;",
+      "sw_pos": [
+        165.087,
+        471.434,
+        2.997
+      ],
+      "godot_pos": [
+        165.087,
+        2.997,
+        -471.434
+      ]
+    },
+    {
+      "name": "portal8",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "portal=portal8;\r\nalwaysmovecamerainfront=1;",
+      "sw_pos": [
+        520.359,
+        413.432,
+        104.517
+      ],
+      "godot_pos": [
+        520.359,
+        104.517,
+        -413.432
+      ]
+    },
+    {
+      "name": "plantevegg_01",
+      "kind": "model",
+      "parent": "portal8",
+      "userdata": "portal=portal8;\r\nalwaysmovecamerainfront=1;",
+      "sw_pos": [
+        606.887,
+        307.071,
+        12.332
+      ],
+      "godot_pos": [
+        606.887,
+        12.332,
+        -307.071
+      ]
+    },
+    {
+      "name": "portal9",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "portal=portal9;\r\nalwaysmovecamerainfront=1;",
+      "sw_pos": [
+        -264.173,
+        881.106,
+        108.932
+      ],
+      "godot_pos": [
+        -264.173,
+        108.932,
+        -881.106
+      ]
+    },
+    {
+      "name": "portal10",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "portal=portal10;\r\nalwaysmovecamerainfront=1;",
+      "sw_pos": [
+        -704.512,
+        978.616,
+        108.082
+      ],
+      "godot_pos": [
+        -704.512,
+        108.082,
+        -978.616
+      ]
+    },
+    {
+      "name": "portal11",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "portal=portal11;\r\nalwaysmovecamerainfront=1;",
+      "sw_pos": [
+        -498.127,
+        1119.063,
+        121.143
+      ],
+      "godot_pos": [
+        -498.127,
+        121.143,
+        -1119.063
+      ]
+    },
+    {
+      "name": "portal5",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "portal=portal5;\r\nalwaysmovecamerainfront=1;",
+      "sw_pos": [
+        -218.381,
+        352.18,
+        121.856
+      ],
+      "godot_pos": [
+        -218.381,
+        121.856,
+        -352.18
+      ]
+    },
+    {
+      "name": "plantevegg_05",
+      "kind": "model",
+      "parent": "portal5",
+      "userdata": "portal=portal5;\r\nalwaysmovecamerainfront=1;",
+      "sw_pos": [
+        -323.301,
+        449.057,
+        52.675
+      ],
+      "godot_pos": [
+        -323.301,
+        52.675,
+        -449.057
+      ]
+    },
+    {
+      "name": "portal1_veg",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "portal=portal1;",
+      "sw_pos": [
+        -114.713,
+        214.239,
+        48.569
+      ],
+      "godot_pos": [
+        -114.713,
+        48.569,
+        -214.239
+      ]
+    },
+    {
+      "name": "portal2_veg",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "portal=portal2;",
+      "sw_pos": [
+        -114.713,
+        214.239,
+        48.569
+      ],
+      "godot_pos": [
+        -114.713,
+        48.569,
+        -214.239
+      ]
+    },
+    {
+      "name": "portal3_veg",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "portal=portal3;",
+      "sw_pos": [
+        -114.713,
+        214.239,
+        48.569
+      ],
+      "godot_pos": [
+        -114.713,
+        48.569,
+        -214.239
+      ]
+    },
+    {
+      "name": "portal4_veg",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "portal=portal4;",
+      "sw_pos": [
+        -114.713,
+        214.239,
+        48.569
+      ],
+      "godot_pos": [
+        -114.713,
+        48.569,
+        -214.239
+      ]
+    },
+    {
+      "name": "portal5_veg",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "portal=portal5;",
+      "sw_pos": [
+        -114.713,
+        214.239,
+        48.569
+      ],
+      "godot_pos": [
+        -114.713,
+        48.569,
+        -214.239
+      ]
+    },
+    {
+      "name": "portal6_veg",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "portal=portal6;",
+      "sw_pos": [
+        -114.713,
+        214.239,
+        48.569
+      ],
+      "godot_pos": [
+        -114.713,
+        48.569,
+        -214.239
+      ]
+    },
+    {
+      "name": "portal8_veg",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "portal=portal8;",
+      "sw_pos": [
+        -114.713,
+        214.239,
+        48.569
+      ],
+      "godot_pos": [
+        -114.713,
+        48.569,
+        -214.239
+      ]
+    },
+    {
+      "name": "portal7_veg",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "portal=portal7;",
+      "sw_pos": [
+        -114.713,
+        214.239,
+        48.569
+      ],
+      "godot_pos": [
+        -114.713,
+        48.569,
+        -214.239
+      ]
+    },
+    {
+      "name": "portal9_veg",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "portal=portal9;",
+      "sw_pos": [
+        -114.713,
+        214.239,
+        48.569
+      ],
+      "godot_pos": [
+        -114.713,
+        48.569,
+        -214.239
+      ]
+    },
+    {
+      "name": "portal10_veg",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "portal=portal10;",
+      "sw_pos": [
+        -114.713,
+        214.239,
+        48.569
+      ],
+      "godot_pos": [
+        -114.713,
+        48.569,
+        -214.239
+      ]
+    },
+    {
+      "name": "light_smoke_09",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "flarebillboard=1;\r\nportal=portal8;",
+      "sw_pos": [
+        790.767,
+        401.631,
+        151.658
+      ],
+      "godot_pos": [
+        790.767,
+        151.658,
+        -401.631
+      ]
+    },
+    {
+      "name": "crate_rope",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "portal=portal8;",
+      "sw_pos": [
+        641.294,
+        506.862,
+        41.279
+      ],
+      "godot_pos": [
+        641.294,
+        41.279,
+        -506.862
+      ]
+    },
+    {
+      "name": "meat",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "texturerenderformatinfo",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[\"magapalace_bricks\", #rgba5550] ",
+      "kind": "group",
+      "parent": "texturerenderformatinfo",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "TestLight",
+      "kind": "light",
+      "parent": "DefaultView",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    }
+  ],
+  "skeletons": [],
+  "animations": [
+    {
+      "name": "crocodile",
+      "tracks": 20,
+      "size": 1684
+    },
+    {
+      "name": "crocodile_attack",
+      "tracks": 20,
+      "size": 5625
+    },
+    {
+      "name": "crocodile_swim",
+      "tracks": 20,
+      "size": 4173
+    },
+    {
+      "name": "jungle_gatedoor02-key",
+      "tracks": 1,
+      "size": 278
+    },
+    {
+      "name": "jungle_gatedoor01-key",
+      "tracks": 1,
+      "size": 301
+    }
+  ]
+}

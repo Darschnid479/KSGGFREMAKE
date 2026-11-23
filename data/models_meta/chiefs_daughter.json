@@ -1,0 +1,384 @@
+{
+  "file": "chiefs_daughter.w3d",
+  "nodes": [
+    {
+      "name": "DefaultView",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "chiefs_daughter",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "collisionradius=2.1;",
+      "sw_pos": [
+        -0.0,
+        -0.136,
+        5.295
+      ],
+      "godot_pos": [
+        -0.0,
+        5.295,
+        0.136
+      ]
+    },
+    {
+      "name": "look_at",
+      "kind": "group",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        15.0,
+        11.408
+      ],
+      "godot_pos": [
+        0.0,
+        11.408,
+        -15.0
+      ]
+    },
+    {
+      "name": "chiefs_daughter_proxy",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        -0.136,
+        5.295
+      ],
+      "godot_pos": [
+        0.0,
+        5.295,
+        0.136
+      ]
+    },
+    {
+      "name": "hiddenassets",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "userdata",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"chiefs_daughter_run\", #startxform: [#position: vector( 0.2136, -0.1360, 5.0421 ), #rotation: vector( 0.0000,  ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0.0000, 0.0000 )], #distancepercycle: \"17.144\", #minimumspeed: \"0.7\", #maximumspeed: \"1.5\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"chiefs_daughter_run\", #startxform: [#position: vector( 0.2136, -0.1360, 5.0421 ), #rotation: vector( 0.0000,  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"chiefs_daughter_stand_breathe\", #startxform: [#position: vector( -0.2588, -0.1360, 5.2784 ), #rotation: vecto ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzzr( 0.0000, 0.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"chiefs_daughter_stand_breathe\", #startxform: [#position: vector( -0.2588, -0.1360, 5.2784 ), #rotation: vecto ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"chiefs_daughter_stand_talk\", #startxform: [#position: vector( -0.2588, -0.1360, 5.2784 ), #rotation: vector(  ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0.0000, 0.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"chiefs_daughter_stand_talk\", #startxform: [#position: vector( -0.2588, -0.1360, 5.2784 ), #rotation: vector(  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"chiefs_daughter_turnleft\", #startxform: [#position: vector( -0.2588, -0.1360, 5.2784 ), #rotation: vector( 0. ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0000, 0.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"chiefs_daughter_turnleft\", #startxform: [#position: vector( -0.2588, -0.1360, 5.2784 ), #rotation: vector( 0. ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"chiefs_daughter_turnright\", #startxform: [#position: vector( -0.2588, -0.1360, 5.2784 ), #rotation: vector( 0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz.0000, 0.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"chiefs_daughter_turnright\", #startxform: [#position: vector( -0.2588, -0.1360, 5.2784 ), #rotation: vector( 0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"chiefs_daughter_walk\", #startxform: [#position: vector( 0.2136, -0.1360, 5.1215 ), #rotation: vector( 0.0000, ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz 0.0000, 0.0000 )], #distancepercycle: \"10.419\", #minimumspeed: \"0.1\", #maximumspeed: \"1.5\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"chiefs_daughter_walk\", #startxform: [#position: vector( 0.2136, -0.1360, 5.1215 ), #rotation: vector( 0.0000, ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"chiefs_daughter_walk_talk\", #startxform: [#position: vector( 0.2136, -0.1360, 5.1215 ), #rotation: vector( 0. ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0000, 0.0000, 0.0000 )], #distancepercycle: \"10.419\", #minimumspeed: \"0.1\", #maximumspeed: \"1.5\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"chiefs_daughter_walk_talk\", #startxform: [#position: vector( 0.2136, -0.1360, 5.1215 ), #rotation: vector( 0. ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "TestLight",
+      "kind": "light",
+      "parent": "DefaultView",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    }
+  ],
+  "skeletons": [],
+  "animations": [
+    {
+      "name": "chiefs_daughter",
+      "tracks": 35,
+      "size": 2596
+    },
+    {
+      "name": "chiefs_daughter_run",
+      "tracks": 35,
+      "size": 7811
+    },
+    {
+      "name": "chiefs_daughter_stand_breathe",
+      "tracks": 35,
+      "size": 3362
+    },
+    {
+      "name": "chiefs_daughter_stand_talk",
+      "tracks": 35,
+      "size": 4538
+    },
+    {
+      "name": "chiefs_daughter_turnleft",
+      "tracks": 35,
+      "size": 5296
+    },
+    {
+      "name": "chiefs_daughter_turnright",
+      "tracks": 35,
+      "size": 5297
+    },
+    {
+      "name": "chiefs_daughter_walk",
+      "tracks": 35,
+      "size": 8612
+    },
+    {
+      "name": "chiefs_daughter_walk_talk",
+      "tracks": 35,
+      "size": 8768
+    }
+  ]
+}

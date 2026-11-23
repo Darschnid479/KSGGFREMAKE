@@ -1,0 +1,679 @@
+{
+  "file": "world_map_gameplay.w3d",
+  "nodes": [
+    {
+      "name": "enemyship_validpositions",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        4.952,
+        12.132,
+        0.0
+      ],
+      "godot_pos": [
+        4.952,
+        0.0,
+        -12.132
+      ]
+    },
+    {
+      "name": "Circle01",
+      "kind": "group",
+      "parent": "enemyship_validpositions",
+      "userdata": "splinedata=[#type:#circle,#radius:496.865,#position:vector(-3117.86,1227.13,0)];",
+      "sw_pos": [
+        -3117.857,
+        1227.131,
+        0.0
+      ],
+      "godot_pos": [
+        -3117.857,
+        0.0,
+        -1227.131
+      ]
+    },
+    {
+      "name": "Circle02",
+      "kind": "group",
+      "parent": "enemyship_validpositions",
+      "userdata": "splinedata=[#type:#circle,#radius:543.59,#position:vector(-968.09,2246.89,0)];",
+      "sw_pos": [
+        -968.09,
+        2246.893,
+        0.0
+      ],
+      "godot_pos": [
+        -968.09,
+        0.0,
+        -2246.893
+      ]
+    },
+    {
+      "name": "Circle03",
+      "kind": "group",
+      "parent": "enemyship_validpositions",
+      "userdata": "splinedata=[#type:#circle,#radius:619.359,#position:vector(1319.48,2246.89,0)];",
+      "sw_pos": [
+        1319.483,
+        2246.893,
+        0.0
+      ],
+      "godot_pos": [
+        1319.483,
+        0.0,
+        -2246.893
+      ]
+    },
+    {
+      "name": "Circle04",
+      "kind": "group",
+      "parent": "enemyship_validpositions",
+      "userdata": "splinedata=[#type:#circle,#radius:532.294,#position:vector(3882.67,2660.31,0)];",
+      "sw_pos": [
+        3882.667,
+        2660.31,
+        0.0
+      ],
+      "godot_pos": [
+        3882.667,
+        0.0,
+        -2660.31
+      ]
+    },
+    {
+      "name": "Circle05",
+      "kind": "group",
+      "parent": "enemyship_validpositions",
+      "userdata": "splinedata=[#type:#circle,#radius:493.028,#position:vector(4847.31,455.42,0)];",
+      "sw_pos": [
+        4847.306,
+        455.42,
+        0.0
+      ],
+      "godot_pos": [
+        4847.306,
+        0.0,
+        -455.42
+      ]
+    },
+    {
+      "name": "Circle06",
+      "kind": "group",
+      "parent": "enemyship_validpositions",
+      "userdata": "splinedata=[#type:#circle,#radius:532.294,#position:vector(4103.16,-977.758,0)];",
+      "sw_pos": [
+        4103.157,
+        -977.758,
+        0.0
+      ],
+      "godot_pos": [
+        4103.157,
+        0.0,
+        977.758
+      ]
+    },
+    {
+      "name": "Circle07",
+      "kind": "group",
+      "parent": "enemyship_validpositions",
+      "userdata": "splinedata=[#type:#circle,#radius:547.073,#position:vector(1539.97,-1611.66,0)];",
+      "sw_pos": [
+        1539.972,
+        -1611.664,
+        0.0
+      ],
+      "godot_pos": [
+        1539.972,
+        0.0,
+        1611.664
+      ]
+    },
+    {
+      "name": "Circle08",
+      "kind": "group",
+      "parent": "enemyship_validpositions",
+      "userdata": "splinedata=[#type:#circle,#radius:526.554,#position:vector(3028.27,-3458.26,0)];",
+      "sw_pos": [
+        3028.273,
+        -3458.259,
+        0.0
+      ],
+      "godot_pos": [
+        3028.273,
+        0.0,
+        3458.259
+      ]
+    },
+    {
+      "name": "Circle09",
+      "kind": "group",
+      "parent": "enemyship_validpositions",
+      "userdata": "splinedata=[#type:#circle,#radius:581.402,#position:vector(-968.09,-3706.31,0)];",
+      "sw_pos": [
+        -968.09,
+        -3706.309,
+        0.0
+      ],
+      "godot_pos": [
+        -968.09,
+        0.0,
+        3706.309
+      ]
+    },
+    {
+      "name": "Circle10",
+      "kind": "group",
+      "parent": "enemyship_validpositions",
+      "userdata": "splinedata=[#type:#circle,#radius:487.606,#position:vector(-3365.91,-4202.41,0)];",
+      "sw_pos": [
+        -3365.907,
+        -4202.409,
+        0.0
+      ],
+      "godot_pos": [
+        -3365.907,
+        0.0,
+        4202.409
+      ]
+    },
+    {
+      "name": "Circle11",
+      "kind": "group",
+      "parent": "enemyship_validpositions",
+      "userdata": "splinedata=[#type:#circle,#radius:448.663,#position:vector(-4881.77,-895.075,0)];",
+      "sw_pos": [
+        -4881.769,
+        -895.075,
+        0.0
+      ],
+      "godot_pos": [
+        -4881.769,
+        0.0,
+        895.075
+      ]
+    },
+    {
+      "name": "Circle12",
+      "kind": "group",
+      "parent": "enemyship_validpositions",
+      "userdata": "splinedata=[#type:#circle,#radius:526.555,#position:vector(-2566.63,-647.025,0)];",
+      "sw_pos": [
+        -2566.635,
+        -647.025,
+        0.0
+      ],
+      "godot_pos": [
+        -2566.635,
+        0.0,
+        647.025
+      ]
+    },
+    {
+      "name": "Circle13",
+      "kind": "group",
+      "parent": "enemyship_validpositions",
+      "userdata": "splinedata=[#type:#circle,#radius:331.88,#position:vector(-4606.16,2963.48,0)];",
+      "sw_pos": [
+        -4606.157,
+        2963.482,
+        0.0
+      ],
+      "godot_pos": [
+        -4606.157,
+        0.0,
+        -2963.482
+      ]
+    },
+    {
+      "name": "Circle14",
+      "kind": "group",
+      "parent": "enemyship_validpositions",
+      "userdata": "splinedata=[#type:#circle,#radius:304.423,#position:vector(-416.867,4286.42,0)];",
+      "sw_pos": [
+        -416.867,
+        4286.416,
+        0.0
+      ],
+      "godot_pos": [
+        -416.867,
+        0.0,
+        -4286.416
+      ]
+    },
+    {
+      "name": "Circle15",
+      "kind": "group",
+      "parent": "enemyship_validpositions",
+      "userdata": "splinedata=[#type:#circle,#radius:427.864,#position:vector(2862.91,4286.42,0)];",
+      "sw_pos": [
+        2862.906,
+        4286.416,
+        0.0
+      ],
+      "godot_pos": [
+        2862.906,
+        0.0,
+        -4286.416
+      ]
+    },
+    {
+      "name": "Circle16",
+      "kind": "group",
+      "parent": "enemyship_validpositions",
+      "userdata": "splinedata=[#type:#circle,#radius:389.773,#position:vector(-3007.61,3046.17,0)];",
+      "sw_pos": [
+        -3007.612,
+        3046.165,
+        0.0
+      ],
+      "godot_pos": [
+        -3007.612,
+        0.0,
+        -3046.165
+      ]
+    },
+    {
+      "name": "Circle17",
+      "kind": "group",
+      "parent": "enemyship_validpositions",
+      "userdata": "splinedata=[#type:#circle,#radius:359.353,#position:vector(-416.867,-1363.61,0)];",
+      "sw_pos": [
+        -416.867,
+        -1363.614,
+        0.0
+      ],
+      "godot_pos": [
+        -416.867,
+        0.0,
+        1363.614
+      ]
+    },
+    {
+      "name": "scriptingdata",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "Dummy01",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "trigger = resumemap;\r\naction = queue|savegame;\r\nonce = 0;\r\n\r\ntrigger = resumemap_breathing;\r\naction = playambience|world_map_ambience;\r\naction = playambience|world_map_music;\r\nonce = 0;\r\n\r\ntrigger = startmap;\r\nrequirements = pinky_hasachieved_finishedcave;\r\naction = darklady|zapto|position_abra;\r\naction = camera|snap;",
+      "sw_pos": [
+        -12598.906,
+        2888.664,
+        0.0
+      ],
+      "godot_pos": [
+        -12598.906,
+        0.0,
+        -2888.664
+      ]
+    },
+    {
+      "name": "walkoverpickup_treasurehunt1_map",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "resource=treasuremapicon;\r\ninventoryname=treasurehunt1map;\r\nonlyrotatearoundz=1;",
+      "sw_pos": [
+        746.458,
+        -349.602,
+        8.0
+      ],
+      "godot_pos": [
+        746.458,
+        8.0,
+        349.602
+      ]
+    },
+    {
+      "name": "walkoverpickup_treasurehunt2_map",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "requirements=pinky_hasachieved_treasurehunt1won;\r\nresource=treasuremapicon;\r\ninventoryname=treasurehunt2map;\r\nonlyrotatearoundz=1;",
+      "sw_pos": [
+        -1658.396,
+        556.018,
+        8.0
+      ],
+      "godot_pos": [
+        -1658.396,
+        8.0,
+        -556.018
+      ]
+    },
+    {
+      "name": "sabeltannboat_darklady",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        826.936,
+        3734.195,
+        0.0
+      ],
+      "godot_pos": [
+        826.936,
+        0.0,
+        -3734.195
+      ]
+    },
+    {
+      "name": "swimspot_1",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        319.979,
+        -346.601,
+        0.0
+      ],
+      "godot_pos": [
+        319.979,
+        0.0,
+        346.601
+      ]
+    },
+    {
+      "name": "walkoverpickup_treasurehunt3_map",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "requirements=pinky_hasachieved_treasurehunt2won;\r\nresource=treasuremapicon;\r\ninventoryname=treasurehunt3map;\r\nonlyrotatearoundz=1;",
+      "sw_pos": [
+        -275.595,
+        3332.137,
+        8.0
+      ],
+      "godot_pos": [
+        -275.595,
+        8.0,
+        -3332.137
+      ]
+    },
+    {
+      "name": "walkoverpickup_treasurehunt4_map",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "requirements=pinky_hasachieved_treasurehunt3won;\r\nresource=treasuremapicon;\r\ninventoryname=treasurehunt4map;\r\nonlyrotatearoundz=1;",
+      "sw_pos": [
+        4213.713,
+        1373.108,
+        8.0
+      ],
+      "godot_pos": [
+        4213.713,
+        8.0,
+        -1373.108
+      ]
+    },
+    {
+      "name": "walkoverpickup_treasurehunt5_map",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "requirements=pinky_hasachieved_treasurehunt4won;\r\nresource=treasuremapicon;\r\ninventoryname=treasurehunt5map;\r\nonlyrotatearoundz=1;",
+      "sw_pos": [
+        1699.689,
+        -4541.461,
+        8.0
+      ],
+      "godot_pos": [
+        1699.689,
+        8.0,
+        4541.461
+      ]
+    },
+    {
+      "name": "walkoverpickup_treasurehunt6_map",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "requirements=pinky_hasachieved_treasurehunt5won;\r\nresource=treasuremapicon;\r\ninventoryname=treasurehunt6map;\r\nonlyrotatearoundz=1;",
+      "sw_pos": [
+        -5083.04,
+        -1779.217,
+        8.0
+      ],
+      "godot_pos": [
+        -5083.04,
+        8.0,
+        1779.217
+      ]
+    },
+    {
+      "name": "walkoverpickup_treasurehunt7_map",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "requirements=pinky_hasitem_treasurehunt6map;\r\nresource=treasuremapicon;\r\ninventoryname=treasurehunt7map;\r\nonlyrotatearoundz=1;",
+      "sw_pos": [
+        -5035.252,
+        4781.961,
+        8.0
+      ],
+      "godot_pos": [
+        -5035.252,
+        8.0,
+        -4781.961
+      ]
+    },
+    {
+      "name": "walkoverpickup_treasurehunt8_map",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "requirements=pinky_hasachieved_treasurehunt7won;\r\nresource=treasuremapicon;\r\ninventoryname=treasurehunt8map;\r\nonlyrotatearoundz=1;",
+      "sw_pos": [
+        7638.396,
+        1163.589,
+        8.0
+      ],
+      "godot_pos": [
+        7638.396,
+        8.0,
+        -1163.589
+      ]
+    },
+    {
+      "name": "swimspot_2",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        -1007.496,
+        1753.223,
+        0.0
+      ],
+      "godot_pos": [
+        -1007.496,
+        0.0,
+        -1753.223
+      ]
+    },
+    {
+      "name": "swimspot_3",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        2567.69,
+        351.297,
+        0.0
+      ],
+      "godot_pos": [
+        2567.69,
+        0.0,
+        -351.297
+      ]
+    },
+    {
+      "name": "swimspot_4",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        2852.323,
+        2400.584,
+        0.0
+      ],
+      "godot_pos": [
+        2852.323,
+        0.0,
+        -2400.584
+      ]
+    },
+    {
+      "name": "swimspot_5",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        630.505,
+        -2304.438,
+        0.0
+      ],
+      "godot_pos": [
+        630.505,
+        0.0,
+        2304.438
+      ]
+    },
+    {
+      "name": "swimspot_6",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        -2458.891,
+        -204.614,
+        0.0
+      ],
+      "godot_pos": [
+        -2458.891,
+        0.0,
+        204.614
+      ]
+    },
+    {
+      "name": "swimspot_7",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        3387.006,
+        -2447.317,
+        0.0
+      ],
+      "godot_pos": [
+        3387.006,
+        0.0,
+        2447.317
+      ]
+    },
+    {
+      "name": "swimspot_8",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        2804.957,
+        -920.26,
+        0.0
+      ],
+      "godot_pos": [
+        2804.957,
+        0.0,
+        920.26
+      ]
+    },
+    {
+      "name": "swimspot_9",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        1475.471,
+        1014.003,
+        0.0
+      ],
+      "godot_pos": [
+        1475.471,
+        0.0,
+        -1014.003
+      ]
+    },
+    {
+      "name": "swimspot_10",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        -1732.443,
+        -1155.532,
+        0.0
+      ],
+      "godot_pos": [
+        -1732.443,
+        0.0,
+        1155.532
+      ]
+    },
+    {
+      "name": "position_abra",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        4249.437,
+        -3096.244,
+        0.0
+      ],
+      "godot_pos": [
+        4249.437,
+        0.0,
+        3096.244
+      ]
+    },
+    {
+      "name": "defaultview",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        4557.32,
+        -3012.042,
+        -2.0
+      ],
+      "godot_pos": [
+        4557.32,
+        -2.0,
+        3012.042
+      ]
+    },
+    {
+      "name": "Default MAX Light",
+      "kind": "light",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        4557.32,
+        -3012.042,
+        -2.0
+      ],
+      "godot_pos": [
+        4557.32,
+        -2.0,
+        3012.042
+      ]
+    }
+  ],
+  "skeletons": [],
+  "animations": []
+}

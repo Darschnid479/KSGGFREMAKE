@@ -1,0 +1,305 @@
+{
+  "file": "shopkeeper.w3d",
+  "nodes": [
+    {
+      "name": "DefaultView",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "shopkeeper",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "collisionradius=3.8;",
+      "sw_pos": [
+        0.0,
+        -0.136,
+        7.184
+      ],
+      "godot_pos": [
+        0.0,
+        7.184,
+        0.136
+      ]
+    },
+    {
+      "name": "shopkeeper_proxy",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        -0.136,
+        7.184
+      ],
+      "godot_pos": [
+        0.0,
+        7.184,
+        0.136
+      ]
+    },
+    {
+      "name": "hiddenassets",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "userdata",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"shopkeeper_give\", #startxform: [#position: vector( 0.2407, 0.8203, 6.7778 ), #rotation: vector( 0.0000, 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000 )], #mountstart: \"21\", #mountend: \"35\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"shopkeeper_give\", #startxform: [#position: vector( 0.2407, 0.8203, 6.7778 ), #rotation: vector( 0.0000, 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"shopkeeper_stand\", #startxform: [#position: vector( 0.2407, 0.8203, 6.7778 ), #rotation: vector( 0.0000, 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"shopkeeper_stand\", #startxform: [#position: vector( 0.2407, 0.8203, 6.7778 ), #rotation: vector( 0.0000, 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"shopkeeper_stand_breathe\", #startxform: [#position: vector( 0.2407, 0.8203, 6.7778 ), #rotation: vector( 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"shopkeeper_stand_breathe\", #startxform: [#position: vector( 0.2407, 0.8203, 6.7778 ), #rotation: vector( 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"shopkeeper_stand_talk\", #startxform: [#position: vector( 0.2407, 0.8203, 6.7778 ), #rotation: vector( 0.0000, ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz 0.0000, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"shopkeeper_stand_talk\", #startxform: [#position: vector( 0.2407, 0.8203, 6.7778 ), #rotation: vector( 0.0000, ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "objectlinkedtobonesplayerinfo",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[[#bonedmodel: \"shopkeeper\", #object: \"cake\", #boneid: 21, #xform: [#rotation: vector( 44.8561, 8.7260, -0.0112 ), #positio ",
+      "kind": "group",
+      "parent": "objectlinkedtobonesplayerinfo",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzzn: vector( 0.9738, -0.1386, -0.0513 )]]] ",
+      "kind": "group",
+      "parent": "zzz[[#bonedmodel: \"shopkeeper\", #object: \"cake\", #boneid: 21, #xform: [#rotation: vector( 44.8561, 8.7260, -0.0112 ), #positio ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "TestLight",
+      "kind": "light",
+      "parent": "DefaultView",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    }
+  ],
+  "skeletons": [],
+  "animations": [
+    {
+      "name": "shopkeeper",
+      "tracks": 39,
+      "size": 2886
+    },
+    {
+      "name": "shopkeeper_give",
+      "tracks": 39,
+      "size": 9706
+    },
+    {
+      "name": "shopkeeper_stand",
+      "tracks": 39,
+      "size": 10437
+    },
+    {
+      "name": "shopkeeper_stand_breathe",
+      "tracks": 39,
+      "size": 4889
+    },
+    {
+      "name": "shopkeeper_stand_talk",
+      "tracks": 39,
+      "size": 15401
+    }
+  ]
+}

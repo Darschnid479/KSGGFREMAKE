@@ -1,0 +1,3399 @@
+{
+  "file": "abra_gameplay.w3d",
+  "nodes": [
+    {
+      "name": "collisiondata",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -69.358,
+        108.738,
+        0.0
+      ],
+      "godot_pos": [
+        -69.358,
+        0.0,
+        -108.738
+      ]
+    },
+    {
+      "name": "Circle01",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:1.93374,#position:vector(-96.6204,206.9,0)];",
+      "sw_pos": [
+        -96.62,
+        206.9,
+        0.0
+      ],
+      "godot_pos": [
+        -96.62,
+        0.0,
+        -206.9
+      ]
+    },
+    {
+      "name": "Circle02",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:1.66347,#position:vector(-61.6158,208.814,0)];",
+      "sw_pos": [
+        -61.616,
+        208.814,
+        0.0
+      ],
+      "godot_pos": [
+        -61.616,
+        0.0,
+        -208.814
+      ]
+    },
+    {
+      "name": "Circle03",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:1.91431,#position:vector(-26.0642,212.096,0)];",
+      "sw_pos": [
+        -26.064,
+        212.096,
+        0.0
+      ],
+      "godot_pos": [
+        -26.064,
+        0.0,
+        -212.096
+      ]
+    },
+    {
+      "name": "Circle04",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:2.46127,#position:vector(-128.07,35.979,0)];",
+      "sw_pos": [
+        -128.07,
+        35.979,
+        0.0
+      ],
+      "godot_pos": [
+        -128.07,
+        0.0,
+        -35.979
+      ]
+    },
+    {
+      "name": "Circle05",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:2.18779,#position:vector(-107.286,36.2525,0)];",
+      "sw_pos": [
+        -107.286,
+        36.253,
+        0.0
+      ],
+      "godot_pos": [
+        -107.286,
+        0.0,
+        -36.253
+      ]
+    },
+    {
+      "name": "Circle06",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:1.43574,#position:vector(10.581,170.801,0)];",
+      "sw_pos": [
+        10.581,
+        170.801,
+        0.0
+      ],
+      "godot_pos": [
+        10.581,
+        0.0,
+        -170.801
+      ]
+    },
+    {
+      "name": "Circle07",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:1.42753,#position:vector(-2.61134,176.551,0)];",
+      "sw_pos": [
+        -2.611,
+        176.551,
+        0.0
+      ],
+      "godot_pos": [
+        -2.611,
+        0.0,
+        -176.551
+      ]
+    },
+    {
+      "name": "Circle08",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:4.11121,#position:vector(-215.035,-24.4592,0)];",
+      "sw_pos": [
+        -215.035,
+        -24.459,
+        0.0
+      ],
+      "godot_pos": [
+        -215.035,
+        0.0,
+        24.459
+      ]
+    },
+    {
+      "name": "Circle10",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:4.45181,#position:vector(-221.325,-125.371,0)];",
+      "sw_pos": [
+        -221.325,
+        -125.371,
+        0.0
+      ],
+      "godot_pos": [
+        -221.325,
+        0.0,
+        125.371
+      ]
+    },
+    {
+      "name": "Circle11",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:3.91555,#position:vector(-131.078,-124.824,0)];",
+      "sw_pos": [
+        -131.078,
+        -124.824,
+        0.0
+      ],
+      "godot_pos": [
+        -131.078,
+        0.0,
+        124.824
+      ]
+    },
+    {
+      "name": "Circle12",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:4.64905,#position:vector(-43.2934,-124.55,0)];",
+      "sw_pos": [
+        -43.293,
+        -124.55,
+        0.0
+      ],
+      "godot_pos": [
+        -43.293,
+        0.0,
+        124.55
+      ]
+    },
+    {
+      "name": "Circle13",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:4.37558,#position:vector(-46.575,-23.9122,0)];",
+      "sw_pos": [
+        -46.575,
+        -23.912,
+        0.0
+      ],
+      "godot_pos": [
+        -46.575,
+        0.0,
+        23.912
+      ]
+    },
+    {
+      "name": "Circle14",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:3.82863,#position:vector(-216.402,7.81066,0)];",
+      "sw_pos": [
+        -216.402,
+        7.811,
+        0.0
+      ],
+      "godot_pos": [
+        -216.402,
+        0.0,
+        -7.811
+      ]
+    },
+    {
+      "name": "Circle15",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:3.82863,#position:vector(-307.469,7.53719,0)];",
+      "sw_pos": [
+        -307.469,
+        7.537,
+        0.0
+      ],
+      "godot_pos": [
+        -307.469,
+        0.0,
+        -7.537
+      ]
+    },
+    {
+      "name": "Circle16",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:4.93011,#position:vector(-351.498,6.16982,0)];",
+      "sw_pos": [
+        -351.498,
+        6.17,
+        0.0
+      ],
+      "godot_pos": [
+        -351.498,
+        0.0,
+        -6.17
+      ]
+    },
+    {
+      "name": "Circle17",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:4.92252,#position:vector(-355.327,-72.3171,0)];",
+      "sw_pos": [
+        -355.327,
+        -72.317,
+        0.0
+      ],
+      "godot_pos": [
+        -355.327,
+        0.0,
+        72.317
+      ]
+    },
+    {
+      "name": "Circle21",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:3.48074,#position:vector(305.87,-233.771,0)];",
+      "sw_pos": [
+        305.87,
+        -233.771,
+        0.0
+      ],
+      "godot_pos": [
+        305.87,
+        0.0,
+        233.771
+      ]
+    },
+    {
+      "name": "Circle22",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:4.25424,#position:vector(360.015,-233.771,0)];",
+      "sw_pos": [
+        360.015,
+        -233.771,
+        0.0
+      ],
+      "godot_pos": [
+        360.015,
+        0.0,
+        233.771
+      ]
+    },
+    {
+      "name": "Circle23",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:3.86749,#position:vector(360.015,-307.641,0)];",
+      "sw_pos": [
+        360.015,
+        -307.641,
+        0.0
+      ],
+      "godot_pos": [
+        360.015,
+        0.0,
+        307.641
+      ]
+    },
+    {
+      "name": "Circle24",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:3.94408,#position:vector(476.068,-293.289,0)];",
+      "sw_pos": [
+        476.068,
+        -293.289,
+        0.0
+      ],
+      "godot_pos": [
+        476.068,
+        0.0,
+        293.289
+      ]
+    },
+    {
+      "name": "Circle25",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:3.86749,#position:vector(513.947,-293.275,0)];",
+      "sw_pos": [
+        513.947,
+        -293.275,
+        0.0
+      ],
+      "godot_pos": [
+        513.947,
+        0.0,
+        293.275
+      ]
+    },
+    {
+      "name": "Circle26",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:4.25424,#position:vector(548.749,-293.331,0)];",
+      "sw_pos": [
+        548.749,
+        -293.331,
+        0.0
+      ],
+      "godot_pos": [
+        548.749,
+        0.0,
+        293.331
+      ]
+    },
+    {
+      "name": "Circle27",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:3.50218,#position:vector(513.941,-229.517,0)];",
+      "sw_pos": [
+        513.941,
+        -229.517,
+        0.0
+      ],
+      "godot_pos": [
+        513.941,
+        0.0,
+        229.517
+      ]
+    },
+    {
+      "name": "Circle28",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:3.50218,#position:vector(547.971,-229.524,0)];",
+      "sw_pos": [
+        547.971,
+        -229.524,
+        0.0
+      ],
+      "godot_pos": [
+        547.971,
+        0.0,
+        229.524
+      ]
+    },
+    {
+      "name": "Circle29",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:3.86751,#position:vector(476.113,-229.712,0)];",
+      "sw_pos": [
+        476.113,
+        -229.712,
+        0.0
+      ],
+      "godot_pos": [
+        476.113,
+        0.0,
+        229.712
+      ]
+    },
+    {
+      "name": "Circle30",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:3.88678,#position:vector(216.917,-233.771,0)];",
+      "sw_pos": [
+        216.917,
+        -233.771,
+        0.0
+      ],
+      "godot_pos": [
+        216.917,
+        0.0,
+        233.771
+      ]
+    },
+    {
+      "name": "Circle31",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:3.88678,#position:vector(216.531,-308.027,0)];",
+      "sw_pos": [
+        216.531,
+        -308.027,
+        0.0
+      ],
+      "godot_pos": [
+        216.531,
+        0.0,
+        308.027
+      ]
+    },
+    {
+      "name": "Circle36",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:3.88679,#position:vector(226.973,-33.8217,0)];",
+      "sw_pos": [
+        226.973,
+        -33.822,
+        0.0
+      ],
+      "godot_pos": [
+        226.973,
+        0.0,
+        33.822
+      ]
+    },
+    {
+      "name": "Circle37",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:3.8675,#position:vector(194.577,-34.0992,0)];",
+      "sw_pos": [
+        194.577,
+        -34.099,
+        0.0
+      ],
+      "godot_pos": [
+        194.577,
+        0.0,
+        34.099
+      ]
+    },
+    {
+      "name": "Circle38",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:4.27179,#position:vector(145.369,-34.9819,0)];",
+      "sw_pos": [
+        145.369,
+        -34.982,
+        0.0
+      ],
+      "godot_pos": [
+        145.369,
+        0.0,
+        34.982
+      ]
+    },
+    {
+      "name": "Circle39",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:4.64099,#position:vector(120.23,-156.421,0)];",
+      "sw_pos": [
+        120.23,
+        -156.421,
+        0.0
+      ],
+      "godot_pos": [
+        120.23,
+        0.0,
+        156.421
+      ]
+    },
+    {
+      "name": "Circle42",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:3.8675,#position:vector(194.938,41.1717,0)];",
+      "sw_pos": [
+        194.938,
+        41.172,
+        0.0
+      ],
+      "godot_pos": [
+        194.938,
+        0.0,
+        -41.172
+      ]
+    },
+    {
+      "name": "Circle43",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:3.8675,#position:vector(227.005,41.154,0)];",
+      "sw_pos": [
+        227.005,
+        41.154,
+        0.0
+      ],
+      "godot_pos": [
+        227.005,
+        0.0,
+        -41.154
+      ]
+    },
+    {
+      "name": "Circle44",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:1.58567,#position:vector(-213.775,481.819,0)];",
+      "sw_pos": [
+        -213.775,
+        481.819,
+        0.0
+      ],
+      "godot_pos": [
+        -213.775,
+        0.0,
+        -481.819
+      ]
+    },
+    {
+      "name": "Circle45",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:1.76293,#position:vector(-223.528,492.274,0)];",
+      "sw_pos": [
+        -223.528,
+        492.274,
+        0.0
+      ],
+      "godot_pos": [
+        -223.528,
+        0.0,
+        -492.274
+      ]
+    },
+    {
+      "name": "Circle46",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:1.64368,#position:vector(-310.644,365.664,0)];",
+      "sw_pos": [
+        -310.644,
+        365.664,
+        0.0
+      ],
+      "godot_pos": [
+        -310.644,
+        0.0,
+        -365.664
+      ]
+    },
+    {
+      "name": "Circle47",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:1.64755,#position:vector(-315.849,378.95,0)];",
+      "sw_pos": [
+        -315.849,
+        378.95,
+        0.0
+      ],
+      "godot_pos": [
+        -315.849,
+        0.0,
+        -378.95
+      ]
+    },
+    {
+      "name": "Circle48",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:1.53153,#position:vector(-160.116,386.343,0)];",
+      "sw_pos": [
+        -160.116,
+        386.343,
+        0.0
+      ],
+      "godot_pos": [
+        -160.116,
+        0.0,
+        -386.343
+      ]
+    },
+    {
+      "name": "Circle49",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:1.65405,#position:vector(-163.491,400.401,0)];",
+      "sw_pos": [
+        -163.491,
+        400.401,
+        0.0
+      ],
+      "godot_pos": [
+        -163.491,
+        0.0,
+        -400.401
+      ]
+    },
+    {
+      "name": "Circle50",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:1.27627,#position:vector(-11.4497,480.852,0)];",
+      "sw_pos": [
+        -11.45,
+        480.852,
+        0.0
+      ],
+      "godot_pos": [
+        -11.45,
+        0.0,
+        -480.852
+      ]
+    },
+    {
+      "name": "Circle51",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:1.19119,#position:vector(-27.3607,490.855,0)];",
+      "sw_pos": [
+        -27.361,
+        490.855,
+        0.0
+      ],
+      "godot_pos": [
+        -27.361,
+        0.0,
+        -490.855
+      ]
+    },
+    {
+      "name": "Circle52",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:1.15619,#position:vector(-266.73,471.582,0)];",
+      "sw_pos": [
+        -266.73,
+        471.582,
+        0.0
+      ],
+      "godot_pos": [
+        -266.73,
+        0.0,
+        -471.582
+      ]
+    },
+    {
+      "name": "Circle53",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:1.13794,#position:vector(-289.522,394.039,0)];",
+      "sw_pos": [
+        -289.522,
+        394.039,
+        0.0
+      ],
+      "godot_pos": [
+        -289.522,
+        0.0,
+        -394.039
+      ]
+    },
+    {
+      "name": "Circle54",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:1.15778,#position:vector(-158.639,334.889,0)];",
+      "sw_pos": [
+        -158.639,
+        334.889,
+        0.0
+      ],
+      "godot_pos": [
+        -158.639,
+        0.0,
+        -334.889
+      ]
+    },
+    {
+      "name": "Circle55",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:1.14321,#position:vector(-35.3506,403.971,0)];",
+      "sw_pos": [
+        -35.351,
+        403.971,
+        0.0
+      ],
+      "godot_pos": [
+        -35.351,
+        0.0,
+        -403.971
+      ]
+    },
+    {
+      "name": "Circle56",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:1.10226,#position:vector(-55.5025,468.658,0)];",
+      "sw_pos": [
+        -55.502,
+        468.658,
+        0.0
+      ],
+      "godot_pos": [
+        -55.502,
+        0.0,
+        -468.658
+      ]
+    },
+    {
+      "name": "Circle57",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:1.14748,#position:vector(-106.416,194.157,0)];",
+      "sw_pos": [
+        -106.416,
+        194.157,
+        0.0
+      ],
+      "godot_pos": [
+        -106.416,
+        0.0,
+        -194.157
+      ]
+    },
+    {
+      "name": "Circle58",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:1.01545,#position:vector(-257.325,79.4474,0)];",
+      "sw_pos": [
+        -257.325,
+        79.447,
+        0.0
+      ],
+      "godot_pos": [
+        -257.325,
+        0.0,
+        -79.447
+      ]
+    },
+    {
+      "name": "Circle59",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:0.961479,#position:vector(-212.565,13.4482,0)];",
+      "sw_pos": [
+        -212.565,
+        13.448,
+        0.0
+      ],
+      "godot_pos": [
+        -212.565,
+        0.0,
+        -13.448
+      ]
+    },
+    {
+      "name": "Circle60",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:1.03816,#position:vector(130.889,19.7565,0)];",
+      "sw_pos": [
+        130.889,
+        19.757,
+        0.0
+      ],
+      "godot_pos": [
+        130.889,
+        0.0,
+        -19.757
+      ]
+    },
+    {
+      "name": "Circle61",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:0.989952,#position:vector(29.3485,79.4834,0)];",
+      "sw_pos": [
+        29.349,
+        79.483,
+        0.0
+      ],
+      "godot_pos": [
+        29.349,
+        0.0,
+        -79.483
+      ]
+    },
+    {
+      "name": "Circle62",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:1.01379,#position:vector(39.4446,165.053,0)];",
+      "sw_pos": [
+        39.445,
+        165.053,
+        0.0
+      ],
+      "godot_pos": [
+        39.445,
+        0.0,
+        -165.053
+      ]
+    },
+    {
+      "name": "Circle63",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:0.966675,#position:vector(155.545,142.304,0)];",
+      "sw_pos": [
+        155.545,
+        142.304,
+        0.0
+      ],
+      "godot_pos": [
+        155.545,
+        0.0,
+        -142.304
+      ]
+    },
+    {
+      "name": "Circle64",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:0.996943,#position:vector(275.899,92.3467,0)];",
+      "sw_pos": [
+        275.899,
+        92.347,
+        0.0
+      ],
+      "godot_pos": [
+        275.899,
+        0.0,
+        -92.347
+      ]
+    },
+    {
+      "name": "Circle65",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:0.992482,#position:vector(351.017,268.677,0)];",
+      "sw_pos": [
+        351.017,
+        268.677,
+        0.0
+      ],
+      "godot_pos": [
+        351.017,
+        0.0,
+        -268.677
+      ]
+    },
+    {
+      "name": "Circle66",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:0.980351,#position:vector(351.045,338.005,0)];",
+      "sw_pos": [
+        351.045,
+        338.005,
+        0.0
+      ],
+      "godot_pos": [
+        351.045,
+        0.0,
+        -338.005
+      ]
+    },
+    {
+      "name": "Circle67",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:0.984607,#position:vector(399.037,403.156,0)];",
+      "sw_pos": [
+        399.037,
+        403.156,
+        0.0
+      ],
+      "godot_pos": [
+        399.037,
+        0.0,
+        -403.156
+      ]
+    },
+    {
+      "name": "Circle68",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:1.02007,#position:vector(369.647,468.543,0)];",
+      "sw_pos": [
+        369.647,
+        468.543,
+        0.0
+      ],
+      "godot_pos": [
+        369.647,
+        0.0,
+        -468.543
+      ]
+    },
+    {
+      "name": "Circle69",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:4.00888,#position:vector(227.367,167.732,0)];",
+      "sw_pos": [
+        227.367,
+        167.732,
+        0.0
+      ],
+      "godot_pos": [
+        227.367,
+        0.0,
+        -167.732
+      ]
+    },
+    {
+      "name": "Circle70",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:5.06667,#position:vector(6.87012,-196.498,0)];",
+      "sw_pos": [
+        6.87,
+        -196.498,
+        0.0
+      ],
+      "godot_pos": [
+        6.87,
+        0.0,
+        196.498
+      ]
+    },
+    {
+      "name": "Circle71",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:6.13913,#position:vector(-85.6632,-195.698,0)];",
+      "sw_pos": [
+        -85.663,
+        -195.698,
+        0.0
+      ],
+      "godot_pos": [
+        -85.663,
+        0.0,
+        195.698
+      ]
+    },
+    {
+      "name": "Circle72",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:4,#position:vector(-175.616,-195.112,0)];",
+      "sw_pos": [
+        -175.616,
+        -195.112,
+        0.0
+      ],
+      "godot_pos": [
+        -175.616,
+        0.0,
+        195.112
+      ]
+    },
+    {
+      "name": "Line01",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(44.3522,9.45566,0),vector(34.2052,7.64159,0),vector(-351.394,5.45735,0),vector(-351.894,-121.254,0),vector(-311.892,-123.408,0),vector(-311.628,-22.9653,0),vector(-211.485,-19.7725,0),vector(-217.398,-123.009,0),vector(-75.1987,-122.234,0),vector(-75.3606,-152.086,0),vector(-63.6772,-152.44,0),vector(-63.5147,-122.07,0),vector(-46.2693,-121.663,0),vector(-46.5531,-82.6274,0),vector(-44.3618,-78.1783,0)],#closed:0]]];",
+      "sw_pos": [
+        -133.964,
+        -83.477,
+        0.0
+      ],
+      "godot_pos": [
+        -133.964,
+        0.0,
+        83.477
+      ]
+    },
+    {
+      "name": "Line02",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(132.971,6.86807,0),vector(133.357,-27.9394,0),vector(-49.9627,-23.1839,0),vector(-54.667,-19.0462,0),vector(-54.5773,-60.0516,0),vector(-43.2951,-62.0231,0)],#closed:0]]];",
+      "sw_pos": [
+        28.161,
+        -33.122,
+        0.0
+      ],
+      "godot_pos": [
+        28.161,
+        0.0,
+        33.122
+      ]
+    },
+    {
+      "name": "Line03",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-162.893,-48.0504,0),vector(-155.545,-44.1829,0),vector(-160.573,-32.5804,0),vector(-152.064,-19.0442,0),vector(-155.158,-10.9224,0),vector(-164.827,-14.0164,0),vector(-172.175,-13.6297,0),vector(-174.882,-20.9779,0),vector(-168.694,-22.9117,0),vector(-167.534,-31.0334,0),vector(-167.147,-41.0889,0)],#closed:1]]];",
+      "sw_pos": [
+        -163.772,
+        -27.131,
+        0.0
+      ],
+      "godot_pos": [
+        -163.772,
+        0.0,
+        27.131
+      ]
+    },
+    {
+      "name": "Line04",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-76.6478,-58.4927,0),vector(-66.9791,-55.3987,0),vector(-63.8851,-59.6529,0),vector(-53.4428,-60.4264,0),vector(-53.0561,-45.3432,0),vector(-53.8296,-18.6574,0),vector(-63.1116,-19.8177,0),vector(-64.6586,-27.9394,0),vector(-64.2718,-48.0504,0),vector(-72.7803,-48.4372,0),vector(-80.5153,-51.1444,0)],#closed:1]]];",
+      "sw_pos": [
+        -64.834,
+        -44.851,
+        0.0
+      ],
+      "godot_pos": [
+        -64.834,
+        0.0,
+        44.851
+      ]
+    },
+    {
+      "name": "Line05",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(44.0331,9.24644,0),vector(41.2082,12.6695,0),vector(-217.812,12.2828,0),vector(-260.354,79.964,0),vector(-260.354,144.551,0),vector(-246.431,164.662,0),vector(-213.171,143.004,0),vector(-172.949,202.177,0),vector(-165.987,205.658,0),vector(-152.451,214.94,0),vector(-161.346,226.542,0),vector(-175.656,218.42,0),vector(-183.391,212.232,0),vector(-201.955,224.608,0),vector(-192.673,237.371,0),vector(-150.131,250.907,0),vector(-157.092,255.162,0)],#closed:0]]];",
+      "sw_pos": [
+        -161.824,
+        165.64,
+        0.0
+      ],
+      "godot_pos": [
+        -161.824,
+        0.0,
+        -165.64
+      ]
+    },
+    {
+      "name": "Line06",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-177.977,54.0517,0),vector(-159.026,69.135,0),vector(-147.81,64.8807,0),vector(-147.81,100.848,0),vector(-90.9579,101.235,0),vector(-90.9579,105.489,0),vector(-25.9839,105.876,0),vector(-26.3706,40.1287,0),vector(-89.0241,40.1287,0),vector(-89.7976,48.2505,0),vector(-143.169,45.93,0),vector(-163.667,32.3937,0)],#closed:1]]];",
+      "sw_pos": [
+        -112.713,
+        67.362,
+        0.0
+      ],
+      "godot_pos": [
+        -112.713,
+        0.0,
+        -67.362
+      ]
+    },
+    {
+      "name": "Line07",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-83.9964,177.812,0),vector(-83.9964,134.109,0),vector(-37.1996,133.722,0),vector(-36.8129,167.756,0),vector(-53.4431,178.585,0)],#closed:1]]];",
+      "sw_pos": [
+        -59.09,
+        158.397,
+        0.0
+      ],
+      "godot_pos": [
+        -59.09,
+        0.0,
+        -158.397
+      ]
+    },
+    {
+      "name": "Line08",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-3.55239,153.833,0),vector(-4.32589,83.058,0),vector(64.1288,83.4448,0),vector(63.7421,104.716,0),vector(17.3321,146.485,0)],#closed:1]]];",
+      "sw_pos": [
+        27.465,
+        114.307,
+        0.0
+      ],
+      "godot_pos": [
+        27.465,
+        0.0,
+        -114.307
+      ]
+    },
+    {
+      "name": "Line09",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(158.496,129.081,0),vector(157.336,143.391,0),vector(139.545,157.314,0),vector(97.3893,121.346,0),vector(54.8468,165.823,0),vector(90.041,199.47,0),vector(74.9578,210.299,0),vector(56.7806,216.1,0),vector(40.5371,172.397,0),vector(-28.3044,200.63,0),vector(-26.7574,220.741,0),vector(-98.6929,215.326,0),vector(-102.174,252.841,0),vector(-118.417,257.482,0),vector(-134.274,255.162,0),vector(-130.02,264.444,0)],#closed:0]]];",
+      "sw_pos": [
+        14.456,
+        198.865,
+        0.0
+      ],
+      "godot_pos": [
+        14.456,
+        0.0,
+        -198.865
+      ]
+    },
+    {
+      "name": "Line10",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-105.098,110.637,0),vector(-105.372,121.029,0),vector(-134.36,120.756,0),vector(-134.36,109.543,0)],#closed:1]]];",
+      "sw_pos": [
+        -119.797,
+        115.491,
+        0.0
+      ],
+      "godot_pos": [
+        -119.797,
+        0.0,
+        -115.491
+      ]
+    },
+    {
+      "name": "Line11",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-199.993,108.723,0),vector(-198.353,135.523,0),vector(-192.063,137.985,0),vector(-184.405,131.695,0),vector(-187.414,106.809,0),vector(-192.61,104.074,0)],#closed:1]]];",
+      "sw_pos": [
+        -192.473,
+        120.801,
+        0.0
+      ],
+      "godot_pos": [
+        -192.473,
+        0.0,
+        -120.801
+      ]
+    },
+    {
+      "name": "Line12",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-43.3508,-62.0057,0),vector(68.0146,-62.5526,0),vector(68.0021,-40.0534,0),vector(196.598,-38.6529,0),vector(187.846,-28.2609,0)],#closed:0]]];",
+      "sw_pos": [
+        94.169,
+        -44.514,
+        0.0
+      ],
+      "godot_pos": [
+        94.169,
+        0.0,
+        44.514
+      ]
+    },
+    {
+      "name": "Line13",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(235.281,-31.0596,0),vector(227.318,-37.6187,0),vector(286.867,-37.5099,0),vector(287.594,-152.112,0),vector(252.173,-152.846,0),vector(253.064,-237.08,0),vector(358.803,-235.005,0),vector(358.67,-244.765,0),vector(478.434,-244.362,0),vector(478.757,-230.794,0),vector(547.89,-229.882,0),vector(548.585,-292.763,0),vector(477.312,-290.472,0),vector(478.001,-260.621,0),vector(358.138,-260.621,0),vector(359.438,-307.268,0),vector(343.03,-306.721,0),vector(342.481,-268.786,0),vector(269.192,-268.982,0),vector(268.792,-308.445,0),vector(218.618,-309.536,0),vector(218.386,-235.234,0),vector(233.413,-238.145,0),vector(233.863,-154.732,0),vector(69.4122,-153.293,0),vector(68.6379,-78.2993,0),vector(-44.3698,-78.1957,0)],#closed:0]]];",
+      "sw_pos": [
+        304.075,
+        -209.405,
+        0.0
+      ],
+      "godot_pos": [
+        304.075,
+        0.0,
+        209.405
+      ]
+    },
+    {
+      "name": "Line14",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(94.1997,-66.1937,0),vector(93.9309,-127.802,0),vector(197.692,-127.802,0),vector(197.692,-66.6954,0)],#closed:1]]];",
+      "sw_pos": [
+        145.659,
+        -97.249,
+        0.0
+      ],
+      "godot_pos": [
+        145.659,
+        0.0,
+        97.249
+      ]
+    },
+    {
+      "name": "Line15",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(196.584,-38.6442,0),vector(196.921,89.4363,0),vector(207.249,89.9383,0),vector(214.597,81.4298,0),vector(223.879,82.5901,0),vector(225.994,80.748,0),vector(228.203,-34.8475,0)],#closed:0]]];",
+      "sw_pos": [
+        213.216,
+        51.429,
+        0.0
+      ],
+      "godot_pos": [
+        213.216,
+        0.0,
+        -51.429
+      ]
+    },
+    {
+      "name": "Line16",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(158.518,128.227,0),vector(270.675,127.84,0),vector(271.062,155.686,0),vector(295.427,156.073,0),vector(294.267,171.226,0),vector(225.812,170.453,0),vector(225.812,158.393,0),vector(209.955,155.686,0),vector(197.277,152.592,0),vector(196.504,195.563,0),vector(294.654,195.176,0),vector(296.201,211.378,0),vector(348.025,210.991,0),vector(348.412,261.655,0),vector(346.478,264.749,0),vector(346.478,275.578,0),vector(357.307,277.125,0),vector(352.279,327.403,0),vector(347.758,332.044,0),vector(347.371,364.531,0)],#closed:0]]];",
+      "sw_pos": [
+        286.184,
+        214.646,
+        0.0
+      ],
+      "godot_pos": [
+        286.184,
+        0.0,
+        -214.646
+      ]
+    },
+    {
+      "name": "Line17",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(347.451,363.612,0),vector(346.904,412.29,0),vector(363.202,412.837,0),vector(364.296,471.973,0),vector(393.671,471.921,0),vector(386.72,434.168,0),vector(448.164,421.041,0),vector(448.36,410.649,0),vector(406.957,411.196,0),vector(406.41,336.811,0),vector(394.378,335.717,0),vector(394.378,286.492,0),vector(406.957,282.117,0),vector(399.847,211.56,0),vector(451.26,203.356,0),vector(450.713,161.788,0),vector(363.202,161.788,0),vector(362.655,103.812,0),vector(350.075,104.906,0),vector(346.246,88.4974,0),vector(345.699,83.028,0),vector(272.408,83.5749,0),vector(272.408,106.547,0),vector(158.643,106.547,0),vector(165.754,88.4974,0)],#closed:0]]];",
+      "sw_pos": [
+        361.845,
+        263.236,
+        0.0
+      ],
+      "godot_pos": [
+        361.845,
+        0.0,
+        -263.236
+      ]
+    },
+    {
+      "name": "Line18",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-133.717,255.184,0),vector(-136.424,254.41,0),vector(-137.971,273.361,0),vector(-134.104,289.991,0),vector(-128.303,307.782,0),vector(-112.059,305.074,0),vector(-121.341,340.655,0),vector(-52.4997,360.766,0),vector(-47.8587,354.192,0),vector(-14.2114,385.905,0),vector(-20.3995,389.773,0),vector(14.408,453.586,0),vector(41.0938,439.277,0),vector(42.6408,450.106,0),vector(2.41879,476.018,0),vector(22.7591,511.527,0),vector(13.8639,515.007,0),vector(-1.44872,488.394,0),vector(-41.6707,511.599,0),vector(-65.6492,465.962,0),vector(-18.0789,437.73,0),vector(-53.2732,379.33,0),vector(-71.0637,388.226,0),vector(-68.3564,373.529,0),vector(-138.745,357.286,0),vector(-153.828,414.138,0),vector(-121.618,421.716,0),vector(-126.217,435.67,0),vector(-153.055,422.646,0),vector(-170.458,455.907,0),vector(-177.033,457.067,0),vector(-228.471,507.345,0),vector(-230.791,517.013,0),vector(-278.748,525.909,0),vector(-286.87,529.389,0),vector(-325.545,496.516,0),vector(-301.567,491.101,0),vector(-321.291,418.005,0),vector(-330.573,419.939,0),vector(-330.573,380.877,0),vector(-313.556,342.976,0),vector(-287.257,350.324,0),vector(-274.494,307.782,0),vector(-244.328,322.091,0),vector(-262.118,358.446,0),vector(-221.123,375.076,0),vector(-177.807,388.226,0),vector(-166.978,351.098,0),vector(-161.176,330.987,0),vector(-141.452,314.743,0),vector(-146.867,296.566,0),vector(-149.574,275.295,0),vector(-149.574,250.543,0),vector(-157.309,252.476,0)],#closed:0]]];",
+      "sw_pos": [
+        -143.379,
+        392.222,
+        0.0
+      ],
+      "godot_pos": [
+        -143.379,
+        0.0,
+        -392.222
+      ]
+    },
+    {
+      "name": "Line19",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-271.787,377.01,0),vector(-227.629,390.578,0),vector(-183.608,405.243,0),vector(-193.663,443.531,0),vector(-236.831,476.739,0),vector(-282.898,461.284,0),vector(-294.107,419.17,0)],#closed:1]]];",
+      "sw_pos": [
+        -241.178,
+        424.58,
+        0.0
+      ],
+      "godot_pos": [
+        -241.178,
+        0.0,
+        -424.58
+      ]
+    },
+    {
+      "name": "Line20",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-606.396,-118.378,0),vector(-637.845,-136.974,0),vector(-667.928,-156.391,0),vector(-681.328,-158.032,0),vector(-691.72,-176.901,0),vector(-683.789,-177.722,0),vector(-678.32,-181.824,0),vector(-676.952,-187.02,0),vector(-660.27,-197.412,0),vector(-650.972,-194.13,0),vector(-657.536,-177.448,0),vector(-594.09,-140.803,0)],#closed:1]]];",
+      "sw_pos": [
+        -657.262,
+        -166.92,
+        0.0
+      ],
+      "godot_pos": [
+        -657.262,
+        0.0,
+        166.92
+      ]
+    },
+    {
+      "name": "Line21",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-3.299,137.118,0),vector(-7.02817,135.397,0),vector(-14.1996,130.234,0),vector(-12.1916,127.365,0),vector(-2.72529,133.676,0),vector(1.86445,137.118,0)],#closed:0]]];",
+      "sw_pos": [
+        -6.263,
+        133.485,
+        0.0
+      ],
+      "godot_pos": [
+        -6.263,
+        0.0,
+        -133.485
+      ]
+    },
+    {
+      "name": "Line22",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-228.798,-179.161,0),vector(-228.876,-207.404,0),vector(-213.786,-207.327,0),vector(-213.597,-179.177,0)],#closed:1]]];",
+      "sw_pos": [
+        -221.464,
+        -193.698,
+        0.0
+      ],
+      "godot_pos": [
+        -221.464,
+        0.0,
+        193.698
+      ]
+    },
+    {
+      "name": "Line23",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-166.052,-169.831,0),vector(-115.797,-170.365,0),vector(-115.797,-172.498,0),vector(-163.264,-172.498,0),vector(-163.264,-213.831,0),vector(-116.107,-214.365,0),vector(-116.107,-216.909,0),vector(-166.319,-216.642,0)],#closed:1]]];",
+      "sw_pos": [
+        -140.297,
+        -193.331,
+        0.0
+      ],
+      "godot_pos": [
+        -140.297,
+        0.0,
+        193.331
+      ]
+    },
+    {
+      "name": "Line24",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-140.064,-171.431,0),vector(-140.33,-183.698,0),vector(-131.264,-183.431,0),vector(-123.264,-181.831,0),vector(-124.064,-179.431,0),vector(-136.33,-180.498,0),vector(-137.13,-171.165,0)],#closed:1]]];",
+      "sw_pos": [
+        -133.206,
+        -178.784,
+        0.0
+      ],
+      "godot_pos": [
+        -133.206,
+        0.0,
+        178.784
+      ]
+    },
+    {
+      "name": "Line25",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-140.064,-207.431,0),vector(-132.597,-206.631,0),vector(-123.797,-209.031,0),vector(-125.13,-211.965,0),vector(-132.597,-209.031,0),vector(-137.13,-209.031,0),vector(-137.13,-215.431,0),vector(-140.597,-215.431,0)],#closed:1]]];",
+      "sw_pos": [
+        -133.63,
+        -210.498,
+        0.0
+      ],
+      "godot_pos": [
+        -133.63,
+        0.0,
+        210.498
+      ]
+    },
+    {
+      "name": "Line26",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-165.918,-158.892,0),vector(-115.798,-159.158,0),vector(-115.797,-150.365,0),vector(-168.168,-150.365,0)],#closed:1]]];",
+      "sw_pos": [
+        -140.463,
+        -154.565,
+        0.0
+      ],
+      "godot_pos": [
+        -140.463,
+        0.0,
+        154.565
+      ]
+    },
+    {
+      "name": "Line27",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-166.44,-237.832,0),vector(-165.907,-227.686,0),vector(-116.107,-227.686,0),vector(-115.307,-242.898,0)],#closed:1]]];",
+      "sw_pos": [
+        -140.797,
+        -234.165,
+        0.0
+      ],
+      "godot_pos": [
+        -140.797,
+        0.0,
+        234.165
+      ]
+    },
+    {
+      "name": "Line28",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-63.2456,-218.742,0),vector(-21.9299,-219.009,0),vector(-21.9683,-169.202,0),vector(-62.848,-168.803,0),vector(-62.7299,-171.965,0),vector(-25.1299,-172.232,0),vector(-25.3966,-216.232,0),vector(-63.2456,-216.232,0)],#closed:1]]];",
+      "sw_pos": [
+        -43.23,
+        -194.098,
+        0.0
+      ],
+      "godot_pos": [
+        -43.23,
+        0.0,
+        194.098
+      ]
+    },
+    {
+      "name": "Line29",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-63.1092,-241.298,0),vector(-63.1092,-229.661,0),vector(-22.6289,-229.659,0),vector(-22.8956,-240.765,0),vector(-62.5759,-247.432,0)],#closed:1]]];",
+      "sw_pos": [
+        -46.783,
+        -237.992,
+        0.0
+      ],
+      "godot_pos": [
+        -46.783,
+        0.0,
+        237.992
+      ]
+    },
+    {
+      "name": "Line30",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-6.72988,-164.498,0),vector(-2.46322,-182.898,0)],#closed:0]]];",
+      "sw_pos": [
+        -4.597,
+        -173.698,
+        0.0
+      ],
+      "godot_pos": [
+        -4.597,
+        0.0,
+        173.698
+      ]
+    },
+    {
+      "name": "Line31",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-62.8039,-151.432,0),vector(-62.6245,-158.1,0),vector(-22.2659,-158.349,0),vector(-20.6005,-156.104,0),vector(-6.74131,-158.639,0),vector(-7.47357,-165.558,0),vector(-2.77164,-181.972,0),vector(3.6529,-183.159,0),vector(8.75749,-182.549,0),vector(8.00167,-225.88,0),vector(-24.3743,-233.522,0)],#closed:0]]];",
+      "sw_pos": [
+        -17.13,
+        -177.516,
+        0.0
+      ],
+      "godot_pos": [
+        -17.13,
+        0.0,
+        177.516
+      ]
+    },
+    {
+      "name": "Line32",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-98.0788,-179.762,0),vector(-102.996,-186.632,0),vector(-104.33,-196.232,0),vector(-102.73,-204.59,0),vector(-94.1965,-204.857,0),vector(-89.4853,-197.078,0),vector(-92.2194,-186.975,0)],#closed:1]]];",
+      "sw_pos": [
+        -98.273,
+        -193.641,
+        0.0
+      ],
+      "godot_pos": [
+        -98.273,
+        0.0,
+        193.641
+      ]
+    },
+    {
+      "name": "Line33",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-62.1965,-233.298,0),vector(-91.2631,-233.832,0),vector(-119.263,-233.032,0)],#closed:0]]];",
+      "sw_pos": [
+        -90.908,
+        -233.387,
+        0.0
+      ],
+      "godot_pos": [
+        -90.908,
+        0.0,
+        233.387
+      ]
+    },
+    {
+      "name": "Line34",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-117.663,-153.832,0),vector(-91.2587,-153.417,0),vector(-59.008,-154.214,0)],#closed:0]]];",
+      "sw_pos": [
+        -89.308,
+        -153.654,
+        0.0
+      ],
+      "godot_pos": [
+        -89.308,
+        0.0,
+        153.654
+      ]
+    },
+    {
+      "name": "Line35",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-164.863,-157.298,0),vector(-178.196,-155.432,0),vector(-189.396,-152.498,0),vector(-201.663,-145.832,0),vector(-206.054,-138.135,0),vector(-213.51,-139.599,0),vector(-224.961,-146.783,0),vector(-232.551,-153.038,0),vector(-237.757,-173.164,0),vector(-240.154,-192.232,0),vector(-236.821,-220.741,0),vector(-233.093,-233.647,0),vector(-220.3,-243.001,0),vector(-210.846,-248.455,0),vector(-202.192,-240.606,0),vector(-195.001,-236.347,0),vector(-189.541,-233.687,0),vector(-172.863,-230.898,0),vector(-164.33,-229.565,0)],#closed:0]]];",
+      "sw_pos": [
+        -206.21,
+        -193.242,
+        0.0
+      ],
+      "godot_pos": [
+        -206.21,
+        0.0,
+        193.242
+      ]
+    },
+    {
+      "name": "Line36",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(13.9838,-227.645,0),vector(33.4504,-218.845,0),vector(50.2504,-205.245,0),vector(52.9171,-199.912,0),vector(14.2504,-199.645,0)],#closed:1]]];",
+      "sw_pos": [
+        32.97,
+        -210.258,
+        0.0
+      ],
+      "godot_pos": [
+        32.97,
+        0.0,
+        210.258
+      ]
+    },
+    {
+      "name": "Line37",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(14.5171,-188.978,0),vector(15.0504,-160.712,0),vector(32.9171,-169.778,0),vector(50.7838,-183.912,0),vector(53.9838,-189.512,0)],#closed:1]]];",
+      "sw_pos": [
+        33.45,
+        -178.578,
+        0.0
+      ],
+      "godot_pos": [
+        33.45,
+        0.0,
+        178.578
+      ]
+    },
+    {
+      "name": "Line39",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(159.225,103.865,0),vector(159.5,78.0216,0),vector(134.481,19.1862,0),vector(132.832,4.8897,0)],#closed:0]]];",
+      "sw_pos": [
+        146.509,
+        51.491,
+        0.0
+      ],
+      "godot_pos": [
+        146.509,
+        0.0,
+        -51.491
+      ]
+    },
+    {
+      "name": "Line38",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-192.852,44.4908,0),vector(-185.773,46.9979,0),vector(-183.337,39.732,0),vector(-190.433,37.3992,0)],#closed:1]]];",
+      "sw_pos": [
+        -188.356,
+        42.231,
+        0.0
+      ],
+      "godot_pos": [
+        -188.356,
+        0.0,
+        -42.231
+      ]
+    },
+    {
+      "name": "Circle73",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:4.35198,#position:vector(-307.404,-24.475,0)];",
+      "sw_pos": [
+        -307.404,
+        -24.475,
+        0.0
+      ],
+      "godot_pos": [
+        -307.404,
+        0.0,
+        24.475
+      ]
+    },
+    {
+      "name": "Line40",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-161.161,221.168,0),vector(-158.439,223.792,0),vector(-155.523,228.361,0),vector(-155.523,234.096,0),vector(-154.843,235.068,0),vector(-148.038,237.401,0),vector(-146.483,236.72,0),vector(-140.554,232.054,0),vector(-140.554,229.527,0),vector(-145.608,224.57,0),vector(-148.136,222.14,0),vector(-150.08,219.418,0),vector(-148.913,215.335,0),vector(-150.177,212.128,0),vector(-152.315,211.739,0),vector(-158.342,211.836,0)],#closed:0]]];",
+      "sw_pos": [
+        -150.918,
+        224.709,
+        0.0
+      ],
+      "godot_pos": [
+        -150.918,
+        0.0,
+        -224.709
+      ]
+    },
+    {
+      "name": "Line41",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(137.09,7.32333,0),vector(128.536,1.29674,0),vector(129.119,-20.6712,0),vector(116.871,-30.3915,0)],#closed:0]]];",
+      "sw_pos": [
+        127.904,
+        -10.611,
+        0.0
+      ],
+      "godot_pos": [
+        127.904,
+        0.0,
+        10.611
+      ]
+    },
+    {
+      "name": "Circle75",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:4.6698,#position:vector(127.758,1.49114,0)];",
+      "sw_pos": [
+        127.758,
+        1.491,
+        0.0
+      ],
+      "godot_pos": [
+        127.758,
+        0.0,
+        -1.491
+      ]
+    },
+    {
+      "name": "Circle74",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:4.47557,#position:vector(127.953,-20.088,0)];",
+      "sw_pos": [
+        127.953,
+        -20.088,
+        0.0
+      ],
+      "godot_pos": [
+        127.953,
+        0.0,
+        20.088
+      ]
+    },
+    {
+      "name": "Circle77",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:1.16926,#position:vector(-143.922,37.4416,0)];",
+      "sw_pos": [
+        -143.922,
+        37.442,
+        0.0
+      ],
+      "godot_pos": [
+        -143.922,
+        0.0,
+        -37.442
+      ]
+    },
+    {
+      "name": "Circle76",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:0.961128,#position:vector(-130.755,37.4416,0)];",
+      "sw_pos": [
+        -130.755,
+        37.442,
+        0.0
+      ],
+      "godot_pos": [
+        -130.755,
+        0.0,
+        -37.442
+      ]
+    },
+    {
+      "name": "Circle79",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:1.39999,#position:vector(380.12,451.62,0)];",
+      "sw_pos": [
+        380.12,
+        451.62,
+        0.0
+      ],
+      "godot_pos": [
+        380.12,
+        0.0,
+        -451.62
+      ]
+    },
+    {
+      "name": "Circle78",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:1.60001,#position:vector(383.586,465.687,0)];",
+      "sw_pos": [
+        383.586,
+        465.687,
+        0.0
+      ],
+      "godot_pos": [
+        383.586,
+        0.0,
+        -465.687
+      ]
+    },
+    {
+      "name": "Line42",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-166.296,40.1248,0),vector(-190.122,37.7097,0),vector(-186.3,46.6168,0),vector(-177.766,54.1759,0)],#closed:0]]];",
+      "sw_pos": [
+        -178.396,
+        45.472,
+        0.0
+      ],
+      "godot_pos": [
+        -178.396,
+        0.0,
+        -45.472
+      ]
+    },
+    {
+      "name": "Line43",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-234.442,-234.108,0),vector(-214.077,-234.297,0),vector(-232.085,-236.654,0)],#closed:0]]];",
+      "sw_pos": [
+        -226.868,
+        -235.019,
+        0.0
+      ],
+      "godot_pos": [
+        -226.868,
+        0.0,
+        235.019
+      ]
+    },
+    {
+      "name": "Line44",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-235.08,-150.78,0),vector(-213.395,-152.005,0),vector(-235.268,-153.042,0)],#closed:0]]];",
+      "sw_pos": [
+        -227.914,
+        -151.942,
+        0.0
+      ],
+      "godot_pos": [
+        -227.914,
+        0.0,
+        151.942
+      ]
+    },
+    {
+      "name": "scriptingdata",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -170.283,
+        -80.445,
+        0.0
+      ],
+      "godot_pos": [
+        -170.283,
+        0.0,
+        80.445
+      ]
+    },
+    {
+      "name": "character_pinky",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        -76.79,
+        -209.278,
+        0.0
+      ],
+      "godot_pos": [
+        -76.79,
+        0.0,
+        209.278
+      ]
+    },
+    {
+      "name": "behaviour",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "trigger = startmap;\r\naction = actionable_portal|disable;\r\naction = actionable_gotoworldmap|enable;\r\n\r\ntrigger = startmap;\r\nrequirements = pinky_hasachieved_finishedgraal;\r\naction = actionable_portal|enable;\r\naction = miriam|stopshout;\r\naction = miriam|startshout|abra_useportal1_miriam|15|delay=8;\r\nonce = 0;\r\n\r\ntrigger = resumemap;\r\naction = queue|savegame;\r\nonce = 0;\r\n\r\ntrigger = resumemap_breathing;\r\naction = playambience|abra_ambience;\r\naction = playambience|abra_music;\r\nonce = 0;\r\n\r\ntrigger = actionable_portal_actioned;\r\naction = miriam|setanimationextra|mumbojumbo;\r\naction = startconversation|abra_useportal|dontlock;\r\naction = portalcamera|start;\r\naction = disableinput;\r\naction = miriam|stopshout;\r\nonce = 0;\r\n\r\ntrigger = portalchoicemade_cancel;\r\naction = startconversation|abra_portal_no;\r\nonce = 0;\r\n\r\ntrigger = portalchoicemade_teleport;\r\naction = startconversation|abra_portal_yes;\r\nonce = 0;\r\n\r\ntrigger = abra_portal_no_finished;\r\naction = miriam|startshout|abra_useportal1_miriam|15|delay=8;\r\naction = enableinput;\r\nonce = 0;\r\n\r\ntrigger = portalchoicemade_cancel,portalchoicemade_teleport;\r\naction = portalcamera|stop;\r\nonce = 0;\r\n\r\ntrigger = pinky_jump_jump_darklady_end_finished;\r\naction = resumemap|world_map;\r\nonce = 0;\r\n\r\ntrigger = allobjectscreated;\r\naction = sabeltann|setweapondrawmode|duringattack;\r\naction = pelle|setweapondrawmode|duringattack;\r\naction = langemann|setweapondrawmode|duringattack;",
+      "sw_pos": [
+        -412.465,
+        172.358,
+        0.0
+      ],
+      "godot_pos": [
+        -412.465,
+        0.0,
+        -172.358
+      ]
+    },
+    {
+      "name": "portalcamera",
+      "kind": "camera",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        -199.68,
+        37.858,
+        82.241
+      ],
+      "godot_pos": [
+        -199.68,
+        82.241,
+        -37.858
+      ]
+    },
+    {
+      "name": "pinky_moveawayfromportal",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-192.801,40.374,0),vector(-214.482,32.7629,0)],#closed:0]]];trigger=portal_started;\r\ntarget=pinky;\r\nbackwards=1;\r\nonce=0;",
+      "sw_pos": [
+        -172.935,
+        -73.996,
+        0.0
+      ],
+      "godot_pos": [
+        -172.935,
+        0.0,
+        73.996
+      ]
+    },
+    {
+      "name": "actionable_portal",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "once = 0;\r\nzmatters = 0;\r\nicon = portal;",
+      "sw_pos": [
+        -188.109,
+        42.098,
+        0.0
+      ],
+      "godot_pos": [
+        -188.109,
+        0.0,
+        -42.098
+      ]
+    },
+    {
+      "name": "character_miriam",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        -182.218,
+        44.253,
+        0.0
+      ],
+      "godot_pos": [
+        -182.218,
+        0.0,
+        -44.253
+      ]
+    },
+    {
+      "name": "pinky_portal",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-199.995,45.8248,0),vector(-202.147,46.4973,0)],#closed:0]]];trigger = actionable_portal_actioned;\r\nbackwards=1;\r\nonce=0;\r\ntarget=pinky;",
+      "sw_pos": [
+        -201.071,
+        46.161,
+        0.0
+      ],
+      "godot_pos": [
+        -201.071,
+        0.0,
+        -46.161
+      ]
+    },
+    {
+      "name": "Timeline",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "trigger = startmap;\r\naction = miriam|startshout|abra_curseonyou_miriam|15;\r\naction = miriam|offerconversation|abra_curse;\r\naction = sunniva|startshout|abra_hey_sunniva|15;\r\naction = sunniva|offerconversation|abra_underwater;\r\n\r\ntrigger = abra_curse_finished;\r\naction = miriam|stopshout;\r\naction = miriam|stopofferconversation;\r\naction = miriam|startshout|abra_liftthecurse1_miriam;\r\n\r\ntrigger = abra_curse_finished;\r\nrequirements = pinky_nothasitem_lamp;\r\naction = sunniva|stopshout;\r\naction = sunniva|startshout|abra_lamp_sunniva|15;\r\n\r\nalltriggers = abra_curse_finished, gotlamp;\r\naction = pinky|addachievement|unlockedgraal;\r\naction = sunniva|stopshout;\r\naction = sunniva|startshout|abra_curse_sunniva|15;\r\n\r\ntrigger = startmap;\r\nrequirements = pinky_hasachieved_finishedgraal;\r\naction = prostitute2|stopshout;\r\naction = prostitute2|startshout|abra_fatamorgana_prostitute2|7;\r\naction = prostitute2|offerconversation|abra_unlockfatamorgana;\r\naction = sunniva|stopshout;\r\naction = sunniva|stopofferconversation;\r\naction = sunniva|startshout|abra_fatamorgana_sunniva|15;\r\naction = sunniva|offerconversation|abra_treasures;\r\naction = sendgameevent|canbuysling;\r\n\r\ntrigger = abra_unlockfatamorgana_finished;\r\naction = prostitute2|stopofferconversation;\r\naction = prostitute2|stopshout;\r\naction = prostitute2|startshout|abra_prostitute2|15;\r\n\r\ntrigger = abra_unlockfatamorgana_finished;\r\nrequirements = pinky_nothasitem_slingshot;\r\naction = sunniva|stopshout;\r\naction = sunniva|startshout|abra_slingshot_sunniva|15;\r\n\r\nalltriggers = abra_unlockfatamorgana_finished, gotsling;\r\naction = pinky|addachievement|unlockedfatamorgana;\r\naction = sunniva|stopshout;\r\naction = sunniva|startshout|abra_gofatamorgana_sunniva|15;\r\n\r\ntrigger = startmap;\r\nrequirements = pinky_hasachieved_finishedfatamorgana;\r\naction = shopkeeper|stopshout;\r\naction = shopkeeper|startshout|abra_shangrila_shopkeeper|15;\r\naction = shopkeeper|offerconversation|abra_unlockshangrila;\r\naction = sunniva|stopshout;\r\naction = sunniva|stopofferconversation;\r\naction = sunniva|startshout|abra_shangrila_sunniva|15;\r\naction = sunniva|offerconversation|abra_tip3;\r\naction = sendgameevent|canbuysword;\r\n\r\ntrigger = abra_unlockshangrila_finished;\r\naction = sunniva|stopshout;\r\naction = sunniva|startshout|abra_goshangrila_sunniva|15;\r\n\r\ntrigger = abra_unlockshangrila_finished;\r\naction = pinky|addachievement|unlockedshangrila;\r\n\r\ntrigger = startmap;\r\nrequirements = pinky_hasachieved_finishedshangrila;\r\naction = sunniva|stopshout;\r\naction = sunniva|stopofferconversation;\r\naction = sunniva|startshout|abra_cave_sunniva|15;\r\naction = sunniva|offerconversation|abra_unlockcave;\r\n\r\ntrigger = abra_unlockcave_finished;\r\naction = pinky|addachievement|unlockedcave;\r\naction = sunniva|stopofferconversation;\r\naction = sunniva|stopshout;\r\naction = sunniva|startshout|abra_gocave_sunniva|15;\r\n\r\ntrigger = startmap;\r\nrequirements = pinky_hasachieved_finishedcave;\r\naction = playsound|abra_keepplaying_storyteller;\r\naction = sunniva|stopofferconversation;\r\naction = sunniva|stopshout;\r\naction = sunniva|startshout|abra_hey_sunniva|15;",
+      "sw_pos": [
+        -363.141,
+        173.789,
+        0.0
+      ],
+      "godot_pos": [
+        -363.141,
+        0.0,
+        -173.789
+      ]
+    },
+    {
+      "name": "character_shopkeeper",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "resource = shopkeeper;",
+      "sw_pos": [
+        -203.363,
+        122.553,
+        0.0
+      ],
+      "godot_pos": [
+        -203.363,
+        0.0,
+        -122.553
+      ]
+    },
+    {
+      "name": "character_prostitute1",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "resource = abra_npc4;",
+      "sw_pos": [
+        358.273,
+        397.192,
+        0.0
+      ],
+      "godot_pos": [
+        358.273,
+        0.0,
+        -397.192
+      ]
+    },
+    {
+      "name": "character_prostitute2",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "resource = female1;",
+      "sw_pos": [
+        361.156,
+        335.35,
+        0.0
+      ],
+      "godot_pos": [
+        361.156,
+        0.0,
+        -335.35
+      ]
+    },
+    {
+      "name": "character_nobody1",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "resource = abra_npc1;",
+      "sw_pos": [
+        262.777,
+        -288.94,
+        0.0
+      ],
+      "godot_pos": [
+        262.777,
+        0.0,
+        288.94
+      ]
+    },
+    {
+      "name": "character_dog",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        276.983,
+        -48.88,
+        0.0
+      ],
+      "godot_pos": [
+        276.983,
+        0.0,
+        48.88
+      ]
+    },
+    {
+      "name": "generic_npcs",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "trigger = startmap;\r\naction = dog|startmumble|abra_dog|3;\r\naction = nobody1|startmumble|abra_nobody1|15;\r\naction = nobody2|startmumble|abra_nobody2|15;\r\naction = nobody3|startshout|abra_nobody3|15;\r\naction = prostitute2|startshout|abra_prostitute2|15;\r\naction = prostitute1|startshout|abra_prostitute1|15;",
+      "sw_pos": [
+        -313.628,
+        175.145,
+        0.0
+      ],
+      "godot_pos": [
+        -313.628,
+        0.0,
+        -175.145
+      ]
+    },
+    {
+      "name": "character_opponent1",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "dontdie = 1;\r\nonlyguard = 1;",
+      "sw_pos": [
+        206.327,
+        71.723,
+        0.0
+      ],
+      "godot_pos": [
+        206.327,
+        0.0,
+        -71.723
+      ]
+    },
+    {
+      "name": "character_opponent2",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "dontdie = 1;\r\nonlyguard = 1;",
+      "sw_pos": [
+        -158.287,
+        344.534,
+        0.0
+      ],
+      "godot_pos": [
+        -158.287,
+        0.0,
+        -344.534
+      ]
+    },
+    {
+      "name": "character_opponent3",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "dontdie = 1;\r\nonlyguard = 1;",
+      "sw_pos": [
+        327.566,
+        203.103,
+        0.0
+      ],
+      "godot_pos": [
+        327.566,
+        0.0,
+        -203.103
+      ]
+    },
+    {
+      "name": "Challengers",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "trigger = resumemap;\r\naction = opponent1|resethealth;\r\naction = opponent2|resethealth;\r\naction = opponent3|resethealth;\r\naction = opponent1|startmumble|abra_challenge1|10;\r\naction = opponent1|offerconversation|abra_opponent1;\r\naction = opponent2|startshout|abra_challenge2|10;\r\naction = opponent2|offerconversation|abra_opponent2;\r\naction = opponent3|startshout|abra_challenge3|10;\r\naction = opponent3|offerconversation|abra_opponent3;\r\naction = opponent1|setattackmode|guard;\r\naction = opponent2|setattackmode|guard;\r\naction = opponent3|setattackmode|guard;\r\nonce = 0;\r\n\r\ntrigger = abra_opponent1_finished;\r\naction = opponent1|stopmumble;\r\naction = opponent1|stopofferconversation;\r\naction = opponent1|addtoattacklist|pinky;\r\naction = opponent1|addtogroup|badguys;\r\nonce = 0;\r\n\r\ntrigger = opponent1_lostallhealth;\r\naction = opponent1|removefromgroup|badguys;\r\naction = opponent1|removefromattacklist|pinky;\r\naction = startconversation|abra_opponent1defeated;\r\nonce = 0;\r\n\r\ntrigger = abra_opponent1defeated_finished;\r\nfirsttoreact = 1; \r\naction = queue|savegame;\r\nonce = 0;\r\n\r\ntrigger = abra_opponent1defeated_finished;\r\naction = opponent1|give|pinky|item=coppercoin|amount=1;\r\nonce = 0;\r\n\r\ntrigger = abra_opponent1defeated_finished + 10;\r\naction = opponent1|startshout|abra_opponent1defeated_1_opponent1|15;\r\nonce = 0;\r\n\r\ntrigger = abra_opponent2_finished;\r\naction = opponent2|stopshout;\r\naction = opponent2|stopofferconversation;\r\naction = opponent2|addtoattacklist|pinky;\r\naction = opponent2|addtogroup|badguys;\r\nonce = 0;\r\n\r\ntrigger = opponent2_lostallhealth;\r\naction = opponent2|removefromgroup|badguys;\r\naction = opponent2|removefromattacklist|pinky;\r\naction = startconversation|abra_opponent2defeated;\r\nonce = 0;\r\n\r\ntrigger = abra_opponent2defeated_finished;\r\nfirsttoreact = 1; \r\naction = queue|savegame;\r\nonce = 0;\r\n\r\ntrigger = abra_opponent2defeated_finished;\r\naction = opponent2|give|pinky|item=coppercoin|amount=1;\r\nonce = 0;\r\n\r\ntrigger = abra_opponent2defeated_finished + 10;\r\naction = opponent2|startshout|abra_opponent2defeated_1_opponent2|15;\r\nonce = 0;\r\n\r\ntrigger = abra_opponent3_finished;\r\naction = opponent3|stopshout;\r\naction = opponent3|stopofferconversation;\r\naction = opponent3|addtoattacklist|pinky;\r\naction = opponent3|addtogroup|badguys;\r\nonce = 0;\r\n\r\ntrigger = opponent3_lostallhealth;\r\naction = opponent3|removefromgroup|badguys;\r\naction = opponent3|removefromattacklist|pinky;\r\naction = startconversation|abra_opponent3defeated;\r\nonce = 0;\r\n\r\ntrigger = abra_opponent3defeated_finished;\r\nfirsttoreact = 1; \r\naction = queue|savegame;\r\nonce = 0;\r\n\r\ntrigger = abra_opponent3defeated_finished;\r\naction = opponent3|give|pinky|item=coppercoin|amount=1;\r\nonce = 0;\r\n\r\ntrigger = abra_opponent3defeated_finished + 10;\r\naction = opponent3|startshout|abra_opponent3defeated_1_opponent3|15;\r\nonce = 0;",
+      "sw_pos": [
+        -414.304,
+        118.775,
+        0.0
+      ],
+      "godot_pos": [
+        -414.304,
+        0.0,
+        -118.775
+      ]
+    },
+    {
+      "name": "character_nobody2",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "resource = abra_npc2;",
+      "sw_pos": [
+        309.191,
+        90.514,
+        0.0
+      ],
+      "godot_pos": [
+        309.191,
+        0.0,
+        -90.514
+      ]
+    },
+    {
+      "name": "character_nobody3",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "resource = abra_npc3;",
+      "sw_pos": [
+        -19.756,
+        47.628,
+        0.0
+      ],
+      "godot_pos": [
+        -19.756,
+        0.0,
+        -47.628
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_1",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "contains = coppercoin;",
+      "sw_pos": [
+        -196.45,
+        -116.093,
+        0.0
+      ],
+      "godot_pos": [
+        -196.45,
+        0.0,
+        116.093
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_2",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        -209.383,
+        -101.019,
+        0.0
+      ],
+      "godot_pos": [
+        -209.383,
+        0.0,
+        101.019
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_3",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        -70.484,
+        -42.164,
+        0.0
+      ],
+      "godot_pos": [
+        -70.484,
+        0.0,
+        42.164
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_4",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        -343.35,
+        -110.158,
+        0.0
+      ],
+      "godot_pos": [
+        -343.35,
+        0.0,
+        110.158
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_5",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "contains = coppercoin;",
+      "sw_pos": [
+        -343.35,
+        -83.781,
+        0.0
+      ],
+      "godot_pos": [
+        -343.35,
+        0.0,
+        83.781
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_6",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        281.337,
+        -106.736,
+        0.0
+      ],
+      "godot_pos": [
+        281.337,
+        0.0,
+        106.736
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_7",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "contains = apple;",
+      "sw_pos": [
+        281.337,
+        -136.904,
+        0.0
+      ],
+      "godot_pos": [
+        281.337,
+        0.0,
+        136.904
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_8",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "contains = coppercoin;",
+      "sw_pos": [
+        352.102,
+        -297.852,
+        0.0
+      ],
+      "godot_pos": [
+        352.102,
+        0.0,
+        297.852
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_9",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        525.879,
+        -282.487,
+        0.0
+      ],
+      "godot_pos": [
+        525.879,
+        0.0,
+        282.487
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_10",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        540.766,
+        -267.923,
+        0.0
+      ],
+      "godot_pos": [
+        540.766,
+        0.0,
+        267.923
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_11",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "contains = goldcoin;",
+      "sw_pos": [
+        540.766,
+        -282.538,
+        0.0
+      ],
+      "godot_pos": [
+        540.766,
+        0.0,
+        282.538
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_12",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "contains = apple;",
+      "sw_pos": [
+        -246.218,
+        148.947,
+        0.0
+      ],
+      "godot_pos": [
+        -246.218,
+        0.0,
+        -148.947
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_13",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "contains = goldcoin;",
+      "sw_pos": [
+        35.609,
+        448.016,
+        0.0
+      ],
+      "godot_pos": [
+        35.609,
+        0.0,
+        -448.016
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_14",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "contains = apple;",
+      "sw_pos": [
+        -43.908,
+        461.402,
+        0.0
+      ],
+      "godot_pos": [
+        -43.908,
+        0.0,
+        -461.402
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_15",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "contains = coppercoin;",
+      "sw_pos": [
+        -188.85,
+        226.256,
+        0.0
+      ],
+      "godot_pos": [
+        -188.85,
+        0.0,
+        -226.256
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_16",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        -178.332,
+        233.526,
+        0.0
+      ],
+      "godot_pos": [
+        -178.332,
+        0.0,
+        -233.526
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_17",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "contains = apple;",
+      "sw_pos": [
+        441.978,
+        170.873,
+        0.0
+      ],
+      "godot_pos": [
+        441.978,
+        0.0,
+        -170.873
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_18",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "contains = apple;",
+      "sw_pos": [
+        441.978,
+        189.675,
+        0.0
+      ],
+      "godot_pos": [
+        441.978,
+        0.0,
+        -189.675
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_19",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "contains = coppercoin;",
+      "sw_pos": [
+        421.425,
+        171.274,
+        0.0
+      ],
+      "godot_pos": [
+        421.425,
+        0.0,
+        -171.274
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_20",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "contains = coppercoin;",
+      "sw_pos": [
+        441.856,
+        415.714,
+        0.0
+      ],
+      "godot_pos": [
+        441.856,
+        0.0,
+        -415.714
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_21",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        426.214,
+        415.556,
+        0.0
+      ],
+      "godot_pos": [
+        426.214,
+        0.0,
+        -415.556
+      ]
+    },
+    {
+      "name": "character_sunniva",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        111.162,
+        -7.496,
+        0.0
+      ],
+      "godot_pos": [
+        111.162,
+        0.0,
+        7.496
+      ]
+    },
+    {
+      "name": "character_shipman",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "resource = shopkeeper2;",
+      "sw_pos": [
+        -161.258,
+        231.35,
+        0.0
+      ],
+      "godot_pos": [
+        -161.258,
+        0.0,
+        -231.35
+      ]
+    },
+    {
+      "name": "actionable_cannon1",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "icon = shop_cannon;\r\nonce = 0;",
+      "sw_pos": [
+        -144.91,
+        230.916,
+        0.0
+      ],
+      "godot_pos": [
+        -144.91,
+        0.0,
+        -230.916
+      ]
+    },
+    {
+      "name": "actionable_sail1",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "icon = shop_sail;\r\nonce = 0;",
+      "sw_pos": [
+        -152.041,
+        215.815,
+        0.0
+      ],
+      "godot_pos": [
+        -152.041,
+        0.0,
+        -215.815
+      ]
+    },
+    {
+      "name": "actionable_hull1",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "icon = shop_hull;\r\nonce = 0;",
+      "sw_pos": [
+        -167.834,
+        211.121,
+        0.0
+      ],
+      "godot_pos": [
+        -167.834,
+        0.0,
+        -211.121
+      ]
+    },
+    {
+      "name": "Dark Lady",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "trigger = startmap;\r\naction = shipman|startshout|abra_ship_shipman|15;\r\nfalse = shipman|offerconversation|abra_shipupgrades;\r\naction = actionable_cannon1|enable;\r\naction = actionable_sail1|enable;\r\naction = actionable_hull1|enable;\r\naction = actionable_cannon2|disable;\r\naction = actionable_sail2|disable;\r\naction = actionable_hull2|disable;\r\naction = actionable_cannon3|disable;\r\naction = actionable_sail3|disable;\r\naction = actionable_hull3|disable;\r\n\r\ntrigger = areatrigger_shop2_enter;\r\naction = coppercoincounter|show;\r\nonce = 0;\r\n\r\ntrigger = areatrigger_shop2_leave;\r\naction = coppercoincounter|hide;\r\nonce = 0;\r\n\r\ntrigger = actionable_cannon1_actioned;\r\nrequirements = pinky_nothasitem_coppercoin_10, pinky_nothasitem_cannon1;\r\naction = startconversation|abra_nocannon1;\r\nonlyexecuteaftertrigger = 1;\r\nonce = 0;\r\n\r\ntrigger = actionable_cannon1_actioned;\r\nrequirements = pinky_hasitem_coppercoin_10;\r\naction = startconversation|abra_yescannon1;\r\naction = actionable_cannon1|disable;\r\naction = actionable_cannon2|enable;\r\naction = pinky|addtoinventory|cannon1;\r\naction = pinky|removefrominventory|coppercoin|10;\r\nonlyexecuteaftertrigger = 1;\r\n\r\ntrigger = actionable_cannon2_actioned;\r\nrequirements = pinky_nothasitem_coppercoin_25, pinky_nothasitem_cannon2;\r\naction = startconversation|abra_nocannon2;\r\nonlyexecuteaftertrigger = 1;\r\nonce = 0;\r\n\r\ntrigger = actionable_cannon2_actioned;\r\nrequirements = pinky_hasitem_coppercoin_25;\r\naction = startconversation|abra_yescannon2;\r\naction = actionable_cannon2|disable;\r\naction = actionable_cannon3|enable;\r\naction = pinky|addtoinventory|cannon2;\r\naction = pinky|removefrominventory|coppercoin|25;\r\nonlyexecuteaftertrigger = 1;\r\n\r\ntrigger = actionable_cannon3_actioned;\r\nrequirements = pinky_nothasitem_coppercoin_50, pinky_nothasitem_cannon3;\r\naction = startconversation|abra_nocannon3;\r\nonlyexecuteaftertrigger = 1;\r\nonce = 0;\r\n\r\ntrigger = actionable_cannon3_actioned;\r\nrequirements = pinky_hasitem_coppercoin_50;\r\naction = startconversation|abra_yescannon3;\r\naction = actionable_cannon3|disable;\r\naction = actionable_cannon4|enable;\r\naction = pinky|addtoinventory|cannon3;\r\naction = pinky|removefrominventory|coppercoin|50;\r\nonlyexecuteaftertrigger = 1;\r\n\r\ntrigger = actionable_cannon4_actioned;\r\naction = startconversation|abra_nocannon4;\r\nonce = 0;\r\n\r\ntrigger = actionable_sail1_actioned;\r\nrequirements = pinky_nothasitem_coppercoin_10, pinky_nothasitem_sail1;\r\naction = startconversation|abra_nosail1;\r\nonlyexecuteaftertrigger = 1;\r\nonce = 0;\r\n\r\ntrigger = actionable_sail1_actioned;\r\nrequirements = pinky_hasitem_coppercoin_10;\r\naction = startconversation|abra_yessail1;\r\naction = actionable_sail1|disable;\r\naction = actionable_sail2|enable;\r\naction = pinky|addtoinventory|sail1;\r\naction = pinky|removefrominventory|coppercoin|10;\r\nonlyexecuteaftertrigger = 1;\r\n\r\ntrigger = actionable_sail2_actioned;\r\nrequirements = pinky_nothasitem_coppercoin_25, pinky_nothasitem_sail2;\r\naction = startconversation|abra_nosail2;\r\nonlyexecuteaftertrigger = 1;\r\nonce = 0;\r\n\r\ntrigger = actionable_sail2_actioned;\r\nrequirements = pinky_hasitem_coppercoin_25;\r\naction = startconversation|abra_yessail2;\r\naction = actionable_sail2|disable;\r\naction = actionable_sail3|enable;\r\naction = pinky|addtoinventory|sail2;\r\naction = pinky|removefrominventory|coppercoin|25;\r\nonlyexecuteaftertrigger = 1;\r\n\r\ntrigger = actionable_sail3_actioned;\r\nrequirements = pinky_nothasitem_coppercoin_50, pinky_nothasitem_sail3;\r\naction = startconversation|abra_nosail3;\r\nonlyexecuteaftertrigger = 1;\r\nonce = 0;\r\n\r\ntrigger = actionable_sail3_actioned;\r\nrequirements = pinky_hasitem_coppercoin_50;\r\naction = startconversation|abra_yessail3;\r\naction = actionable_sail3|disable;\r\naction = actionable_sail4|enable;\r\naction = pinky|addtoinventory|sail3;\r\naction = pinky|removefrominventory|coppercoin|50;\r\nonlyexecuteaftertrigger = 1;\r\n\r\ntrigger = actionable_sail4_actioned;\r\naction = startconversation|abra_nosail4;\r\nonce = 0;\r\n\r\ntrigger = actionable_hull1_actioned;\r\nrequirements = pinky_nothasitem_coppercoin_10, pinky_nothasitem_hull1;\r\naction = startconversation|abra_nohull1;\r\nonlyexecuteaftertrigger = 1;\r\nonce = 0;\r\n\r\ntrigger = actionable_hull1_actioned;\r\nrequirements = pinky_hasitem_coppercoin_10;\r\naction = startconversation|abra_yeshull1;\r\naction = actionable_hull1|disable;\r\naction = actionable_hull2|enable;\r\naction = pinky|addtoinventory|hull1;\r\naction = pinky|removefrominventory|coppercoin|10;\r\nonlyexecuteaftertrigger = 1;\r\n\r\ntrigger = actionable_hull2_actioned;\r\nrequirements = pinky_nothasitem_coppercoin_25, pinky_nothasitem_hull2;\r\naction = startconversation|abra_nohull2;\r\nonlyexecuteaftertrigger = 1;\r\nonce = 0;\r\n\r\ntrigger = actionable_hull2_actioned;\r\nrequirements = pinky_hasitem_coppercoin_25;\r\naction = startconversation|abra_yeshull2;\r\naction = actionable_hull2|disable;\r\naction = actionable_hull3|enable;\r\naction = pinky|addtoinventory|hull2;\r\naction = pinky|removefrominventory|coppercoin|25;\r\nonlyexecuteaftertrigger = 1;\r\n\r\ntrigger = actionable_hull3_actioned;\r\nrequirements = pinky_nothasitem_coppercoin_50, pinky_nothasitem_hull3;\r\naction = startconversation|abra_nohull3;\r\nonlyexecuteaftertrigger = 1;\r\nonce = 0;\r\n\r\ntrigger = actionable_hull3_actioned;\r\nrequirements = pinky_hasitem_coppercoin_50;\r\naction = startconversation|abra_yeshull3;\r\naction = actionable_hull3|disable;\r\naction = actionable_hull4|enable;\r\naction = pinky|addtoinventory|hull3;\r\naction = pinky|removefrominventory|coppercoin|50;\r\nonlyexecuteaftertrigger = 1;\r\n\r\ntrigger = actionable_hull4_actioned;\r\naction = startconversation|abra_nohull4;\r\nonce = 0;",
+      "sw_pos": [
+        -364.173,
+        122.77,
+        0.0
+      ],
+      "godot_pos": [
+        -364.173,
+        0.0,
+        -122.77
+      ]
+    },
+    {
+      "name": "actionable_cannon2",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "icon = shop_cannon;\r\nonce = 0;",
+      "sw_pos": [
+        -144.91,
+        230.916,
+        0.0
+      ],
+      "godot_pos": [
+        -144.91,
+        0.0,
+        -230.916
+      ]
+    },
+    {
+      "name": "actionable_cannon3",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "icon = shop_cannon;\r\nonce = 0;",
+      "sw_pos": [
+        -144.91,
+        230.916,
+        0.0
+      ],
+      "godot_pos": [
+        -144.91,
+        0.0,
+        -230.916
+      ]
+    },
+    {
+      "name": "actionable_sail2",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "icon = shop_sail;\r\nonce = 0;",
+      "sw_pos": [
+        -152.041,
+        215.815,
+        0.0
+      ],
+      "godot_pos": [
+        -152.041,
+        0.0,
+        -215.815
+      ]
+    },
+    {
+      "name": "actionable_sail3",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "icon = shop_sail;\r\nonce = 0;",
+      "sw_pos": [
+        -152.041,
+        215.815,
+        0.0
+      ],
+      "godot_pos": [
+        -152.041,
+        0.0,
+        -215.815
+      ]
+    },
+    {
+      "name": "actionable_hull2",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "icon = shop_hull;\r\nonce = 0;",
+      "sw_pos": [
+        -167.834,
+        211.121,
+        0.0
+      ],
+      "godot_pos": [
+        -167.834,
+        0.0,
+        -211.121
+      ]
+    },
+    {
+      "name": "actionable_hull3",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "icon = shop_hull;\r\nonce = 0;",
+      "sw_pos": [
+        -167.834,
+        211.121,
+        0.0
+      ],
+      "godot_pos": [
+        -167.834,
+        0.0,
+        -211.121
+      ]
+    },
+    {
+      "name": "actionable_cannon4",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "icon = shop_cannon;\r\nonce = 0;",
+      "sw_pos": [
+        -144.91,
+        230.916,
+        0.0
+      ],
+      "godot_pos": [
+        -144.91,
+        0.0,
+        -230.916
+      ]
+    },
+    {
+      "name": "actionable_sail4",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "icon = shop_sail;\r\nonce = 0;",
+      "sw_pos": [
+        -152.041,
+        215.815,
+        0.0
+      ],
+      "godot_pos": [
+        -152.041,
+        0.0,
+        -215.815
+      ]
+    },
+    {
+      "name": "actionable_hull4",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "icon = shop_hull;\r\nonce = 0;",
+      "sw_pos": [
+        -167.834,
+        211.121,
+        0.0
+      ],
+      "godot_pos": [
+        -167.834,
+        0.0,
+        -211.121
+      ]
+    },
+    {
+      "name": "abrashop",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "trigger = startmap;\r\naction = shopkeeper|startshout|abra_buylamp_shopkeeper|15;\r\n\r\ntrigger = areatrigger_shop1_enter;\r\naction = goldcoincounter|show;\r\nonce = 0;\r\n\r\ntrigger = areatrigger_shop1_leave;\r\naction = goldcoincounter|hide;\r\nonce = 0;\r\n\r\ntrigger = startmap;\r\nrequirements = difficulty_1, pinky_nothasitem_goldcoin_2, pinky_nothasitem_lamp;\r\naction = shopkeeper|offerconversation|abra_cantbuylamp_easy|icon=shop;\r\nundoaction = shopkeeper|stopofferconversation|abra_cantbuylamp_easy;\r\nonce = 0;\r\n\r\ntrigger = startmap;\r\nrequirements = difficulty_1, pinky_hasitem_goldcoin_2, pinky_nothasitem_lamp;\r\naction = shopkeeper|offerconversation|abra_canbuylamp_easy|icon=shop;\r\nundoaction = shopkeeper|stopofferconversation|abra_canbuylamp_easy;\r\nonce = 0;\r\n\r\ntrigger = abra_canbuylamp_easy_finished;\r\naction = playsfx|recieveitem_special;\r\naction = sendgameevent|gotlamp;\r\naction = pinky|pickup|lamp;\r\naction = pinky|removefrominventory|goldcoin|2;\r\naction = shopkeeper|stopofferconversation;\r\naction = shopkeeper|stopshout;\r\naction = shopkeeper|startshout|abra_nothingforsale_shopkeeper|15;\r\n\r\ntrigger = startmap;\r\nrequirements = difficulty_2, pinky_nothasitem_goldcoin_4, pinky_nothasitem_lamp;\r\naction = shopkeeper|offerconversation|abra_cantbuylamp_medium|icon=shop;\r\nundoaction = shopkeeper|stopofferconversation|abra_cantbuylamp_medium;\r\nonce = 0;\r\n\r\ntrigger = startmap;\r\nrequirements = difficulty_2, pinky_hasitem_goldcoin_4, pinky_nothasitem_lamp;\r\naction = shopkeeper|offerconversation|abra_canbuylamp_medium|icon=shop;\r\nundoaction = shopkeeper|stopofferconversation|abra_canbuylamp_medium;\r\nonce = 0;\r\n\r\ntrigger = abra_canbuylamp_medium_finished;\r\naction = playsfx|recieveitem_special;\r\naction = sendgameevent|gotlamp;\r\naction = pinky|pickup|lamp;\r\naction = pinky|removefrominventory|goldcoin|4;\r\naction = shopkeeper|stopofferconversation;\r\naction = shopkeeper|stopshout;\r\naction = shopkeeper|startshout|abra_nothingforsale_shopkeeper|15;\r\n\r\ntrigger = startmap;\r\nrequirements = difficulty_3, pinky_nothasitem_goldcoin_5, pinky_nothasitem_lamp;\r\naction = shopkeeper|offerconversation|abra_cantbuylamp_hard|icon=shop;\r\nundoaction = shopkeeper|stopofferconversation|abra_cantbuylamp_hard;\r\nonce = 0;\r\n\r\ntrigger = startmap;\r\nrequirements = difficulty_3, pinky_hasitem_goldcoin_5, pinky_nothasitem_lamp;\r\naction = shopkeeper|offerconversation|abra_canbuylamp_hard|icon=shop;\r\nundoaction = shopkeeper|stopofferconversation|abra_canbuylamp_hard;\r\nonce = 0;\r\n\r\ntrigger = abra_canbuylamp_hard_finished;\r\naction = playsfx|recieveitem_special;\r\naction = sendgameevent|gotlamp;\r\naction = pinky|pickup|lamp;\r\naction = pinky|removefrominventory|goldcoin|5;\r\naction = shopkeeper|stopofferconversation;\r\naction = shopkeeper|stopshout;\r\naction = shopkeeper|startshout|abra_nothingforsale_shopkeeper|15;\r\n\r\ntrigger = startmap;\r\nrequirements = pinky_hasachieved_finishedgraal;\r\naction = shopkeeper|stopshout;\r\naction = shopkeeper|startshout|abra_buyslingshot_shopkeeper|15;\r\n\r\ntrigger = startmap;\r\nrequirements = difficulty_1, pinky_nothasitem_goldcoin_5, pinky_nothasitem_slingshot, pinky_hasachieved_finishedgraal;\r\naction = shopkeeper|offerconversation|abra_cantbuysling_easy|icon=shop;\r\nundoaction = shopkeeper|stopofferconversation|abra_cantbuysling_easy;\r\nonce = 0;\r\n\r\ntrigger = startmap;\r\nrequirements = difficulty_1, pinky_hasitem_goldcoin_5, pinky_nothasitem_slingshot, pinky_hasachieved_finishedgraal;\r\naction = shopkeeper|offerconversation|abra_canbuysling_easy|icon=shop;\r\nundoaction = shopkeeper|stopofferconversation|abra_canbuysling_easy;\r\nonce = 0;\r\n\r\ntrigger = abra_canbuysling_easy_finished;\r\naction = playsfx|recieveitem_special;\r\naction = sendgameevent|gotsling;\r\naction = pinky|pickup|slingshot;\r\naction = pinky|removefrominventory|goldcoin|5;\r\naction = shopkeeper|stopofferconversation;\r\naction = shopkeeper|stopshout;\r\naction = shopkeeper|startshout|abra_nothingforsale_shopkeeper|15;\r\n\r\ntrigger = startmap;\r\nrequirements = difficulty_2, pinky_nothasitem_goldcoin_7, pinky_nothasitem_slingshot, pinky_hasachieved_finishedgraal;\r\naction = shopkeeper|offerconversation|abra_cantbuysling_medium|icon=shop;\r\nundoaction = shopkeeper|stopofferconversation|abra_cantbuysling_medium;\r\nonce = 0;\r\n\r\ntrigger = startmap;\r\nrequirements = difficulty_2, pinky_hasitem_goldcoin_7, pinky_nothasitem_slingshot, pinky_hasachieved_finishedgraal;\r\naction = shopkeeper|offerconversation|abra_canbuysling_medium|icon=shop;\r\nundoaction = shopkeeper|stopofferconversation|abra_canbuysling_medium;\r\nonce = 0;\r\n\r\ntrigger = abra_canbuysling_medium_finished;\r\naction = playsfx|recieveitem_special;\r\naction = sendgameevent|gotsling;\r\naction = pinky|pickup|slingshot;\r\naction = pinky|removefrominventory|goldcoin|7;\r\naction = shopkeeper|stopofferconversation;\r\naction = shopkeeper|stopshout;\r\naction = shopkeeper|startshout|abra_nothingforsale_shopkeeper|15;\r\n\r\ntrigger = startmap;\r\nrequirements = difficulty_3, pinky_nothasitem_goldcoin_10, pinky_nothasitem_slingshot, pinky_hasachieved_finishedgraal;\r\naction = shopkeeper|offerconversation|abra_cantbuysling_hard|icon=shop;\r\nundoaction = shopkeeper|stopofferconversation|abra_cantbuysling_hard;\r\nonce = 0;\r\n\r\ntrigger = startmap;\r\nrequirements = difficulty_3, pinky_hasitem_goldcoin_10, pinky_nothasitem_slingshot, pinky_hasachieved_finishedgraal;\r\naction = shopkeeper|offerconversation|abra_canbuysling_hard|icon=shop;\r\nundoaction = shopkeeper|stopofferconversation|abra_canbuysling_hard;\r\nonce = 0;\r\n\r\ntrigger = abra_canbuysling_hard_finished;\r\naction = playsfx|recieveitem_special;\r\naction = sendgameevent|gotsling;\r\naction = pinky|pickup|slingshot;\r\naction = pinky|removefrominventory|goldcoin|10;\r\naction = shopkeeper|stopofferconversation;\r\naction = shopkeeper|stopshout;\r\naction = shopkeeper|startshout|abra_nothingforsale_shopkeeper|15;\r\n\r\ntrigger = abra_unlockshangrila_finished;\r\naction = pinky|addachievement|unlockedshangrila;\r\naction = shopkeeper|stopofferconversation;\r\naction = shopkeeper|stopshout;\r\naction = shopkeeper|startshout|abra_buysword_shopkeeper|15;\r\n\r\ntrigger = abra_unlockshangrila_finished;\r\nrequirements = difficulty_1, pinky_nothasitem_goldcoin_8, pinky_nothasitem_sword;\r\naction = shopkeeper|offerconversation|abra_cantbuysword_easy|icon=shop;\r\nundoaction = shopkeeper|stopofferconversation|abra_cantbuysword_easy;\r\nonce = 0;\r\n\r\ntrigger = abra_unlockshangrila_finished;\r\nrequirements = difficulty_1, pinky_hasitem_goldcoin_8, pinky_nothasitem_sword;\r\naction = shopkeeper|offerconversation|abra_canbuysword_easy|icon=shop;\r\nundoaction = shopkeeper|stopofferconversation|abra_canbuysword_easy;\r\nonce = 0;\r\n\r\ntrigger = abra_canbuysword_easy_finished;\r\naction = playsfx|recieveitem_special;\r\naction = pinky|removefrominventory|woodensword;\r\naction = pinky|pickup|sword;\r\naction = pinky|removefrominventory|goldcoin|8;\r\naction = shopkeeper|stopofferconversation;\r\naction = shopkeeper|stopshout;\r\naction = shopkeeper|startshout|abra_nothingforsale_shopkeeper|15;\r\n\r\ntrigger = abra_unlockshangrila_finished;\r\nrequirements = difficulty_2, pinky_nothasitem_goldcoin_12, pinky_nothasitem_sword;\r\naction = shopkeeper|offerconversation|abra_cantbuysword_medium|icon=shop;\r\nundoaction = shopkeeper|stopofferconversation|abra_cantbuysword_medium;\r\nonce = 0;\r\n\r\ntrigger = abra_unlockshangrila_finished;\r\nrequirements = difficulty_2, pinky_hasitem_goldcoin_12, pinky_nothasitem_sword;\r\naction = shopkeeper|offerconversation|abra_canbuysword_medium|icon=shop;\r\nundoaction = shopkeeper|stopofferconversation|abra_canbuysword_medium;\r\nonce = 0;\r\n\r\ntrigger = abra_canbuysword_medium_finished;\r\naction = playsfx|recieveitem_special;\r\naction = pinky|removefrominventory|woodensword;\r\naction = pinky|pickup|sword;\r\naction = pinky|removefrominventory|goldcoin|12;\r\naction = shopkeeper|stopofferconversation;\r\naction = shopkeeper|stopshout;\r\naction = shopkeeper|startshout|abra_nothingforsale_shopkeeper|15;\r\n\r\ntrigger = abra_unlockshangrila_finished;\r\nrequirements = difficulty_3, pinky_nothasitem_goldcoin_15, pinky_nothasitem_sword;\r\naction = shopkeeper|offerconversation|abra_cantbuysword_hard|icon=shop;\r\nundoaction = shopkeeper|stopofferconversation|abra_cantbuysword_hard;\r\nonce = 0;\r\n\r\ntrigger = abra_unlockshangrila_finished;\r\nrequirements = difficulty_3, pinky_hasitem_goldcoin_15, pinky_nothasitem_sword;\r\naction = shopkeeper|offerconversation|abra_canbuysword_hard|icon=shop;\r\nundoaction = shopkeeper|stopofferconversation|abra_canbuysword_hard;\r\nonce = 0;\r\n\r\ntrigger = abra_canbuysword_hard_finished;\r\naction = playsfx|recieveitem_special;\r\naction = pinky|removefrominventory|woodensword;\r\naction = pinky|pickup|sword;\r\naction = pinky|removefrominventory|goldcoin|15;\r\naction = shopkeeper|stopofferconversation;\r\naction = shopkeeper|stopshout;\r\naction = shopkeeper|startshout|abra_nothingforsale_shopkeeper|15;",
+      "sw_pos": [
+        -316.012,
+        123.55,
+        0.0
+      ],
+      "godot_pos": [
+        -316.012,
+        0.0,
+        -123.55
+      ]
+    },
+    {
+      "name": "pinky_startposition",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        -67.922,
+        -219.934,
+        0.0
+      ],
+      "godot_pos": [
+        -67.922,
+        0.0,
+        219.934
+      ]
+    },
+    {
+      "name": "areatrigger_shop1",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#circle,#radius:41.8656,#position:vector(-192.598,122.157,0)];once = 0;",
+      "sw_pos": [
+        -192.598,
+        122.157,
+        0.0
+      ],
+      "godot_pos": [
+        -192.598,
+        0.0,
+        -122.157
+      ]
+    },
+    {
+      "name": "areatrigger_shop2",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#circle,#radius:41.8656,#position:vector(-160.192,226.777,0)];once = 0;",
+      "sw_pos": [
+        -160.192,
+        226.777,
+        0.0
+      ],
+      "godot_pos": [
+        -160.192,
+        0.0,
+        -226.777
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_22",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "contains = goldcoin;",
+      "sw_pos": [
+        203.061,
+        178.966,
+        0.0
+      ],
+      "godot_pos": [
+        203.061,
+        0.0,
+        -178.966
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_23",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        214.493,
+        189.807,
+        0.0
+      ],
+      "godot_pos": [
+        214.493,
+        0.0,
+        -189.807
+      ]
+    },
+    {
+      "name": "jump_darklady",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-69.4183,-148.6,0),vector(-69.4183,-163.097,0)],#closed:0]]];",
+      "sw_pos": [
+        -69.418,
+        -155.849,
+        0.0
+      ],
+      "godot_pos": [
+        -69.418,
+        0.0,
+        155.849
+      ]
+    },
+    {
+      "name": "character_sabeltann",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        -233.919,
+        -192.785,
+        0.0
+      ],
+      "godot_pos": [
+        -233.919,
+        0.0,
+        192.785
+      ]
+    },
+    {
+      "name": "character_langemann",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        -97.935,
+        -219.115,
+        0.0
+      ],
+      "godot_pos": [
+        -97.935,
+        0.0,
+        219.115
+      ]
+    },
+    {
+      "name": "character_pelle",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        -11.447,
+        -204.003,
+        0.0
+      ],
+      "godot_pos": [
+        -11.447,
+        0.0,
+        204.003
+      ]
+    },
+    {
+      "name": "sabeltann_1",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-231.998,-179.404,0),vector(-222.766,-160.611,0),vector(-101.638,-164.333,0)],#closed:0]]];trigger = startmap + 10, sabeltann_3_finished + 40;\r\ntarget = sabeltann;\r\nonce = 0",
+      "sw_pos": [
+        -201.264,
+        -168.984,
+        0.0
+      ],
+      "godot_pos": [
+        -201.264,
+        0.0,
+        168.984
+      ]
+    },
+    {
+      "name": "sabeltann_2",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-116.837,-202.212,0),vector(-73.8059,-226.09,0),vector(-67.4578,-206.299,0)],#closed:0]]];trigger = sabeltann_1_finished + 40;\r\ntarget = sabeltann;\r\nonce = 0",
+      "sw_pos": [
+        -119.8,
+        -185.545,
+        0.0
+      ],
+      "godot_pos": [
+        -119.8,
+        0.0,
+        185.545
+      ]
+    },
+    {
+      "name": "sabeltann_3",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-107.514,-223.449,0),vector(-172.944,-221.089,0),vector(-223.002,-223.108,0),vector(-234.003,-207.921,0),vector(-234.377,-192.611,0),vector(-231.763,-192.798,0)],#closed:0]]];trigger = sabeltann_2_finished + 45;\r\ntarget = sabeltann;\r\nonce = 0;",
+      "sw_pos": [
+        -196.268,
+        -209.622,
+        0.0
+      ],
+      "godot_pos": [
+        -196.268,
+        0.0,
+        209.622
+      ]
+    },
+    {
+      "name": "pelle_1",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-6.73261,-188.115,0),vector(-9.63711,-178.61,0)],#closed:0]]];trigger = startmap + 20, pelle_3_finished + 40;\r\ntarget = pelle;\r\nonce = 0;",
+      "sw_pos": [
+        -8.185,
+        -183.363,
+        0.0
+      ],
+      "godot_pos": [
+        -8.185,
+        0.0,
+        183.363
+      ]
+    },
+    {
+      "name": "pelle_2",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-36.8389,-163.692,0),vector(-67.4682,-163.956,0),vector(-67.7323,-180.591,0),vector(-49.2491,-205.148,0),vector(-52.9457,-203.035,0)],#closed:0]]];trigger = pelle_1_finished + 40;\r\ntarget = pelle;\r\nonce = 0;",
+      "sw_pos": [
+        -54.847,
+        -183.285,
+        0.0
+      ],
+      "godot_pos": [
+        -54.847,
+        0.0,
+        183.285
+      ]
+    },
+    {
+      "name": "pelle_3",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-72.2211,-185.08,0),vector(-70.6368,-164.221,0),vector(-17.8276,-164.221,0),vector(-4.48838,-211.797,0),vector(-9.50526,-208.365,0)],#closed:0]]];trigger = pelle_2_finished + 40;\r\ntarget = pelle;\r\nonce = 0;",
+      "sw_pos": [
+        -37.103,
+        -189.886,
+        0.0
+      ],
+      "godot_pos": [
+        -37.103,
+        0.0,
+        189.886
+      ]
+    },
+    {
+      "name": "langemann_1",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-115.992,-191.099,0),vector(-113.22,-192.947,0)],#closed:0]]];trigger = startmap + 35, langemann_2_finished + 40;\r\ntarget=langemann;\r\nonce = 0;",
+      "sw_pos": [
+        -114.606,
+        -192.023,
+        0.0
+      ],
+      "godot_pos": [
+        -114.606,
+        0.0,
+        192.023
+      ]
+    },
+    {
+      "name": "langemann_2",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-95.7929,-223.445,0),vector(-95.1328,-220.408,0)],#closed:0]]];trigger = langemann_1_finished + 42;\r\ntarget = langemann;\r\nonce = 0;",
+      "sw_pos": [
+        -95.463,
+        -221.926,
+        0.0
+      ],
+      "godot_pos": [
+        -95.463,
+        0.0,
+        221.926
+      ]
+    },
+    {
+      "name": "walkoverpickup_coppercoin_20",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "ignoreheightmap = 1;",
+      "sw_pos": [
+        -69.123,
+        -151.962,
+        43.761
+      ],
+      "godot_pos": [
+        -69.123,
+        43.761,
+        151.962
+      ]
+    },
+    {
+      "name": "prostitutewalk_1",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(368.86,344.915,0),vector(397.162,369.173,0),vector(397.701,394.51,0),vector(395.814,391.545,0)],#closed:0]]];target = prostitute2;\r\ntrigger = startmap + 35, prostitutewalk_3_finished + 35;\r\nspeed = walk;\r\nonce = 0;",
+      "sw_pos": [
+        389.885,
+        375.036,
+        0.0
+      ],
+      "godot_pos": [
+        389.885,
+        0.0,
+        -375.036
+      ]
+    },
+    {
+      "name": "prostitutewalk_2",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(395.68,388.58,0),vector(398.914,344.335,0),vector(396.044,346.831,0)],#closed:0]]];target = prostitute2;\r\ntrigger = prostitutewalk_1_finished + 10;\r\nspeed = walk;\r\nonce = 0;",
+      "sw_pos": [
+        396.578,
+        362.525,
+        0.0
+      ],
+      "godot_pos": [
+        396.578,
+        0.0,
+        -362.525
+      ]
+    },
+    {
+      "name": "prostitutewalk_3",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(388.133,352.462,0),vector(371.421,358.931,0),vector(357.405,332.407,0),vector(361.172,334.832,0)],#closed:0]]];target = prostitute2;\r\ntrigger = prostitutewalk_2_finished + 20;\r\nspeed = walk;\r\nonce = 0;",
+      "sw_pos": [
+        369.804,
+        345.723,
+        0.0
+      ],
+      "godot_pos": [
+        369.804,
+        0.0,
+        -345.723
+      ]
+    },
+    {
+      "name": "walkoverpickup_coppercoin_01",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        -171.266,
+        421.377,
+        90.0
+      ],
+      "godot_pos": [
+        -171.266,
+        90.0,
+        -421.377
+      ]
+    },
+    {
+      "name": "walkoverpickup_coppercoin_02",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        -238.504,
+        489.359,
+        90.0
+      ],
+      "godot_pos": [
+        -238.504,
+        90.0,
+        -489.359
+      ]
+    },
+    {
+      "name": "walkoverpickup_coppercoin_03",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        -301.495,
+        452.351,
+        90.0
+      ],
+      "godot_pos": [
+        -301.495,
+        90.0,
+        -452.351
+      ]
+    },
+    {
+      "name": "walkoverpickup_coppercoin_04",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        -293.695,
+        371.932,
+        90.0
+      ],
+      "godot_pos": [
+        -293.695,
+        90.0,
+        -371.932
+      ]
+    },
+    {
+      "name": "walkoverpickup_coppercoin_05",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        -133.906,
+        186.377,
+        90.0
+      ],
+      "godot_pos": [
+        -133.906,
+        90.0,
+        -186.377
+      ]
+    },
+    {
+      "name": "walkoverpickup_coppercoin_06",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        -216.394,
+        67.241,
+        90.0
+      ],
+      "godot_pos": [
+        -216.394,
+        90.0,
+        -67.241
+      ]
+    },
+    {
+      "name": "walkoverpickup_coppercoin_07",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        56.179,
+        -70.307,
+        43.623
+      ],
+      "godot_pos": [
+        56.179,
+        43.623,
+        70.307
+      ]
+    },
+    {
+      "name": "walkoverpickup_goldcoin",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "ignoreheightmap=1;\r\npickupdistance=7;",
+      "sw_pos": [
+        -0.626,
+        -10.05,
+        49.552
+      ],
+      "godot_pos": [
+        -0.626,
+        49.552,
+        10.05
+      ]
+    },
+    {
+      "name": "pickup_lamp",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "actionable = 0;\r\nresource = shop_lamp;\r\ninventoryname = lamp;",
+      "sw_pos": [
+        -189.766,
+        121.386,
+        80.134
+      ],
+      "godot_pos": [
+        -189.766,
+        80.134,
+        -121.386
+      ]
+    },
+    {
+      "name": "pickup_slingshot",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "actionable = 0;\r\ntrigger = canbuysling;\r\nresource = shop_slingshot;\r\ninventoryname = slingshot;",
+      "sw_pos": [
+        -189.484,
+        122.779,
+        77.841
+      ],
+      "godot_pos": [
+        -189.484,
+        77.841,
+        -122.779
+      ]
+    },
+    {
+      "name": "pickup_sword",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "actionable = 0;\r\ntrigger = canbuysword;\r\nresource = shop_sword;\r\ninventoryname = sword;",
+      "sw_pos": [
+        -189.766,
+        121.386,
+        80.134
+      ],
+      "godot_pos": [
+        -189.766,
+        80.134,
+        -121.386
+      ]
+    },
+    {
+      "name": "Box01",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "sw3d_visibility = none;\r\nalwaysmovecamerainfront=1;",
+      "sw_pos": [
+        334.459,
+        372.917,
+        0.0
+      ],
+      "godot_pos": [
+        334.459,
+        0.0,
+        -372.917
+      ]
+    },
+    {
+      "name": "Box02",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "sw3d_visibility = none;\r\nalwaysmovecamerainfront=1;",
+      "sw_pos": [
+        381.525,
+        485.473,
+        0.0
+      ],
+      "godot_pos": [
+        381.525,
+        0.0,
+        -485.473
+      ]
+    },
+    {
+      "name": "Box03",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "sw3d_visibility = none;\r\nalwaysmovecamerainfront=1;",
+      "sw_pos": [
+        53.096,
+        442.697,
+        0.0
+      ],
+      "godot_pos": [
+        53.096,
+        0.0,
+        -442.697
+      ]
+    },
+    {
+      "name": "Box04",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "sw3d_visibility = none;\r\nalwaysmovecamerainfront=1;",
+      "sw_pos": [
+        460.804,
+        412.206,
+        0.0
+      ],
+      "godot_pos": [
+        460.804,
+        0.0,
+        -412.206
+      ]
+    },
+    {
+      "name": "Box05",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "sw3d_visibility = none;\r\nalwaysmovecamerainfront=1;",
+      "sw_pos": [
+        24.287,
+        524.778,
+        0.0
+      ],
+      "godot_pos": [
+        24.287,
+        0.0,
+        -524.778
+      ]
+    },
+    {
+      "name": "Box06",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "sw3d_visibility = none;\r\nalwaysmovecamerainfront=1;",
+      "sw_pos": [
+        -110.994,
+        434.681,
+        0.0
+      ],
+      "godot_pos": [
+        -110.994,
+        0.0,
+        -434.681
+      ]
+    },
+    {
+      "name": "ship camera fix",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "sw3d_visibility = none;\r\nalwaysmovecamerainfront=1;",
+      "sw_pos": [
+        -209.409,
+        -190.961,
+        64.402
+      ],
+      "godot_pos": [
+        -209.409,
+        64.402,
+        190.961
+      ]
+    },
+    {
+      "name": "defaultview",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -191.387,
+        126.719,
+        1155.936
+      ],
+      "godot_pos": [
+        -191.387,
+        1155.936,
+        -126.719
+      ]
+    }
+  ],
+  "skeletons": [],
+  "animations": []
+}

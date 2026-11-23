@@ -1,0 +1,522 @@
+{
+  "file": "mk_henchman1.w3d",
+  "nodes": [
+    {
+      "name": "DefaultView",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "mk_henchman1_proxy",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        -0.136,
+        9.327
+      ],
+      "godot_pos": [
+        0.0,
+        9.327,
+        0.136
+      ]
+    },
+    {
+      "name": "mk_henchman1",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "collisiondata=3.1869;",
+      "sw_pos": [
+        0.0,
+        -0.136,
+        9.327
+      ],
+      "godot_pos": [
+        0.0,
+        9.327,
+        0.136
+      ]
+    },
+    {
+      "name": "hiddenassets",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "userdata",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"mk_henchman1_die\", #startxform: [#position: vector( -0.2893, -1.8352, 8.1003 ), #rotation: vector( 0.0000, 0. ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"mk_henchman1_die\", #startxform: [#position: vector( -0.2893, -1.8352, 8.1003 ), #rotation: vector( 0.0000, 0. ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"mk_henchman1_hit\", #startxform: [#position: vector( 0.0000, -0.8692, 8.3574 ), #rotation: vector( 0.0000, 0.0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #allowstopat: \"22\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"mk_henchman1_hit\", #startxform: [#position: vector( 0.0000, -0.8692, 8.3574 ), #rotation: vector( 0.0000, 0.0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"mk_henchman1_run\", #startxform: [#position: vector( 0.0000, 0.9971, 8.4961 ), #rotation: vector( 0.0000, 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000 )], #distancepercycle: \"19.9772\", #minimumspeed: \"0.8\", #maximumspeed: \"1.3\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"mk_henchman1_run\", #startxform: [#position: vector( 0.0000, 0.9971, 8.4961 ), #rotation: vector( 0.0000, 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"mk_henchman1_stand\", #startxform: [#position: vector( 0.0000, -0.1403, 9.2745 ), #rotation: vector( 0.0000, 0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"mk_henchman1_stand\", #startxform: [#position: vector( 0.0000, -0.1403, 9.2745 ), #rotation: vector( 0.0000, 0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"mk_henchman1_standguard\", #startxform: [#position: vector( 0.0000, -0.8692, 8.3574 ), #rotation: vector( 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"mk_henchman1_standguard\", #startxform: [#position: vector( 0.0000, -0.8692, 8.3574 ), #rotation: vector( 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"mk_henchman1_swordswing\", #startxform: [#position: vector( 0.0000, -0.8692, 8.3574 ), #rotation: vector( 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #allowstopat: \"18\", #impact: \"6\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"mk_henchman1_swordswing\", #startxform: [#position: vector( 0.0000, -0.8692, 8.3574 ), #rotation: vector( 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"mk_Henchman1_turnleft\", #startxform: [#position: vector( 0.0000, -0.8692, 8.3574 ), #rotation: vector( 0.0000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, 0.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"mk_Henchman1_turnleft\", #startxform: [#position: vector( 0.0000, -0.8692, 8.3574 ), #rotation: vector( 0.0000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"mk_Henchman1_turnright\", #startxform: [#position: vector( 0.0000, -0.8692, 8.3574 ), #rotation: vector( 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"mk_Henchman1_turnright\", #startxform: [#position: vector( 0.0000, -0.8692, 8.3574 ), #rotation: vector( 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"mk_henchman1_walk\", #startxform: [#position: vector( 0.0000, -0.8692, 8.9329 ), #rotation: vector( 0.0000, 0. ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0000, 0.0000 )], #distancepercycle: \"23.14\", #minimumspeed: \"0.1\", #maximumspeed: \"1.5\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"mk_henchman1_walk\", #startxform: [#position: vector( 0.0000, -0.8692, 8.9329 ), #rotation: vector( 0.0000, 0. ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "objectlinkedtobonesplayerinfo",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[[#bonedmodel: \"mk_henchman1\", #object: \"sword_hand\", #boneid: 24, #xform: [#rotation: vector( 99.4171, -76.1697, -10.0360  ",
+      "kind": "group",
+      "parent": "objectlinkedtobonesplayerinfo",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz), #position: vector( 1.4845, 2.4840, -0.5450 )]], [#bonedmodel: \"mk_henchman1\", #object: \"dizzystars\", #boneid: 31, #xform ",
+      "kind": "group",
+      "parent": "zzz[[#bonedmodel: \"mk_henchman1\", #object: \"sword_hand\", #boneid: 24, #xform: [#rotation: vector( 99.4171, -76.1697, -10.0360  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz: [#rotation: vector( 97.2242, 90.0000, 0.0000 ), #position: vector( -0.8990, -1.9345, 0.1234 )]]] ",
+      "kind": "group",
+      "parent": "zzz), #position: vector( 1.4845, 2.4840, -0.5450 )]], [#bonedmodel: \"mk_henchman1\", #object: \"dizzystars\", #boneid: 31, #xform ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "swoosh_mk_henchman1_swordswing",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "startframe=3;\r\nstopframe=12;\r\nstartoffset=0;\r\nstopoffset=-0.59;",
+      "sw_pos": [
+        2.838,
+        5.977,
+        19.033
+      ],
+      "godot_pos": [
+        2.838,
+        19.033,
+        -5.977
+      ]
+    },
+    {
+      "name": "TestLight",
+      "kind": "light",
+      "parent": "DefaultView",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    }
+  ],
+  "skeletons": [],
+  "animations": [
+    {
+      "name": "mk_henchman1",
+      "tracks": 31,
+      "size": 2311
+    },
+    {
+      "name": "mk_henchman1_die",
+      "tracks": 31,
+      "size": 7635
+    },
+    {
+      "name": "mk_henchman1_hit",
+      "tracks": 31,
+      "size": 7777
+    },
+    {
+      "name": "mk_henchman1_run",
+      "tracks": 31,
+      "size": 5079
+    },
+    {
+      "name": "mk_henchman1_stand",
+      "tracks": 31,
+      "size": 9437
+    },
+    {
+      "name": "mk_henchman1_standguard",
+      "tracks": 31,
+      "size": 5061
+    },
+    {
+      "name": "mk_henchman1_swordswing",
+      "tracks": 31,
+      "size": 7340
+    },
+    {
+      "name": "mk_henchman1_turnleft",
+      "tracks": 31,
+      "size": 5049
+    },
+    {
+      "name": "mk_henchman1_turnright",
+      "tracks": 31,
+      "size": 5050
+    },
+    {
+      "name": "mk_henchman1_walk",
+      "tracks": 31,
+      "size": 8621
+    }
+  ]
+}

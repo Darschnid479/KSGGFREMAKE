@@ -1,0 +1,368 @@
+{
+  "file": "meatplant.w3d",
+  "nodes": [
+    {
+      "name": "DefaultView",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "meatplant",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "collisionradius=8;",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "meatplant_proxy",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "hiddenassets",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "userdata",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"meatplant_attack\", #startxform: [#position: vector( 0.0000, 0.0000, 0.0000 ), #rotation: vector( 0.0000, 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #impact: \"21\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"meatplant_attack\", #startxform: [#position: vector( 0.0000, 0.0000, 0.0000 ), #rotation: vector( 0.0000, 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"meatplant_die\", #startxform: [#position: vector( 0.0000, 0.0000, 0.0000 ), #rotation: vector( 0.0090, 0.0075, ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz -0.0043 )], #startloop: \"265\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"meatplant_die\", #startxform: [#position: vector( 0.0000, 0.0000, 0.0000 ), #rotation: vector( 0.0090, 0.0075, ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"meatplant_idle\", #startxform: [#position: vector( 0.0000, 0.0000, 0.0000 ), #rotation: vector( 0.0000, 0.0000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"meatplant_idle\", #startxform: [#position: vector( 0.0000, 0.0000, 0.0000 ), #rotation: vector( 0.0000, 0.0000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"meatplant_receive\", #startxform: [#position: vector( 0.0000, 0.0000, 0.0000 ), #rotation: vector( 0.0000, 0.0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"meatplant_receive\", #startxform: [#position: vector( 0.0000, 0.0000, 0.0000 ), #rotation: vector( 0.0000, 0.0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"meatplant_sleep\", #startxform: [#position: vector( 0.0000, 0.0000, 0.0000 ), #rotation: vector( 0.0090, 0.007 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz5, -0.0043 )], #loop: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"meatplant_sleep\", #startxform: [#position: vector( 0.0000, 0.0000, 0.0000 ), #rotation: vector( 0.0090, 0.007 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"meatplant_stand\", #startxform: [#position: vector( 0.0000, 0.0000, 0.0000 ), #rotation: vector( 0.0000, 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"meatplant_stand\", #startxform: [#position: vector( 0.0000, 0.0000, 0.0000 ), #rotation: vector( 0.0000, 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"meatplant_yawn\", #startxform: [#position: vector( 0.0000, 0.0000, 0.0000 ), #rotation: vector( 0.0000, 0.0000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"]  ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"meatplant_yawn\", #startxform: [#position: vector( 0.0000, 0.0000, 0.0000 ), #rotation: vector( 0.0000, 0.0000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "TestLight",
+      "kind": "light",
+      "parent": "DefaultView",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    }
+  ],
+  "skeletons": [],
+  "animations": [
+    {
+      "name": "meatplant",
+      "tracks": 26,
+      "size": 2149
+    },
+    {
+      "name": "meatplant_attack",
+      "tracks": 26,
+      "size": 14362
+    },
+    {
+      "name": "meatplant_die",
+      "tracks": 26,
+      "size": 17663
+    },
+    {
+      "name": "meatplant_idle",
+      "tracks": 26,
+      "size": 5713
+    },
+    {
+      "name": "meatplant_receive",
+      "tracks": 26,
+      "size": 15332
+    },
+    {
+      "name": "meatplant_sleep",
+      "tracks": 26,
+      "size": 6947
+    },
+    {
+      "name": "meatplant_stand",
+      "tracks": 26,
+      "size": 3279
+    },
+    {
+      "name": "meatplant_yawn",
+      "tracks": 26,
+      "size": 5254
+    }
+  ]
+}

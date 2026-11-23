@@ -1,0 +1,1030 @@
+{
+  "file": "pelle.w3d",
+  "nodes": [
+    {
+      "name": "DefaultView",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "pelle",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "collisionradius=3.6;",
+      "sw_pos": [
+        0.0,
+        -0.072,
+        7.965
+      ],
+      "godot_pos": [
+        0.0,
+        7.965,
+        0.072
+      ]
+    },
+    {
+      "name": "pelle_proxy",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        -0.072,
+        7.965
+      ],
+      "godot_pos": [
+        0.0,
+        7.965,
+        0.072
+      ]
+    },
+    {
+      "name": "hiddenassets",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "userdata",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"Pelle_climb_down\", #startxform: [#position: vector( 0.0297, -0.1060, 7.8076 ), #rotation: vector( 0.0000, 0.0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz000, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"Pelle_climb_down\", #startxform: [#position: vector( 0.0297, -0.1060, 7.8076 ), #rotation: vector( 0.0000, 0.0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pelle_climb_up\", #startxform: [#position: vector( 0.0000, -0.1360, 7.8118 ), #rotation: vector( 0.0000, 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pelle_climb_up\", #startxform: [#position: vector( 0.0000, -0.1360, 7.8118 ), #rotation: vector( 0.0000, 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pelle_drink\", #startxform: [#position: vector( 0.0000, -0.0708, 7.8118 ), #rotation: vector( 0.0000, 0.0000,  ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pelle_drink\", #startxform: [#position: vector( 0.0000, -0.0708, 7.8118 ), #rotation: vector( 0.0000, 0.0000,  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pelle_drinkhotsauce\", #startxform: [#position: vector( 0.0000, -0.0708, 7.8118 ), #rotation: vector( 0.0000,  ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pelle_drinkhotsauce\", #startxform: [#position: vector( 0.0000, -0.0708, 7.8118 ), #rotation: vector( 0.0000,  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pelle_hit\", #startxform: [#position: vector( -0.6512, 0.1885, 7.6249 ), #rotation: vector( 0.0000, 0.0000, 0. ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pelle_hit\", #startxform: [#position: vector( -0.6512, 0.1885, 7.6249 ), #rotation: vector( 0.0000, 0.0000, 0. ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pelle_jump\", #startxform: [#position: vector( 0.0000, -0.0708, 7.8118 ), #rotation: vector( 0.0000, 0.0000, 0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz.0000 )], #startmoving: \"16\", #stopmoving: \"43\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pelle_jump\", #startxform: [#position: vector( 0.0000, -0.0708, 7.8118 ), #rotation: vector( 0.0000, 0.0000, 0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pelle_run\", #startxform: [#position: vector( -0.7580, 0.0385, 6.7377 ), #rotation: vector( 0.0000, 0.0000, 0. ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0000 )], #distancepercycle: \"21.354\", #minimumspeed: \"0.7\", #maximumspeed: \"1.5\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pelle_run\", #startxform: [#position: vector( -0.7580, 0.0385, 6.7377 ), #rotation: vector( 0.0000, 0.0000, 0. ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pelle_run_talk\", #startxform: [#position: vector( -0.7580, 0.0385, 6.7377 ), #rotation: vector( 0.0000, 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000 )], #distancepercycle: \"21.354\", #minimumspeed: \"0.7\", #maximumspeed: \"1.5\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pelle_run_talk\", #startxform: [#position: vector( -0.7580, 0.0385, 6.7377 ), #rotation: vector( 0.0000, 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pelle_stand\", #startxform: [#position: vector( 0.0000, -0.0708, 7.8118 ), #rotation: vector( 0.0000, 0.0000,  ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"]  ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pelle_stand\", #startxform: [#position: vector( 0.0000, -0.0708, 7.8118 ), #rotation: vector( 0.0000, 0.0000,  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pelle_standsword\", #startxform: [#position: vector( -0.6512, 0.1885, 7.6249 ), #rotation: vector( 0.0000, 0.0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pelle_standsword\", #startxform: [#position: vector( -0.6512, 0.1885, 7.6249 ), #rotation: vector( 0.0000, 0.0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pelle_stand_sword\", #startxform: [#position: vector( -0.6512, 0.1885, 7.6249 ), #rotation: vector( 0.0000, 0. ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pelle_stand_sword\", #startxform: [#position: vector( -0.6512, 0.1885, 7.6249 ), #rotation: vector( 0.0000, 0. ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pelle_stand_talk\", #startxform: [#position: vector( 0.0000, -0.0708, 7.8118 ), #rotation: vector( 0.0000, 0.0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"]  ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pelle_stand_talk\", #startxform: [#position: vector( 0.0000, -0.0708, 7.8118 ), #rotation: vector( 0.0000, 0.0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pelle_swordswing\", #startxform: [#position: vector( -0.6512, 0.1885, 7.6249 ), #rotation: vector( 0.0000, 0.0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #impact: \"9\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pelle_swordswing\", #startxform: [#position: vector( -0.6512, 0.1885, 7.6249 ), #rotation: vector( 0.0000, 0.0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pelle_throw\", #startxform: [#position: vector( -2.5603, 0.1663, 7.7214 ), #rotation: vector( 0.0000, 0.0000,  ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz-90.7007 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pelle_throw\", #startxform: [#position: vector( -2.5603, 0.1663, 7.7214 ), #rotation: vector( 0.0000, 0.0000,  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pelle_turnleft\", #startxform: [#position: vector( 0.0000, -0.0708, 7.8118 ), #rotation: vector( 0.0000, 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000 )]]  ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pelle_turnleft\", #startxform: [#position: vector( 0.0000, -0.0708, 7.8118 ), #rotation: vector( 0.0000, 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"Box01\", #startxform: [#position: vector( 1.3465, -0.8367, 0.7267 ), #rotation: vector( 0.0000, 0.0000, 0.0000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"Box01\", #startxform: [#position: vector( 1.3465, -0.8367, 0.7267 ), #rotation: vector( 0.0000, 0.0000, 0.0000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"Box02\", #startxform: [#position: vector( -1.3022, -0.8367, 0.7267 ), #rotation: vector( 0.0000, 0.0000, 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"Box02\", #startxform: [#position: vector( -1.3022, -0.8367, 0.7267 ), #rotation: vector( 0.0000, 0.0000, 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pelle_turnright\", #startxform: [#position: vector( 0.0000, -0.0708, 7.8118 ), #rotation: vector( 0.0000, 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pelle_turnright\", #startxform: [#position: vector( 0.0000, -0.0708, 7.8118 ), #rotation: vector( 0.0000, 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"Box01\", #startxform: [#position: vector( 1.3465, -0.8367, 0.7267 ), #rotation: vector( 0.0000, 0.0000, 0.0000  ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz )]]  ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"Box01\", #startxform: [#position: vector( 1.3465, -0.8367, 0.7267 ), #rotation: vector( 0.0000, 0.0000, 0.0000  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"Box02\", #startxform: [#position: vector( -1.3022, -0.8367, 0.7267 ), #rotation: vector( 0.0000, 0.0000, 0.000  ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0 )]]  ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"Box02\", #startxform: [#position: vector( -1.3022, -0.8367, 0.7267 ), #rotation: vector( 0.0000, 0.0000, 0.000  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pelle_walk\", #startxform: [#position: vector( 0.0000, 0.0704, 7.7032 ), #rotation: vector( 0.0000, 0.0000, 0. ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0000 )], #distancepercycle: \"14.1489\", #minimumspeed: \"0.1\", #maximumspeed: \"1.5\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pelle_walk\", #startxform: [#position: vector( 0.0000, 0.0704, 7.7032 ), #rotation: vector( 0.0000, 0.0000, 0. ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"Pelle_walkbackwards\", #startxform: [#position: vector( 0.0000, 0.0704, 7.7032 ), #rotation: vector( 0.0000, 0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz.0000, 0.0000 )], #distancepercycle: \"-14.1489\", #minimumspeed: \"0.1\", #maximumspeed: \"1.5\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"Pelle_walkbackwards\", #startxform: [#position: vector( 0.0000, 0.0704, 7.7032 ), #rotation: vector( 0.0000, 0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pelle_walk_talk\", #startxform: [#position: vector( 0.0000, 0.0704, 7.7032 ), #rotation: vector( 0.0000, 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000 )], #distancepercycle: \"14.1489\", #minimumspeed: \"0.1\", #maximumspeed: \"1.5\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pelle_walk_talk\", #startxform: [#position: vector( 0.0000, 0.0704, 7.7032 ), #rotation: vector( 0.0000, 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "objectlinkedtobonesplayerinfo",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[[#bonedmodel: \"pelle\", #object: \"sword_belt\", #boneid: 1, #xform: [#rotation: vector( -30.4088, -5.8344, 14.8046 ), #posit ",
+      "kind": "group",
+      "parent": "objectlinkedtobonesplayerinfo",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzzion: vector( 3.5035, 0.4410, -0.5273 )]], [#bonedmodel: \"pelle\", #object: \"sword_hand\", #boneid: 24, #xform: [#rotation: ve ",
+      "kind": "group",
+      "parent": "zzz[[#bonedmodel: \"pelle\", #object: \"sword_belt\", #boneid: 1, #xform: [#rotation: vector( -30.4088, -5.8344, 14.8046 ), #posit ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzzctor( 80.8039, -74.2235, 9.1891 ), #position: vector( 1.2835, 2.4745, -0.5960 )]], [#bonedmodel: \"pelle\", #object: \"cake\",  ",
+      "kind": "group",
+      "parent": "zzzion: vector( 3.5035, 0.4410, -0.5273 )]], [#bonedmodel: \"pelle\", #object: \"sword_hand\", #boneid: 24, #xform: [#rotation: ve ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz#boneid: 24, #xform: [#rotation: vector( -115.5810, -80.3503, 23.0554 ), #position: vector( 1.6031, -0.9651, -1.6872 )]]] ",
+      "kind": "group",
+      "parent": "zzzctor( 80.8039, -74.2235, 9.1891 ), #position: vector( 1.2835, 2.4745, -0.5960 )]], [#bonedmodel: \"pelle\", #object: \"cake\",  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "TestLight",
+      "kind": "light",
+      "parent": "DefaultView",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    }
+  ],
+  "skeletons": [],
+  "animations": [
+    {
+      "name": "pelle",
+      "tracks": 37,
+      "size": 2727
+    },
+    {
+      "name": "pelle_climb_down",
+      "tracks": 37,
+      "size": 26891
+    },
+    {
+      "name": "pelle_climb_up",
+      "tracks": 37,
+      "size": 9179
+    },
+    {
+      "name": "pelle_drink",
+      "tracks": 37,
+      "size": 9427
+    },
+    {
+      "name": "pelle_drinkhotsauce",
+      "tracks": 37,
+      "size": 10713
+    },
+    {
+      "name": "pelle_hit",
+      "tracks": 37,
+      "size": 6412
+    },
+    {
+      "name": "pelle_jump",
+      "tracks": 37,
+      "size": 14103
+    },
+    {
+      "name": "pelle_run",
+      "tracks": 37,
+      "size": 4528
+    },
+    {
+      "name": "pelle_run_talk",
+      "tracks": 37,
+      "size": 8195
+    },
+    {
+      "name": "pelle_stand",
+      "tracks": 37,
+      "size": 5834
+    },
+    {
+      "name": "pelle_standsword",
+      "tracks": 37,
+      "size": 3966
+    },
+    {
+      "name": "pelle_stand_sword",
+      "tracks": 37,
+      "size": 7223
+    },
+    {
+      "name": "pelle_stand_talk",
+      "tracks": 37,
+      "size": 9705
+    },
+    {
+      "name": "pelle_swordswing",
+      "tracks": 37,
+      "size": 4594
+    },
+    {
+      "name": "pelle_throw",
+      "tracks": 37,
+      "size": 22273
+    },
+    {
+      "name": "pelle_turnleft",
+      "tracks": 37,
+      "size": 5432
+    },
+    {
+      "name": "box01-key",
+      "tracks": 1,
+      "size": 226
+    },
+    {
+      "name": "box02-key",
+      "tracks": 1,
+      "size": 216
+    },
+    {
+      "name": "pelle_turnright",
+      "tracks": 37,
+      "size": 5644
+    },
+    {
+      "name": "pelle_walk",
+      "tracks": 37,
+      "size": 7366
+    },
+    {
+      "name": "pelle_walkbackwards",
+      "tracks": 37,
+      "size": 7226
+    },
+    {
+      "name": "pelle_walk_talk",
+      "tracks": 37,
+      "size": 7581
+    }
+  ]
+}

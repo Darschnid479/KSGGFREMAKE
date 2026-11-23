@@ -1,0 +1,635 @@
+{
+  "abra": {
+    "total_nodes": 212,
+    "characters": [
+      "character_pinky",
+      "character_miriam",
+      "character_shopkeeper",
+      "character_prostitute1",
+      "character_prostitute2",
+      "character_nobody1",
+      "character_dog",
+      "character_opponent1",
+      "character_opponent2",
+      "character_opponent3",
+      "character_nobody2",
+      "character_nobody3",
+      "character_sunniva",
+      "character_shipman",
+      "character_sabeltann",
+      "character_langemann",
+      "character_pelle"
+    ],
+    "portals": [
+      "portalcamera",
+      "pinky_moveawayfromportal",
+      "actionable_portal",
+      "pinky_portal"
+    ],
+    "triggers": [
+      "areatrigger_shop1",
+      "areatrigger_shop2"
+    ],
+    "collision_shapes": 113
+  },
+  "cave_end_bosslevel": {
+    "total_nodes": 83,
+    "characters": [
+      "character_pinky",
+      "character_skeleton_boss",
+      "character_statue1",
+      "character_statue2",
+      "character_statue3",
+      "character_statue4",
+      "character_statue5",
+      "character_statue6"
+    ],
+    "portals": [],
+    "triggers": [],
+    "collision_shapes": 49
+  },
+  "cave_end": {
+    "total_nodes": 176,
+    "characters": [
+      "character_pinky",
+      "character_sabeltann",
+      "character_langemann",
+      "character_skeleton_1",
+      "character_skeleton_3",
+      "character_skeleton_4",
+      "character_skeleton_5",
+      "character_skeleton_6",
+      "character_skeleton_7",
+      "character_skeleton_2"
+    ],
+    "portals": [],
+    "triggers": [
+      "areatrigger_end",
+      "areatrigger_follow1",
+      "areatrigger_follow2",
+      "areatrigger_skeletonplatform",
+      "areatrigger_gofirst",
+      "areatrigger_savegame"
+    ],
+    "collision_shapes": 81
+  },
+  "cave": {
+    "total_nodes": 236,
+    "characters": [
+      "character_pinky",
+      "character_sabeltann",
+      "character_skalken",
+      "character_langemann",
+      "character_pelle",
+      "character_pysa",
+      "character_benjamin"
+    ],
+    "portals": [],
+    "triggers": [
+      "areatrigger_follow1",
+      "areatrigger_follow2",
+      "areatrigger_chamber",
+      "areatrigger_chest",
+      "areatrigger_lava",
+      "areatrigger_swordplatform",
+      "areatrigger_disablejump",
+      "areatrigger_pastcrate",
+      "areatrigger_usesword",
+      "areatrigger_crate",
+      "areatrigger_pinkystartarea"
+    ],
+    "collision_shapes": 83
+  },
+  "fatamorgana_bosslevel": {
+    "total_nodes": 30,
+    "characters": [
+      "character_pinky",
+      "character_liger"
+    ],
+    "portals": [],
+    "triggers": [],
+    "collision_shapes": 1
+  },
+  "fatamorgana_city": {
+    "total_nodes": 173,
+    "characters": [
+      "character_pinky",
+      "character_skalken",
+      "character_pelle",
+      "character_pysa",
+      "character_sabeltann",
+      "character_langemann",
+      "character_guard1",
+      "character_guard2",
+      "character_guard3",
+      "character_guard4",
+      "character_arab_boy",
+      "character_shopkeeper",
+      "character_carpet_salesman",
+      "character_fm_npc1",
+      "character_fm_npc2",
+      "character_fm_npc3",
+      "character_benjamin"
+    ],
+    "portals": [],
+    "triggers": [
+      "areatrigger_start",
+      "areatrigger_gate",
+      "areatrigger_cake",
+      "areatrigger_halfway",
+      "areatrigger_finish",
+      "areatrigger_allcakes",
+      "areatrigger_endlevel",
+      "areatrigger_throughgate"
+    ],
+    "collision_shapes": 44
+  },
+  "fatamorgana_palace": {
+    "total_nodes": 265,
+    "characters": [
+      "character_pinky",
+      "character_sabeltann",
+      "character_langemann",
+      "character_guard1",
+      "character_guard2",
+      "character_sultan"
+    ],
+    "portals": [],
+    "triggers": [
+      "areatrigger_keydoor1",
+      "badtile1_areatrigger02",
+      "badtile1_areatrigger03",
+      "badtile1_areatrigger04",
+      "badtile1_areatrigger05",
+      "badtile1_areatrigger01",
+      "badtile1_areatrigger06",
+      "badtile1_areatrigger07",
+      "badtile1_areatrigger08",
+      "badtile1_areatrigger09",
+      "badtile1_areatrigger10",
+      "badtile1_areatrigger11",
+      "badtile1_areatrigger12",
+      "badtile1_areatrigger13",
+      "badtile1_areatrigger14",
+      "badtile1_areatrigger15",
+      "badtile1_areatrigger16",
+      "badtile1_areatrigger17",
+      "badtile1_areatrigger18",
+      "badtile1_areatrigger19",
+      "badtile1_areatrigger20",
+      "badtile1_areatrigger21",
+      "badtile1_areatrigger22",
+      "badtile1_areatrigger23",
+      "badtile1_areatrigger24",
+      "badtile1_areatrigger25",
+      "badtile1_areatrigger26",
+      "badtile1_areatrigger27",
+      "badtile1_areatrigger28",
+      "badtile1_areatrigger29",
+      "badtile1_areatrigger30",
+      "badtile1_areatrigger31",
+      "badtile1_areatrigger32",
+      "badtile1_areatrigger33",
+      "badtile1_areatrigger34",
+      "badtile1_areatrigger35",
+      "badtile1_areatrigger36",
+      "badtile1_areatrigger37",
+      "badtile1_areatrigger38",
+      "areatrigger_door6",
+      "areatrigger_door7",
+      "areatrigger_door8",
+      "areatrigger_door2",
+      "areatrigger_door3",
+      "areatrigger_door4",
+      "areatrigger_door5",
+      "areatrigger_tilepuzzle",
+      "areatrigger_fire1",
+      "areatrigger_fire2",
+      "areatrigger_fire3",
+      "areatrigger_fire4",
+      "areatrigger_fire5",
+      "areatrigger_fire6",
+      "areatrigger_darkroom",
+      "areatrigger_room1",
+      "areatrigger_room2",
+      "areatrigger_room3",
+      "areatrigger_room4",
+      "areatrigger_endlevel"
+    ],
+    "collision_shapes": 131
+  },
+  "fatamorgana_underwater": {
+    "total_nodes": 14,
+    "characters": [],
+    "portals": [],
+    "triggers": [
+      "areatrigger_leave"
+    ],
+    "collision_shapes": 3
+  },
+  "graal_bosslevel": {
+    "total_nodes": 27,
+    "characters": [
+      "character_pinky",
+      "character_boss"
+    ],
+    "portals": [],
+    "triggers": [],
+    "collision_shapes": 7
+  },
+  "graal_mountain": {
+    "total_nodes": 169,
+    "characters": [
+      "character_pinky",
+      "character_pelle"
+    ],
+    "portals": [],
+    "triggers": [
+      "areatrigger_waitforpelle",
+      "areatrigger_stopfirstrock",
+      "areatrigger_getpelle",
+      "areatrigger_stopsecondrock",
+      "areatrigger_doorshut",
+      "areatrigger_doorswitch",
+      "areatrigger_light",
+      "camera_secondtrigger.Target",
+      "camera_secondtrigger"
+    ],
+    "collision_shapes": 72
+  },
+  "graal_underwater": {
+    "total_nodes": 25,
+    "characters": [],
+    "portals": [],
+    "triggers": [
+      "areatrigger_air1",
+      "areatrigger_leave",
+      "areatrigger_leave2"
+    ],
+    "collision_shapes": 9
+  },
+  "magakhan_beach": {
+    "total_nodes": 129,
+    "characters": [
+      "character_sabeltann",
+      "character_pelle",
+      "character_pysa",
+      "character_langemann",
+      "character_pinky",
+      "character_skalken",
+      "character_malena",
+      "character_benjamin"
+    ],
+    "portals": [],
+    "triggers": [
+      "areatrigger_throughdoor",
+      "areatrigger_neardoor",
+      "areatrigger_bar",
+      "areatrigger_nearpirates",
+      "areatrigger_nearmalena",
+      "areatrigger_hint1",
+      "areatrigger_hint2",
+      "areatrigger_hint3",
+      "areatrigger_benjamin",
+      "areatrigger_benjamin2"
+    ],
+    "collision_shapes": 57
+  },
+  "magakhan_dungeon": {
+    "total_nodes": 439,
+    "characters": [
+      "character_pinky",
+      "character_guard1",
+      "character_pelle",
+      "character_sabeltann",
+      "character_pysa",
+      "character_langemann",
+      "character_guard3",
+      "character_guard4",
+      "character_guard5",
+      "character_guard6",
+      "character_guard7",
+      "character_guard8",
+      "character_guard9",
+      "character_guard10",
+      "character_guard11",
+      "character_guard2",
+      "character_guard12",
+      "character_guard13",
+      "character_sirikit"
+    ],
+    "portals": [],
+    "triggers": [
+      "areatrigger_follow1",
+      "areatrigger_fire1",
+      "areatrigger_fire2",
+      "areatrigger_fire3",
+      "areatrigger_fire4",
+      "areatrigger_fire5",
+      "areatrigger_fire6",
+      "areatrigger_fire7",
+      "areatrigger_fire8",
+      "areatrigger_fire9",
+      "areatrigger_follow2",
+      "areatrigger_key2",
+      "areatrigger_doorlever1",
+      "areatrigger_danger9",
+      "areatrigger_firelever1",
+      "areatrigger_firelever2",
+      "areatrigger_doorlever2",
+      "areatrigger_pastgrid",
+      "areatrigger_sabeltannend",
+      "areatrigger_neardoor",
+      "areatrigger_nextlevel",
+      "areatrigger_flame3",
+      "areatrigger_flame2",
+      "areatrigger_flame0",
+      "areatrigger_flame1",
+      "areatrigger_flame4",
+      "areatrigger_flame5",
+      "areatrigger_flame6",
+      "areatrigger_flame7",
+      "areatrigger_flame8",
+      "areatrigger_flame9",
+      "badtile1_areatrigger",
+      "badtile2_areatrigger",
+      "badtile3_areatrigger",
+      "badtile4_areatrigger",
+      "badtile5_areatrigger",
+      "badtile6_areatrigger",
+      "badtile7_areatrigger",
+      "badtile8_areatrigger",
+      "badtile9_areatrigger",
+      "badtile10_areatrigger",
+      "badtile11_areatrigger",
+      "badtile12_areatrigger",
+      "badtile13_areatrigger",
+      "badtile14_areatrigger",
+      "badtile15_areatrigger",
+      "badtile16_areatrigger",
+      "badtile17_areatrigger",
+      "badtile18_areatrigger",
+      "badtile19_areatrigger",
+      "badtile20_areatrigger",
+      "badtile21_areatrigger",
+      "badtile22_areatrigger",
+      "badtile23_areatrigger",
+      "badtile24_areatrigger",
+      "badtile25_areatrigger",
+      "badtile26_areatrigger",
+      "badtile27_areatrigger",
+      "badtile28_areatrigger",
+      "badtile29_areatrigger",
+      "badtile30_areatrigger",
+      "badtile31_areatrigger",
+      "badtile32_areatrigger",
+      "badtile33_areatrigger",
+      "badtile34_areatrigger",
+      "badtile35_areatrigger",
+      "badtile36_areatrigger",
+      "badtile37_areatrigger",
+      "badtile38_areatrigger",
+      "badtile39_areatrigger",
+      "badtile40_areatrigger",
+      "badtile41_areatrigger",
+      "badtile42_areatrigger",
+      "badtile43_areatrigger",
+      "badtile44_areatrigger",
+      "areatrigger_flame10",
+      "areatrigger_flame11",
+      "areatrigger_savegame1",
+      "areatrigger_firstflames",
+      "areatrigger_falselever01",
+      "areatrigger_falselever02",
+      "areatrigger_tilepuzzle",
+      "areatrigger_beforelions"
+    ],
+    "collision_shapes": 202
+  },
+  "magakhan_dungeon_underwater": {
+    "total_nodes": 42,
+    "characters": [],
+    "portals": [],
+    "triggers": [
+      "areatrigger_air1",
+      "areatrigger_leave",
+      "areatrigger_air2"
+    ],
+    "collision_shapes": 18
+  },
+  "magakhan_endboss_level": {
+    "total_nodes": 66,
+    "characters": [
+      "character_maga_khan",
+      "character_sabeltann",
+      "character_dragon",
+      "character_pinky"
+    ],
+    "portals": [],
+    "triggers": [
+      "areatrigger_room",
+      "areatrigger_hint1",
+      "areatrigger_hint2"
+    ],
+    "collision_shapes": 28
+  },
+  "magakhan_jungle": {
+    "total_nodes": 280,
+    "characters": [
+      "character_pinky",
+      "character_pelle",
+      "character_sabeltann",
+      "character_tribesman1",
+      "character_daughter",
+      "character_panther2",
+      "character_tribesman2",
+      "character_tribesman3",
+      "character_panther3",
+      "character_tribesman4",
+      "character_pysa",
+      "character_tribesmanwithkey",
+      "character_meatplant",
+      "character_langemann"
+    ],
+    "portals": [],
+    "triggers": [
+      "areatrigger_nearpanther",
+      "areatrigger_endlevel",
+      "areatrigger_pastdoor",
+      "areatrigger_neardoor",
+      "areatrigger_meatplant",
+      "areatrigger_poison1",
+      "areatrigger_neartribesman",
+      "areatrigger_poison2",
+      "areatrigger_poison3",
+      "areatrigger_poison5",
+      "areatrigger_poison6",
+      "areatrigger_water2",
+      "areatrigger_panthertrap_pinky",
+      "areatrigger_panthertrap_panther",
+      "areatrigger_poison4",
+      "areatrigger_savegame1",
+      "areatrigger_savegame2",
+      "areatrigger_water",
+      "areatrigger_usesling"
+    ],
+    "collision_shapes": 113
+  },
+  "magakhan_palace": {
+    "total_nodes": 206,
+    "characters": [
+      "character_guard1",
+      "character_guard2",
+      "character_langemann",
+      "character_pelle",
+      "character_sabeltann",
+      "character_pinky",
+      "character_guard3",
+      "character_guard4",
+      "character_guard5",
+      "character_pysa",
+      "character_guard6"
+    ],
+    "portals": [],
+    "triggers": [
+      "areatrigger_nearpelle",
+      "areatrigger_gofurther1",
+      "areatrigger_endlevel",
+      "areatrigger_mountainside",
+      "areatrigger_nextlevel",
+      "areatrigger_courtyard"
+    ],
+    "collision_shapes": 86
+  },
+  "menu": {
+    "total_nodes": 118,
+    "characters": [],
+    "portals": [],
+    "triggers": [],
+    "collision_shapes": 111
+  },
+  "outro": {
+    "total_nodes": 8,
+    "characters": [],
+    "portals": [],
+    "triggers": [],
+    "collision_shapes": 0
+  },
+  "testlevel": {
+    "total_nodes": 77,
+    "characters": [
+      "character_harry",
+      "character_langemann",
+      "character_panther",
+      "character_pelle",
+      "character_sabeltann",
+      "character_pinky",
+      "character_kelly"
+    ],
+    "portals": [],
+    "triggers": [
+      "areatrigger_c",
+      "areatrigger_lucas",
+      "areatrigger_re",
+      "areatrigger_3d"
+    ],
+    "collision_shapes": 2
+  },
+  "treasurehunt": {
+    "total_nodes": 17,
+    "characters": [
+      "character_treasureseeker",
+      "character_sabeltann"
+    ],
+    "portals": [],
+    "triggers": [],
+    "collision_shapes": 0
+  },
+  "world_map": {
+    "total_nodes": 42,
+    "characters": [],
+    "portals": [],
+    "triggers": [],
+    "collision_shapes": 0
+  },
+  "world_map_underwater10": {
+    "total_nodes": 16,
+    "characters": [],
+    "portals": [],
+    "triggers": [],
+    "collision_shapes": 0
+  },
+  "world_map_underwater1": {
+    "total_nodes": 10,
+    "characters": [],
+    "portals": [],
+    "triggers": [],
+    "collision_shapes": 0
+  },
+  "world_map_underwater2": {
+    "total_nodes": 13,
+    "characters": [],
+    "portals": [],
+    "triggers": [],
+    "collision_shapes": 0
+  },
+  "world_map_underwater3": {
+    "total_nodes": 15,
+    "characters": [],
+    "portals": [],
+    "triggers": [],
+    "collision_shapes": 0
+  },
+  "world_map_underwater4": {
+    "total_nodes": 16,
+    "characters": [],
+    "portals": [],
+    "triggers": [],
+    "collision_shapes": 0
+  },
+  "world_map_underwater5": {
+    "total_nodes": 16,
+    "characters": [],
+    "portals": [],
+    "triggers": [],
+    "collision_shapes": 0
+  },
+  "world_map_underwater6": {
+    "total_nodes": 20,
+    "characters": [],
+    "portals": [],
+    "triggers": [],
+    "collision_shapes": 0
+  },
+  "world_map_underwater7": {
+    "total_nodes": 16,
+    "characters": [],
+    "portals": [],
+    "triggers": [],
+    "collision_shapes": 0
+  },
+  "world_map_underwater8": {
+    "total_nodes": 17,
+    "characters": [],
+    "portals": [],
+    "triggers": [],
+    "collision_shapes": 0
+  },
+  "world_map_underwater9": {
+    "total_nodes": 17,
+    "characters": [],
+    "portals": [],
+    "triggers": [],
+    "collision_shapes": 0
+  },
+  "world_map_underwater_generic": {
+    "total_nodes": 12,
+    "characters": [],
+    "portals": [],
+    "triggers": [
+      "areatrigger_leave",
+      "areatrigger_chest"
+    ],
+    "collision_shapes": 1
+  }
+}

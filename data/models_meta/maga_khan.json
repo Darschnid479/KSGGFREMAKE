@@ -1,0 +1,654 @@
+{
+  "file": "maga_khan.w3d",
+  "nodes": [
+    {
+      "name": "DefaultView",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "Maga_Khan",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "collisionradius=3.4;",
+      "sw_pos": [
+        0.0,
+        -0.136,
+        7.997
+      ],
+      "godot_pos": [
+        0.0,
+        7.997,
+        0.136
+      ]
+    },
+    {
+      "name": "Maga_Khan_proxy",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        -0.136,
+        7.997
+      ],
+      "godot_pos": [
+        0.0,
+        7.997,
+        0.136
+      ]
+    },
+    {
+      "name": "hiddenassets",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "userdata",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"Maga_Khan_die\", #startxform: [#position: vector( 0.2658, 0.4511, 7.0605 ), #rotation: vector( 0.0000, 0.0000, ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"Maga_Khan_die\", #startxform: [#position: vector( 0.2658, 0.4511, 7.0605 ), #rotation: vector( 0.0000, 0.0000, ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"Maga_Khan_hit\", #startxform: [#position: vector( 0.2658, -0.4478, 6.8779 ), #rotation: vector( 0.0000, 0.0000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"Maga_Khan_hit\", #startxform: [#position: vector( 0.2658, -0.4478, 6.8779 ), #rotation: vector( 0.0000, 0.0000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"Maga_Khan_run\", #startxform: [#position: vector( -0.7496, -0.1360, 7.2902 ), #rotation: vector( 0.0000, 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000 )], #distancepercycle: \"26.105\", #minimumspeed: \"0.7\", #maximumspeed: \"1.5\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"Maga_Khan_run\", #startxform: [#position: vector( -0.7496, -0.1360, 7.2902 ), #rotation: vector( 0.0000, 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"Maga_Khan_stand\", #startxform: [#position: vector( 0.4061, 0.2484, 7.8358 ), #rotation: vector( 0.0000, 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"Maga_Khan_stand\", #startxform: [#position: vector( 0.4061, 0.2484, 7.8358 ), #rotation: vector( 0.0000, 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"Maga_Khan_standsword\", #startxform: [#position: vector( 0.2658, -0.4478, 6.8779 ), #rotation: vector( 0.0000, ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz 0.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"Maga_Khan_standsword\", #startxform: [#position: vector( 0.2658, -0.4478, 6.8779 ), #rotation: vector( 0.0000, ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"Maga_Khan_stand_breathe\", #startxform: [#position: vector( 0.4061, 0.2484, 7.8358 ), #rotation: vector( 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"Maga_Khan_stand_breathe\", #startxform: [#position: vector( 0.4061, 0.2484, 7.8358 ), #rotation: vector( 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"Maga_Khan_stand_talk\", #startxform: [#position: vector( 0.4061, 0.2484, 7.8358 ), #rotation: vector( 0.0000,  ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"Maga_Khan_stand_talk\", #startxform: [#position: vector( 0.4061, 0.2484, 7.8358 ), #rotation: vector( 0.0000,  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"Maga_Khan_swordswing\", #startxform: [#position: vector( 0.2658, -0.4478, 6.8779 ), #rotation: vector( 0.0000, ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz 0.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #impact: \"14\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"Maga_Khan_swordswing\", #startxform: [#position: vector( 0.2658, -0.4478, 6.8779 ), #rotation: vector( 0.0000, ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"Maga_Khan_turnleft\", #startxform: [#position: vector( 0.4061, 0.2484, 7.8358 ), #rotation: vector( 0.0000, 0. ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"Maga_Khan_turnleft\", #startxform: [#position: vector( 0.4061, 0.2484, 7.8358 ), #rotation: vector( 0.0000, 0. ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"Maga_Khan_turnright\", #startxform: [#position: vector( 0.4061, 0.2484, 7.8358 ), #rotation: vector( 0.0000, 0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"Maga_Khan_turnright\", #startxform: [#position: vector( 0.4061, 0.2484, 7.8358 ), #rotation: vector( 0.0000, 0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"Maga_Khan_walk\", #startxform: [#position: vector( -0.5651, -0.1360, 7.7315 ), #rotation: vector( 0.0000, 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000 )], #distancepercycle: \"20.152\", #minimumspeed: \"0.1\", #maximumspeed: \"1.5\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"Maga_Khan_walk\", #startxform: [#position: vector( -0.5651, -0.1360, 7.7315 ), #rotation: vector( 0.0000, 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"Maga_Khan_walk_talk\", #startxform: [#position: vector( -0.5651, -0.1360, 7.7315 ), #rotation: vector( 0.0000, ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz 0.0000, 0.0000 )], #distancepercycle: \"20.152\", #minimumspeed: \"0.1\", #maximumspeed: \"1.5\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"Maga_Khan_walk_talk\", #startxform: [#position: vector( -0.5651, -0.1360, 7.7315 ), #rotation: vector( 0.0000, ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"Maga_Khan_win\", #startxform: [#position: vector( 0.4061, 0.2484, 7.8358 ), #rotation: vector( 0.0000, 0.0000, ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"Maga_Khan_win\", #startxform: [#position: vector( 0.4061, 0.2484, 7.8358 ), #rotation: vector( 0.0000, 0.0000, ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "objectlinkedtobonesplayerinfo",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[[#bonedmodel: \"Maga_Khan\", #object: \"sword_hand\", #boneid: 24, #xform: [#rotation: vector( 80.0996, -77.8509, 9.7887 ), #p ",
+      "kind": "group",
+      "parent": "objectlinkedtobonesplayerinfo",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzzosition: vector( 1.3215, 2.4789, -0.4947 )]], [#bonedmodel: \"Maga_Khan\", #object: \"dizzystars\", #boneid: 35, #xform: [#rota ",
+      "kind": "group",
+      "parent": "zzz[[#bonedmodel: \"Maga_Khan\", #object: \"sword_hand\", #boneid: 24, #xform: [#rotation: vector( 80.0996, -77.8509, 9.7887 ), #p ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzztion: vector( 90.0000, 90.0000, 0.0000 ), #position: vector( -0.7102, -0.5428, -0.2067 )]]] ",
+      "kind": "group",
+      "parent": "zzzosition: vector( 1.3215, 2.4789, -0.4947 )]], [#bonedmodel: \"Maga_Khan\", #object: \"dizzystars\", #boneid: 35, #xform: [#rota ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "TestLight",
+      "kind": "light",
+      "parent": "DefaultView",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    }
+  ],
+  "skeletons": [],
+  "animations": [
+    {
+      "name": "Maga_Khan",
+      "tracks": 35,
+      "size": 2588
+    },
+    {
+      "name": "maga_khan_die",
+      "tracks": 35,
+      "size": 12206
+    },
+    {
+      "name": "maga_khan_hit",
+      "tracks": 35,
+      "size": 6997
+    },
+    {
+      "name": "maga_khan_run",
+      "tracks": 35,
+      "size": 4310
+    },
+    {
+      "name": "maga_khan_stand",
+      "tracks": 35,
+      "size": 3190
+    },
+    {
+      "name": "maga_khan_standsword",
+      "tracks": 35,
+      "size": 3803
+    },
+    {
+      "name": "maga_khan_stand_breathe",
+      "tracks": 35,
+      "size": 3204
+    },
+    {
+      "name": "maga_khan_stand_talk",
+      "tracks": 35,
+      "size": 5383
+    },
+    {
+      "name": "maga_khan_swordswing",
+      "tracks": 35,
+      "size": 4899
+    },
+    {
+      "name": "maga_khan_turnleft",
+      "tracks": 35,
+      "size": 4366
+    },
+    {
+      "name": "maga_khan_turnright",
+      "tracks": 35,
+      "size": 4367
+    },
+    {
+      "name": "maga_khan_walk",
+      "tracks": 35,
+      "size": 9059
+    },
+    {
+      "name": "maga_khan_walk_talk",
+      "tracks": 35,
+      "size": 9240
+    },
+    {
+      "name": "maga_khan_win",
+      "tracks": 35,
+      "size": 11611
+    }
+  ]
+}

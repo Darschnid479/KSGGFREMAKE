@@ -1,0 +1,294 @@
+{
+  "file": "abra_npc4.w3d",
+  "nodes": [
+    {
+      "name": "DefaultView",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "abra_npc4",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "collisionradius=4.2;",
+      "sw_pos": [
+        -0.425,
+        -0.352,
+        8.661
+      ],
+      "godot_pos": [
+        -0.425,
+        8.661,
+        0.352
+      ]
+    },
+    {
+      "name": "abra_npc4_proxy",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        -0.443,
+        -0.204,
+        6.958
+      ],
+      "godot_pos": [
+        -0.443,
+        6.958,
+        0.204
+      ]
+    },
+    {
+      "name": "hiddenassets",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "userdata",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"abra_npc4_stand\", #startxform: [#position: vector( -0.4246, -0.3515, 8.6608 ), #rotation: vector( 0.0000, 0.0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz000, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"abra_npc4_stand\", #startxform: [#position: vector( -0.4246, -0.3515, 8.6608 ), #rotation: vector( 0.0000, 0.0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"abra_npc4_stand_blowkiss\", #startxform: [#position: vector( -0.4246, -0.3515, 8.6608 ), #rotation: vector( 0. ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0000, 0.0000, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"abra_npc4_stand_blowkiss\", #startxform: [#position: vector( -0.4246, -0.3515, 8.6608 ), #rotation: vector( 0. ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"abra_npc4_stand_breathe\", #startxform: [#position: vector( -0.4246, -0.3515, 8.6608 ), #rotation: vector( 0.0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz000, 0.0000, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"abra_npc4_stand_breathe\", #startxform: [#position: vector( -0.4246, -0.3515, 8.6608 ), #rotation: vector( 0.0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"abra_npc4_turnleft\", #startxform: [#position: vector( -0.4246, -0.3515, 8.6608 ), #rotation: vector( 0.0000,  ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0.0000, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"abra_npc4_turnleft\", #startxform: [#position: vector( -0.4246, -0.3515, 8.6608 ), #rotation: vector( 0.0000,  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"abra_npc4_turnright\", #startxform: [#position: vector( -0.4246, -0.3515, 8.6608 ), #rotation: vector( 0.0000, ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz 0.0000, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"abra_npc4_turnright\", #startxform: [#position: vector( -0.4246, -0.3515, 8.6608 ), #rotation: vector( 0.0000, ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "TestLight",
+      "kind": "light",
+      "parent": "DefaultView",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    }
+  ],
+  "skeletons": [],
+  "animations": [
+    {
+      "name": "abra_npc4",
+      "tracks": 10,
+      "size": 755
+    },
+    {
+      "name": "abra_npc4_stand",
+      "tracks": 10,
+      "size": 4771
+    },
+    {
+      "name": "abra_npc4_stand_blowkiss",
+      "tracks": 10,
+      "size": 5241
+    },
+    {
+      "name": "abra_npc4_stand_breathe",
+      "tracks": 10,
+      "size": 2044
+    },
+    {
+      "name": "abra_npc4_turnleft",
+      "tracks": 10,
+      "size": 4774
+    },
+    {
+      "name": "abra_npc4_turnright",
+      "tracks": 10,
+      "size": 4775
+    }
+  ]
+}

@@ -1,0 +1,1007 @@
+{
+  "file": "panther.w3d",
+  "nodes": [
+    {
+      "name": "DefaultView",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "Panther",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "collisionradius=8.5;",
+      "sw_pos": [
+        0.0,
+        -3.283,
+        8.793
+      ],
+      "godot_pos": [
+        0.0,
+        8.793,
+        3.283
+      ]
+    },
+    {
+      "name": "Panther_proxy",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        -3.283,
+        8.793
+      ],
+      "godot_pos": [
+        0.0,
+        8.793,
+        3.283
+      ]
+    },
+    {
+      "name": "hiddenassets",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "userdata",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"Panther\", #startxform: [#position: vector( 0.0000, -3.2830, 4.0046 ), #rotation: vector( -0.7120, 0.0000, 0.0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #impact: \"13\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"Panther\", #startxform: [#position: vector( 0.0000, -3.2830, 4.0046 ), #rotation: vector( -0.7120, 0.0000, 0.0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"Panther_attack_long\", #startxform: [#position: vector( 0.0000, -3.2830, 4.0046 ), #rotation: vector( -0.7120, ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz 0.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #impact: \"30\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"Panther_attack_long\", #startxform: [#position: vector( 0.0000, -3.2830, 4.0046 ), #rotation: vector( -0.7120, ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"Panther_hit\", #startxform: [#position: vector( 0.0000, -3.2830, 4.0046 ), #rotation: vector( -0.7120, 0.0000, ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"Panther_hit\", #startxform: [#position: vector( 0.0000, -3.2830, 4.0046 ), #rotation: vector( -0.7120, 0.0000, ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"Panther_run\", #startxform: [#position: vector( 0.0000, -3.2830, 8.7389 ), #rotation: vector( -0.7120, 0.0000, ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz 0.0000 )], #distancepercycle: \"40.991\", #minimumspeed: \"0.7\", #maximumspeed: \"1.5\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"Panther_run\", #startxform: [#position: vector( 0.0000, -3.2830, 8.7389 ), #rotation: vector( -0.7120, 0.0000, ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"Panther_run_away\", #startxform: [#position: vector( 0.0000, -3.2830, 8.5382 ), #rotation: vector( -0.7120, 0. ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0000, 0.0000 )], #distancepercycle: \"40.991\", #minimumspeed: \"0.7\", #maximumspeed: \"1.5\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"Panther_run_away\", #startxform: [#position: vector( 0.0000, -3.2830, 8.5382 ), #rotation: vector( -0.7120, 0. ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"Panther_stand\", #startxform: [#position: vector( 0.0000, -3.2830, 4.0046 ), #rotation: vector( -0.7120, 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"Panther_stand\", #startxform: [#position: vector( 0.0000, -3.2830, 4.0046 ), #rotation: vector( -0.7120, 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"panther_turnleft\", #startxform: [#position: vector( 0.0000, -3.2830, 4.0046 ), #rotation: vector( -0.7120, 0. ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"panther_turnleft\", #startxform: [#position: vector( 0.0000, -3.2830, 4.0046 ), #rotation: vector( -0.7120, 0. ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"panther_turnright\", #startxform: [#position: vector( 0.0000, -3.2830, 4.0046 ), #rotation: vector( -0.7120, 0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"panther_turnright\", #startxform: [#position: vector( 0.0000, -3.2830, 4.0046 ), #rotation: vector( -0.7120, 0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"Panther_walk\", #startxform: [#position: vector( 0.0000, -3.2830, 8.7295 ), #rotation: vector( -0.7120, 0.0000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, 0.0000 )], #distancepercycle: \"17.186\", #minimumspeed: \"0.7\", #maximumspeed: \"1.5\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"Panther_walk\", #startxform: [#position: vector( 0.0000, -3.2830, 8.7295 ), #rotation: vector( -0.7120, 0.0000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"Panther_walk_backwards\", #startxform: [#position: vector( 0.0000, -3.2830, 8.4578 ), #rotation: vector( -0.71 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz20, 0.0000, 0.0000 )], #distancepercycle: \"-17.186\", #minimumspeed: \"0.7\", #maximumspeed: \"1.5\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"Panther_walk_backwards\", #startxform: [#position: vector( 0.0000, -3.2830, 8.4578 ), #rotation: vector( -0.71 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "TestLight",
+      "kind": "light",
+      "parent": "DefaultView",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    }
+  ],
+  "skeletons": [
+    {
+      "name": "Panther",
+      "bones": [
+        {
+          "name": "center",
+          "parent": -1,
+          "length": 0.0,
+          "pos": [
+            -0.002407677937299013,
+            -2.0330467224121094,
+            3.02632474899292
+          ],
+          "rot": [
+            1.0,
+            -0.0,
+            -0.0,
+            -0.0
+          ],
+          "flags": 7
+        },
+        {
+          "name": "right_upper_leg",
+          "parent": 0,
+          "length": 1.3916692733764648,
+          "pos": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rot": [
+            0.6937534809112549,
+            0.7055514454841614,
+            -0.10136763751506805,
+            -0.10309150815010071
+          ],
+          "flags": 7
+        },
+        {
+          "name": "right_lower_leg",
+          "parent": 1,
+          "length": 3.819809913635254,
+          "pos": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rot": [
+            0.5529223680496216,
+            0.4486302137374878,
+            -0.39457249641418457,
+            -0.5807929635047913
+          ],
+          "flags": 7
+        },
+        {
+          "name": "right_foot",
+          "parent": 2,
+          "length": 2.0513176918029785,
+          "pos": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rot": [
+            0.8502838015556335,
+            0.0,
+            0.0,
+            0.5263245105743408
+          ],
+          "flags": 7
+        },
+        {
+          "name": "right_toe",
+          "parent": 3,
+          "length": 3.001509189605713,
+          "pos": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rot": [
+            0.8828296661376953,
+            4.0308859752258286e-05,
+            7.563599501736462e-05,
+            -0.46969324350357056
+          ],
+          "flags": 7
+        },
+        {
+          "name": "none_08",
+          "parent": 4,
+          "length": 1.8708559274673462,
+          "pos": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rot": [
+            0.8670901656150818,
+            0.0050832126289606094,
+            0.004609040915966034,
+            -0.49810394644737244
+          ],
+          "flags": 7
+        },
+        {
+          "name": "left_upper_leg",
+          "parent": 0,
+          "length": 1.4340404272079468,
+          "pos": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rot": [
+            -0.09831022471189499,
+            -0.09998210519552231,
+            0.6941933035850525,
+            0.7059987783432007
+          ],
+          "flags": 7
+        },
+        {
+          "name": "left_lower_leg",
+          "parent": 6,
+          "length": 3.819809675216675,
+          "pos": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rot": [
+            0.5513409972190857,
+            -0.45138707756996155,
+            0.39678043127059937,
+            -0.5786519646644592
+          ],
+          "flags": 7
+        },
+        {
+          "name": "left_foot",
+          "parent": 7,
+          "length": 2.0513181686401367,
+          "pos": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rot": [
+            0.8502838015556335,
+            0.0,
+            0.0,
+            0.5263245105743408
+          ],
+          "flags": 7
+        },
+        {
+          "name": "left_toe",
+          "parent": 8,
+          "length": 3.001509666442871,
+          "pos": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rot": [
+            0.8828258514404297,
+            -9.514430530543905e-06,
+            -1.7791326172300614e-05,
+            -0.46970048546791077
+          ],
+          "flags": 7
+        },
+        {
+          "name": "none_07",
+          "parent": 9,
+          "length": 1.8707008361816406,
+          "pos": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rot": [
+            0.8671835660934448,
+            -0.006610161159187555,
+            0.0037737281527370214,
+            -0.4979304075241089
+          ],
+          "flags": 7
+        },
+        {
+          "name": "stomach",
+          "parent": 0,
+          "length": 3.2454209327697754,
+          "pos": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rot": [
+            -0.49293017387390137,
+            0.5069712400436401,
+            0.49293017387390137,
+            -0.5069712400436401
+          ],
+          "flags": 7
+        },
+        {
+          "name": "shoulder",
+          "parent": 11,
+          "length": 2.295041799545288,
+          "pos": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rot": [
+            0.9979556202888489,
+            0.0,
+            0.0,
+            -0.06391026824712753
+          ],
+          "flags": 7
+        },
+        {
+          "name": "neck",
+          "parent": 12,
+          "length": 2.8383138179779053,
+          "pos": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rot": [
+            0.9982507824897766,
+            0.0,
+            0.0,
+            -0.05912117660045624
+          ],
+          "flags": 7
+        },
+        {
+          "name": "left_upper_arm",
+          "parent": 13,
+          "length": 2.91609263420105,
+          "pos": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rot": [
+            0.3332505524158478,
+            0.2625976800918579,
+            -0.09720195829868317,
+            0.9002990126609802
+          ],
+          "flags": 7
+        },
+        {
+          "name": "left_lower_arm",
+          "parent": 14,
+          "length": 3.76544189453125,
+          "pos": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rot": [
+            0.6989466547966003,
+            0.6469306349754333,
+            0.10711504518985748,
+            -0.2854483127593994
+          ],
+          "flags": 7
+        },
+        {
+          "name": "left_hand",
+          "parent": 15,
+          "length": 2.9366371631622314,
+          "pos": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rot": [
+            0.9943686723709106,
+            0.0,
+            -0.10597606748342514,
+            0.0
+          ],
+          "flags": 7
+        },
+        {
+          "name": "left_upper_fingers",
+          "parent": 16,
+          "length": 1.6738203763961792,
+          "pos": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rot": [
+            0.8518012762069702,
+            -0.038724806159734726,
+            -0.5196854472160339,
+            0.05349746719002724
+          ],
+          "flags": 7
+        },
+        {
+          "name": "right_upper_arm",
+          "parent": 13,
+          "length": 2.915956735610962,
+          "pos": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rot": [
+            0.3332540988922119,
+            -0.26256465911865234,
+            0.09718972444534302,
+            0.9003086090087891
+          ],
+          "flags": 7
+        },
+        {
+          "name": "right_lower_am",
+          "parent": 18,
+          "length": 3.765454053878784,
+          "pos": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rot": [
+            0.6989507079124451,
+            -0.6469407081604004,
+            -0.10708820819854736,
+            -0.2854255139827728
+          ],
+          "flags": 7
+        },
+        {
+          "name": "right_hand",
+          "parent": 19,
+          "length": 2.9366133213043213,
+          "pos": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rot": [
+            0.9943690299987793,
+            0.0,
+            0.10597272217273712,
+            0.0
+          ],
+          "flags": 7
+        },
+        {
+          "name": "right_upper_fingers",
+          "parent": 20,
+          "length": 1.6738373041152954,
+          "pos": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rot": [
+            -0.03875819221138954,
+            0.8517943024635315,
+            0.05343451723456383,
+            -0.5197008848190308
+          ],
+          "flags": 7
+        },
+        {
+          "name": "head",
+          "parent": 13,
+          "length": 1.605502963066101,
+          "pos": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rot": [
+            0.9950771927833557,
+            0.0,
+            0.0,
+            0.09910278767347336
+          ],
+          "flags": 7
+        },
+        {
+          "name": "head_linkspread",
+          "parent": 22,
+          "length": 0.07237914204597473,
+          "pos": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rot": [
+            0.7718896269798279,
+            0.0,
+            0.0,
+            -0.6357565522193909
+          ],
+          "flags": 7
+        },
+        {
+          "name": "none_05",
+          "parent": 23,
+          "length": 2.6955878734588623,
+          "pos": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rot": [
+            0.9294681549072266,
+            0.0,
+            0.0,
+            0.3689023554325104
+          ],
+          "flags": 14
+        },
+        {
+          "name": "mouth",
+          "parent": 23,
+          "length": 0.6118791103363037,
+          "pos": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rot": [
+            0.4358137547969818,
+            0.0,
+            0.0,
+            0.9000368714332581
+          ],
+          "flags": 12
+        },
+        {
+          "name": "none_09",
+          "parent": 25,
+          "length": 3.523834705352783,
+          "pos": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rot": [
+            0.9818362593650818,
+            0.0,
+            0.0,
+            -0.18973010778427124
+          ],
+          "flags": 4
+        },
+        {
+          "name": "tail_1",
+          "parent": 0,
+          "length": 1.609781265258789,
+          "pos": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rot": [
+            0.5124073028564453,
+            0.48710328340530396,
+            -0.5125806927680969,
+            -0.4872681200504303
+          ],
+          "flags": 7
+        },
+        {
+          "name": "tail_2",
+          "parent": 27,
+          "length": 2.5364322662353516,
+          "pos": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rot": [
+            0.9991888403892517,
+            -0.018902411684393883,
+            0.0010251767234876752,
+            -0.03554344177246094
+          ],
+          "flags": 7
+        },
+        {
+          "name": "tail_3",
+          "parent": 28,
+          "length": 2.5050597190856934,
+          "pos": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rot": [
+            0.9999973773956299,
+            5.840676466778438e-12,
+            -0.0001324653858318925,
+            0.002271516714245081
+          ],
+          "flags": 7
+        },
+        {
+          "name": "tail_4",
+          "parent": 29,
+          "length": 3.359640598297119,
+          "pos": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "rot": [
+            0.9999935626983643,
+            -1.534782175481586e-12,
+            -0.0002087764150928706,
+            0.0035803874488919973
+          ],
+          "flags": 7
+        }
+      ]
+    }
+  ],
+  "animations": [
+    {
+      "name": "Panther",
+      "tracks": 31,
+      "size": 2278
+    },
+    {
+      "name": "panther_attack_long",
+      "tracks": 31,
+      "size": 18725
+    },
+    {
+      "name": "panther_hit",
+      "tracks": 31,
+      "size": 5248
+    },
+    {
+      "name": "panther_run",
+      "tracks": 31,
+      "size": 4130
+    },
+    {
+      "name": "panther_run_away",
+      "tracks": 31,
+      "size": 4130
+    },
+    {
+      "name": "panther_stand",
+      "tracks": 31,
+      "size": 3196
+    },
+    {
+      "name": "panther_turnleft",
+      "tracks": 31,
+      "size": 5340
+    },
+    {
+      "name": "panther_turnright",
+      "tracks": 31,
+      "size": 5341
+    },
+    {
+      "name": "panther_walk",
+      "tracks": 31,
+      "size": 4985
+    },
+    {
+      "name": "panther_walk_backwards",
+      "tracks": 31,
+      "size": 5019
+    }
+  ]
+}

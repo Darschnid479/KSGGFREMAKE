@@ -1,0 +1,305 @@
+{
+  "file": "carpet_salesman.w3d",
+  "nodes": [
+    {
+      "name": "DefaultView",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "carpet_salesman",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "collisionradius=4.5;",
+      "sw_pos": [
+        0.0,
+        -0.59,
+        7.093
+      ],
+      "godot_pos": [
+        0.0,
+        7.093,
+        0.59
+      ]
+    },
+    {
+      "name": "carpet_salesman_proxy",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        -0.136,
+        6.958
+      ],
+      "godot_pos": [
+        0.0,
+        6.958,
+        0.136
+      ]
+    },
+    {
+      "name": "hiddenassets",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "userdata",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"carpet_salesman_give\", #startxform: [#position: vector( 0.0000, -0.3075, 6.8351 ), #rotation: vector( 0.0000, ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz 0.0000, 0.0000 )], #mountstart: \"17\", #mountend: \"35\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"carpet_salesman_give\", #startxform: [#position: vector( 0.0000, -0.3075, 6.8351 ), #rotation: vector( 0.0000, ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"carpet_salesman_stand\", #startxform: [#position: vector( 0.0000, -0.3075, 6.8351 ), #rotation: vector( 0.0000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, 0.0000, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"carpet_salesman_stand\", #startxform: [#position: vector( 0.0000, -0.3075, 6.8351 ), #rotation: vector( 0.0000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"carpet_salesman_stand_breathe\", #startxform: [#position: vector( 0.0000, -0.3075, 6.8351 ), #rotation: vector ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz( 0.0000, 0.0000, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"carpet_salesman_stand_breathe\", #startxform: [#position: vector( 0.0000, -0.3075, 6.8351 ), #rotation: vector ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"carpet_salesman_stand_talk\", #startxform: [#position: vector( 0.0000, -0.3075, 6.8351 ), #rotation: vector( 0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz.0000, 0.0000, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"carpet_salesman_stand_talk\", #startxform: [#position: vector( 0.0000, -0.3075, 6.8351 ), #rotation: vector( 0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "objectlinkedtobonesplayerinfo",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[[#bonedmodel: \"carpet_salesman\", #object: \"cake\", #boneid: 7, #xform: [#rotation: vector( 0.8626, 33.0722, -88.2740 ), #po ",
+      "kind": "group",
+      "parent": "objectlinkedtobonesplayerinfo",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzzsition: vector( 1.3534, -0.2124, 0.0010 )]]] ",
+      "kind": "group",
+      "parent": "zzz[[#bonedmodel: \"carpet_salesman\", #object: \"cake\", #boneid: 7, #xform: [#rotation: vector( 0.8626, 33.0722, -88.2740 ), #po ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "TestLight",
+      "kind": "light",
+      "parent": "DefaultView",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    }
+  ],
+  "skeletons": [],
+  "animations": [
+    {
+      "name": "carpet_salesman",
+      "tracks": 29,
+      "size": 2111
+    },
+    {
+      "name": "carpet_salesman_give",
+      "tracks": 29,
+      "size": 9251
+    },
+    {
+      "name": "carpet_salesman_stand",
+      "tracks": 29,
+      "size": 8443
+    },
+    {
+      "name": "carpet_salesman_stand_breathe",
+      "tracks": 29,
+      "size": 4703
+    },
+    {
+      "name": "carpet_salesman_stand_talk",
+      "tracks": 29,
+      "size": 16066
+    }
+  ]
+}

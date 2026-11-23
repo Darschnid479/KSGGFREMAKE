@@ -1,0 +1,492 @@
+{
+  "file": "world_map_underwater.w3d",
+  "nodes": [
+    {
+      "name": "DefaultView",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "piraya",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        -4.099,
+        -0.0,
+        -0.513
+      ],
+      "godot_pos": [
+        -4.099,
+        -0.513,
+        0.0
+      ]
+    },
+    {
+      "name": "hiddenassets",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "userdata",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"piraya_swim\", #startxform: [#position: vector( -4.1011, -2.2256, -0.5101 ), #rotation: vector( 0.0000, 0.0000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"piraya_swim\", #startxform: [#position: vector( -4.1011, -2.2256, -0.5101 ), #rotation: vector( 0.0000, 0.0000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "shark",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        -0.0,
+        0.0,
+        1.972
+      ],
+      "godot_pos": [
+        -0.0,
+        1.972,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"shark_swim\", #startxform: [#position: vector( -3.8347, 8.3236, 0.3985 ), #rotation: vector( 0.0000, 0.0000, 0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"shark_swim\", #startxform: [#position: vector( -3.8347, 8.3236, 0.3985 ), #rotation: vector( 0.0000, 0.0000, 0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "background",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -0.719,
+        -100.625,
+        -7.975
+      ],
+      "godot_pos": [
+        -0.719,
+        -7.975,
+        100.625
+      ]
+    },
+    {
+      "name": "Camera01",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -11.799,
+        -144.352,
+        104.209
+      ],
+      "godot_pos": [
+        -11.799,
+        104.209,
+        144.352
+      ]
+    },
+    {
+      "name": "flower_3",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -8.69,
+        -165.669,
+        8.887
+      ],
+      "godot_pos": [
+        -8.69,
+        8.887,
+        165.669
+      ]
+    },
+    {
+      "name": "flower_5",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -39.891,
+        -165.533,
+        -14.597
+      ],
+      "godot_pos": [
+        -39.891,
+        -14.597,
+        165.533
+      ]
+    },
+    {
+      "name": "flower_4",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        36.788,
+        -165.787,
+        -17.408
+      ],
+      "godot_pos": [
+        36.788,
+        -17.408,
+        165.787
+      ]
+    },
+    {
+      "name": "flower_6",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        16.493,
+        -165.513,
+        -27.715
+      ],
+      "godot_pos": [
+        16.493,
+        -27.715,
+        165.513
+      ]
+    },
+    {
+      "name": "flower_2",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -31.719,
+        -165.669,
+        28.208
+      ],
+      "godot_pos": [
+        -31.719,
+        28.208,
+        165.669
+      ]
+    },
+    {
+      "name": "flower_1",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        27.09,
+        -165.669,
+        28.208
+      ],
+      "godot_pos": [
+        27.09,
+        28.208,
+        165.669
+      ]
+    },
+    {
+      "name": "flare1",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        26.163,
+        -133.517,
+        30.029
+      ],
+      "godot_pos": [
+        26.163,
+        30.029,
+        133.517
+      ]
+    },
+    {
+      "name": "flare2",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        63.588,
+        -58.838,
+        26.457
+      ],
+      "godot_pos": [
+        63.588,
+        26.457,
+        58.838
+      ]
+    },
+    {
+      "name": "flare3",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        63.458,
+        -72.986,
+        -42.932
+      ],
+      "godot_pos": [
+        63.458,
+        -42.932,
+        72.986
+      ]
+    },
+    {
+      "name": "flare4",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        78.543,
+        117.216,
+        -42.932
+      ],
+      "godot_pos": [
+        78.543,
+        -42.932,
+        -117.216
+      ]
+    },
+    {
+      "name": "flare5",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        92.293,
+        164.604,
+        -44.829
+      ],
+      "godot_pos": [
+        92.293,
+        -44.829,
+        -164.604
+      ]
+    },
+    {
+      "name": "flare6",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        72.509,
+        305.231,
+        -53.886
+      ],
+      "godot_pos": [
+        72.509,
+        -53.886,
+        -305.231
+      ]
+    },
+    {
+      "name": "chest_top",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        10.987,
+        -167.538,
+        -3.267
+      ],
+      "godot_pos": [
+        10.987,
+        -3.267,
+        167.538
+      ]
+    },
+    {
+      "name": "chest",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        7.055,
+        -172.822,
+        1.8
+      ],
+      "godot_pos": [
+        7.055,
+        1.8,
+        172.822
+      ]
+    },
+    {
+      "name": "scene_light",
+      "kind": "light",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        260.407,
+        589.221,
+        118.684
+      ],
+      "godot_pos": [
+        260.407,
+        118.684,
+        -589.221
+      ]
+    },
+    {
+      "name": "flower_07",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -58.313,
+        -165.669,
+        8.887
+      ],
+      "godot_pos": [
+        -58.313,
+        8.887,
+        165.669
+      ]
+    },
+    {
+      "name": "dots",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -16.274,
+        76.018,
+        8.618
+      ],
+      "godot_pos": [
+        -16.274,
+        8.618,
+        -76.018
+      ]
+    },
+    {
+      "name": "TestLight",
+      "kind": "light",
+      "parent": "DefaultView",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    }
+  ],
+  "skeletons": [],
+  "animations": [
+    {
+      "name": "piraya",
+      "tracks": 7,
+      "size": 522
+    },
+    {
+      "name": "piraya_swim",
+      "tracks": 7,
+      "size": 1339
+    },
+    {
+      "name": "shark",
+      "tracks": 6,
+      "size": 452
+    },
+    {
+      "name": "shark_swim",
+      "tracks": 6,
+      "size": 1692
+    }
+  ]
+}

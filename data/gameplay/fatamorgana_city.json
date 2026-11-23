@@ -1,0 +1,2786 @@
+{
+  "file": "fatamorgana_city_gameplay.w3d",
+  "nodes": [
+    {
+      "name": "collisiondata",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -16.564,
+        65.138,
+        0.0
+      ],
+      "godot_pos": [
+        -16.564,
+        0.0,
+        -65.138
+      ]
+    },
+    {
+      "name": "Circle01",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:2.21127,#position:vector(366.067,-147.539,0)];",
+      "sw_pos": [
+        366.067,
+        -147.539,
+        0.0
+      ],
+      "godot_pos": [
+        366.067,
+        0.0,
+        147.539
+      ]
+    },
+    {
+      "name": "Circle02",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:2.21127,#position:vector(347.547,-153.62,0)];",
+      "sw_pos": [
+        347.547,
+        -153.62,
+        0.0
+      ],
+      "godot_pos": [
+        347.547,
+        0.0,
+        153.62
+      ]
+    },
+    {
+      "name": "Circle03",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:21.894,#position:vector(-70.6949,-28.3856,0)];",
+      "sw_pos": [
+        -70.695,
+        -28.386,
+        0.0
+      ],
+      "godot_pos": [
+        -70.695,
+        0.0,
+        28.386
+      ]
+    },
+    {
+      "name": "Circle04",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:6.0737,#position:vector(-488.489,-175.797,0)];",
+      "sw_pos": [
+        -488.489,
+        -175.797,
+        0.0
+      ],
+      "godot_pos": [
+        -488.489,
+        0.0,
+        175.797
+      ]
+    },
+    {
+      "name": "Circle05",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:7.15378,#position:vector(-412.33,-254.43,0)];",
+      "sw_pos": [
+        -412.33,
+        -254.43,
+        0.0
+      ],
+      "godot_pos": [
+        -412.33,
+        0.0,
+        254.43
+      ]
+    },
+    {
+      "name": "Line01",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-412.015,-234.833,0),vector(-405.405,-236,0),vector(-299.643,-234.833,0),vector(-298.866,-293.935,0),vector(-314.03,-293.935,0),vector(-314.419,-251.164,0),vector(-484.726,-250.775,0),vector(-484.726,-175.731,0),vector(-493.669,-160.567,0),vector(-490.947,-155.901,0)],#closed:0]]];",
+      "sw_pos": [
+        -399.844,
+        -228.767,
+        0.0
+      ],
+      "godot_pos": [
+        -399.844,
+        0.0,
+        228.767
+      ]
+    },
+    {
+      "name": "Line02",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-491.767,-155.926,0),vector(-492.873,-130.497,0),vector(-487.068,-129.944,0),vector(-486.792,-113.359,0),vector(-493.979,-112.806,0),vector(-492.32,-100.921,0),vector(-490.662,-85.9946,0),vector(-485.686,-85.9946,0),vector(-484.028,-70.5157,0),vector(-489.556,-68.8573,0),vector(-487.898,-52.5491,0),vector(-489.556,-48.1266,0),vector(-493.426,-45.3625,0),vector(-502.271,-44.8096,0)],#closed:0]]];",
+      "sw_pos": [
+        -490.563,
+        -88.976,
+        0.0
+      ],
+      "godot_pos": [
+        -490.563,
+        0.0,
+        88.976
+      ]
+    },
+    {
+      "name": "Line03",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-501.442,-44.8097,0),vector(-540.968,-43.9805,0),vector(-403.316,31.7557,0),vector(-408.015,38.9423,0)],#closed:0]]];",
+      "sw_pos": [
+        -463.435,
+        -4.523,
+        0.0
+      ],
+      "godot_pos": [
+        -463.435,
+        0.0,
+        4.523
+      ]
+    },
+    {
+      "name": "Line04",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-362.191,61.1923,0),vector(-359.063,54.9379,0),vector(-319.973,76.0466,0),vector(-316.846,71.3558,0),vector(-309.419,67.4467,0),vector(-296.91,66.6649,0),vector(-290.265,64.7104,0),vector(-284.792,71.3558,0),vector(-298.474,87.3827,0),vector(-254.302,113.182,0),vector(-242.575,118.655,0),vector(-232.02,103.41,0),vector(-227.72,100.673,0),vector(-223.029,100.673,0),vector(-211.302,108.882,0),vector(-192.93,67.0558,0),vector(-175.73,20.5385,0),vector(-171.04,17.0204,0),vector(-167.131,23.6657,0)],#closed:0]]];",
+      "sw_pos": [
+        -259.774,
+        73.413,
+        0.0
+      ],
+      "godot_pos": [
+        -259.774,
+        0.0,
+        -73.413
+      ]
+    },
+    {
+      "name": "Line05",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-239.838,78.7829,0),vector(-233.975,90.119,0),vector(-209.348,77.6102,0),vector(-214.821,66.6649,0)],#closed:1]]];",
+      "sw_pos": [
+        -224.495,
+        78.294,
+        0.0
+      ],
+      "godot_pos": [
+        -224.495,
+        0.0,
+        -78.294
+      ]
+    },
+    {
+      "name": "Line06",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-171.039,17.4114,0),vector(-164.785,17.4114,0),vector(-120.613,36.9565,0),vector(-117.486,26.4021,0),vector(-81.132,38.911,0),vector(-84.2593,50.2471,0),vector(-69.405,56.1107,0),vector(-65.8869,63.5378,0),vector(-73.314,68.6195,0)],#closed:0]]];",
+      "sw_pos": [
+        -105.325,
+        41.734,
+        0.0
+      ],
+      "godot_pos": [
+        -105.325,
+        0.0,
+        -41.734
+      ]
+    },
+    {
+      "name": "Line07",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-118.268,37.7383,0),vector(-115.531,28.3566,0),vector(-82.3047,39.3019,0),vector(-85.432,48.6835,0)],#closed:1]]];",
+      "sw_pos": [
+        -100.384,
+        38.52,
+        0.0
+      ],
+      "godot_pos": [
+        -100.384,
+        0.0,
+        -38.52
+      ]
+    },
+    {
+      "name": "Line08",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-66.6687,64.3196,0),vector(-69.405,71.7467,0),vector(-65.8868,73.7013,0),vector(-76.0503,102.237,0),vector(-81.5229,100.673,0),vector(-87.3865,118.264,0),vector(-82.6956,120.609,0),vector(-94.0318,149.927,0),vector(-99.1135,148.754,0),vector(-101.85,155.4,0),vector(-109.277,158.136,0),vector(-140.94,143.673,0),vector(-178.076,129.209,0),vector(-178.076,133.9,0),vector(-143.285,157.745,0),vector(-142.504,168.69,0),vector(-174.167,212.08,0),vector(-186.285,209.344,0)],#closed:0]]];",
+      "sw_pos": [
+        -115.401,
+        134.356,
+        0.0
+      ],
+      "godot_pos": [
+        -115.401,
+        0.0,
+        -134.356
+      ]
+    },
+    {
+      "name": "Line09",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-167.521,199.181,0),vector(-165.567,201.526,0),vector(-181.594,221.462,0),vector(-185.112,223.808,0),vector(-203.093,253.125,0),vector(-196.057,259.38,0),vector(-191.757,257.034,0),vector(-179.248,267.589,0),vector(-181.985,271.498,0),vector(-166.739,283.615,0),vector(-154.621,290.652,0),vector(-148.367,287.915,0),vector(-136.249,295.343,0),vector(-136.64,301.597,0),vector(-133.904,303.551,0),vector(-113.186,292.215,0),vector(-137.031,271.107,0),vector(-154.621,256.252,0),vector(-155.403,250.389,0),vector(-154.231,244.916,0),vector(-141.331,234.362,0),vector(-141.722,231.235,0),vector(-135.076,223.808,0),vector(-132.34,223.808,0),vector(-104.195,196.835,0),vector(-105.759,194.099,0),vector(-99.5043,186.672,0),vector(-95.9862,187.454,0),vector(-86.6046,176.117,0),vector(-77.6138,176.117,0),vector(-53.7688,202.699,0),vector(-49.8598,201.135,0),vector(-31.0965,221.071,0),vector(-31.0965,224.589,0)],#closed:0]]];",
+      "sw_pos": [
+        -133.202,
+        238.593,
+        0.0
+      ],
+      "godot_pos": [
+        -133.202,
+        0.0,
+        -238.593
+      ]
+    },
+    {
+      "name": "Line10",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(123.701,298.079,0),vector(127.61,263.68,0),vector(121.355,257.034,0),vector(109.237,256.643,0),vector(109.237,251.562,0),vector(76.0107,251.562,0),vector(75.6198,256.643,0),vector(30.2752,251.171,0),vector(16.2027,249.998,0),vector(11.5119,252.734,0),vector(8.3847,257.816,0),vector(6.43019,304.724,0),vector(-33.8327,289.87,0),vector(-23.6693,279.707,0),vector(-21.3238,281.661,0),vector(-12.724,274.234,0),vector(-14.6785,271.498,0),vector(-0.996948,257.034,0),vector(-1.77875,249.998,0),vector(-31.8782,223.417,0)],#closed:0]]];",
+      "sw_pos": [
+        33.735,
+        263.953,
+        0.0
+      ],
+      "godot_pos": [
+        33.735,
+        0.0,
+        -263.953
+      ]
+    },
+    {
+      "name": "Line11",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(124.092,297.297,0),vector(155.364,291.825,0),vector(148.719,273.061,0),vector(152.237,267.198,0),vector(156.927,263.68,0),vector(171.391,262.507,0),vector(171.391,257.425,0),vector(188.59,255.08,0),vector(189.763,259.38,0),vector(208.526,256.253,0),vector(223.381,251.562,0),vector(221.426,246.089,0),vector(239.017,240.617,0),vector(240.971,246.48,0),vector(256.216,242.18,0),vector(262.862,242.962,0),vector(265.598,247.262,0)],#closed:0]]];",
+      "sw_pos": [
+        198.616,
+        258.874,
+        0.0
+      ],
+      "godot_pos": [
+        198.616,
+        0.0,
+        -258.874
+      ]
+    },
+    {
+      "name": "Line12",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(265.092,247.037,0),vector(277.807,299.002,0),vector(277.807,303.978,0),vector(302.131,330.513,0),vector(311.529,329.407,0),vector(345.251,328.854,0),vector(350.779,330.513,0),vector(361.835,330.513,0),vector(362.73,327.178,0),vector(394.174,326.059,0),vector(394.675,328.839,0),vector(402.744,328.854,0),vector(408.272,334.935,0),vector(408.272,352.073,0)],#closed:0]]];",
+      "sw_pos": [
+        347.699,
+        321.273,
+        0.0
+      ],
+      "godot_pos": [
+        347.699,
+        0.0,
+        -321.273
+      ]
+    },
+    {
+      "name": "Line13",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(454.093,316.122,0),vector(451.882,279.635,0),vector(465.149,281.57,0),vector(468.466,312.528,0),vector(470.677,318.609,0),vector(459.621,327.731,0),vector(455.475,321.373,0)],#closed:1]]];",
+      "sw_pos": [
+        460.766,
+        308.224,
+        0.0
+      ],
+      "godot_pos": [
+        460.766,
+        0.0,
+        -308.224
+      ]
+    },
+    {
+      "name": "Line14",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(408.161,351.504,0),vector(407.77,371.44,0),vector(410.897,371.44,0),vector(411.679,404.666,0),vector(406.988,405.839,0),vector(408.552,424.211,0),vector(497.287,347.595,0),vector(497.287,315.541,0),vector(494.55,313.586,0),vector(494.941,290.914,0),vector(498.068,286.614,0),vector(495.332,251.042,0),vector(497.287,245.96,0),vector(507.841,250.26,0)],#closed:0]]];",
+      "sw_pos": [
+        459.76,
+        330.758,
+        0.0
+      ],
+      "godot_pos": [
+        459.76,
+        0.0,
+        -330.758
+      ]
+    },
+    {
+      "name": "Line15",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(498.921,258.853,0),vector(434.794,265.487,0),vector(434.794,272.673,0),vector(429.818,279.307,0),vector(413.234,279.307,0),vector(412.681,284.282,0),vector(394.991,284.282,0),vector(392.779,280.965,0),vector(374.536,281.518,0),vector(361.269,283.729,0),vector(360.716,290.363,0),vector(343.579,293.127,0),vector(341.367,288.152,0),vector(324.23,289.81,0),vector(317.596,285.941,0),vector(314.832,253.877,0),vector(311.515,229.553,0),vector(315.385,222.919,0),vector(322.572,220.708,0),vector(338.05,220.708,0),vector(348.001,217.391,0),vector(361.269,219.603,0),vector(379.512,219.05,0),vector(391.674,212.416,0),vector(404.389,213.522,0),vector(418.209,210.757,0),vector(412.128,205.782,0),vector(406.6,186.433,0),vector(413.234,179.247,0),vector(424.29,188.645,0),vector(424.29,181.458,0),vector(429.266,179.247,0),vector(418.762,146.63,0),vector(425.949,144.419,0)],#closed:0]]];",
+      "sw_pos": [
+        385.154,
+        237.358,
+        0.0
+      ],
+      "godot_pos": [
+        385.154,
+        0.0,
+        -237.358
+      ]
+    },
+    {
+      "name": "Line16",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(418.861,146.561,0),vector(420.243,137.992,0),vector(425.218,133.846,0),vector(438.486,132.464,0),vector(438.762,129.147,0),vector(453.688,127.489,0),vector(455.347,130.529,0),vector(460.875,129.7,0),vector(460.046,126.66,0),vector(491.556,120.026,0),vector(493.768,123.066,0),vector(497.914,121.961,0),vector(497.914,118.92,0),vector(494.597,80.7757,0),vector(481.053,81.3285,0),vector(478.565,77.1823,0),vector(445.672,83.2633,0),vector(446.778,89.3443,0),vector(430.746,93.7669,0),vector(427.982,88.5151,0),vector(412.227,92.3848,0),vector(406.699,91.0028,0),vector(403.658,86.5803,0),vector(397.024,47.3301,0)],#closed:0]]];",
+      "sw_pos": [
+        449.07,
+        107.91,
+        0.0
+      ],
+      "godot_pos": [
+        449.07,
+        0.0,
+        -107.91
+      ]
+    },
+    {
+      "name": "Line17",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(378.781,22.1769,0),vector(369.936,29.0871,0),vector(380.993,44.8424,0),vector(393.708,37.103,0),vector(389.838,27.9815,0),vector(382.375,20.7948,0)],#closed:1]]];",
+      "sw_pos": [
+        382.605,
+        30.331,
+        0.0
+      ],
+      "godot_pos": [
+        382.605,
+        0.0,
+        -30.331
+      ]
+    },
+    {
+      "name": "Line18",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(292.818,-15.6912,0),vector(323.223,-4.35845,0),vector(321.841,-0.212305,0),vector(342.295,8.35638,0),vector(344.23,5.31588,0),vector(351.417,8.35638,0),vector(351.417,10.8441,0),vector(361.091,14.4374,0),vector(364.132,14.161,0),vector(380.163,21.9004,0),vector(394.813,38.2086,0),vector(397.024,46.7773,0)],#closed:0]]];",
+      "sw_pos": [
+        352.039,
+        12.341,
+        0.0
+      ],
+      "godot_pos": [
+        352.039,
+        0.0,
+        -12.341
+      ]
+    },
+    {
+      "name": "Line19",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(293.371,-15.4148,0),vector(288.948,-19.0081,0),vector(287.843,-25.9184,0),vector(291.989,-34.2107,0),vector(298.623,-48.0311,0),vector(296.688,-49.1368,0),vector(301.387,-58.2583,0),vector(303.875,-57.9819,0),vector(312.167,-73.4608,0),vector(314.931,-83.4115,0)],#closed:0]]];",
+      "sw_pos": [
+        298.982,
+        -46.483,
+        0.0
+      ],
+      "godot_pos": [
+        298.982,
+        0.0,
+        46.483
+      ]
+    },
+    {
+      "name": "Line20",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(314.931,-80.0946,0),vector(310.508,-81.2003,0),vector(320.459,-112.158,0),vector(325.435,-110.776,0),vector(330.686,-123.491,0),vector(337.597,-125.149,0),vector(339.255,-130.954,0),vector(342.295,-129.019,0),vector(341.19,-124.044,0),vector(350.588,-119.345,0),vector(351.141,-123.491,0),vector(355.84,-122.109,0),vector(355.563,-117.963,0),vector(369.384,-110.5,0),vector(371.871,-113.817,0),vector(369.107,-118.792,0),vector(369.936,-125.149,0),vector(376.847,-136.759,0),vector(374.083,-139.799,0),vector(382.098,-154.725,0),vector(385.968,-153.896,0),vector(389.561,-161.083,0)],#closed:0]]];",
+      "sw_pos": [
+        352.925,
+        -123.378,
+        0.0
+      ],
+      "godot_pos": [
+        352.925,
+        0.0,
+        123.378
+      ]
+    },
+    {
+      "name": "Line21",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(389.562,-160.806,0),vector(394.537,-169.928,0),vector(400.065,-184.577,0),vector(396.472,-186.512,0),vector(401.447,-203.65,0),vector(401.171,-210.007,0),vector(383.757,-221.063,0),vector(370.213,-190.935,0),vector(365.514,-188.447,0),vector(361.368,-188.724,0),vector(340.637,-199.503,0),vector(337.873,-197.569,0),vector(329.857,-202.268,0),vector(330.134,-205.308,0),vector(314.102,-213.6,0),vector(308.574,-215.259,0),vector(307.192,-212.218,0),vector(277.339,-221.893,0),vector(250.804,-151.408,0),vector(257.162,-151.132,0),vector(257.714,-155.002,0),vector(267.112,-154.449,0),vector(267.112,-151.961,0),vector(273.193,-152.79,0),vector(277.616,-155.831,0),vector(283.42,-148.644,0),vector(273.746,-139.246,0),vector(262.137,-133.442,0),vector(279.551,-127.637,0),vector(283.42,-124.32,0),vector(286.185,-119.345,0),vector(279.274,-114.369,0)],#closed:0]]];",
+      "sw_pos": [
+        319.008,
+        -173.495,
+        0.0
+      ],
+      "godot_pos": [
+        319.008,
+        0.0,
+        173.495
+      ]
+    },
+    {
+      "name": "Line22",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(286.737,-119.068,0),vector(278.721,-100.825,0),vector(280.103,-99.7198,0),vector(276.787,-91.4275,0),vector(275.128,-91.4275,0),vector(273.193,-87.5578,0),vector(275.128,-86.4521,0),vector(268.218,-64.8922,0),vector(264.901,-64.6158,0),vector(261.308,-52.4538,0),vector(263.243,-51.901,0),vector(260.202,-42.7794,0),vector(258.82,-42.7794,0),vector(254.397,-27.5769,0),vector(249.698,-24.5364,0),vector(244.723,-23.9836,0),vector(233.943,-28.4062,0),vector(233.114,-27.3005,0),vector(179.767,-45.82,0),vector(176.726,-48.0312,0)],#closed:0]]];",
+      "sw_pos": [
+        254.743,
+        -61.078,
+        0.0
+      ],
+      "godot_pos": [
+        254.743,
+        0.0,
+        61.078
+      ]
+    },
+    {
+      "name": "Line23",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(177.543,-47.9036,0),vector(145.098,-56.5034,0),vector(141.971,-63.5397,0),vector(149.007,-82.3029,0),vector(145.88,-84.2575,0),vector(149.398,-93.2482,0),vector(152.916,-93.2482,0),vector(164.252,-124.129,0),vector(161.516,-125.302,0),vector(164.643,-135.466,0),vector(170.898,-148.365,0),vector(131.808,-160.092,0)],#closed:0]]];",
+      "sw_pos": [
+        154.578,
+        -101.197,
+        0.0
+      ],
+      "godot_pos": [
+        154.578,
+        0.0,
+        101.197
+      ]
+    },
+    {
+      "name": "Line24",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(131.808,-160.483,0),vector(114.999,-165.956,0),vector(113.044,-160.874,0),vector(82.9448,-79.5666,0),vector(73.9541,-76.4394,0),vector(57.1453,-83.8665,0),vector(41.1184,-91.6846,0),vector(38.7729,-87.3846,0),vector(7.50081,-98.3299,0),vector(8.28261,-104.584,0),vector(-23.7713,-115.53,0),vector(-28.0713,-120.611,0),vector(-18.2987,-126.084,0)],#closed:0]]];",
+      "sw_pos": [
+        46.11,
+        -113.184,
+        0.0
+      ],
+      "godot_pos": [
+        46.11,
+        0.0,
+        113.184
+      ]
+    },
+    {
+      "name": "Line25",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-21.8168,-109.275,0),vector(-24.944,-101.066,0),vector(3.59179,-90.9028,0),vector(6.3281,-99.8935,0)],#closed:1]]];",
+      "sw_pos": [
+        -9.21,
+        -100.284,
+        0.0
+      ],
+      "godot_pos": [
+        -9.21,
+        0.0,
+        100.284
+      ]
+    },
+    {
+      "name": "Line26",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-27.2894,-121.784,0),vector(-31.1984,-124.911,0),vector(-35.1074,-122.175,0),vector(-51.5253,-121.393,0),vector(-51.5253,-116.311,0),vector(-69.8976,-116.311,0),vector(-71.0704,-121.393,0),vector(-103.906,-117.093,0),vector(-103.515,-111.62,0),vector(-121.888,-108.493,0),vector(-123.451,-114.357,0),vector(-139.869,-111.62,0),vector(-145.733,-115.53,0),vector(-147.687,-135.465,0),vector(-168.405,-131.947,0),vector(-162.932,-119.048,0),vector(-166.059,-110.839,0),vector(-179.741,-105.757,0),vector(-190.295,-99.8934,0),vector(-202.022,-98.3298,0),vector(-216.877,-94.0299,0)],#closed:0]]];",
+      "sw_pos": [
+        -119.524,
+        -115.157,
+        0.0
+      ],
+      "godot_pos": [
+        -119.524,
+        0.0,
+        115.157
+      ]
+    },
+    {
+      "name": "Line27",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-216.846,-94.1387,0),vector(-222.345,-91.1143,0),vector(-221.52,-86.4403,0),vector(-249.839,-72.6932,0),vector(-253.138,-76.8173,0),vector(-264.136,-71.5934,0),vector(-271.009,-73.518,0),vector(-316.1,-45.4738,0),vector(-394.459,-103.762,0),vector(-411.23,-103.212,0),vector(-416.729,-108.711,0),vector(-416.729,-113.385,0),vector(-419.479,-113.935,0),vector(-418.929,-132.081,0),vector(-415.904,-133.181,0),vector(-415.355,-145.828,0),vector(-418.379,-146.103,0),vector(-418.379,-179.096,0),vector(-416.179,-179.371,0),vector(-416.179,-182.945,0),vector(-419.479,-182.945,0),vector(-421.678,-201.092,0),vector(-418.104,-202.466,0),vector(-418.929,-211.264,0),vector(-424.153,-221.162,0),vector(-419.754,-232.985,0),vector(-411.505,-234.909,0)],#closed:0]]];",
+      "sw_pos": [
+        -367.647,
+        -138.527,
+        0.0
+      ],
+      "godot_pos": [
+        -367.647,
+        0.0,
+        138.527
+      ]
+    },
+    {
+      "name": "Line28",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-485.74,-240.133,0),vector(-481.066,-236.559,0),vector(-471.993,-239.034,0),vector(-464.844,-244.807,0),vector(-462.645,-253.331,0)],#closed:0]]];",
+      "sw_pos": [
+        -473.258,
+        -242.773,
+        0.0
+      ],
+      "godot_pos": [
+        -473.258,
+        0.0,
+        242.773
+      ]
+    },
+    {
+      "name": "Line29",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(25.1043,106.02,0),vector(26.479,110.694,0),vector(36.9268,115.918,0),vector(32.8027,127.19,0),vector(65.2459,143.412,0),vector(71.5696,132.414,0),vector(85.0418,139.288,0),vector(80.3678,152.21,0),vector(102.363,163.758,0),vector(108.137,153.31,0),vector(115.011,155.51,0),vector(121.059,152.76,0),vector(130.407,199.775,0),vector(134.532,203.625,0),vector(138.381,204.449,0),vector(154.327,200.6,0),vector(155.702,205.549,0),vector(172.474,201.15,0),vector(171.924,195.651,0),vector(188.42,191.527,0),vector(206.567,188.503,0),vector(206.842,193.177,0),vector(224.438,191.802,0),vector(224.713,186.303,0),vector(239.835,183.829,0),vector(243.959,180.804,0),vector(245.609,176.955,0),vector(240.11,152.485,0),vector(252.207,146.986,0),vector(294.548,134.339,0),vector(298.398,130.215,0),vector(298.672,126.366,0),vector(291.249,108.494,0),vector(293.174,106.295,0),vector(288.775,96.6718,0),vector(286.3,97.4967,0),vector(283.826,92.8226,0),vector(288.225,90.0732,0),vector(278.327,58.1798,0),vector(273.103,59.8295,0),vector(271.728,53.7807,0),vector(273.653,52.406,0),vector(270.628,42.783,0),vector(267.604,42.783,0),vector(262.655,26.5614,0),vector(258.256,22.4372,0),vector(255.232,22.4372,0),vector(249.458,24.3618,0),vector(248.083,21.0625,0),vector(217.289,31.2354,0),vector(217.839,35.9094,0),vector(208.491,39.7586,0),vector(169.449,52.406,0),vector(166.15,49.9315,0),vector(145.804,40.8584,0),vector(146.354,38.3839,0),vector(136.731,33.9848,0),vector(135.356,35.3596,0),vector(106.212,19.9627,0),vector(106.762,17.4883,0),vector(98.514,11.7145,0),vector(96.0396,14.1889,0),vector(80.6427,7.04042,0),vector(75.4188,5.66571,0),vector(70.4699,9.78986,0),vector(52.8735,46.6322,0),vector(40.5011,68.9026,0),vector(32.8027,88.4235,0),vector(24.5544,101.896,0)],#closed:1]]];",
+      "sw_pos": [
+        174.793,
+        101.661,
+        0.0
+      ],
+      "godot_pos": [
+        174.793,
+        0.0,
+        -101.661
+      ]
+    },
+    {
+      "name": "Line30",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(38.5765,116.193,0),vector(34.4523,126.091,0),vector(64.4211,141.213,0),vector(69.92,132.414,0)],#closed:1]]];",
+      "sw_pos": [
+        51.842,
+        128.978,
+        0.0
+      ],
+      "godot_pos": [
+        51.842,
+        0.0,
+        -128.978
+      ]
+    },
+    {
+      "name": "Line31",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(85.5917,140.663,0),vector(82.0175,151.111,0),vector(101.813,161.558,0),vector(107.037,151.935,0)],#closed:1]]];",
+      "sw_pos": [
+        94.115,
+        151.317,
+        0.0
+      ],
+      "godot_pos": [
+        94.115,
+        0.0,
+        -151.317
+      ]
+    },
+    {
+      "name": "Line32",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(103.188,161.008,0),vector(106.212,167.607,0),vector(111.711,173.381,0),vector(110.062,177.78,0),vector(111.161,186.028,0),vector(117.485,191.802,0),vector(130.132,192.352,0)],#closed:0]]];",
+      "sw_pos": [
+        112.85,
+        178.566,
+        0.0
+      ],
+      "godot_pos": [
+        112.85,
+        0.0,
+        -178.566
+      ]
+    },
+    {
+      "name": "Line33",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(251.932,162.383,0),vector(253.032,166.507,0),vector(261.005,172.006,0),vector(265.129,171.181,0),vector(273.378,160.459,0),vector(274.203,155.785,0),vector(267.604,150.011,0),vector(263.205,148.911,0)],#closed:1]]];",
+      "sw_pos": [
+        263.686,
+        160.905,
+        0.0
+      ],
+      "godot_pos": [
+        263.686,
+        0.0,
+        -160.905
+      ]
+    },
+    {
+      "name": "gatecollision",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-403.749,31.5575,0),vector(-357.809,56.2506,0)],#closed:0]]];",
+      "sw_pos": [
+        -380.779,
+        43.904,
+        0.0
+      ],
+      "godot_pos": [
+        -380.779,
+        0.0,
+        -43.904
+      ]
+    },
+    {
+      "name": "Line34",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(118.437,-127.443,0),vector(153.197,-116.19,0),vector(158.699,-132.945,0),vector(144.195,-142.198,0),vector(124.689,-142.448,0)],#closed:1]]];",
+      "sw_pos": [
+        139.843,
+        -132.245,
+        0.0
+      ],
+      "godot_pos": [
+        139.843,
+        0.0,
+        132.245
+      ]
+    },
+    {
+      "name": "Line36",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(319.88,264.362,0),vector(307.427,266.238,0),vector(304.186,248.667,0),vector(317.662,246.449,0)],#closed:0]]];",
+      "sw_pos": [
+        312.289,
+        256.429,
+        0.0
+      ],
+      "godot_pos": [
+        312.289,
+        0.0,
+        -256.429
+      ]
+    },
+    {
+      "name": "Line35",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(265.973,256.173,0),vector(278.102,253.824,0),vector(281.351,271.227,0),vector(270.075,273.577,0)],#closed:0]]];",
+      "sw_pos": [
+        272.157,
+        264.276,
+        0.0
+      ],
+      "godot_pos": [
+        272.157,
+        0.0,
+        -264.276
+      ]
+    },
+    {
+      "name": "Line37",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(435.114,353.857,0),vector(454.846,353.005,0),vector(454.48,342.53,0),vector(434.261,343.504,0)],#closed:1]]];",
+      "sw_pos": [
+        444.675,
+        348.224,
+        0.0
+      ],
+      "godot_pos": [
+        444.675,
+        0.0,
+        -348.224
+      ]
+    },
+    {
+      "name": "Line38",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-163.061,150.771,0),vector(-151.52,132.511,0)],#closed:0]]];",
+      "sw_pos": [
+        -157.29,
+        141.641,
+        0.0
+      ],
+      "godot_pos": [
+        -157.29,
+        0.0,
+        -141.641
+      ]
+    },
+    {
+      "name": "ScriptingData",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -256.077,
+        -265.224,
+        0.0
+      ],
+      "godot_pos": [
+        -256.077,
+        0.0,
+        265.224
+      ]
+    },
+    {
+      "name": "Global",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "trigger = startmap;\r\naction = pinky|clearfrominventory|cake;\r\naction = pinky|removefrominventory|wellcake;\r\naction = areatrigger_endlevel|disable;\r\naction = actionable_well|enable;\r\naction = fm_npc1|startmumble|fatamorgana_city_fm_npc1|10;\r\naction = fm_npc2|startmumble|fatamorgana_city_fm_npc2|10;\r\naction = fm_npc3|startshout|fatamorgana_city_fm_npc3|10;\r\naction = areatrigger_allcakes|disable;\r\naction = createcollectable|name = cakes|maxamount = 4;\r\naction = actionable_gotoworldmap|enable;\r\naction = clearmapfromgamestate|graal_bosslevel;\r\naction = clearmapfromgamestate|fatamorgana_underwater;\r\naction = queue|savegame;\r\n\r\ntrigger = resumemap;\r\nrequirements = difficulty_1;\r\naction = queue|savegame;\r\nonce = 0;\r\n\r\ntrigger = resumemap_breathing;\r\naction = playambience|fatamorgana_city_ambience;\r\naction = playambience|fatamorgana_city_music;\r\nonce = 0;\r\n\r\ntrigger = resumemap;\r\naction = pinky|resethealth;\r\nonce = 0;\r\n\r\ntrigger = pinky_receiveditem_cake;\r\naction = cakes|add|1;\r\naction = playsfx|recieveitem_special;\r\nonce = 0;\r\n\r\ntrigger = pinky_receiveditem_cake;\r\naction = queue|savegame;\r\nfirsttoreact = 1;\r\nonce = 0;\r\n\r\ntrigger = areatrigger_gate_enter;\r\naction = disableinput;\r\naction = camera_gate|start;\r\n\r\nalltriggers = langemann_1_finished, sabeltann_1_finished, areatrigger_gate_enter + 1;\r\naction = startconversation|fatamorgana_city_gate;\r\n\r\ntrigger = fatamorgana_city_gate_finished;\r\naction = camera_gate|stop;\r\naction = skalken|startshout|fatamorgana_city_bakeyourself_skalken|15;\r\naction = benjamin|startshout|fatamorgana_city_notgonnaeat_benjamin|15;\r\naction = enableinput;\r\n\r\ntrigger = areatrigger_cake_enter;\r\naction = disableinput;\r\naction = pinky|zapto|teleport_cake;\r\naction = pelle|zapto|teleport_cake;\r\naction = camera_firstcake|start;\r\naction = startconversation|fatamorgana_city_firstcake1|nocamera|dontlock;\r\naction = sabeltann|startshout|fatamorgana_city_notenoughcakes_sabeltann|15;\r\n\r\ntrigger = fatamorgana_city_firstcake1_finished;\r\naction = cakes|add|1;\r\naction = playsfx|recieveitem_special;\r\n\r\ntrigger = fatamorgana_city_firstcake1_finished + 2;\r\naction = startconversation|fatamorgana_city_firstcake2|nocamera|dontlock;\r\n\r\nalltriggers = pelle_tocake_finished, fatamorgana_city_firstcake2_finished;\r\naction = pelle|zapto|pelle_eatcake;\r\naction = pelle|pickup|cake1;\r\n\r\nalltriggers = pelle_tocake_finished + 2, fatamorgana_city_firstcake2_finished + 2;\r\naction = startconversation|fatamorgana_city_yum|nocamera|dontlock;\r\n\r\ntrigger = fatamorgana_city_yum_finished;\r\naction = camera_firstcake|stop;\r\naction = enableinput;\r\naction = cakes|add|-1;\r\n\r\ntrigger = pelle_fromcake_finished;\r\naction = pelle|startshout|fatamorgana_city_nocakeshere_pelle|15;\r\n\r\ntrigger = actionable_well_actioned;\r\naction = resumemap|fatamorgana_underwater;\r\nonce = 0;\r\n\r\ntrigger = startmap;\r\nrequirements = pinky_hasitem_wellcake;\r\naction = sendgameevent|gotwetcake;\r\n\r\ntrigger = gotwetcake + 1;\r\naction = startconversation|fatamorgana_city_wetcake|nocamera|dontlock;\r\naction = pinky|addtoinventory|cake;\r\naction = cakes|add|1;\r\naction = playsfx|recieveitem_special;\r\n\r\ntrigger = gotwetcake;\r\naction = queue|savegame;\r\nfirsttoreact = 1;\r\n\r\ntrigger = startmap;\r\nrequirements = pinky_hasitem_cake_4;\r\naction = sendgameevent|gotallcakes;\r\naction = disableinput;\r\n\r\ntrigger = gotallcakes + 4;\r\naction = camera_fourcakes|start;\r\naction = pinky|zapto|teleport_neargate1;\r\n\r\ntrigger = pinky_gotfourcakes_finished;\r\naction = camera_fourcakes|stop;\r\naction = startconversation|fatamorgana_city_gotfourcakes;\r\n\r\ntrigger = fatamorgana_city_gotfourcakes_finished;\r\naction = enableinput;\r\naction = cakes|add|-1;\r\naction = pysa|startshout|fatamorgana_city_nocakeshere_pysa|15;\r\n\r\ntrigger = startmap;\r\nrequirements = pinky_hasitem_cake_5;\r\naction = sendgameevent|gotfinalcake;\r\naction = disableinput;\r\n\r\ntrigger = gotfinalcake + 4;\r\naction = sabeltann|stopshout;\r\naction = pelle|stopshout;\r\naction = pysa|stopshout;\r\naction = skalken|stopshout;\r\naction = pinky|zapto|teleport_neargate2;\r\naction = camera_fourcakes|start;\r\n\r\ntrigger = pinky_gotfinalcake_finished;\r\naction = camera_fourcakes|stop;\r\naction = startconversation|fatamorgana_city_gotfinalcake;\r\n\r\ntrigger = fatamorgana_city_gotfinalcake_finished;\r\naction = pinky|give|guard2|item=cake|amount=all;\r\n\r\ntrigger = fatamorgana_city_gotfinalcake_finished + 3;\r\naction = camera_firstcake|start;\r\naction = startconversation|fatamorgana_city_cakeend|dontlock;\r\n\r\ntrigger = fatamorgana_city_cakeend_finished;\r\naction = gate_door_1|open;\r\naction = gate_door_2|open;\r\naction = camera_firstcake|stop;\r\naction = areatrigger_endlevel|enable;\r\naction = enableinput;\r\n\r\ntrigger = areatrigger_endlevel_enter;\r\naction = camera_endgate|start;\r\naction = disableunput;\r\n\r\ntrigger = areatrigger_throughgate_enter;\r\naction = proceedtomap|fatamorgana_palace;\r\n\r\ntrigger = actionable_gotoworldmap_actioned;\r\naction = resumemap|world_map;\r\nonce=0;",
+      "sw_pos": [
+        -256.077,
+        -265.224,
+        0.0
+      ],
+      "godot_pos": [
+        -256.077,
+        0.0,
+        265.224
+      ]
+    },
+    {
+      "name": "character_pinky",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "",
+      "sw_pos": [
+        -306.67,
+        -251.479,
+        0.0
+      ],
+      "godot_pos": [
+        -306.67,
+        0.0,
+        251.479
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_1",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "",
+      "sw_pos": [
+        -475.243,
+        -227.914,
+        0.0
+      ],
+      "godot_pos": [
+        -475.243,
+        0.0,
+        227.914
+      ]
+    },
+    {
+      "name": "character_skalken",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "",
+      "sw_pos": [
+        -306.963,
+        -281.206,
+        0.0
+      ],
+      "godot_pos": [
+        -306.963,
+        0.0,
+        281.206
+      ]
+    },
+    {
+      "name": "pelle_start",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-347.675,-242.659,0),vector(-407.772,-243.065,0),vector(-433.76,-238.192,0),vector(-462.762,-209.032,0),vector(-463.336,-191.805,0)],#closed:0]]];target = pelle;\r\ntrigger = startmap;\r\nspeed = walk;",
+      "sw_pos": [
+        -423.061,
+        -224.951,
+        0.0
+      ],
+      "godot_pos": [
+        -423.061,
+        0.0,
+        224.951
+      ]
+    },
+    {
+      "name": "pysa_start",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-330.682,-244.062,0),vector(-400.168,-244.062,0),vector(-416.247,-240.042,0),vector(-432.9,-240.042,0),vector(-442.088,-227.983,0),vector(-442.088,-196.973,0)],#closed:0]]];target = pysa;\r\ntrigger = startmap;\r\nspeed = walk;",
+      "sw_pos": [
+        -410.696,
+        -232.194,
+        0.0
+      ],
+      "godot_pos": [
+        -410.696,
+        0.0,
+        232.194
+      ]
+    },
+    {
+      "name": "character_pelle",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "",
+      "sw_pos": [
+        -339.554,
+        -244.283,
+        0.0
+      ],
+      "godot_pos": [
+        -339.554,
+        0.0,
+        244.283
+      ]
+    },
+    {
+      "name": "character_pysa",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "resource = pelle;",
+      "sw_pos": [
+        -322.553,
+        -243.033,
+        0.0
+      ],
+      "godot_pos": [
+        -322.553,
+        0.0,
+        243.033
+      ]
+    },
+    {
+      "name": "character_sabeltann",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "",
+      "sw_pos": [
+        -443.432,
+        -175.067,
+        0.0
+      ],
+      "godot_pos": [
+        -443.432,
+        0.0,
+        175.067
+      ]
+    },
+    {
+      "name": "character_langemann",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "",
+      "sw_pos": [
+        -462.187,
+        -181.538,
+        0.0
+      ],
+      "godot_pos": [
+        -462.187,
+        0.0,
+        181.538
+      ]
+    },
+    {
+      "name": "langemann_1",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-464.032,-160.87,0),vector(-464.844,-126.761,0),vector(-464.844,-89.4032,0),vector(-458.347,-65.0395,0),vector(-443.729,-45.5485,0),vector(-410.432,-21.997,0)],#closed:0]]];target = langemann;\r\ntrigger = areatrigger_start_enter;\r\nspeed = walk;",
+      "sw_pos": [
+        -451.038,
+        -84.936,
+        0.0
+      ],
+      "godot_pos": [
+        -451.038,
+        0.0,
+        84.936
+      ]
+    },
+    {
+      "name": "sabeltann_1",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-442.917,-159.246,0),vector(-442.105,-97.5243,0),vector(-420.178,-67.4758,0),vector(-373.887,-35.803,0)],#closed:0]]];target = sabeltann;\r\ntrigger = areatrigger_start_enter;\r\nspeed = walk;",
+      "sw_pos": [
+        -419.771,
+        -90.012,
+        0.0
+      ],
+      "godot_pos": [
+        -419.771,
+        0.0,
+        90.012
+      ]
+    },
+    {
+      "name": "areatrigger_start",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "splinedata=[#type:#rectangle,#width:90.5517,#length:29.2364,#transform:[0.853207,0.521573,0,0,-0.521573,0.853207,0,0,0,0,1,0,-453.754,-219.328,0,1]]];",
+      "sw_pos": [
+        -453.754,
+        -219.328,
+        0.0
+      ],
+      "godot_pos": [
+        -453.754,
+        0.0,
+        219.328
+      ]
+    },
+    {
+      "name": "pysa_1",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-443.328,-161.51,0),vector(-455.988,-127.648,0),vector(-480.688,-100.545,0),vector(-475.291,-100.511,0)],#closed:0]]];target = pysa;\r\ntrigger = areatrigger_gate_enter;\r\nspeed = walk;",
+      "sw_pos": [
+        -434.714,
+        -109.539,
+        0.0
+      ],
+      "godot_pos": [
+        -434.714,
+        0.0,
+        109.539
+      ]
+    },
+    {
+      "name": "pelle_1",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-463.427,-167.252,0),vector(-464.001,-108.104,0),vector(-453.091,-77.0939,0),vector(-440.457,-63.3117,0)],#closed:0]]];target = pelle;\r\ntrigger = areatrigger_gate_enter;\r\nspeed = walk;",
+      "sw_pos": [
+        -455.244,
+        -103.94,
+        0.0
+      ],
+      "godot_pos": [
+        -455.244,
+        0.0,
+        103.94
+      ]
+    },
+    {
+      "name": "areatrigger_gate",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "splinedata=[#type:#rectangle,#width:99.9208,#length:20.6733,#transform:[1,0,0,0,0,1,0,0,0,0,1,0,-453.665,-114.972,0,1]]];",
+      "sw_pos": [
+        -453.665,
+        -114.972,
+        0.0
+      ],
+      "godot_pos": [
+        -453.665,
+        0.0,
+        114.972
+      ]
+    },
+    {
+      "name": "character_guard1",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "resource = arab_guard2;",
+      "sw_pos": [
+        -362.162,
+        43.767,
+        0.0
+      ],
+      "godot_pos": [
+        -362.162,
+        0.0,
+        -43.767
+      ]
+    },
+    {
+      "name": "character_guard2",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "resource = arab_guard2;",
+      "sw_pos": [
+        -371.609,
+        38.609,
+        0.0
+      ],
+      "godot_pos": [
+        -371.609,
+        0.0,
+        -38.609
+      ]
+    },
+    {
+      "name": "character_guard3",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "resource = arab_guard2;",
+      "sw_pos": [
+        -380.879,
+        33.339,
+        0.0
+      ],
+      "godot_pos": [
+        -380.879,
+        0.0,
+        -33.339
+      ]
+    },
+    {
+      "name": "character_guard4",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "resource = arab_guard2;",
+      "sw_pos": [
+        -390.189,
+        28.57,
+        0.0
+      ],
+      "godot_pos": [
+        -390.189,
+        0.0,
+        -28.57
+      ]
+    },
+    {
+      "name": "skalken_1",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-306.168,-270.576,0),vector(-306.168,-255.958,0),vector(-309.011,-247.837,0),vector(-318.756,-242.964,0),vector(-400.375,-242.964,0),vector(-417.835,-241.34,0),vector(-443.417,-243.446,0),vector(-443.417,-237.919,0)],#closed:0]]];target = skalken;\r\ntrigger = areatrigger_start_enter;\r\nspeed = walk;",
+      "sw_pos": [
+        -375.515,
+        -242.242,
+        0.0
+      ],
+      "godot_pos": [
+        -375.515,
+        0.0,
+        242.242
+      ]
+    },
+    {
+      "name": "camera_gate",
+      "kind": "camera",
+      "parent": "ScriptingData",
+      "userdata": "",
+      "sw_pos": [
+        -440.58,
+        -128.707,
+        64.882
+      ],
+      "godot_pos": [
+        -440.58,
+        64.882,
+        128.707
+      ]
+    },
+    {
+      "name": "camera_gate.Target",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "",
+      "sw_pos": [
+        -383.198,
+        21.74,
+        28.277
+      ],
+      "godot_pos": [
+        -383.198,
+        28.277,
+        -21.74
+      ]
+    },
+    {
+      "name": "pinky_1",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-450.49,-99.5308,0),vector(-448.767,-84.6001,0),vector(-443.598,-75.412,0),vector(-425.796,-54.1645,0),vector(-420.628,-49.5704,0)],#closed:0]]];target = pinky;\r\ntrigger = areatrigger_gate_enter;\r\nspeed = walk;",
+      "sw_pos": [
+        -437.856,
+        -72.656,
+        0.0
+      ],
+      "godot_pos": [
+        -437.856,
+        0.0,
+        72.656
+      ]
+    },
+    {
+      "name": "actionable_well",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "icon = underwater;\r\nonce = 0;\r\nradius = 55;\r\nzmatters = 1;",
+      "sw_pos": [
+        -70.436,
+        -28.592,
+        1.524
+      ],
+      "godot_pos": [
+        -70.436,
+        1.524,
+        28.592
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_2",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "contains = coppercoin;",
+      "sw_pos": [
+        -475.243,
+        -214.63,
+        0.0
+      ],
+      "godot_pos": [
+        -475.243,
+        0.0,
+        214.63
+      ]
+    },
+    {
+      "name": "areatrigger_cake",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "splinedata=[#type:#rectangle,#width:67.7624,#length:203.287,#transform:[0.946951,-0.321377,0,0,0.321377,0.946951,0,0,0,0,1,0,-246.088,15.923,0,1]]];",
+      "sw_pos": [
+        -246.088,
+        15.923,
+        0.0
+      ],
+      "godot_pos": [
+        -246.088,
+        0.0,
+        -15.923
+      ]
+    },
+    {
+      "name": "pelle_tocake",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-310.872,-15.8898,0),vector(-246.608,22.8067,0),vector(-228.008,71.3642,0)],#closed:0]]];target = pelle;\r\ntrigger = areatrigger_cake_enter + 3;\r\nspeed = run;\r\ndisablecollisions = 1;",
+      "sw_pos": [
+        -263.475,
+        33.41,
+        0.0
+      ],
+      "godot_pos": [
+        -263.475,
+        0.0,
+        -33.41
+      ]
+    },
+    {
+      "name": "teleport_cake",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "",
+      "sw_pos": [
+        -321.416,
+        -18.124,
+        0.0
+      ],
+      "godot_pos": [
+        -321.416,
+        0.0,
+        18.124
+      ]
+    },
+    {
+      "name": "pinky_tocake",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-317.885,-7.61031,0),vector(-302.954,23.3996,0),vector(-257.546,51.8454,0)],#closed:0]]];target = pinky;\r\ntrigger = areatrigger_cake_enter;\r\nspeed = walk;\r\ndisablecollisions = 1;",
+      "sw_pos": [
+        -288.024,
+        26.462,
+        0.0
+      ],
+      "godot_pos": [
+        -288.024,
+        0.0,
+        -26.462
+      ]
+    },
+    {
+      "name": "pickup_cake1",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "resource = cake;",
+      "sw_pos": [
+        -224.864,
+        78.354,
+        10.51
+      ],
+      "godot_pos": [
+        -224.864,
+        10.51,
+        -78.354
+      ]
+    },
+    {
+      "name": "camera_firstcake",
+      "kind": "camera",
+      "parent": "ScriptingData",
+      "userdata": "snap = 1;",
+      "sw_pos": [
+        -294.15,
+        -8.932,
+        25.494
+      ],
+      "godot_pos": [
+        -294.15,
+        25.494,
+        8.932
+      ]
+    },
+    {
+      "name": "camera_firstcake.Target",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "",
+      "sw_pos": [
+        -223.653,
+        78.935,
+        15.834
+      ],
+      "godot_pos": [
+        -223.653,
+        15.834,
+        -78.935
+      ]
+    },
+    {
+      "name": "character_arab_boy",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "",
+      "sw_pos": [
+        138.402,
+        279.837,
+        0.0
+      ],
+      "godot_pos": [
+        138.402,
+        0.0,
+        -279.837
+      ]
+    },
+    {
+      "name": "arab_boy_race",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(142.589,267.609,0),vector(151.286,233.17,0),vector(264.179,196.123,0),vector(312.201,133.255,0),vector(295.189,48.0055,0),vector(248.457,3.52995,0),vector(78.6014,-15.34,0),vector(21.6535,25.9726,0),vector(2.91896,108.202,0),vector(35.7655,167.095,0),vector(120.298,228.108,0),vector(137.995,280.817,0)],#closed:0]]];target = arab_boy;\r\ntrigger = fatamorgana_city_race_finished;\r\nspeed = run;\r\nonce = 0;",
+      "sw_pos": [
+        154.276,
+        126.781,
+        0.0
+      ],
+      "godot_pos": [
+        154.276,
+        0.0,
+        -126.781
+      ]
+    },
+    {
+      "name": "Race Quest",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "trigger = startmap;\r\naction = areatrigger_halfway|disable;\r\naction = areatrigger_finish|disable;\r\naction = arab_boy|offerconversation|fatamorgana_city_race;\r\naction = arab_boy|startshout|fatamorgana_city_wannaraceme_arab_boy|10;\r\nonce = 0;\r\n\r\ntrigger = fatamorgana_city_race_finished;\r\naction = areatrigger_halfway|enable;\r\naction = ladder_1|disable;\r\naction = actionable_well|disable;\r\naction = arab_boy|stopofferconversation|fatamorgana_city_race;\r\naction = arab_boy|stopshout|fatamorgana_city_wannaraceme_arab_boy;\r\nonce = 0;\r\n\r\ntrigger = areatrigger_halfway_enter;\r\naction = areatrigger_finish|enable;\r\nonce = 0;\r\n\r\ntrigger = areatrigger_finish_enter;\r\naction = disableinput;\r\naction = arab_boy_race|stop;\r\naction = areatrigger_halfway|disable;\r\naction = ladder_1|enable;\r\naction = actionable_well|enable;\r\naction = aretrigger_finish|disable;\r\naction = camera_race|start;\r\naction = pinky|zapto|teleport_winrace;\r\naction = arab_boy|zapto|teleport_looserace;\r\nsnap = 1;\r\n\r\ntrigger = arab_boy_raceend_finished;\r\naction = startconversation|fatamorgana_city_win|nocamera|dontlock;\r\n\r\ntrigger = fatamorgana_city_win_finished;\r\naction = arab_boy|give|pinky|item=cake;\r\n\r\ntrigger = fatamorgana_city_win_finished + 3;\r\naction = camera_race|stop;\r\naction = arab_boy|zapto|character_arab_boy;\r\naction = pinky|zapto|teleport_raceover;\r\naction = arab_boy|startshout|fatamorgana_city_raceover_arab_boy|15;\r\naction = enableinput;\r\n\r\ntrigger = arab_boy_race_finished;\r\naction = areatrigger_halfway|disable;\r\naction = ladder_1|enable;\r\naction = actionable_well|enable;\r\naction = areatrigger_finish|disable;\r\naction = startconversation|fatamorgana_city_loose|nocamera|dontlock;\r\naction = arab_boy|zapto|character_arab_boy;\r\naction = arab_boy|offerconversation|fatamorgana_city_race;\r\naction = arab_boy|startshout|fatamorgana_city_wannaraceme_arab_boy|10;\r\nonce = 0;",
+      "sw_pos": [
+        -218.647,
+        -265.837,
+        0.0
+      ],
+      "godot_pos": [
+        -218.647,
+        0.0,
+        265.837
+      ]
+    },
+    {
+      "name": "areatrigger_halfway",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "splinedata=[#type:#circle,#radius:69.767,#position:vector(183.539,-4.15683,0)];once = 0;",
+      "sw_pos": [
+        183.539,
+        -4.157,
+        0.0
+      ],
+      "godot_pos": [
+        183.539,
+        0.0,
+        4.157
+      ]
+    },
+    {
+      "name": "areatrigger_finish",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "splinedata=[#type:#circle,#radius:17.3802,#position:vector(137.937,279.937,0)];once = 0;",
+      "sw_pos": [
+        137.937,
+        279.937,
+        0.0
+      ],
+      "godot_pos": [
+        137.937,
+        0.0,
+        -279.937
+      ]
+    },
+    {
+      "name": "camera_race",
+      "kind": "camera",
+      "parent": "ScriptingData",
+      "userdata": "snap = 1;",
+      "sw_pos": [
+        152.933,
+        304.577,
+        18.85
+      ],
+      "godot_pos": [
+        152.933,
+        18.85,
+        -304.577
+      ]
+    },
+    {
+      "name": "camera_race.Target",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "",
+      "sw_pos": [
+        127.204,
+        243.792,
+        13.281
+      ],
+      "godot_pos": [
+        127.204,
+        13.281,
+        -243.792
+      ]
+    },
+    {
+      "name": "teleport_winrace",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "",
+      "sw_pos": [
+        141.426,
+        264.468,
+        0.0
+      ],
+      "godot_pos": [
+        141.426,
+        0.0,
+        -264.468
+      ]
+    },
+    {
+      "name": "pinky_raceend",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(139.129,261.022,0),vector(138.268,257.577,0)],#closed:0]]];target = pinky;\r\ntrigger = areatrigger_finish_enter;\r\nspeed = walk;",
+      "sw_pos": [
+        138.698,
+        259.3,
+        0.0
+      ],
+      "godot_pos": [
+        138.698,
+        0.0,
+        -259.3
+      ]
+    },
+    {
+      "name": "arab_boy_raceend",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(102.951,227.905,0),vector(131.951,240.636,0),vector(136.545,254.993,0)],#closed:0]]];target = arab_boy;\r\ntrigger = areatrigger_finish_enter;\r\nspeed = run;",
+      "sw_pos": [
+        123.816,
+        239.296,
+        0.0
+      ],
+      "godot_pos": [
+        123.816,
+        0.0,
+        -239.296
+      ]
+    },
+    {
+      "name": "teleport_looserace",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "",
+      "sw_pos": [
+        80.568,
+        221.488,
+        0.0
+      ],
+      "godot_pos": [
+        80.568,
+        0.0,
+        -221.488
+      ]
+    },
+    {
+      "name": "teleport_raceover",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "",
+      "sw_pos": [
+        137.214,
+        255.5,
+        0.0
+      ],
+      "godot_pos": [
+        137.214,
+        0.0,
+        -255.5
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_3",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "contains = apple;",
+      "sw_pos": [
+        -3.114,
+        281.266,
+        0.0
+      ],
+      "godot_pos": [
+        -3.114,
+        0.0,
+        -281.266
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_4",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "",
+      "sw_pos": [
+        -15.29,
+        287.768,
+        0.0
+      ],
+      "godot_pos": [
+        -15.29,
+        0.0,
+        -287.768
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_5",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "contains = coppercoin;",
+      "sw_pos": [
+        -0.672,
+        293.046,
+        0.0
+      ],
+      "godot_pos": [
+        -0.672,
+        0.0,
+        -293.046
+      ]
+    },
+    {
+      "name": "ladder_1",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(27.1789,115.579,0),vector(41.7915,122.731,0)],#closed:0]]];",
+      "sw_pos": [
+        36.221,
+        119.196,
+        0.0
+      ],
+      "godot_pos": [
+        36.221,
+        0.0,
+        -119.196
+      ]
+    },
+    {
+      "name": "jump_1",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(66.0431,135.339,0),vector(85.5679,146.537,0)],#closed:0]]];",
+      "sw_pos": [
+        75.806,
+        140.938,
+        0.0
+      ],
+      "godot_pos": [
+        75.806,
+        0.0,
+        -140.938
+      ]
+    },
+    {
+      "name": "pickup_cake2",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "resource = cake;\r\ninventoryname = cake;",
+      "sw_pos": [
+        95.032,
+        152.074,
+        30.941
+      ],
+      "godot_pos": [
+        95.032,
+        30.941,
+        -152.074
+      ]
+    },
+    {
+      "name": "ladder_2",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-127.17,29.5338,0),vector(-111.87,35.0644,0)],#closed:0]]];",
+      "sw_pos": [
+        -117.79,
+        32.152,
+        0.0
+      ],
+      "godot_pos": [
+        -117.79,
+        0.0,
+        -32.152
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_6",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "contains = goldcoin;",
+      "sw_pos": [
+        -89.107,
+        42.343,
+        0.0
+      ],
+      "godot_pos": [
+        -89.107,
+        0.0,
+        -42.343
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_7",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "",
+      "sw_pos": [
+        -97.304,
+        39.544,
+        0.0
+      ],
+      "godot_pos": [
+        -97.304,
+        0.0,
+        -39.544
+      ]
+    },
+    {
+      "name": "character_shopkeeper",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "",
+      "sw_pos": [
+        140.643,
+        -134.938,
+        0.0
+      ],
+      "godot_pos": [
+        140.643,
+        0.0,
+        134.938
+      ]
+    },
+    {
+      "name": "Shop Quest",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "trigger = startmap;\r\naction = shopkeeper|startshout|fatamorgana_city_cakesforsale_shopkeeper|15;\r\n\r\ntrigger = startmap;\r\nrequirements = pinky_nothasitem_coppercoin_10;\r\naction = shopkeeper|offerconversation|fatamorgana_city_notenoughcopper|icon=shop;\r\nonce = 0;\r\n\r\ntrigger = startmap;\r\nrequirements = pinky_hasitem_coppercoin_10;\r\naction = shopkeeper|offerconversation|fatamorgana_city_enoughcopper|icon=shop;\r\nonce = 0;\r\n\r\ntrigger = fatamorgana_city_enoughcopper_finished;\r\naction = shopkeeper|stopofferconversation;\r\naction = shopkeeper|stopshout;\r\naction = pinky|removefrominventory|coppercoin|10;\r\naction = shopkeeper|give|pinky|item=cake;\r\n\r\ntrigger = fatamorgana_city_enoughcopper_finished + 3;\r\naction = shopkeeper|startshout|fatamorgana_city_thankscomeagain_shopkeeper|15;",
+      "sw_pos": [
+        -179.851,
+        -266.582,
+        0.0
+      ],
+      "godot_pos": [
+        -179.851,
+        0.0,
+        266.582
+      ]
+    },
+    {
+      "name": "character_carpet_salesman",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "",
+      "sw_pos": [
+        474.661,
+        298.015,
+        0.0
+      ],
+      "godot_pos": [
+        474.661,
+        0.0,
+        -298.015
+      ]
+    },
+    {
+      "name": "Carpet Quest",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "trigger = startmap;\r\naction = carpet_salesman|startshout|fatamorgana_city_flyingcarpet_carpet_salesman|15;\r\naction = carpet_salesman|offerconversation|fatamorgana_city_hittargets;\r\naction = createcollectable|name = targets|maxamount = 4;\r\n\r\ntrigger = resumemap;\r\naction = movingplatform_flyingcarpet|keyframeplayer-reset;\r\naction = movingplatform_flyingcarpet|keyframeplayer-pause;\r\nonce = 0;\r\n\r\ntrigger = fatamorgana_city_hittargets_finished;\r\naction = carpetcamera_1|start;\r\naction = bullseye_01|makehittable|maxrange=175;\r\naction = bullseye_02|makehittable|maxrange=175;\r\naction = bullseye_03|makehittable|maxrange=175;\r\naction = bullseye_04|makehittable|maxrange=175;\r\naction = pinky|zapto|teleport_carpet;\r\naction = slingshot|disablecustomcamera;\r\naction = pinky|selectuseitem|slingshot;\r\naction = movingplatform_flyingcarpet|keyframeplayer-play;\r\naction = pinky|jump|movingplatform_flyingcarpet;\r\naction = carpet_salesman|stopofferconversation;\r\naction = carpet_salesman|stopshout;\r\naction = targets|reset;\r\naction = bullseye_01_model|keyframeplayer-reset;\r\naction = bullseye_02_model|keyframeplayer-reset;\r\naction = bullseye_03_model|keyframeplayer-reset;\r\naction = bullseye_04_model|keyframeplayer-reset;\r\naction = startloopingsound|flyingcarpet;\r\nonce = 0;\r\n\r\ntrigger = bullseye_01_hit,bullseye_02_hit,bullseye_03_hit,bullseye_04_hit;\r\naction = targets|add|1;\r\naction = playsfx|hit_bullseye;\r\nonce = 0;\r\n\r\ntrigger = bullseye_01_hit;\r\naction = bullseye_01_model|keyframeplayer-play|bullseye_anim-Key;\r\nonce = 0;\r\n\r\ntrigger = bullseye_02_hit;\r\naction = bullseye_02_model|keyframeplayer-play|bullseye_anim-Key;\r\nonce = 0;\r\n\r\ntrigger = bullseye_03_hit;\r\naction = bullseye_03_model|keyframeplayer-play|bullseye_anim-Key;\r\nonce = 0;\r\n\r\ntrigger = bullseye_04_hit;\r\naction = bullseye_04_model|keyframeplayer-play|bullseye_anim-Key;\r\nonce = 0;\r\n\r\ntrigger = movingplatform_flyingcarpet_loopcompleted;\r\naction = carpetcamera_1|stop;\r\naction = movingplatform_flyingcarpet|keyframeplayer-reset;\r\naction = movingplatform_flyingcarpet|keyframeplayer-pause;\r\nonce = 0;\r\n\r\ntrigger = movingplatform_flyingcarpet_loopcompleted;\r\nrequirements = targets_notcollected_4;\r\naction = pinky|jump|jumpfromcarpet;\r\naction = startconversation|fatamorgana_city_notalltargets;\r\naction = carpet_salesman|zapto|carpetmansnap;\r\nonlyexecuteaftertrigger = 1;\r\nonce = 0;\r\n\r\ntrigger = movingplatform_flyingcarpet_loopcompleted;\r\nrequirements = targets_collected_4;\r\naction = pinky|jump|jumpfromcarpet;\r\naction = startconversation|fatamorgana_city_gotalltargets;\r\naction = carpet_salesman|zapto|carpetmansnap;\r\nonlyexecuteaftertrigger = 1;\r\n\r\ntrigger = fatamorgana_city_notalltargets_finished;\r\naction = sendgameevent|carpetride_finished;\r\naction = carpet_salesman|startshout|fatamorgana_city_flyingcarpet_carpet_salesman|15;\r\naction = carpet_salesman|offerconversation|fatamorgana_city_hittargets;\r\nonce = 0;\r\n\r\ntrigger = pinky_jump_jumpfromcarpet_finished;\r\naction = pinky|zapto|teleport_carpetman;\r\naction = bullseye_01|unmakehittable;\r\naction = bullseye_02|unmakehittable;\r\naction = bullseye_03|unmakehittable;\r\naction = bullseye_04|unmakehittable;\r\naction = slingshot|enablecustomcamera;\r\naction = stoploopingsound|flyingcarpet;\r\nonce = 0;\r\n\r\ntrigger = fatamorgana_city_gotalltargets_finished;\r\naction = sendgameevent|carpetride_finished;\r\naction = carpet_salesman|give|pinky|item=cake;\r\naction = carpet_salesman|startshout|fatamorgana_city_finishedcarpet_carpet_salesman|15;",
+      "sw_pos": [
+        -139.365,
+        -265.091,
+        0.0
+      ],
+      "godot_pos": [
+        -139.365,
+        0.0,
+        265.091
+      ]
+    },
+    {
+      "name": "pelle_fromcake",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-231.441,61.7006,0),vector(-233.472,56.2187,0)],#closed:0]]];target = pelle;\r\ntrigger = fatamorgana_city_yum_finished;\r\nspeed = walk;",
+      "sw_pos": [
+        -232.457,
+        58.96,
+        0.0
+      ],
+      "godot_pos": [
+        -232.457,
+        0.0,
+        -58.96
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_x01",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "contains = apple;",
+      "sw_pos": [
+        385.152,
+        -211.968,
+        0.0
+      ],
+      "godot_pos": [
+        385.152,
+        0.0,
+        211.968
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_x02",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "",
+      "sw_pos": [
+        272.947,
+        -180.847,
+        0.0
+      ],
+      "godot_pos": [
+        272.947,
+        0.0,
+        180.847
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_x03",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "",
+      "sw_pos": [
+        370.109,
+        -157.077,
+        0.0
+      ],
+      "godot_pos": [
+        370.109,
+        0.0,
+        157.077
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_x04",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "",
+      "sw_pos": [
+        394.6,
+        -206.005,
+        0.0
+      ],
+      "godot_pos": [
+        394.6,
+        0.0,
+        206.005
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_x05",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "contains = coppercoin;",
+      "sw_pos": [
+        405.742,
+        205.996,
+        0.0
+      ],
+      "godot_pos": [
+        405.742,
+        0.0,
+        -205.996
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_x06",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "contains = coppercoin;",
+      "sw_pos": [
+        472.758,
+        114.737,
+        0.0
+      ],
+      "godot_pos": [
+        472.758,
+        0.0,
+        -114.737
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_x07",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "",
+      "sw_pos": [
+        -159.303,
+        -126.636,
+        0.0
+      ],
+      "godot_pos": [
+        -159.303,
+        0.0,
+        126.636
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_x08",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "contains = coppercoin;",
+      "sw_pos": [
+        267.622,
+        -166.4,
+        0.0
+      ],
+      "godot_pos": [
+        267.622,
+        0.0,
+        166.4
+      ]
+    },
+    {
+      "name": "camera_fourcakes",
+      "kind": "camera",
+      "parent": "ScriptingData",
+      "userdata": "snap = 1;",
+      "sw_pos": [
+        -314.917,
+        -78.396,
+        44.159
+      ],
+      "godot_pos": [
+        -314.917,
+        44.159,
+        78.396
+      ]
+    },
+    {
+      "name": "camera_fourcakes.Target",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "",
+      "sw_pos": [
+        -379.408,
+        43.27,
+        26.914
+      ],
+      "godot_pos": [
+        -379.408,
+        26.914,
+        -43.27
+      ]
+    },
+    {
+      "name": "teleport_neargate1",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "",
+      "sw_pos": [
+        -296.115,
+        4.742,
+        0.0
+      ],
+      "godot_pos": [
+        -296.115,
+        0.0,
+        -4.742
+      ]
+    },
+    {
+      "name": "pinky_gotfourcakes",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-308.151,3.33237,0),vector(-323.553,1.6476,0),vector(-344.668,9.76883,0)],#closed:0]]];target = pinky;\r\ntrigger = gotallcakes + 4;\r\nspeed = walk;",
+      "sw_pos": [
+        -320.575,
+        6.25,
+        0.0
+      ],
+      "godot_pos": [
+        -320.575,
+        0.0,
+        -6.25
+      ]
+    },
+    {
+      "name": "movingplatform_flyingcarpet",
+      "kind": "model",
+      "parent": "ScriptingData",
+      "userdata": "addanimatedmodel=flyingcarpet|flyingcarpet_fly;\r\n\r\nanimationendframe=1500;\r\ncollisionradius=8;",
+      "sw_pos": [
+        444.804,
+        348.32,
+        3.867
+      ],
+      "godot_pos": [
+        444.804,
+        3.867,
+        -348.32
+      ]
+    },
+    {
+      "name": "carpet_collisiondata",
+      "kind": "group",
+      "parent": "movingplatform_flyingcarpet",
+      "userdata": "",
+      "sw_pos": [
+        444.895,
+        347.93,
+        -0.018
+      ],
+      "godot_pos": [
+        444.895,
+        -0.018,
+        -347.93
+      ]
+    },
+    {
+      "name": "line4",
+      "kind": "group",
+      "parent": "carpet_collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(440.982,351.14,0.276977),vector(440.654,345.858,0.446179),vector(448.149,345.341,-0.265362),vector(448.514,350.766,-0.441788)],#closed:1]]];",
+      "sw_pos": [
+        444.728,
+        348.12,
+        -0.007
+      ],
+      "godot_pos": [
+        444.728,
+        -0.007,
+        -348.12
+      ]
+    },
+    {
+      "name": "teleport_carpet",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "",
+      "sw_pos": [
+        444.944,
+        348.452,
+        0.0
+      ],
+      "godot_pos": [
+        444.944,
+        0.0,
+        -348.452
+      ]
+    },
+    {
+      "name": "jumpfromcarpet",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "",
+      "sw_pos": [
+        448.554,
+        361.234,
+        0.0
+      ],
+      "godot_pos": [
+        448.554,
+        0.0,
+        -361.234
+      ]
+    },
+    {
+      "name": "areatrigger_allcakes",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "splinedata=[#type:#circle,#radius:76.809,#position:vector(-351.415,-10.0056,0)];",
+      "sw_pos": [
+        -351.415,
+        -10.006,
+        0.0
+      ],
+      "godot_pos": [
+        -351.415,
+        0.0,
+        10.006
+      ]
+    },
+    {
+      "name": "teleport_carpetman",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "",
+      "sw_pos": [
+        478.311,
+        322.778,
+        0.0
+      ],
+      "godot_pos": [
+        478.311,
+        0.0,
+        -322.778
+      ]
+    },
+    {
+      "name": "character_fm_npc1",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "",
+      "sw_pos": [
+        359.744,
+        23.243,
+        0.0
+      ],
+      "godot_pos": [
+        359.744,
+        0.0,
+        -23.243
+      ]
+    },
+    {
+      "name": "character_fm_npc2",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "",
+      "sw_pos": [
+        -117.064,
+        164.208,
+        0.0
+      ],
+      "godot_pos": [
+        -117.064,
+        0.0,
+        -164.208
+      ]
+    },
+    {
+      "name": "character_fm_npc3",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "",
+      "sw_pos": [
+        28.298,
+        76.366,
+        0.0
+      ],
+      "godot_pos": [
+        28.298,
+        0.0,
+        -76.366
+      ]
+    },
+    {
+      "name": "teleport_neargate2",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "",
+      "sw_pos": [
+        -336.585,
+        -42.527,
+        0.0
+      ],
+      "godot_pos": [
+        -336.585,
+        0.0,
+        42.527
+      ]
+    },
+    {
+      "name": "pinky_gotfinalcake",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-343.504,-29.4066,0),vector(-360.964,9.5753,0)],#closed:0]]];target = pinky;\r\ntrigger = gotfinalcake + 4;\r\nspeed = walk;",
+      "sw_pos": [
+        -352.234,
+        -9.916,
+        0.0
+      ],
+      "godot_pos": [
+        -352.234,
+        0.0,
+        9.916
+      ]
+    },
+    {
+      "name": "teleport_guard1",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "",
+      "sw_pos": [
+        -261.796,
+        -6.579,
+        0.0
+      ],
+      "godot_pos": [
+        -261.796,
+        0.0,
+        6.579
+      ]
+    },
+    {
+      "name": "teleport_guard2",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "",
+      "sw_pos": [
+        -239.724,
+        9.58,
+        0.0
+      ],
+      "godot_pos": [
+        -239.724,
+        0.0,
+        -9.58
+      ]
+    },
+    {
+      "name": "teleport_guard3",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "",
+      "sw_pos": [
+        -253.625,
+        27.869,
+        0.0
+      ],
+      "godot_pos": [
+        -253.625,
+        0.0,
+        -27.869
+      ]
+    },
+    {
+      "name": "teleport_guard4",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "",
+      "sw_pos": [
+        -277.108,
+        14.659,
+        0.0
+      ],
+      "godot_pos": [
+        -277.108,
+        0.0,
+        -14.659
+      ]
+    },
+    {
+      "name": "areatrigger_endlevel",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "splinedata=[#type:#circle,#radius:35.6847,#position:vector(-378.958,43.0471,0)];disablecollisions = 1;",
+      "sw_pos": [
+        -378.958,
+        43.047,
+        0.0
+      ],
+      "godot_pos": [
+        -378.958,
+        0.0,
+        -43.047
+      ]
+    },
+    {
+      "name": "pinky_end",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-372.212,30.0743,0),vector(-404.385,86.1172,0)],#closed:0]]];target = pinky;\r\ntrigger = areatrigger_endlevel_enter;\r\nspeed = walk;\r\ndisablecollisions = 1;",
+      "sw_pos": [
+        -388.299,
+        58.096,
+        0.0
+      ],
+      "godot_pos": [
+        -388.299,
+        0.0,
+        -58.096
+      ]
+    },
+    {
+      "name": "areatrigger_throughgate",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "splinedata=[#type:#circle,#radius:29.8004,#position:vector(-405.66,88.8809,0)];",
+      "sw_pos": [
+        -405.66,
+        88.881,
+        0.0
+      ],
+      "godot_pos": [
+        -405.66,
+        0.0,
+        -88.881
+      ]
+    },
+    {
+      "name": "carpetcamera_box",
+      "kind": "model",
+      "parent": "ScriptingData",
+      "userdata": "animationstartframe=0;\r\nanimationendframe=1500;",
+      "sw_pos": [
+        444.804,
+        348.32,
+        6.635
+      ],
+      "godot_pos": [
+        444.804,
+        6.635,
+        -348.32
+      ]
+    },
+    {
+      "name": "carpetcamera_1",
+      "kind": "camera",
+      "parent": "carpetcamera_box",
+      "userdata": "animationstartframe=0;\r\nanimationendframe=1500;",
+      "sw_pos": [
+        479.068,
+        346.52,
+        11.927
+      ],
+      "godot_pos": [
+        479.068,
+        11.927,
+        -346.52
+      ]
+    },
+    {
+      "name": "pelle_eatcake",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "",
+      "sw_pos": [
+        -227.892,
+        72.528,
+        0.0
+      ],
+      "godot_pos": [
+        -227.892,
+        0.0,
+        -72.528
+      ]
+    },
+    {
+      "name": "actionable_gotoworldmap",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "icon = travel;\r\nonce = 0;\r\nzmatters = 0;",
+      "sw_pos": [
+        -306.652,
+        -296.902,
+        0.0
+      ],
+      "godot_pos": [
+        -306.652,
+        0.0,
+        296.902
+      ]
+    },
+    {
+      "name": "carpetmansnap",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "",
+      "sw_pos": [
+        474.661,
+        298.015,
+        0.0
+      ],
+      "godot_pos": [
+        474.661,
+        0.0,
+        -298.015
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_x09",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "",
+      "sw_pos": [
+        490.371,
+        111.239,
+        0.0
+      ],
+      "godot_pos": [
+        490.371,
+        0.0,
+        -111.239
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_x10",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "",
+      "sw_pos": [
+        489.308,
+        90.383,
+        0.0
+      ],
+      "godot_pos": [
+        489.308,
+        0.0,
+        -90.383
+      ]
+    },
+    {
+      "name": "character_benjamin",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "",
+      "sw_pos": [
+        -139.575,
+        -107.167,
+        0.0
+      ],
+      "godot_pos": [
+        -139.575,
+        0.0,
+        107.167
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_8",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "",
+      "sw_pos": [
+        -123.061,
+        290.386,
+        0.0
+      ],
+      "godot_pos": [
+        -123.061,
+        0.0,
+        -290.386
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_09",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "contains = coppercoin;",
+      "sw_pos": [
+        -155.217,
+        284.54,
+        0.0
+      ],
+      "godot_pos": [
+        -155.217,
+        0.0,
+        -284.54
+      ]
+    },
+    {
+      "name": "guard1_end",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-358.26,41.0162,0),vector(-352.576,38.6047,0),vector(-336.04,37.5711,0),vector(-332.939,32.5757,0),vector(-335.867,31.1977,0)],#closed:0]]];target = guard1;\r\ntrigger = fatamorgana_city_gotfinalcake_finished + 2;\r\nspeed = walk;",
+      "sw_pos": [
+        -343.136,
+        36.193,
+        0.0
+      ],
+      "godot_pos": [
+        -343.136,
+        0.0,
+        -36.193
+      ]
+    },
+    {
+      "name": "guard2_end",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-367.734,35.8486,0),vector(-354.815,40.844,0),vector(-341.724,41.1885,0),vector(-343.102,36.8821,0)],#closed:0]]];target = guard2;\r\ntrigger = fatamorgana_city_gotfinalcake_finished + 2;\r\nspeed = walk;",
+      "sw_pos": [
+        -351.844,
+        38.691,
+        0.0
+      ],
+      "godot_pos": [
+        -351.844,
+        0.0,
+        -38.691
+      ]
+    },
+    {
+      "name": "guard3_end",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-377.381,29.9919,0),vector(-358.605,27.5803,0),vector(-346.892,32.059,0)],#closed:0]]];target = guard3;\r\ntrigger = fatamorgana_city_gotfinalcake_finished + 2;\r\nspeed = walk;",
+      "sw_pos": [
+        -360.959,
+        29.877,
+        0.0
+      ],
+      "godot_pos": [
+        -360.959,
+        0.0,
+        -29.877
+      ]
+    },
+    {
+      "name": "guard4_end",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-384.357,24.4919,0),vector(-358.518,22.7694,0),vector(-339.226,28.2815,0)],#closed:0]]];target = guard4;\r\ntrigger = fatamorgana_city_gotfinalcake_finished + 2;\r\nspeed = walk;",
+      "sw_pos": [
+        -360.7,
+        25.181,
+        0.0
+      ],
+      "godot_pos": [
+        -360.7,
+        0.0,
+        -25.181
+      ]
+    },
+    {
+      "name": "walkoverpickup_coppercoin_01",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "",
+      "sw_pos": [
+        -476.387,
+        -225.952,
+        0.0
+      ],
+      "godot_pos": [
+        -476.387,
+        0.0,
+        225.952
+      ]
+    },
+    {
+      "name": "walkoverpickup_coppercoin_02",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "",
+      "sw_pos": [
+        -213.516,
+        -87.868,
+        0.0
+      ],
+      "godot_pos": [
+        -213.516,
+        0.0,
+        87.868
+      ]
+    },
+    {
+      "name": "walkoverpickup_coppercoin_03",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "",
+      "sw_pos": [
+        -150.248,
+        290.177,
+        0.0
+      ],
+      "godot_pos": [
+        -150.248,
+        0.0,
+        -290.177
+      ]
+    },
+    {
+      "name": "walkoverpickup_coppercoin_04",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "",
+      "sw_pos": [
+        81.007,
+        141.832,
+        0.0
+      ],
+      "godot_pos": [
+        81.007,
+        0.0,
+        -141.832
+      ]
+    },
+    {
+      "name": "walkoverpickup_coppercoin_05",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "",
+      "sw_pos": [
+        294.843,
+        150.033,
+        0.0
+      ],
+      "godot_pos": [
+        294.843,
+        0.0,
+        -150.033
+      ]
+    },
+    {
+      "name": "walkoverpickup_coppercoin_06",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "",
+      "sw_pos": [
+        301.317,
+        -201.922,
+        0.0
+      ],
+      "godot_pos": [
+        301.317,
+        0.0,
+        201.922
+      ]
+    },
+    {
+      "name": "walkoverpickup_coppercoin_07",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "",
+      "sw_pos": [
+        132.264,
+        19.068,
+        0.0
+      ],
+      "godot_pos": [
+        132.264,
+        0.0,
+        -19.068
+      ]
+    },
+    {
+      "name": "walkoverpickup_coppercoin_08",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "",
+      "sw_pos": [
+        -40.421,
+        -17.134,
+        0.0
+      ],
+      "godot_pos": [
+        -40.421,
+        0.0,
+        17.134
+      ]
+    },
+    {
+      "name": "walkoverpickup_coppercoin_09",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "",
+      "sw_pos": [
+        -105.051,
+        -33.365,
+        0.0
+      ],
+      "godot_pos": [
+        -105.051,
+        0.0,
+        33.365
+      ]
+    },
+    {
+      "name": "camera_endgate.Target",
+      "kind": "group",
+      "parent": "ScriptingData",
+      "userdata": "snap = 1;",
+      "sw_pos": [
+        -385.154,
+        21.726,
+        16.638
+      ],
+      "godot_pos": [
+        -385.154,
+        16.638,
+        -21.726
+      ]
+    },
+    {
+      "name": "camera_endgate",
+      "kind": "camera",
+      "parent": "ScriptingData",
+      "userdata": "snap = 1;",
+      "sw_pos": [
+        -386.863,
+        -28.917,
+        22.848
+      ],
+      "godot_pos": [
+        -386.863,
+        22.848,
+        28.917
+      ]
+    },
+    {
+      "name": "none_06",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "collisionradius=2.7742;",
+      "sw_pos": [
+        150.016,
+        -139.758,
+        17.305
+      ],
+      "godot_pos": [
+        150.016,
+        17.305,
+        139.758
+      ]
+    },
+    {
+      "name": "none_05",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "collisionradius=2.7742;",
+      "sw_pos": [
+        150.891,
+        -139.666,
+        17.186
+      ],
+      "godot_pos": [
+        150.891,
+        17.186,
+        139.666
+      ]
+    },
+    {
+      "name": "head_linkspread",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "collisionradius=2.7742;",
+      "sw_pos": [
+        150.358,
+        -141.424,
+        15.132
+      ],
+      "godot_pos": [
+        150.358,
+        15.132,
+        141.424
+      ]
+    },
+    {
+      "name": "bullseye_02",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -104.076,
+        119.14,
+        98.065
+      ],
+      "godot_pos": [
+        -104.076,
+        98.065,
+        -119.14
+      ]
+    },
+    {
+      "name": "bullseye_03",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        73.107,
+        0.453,
+        98.065
+      ],
+      "godot_pos": [
+        73.107,
+        98.065,
+        -0.453
+      ]
+    },
+    {
+      "name": "bullseye_01",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        300.022,
+        100.793,
+        49.278
+      ],
+      "godot_pos": [
+        300.022,
+        49.278,
+        -100.793
+      ]
+    },
+    {
+      "name": "bullseye_04",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        405.745,
+        162.75,
+        55.852
+      ],
+      "godot_pos": [
+        405.745,
+        55.852,
+        -162.75
+      ]
+    },
+    {
+      "name": "bullseye_01_model",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "hideforray=1;",
+      "sw_pos": [
+        300.694,
+        102.584,
+        36.893
+      ],
+      "godot_pos": [
+        300.694,
+        36.893,
+        -102.584
+      ]
+    },
+    {
+      "name": "bullseye_02_model",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "hideforray=1;",
+      "sw_pos": [
+        -105.151,
+        118.419,
+        85.687
+      ],
+      "godot_pos": [
+        -105.151,
+        85.687,
+        -118.419
+      ]
+    },
+    {
+      "name": "bullseye_03_model",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "hideforray=1;",
+      "sw_pos": [
+        74.962,
+        0.017,
+        85.687
+      ],
+      "godot_pos": [
+        74.962,
+        85.687,
+        -0.017
+      ]
+    },
+    {
+      "name": "bullseye_04_model",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "hideforray=1;",
+      "sw_pos": [
+        406.231,
+        163.943,
+        43.388
+      ],
+      "godot_pos": [
+        406.231,
+        43.388,
+        -163.943
+      ]
+    },
+    {
+      "name": "defaultview",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -387.558,
+        -21.253,
+        718.491
+      ],
+      "godot_pos": [
+        -387.558,
+        718.491,
+        21.253
+      ]
+    }
+  ],
+  "skeletons": [],
+  "animations": [
+    {
+      "name": "movingplatform_flyingcarpet-Key",
+      "tracks": 1,
+      "size": 22218
+    },
+    {
+      "name": "carpetcamera_box-Key",
+      "tracks": 1,
+      "size": 22889
+    }
+  ]
+}

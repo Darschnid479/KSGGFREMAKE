@@ -1,0 +1,416 @@
+{
+  "file": "skeleton.w3d",
+  "nodes": [
+    {
+      "name": "DefaultView",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "skeleton",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "collisionradius=2.8;",
+      "sw_pos": [
+        0.0,
+        0.005,
+        9.945
+      ],
+      "godot_pos": [
+        0.0,
+        9.945,
+        -0.005
+      ]
+    },
+    {
+      "name": "skeleton_proxy",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        -0.136,
+        6.958
+      ],
+      "godot_pos": [
+        0.0,
+        6.958,
+        0.136
+      ]
+    },
+    {
+      "name": "hiddenassets",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "userdata",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"Skeleton_die\", #startxform: [#position: vector( 0.3419, 0.0046, 9.5203 ), #rotation: vector( 0.0000, 0.0000,  ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"Skeleton_die\", #startxform: [#position: vector( 0.3419, 0.0046, 9.5203 ), #rotation: vector( 0.0000, 0.0000,  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"Skeleton_hit\", #startxform: [#position: vector( 0.3419, 0.0046, 9.5203 ), #rotation: vector( 0.0000, 0.0000,  ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0.0000 )]]  ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"Skeleton_hit\", #startxform: [#position: vector( 0.3419, 0.0046, 9.5203 ), #rotation: vector( 0.0000, 0.0000,  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"Skeleton_ressurect\", #startxform: [#position: vector( 0.3419, 0.0046, 1.4266 ), #rotation: vector( 0.0000, 0. ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0000, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"Skeleton_ressurect\", #startxform: [#position: vector( 0.3419, 0.0046, 1.4266 ), #rotation: vector( 0.0000, 0. ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"Skeleton_run\", #startxform: [#position: vector( 0.3419, 0.0046, 9.0881 ), #rotation: vector( 0.0000, 0.0000,  ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0.0000 )], #distancepercycle: \"9.069\", #minimumspeed: \"0.7\", #maximumspeed: \"1.4\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"Skeleton_run\", #startxform: [#position: vector( 0.3419, 0.0046, 9.0881 ), #rotation: vector( 0.0000, 0.0000,  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"Skeleton_stand\", #startxform: [#position: vector( 0.3419, 0.0046, 9.5203 ), #rotation: vector( 0.0000, 0.0000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"Skeleton_stand\", #startxform: [#position: vector( 0.3419, 0.0046, 9.5203 ), #rotation: vector( 0.0000, 0.0000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"Skeleton_swordswing\", #startxform: [#position: vector( 0.3419, 0.0046, 9.5203 ), #rotation: vector( 0.0000, 0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz.0000, 0.0000 )], #impact: \"17\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"Skeleton_swordswing\", #startxform: [#position: vector( 0.3419, 0.0046, 9.5203 ), #rotation: vector( 0.0000, 0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"Skeleton_walk\", #startxform: [#position: vector( 0.3419, 0.0046, 9.0881 ), #rotation: vector( 0.0000, 0.0000, ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz 0.0000 )], #distancepercycle: \"9.069\", #minimumspeed: \"0.7\", #maximumspeed: \"1.4\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"Skeleton_walk\", #startxform: [#position: vector( 0.3419, 0.0046, 9.0881 ), #rotation: vector( 0.0000, 0.0000, ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "objectlinkedtobonesplayerinfo",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[[#bonedmodel: \"skeleton\", #object: \"sword_hand\", #boneid: 8, #xform: [#rotation: vector( 94.0119, 73.0471, -175.4553 ), #p ",
+      "kind": "group",
+      "parent": "objectlinkedtobonesplayerinfo",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzzosition: vector( 0.2471, -2.7373, 0.2335 )]]] ",
+      "kind": "group",
+      "parent": "zzz[[#bonedmodel: \"skeleton\", #object: \"sword_hand\", #boneid: 8, #xform: [#rotation: vector( 94.0119, 73.0471, -175.4553 ), #p ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "TestLight",
+      "kind": "light",
+      "parent": "DefaultView",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    }
+  ],
+  "skeletons": [],
+  "animations": [
+    {
+      "name": "skeleton",
+      "tracks": 27,
+      "size": 1971
+    },
+    {
+      "name": "skeleton_die",
+      "tracks": 27,
+      "size": 4698
+    },
+    {
+      "name": "skeleton_hit",
+      "tracks": 27,
+      "size": 7002
+    },
+    {
+      "name": "skeleton_ressurect",
+      "tracks": 27,
+      "size": 6842
+    },
+    {
+      "name": "skeleton_run",
+      "tracks": 27,
+      "size": 8527
+    },
+    {
+      "name": "skeleton_stand",
+      "tracks": 27,
+      "size": 4746
+    },
+    {
+      "name": "skeleton_swordswing",
+      "tracks": 27,
+      "size": 7448
+    },
+    {
+      "name": "skeleton_walk",
+      "tracks": 27,
+      "size": 8528
+    }
+  ]
+}

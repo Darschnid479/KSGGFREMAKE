@@ -1,0 +1,882 @@
+{
+  "file": "langemann.w3d",
+  "nodes": [
+    {
+      "name": "DefaultView",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "Langemann LookAt",
+      "kind": "group",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        -0.0,
+        30.025,
+        18.713
+      ],
+      "godot_pos": [
+        -0.0,
+        18.713,
+        -30.025
+      ]
+    },
+    {
+      "name": "langemann",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "collisionradius=2.5;",
+      "sw_pos": [
+        0.0,
+        -0.136,
+        10.82
+      ],
+      "godot_pos": [
+        0.0,
+        10.82,
+        0.136
+      ]
+    },
+    {
+      "name": "langemann_proxy",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        -0.136,
+        10.82
+      ],
+      "godot_pos": [
+        0.0,
+        10.82,
+        0.136
+      ]
+    },
+    {
+      "name": "hiddenassets",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "userdata",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"Langemann_climb_down\", #startxform: [#position: vector( -0.0005, 0.0496, 10.6733 ), #rotation: vector( 0.0000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, 0.0000, 180.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"Langemann_climb_down\", #startxform: [#position: vector( -0.0005, 0.0496, 10.6733 ), #rotation: vector( 0.0000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"langemann_climb_up\", #startxform: [#position: vector( 0.0000, -0.1360, 10.6722 ), #rotation: vector( 0.0000,  ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0.0000, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"langemann_climb_up\", #startxform: [#position: vector( 0.0000, -0.1360, 10.6722 ), #rotation: vector( 0.0000,  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"langemann_hit\", #startxform: [#position: vector( -0.8015, 0.2469, 10.3116 ), #rotation: vector( 0.0000, 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"langemann_hit\", #startxform: [#position: vector( -0.8015, 0.2469, 10.3116 ), #rotation: vector( 0.0000, 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"langemann_jump\", #startxform: [#position: vector( -0.1968, 0.0412, 10.6722 ), #rotation: vector( 0.0000, 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000 )], #startmoving: \"10\", #stopmoving: \"37\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"langemann_jump\", #startxform: [#position: vector( -0.1968, 0.0412, 10.6722 ), #rotation: vector( 0.0000, 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"langemann_run\", #startxform: [#position: vector( -0.6400, 1.5390, 10.1588 ), #rotation: vector( 0.0000, 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000 )], #distancepercycle: \"24.44\", #minimumspeed: \"0.7\", #maximumspeed: \"1.5\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"langemann_run\", #startxform: [#position: vector( -0.6400, 1.5390, 10.1588 ), #rotation: vector( 0.0000, 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"langemann_stand\", #startxform: [#position: vector( -0.1968, 0.0412, 10.6722 ), #rotation: vector( 0.0000, 0.0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"langemann_stand\", #startxform: [#position: vector( -0.1968, 0.0412, 10.6722 ), #rotation: vector( 0.0000, 0.0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"langemann_standsword\", #startxform: [#position: vector( -0.8015, 0.2469, 10.3116 ), #rotation: vector( 0.0000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, 0.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"langemann_standsword\", #startxform: [#position: vector( -0.8015, 0.2469, 10.3116 ), #rotation: vector( 0.0000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"langemann_lookaround\", #startxform: [#position: vector( -0.1968, 0.0412, 10.6722 ), #rotation: vector( 0.0000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, 0.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"]  ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"langemann_lookaround\", #startxform: [#position: vector( -0.1968, 0.0412, 10.6722 ), #rotation: vector( 0.0000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"langemann_stand_talk\", #startxform: [#position: vector( -0.1968, 0.0410, 10.6720 ), #rotation: vector( 0.0000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, 0.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"]   ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"langemann_stand_talk\", #startxform: [#position: vector( -0.1968, 0.0410, 10.6720 ), #rotation: vector( 0.0000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"langemann_stand_yawn\", #startxform: [#position: vector( -0.1968, 0.0412, 10.6722 ), #rotation: vector( 0.0000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, 0.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"]    ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"langemann_stand_yawn\", #startxform: [#position: vector( -0.1968, 0.0412, 10.6722 ), #rotation: vector( 0.0000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"langemann_swordswing\", #startxform: [#position: vector( -0.8015, 0.2469, 10.3116 ), #rotation: vector( 0.0000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, 0.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #impact: \"10\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"langemann_swordswing\", #startxform: [#position: vector( -0.8015, 0.2469, 10.3116 ), #rotation: vector( 0.0000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"langemann_turnleft\", #startxform: [#position: vector( -0.1968, 0.0412, 10.6722 ), #rotation: vector( 0.0000,  ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0.0000, 0.0000 )]]  ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"langemann_turnleft\", #startxform: [#position: vector( -0.1968, 0.0412, 10.6722 ), #rotation: vector( 0.0000,  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"Box01\", #startxform: [#position: vector( 1.0025, -0.8114, 0.6735 ), #rotation: vector( 0.0000, 0.0000, -4.933 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"Box01\", #startxform: [#position: vector( 1.0025, -0.8114, 0.6735 ), #rotation: vector( 0.0000, 0.0000, -4.933 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"Box02\", #startxform: [#position: vector( -2.4911, 0.4622, 0.6735 ), #rotation: vector( 0.0000, 0.0000, 22.055 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz6 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"Box02\", #startxform: [#position: vector( -2.4911, 0.4622, 0.6735 ), #rotation: vector( 0.0000, 0.0000, 22.055 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"langemann_turnright\", #startxform: [#position: vector( -0.1968, 0.0412, 10.6722 ), #rotation: vector( 0.0000, ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz 0.0000, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"langemann_turnright\", #startxform: [#position: vector( -0.1968, 0.0412, 10.6722 ), #rotation: vector( 0.0000, ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"Box01\", #startxform: [#position: vector( 1.0025, -0.8114, 0.6735 ), #rotation: vector( 0.0000, 0.0000, -4.933  ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0 )]]  ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"Box01\", #startxform: [#position: vector( 1.0025, -0.8114, 0.6735 ), #rotation: vector( 0.0000, 0.0000, -4.933  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"Box02\", #startxform: [#position: vector( -2.4911, 0.4622, 0.6735 ), #rotation: vector( 0.0000, 0.0000, 22.055  ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz6 )]]  ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"Box02\", #startxform: [#position: vector( -2.4911, 0.4622, 0.6735 ), #rotation: vector( 0.0000, 0.0000, 22.055  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"langemann_walk\", #startxform: [#position: vector( -0.5730, 0.2152, 10.6458 ), #rotation: vector( 0.0000, 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000 )], #distancepercycle: \"18.999\", #minimumspeed: \"0.1\", #maximumspeed: \"1.5\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"langemann_walk\", #startxform: [#position: vector( -0.5730, 0.2152, 10.6458 ), #rotation: vector( 0.0000, 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"langemann_walk_talk\", #startxform: [#position: vector( -0.5730, 0.2152, 10.6458 ), #rotation: vector( 0.0000, ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz 0.0000, 0.0000 )], #distancepercycle: \"18.999\", #minimumspeed: \"0.1\", #maximumspeed: \"1.5\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"langemann_walk_talk\", #startxform: [#position: vector( -0.5730, 0.2152, 10.6458 ), #rotation: vector( 0.0000, ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "objectlinkedtobonesplayerinfo",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[[#bonedmodel: \"langemann\", #object: \"sword_belt\", #boneid: 1, #xform: [#rotation: vector( -30.4088, -5.8344, 14.8046 ), #p ",
+      "kind": "group",
+      "parent": "objectlinkedtobonesplayerinfo",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzzosition: vector( 2.4901, 0.4410, -1.4601 )]], [#bonedmodel: \"langemann\", #object: \"sword_hand\", #boneid: 24, #xform: [#rota ",
+      "kind": "group",
+      "parent": "zzz[[#bonedmodel: \"langemann\", #object: \"sword_belt\", #boneid: 1, #xform: [#rotation: vector( -30.4088, -5.8344, 14.8046 ), #p ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzztion: vector( 32.1715, -58.4863, 61.5331 ), #position: vector( 0.9871, 2.1523, -1.5903 )]]] ",
+      "kind": "group",
+      "parent": "zzzosition: vector( 2.4901, 0.4410, -1.4601 )]], [#bonedmodel: \"langemann\", #object: \"sword_hand\", #boneid: 24, #xform: [#rota ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "TestLight",
+      "kind": "light",
+      "parent": "DefaultView",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    }
+  ],
+  "skeletons": [],
+  "animations": [
+    {
+      "name": "langemann",
+      "tracks": 39,
+      "size": 2875
+    },
+    {
+      "name": "langemann_climb_down",
+      "tracks": 39,
+      "size": 7773
+    },
+    {
+      "name": "langemann_climb_up",
+      "tracks": 39,
+      "size": 9361
+    },
+    {
+      "name": "langemann_hit",
+      "tracks": 39,
+      "size": 6805
+    },
+    {
+      "name": "langemann_jump",
+      "tracks": 39,
+      "size": 6567
+    },
+    {
+      "name": "langemann_run",
+      "tracks": 39,
+      "size": 4692
+    },
+    {
+      "name": "langemann_stand",
+      "tracks": 39,
+      "size": 3392
+    },
+    {
+      "name": "langemann_standsword",
+      "tracks": 39,
+      "size": 3814
+    },
+    {
+      "name": "langemann_lookaround",
+      "tracks": 39,
+      "size": 4862
+    },
+    {
+      "name": "langemann_stand_talk",
+      "tracks": 39,
+      "size": 6942
+    },
+    {
+      "name": "langemann_stand_yawn",
+      "tracks": 39,
+      "size": 4525
+    },
+    {
+      "name": "langemann_swordswing",
+      "tracks": 39,
+      "size": 9905
+    },
+    {
+      "name": "langemann_turnleft",
+      "tracks": 39,
+      "size": 5753
+    },
+    {
+      "name": "box01-key",
+      "tracks": 1,
+      "size": 233
+    },
+    {
+      "name": "box02-key",
+      "tracks": 1,
+      "size": 221
+    },
+    {
+      "name": "langemann_turnright",
+      "tracks": 39,
+      "size": 5937
+    },
+    {
+      "name": "langemann_walk",
+      "tracks": 39,
+      "size": 9588
+    },
+    {
+      "name": "langemann_walk_talk",
+      "tracks": 39,
+      "size": 9784
+    }
+  ]
+}

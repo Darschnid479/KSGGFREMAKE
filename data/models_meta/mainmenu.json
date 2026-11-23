@@ -1,0 +1,119 @@
+{
+  "file": "mainmenu.w3d",
+  "nodes": [
+    {
+      "name": "DefaultView",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "UIAmbient",
+      "kind": "light",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "Default MAX Light",
+      "kind": "light",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        -336.675,
+        -0.0
+      ],
+      "godot_pos": [
+        0.0,
+        -0.0,
+        336.675
+      ]
+    },
+    {
+      "name": "background",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.533,
+        0.0,
+        -0.267
+      ],
+      "godot_pos": [
+        0.533,
+        -0.267,
+        -0.0
+      ]
+    },
+    {
+      "name": "Camera01",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        -336.675,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        336.675
+      ]
+    },
+    {
+      "name": "Camera01.Target",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.698,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.698
+      ]
+    },
+    {
+      "name": "TestLight",
+      "kind": "light",
+      "parent": "DefaultView",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    }
+  ],
+  "skeletons": [],
+  "animations": []
+}

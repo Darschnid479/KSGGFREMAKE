@@ -1,0 +1,309 @@
+{
+  "file": "world_map_underwater7_gameplay.w3d",
+  "nodes": [
+    {
+      "name": "scriptingdata",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.038
+      ],
+      "godot_pos": [
+        0.0,
+        0.038,
+        -0.0
+      ]
+    },
+    {
+      "name": "shark_10",
+      "kind": "model",
+      "parent": "scriptingdata",
+      "userdata": "addanimatedmodel=shark|shark_swim;\r\nanimationendframe=400;\r\n\r\nswimobstacle=1;",
+      "sw_pos": [
+        -132.276,
+        256.253,
+        0.0
+      ],
+      "godot_pos": [
+        -132.276,
+        0.0,
+        -256.253
+      ]
+    },
+    {
+      "name": "shark_09",
+      "kind": "model",
+      "parent": "scriptingdata",
+      "userdata": "addanimatedmodel=shark|shark_swim;\r\nanimationendframe=300;\r\n\r\nswimobstacle=1;",
+      "sw_pos": [
+        -141.24,
+        179.271,
+        0.0
+      ],
+      "godot_pos": [
+        -141.24,
+        0.0,
+        -179.271
+      ]
+    },
+    {
+      "name": "shark_08",
+      "kind": "model",
+      "parent": "scriptingdata",
+      "userdata": "addanimatedmodel=shark|shark_swim;\r\nanimationendframe=420;\r\n\r\nswimobstacle=1;",
+      "sw_pos": [
+        -152.95,
+        85.903,
+        0.0
+      ],
+      "godot_pos": [
+        -152.95,
+        0.0,
+        -85.903
+      ]
+    },
+    {
+      "name": "shark_07",
+      "kind": "model",
+      "parent": "scriptingdata",
+      "userdata": "addanimatedmodel=shark|shark_swim;\r\nanimationendframe=570;\r\n\r\nswimobstacle=1;",
+      "sw_pos": [
+        -156.816,
+        28.218,
+        0.0
+      ],
+      "godot_pos": [
+        -156.816,
+        0.0,
+        -28.218
+      ]
+    },
+    {
+      "name": "shark_06",
+      "kind": "model",
+      "parent": "scriptingdata",
+      "userdata": "addanimatedmodel=shark|shark_swim;\r\nanimationendframe=500;\r\n\r\nswimobstacle=1;",
+      "sw_pos": [
+        157.334,
+        -110.841,
+        0.0
+      ],
+      "godot_pos": [
+        157.334,
+        0.0,
+        110.841
+      ]
+    },
+    {
+      "name": "shark_05",
+      "kind": "model",
+      "parent": "scriptingdata",
+      "userdata": "addanimatedmodel=shark|shark_swim;\r\nanimationendframe=350;\r\n\r\nswimobstacle=1;",
+      "sw_pos": [
+        156.785,
+        -19.249,
+        0.0
+      ],
+      "godot_pos": [
+        156.785,
+        0.0,
+        19.249
+      ]
+    },
+    {
+      "name": "shark_03",
+      "kind": "model",
+      "parent": "scriptingdata",
+      "userdata": "addanimatedmodel=shark|shark_swim;\r\nanimationendframe=500;\r\n\r\nswimobstacle=1;",
+      "sw_pos": [
+        157.546,
+        126.067,
+        0.0
+      ],
+      "godot_pos": [
+        157.546,
+        0.0,
+        -126.067
+      ]
+    },
+    {
+      "name": "shark_1",
+      "kind": "model",
+      "parent": "scriptingdata",
+      "userdata": "addanimatedmodel=shark|shark_swim;\r\nanimationendframe=450;\r\n\r\nswimobstacle=1;",
+      "sw_pos": [
+        -137.505,
+        -57.413,
+        0.0
+      ],
+      "godot_pos": [
+        -137.505,
+        0.0,
+        57.413
+      ]
+    },
+    {
+      "name": "shark_2",
+      "kind": "model",
+      "parent": "scriptingdata",
+      "userdata": "addanimatedmodel=shark|shark_swim;\r\nanimationendframe=600;\r\n\r\nswimobstacle=1;",
+      "sw_pos": [
+        147.965,
+        215.881,
+        0.0
+      ],
+      "godot_pos": [
+        147.965,
+        0.0,
+        -215.881
+      ]
+    },
+    {
+      "name": "object_coppercoin_4",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "resource = coppercoin;",
+      "sw_pos": [
+        -0.106,
+        -132.768,
+        0.0
+      ],
+      "godot_pos": [
+        -0.106,
+        0.0,
+        132.768
+      ]
+    },
+    {
+      "name": "object_coppercoin_3",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "resource = coppercoin;",
+      "sw_pos": [
+        -1.843,
+        -1.532,
+        0.0
+      ],
+      "godot_pos": [
+        -1.843,
+        0.0,
+        1.532
+      ]
+    },
+    {
+      "name": "object_coppercoin_2",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "resource = coppercoin;",
+      "sw_pos": [
+        6.235,
+        59.312,
+        0.0
+      ],
+      "godot_pos": [
+        6.235,
+        0.0,
+        -59.312
+      ]
+    },
+    {
+      "name": "object_coppercoin_1",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "resource = coppercoin;",
+      "sw_pos": [
+        0.932,
+        146.374,
+        0.0
+      ],
+      "godot_pos": [
+        0.932,
+        0.0,
+        -146.374
+      ]
+    },
+    {
+      "name": "defaultview",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -15.697,
+        56.906,
+        559.24
+      ],
+      "godot_pos": [
+        -15.697,
+        559.24,
+        -56.906
+      ]
+    },
+    {
+      "name": "Default MAX Light",
+      "kind": "light",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -15.697,
+        56.906,
+        559.24
+      ],
+      "godot_pos": [
+        -15.697,
+        559.24,
+        -56.906
+      ]
+    }
+  ],
+  "skeletons": [],
+  "animations": [
+    {
+      "name": "shark_10-Key",
+      "tracks": 1,
+      "size": 3542
+    },
+    {
+      "name": "shark_09-Key",
+      "tracks": 1,
+      "size": 3354
+    },
+    {
+      "name": "shark_08-Key",
+      "tracks": 1,
+      "size": 4026
+    },
+    {
+      "name": "shark_07-Key",
+      "tracks": 1,
+      "size": 2675
+    },
+    {
+      "name": "shark_06-Key",
+      "tracks": 1,
+      "size": 4587
+    },
+    {
+      "name": "shark_05-Key",
+      "tracks": 1,
+      "size": 2857
+    },
+    {
+      "name": "shark_03-Key",
+      "tracks": 1,
+      "size": 3446
+    },
+    {
+      "name": "shark_1-Key",
+      "tracks": 1,
+      "size": 3080
+    },
+    {
+      "name": "shark_2-Key",
+      "tracks": 1,
+      "size": 5804
+    }
+  ]
+}

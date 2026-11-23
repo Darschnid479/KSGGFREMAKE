@@ -1,0 +1,311 @@
+{
+  "file": "graal_underwater.w3d",
+  "nodes": [
+    {
+      "name": "DefaultView",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "UIAmbient",
+      "kind": "light",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "Default MAX Light",
+      "kind": "light",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -0.0,
+        -241.481,
+        64.705
+      ],
+      "godot_pos": [
+        -0.0,
+        64.705,
+        241.481
+      ]
+    },
+    {
+      "name": "scene_light",
+      "kind": "light",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -129.696,
+        92.387,
+        22.574
+      ],
+      "godot_pos": [
+        -129.696,
+        22.574,
+        -92.387
+      ]
+    },
+    {
+      "name": "Camera01",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -130.17,
+        98.053,
+        119.897
+      ],
+      "godot_pos": [
+        -130.17,
+        119.897,
+        -98.053
+      ]
+    },
+    {
+      "name": "background_wall",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -12.301,
+        26.044,
+        -2.073
+      ],
+      "godot_pos": [
+        -12.301,
+        -2.073,
+        -26.044
+      ]
+    },
+    {
+      "name": "black_wall",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -11.209,
+        15.666,
+        18.674
+      ],
+      "godot_pos": [
+        -11.209,
+        18.674,
+        -15.666
+      ]
+    },
+    {
+      "name": "underwater_plant_18",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -125.796,
+        -54.266,
+        17.199
+      ],
+      "godot_pos": [
+        -125.796,
+        17.199,
+        54.266
+      ]
+    },
+    {
+      "name": "underwater_plant_19",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -102.408,
+        -56.251,
+        17.708
+      ],
+      "godot_pos": [
+        -102.408,
+        17.708,
+        56.251
+      ]
+    },
+    {
+      "name": "underwater_plant_20",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        75.604,
+        -51.908,
+        17.199
+      ],
+      "godot_pos": [
+        75.604,
+        17.199,
+        51.908
+      ]
+    },
+    {
+      "name": "underwater_plant_21",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        99.075,
+        -53.554,
+        17.708
+      ],
+      "godot_pos": [
+        99.075,
+        17.708,
+        53.554
+      ]
+    },
+    {
+      "name": "underwater_plant_22",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -41.999,
+        25.95,
+        17.199
+      ],
+      "godot_pos": [
+        -41.999,
+        17.199,
+        -25.95
+      ]
+    },
+    {
+      "name": "underwater_plant_23",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -29.931,
+        -49.876,
+        17.199
+      ],
+      "godot_pos": [
+        -29.931,
+        17.199,
+        49.876
+      ]
+    },
+    {
+      "name": "dots",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -11.069,
+        28.74,
+        13.716
+      ],
+      "godot_pos": [
+        -11.069,
+        13.716,
+        -28.74
+      ]
+    },
+    {
+      "name": "bubbles",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "particlesystem=1;\r\nparticleconfig = [#texture:\"bubble\",#lifeTime: 15000.0000, \"sizeRange.start\": 3.0000, \"sizeRange.end\": 3.0000, \"emitter.direction\": vector( 0.0000, 1.0000, 0.0000 ), \"emitter.angle\": 1.0000, \"emitter.minSpeed\":7.0000, \"emitter.maxSpeed\": 10.0000, \"emitter.numParticles\": 200];",
+      "sw_pos": [
+        -0.167,
+        -59.663,
+        -1.606
+      ],
+      "godot_pos": [
+        -0.167,
+        -1.606,
+        59.663
+      ]
+    },
+    {
+      "name": "bubbles01",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "particlesystem=1;\r\nparticleconfig = [#texture:\"bubble\",#lifeTime: 15000.0000, \"sizeRange.start\": 5.0000, \"sizeRange.end\": 5.0000, \"emitter.direction\": vector( 0.0000, 1.0000, 0.0000 ), \"emitter.angle\": 1.0000, \"emitter.minSpeed\": 5.0000, \"emitter.maxSpeed\": 7.0000, \"emitter.numParticles\": 70];",
+      "sw_pos": [
+        -0.224,
+        -59.705,
+        -2.497
+      ],
+      "godot_pos": [
+        -0.224,
+        -2.497,
+        59.705
+      ]
+    },
+    {
+      "name": "underwater_top",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -134.187,
+        115.431,
+        0.284
+      ],
+      "godot_pos": [
+        -134.187,
+        0.284,
+        -115.431
+      ]
+    },
+    {
+      "name": "underwater_top01",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        109.207,
+        115.431,
+        0.284
+      ],
+      "godot_pos": [
+        109.207,
+        0.284,
+        -115.431
+      ]
+    },
+    {
+      "name": "TestLight",
+      "kind": "light",
+      "parent": "DefaultView",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    }
+  ],
+  "skeletons": [],
+  "animations": []
+}

@@ -1,0 +1,508 @@
+{
+  "file": "fatamorgana_bosslevel_gameplay.w3d",
+  "nodes": [
+    {
+      "name": "scriptingdata",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.954,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.954,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "character_pinky",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        -239.698,
+        27.305,
+        0.0
+      ],
+      "godot_pos": [
+        -239.698,
+        0.0,
+        -27.305
+      ]
+    },
+    {
+      "name": "global",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "trigger = startmap;\r\naction = actionable_temp|enable;\r\naction = clearmapfromgamestate|fatamorgana_palace;\r\n\r\ntrigger = startmap_breathing;\r\naction = introcamera_1|start;\r\naction = door_right|keyframeplayer-play|door_right-Key;\r\naction = door_left|keyframeplayer-play|door_left-Key;\r\naction = pinky|playcustomanimation|intro;\r\naction = liger|playcustomanimation|intro;\r\nonce=0;\r\n\r\ntrigger = startmap_breathing + 1;\r\naction = startintrovortex;\r\n\r\ntrigger = resumemap_breathing;\r\naction = playambience|fatamorgana_bosslevel_ambience;\r\nonce=0;\r\n\r\ntrigger = liger_intro_finished;\r\naction = liger|zapto|faraway;\r\nonce=0;\r\n\r\ntrigger = pinky_intro_finished;\r\naction = queue|savegame;\r\nfirsttoreact = 1;\r\n\r\ntrigger = pinky_intro_finished;\r\naction = pinky|zapto|startposition;\r\naction = playambience|fatamorgana_bosslevel_music;\r\nonce=0;\r\n\r\ntrigger = liger_died + 5;\r\naction = startcharactercamera|pinky;\r\n\r\ntrigger = liger_died + 5.5;\r\naction = pinky|playcustomanimation|win;\r\naction = playsfx|fatamorgana_boss_won_1_pinky;\r\n\r\ntrigger = pinky_win_finished + 1.5;\r\naction = pinky|addachievement|finishedfatamorgana;\r\naction = proceedtomap|world_map;\r\n\r\ntrigger = introcamera_1_finished;\r\naction = introcamera_2|start;\r\n\r\ntrigger = introcamera_2_finished;\r\naction = introcamera_3|start;\r\n\r\ntrigger = introcamera_3_finished;\r\naction = introcamera_4|start;",
+      "sw_pos": [
+        -457.19,
+        139.618,
+        0.0
+      ],
+      "godot_pos": [
+        -457.19,
+        0.0,
+        -139.618
+      ]
+    },
+    {
+      "name": "character_liger",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "resource = fatamorgana_boss;",
+      "sw_pos": [
+        -244.202,
+        252.386,
+        0.0
+      ],
+      "godot_pos": [
+        -244.202,
+        0.0,
+        -252.386
+      ]
+    },
+    {
+      "name": "breakablevase_1",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        -71.195,
+        174.126,
+        0.0
+      ],
+      "godot_pos": [
+        -71.195,
+        0.0,
+        -174.126
+      ]
+    },
+    {
+      "name": "breakablevase_2",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        85.631,
+        218.425,
+        0.0
+      ],
+      "godot_pos": [
+        85.631,
+        0.0,
+        -218.425
+      ]
+    },
+    {
+      "name": "breakablevase_3",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        46.647,
+        50.349,
+        0.0
+      ],
+      "godot_pos": [
+        46.647,
+        0.0,
+        -50.349
+      ]
+    },
+    {
+      "name": "breakablevase_4",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        -29.631,
+        129.899,
+        0.0
+      ],
+      "godot_pos": [
+        -29.631,
+        0.0,
+        -129.899
+      ]
+    },
+    {
+      "name": "gamecam_north",
+      "kind": "camera",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        1.114,
+        -22.603,
+        90.604
+      ],
+      "godot_pos": [
+        1.114,
+        90.604,
+        22.603
+      ]
+    },
+    {
+      "name": "gamecam_west",
+      "kind": "camera",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        136.19,
+        127.088,
+        90.0
+      ],
+      "godot_pos": [
+        136.19,
+        90.0,
+        -127.088
+      ]
+    },
+    {
+      "name": "gamecam_south",
+      "kind": "camera",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        -0.288,
+        262.466,
+        90.0
+      ],
+      "godot_pos": [
+        -0.288,
+        90.0,
+        -262.466
+      ]
+    },
+    {
+      "name": "gamecam_east",
+      "kind": "camera",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        -130.555,
+        127.105,
+        90.0
+      ],
+      "godot_pos": [
+        -130.555,
+        90.0,
+        -127.105
+      ]
+    },
+    {
+      "name": "startposition",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        0.294,
+        78.671,
+        0.0
+      ],
+      "godot_pos": [
+        0.294,
+        0.0,
+        -78.671
+      ]
+    },
+    {
+      "name": "introcamera_1_box",
+      "kind": "model",
+      "parent": "scriptingdata",
+      "userdata": "animationstartframe=0;\r\nanimationendframe=55;",
+      "sw_pos": [
+        90.518,
+        177.399,
+        39.727
+      ],
+      "godot_pos": [
+        90.518,
+        39.727,
+        -177.399
+      ]
+    },
+    {
+      "name": "introcamera_1",
+      "kind": "camera",
+      "parent": "introcamera_1_box",
+      "userdata": "animationstartframe=0;\r\nanimationendframe=55;",
+      "sw_pos": [
+        90.464,
+        177.5,
+        39.766
+      ],
+      "godot_pos": [
+        90.464,
+        39.766,
+        -177.5
+      ]
+    },
+    {
+      "name": "introcamera_2_box",
+      "kind": "model",
+      "parent": "scriptingdata",
+      "userdata": "animationstartframe=56\r\nanimationendframe=89;",
+      "sw_pos": [
+        73.801,
+        124.479,
+        45.611
+      ],
+      "godot_pos": [
+        73.801,
+        45.611,
+        -124.479
+      ]
+    },
+    {
+      "name": "introcamera_2",
+      "kind": "camera",
+      "parent": "introcamera_2_box",
+      "userdata": "animationstartframe=56\r\nanimationendframe=89;",
+      "sw_pos": [
+        73.739,
+        124.574,
+        45.652
+      ],
+      "godot_pos": [
+        73.739,
+        45.652,
+        -124.574
+      ]
+    },
+    {
+      "name": "introcamera_3_box",
+      "kind": "model",
+      "parent": "scriptingdata",
+      "userdata": "animationstartframe=90;\r\nanimationendframe=135;",
+      "sw_pos": [
+        73.801,
+        65.731,
+        45.611
+      ],
+      "godot_pos": [
+        73.801,
+        45.611,
+        -65.731
+      ]
+    },
+    {
+      "name": "introcamera_3",
+      "kind": "camera",
+      "parent": "introcamera_3_box",
+      "userdata": "animationstartframe=90;\r\nanimationendframe=135;",
+      "sw_pos": [
+        73.739,
+        65.826,
+        45.652
+      ],
+      "godot_pos": [
+        73.739,
+        45.652,
+        -65.826
+      ]
+    },
+    {
+      "name": "introcamera_4_box",
+      "kind": "model",
+      "parent": "scriptingdata",
+      "userdata": "animationstartframe=136;\r\nanimationendframe=300;",
+      "sw_pos": [
+        73.8,
+        65.731,
+        45.613
+      ],
+      "godot_pos": [
+        73.8,
+        45.613,
+        -65.731
+      ]
+    },
+    {
+      "name": "introcamera_4",
+      "kind": "camera",
+      "parent": "introcamera_4_box",
+      "userdata": "animationstartframe=136;\r\nanimationendframe=300;",
+      "sw_pos": [
+        73.739,
+        65.828,
+        45.651
+      ],
+      "godot_pos": [
+        73.739,
+        45.651,
+        -65.828
+      ]
+    },
+    {
+      "name": "faraway",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -248.238,
+        191.875,
+        0.0
+      ],
+      "godot_pos": [
+        -248.238,
+        0.0,
+        -191.875
+      ]
+    },
+    {
+      "name": "gamecam_north.Target",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -1.365,
+        128.225,
+        0.0
+      ],
+      "godot_pos": [
+        -1.365,
+        0.0,
+        -128.225
+      ]
+    },
+    {
+      "name": "gamecam_west.Target",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.048,
+        125.369,
+        0.0
+      ],
+      "godot_pos": [
+        0.048,
+        0.0,
+        -125.369
+      ]
+    },
+    {
+      "name": "gamecam_south.Target",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -0.925,
+        125.522,
+        0.0
+      ],
+      "godot_pos": [
+        -0.925,
+        0.0,
+        -125.522
+      ]
+    },
+    {
+      "name": "gamecam_east.target",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.311,
+        126.362,
+        0.0
+      ],
+      "godot_pos": [
+        0.311,
+        0.0,
+        -126.362
+      ]
+    },
+    {
+      "name": "collisiondata",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        4.331,
+        126.329,
+        -55.748
+      ],
+      "godot_pos": [
+        4.331,
+        -55.748,
+        -126.329
+      ]
+    },
+    {
+      "name": "RoomCollisions",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(128.265,-0.950562,-55.748),vector(128.217,253.684,-55.748),vector(-119.961,253.684,-55.748),vector(-120.049,-1.02539,-55.748),vector(128.712,-1.02539,-55.748)],#closed:0]]];",
+      "sw_pos": [
+        -5.558,
+        95.846,
+        -14.597
+      ],
+      "godot_pos": [
+        -5.558,
+        -14.597,
+        -95.846
+      ]
+    },
+    {
+      "name": "defaultview",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -178.757,
+        141.652,
+        139.554
+      ],
+      "godot_pos": [
+        -178.757,
+        139.554,
+        -141.652
+      ]
+    },
+    {
+      "name": "Default MAX Light",
+      "kind": "light",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -178.757,
+        141.652,
+        139.554
+      ],
+      "godot_pos": [
+        -178.757,
+        139.554,
+        -141.652
+      ]
+    }
+  ],
+  "skeletons": [],
+  "animations": [
+    {
+      "name": "introcamera_1_box-Key",
+      "tracks": 1,
+      "size": 1004
+    },
+    {
+      "name": "introcamera_2_box-Key",
+      "tracks": 1,
+      "size": 263
+    },
+    {
+      "name": "introcamera_3_box-Key",
+      "tracks": 1,
+      "size": 1167
+    },
+    {
+      "name": "introcamera_4_box-Key",
+      "tracks": 1,
+      "size": 409
+    }
+  ]
+}

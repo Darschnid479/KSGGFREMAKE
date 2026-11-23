@@ -1,0 +1,141 @@
+{
+  "file": "outro_gameplay.w3d",
+  "nodes": [
+    {
+      "name": "scriptingdata",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "introcamera_1_box",
+      "kind": "model",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        1850.451,
+        2979.224,
+        25.21
+      ],
+      "godot_pos": [
+        1850.451,
+        25.21,
+        -2979.224
+      ]
+    },
+    {
+      "name": "introcamera_1",
+      "kind": "camera",
+      "parent": "introcamera_1_box",
+      "userdata": "",
+      "sw_pos": [
+        1850.569,
+        2979.234,
+        25.236
+      ],
+      "godot_pos": [
+        1850.569,
+        25.236,
+        -2979.234
+      ]
+    },
+    {
+      "name": "particle1",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#rectangle,#width:1300.07,#length:1277.86,#transform:[1,0,0,0,0,1,0,0,0,0,1,0,1144.56,4477.07,-67.6898,1]]];particlesystem=1;\r\nparticleconfig=[#texture:\"splashparticle_32\",#lifeTime: 3720.0188, \"colorRange.start\": color( 255, 255, 255 ), \"colorRange.end\": color( 255, 255, 255 ), #tweenMode: #age, \"sizeRange.start\": 55.0000, \"sizeRange.end\": 45.0000, \"blendRange.start\": 100.0000, \"blendRange.end\": 0.0000, \"emitter.mode\": #stream, \"emitter.loop\": 1, \"emitter.direction\": vector( 0.0000, 0.0000, 1.0000 ), \"emitter.distribution\": #linear, \"emitter.angle\": 1.0000, \"emitter.path\": [], \"emitter.pathStrength\": 0.1000, \"emitter.minSpeed\": 10.0000, \"emitter.maxSpeed\": 24.0000, #drag: 0.0000, #gravity: vector( 0.0000, -0.0000, 0.0000 ), #wind: vector( 0.0000, 0.0000, 0.0000 ), \"emitter.numParticles\": 430];",
+      "sw_pos": [
+        1144.561,
+        4477.071,
+        -67.69
+      ],
+      "godot_pos": [
+        1144.561,
+        -67.69,
+        -4477.071
+      ]
+    },
+    {
+      "name": "Dummy01",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "trigger = startmap;\r\naction = darklady|keyframeplayer-play;\r\naction = island_cave|keyframeplayer-play;\r\naction = introcamera_1|start;\r\naction = particle1|stop;\r\naction = playambience|world_map_ambience;\r\n\r\ntrigger = startmap_breathing;\r\naction = playsfx|outro_islandsink;\r\n\r\ntrigger = startmap_breathing + 33;\r\naction = playsfx|outro_conversation|sendfinishedevent=1;\r\n\r\ntrigger = outro_conversation_finished;\r\naction = startloopingsound|menu_music;\r\n\r\ntrigger = outro_conversation_finished + 12;\r\naction = startcredits;\r\n\r\ntrigger = startmap + 4.1;\r\naction = particle1|start;\r\n\r\ntrigger = startmap + 26.3;\r\naction = particle1|stop;",
+      "sw_pos": [
+        2725.253,
+        4511.09,
+        0.0
+      ],
+      "godot_pos": [
+        2725.253,
+        0.0,
+        -4511.09
+      ]
+    },
+    {
+      "name": "defaultview",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        2187.22,
+        4360.052,
+        25.981
+      ],
+      "godot_pos": [
+        2187.22,
+        25.981,
+        -4360.052
+      ]
+    },
+    {
+      "name": "Default MAX Light",
+      "kind": "light",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        2187.22,
+        4360.052,
+        25.981
+      ],
+      "godot_pos": [
+        2187.22,
+        25.981,
+        -4360.052
+      ]
+    },
+    {
+      "name": "Ambient Light",
+      "kind": "light",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    }
+  ],
+  "skeletons": [],
+  "animations": [
+    {
+      "name": "introcamera_1_box-Key",
+      "tracks": 1,
+      "size": 18779
+    }
+  ]
+}

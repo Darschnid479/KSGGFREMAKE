@@ -1,0 +1,983 @@
+{
+  "file": "abra.w3d",
+  "nodes": [
+    {
+      "name": "DefaultView",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "abra_sea2",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "fog=none;",
+      "sw_pos": [
+        206.872,
+        181.635,
+        -1.941
+      ],
+      "godot_pos": [
+        206.872,
+        -1.941,
+        -181.635
+      ]
+    },
+    {
+      "name": "abra_background",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "fog=none;",
+      "sw_pos": [
+        30.293,
+        93.462,
+        1.973
+      ],
+      "godot_pos": [
+        30.293,
+        1.973,
+        -93.462
+      ]
+    },
+    {
+      "name": "abra_middlecity",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "alwaysmovecamerainfront=1;",
+      "sw_pos": [
+        -694.279,
+        -206.838,
+        -9.321
+      ],
+      "godot_pos": [
+        -694.279,
+        -9.321,
+        206.838
+      ]
+    },
+    {
+      "name": "MapExportCamera",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -97.935,
+        115.641,
+        1665.74
+      ],
+      "godot_pos": [
+        -97.935,
+        1665.74,
+        -115.641
+      ]
+    },
+    {
+      "name": "MapExportCamera.Target",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -98.118,
+        115.641,
+        66.221
+      ],
+      "godot_pos": [
+        -98.118,
+        66.221,
+        -115.641
+      ]
+    },
+    {
+      "name": "darklady",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -102.801,
+        -193.49,
+        -18.758
+      ],
+      "godot_pos": [
+        -102.801,
+        -18.758,
+        193.49
+      ]
+    },
+    {
+      "name": "darklady_transparentobj",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -102.801,
+        -193.49,
+        -18.758
+      ],
+      "godot_pos": [
+        -102.801,
+        -18.758,
+        193.49
+      ]
+    },
+    {
+      "name": "abra_floating_objects",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -694.279,
+        -206.838,
+        -9.321
+      ],
+      "godot_pos": [
+        -694.279,
+        -9.321,
+        206.838
+      ]
+    },
+    {
+      "name": "abra_rightcity",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "alwaysmovecamerainfront=1;",
+      "sw_pos": [
+        -694.279,
+        -206.838,
+        -9.321
+      ],
+      "godot_pos": [
+        -694.279,
+        -9.321,
+        206.838
+      ]
+    },
+    {
+      "name": "lamps",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "hideforray=1;",
+      "sw_pos": [
+        6.24,
+        284.703,
+        88.119
+      ],
+      "godot_pos": [
+        6.24,
+        88.119,
+        -284.703
+      ]
+    },
+    {
+      "name": "lamp_glow",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        6.24,
+        284.703,
+        88.119
+      ],
+      "godot_pos": [
+        6.24,
+        88.119,
+        -284.703
+      ]
+    },
+    {
+      "name": "scene_light",
+      "kind": "light",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -936.255,
+        -260.85,
+        747.212
+      ],
+      "godot_pos": [
+        -936.255,
+        747.212,
+        260.85
+      ]
+    },
+    {
+      "name": "scene_light.Target",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -37.401,
+        0.0,
+        -35.282
+      ],
+      "godot_pos": [
+        -37.401,
+        -35.282,
+        -0.0
+      ]
+    },
+    {
+      "name": "foginfo",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "color=#606f38;\r\nfar=3500;\r\ndecaymode=exponential;",
+      "sw_pos": [
+        3.164,
+        -806.088,
+        -97.301
+      ],
+      "godot_pos": [
+        3.164,
+        -97.301,
+        806.088
+      ]
+    },
+    {
+      "name": "beach_water",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.299,
+        157.371,
+        0.656
+      ],
+      "godot_pos": [
+        0.299,
+        0.656,
+        -157.371
+      ]
+    },
+    {
+      "name": "glow_01",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -212.621,
+        13.554,
+        88.482
+      ],
+      "godot_pos": [
+        -212.621,
+        88.482,
+        -13.554
+      ]
+    },
+    {
+      "name": "glow_02",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -257.272,
+        79.357,
+        88.482
+      ],
+      "godot_pos": [
+        -257.272,
+        88.482,
+        -79.357
+      ]
+    },
+    {
+      "name": "glow_03",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -106.31,
+        194.139,
+        88.482
+      ],
+      "godot_pos": [
+        -106.31,
+        88.482,
+        -194.139
+      ]
+    },
+    {
+      "name": "glow_04",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        39.483,
+        165.031,
+        88.482
+      ],
+      "godot_pos": [
+        39.483,
+        88.482,
+        -165.031
+      ]
+    },
+    {
+      "name": "glow_05",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        29.332,
+        79.419,
+        88.482
+      ],
+      "godot_pos": [
+        29.332,
+        88.482,
+        -79.419
+      ]
+    },
+    {
+      "name": "glow_06",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        155.545,
+        142.29,
+        88.482
+      ],
+      "godot_pos": [
+        155.545,
+        88.482,
+        -142.29
+      ]
+    },
+    {
+      "name": "glow_07",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        130.876,
+        19.803,
+        88.482
+      ],
+      "godot_pos": [
+        130.876,
+        88.482,
+        -19.803
+      ]
+    },
+    {
+      "name": "glow_08",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -158.634,
+        334.862,
+        106.857
+      ],
+      "godot_pos": [
+        -158.634,
+        106.857,
+        -334.862
+      ]
+    },
+    {
+      "name": "glow_09",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -266.679,
+        471.663,
+        106.857
+      ],
+      "godot_pos": [
+        -266.679,
+        106.857,
+        -471.663
+      ]
+    },
+    {
+      "name": "glow_10",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -289.522,
+        394.084,
+        106.857
+      ],
+      "godot_pos": [
+        -289.522,
+        106.857,
+        -394.084
+      ]
+    },
+    {
+      "name": "glow_11",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -35.376,
+        403.985,
+        106.857
+      ],
+      "godot_pos": [
+        -35.376,
+        106.857,
+        -403.985
+      ]
+    },
+    {
+      "name": "glow_12",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -55.528,
+        468.694,
+        106.857
+      ],
+      "godot_pos": [
+        -55.528,
+        106.857,
+        -468.694
+      ]
+    },
+    {
+      "name": "glow_13",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        275.924,
+        92.396,
+        88.192
+      ],
+      "godot_pos": [
+        275.924,
+        88.192,
+        -92.396
+      ]
+    },
+    {
+      "name": "glow_14",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        351.029,
+        268.676,
+        88.192
+      ],
+      "godot_pos": [
+        351.029,
+        88.192,
+        -268.676
+      ]
+    },
+    {
+      "name": "glow_15",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        351.036,
+        337.996,
+        88.192
+      ],
+      "godot_pos": [
+        351.036,
+        88.192,
+        -337.996
+      ]
+    },
+    {
+      "name": "glow_16",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        399.034,
+        403.171,
+        88.192
+      ],
+      "godot_pos": [
+        399.034,
+        88.192,
+        -403.171
+      ]
+    },
+    {
+      "name": "glow_17",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        369.606,
+        468.535,
+        88.192
+      ],
+      "godot_pos": [
+        369.606,
+        88.192,
+        -468.535
+      ]
+    },
+    {
+      "name": "glassball",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -188.106,
+        42.118,
+        79.634
+      ],
+      "godot_pos": [
+        -188.106,
+        79.634,
+        -42.118
+      ]
+    },
+    {
+      "name": "miriam_table",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -188.118,
+        42.153,
+        76.173
+      ],
+      "godot_pos": [
+        -188.118,
+        76.173,
+        -42.153
+      ]
+    },
+    {
+      "name": "glassball_holder",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -188.092,
+        42.143,
+        78.765
+      ],
+      "godot_pos": [
+        -188.092,
+        78.765,
+        -42.143
+      ]
+    },
+    {
+      "name": "portalchoice_abra",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -188.1,
+        42.132,
+        79.636
+      ],
+      "godot_pos": [
+        -188.1,
+        79.636,
+        -42.132
+      ]
+    },
+    {
+      "name": "portalchoice_graal_mountain",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -188.101,
+        42.132,
+        79.636
+      ],
+      "godot_pos": [
+        -188.101,
+        79.636,
+        -42.132
+      ]
+    },
+    {
+      "name": "portalchoice_graal_bosslevel",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -188.101,
+        42.133,
+        79.636
+      ],
+      "godot_pos": [
+        -188.101,
+        79.636,
+        -42.133
+      ]
+    },
+    {
+      "name": "portalchoice_fatamorgana_city",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -188.102,
+        42.133,
+        79.636
+      ],
+      "godot_pos": [
+        -188.102,
+        79.636,
+        -42.133
+      ]
+    },
+    {
+      "name": "portalchoice_fatamorgana_palace",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -188.102,
+        42.134,
+        79.636
+      ],
+      "godot_pos": [
+        -188.102,
+        79.636,
+        -42.134
+      ]
+    },
+    {
+      "name": "portalchoice_fatamorgana_bosslevel",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -188.102,
+        42.134,
+        79.636
+      ],
+      "godot_pos": [
+        -188.102,
+        79.636,
+        -42.134
+      ]
+    },
+    {
+      "name": "portalchoice_magakhan_beach",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -188.103,
+        42.135,
+        79.636
+      ],
+      "godot_pos": [
+        -188.103,
+        79.636,
+        -42.135
+      ]
+    },
+    {
+      "name": "portalchoice_magakhan_jungle",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -188.103,
+        42.135,
+        79.636
+      ],
+      "godot_pos": [
+        -188.103,
+        79.636,
+        -42.135
+      ]
+    },
+    {
+      "name": "portalchoice_magakhan_palace",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -188.104,
+        42.135,
+        79.636
+      ],
+      "godot_pos": [
+        -188.104,
+        79.636,
+        -42.135
+      ]
+    },
+    {
+      "name": "portalchoice_magakhan_dungeon",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -188.104,
+        42.136,
+        79.636
+      ],
+      "godot_pos": [
+        -188.104,
+        79.636,
+        -42.136
+      ]
+    },
+    {
+      "name": "portalchoice_magakhan_endboss_level",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -188.104,
+        42.136,
+        79.636
+      ],
+      "godot_pos": [
+        -188.104,
+        79.636,
+        -42.136
+      ]
+    },
+    {
+      "name": "portalchoice_cave_end",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -188.105,
+        42.137,
+        79.636
+      ],
+      "godot_pos": [
+        -188.105,
+        79.636,
+        -42.137
+      ]
+    },
+    {
+      "name": "abra_signs",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "alwaysmovecamerainfront=1;",
+      "sw_pos": [
+        -142.921,
+        34.806,
+        93.184
+      ],
+      "godot_pos": [
+        -142.921,
+        93.184,
+        -34.806
+      ]
+    },
+    {
+      "name": "abra_uppercity",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -143.568,
+        391.87,
+        66.844
+      ],
+      "godot_pos": [
+        -143.568,
+        66.844,
+        -391.87
+      ]
+    },
+    {
+      "name": "objects_shop",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -192.238,
+        125.73,
+        65.317
+      ],
+      "godot_pos": [
+        -192.238,
+        65.317,
+        -125.73
+      ]
+    },
+    {
+      "name": "ship_shop_objects",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -156.379,
+        222.657,
+        77.124
+      ],
+      "godot_pos": [
+        -156.379,
+        77.124,
+        -222.657
+      ]
+    },
+    {
+      "name": "portalchoice_cave_end_bosslevel",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -188.104,
+        42.136,
+        79.636
+      ],
+      "godot_pos": [
+        -188.104,
+        79.636,
+        -42.136
+      ]
+    },
+    {
+      "name": "shop_lamp",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        -0.0,
+        0.013
+      ],
+      "godot_pos": [
+        0.0,
+        0.013,
+        0.0
+      ]
+    },
+    {
+      "name": "hiddenassets",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "shop_slingshot",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        -0.013
+      ],
+      "godot_pos": [
+        0.0,
+        -0.013,
+        -0.0
+      ]
+    },
+    {
+      "name": "shop_sword",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "linktobone=right_hand;",
+      "sw_pos": [
+        -1.44,
+        -0.0,
+        0.015
+      ],
+      "godot_pos": [
+        -1.44,
+        0.015,
+        0.0
+      ]
+    },
+    {
+      "name": "texturerenderformatinfo",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[\"abra_mainbuildings\", #rgba8880] ",
+      "kind": "group",
+      "parent": "texturerenderformatinfo",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[\"abra_mainbuildings_bright\", #rgba8880] ",
+      "kind": "group",
+      "parent": "texturerenderformatinfo",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "TestLight",
+      "kind": "light",
+      "parent": "DefaultView",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    }
+  ],
+  "skeletons": [],
+  "animations": []
+}

@@ -1,0 +1,612 @@
+{
+  "file": "opponent1.w3d",
+  "nodes": [
+    {
+      "name": "DefaultView",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "opponent1",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "collisionradius=2.8;",
+      "sw_pos": [
+        0.0,
+        -0.136,
+        7.67
+      ],
+      "godot_pos": [
+        0.0,
+        7.67,
+        0.136
+      ]
+    },
+    {
+      "name": "opponent1_proxy",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        -0.136,
+        7.67
+      ],
+      "godot_pos": [
+        0.0,
+        7.67,
+        0.136
+      ]
+    },
+    {
+      "name": "hiddenassets",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "userdata",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"opponent1_die\", #startxform: [#position: vector( -0.3648, -1.7589, 5.2571 ), #rotation: vector( 0.0000, 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"opponent1_die\", #startxform: [#position: vector( -0.3648, -1.7589, 5.2571 ), #rotation: vector( 0.0000, 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"opponent1_give\", #startxform: [#position: vector( -0.6603, -0.4974, 7.5319 ), #rotation: vector( 0.0000, 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #mountstart: \"0\", #mountend: \"35\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"opponent1_give\", #startxform: [#position: vector( -0.6603, -0.4974, 7.5319 ), #rotation: vector( 0.0000, 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"opponent1_hit\", #startxform: [#position: vector( -0.3648, -0.4974, 6.9325 ), #rotation: vector( 0.0000, 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"]  ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"opponent1_hit\", #startxform: [#position: vector( -0.3648, -0.4974, 6.9325 ), #rotation: vector( 0.0000, 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"opponent1_stand\", #startxform: [#position: vector( -0.6603, -0.4974, 7.5319 ), #rotation: vector( 0.0000, 0.0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"opponent1_stand\", #startxform: [#position: vector( -0.6603, -0.4974, 7.5319 ), #rotation: vector( 0.0000, 0.0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"opponent1_stand_sword\", #startxform: [#position: vector( -0.3648, -0.4974, 6.9325 ), #rotation: vector( 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"opponent1_stand_sword\", #startxform: [#position: vector( -0.3648, -0.4974, 6.9325 ), #rotation: vector( 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"opponent1_stand_talk\", #startxform: [#position: vector( -0.6603, -0.4974, 7.5319 ), #rotation: vector( 0.0000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, 0.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"opponent1_stand_talk\", #startxform: [#position: vector( -0.6603, -0.4974, 7.5319 ), #rotation: vector( 0.0000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"opponent1_swordswing\", #startxform: [#position: vector( -0.3648, -0.4974, 6.9325 ), #rotation: vector( 0.0000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, 0.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #impact: \"15\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"opponent1_swordswing\", #startxform: [#position: vector( -0.3648, -0.4974, 6.9325 ), #rotation: vector( 0.0000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"opponent1_turnleft\", #startxform: [#position: vector( -0.3648, -0.4951, 7.3198 ), #rotation: vector( 0.0000,  ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"opponent1_turnleft\", #startxform: [#position: vector( -0.3648, -0.4951, 7.3198 ), #rotation: vector( 0.0000,  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"opponent1_turnright\", #startxform: [#position: vector( -0.3648, -0.4951, 7.3198 ), #rotation: vector( 0.0000, ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz 0.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"opponent1_turnright\", #startxform: [#position: vector( -0.3648, -0.4951, 7.3198 ), #rotation: vector( 0.0000, ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"opponent1_walk\", #startxform: [#position: vector( 0.1468, 0.1722, 7.5596 ), #rotation: vector( 0.0000, 0.0000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, 0.0000 )], #distancepercycle: \"15.657\", #minimumspeed: \"0.7\", #maximumspeed: \"1.5\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"opponent1_walk\", #startxform: [#position: vector( 0.1468, 0.1722, 7.5596 ), #rotation: vector( 0.0000, 0.0000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"opponent1_walk_talk\", #startxform: [#position: vector( 0.0000, 0.1722, 6.7529 ), #rotation: vector( 0.0000, 0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz.0000, 0.0000 )], #distancepercycle: \"15.657\", #minimumspeed: \"0.7\", #maximumspeed: \"1.5\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"opponent1_walk_talk\", #startxform: [#position: vector( 0.0000, 0.1722, 6.7529 ), #rotation: vector( 0.0000, 0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "objectlinkedtobonesplayerinfo",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[[#bonedmodel: \"opponent1\", #object: \"dizzystars\", #boneid: 29, #xform: [#rotation: vector( -129.6414, 90.0000, 0.0000 ), # ",
+      "kind": "group",
+      "parent": "objectlinkedtobonesplayerinfo",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzzposition: vector( -3.4699, 1.4584, 0.1234 )]], [#bonedmodel: \"opponent1\", #object: \"sword_hand\", #boneid: 21, #xform: [#rot ",
+      "kind": "group",
+      "parent": "zzz[[#bonedmodel: \"opponent1\", #object: \"dizzystars\", #boneid: 29, #xform: [#rotation: vector( -129.6414, 90.0000, 0.0000 ), # ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzzation: vector( 14.7025, -59.6191, 74.0461 ), #position: vector( 1.3145, 2.1090, -1.5016 )]], [#bonedmodel: \"opponent1\", #ob ",
+      "kind": "group",
+      "parent": "zzzposition: vector( -3.4699, 1.4584, 0.1234 )]], [#bonedmodel: \"opponent1\", #object: \"sword_hand\", #boneid: 21, #xform: [#rot ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzzject: \"sword_belt\", #boneid: 1, #xform: [#rotation: vector( -36.2512, 6.2376, 13.8675 ), #position: vector( 2.6828, 0.2185, ",
+      "kind": "group",
+      "parent": "zzzation: vector( 14.7025, -59.6191, 74.0461 ), #position: vector( 1.3145, 2.1090, -1.5016 )]], [#bonedmodel: \"opponent1\", #ob ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz -0.7677 )]]] ",
+      "kind": "group",
+      "parent": "zzzject: \"sword_belt\", #boneid: 1, #xform: [#rotation: vector( -36.2512, 6.2376, 13.8675 ), #position: vector( 2.6828, 0.2185, ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "TestLight",
+      "kind": "light",
+      "parent": "DefaultView",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    }
+  ],
+  "skeletons": [],
+  "animations": [
+    {
+      "name": "opponent1",
+      "tracks": 34,
+      "size": 2529
+    },
+    {
+      "name": "opponent1_die",
+      "tracks": 34,
+      "size": 6128
+    },
+    {
+      "name": "opponent1_give",
+      "tracks": 34,
+      "size": 7039
+    },
+    {
+      "name": "opponent1_hit",
+      "tracks": 34,
+      "size": 9155
+    },
+    {
+      "name": "opponent1_stand",
+      "tracks": 34,
+      "size": 16680
+    },
+    {
+      "name": "opponent1_stand_sword",
+      "tracks": 34,
+      "size": 5552
+    },
+    {
+      "name": "opponent1_stand_talk",
+      "tracks": 34,
+      "size": 8142
+    },
+    {
+      "name": "opponent1_swordswing",
+      "tracks": 34,
+      "size": 8811
+    },
+    {
+      "name": "opponent1_turnleft",
+      "tracks": 34,
+      "size": 5827
+    },
+    {
+      "name": "opponent1_turnright",
+      "tracks": 34,
+      "size": 5828
+    },
+    {
+      "name": "opponent1_walk",
+      "tracks": 34,
+      "size": 6771
+    },
+    {
+      "name": "opponent1_walk_talk",
+      "tracks": 34,
+      "size": 6776
+    }
+  ]
+}

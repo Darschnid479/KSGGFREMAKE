@@ -1,0 +1,1006 @@
+{
+  "abra": {
+    "nodes": 61,
+    "skeletons": 0,
+    "animations": []
+  },
+  "abra_npc1": {
+    "nodes": 14,
+    "skeletons": 0,
+    "animations": [
+      "abra_npc1",
+      "abra_npc1_stand",
+      "abra_npc1_stand_breathe",
+      "abra_npc1_turnleft",
+      "abra_npc1_turnright"
+    ]
+  },
+  "abra_npc2": {
+    "nodes": 14,
+    "skeletons": 1,
+    "animations": [
+      "abra_npc2",
+      "abra_npc2_stand",
+      "abra_npc2_stand_breathe",
+      "abra_npc2_turnleft",
+      "abra_npc2_turnright"
+    ]
+  },
+  "abra_npc3": {
+    "nodes": 14,
+    "skeletons": 0,
+    "animations": [
+      "abra_npc3",
+      "abra_npc3_stand",
+      "abra_npc3_stand_breathe",
+      "abra_npc3_turnleft",
+      "abra_npc3_turnright"
+    ]
+  },
+  "abra_npc4": {
+    "nodes": 16,
+    "skeletons": 0,
+    "animations": [
+      "abra_npc4",
+      "abra_npc4_stand",
+      "abra_npc4_stand_blowkiss",
+      "abra_npc4_stand_breathe",
+      "abra_npc4_turnleft",
+      "abra_npc4_turnright"
+    ]
+  },
+  "arab_boy": {
+    "nodes": 29,
+    "skeletons": 0,
+    "animations": [
+      "arab_boy",
+      "arab_boy_give",
+      "arab_boy_run",
+      "arab_boy_run_talk",
+      "arab_boy_stand",
+      "arab_boy_stand_breathe",
+      "arab_boy_stand_talk",
+      "arab_boy_turnleft",
+      "arab_boy_turnright",
+      "arab_boy_walk",
+      "arab_boy_walk_talk"
+    ]
+  },
+  "arab_guard1": {
+    "nodes": 30,
+    "skeletons": 0,
+    "animations": [
+      "arab_guard1",
+      "arab_guard1_die",
+      "arab_guard1_hit",
+      "arab_guard1_run",
+      "arab_guard1_stand",
+      "arab_guard1_standsword",
+      "arab_guard1_swordswing",
+      "arab_guard1_turnleft",
+      "arab_guard1_turnright",
+      "arab_guard1_walk"
+    ]
+  },
+  "arab_guard2": {
+    "nodes": 22,
+    "skeletons": 0,
+    "animations": [
+      "arab_guard2",
+      "arab_guard2_hit",
+      "arab_guard2_run",
+      "arab_guard2_stand",
+      "arab_guard2_stand_lookaround",
+      "arab_guard2_stand_talk",
+      "arab_guard2_turnleft",
+      "arab_guard2_turnright",
+      "arab_guard2_walk"
+    ]
+  },
+  "benjamin": {
+    "nodes": 14,
+    "skeletons": 0,
+    "animations": [
+      "benjamin",
+      "benjamin_stand",
+      "benjamin_stand_talk",
+      "benjamin_turnleft",
+      "benjamin_turnright"
+    ]
+  },
+  "carpet_salesman": {
+    "nodes": 17,
+    "skeletons": 0,
+    "animations": [
+      "carpet_salesman",
+      "carpet_salesman_give",
+      "carpet_salesman_stand",
+      "carpet_salesman_stand_breathe",
+      "carpet_salesman_stand_talk"
+    ]
+  },
+  "cave": {
+    "nodes": 125,
+    "skeletons": 0,
+    "animations": [
+      "crushablewall_crush_rock_1_cave_crushablewall",
+      "crushablewall_crush_rock_2_cave_crushablewall",
+      "crushablewall_crush_rock_3_cave_crushablewall",
+      "crushablewall_crush_rock_4_cave_crushablewall",
+      "crushablewall_crush_rock_5_cave_crushablewall",
+      "crushablewall_crush_rock_6_cave_crushablewall",
+      "crushablewall_crush_rock_7_cave_crushablewall",
+      "crushablewall_crush_rock_8_cave_crushablewall",
+      "crushablewall_crush_rock_9_cave_crushablewall",
+      "crushablewall_crush_rock_10_cave_crushablewall",
+      "crushablewall_crush_rock_11_cave_crushablewall",
+      "crushablewall_crush_rock_12_cave_crushablewall",
+      "crush_rock_1-Key",
+      "crush_rock_2-Key",
+      "crush_rock_3-Key",
+      "crush_rock_4-Key",
+      "crush_rock_5-Key",
+      "crush_rock_6-Key",
+      "crush_rock_7-Key",
+      "crush_rock_8-Key",
+      "crush_rock_9-Key",
+      "crush_rock_10-Key",
+      "crush_rock_11-Key",
+      "crush_rock_12-Key",
+      "cave_coffin_top_open-key",
+      "curse_1_up-key",
+      "curse_2_up-key",
+      "curse_3_up-key",
+      "langemann_intro_duck",
+      "pelle_intro_look",
+      "pelle_intro_push",
+      "pinky_intro_duck",
+      "sabeltann_intro_duck"
+    ]
+  },
+  "cave_end": {
+    "nodes": 63,
+    "skeletons": 0,
+    "animations": []
+  },
+  "cave_end_bosslevel": {
+    "nodes": 123,
+    "skeletons": 0,
+    "animations": [
+      "pinky_intro",
+      "skeleton_boss",
+      "skeleton_boss_castmagic",
+      "skeleton_boss_die",
+      "cave_coffin_top_close-key",
+      "curse_1-key",
+      "curse_2-key",
+      "curse_3-key",
+      "curse_4-key",
+      "skeleton_boss_fire",
+      "skeleton_boss_hit",
+      "skeleton_boss_intro",
+      "skeleton_boss_laugh",
+      "skeleton_boss_stand",
+      "statue",
+      "statue_charge",
+      "statue_die_statue_piece02_statue_die",
+      "statue_die_statue_piece03_statue_die",
+      "statue_die_statue_piece01_statue_die",
+      "statue_die_statue_piece06_statue_die",
+      "statue_die_statue_piece13_statue_die",
+      "statue_die_statue_piece07_statue_die",
+      "statue_die_statue_piece11_statue_die",
+      "statue_die_statue_piece12_statue_die",
+      "statue_die_statue_piece09_statue_die",
+      "statue_die_statue_piece04_statue_die",
+      "statue_die_statue_piece05_statue_die",
+      "statue_die_statue_piece08_statue_die",
+      "statue_piece02-Key",
+      "statue_piece03-Key",
+      "statue_piece01-Key",
+      "statue_piece06-Key",
+      "statue_piece13-Key",
+      "statue_piece07-Key",
+      "statue_piece11-Key",
+      "statue_piece12-Key",
+      "statue_piece09-Key",
+      "statue_piece04-Key",
+      "statue_piece05-Key",
+      "statue_piece08-Key",
+      "statue_hit",
+      "statue_hitwall",
+      "statue_jumpdown",
+      "statue_run",
+      "statue_stand",
+      "statue_turnleft",
+      "statue_turnright",
+      "statue_walk"
+    ]
+  },
+  "chiefs_daughter": {
+    "nodes": 21,
+    "skeletons": 0,
+    "animations": [
+      "chiefs_daughter",
+      "chiefs_daughter_run",
+      "chiefs_daughter_stand_breathe",
+      "chiefs_daughter_stand_talk",
+      "chiefs_daughter_turnleft",
+      "chiefs_daughter_turnright",
+      "chiefs_daughter_walk",
+      "chiefs_daughter_walk_talk"
+    ]
+  },
+  "dog": {
+    "nodes": 10,
+    "skeletons": 0,
+    "animations": [
+      "dog",
+      "dog_sit_breathe",
+      "dog_stand"
+    ]
+  },
+  "fatamorgana_bosslevel": {
+    "nodes": 102,
+    "skeletons": 0,
+    "animations": [
+      "fatamorgana_boss",
+      "fatamorgana_boss_die",
+      "fatamorgana_boss_hitvase",
+      "fatamorgana_boss_intro",
+      "fatamorgana_boss_run",
+      "fatamorgana_boss_stand",
+      "fatamorgana_boss_walk",
+      "pinky_intro",
+      "door_right-key",
+      "door_left-key",
+      "vase_vase_piece_00_vase",
+      "vase_vase_piece_01_vase",
+      "vase_vase_piece_02_vase",
+      "vase_vase_piece_03_vase",
+      "vase_vase_piece_04_vase",
+      "vase_vase_piece_05_vase",
+      "vase_vase_piece_06_vase",
+      "vase_vase_piece_07_vase",
+      "vase_vase_piece_08_vase",
+      "vase_vase_piece_09_vase",
+      "vase_vase_piece_10_vase",
+      "vase_vase_piece_11_vase",
+      "vase_vase_piece_12_vase",
+      "vase_vase_piece_13_vase",
+      "vase_vase_piece_14_vase",
+      "vase_vase_piece_15_vase",
+      "vase_piece_00-Key",
+      "vase_piece_01-Key",
+      "vase_piece_02-Key",
+      "vase_piece_03-Key",
+      "vase_piece_04-Key",
+      "vase_piece_05-Key",
+      "vase_piece_06-Key",
+      "vase_piece_07-Key",
+      "vase_piece_08-Key",
+      "vase_piece_09-Key",
+      "vase_piece_10-Key",
+      "vase_piece_11-Key",
+      "vase_piece_12-Key",
+      "vase_piece_13-Key",
+      "vase_piece_14-Key",
+      "vase_piece_15-Key"
+    ]
+  },
+  "fatamorgana_city": {
+    "nodes": 48,
+    "skeletons": 0,
+    "animations": [
+      "bullseye_anim-key",
+      "flyingcarpet",
+      "flyingcarpet_fly",
+      "pelle_pickup",
+      "pelle_pickup_high"
+    ]
+  },
+  "fatamorgana_palace": {
+    "nodes": 102,
+    "skeletons": 0,
+    "animations": []
+  },
+  "fatamorgana_underwater": {
+    "nodes": 13,
+    "skeletons": 0,
+    "animations": []
+  },
+  "female1": {
+    "nodes": 18,
+    "skeletons": 0,
+    "animations": [
+      "female1",
+      "female1_stand",
+      "female1_stand_talk",
+      "female1_turnleft",
+      "female1_turnright",
+      "female1_walk",
+      "female1_walk_talk"
+    ]
+  },
+  "fm_npc1": {
+    "nodes": 14,
+    "skeletons": 0,
+    "animations": [
+      "fm_npc1",
+      "fm_npc1_stand",
+      "fm_npc1_stand_breathe",
+      "fm_npc1_turnleft",
+      "fm_npc1_turnright"
+    ]
+  },
+  "fm_npc2": {
+    "nodes": 14,
+    "skeletons": 0,
+    "animations": [
+      "fm_npc2",
+      "fm_npc2_stand",
+      "fm_npc2_stand_breathe",
+      "fm_npc2_turnleft",
+      "fm_npc2_turnright"
+    ]
+  },
+  "fm_npc3": {
+    "nodes": 14,
+    "skeletons": 0,
+    "animations": [
+      "fm_npc3",
+      "fm_npc3_stand",
+      "fm_npc3_stand_breathe",
+      "fm_npc3_turnleft",
+      "fm_npc3_turnright"
+    ]
+  },
+  "fm_npc4": {
+    "nodes": 14,
+    "skeletons": 0,
+    "animations": [
+      "fm_npc4",
+      "fm_npc4_stand",
+      "fm_npc4_stand_breathe",
+      "fm_npc4_turnleft",
+      "fm_npc4_turnright"
+    ]
+  },
+  "generic": {
+    "nodes": 72,
+    "skeletons": 0,
+    "animations": [
+      "breakablebarrel_barrel_debris05_breakablebarrel",
+      "breakablebarrel_barrel_debris06_breakablebarrel",
+      "breakablebarrel_barrel_debris09_breakablebarrel",
+      "breakablebarrel_barrel_debris08_breakablebarrel",
+      "breakablebarrel_barrel_debris02_breakablebarrel",
+      "breakablebarrel_barrel_debris04_breakablebarrel",
+      "breakablebarrel_barrel_debris07_breakablebarrel",
+      "breakablebarrel_barrel_debris10_breakablebarrel",
+      "breakablebarrel_barrel_debris11_breakablebarrel",
+      "breakablebarrel_barrel_debris12_breakablebarrel",
+      "breakablebarrel_barrel_debris01_breakablebarrel",
+      "breakablebarrel_barrel_debris03_breakablebarrel",
+      "breakablebarrel_barrel_debris13_breakablebarrel",
+      "breakablebarrel_barrel_debris14_breakablebarrel",
+      "breakablebarrel_barrel_debris15_breakablebarrel",
+      "breakablebarrel_barrel_debris16_breakablebarrel",
+      "breakablebarrel_barrel_base_breakablebarrel",
+      "barrel_debris05-Key",
+      "barrel_debris06-Key",
+      "barrel_debris09-Key",
+      "barrel_debris08-Key",
+      "barrel_debris02-Key",
+      "barrel_debris04-Key",
+      "barrel_debris07-Key",
+      "barrel_debris10-Key",
+      "barrel_debris11-Key",
+      "barrel_debris12-Key",
+      "barrel_debris01-Key",
+      "barrel_debris03-Key",
+      "barrel_debris13-Key",
+      "barrel_debris14-Key",
+      "barrel_debris15-Key",
+      "barrel_debris16-Key",
+      "barrel_base-Key",
+      "coppercoin-key",
+      "goldcoin-key"
+    ]
+  },
+  "ghost": {
+    "nodes": 4,
+    "skeletons": 0,
+    "animations": []
+  },
+  "graal_bosslevel": {
+    "nodes": 76,
+    "skeletons": 0,
+    "animations": [
+      "catapult",
+      "catapult_idle",
+      "catapult_shoot",
+      "Graal_Boss",
+      "graal_boss_die",
+      "graal_boss_hit",
+      "graal_boss_intro",
+      "graal_boss_run",
+      "graal_boss_run_talk",
+      "graal_boss_shootfireball",
+      "graal_boss_stand",
+      "graal_boss_stand_talk",
+      "graal_boss_turnleft",
+      "graal_boss_turnright",
+      "graal_boss_walk",
+      "graal_boss_walk_talk",
+      "pinky_graal_boss_intro"
+    ]
+  },
+  "graal_mountain": {
+    "nodes": 52,
+    "skeletons": 0,
+    "animations": []
+  },
+  "graal_underwater": {
+    "nodes": 19,
+    "skeletons": 0,
+    "animations": []
+  },
+  "langemann": {
+    "nodes": 49,
+    "skeletons": 0,
+    "animations": [
+      "langemann",
+      "langemann_climb_down",
+      "langemann_climb_up",
+      "langemann_hit",
+      "langemann_jump",
+      "langemann_run",
+      "langemann_stand",
+      "langemann_standsword",
+      "langemann_lookaround",
+      "langemann_stand_talk",
+      "langemann_stand_yawn",
+      "langemann_swordswing",
+      "langemann_turnleft",
+      "box01-key",
+      "box02-key",
+      "langemann_turnright",
+      "langemann_walk",
+      "langemann_walk_talk"
+    ]
+  },
+  "maga_khan": {
+    "nodes": 36,
+    "skeletons": 0,
+    "animations": [
+      "Maga_Khan",
+      "maga_khan_die",
+      "maga_khan_hit",
+      "maga_khan_run",
+      "maga_khan_stand",
+      "maga_khan_standsword",
+      "maga_khan_stand_breathe",
+      "maga_khan_stand_talk",
+      "maga_khan_swordswing",
+      "maga_khan_turnleft",
+      "maga_khan_turnright",
+      "maga_khan_walk",
+      "maga_khan_walk_talk",
+      "maga_khan_win"
+    ]
+  },
+  "magakhan_beach": {
+    "nodes": 32,
+    "skeletons": 0,
+    "animations": [
+      "sabeltann_stand_rapier_talk"
+    ]
+  },
+  "magakhan_dungeon": {
+    "nodes": 118,
+    "skeletons": 0,
+    "animations": []
+  },
+  "magakhan_dungeon_underwater": {
+    "nodes": 28,
+    "skeletons": 0,
+    "animations": []
+  },
+  "magakhan_endboss_level": {
+    "nodes": 74,
+    "skeletons": 0,
+    "animations": [
+      "door_1-key",
+      "door_2-key",
+      "mk_bossdragon",
+      "mk_bossdragon_die",
+      "mk_bossdragon_hittail",
+      "mk_bossdragon_jumpout",
+      "mk_bossdragon_stand",
+      "mk_bossdragon_stand_blowlvl1",
+      "mk_bossdragon_stand_blowlvl2",
+      "mk_bossdragon_turnleft",
+      "mk_bossdragon_turnleft_blowlvl1",
+      "mk_bossdragon_turnright",
+      "mk_bossdragon_turnright_blowlvl1"
+    ]
+  },
+  "magakhan_jungle": {
+    "nodes": 71,
+    "skeletons": 0,
+    "animations": [
+      "crocodile",
+      "crocodile_attack",
+      "crocodile_swim",
+      "jungle_gatedoor02-key",
+      "jungle_gatedoor01-key"
+    ]
+  },
+  "magakhan_palace": {
+    "nodes": 91,
+    "skeletons": 0,
+    "animations": []
+  },
+  "mainmenu": {
+    "nodes": 7,
+    "skeletons": 0,
+    "animations": []
+  },
+  "malena": {
+    "nodes": 20,
+    "skeletons": 0,
+    "animations": [
+      "malena",
+      "malena_run",
+      "malena_stand",
+      "malena_stand_talk",
+      "malena_turnleft",
+      "malena_turnright",
+      "malena_walk",
+      "malena_walk_talk"
+    ]
+  },
+  "meatplant": {
+    "nodes": 20,
+    "skeletons": 0,
+    "animations": [
+      "meatplant",
+      "meatplant_attack",
+      "meatplant_die",
+      "meatplant_idle",
+      "meatplant_receive",
+      "meatplant_sleep",
+      "meatplant_stand",
+      "meatplant_yawn"
+    ]
+  },
+  "miriam": {
+    "nodes": 14,
+    "skeletons": 0,
+    "animations": [
+      "miriam",
+      "miriam_stand",
+      "miriam_stand_mumbojumbo",
+      "miriam_stand_talk",
+      "miriam_stand_talk_mumbojumbo"
+    ]
+  },
+  "mk_henchman1": {
+    "nodes": 29,
+    "skeletons": 0,
+    "animations": [
+      "mk_henchman1",
+      "mk_henchman1_die",
+      "mk_henchman1_hit",
+      "mk_henchman1_run",
+      "mk_henchman1_stand",
+      "mk_henchman1_standguard",
+      "mk_henchman1_swordswing",
+      "mk_henchman1_turnleft",
+      "mk_henchman1_turnright",
+      "mk_henchman1_walk"
+    ]
+  },
+  "movablecrate": {
+    "nodes": 4,
+    "skeletons": 0,
+    "animations": []
+  },
+  "opponent1": {
+    "nodes": 34,
+    "skeletons": 0,
+    "animations": [
+      "opponent1",
+      "opponent1_die",
+      "opponent1_give",
+      "opponent1_hit",
+      "opponent1_stand",
+      "opponent1_stand_sword",
+      "opponent1_stand_talk",
+      "opponent1_swordswing",
+      "opponent1_turnleft",
+      "opponent1_turnright",
+      "opponent1_walk",
+      "opponent1_walk_talk"
+    ]
+  },
+  "opponent2": {
+    "nodes": 36,
+    "skeletons": 0,
+    "animations": [
+      "opponent2",
+      "opponent2_die",
+      "opponent2_give",
+      "opponent2_hit",
+      "opponent2_stand",
+      "opponent2_stand_breathe",
+      "opponent2_stand_sword",
+      "opponent2_stand_talk",
+      "opponent2_swordswing",
+      "opponent2_turnleft",
+      "opponent2_turnright",
+      "opponent2_walk",
+      "opponent2_walk_talk"
+    ]
+  },
+  "opponent3": {
+    "nodes": 34,
+    "skeletons": 0,
+    "animations": [
+      "opponent3",
+      "opponent3_die",
+      "opponent3_give",
+      "opponent3_hit",
+      "opponent3_stand",
+      "opponent3_stand_sword",
+      "opponent3_stand_talk",
+      "opponent3_swordswing",
+      "opponent3_turnleft",
+      "opponent3_turnright",
+      "opponent3_walk",
+      "opponent3_walk_talk"
+    ]
+  },
+  "outro": {
+    "nodes": 56,
+    "skeletons": 0,
+    "animations": [
+      "island_cave-key",
+      "darklady-key",
+      "water_edge_animate-key"
+    ]
+  },
+  "panther": {
+    "nodes": 26,
+    "skeletons": 1,
+    "animations": [
+      "Panther",
+      "panther_attack_long",
+      "panther_hit",
+      "panther_run",
+      "panther_run_away",
+      "panther_stand",
+      "panther_turnleft",
+      "panther_turnright",
+      "panther_walk",
+      "panther_walk_backwards"
+    ]
+  },
+  "pelle": {
+    "nodes": 57,
+    "skeletons": 0,
+    "animations": [
+      "pelle",
+      "pelle_climb_down",
+      "pelle_climb_up",
+      "pelle_drink",
+      "pelle_drinkhotsauce",
+      "pelle_hit",
+      "pelle_jump",
+      "pelle_run",
+      "pelle_run_talk",
+      "pelle_stand",
+      "pelle_standsword",
+      "pelle_stand_sword",
+      "pelle_stand_talk",
+      "pelle_swordswing",
+      "pelle_throw",
+      "pelle_turnleft",
+      "box01-key",
+      "box02-key",
+      "pelle_turnright",
+      "pelle_walk",
+      "pelle_walkbackwards",
+      "pelle_walk_talk"
+    ]
+  },
+  "pinky": {
+    "nodes": 193,
+    "skeletons": 1,
+    "animations": [
+      "crosshair",
+      "crosshair_move",
+      "pinky",
+      "pinky_climbintowell",
+      "pinky_climboncrate",
+      "pinky_climboutofwell",
+      "pinky_climb_down",
+      "pinky_climb_up",
+      "pinky_die",
+      "pinky_dig",
+      "pinky_divein",
+      "pinky_float",
+      "pinky_float_hit",
+      "pinky_give",
+      "pinky_gong",
+      "pinky_hit",
+      "pinky_hit_speedvariation1",
+      "pinky_hit_speedvariation2",
+      "pinky_jump",
+      "pinky_magicswitch",
+      "pinky_pickup",
+      "pinky_pickup_high",
+      "pinky_pull",
+      "movablecrate_pull-key",
+      "pinky_push",
+      "movablecrate_push-key",
+      "pinky_putsomethinginjug",
+      "pinky_receive",
+      "pinky_run",
+      "pinky_run_talk",
+      "pinky_shadow",
+      "pinky_slingshot_shoot",
+      "pinky_slingshot_shoot_end",
+      "pinky_slingshot_shoot_loop",
+      "pinky_slingshot_shoot_start",
+      "pinky_slingshot_stand",
+      "pinky_stand",
+      "pinky_stand_breathe",
+      "pinky_stand_lamp",
+      "pinky_stand_lamp_talk",
+      "pinky_stand_sword",
+      "pinky_stand_sword_talk",
+      "pinky_stand_talk",
+      "pinky_swim",
+      "pinky_swordswing",
+      "pinky_swordswing_speedvariation1",
+      "pinky_swordswing_speedvariation2",
+      "pinky_thrown",
+      "pinky_turnleft",
+      "pinky_turnleft-key",
+      "pinky_turnleft_lamp",
+      "pinky_turnright",
+      "pinky_turnright-key",
+      "pinky_turnright_lamp",
+      "pinky_turnright_lamp-key",
+      "pinky_walk",
+      "pinky_walkbackwards",
+      "pinky_walkbackwards_lamp",
+      "pinky_walk_lamp",
+      "pinky_walk_lamp_talk",
+      "pinky_walk_talk",
+      "pinky_win",
+      "slingshot",
+      "slingshot_mounted",
+      "slingshot_shoot",
+      "slingshot_shoot_end",
+      "slingshot_shoot_start",
+      "slingshot_stand"
+    ]
+  },
+  "profile_compressed": {
+    "nodes": 4,
+    "skeletons": 0,
+    "animations": []
+  },
+  "sabeltann": {
+    "nodes": 56,
+    "skeletons": 0,
+    "animations": [
+      "sabeltann",
+      "sabeltann_climb_down",
+      "sabeltann_climb_up",
+      "sabeltann_die",
+      "sabeltann_hit",
+      "sabeltann_jump",
+      "sabeltann_run",
+      "sabeltann_run_talk",
+      "sabeltann_stand",
+      "sabeltann_stand_rapier",
+      "sabeltann_stand_rapier_talk",
+      "sabeltann_stand_talk",
+      "sabeltann_swordswing",
+      "sabeltann_turnleft",
+      "box01-key",
+      "box02-key",
+      "sabeltann_turnright",
+      "sabeltann_walk",
+      "sabeltann_walk_talk",
+      "sabeltann_win"
+    ]
+  },
+  "shopkeeper": {
+    "nodes": 17,
+    "skeletons": 0,
+    "animations": [
+      "shopkeeper",
+      "shopkeeper_give",
+      "shopkeeper_stand",
+      "shopkeeper_stand_breathe",
+      "shopkeeper_stand_talk"
+    ]
+  },
+  "shopkeeper2": {
+    "nodes": 21,
+    "skeletons": 0,
+    "animations": [
+      "shopkeeper2",
+      "shopkeeper2_give",
+      "box01-key",
+      "shopkeeper2_stand",
+      "shopkeeper2_stand_talk",
+      "shopkeeper2_turnleft",
+      "shopkeeper2_turnright"
+    ]
+  },
+  "sirikit": {
+    "nodes": 18,
+    "skeletons": 0,
+    "animations": [
+      "sirikit",
+      "sirikit_stand",
+      "sirikit_stand_talk",
+      "sirikit_turnleft",
+      "sirikit_turnright",
+      "sirikit_walk",
+      "sirikit_walk_talk"
+    ]
+  },
+  "skalken": {
+    "nodes": 27,
+    "skeletons": 0,
+    "animations": [
+      "skalken",
+      "skalken_breathe",
+      "skalken_give",
+      "skalken_receive",
+      "skalken_stand",
+      "skalken_talk",
+      "skalken_turnleft",
+      "skalken_turnright",
+      "skalken_walk",
+      "skalken_walk_talk"
+    ]
+  },
+  "skeleton": {
+    "nodes": 23,
+    "skeletons": 0,
+    "animations": [
+      "skeleton",
+      "skeleton_die",
+      "skeleton_hit",
+      "skeleton_ressurect",
+      "skeleton_run",
+      "skeleton_stand",
+      "skeleton_swordswing",
+      "skeleton_walk"
+    ]
+  },
+  "sultan": {
+    "nodes": 16,
+    "skeletons": 0,
+    "animations": [
+      "sultan",
+      "sultan_stand",
+      "sultan_stand_breathe",
+      "sultan_stand_talk",
+      "sultan_turnleft",
+      "sultan_turnright"
+    ]
+  },
+  "sunniva": {
+    "nodes": 20,
+    "skeletons": 0,
+    "animations": [
+      "sunniva",
+      "sunniva_stand",
+      "sunniva_stand_breathe",
+      "sunniva_stand_talk",
+      "sunniva_turnleft",
+      "sunniva_turnright",
+      "sunniva_walk",
+      "sunniva_walk_talk"
+    ]
+  },
+  "swimming": {
+    "nodes": 15,
+    "skeletons": 0,
+    "animations": [
+      "pinky_divein",
+      "pinky_float",
+      "pinky_float_die",
+      "pinky_float_hit",
+      "pinky_swim"
+    ]
+  },
+  "testlevel": {
+    "nodes": 45,
+    "skeletons": 0,
+    "animations": [
+      "crushablewall_crush_rock_1_cave_crushablewall",
+      "crushablewall_crush_rock_2_cave_crushablewall",
+      "crushablewall_crush_rock_3_cave_crushablewall",
+      "crushablewall_crush_rock_4_cave_crushablewall",
+      "crushablewall_crush_rock_5_cave_crushablewall",
+      "crushablewall_crush_rock_6_cave_crushablewall",
+      "crushablewall_crush_rock_7_cave_crushablewall",
+      "crushablewall_crush_rock_8_cave_crushablewall",
+      "crushablewall_crush_rock_9_cave_crushablewall",
+      "crushablewall_crush_rock_10_cave_crushablewall",
+      "crushablewall_crush_rock_11_cave_crushablewall",
+      "crushablewall_crush_rock_12_cave_crushablewall",
+      "crush_rock_1-Key",
+      "crush_rock_2-Key",
+      "crush_rock_3-Key",
+      "crush_rock_4-Key",
+      "crush_rock_5-Key",
+      "crush_rock_6-Key",
+      "crush_rock_7-Key",
+      "crush_rock_8-Key",
+      "crush_rock_9-Key",
+      "crush_rock_10-Key",
+      "crush_rock_11-Key",
+      "crush_rock_12-Key",
+      "pinky_test1",
+      "pinky_test2"
+    ]
+  },
+  "treasurehunt": {
+    "nodes": 36,
+    "skeletons": 0,
+    "animations": [
+      "pinky_onestep_left",
+      "pinky_onestep_right",
+      "pinky_treasure_lose",
+      "sabeltann_stand_map",
+      "sabeltann_stand_map_talk"
+    ]
+  },
+  "tribesman": {
+    "nodes": 24,
+    "skeletons": 0,
+    "animations": [
+      "tribesman",
+      "tribesman_attack",
+      "tribesman_die",
+      "tribesman_hide",
+      "tribesman_hit",
+      "tribesman_runaway",
+      "tribesman_stand",
+      "tribesman_turn",
+      "tribesman_turnleft",
+      "tribesman_turnright"
+    ]
+  },
+  "water": {
+    "nodes": 5,
+    "skeletons": 0,
+    "animations": []
+  },
+  "world_map": {
+    "nodes": 94,
+    "skeletons": 0,
+    "animations": []
+  },
+  "world_map_underwater": {
+    "nodes": 29,
+    "skeletons": 0,
+    "animations": [
+      "piraya",
+      "piraya_swim",
+      "shark",
+      "shark_swim"
+    ]
+  }
+}

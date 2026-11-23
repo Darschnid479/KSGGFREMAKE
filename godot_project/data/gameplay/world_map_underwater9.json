@@ -1,0 +1,320 @@
+{
+  "file": "world_map_underwater9_gameplay.w3d",
+  "nodes": [
+    {
+      "name": "scriptingdata",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "object_coppercoin_3",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "resource = coppercoin;",
+      "sw_pos": [
+        19.633,
+        -33.328,
+        0.0
+      ],
+      "godot_pos": [
+        19.633,
+        0.0,
+        33.328
+      ]
+    },
+    {
+      "name": "object_coppercoin_4",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "resource = coppercoin;",
+      "sw_pos": [
+        -28.298,
+        -67.815,
+        0.0
+      ],
+      "godot_pos": [
+        -28.298,
+        0.0,
+        67.815
+      ]
+    },
+    {
+      "name": "piraya_2",
+      "kind": "model",
+      "parent": "scriptingdata",
+      "userdata": "addanimatedmodel=piraya|piraya_swim;\r\nanimationendframe=690;\r\n\r\nswimobstacle=1;",
+      "sw_pos": [
+        109.422,
+        -105.382,
+        0.0
+      ],
+      "godot_pos": [
+        109.422,
+        0.0,
+        105.382
+      ]
+    },
+    {
+      "name": "object_coppercoin_5",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "resource = coppercoin;",
+      "sw_pos": [
+        3.658,
+        132.419,
+        0.0
+      ],
+      "godot_pos": [
+        3.658,
+        0.0,
+        -132.419
+      ]
+    },
+    {
+      "name": "object_coppercoin_6",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "resource = coppercoin;",
+      "sw_pos": [
+        3.588,
+        177.599,
+        0.0
+      ],
+      "godot_pos": [
+        3.588,
+        0.0,
+        -177.599
+      ]
+    },
+    {
+      "name": "mine_04",
+      "kind": "model",
+      "parent": "scriptingdata",
+      "userdata": "swimobstacle=1;\r\nanimationendframe=600;",
+      "sw_pos": [
+        -20.147,
+        -0.008,
+        -0.19
+      ],
+      "godot_pos": [
+        -20.147,
+        -0.19,
+        0.008
+      ]
+    },
+    {
+      "name": "mine_05",
+      "kind": "model",
+      "parent": "scriptingdata",
+      "userdata": "swimobstacle=1;\r\nanimationendframe=600; \r\nvolume=80;",
+      "sw_pos": [
+        -43.3,
+        31.328,
+        -0.19
+      ],
+      "godot_pos": [
+        -43.3,
+        -0.19,
+        -31.328
+      ]
+    },
+    {
+      "name": "mine_07",
+      "kind": "model",
+      "parent": "scriptingdata",
+      "userdata": "swimobstacle=1;\r\nanimationendframe=600; \r\nvolume=80;",
+      "sw_pos": [
+        1.571,
+        31.328,
+        -0.19
+      ],
+      "godot_pos": [
+        1.571,
+        -0.19,
+        -31.328
+      ]
+    },
+    {
+      "name": "mine_08",
+      "kind": "model",
+      "parent": "scriptingdata",
+      "userdata": "swimobstacle=1;\r\nanimationendframe=600; \r\nvolume=80;",
+      "sw_pos": [
+        49.294,
+        31.077,
+        -0.19
+      ],
+      "godot_pos": [
+        49.294,
+        -0.19,
+        -31.077
+      ]
+    },
+    {
+      "name": "mine_09",
+      "kind": "model",
+      "parent": "scriptingdata",
+      "userdata": "swimobstacle=1;\r\nanimationendframe=600;",
+      "sw_pos": [
+        25.288,
+        86.806,
+        -0.19
+      ],
+      "godot_pos": [
+        25.288,
+        -0.19,
+        -86.806
+      ]
+    },
+    {
+      "name": "mine_10",
+      "kind": "model",
+      "parent": "scriptingdata",
+      "userdata": "swimobstacle=1;\r\nanimationendframe=600;",
+      "sw_pos": [
+        -20.147,
+        86.806,
+        -0.19
+      ],
+      "godot_pos": [
+        -20.147,
+        -0.19,
+        -86.806
+      ]
+    },
+    {
+      "name": "mine_11",
+      "kind": "model",
+      "parent": "scriptingdata",
+      "userdata": "swimobstacle=1;\r\nanimationendframe=600;",
+      "sw_pos": [
+        25.039,
+        0.084,
+        -0.19
+      ],
+      "godot_pos": [
+        25.039,
+        -0.19,
+        -0.084
+      ]
+    },
+    {
+      "name": "object_coppercoin_07",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "resource = coppercoin;",
+      "sw_pos": [
+        33.404,
+        196.652,
+        0.0
+      ],
+      "godot_pos": [
+        33.404,
+        0.0,
+        -196.652
+      ]
+    },
+    {
+      "name": "object_coppercoin_08",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "resource = coppercoin;",
+      "sw_pos": [
+        -43.396,
+        141.039,
+        0.0
+      ],
+      "godot_pos": [
+        -43.396,
+        0.0,
+        -141.039
+      ]
+    },
+    {
+      "name": "defaultview",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -54.551,
+        131.768,
+        261.478
+      ],
+      "godot_pos": [
+        -54.551,
+        261.478,
+        -131.768
+      ]
+    },
+    {
+      "name": "Default MAX Light",
+      "kind": "light",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -54.551,
+        131.768,
+        261.478
+      ],
+      "godot_pos": [
+        -54.551,
+        261.478,
+        -131.768
+      ]
+    }
+  ],
+  "skeletons": [],
+  "animations": [
+    {
+      "name": "piraya_2-Key",
+      "tracks": 1,
+      "size": 4122
+    },
+    {
+      "name": "mine_04-Key",
+      "tracks": 1,
+      "size": 7260
+    },
+    {
+      "name": "mine_05-Key",
+      "tracks": 1,
+      "size": 7694
+    },
+    {
+      "name": "mine_07-Key",
+      "tracks": 1,
+      "size": 7729
+    },
+    {
+      "name": "mine_08-Key",
+      "tracks": 1,
+      "size": 7641
+    },
+    {
+      "name": "mine_09-Key",
+      "tracks": 1,
+      "size": 7505
+    },
+    {
+      "name": "mine_10-Key",
+      "tracks": 1,
+      "size": 7536
+    },
+    {
+      "name": "mine_11-Key",
+      "tracks": 1,
+      "size": 7191
+    }
+  ]
+}

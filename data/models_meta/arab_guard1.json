@@ -1,0 +1,538 @@
+{
+  "file": "arab_guard1.w3d",
+  "nodes": [
+    {
+      "name": "DefaultView",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "arab_guard1",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "collisionradius=3.5;",
+      "sw_pos": [
+        0.0,
+        -0.352,
+        9.425
+      ],
+      "godot_pos": [
+        0.0,
+        9.425,
+        0.352
+      ]
+    },
+    {
+      "name": "arab_guard1_proxy",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        -0.136,
+        6.958
+      ],
+      "godot_pos": [
+        0.0,
+        6.958,
+        0.136
+      ]
+    },
+    {
+      "name": "hiddenassets",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "userdata",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"arab_guard1_die\", #startxform: [#position: vector( 0.2131, -2.6131, 4.3694 ), #rotation: vector( 0.0000, 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"arab_guard1_die\", #startxform: [#position: vector( 0.2131, -2.6131, 4.3694 ), #rotation: vector( 0.0000, 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"arab_guard1_hit\", #startxform: [#position: vector( 0.2131, -0.2368, 8.8502 ), #rotation: vector( 0.0000, 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000 )]]  ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"arab_guard1_hit\", #startxform: [#position: vector( 0.2131, -0.2368, 8.8502 ), #rotation: vector( 0.0000, 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"arab_guard1_run\", #startxform: [#position: vector( -0.4807, 0.7358, 8.0463 ), #rotation: vector( 0.0000, 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000 )], #distancepercycle: \"17.716\", #minimumspeed: \"0.7\", #maximumspeed: \"1.5\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"arab_guard1_run\", #startxform: [#position: vector( -0.4807, 0.7358, 8.0463 ), #rotation: vector( 0.0000, 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"arab_guard1_stand\", #startxform: [#position: vector( 0.4055, -0.3515, 9.1779 ), #rotation: vector( 0.0000, 0. ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0000, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"arab_guard1_stand\", #startxform: [#position: vector( 0.4055, -0.3515, 9.1779 ), #rotation: vector( 0.0000, 0. ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"arab_guard1_standsword\", #startxform: [#position: vector( 0.2131, -0.2368, 8.8502 ), #rotation: vector( 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"arab_guard1_standsword\", #startxform: [#position: vector( 0.2131, -0.2368, 8.8502 ), #rotation: vector( 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"arab_guard1_swordswing\", #startxform: [#position: vector( 0.2131, -0.2368, 8.8502 ), #rotation: vector( 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000, 0.0000 )], #impact: \"14\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"arab_guard1_swordswing\", #startxform: [#position: vector( 0.2131, -0.2368, 8.8502 ), #rotation: vector( 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"arab_guard1_turnleft\", #startxform: [#position: vector( 0.4055, -0.3515, 9.1779 ), #rotation: vector( 0.0000, ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz 0.0000, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"arab_guard1_turnleft\", #startxform: [#position: vector( 0.4055, -0.3515, 9.1779 ), #rotation: vector( 0.0000, ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"arab_guard1_turnright\", #startxform: [#position: vector( 0.4055, -0.3515, 9.1779 ), #rotation: vector( 0.0000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, 0.0000, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"arab_guard1_turnright\", #startxform: [#position: vector( 0.4055, -0.3515, 9.1779 ), #rotation: vector( 0.0000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"arab_guard1_walk\", #startxform: [#position: vector( -0.4807, 0.1033, 8.5739 ), #rotation: vector( 0.0000, 0.0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz000, 0.0000 )], #distancepercycle: \"17.716\", #minimumspeed: \"0.1\", #maximumspeed: \"1.7\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"arab_guard1_walk\", #startxform: [#position: vector( -0.4807, 0.1033, 8.5739 ), #rotation: vector( 0.0000, 0.0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "objectlinkedtobonesplayerinfo",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[[#bonedmodel: \"arab_guard1\", #object: \"sword_hand\", #boneid: 7, #xform: [#rotation: vector( 15.8640, -87.7305, 69.8538 ),  ",
+      "kind": "group",
+      "parent": "objectlinkedtobonesplayerinfo",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz#position: vector( 1.6246, 2.4234, -0.3742 )]], [#bonedmodel: \"arab_guard1\", #object: \"sword_belt\", #boneid: 1, #xform: [#r ",
+      "kind": "group",
+      "parent": "zzz[[#bonedmodel: \"arab_guard1\", #object: \"sword_hand\", #boneid: 7, #xform: [#rotation: vector( 15.8640, -87.7305, 69.8538 ),  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzzotation: vector( -39.8063, -1.5370, 6.0026 ), #position: vector( 2.4901, 0.2441, 0.0263 )]], [#bonedmodel: \"arab_guard1\", # ",
+      "kind": "group",
+      "parent": "zzz#position: vector( 1.6246, 2.4234, -0.3742 )]], [#bonedmodel: \"arab_guard1\", #object: \"sword_belt\", #boneid: 1, #xform: [#r ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzzobject: \"dizzystars\", #boneid: 17, #xform: [#rotation: vector( 149.7812, 90.0000, 0.0000 ), #position: vector( -3.2394, -2. ",
+      "kind": "group",
+      "parent": "zzzotation: vector( -39.8063, -1.5370, 6.0026 ), #position: vector( 2.4901, 0.2441, 0.0263 )]], [#bonedmodel: \"arab_guard1\", # ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz9508, 0.1234 )]]] ",
+      "kind": "group",
+      "parent": "zzzobject: \"dizzystars\", #boneid: 17, #xform: [#rotation: vector( 149.7812, 90.0000, 0.0000 ), #position: vector( -3.2394, -2. ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "TestLight",
+      "kind": "light",
+      "parent": "DefaultView",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    }
+  ],
+  "skeletons": [],
+  "animations": [
+    {
+      "name": "arab_guard1",
+      "tracks": 27,
+      "size": 1967
+    },
+    {
+      "name": "arab_guard1_die",
+      "tracks": 27,
+      "size": 4894
+    },
+    {
+      "name": "arab_guard1_hit",
+      "tracks": 27,
+      "size": 5985
+    },
+    {
+      "name": "arab_guard1_run",
+      "tracks": 27,
+      "size": 8033
+    },
+    {
+      "name": "arab_guard1_stand",
+      "tracks": 27,
+      "size": 4513
+    },
+    {
+      "name": "arab_guard1_standsword",
+      "tracks": 27,
+      "size": 4211
+    },
+    {
+      "name": "arab_guard1_swordswing",
+      "tracks": 27,
+      "size": 8837
+    },
+    {
+      "name": "arab_guard1_turnleft",
+      "tracks": 27,
+      "size": 4516
+    },
+    {
+      "name": "arab_guard1_turnright",
+      "tracks": 27,
+      "size": 4517
+    },
+    {
+      "name": "arab_guard1_walk",
+      "tracks": 27,
+      "size": 8655
+    }
+  ]
+}

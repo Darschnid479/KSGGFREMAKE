@@ -1,0 +1,609 @@
+{
+  "file": "treasurehunt.w3d",
+  "nodes": [
+    {
+      "name": "DefaultView",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "userdata",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_onestep_left\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #foot1up: \" 23->34\", #foot2up: \" 2->19\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_onestep_left\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_onestep_right\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000,  ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #foot1up: \" 1->19\", #foot2up: \" 22->33\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_onestep_right\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000,  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_treasure_lose\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000,  ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_treasure_lose\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000,  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"sabeltann_stand_map\", #startxform: [#position: vector( -0.2062, 0.5172, 10.6487 ), #rotation: vector( 0.0000, ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz 0.0000, 0.0000 )], #collisionradius: \"2.2\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"sabeltann_stand_map\", #startxform: [#position: vector( -0.2062, 0.5172, 10.6487 ), #rotation: vector( 0.0000, ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"sabeltann_stand_map_talk\", #startxform: [#position: vector( -0.2062, 0.5172, 10.6487 ), #rotation: vector( 0. ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0000, 0.0000, 0.0000 )], #collisionradius: \"2.2\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"sabeltann_stand_map_talk\", #startxform: [#position: vector( -0.2062, 0.5172, 10.6487 ), #rotation: vector( 0. ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "beach_background",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -57.23,
+        -1.633,
+        25.274
+      ],
+      "godot_pos": [
+        -57.23,
+        25.274,
+        1.633
+      ]
+    },
+    {
+      "name": "beach_rowboat",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        15.977,
+        -438.695,
+        4.982
+      ],
+      "godot_pos": [
+        15.977,
+        4.982,
+        438.695
+      ]
+    },
+    {
+      "name": "MapExportCamera",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        30.754,
+        -53.194,
+        864.27
+      ],
+      "godot_pos": [
+        30.754,
+        864.27,
+        53.194
+      ]
+    },
+    {
+      "name": "MapExportCamera.Target",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        30.654,
+        -53.194,
+        12.284
+      ],
+      "godot_pos": [
+        30.654,
+        12.284,
+        53.194
+      ]
+    },
+    {
+      "name": "shadowlightsource",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        584.018,
+        -619.589,
+        9821.364
+      ],
+      "godot_pos": [
+        584.018,
+        9821.364,
+        619.589
+      ]
+    },
+    {
+      "name": "beach_flag",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        44.707,
+        -396.086,
+        2.405
+      ],
+      "godot_pos": [
+        44.707,
+        2.405,
+        396.086
+      ]
+    },
+    {
+      "name": "beach_vegetation",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        73.804,
+        -341.741,
+        -451.279
+      ],
+      "godot_pos": [
+        73.804,
+        -451.279,
+        341.741
+      ]
+    },
+    {
+      "name": "ground_island",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        -0.0,
+        1.759
+      ],
+      "godot_pos": [
+        0.0,
+        1.759,
+        0.0
+      ]
+    },
+    {
+      "name": "skull_pole",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        70.023,
+        -167.769,
+        19.672
+      ],
+      "godot_pos": [
+        70.023,
+        19.672,
+        167.769
+      ]
+    },
+    {
+      "name": "feather",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        69.675,
+        -167.758,
+        27.339
+      ],
+      "godot_pos": [
+        69.675,
+        27.339,
+        167.758
+      ]
+    },
+    {
+      "name": "scene_light",
+      "kind": "light",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        671.156,
+        -555.37,
+        3283.283
+      ],
+      "godot_pos": [
+        671.156,
+        3283.283,
+        555.37
+      ]
+    },
+    {
+      "name": "scene_light.Target",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        55.695,
+        2.471,
+        0.0
+      ],
+      "godot_pos": [
+        55.695,
+        0.0,
+        -2.471
+      ]
+    },
+    {
+      "name": "beach_water",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        271.537,
+        -3.414
+      ],
+      "godot_pos": [
+        0.0,
+        -3.414,
+        -271.537
+      ]
+    },
+    {
+      "name": "bottom_water",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        39.329,
+        -109.366,
+        -15.877
+      ],
+      "godot_pos": [
+        39.329,
+        -15.877,
+        109.366
+      ]
+    },
+    {
+      "name": "scene_light01",
+      "kind": "light",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        671.156,
+        -555.37,
+        3283.283
+      ],
+      "godot_pos": [
+        671.156,
+        3283.283,
+        555.37
+      ]
+    },
+    {
+      "name": "scene_light01.Target",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        55.695,
+        2.471,
+        0.0
+      ],
+      "godot_pos": [
+        55.695,
+        0.0,
+        -2.471
+      ]
+    },
+    {
+      "name": "wateredge",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        -6.858
+      ],
+      "godot_pos": [
+        0.0,
+        -6.858,
+        -0.0
+      ]
+    },
+    {
+      "name": "darklady",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        123.016,
+        -929.135,
+        -25.907
+      ],
+      "godot_pos": [
+        123.016,
+        -25.907,
+        929.135
+      ]
+    },
+    {
+      "name": "railing",
+      "kind": "model",
+      "parent": "darklady",
+      "userdata": "",
+      "sw_pos": [
+        147.649,
+        -932.353,
+        28.412
+      ],
+      "godot_pos": [
+        147.649,
+        28.412,
+        932.353
+      ]
+    },
+    {
+      "name": "front_decoration",
+      "kind": "model",
+      "parent": "darklady",
+      "userdata": "",
+      "sw_pos": [
+        232.554,
+        -943.33,
+        28.041
+      ],
+      "godot_pos": [
+        232.554,
+        28.041,
+        943.33
+      ]
+    },
+    {
+      "name": "vegetation_transp",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        73.804,
+        -341.741,
+        -451.279
+      ],
+      "godot_pos": [
+        73.804,
+        -451.279,
+        341.741
+      ]
+    },
+    {
+      "name": "treasuremap",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "linktobone=right_upper_fingers;",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "hiddenassets",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "TestLight",
+      "kind": "light",
+      "parent": "DefaultView",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    }
+  ],
+  "skeletons": [],
+  "animations": [
+    {
+      "name": "pinky_onestep_left",
+      "tracks": 39,
+      "size": 10723
+    },
+    {
+      "name": "pinky_onestep_right",
+      "tracks": 39,
+      "size": 10027
+    },
+    {
+      "name": "pinky_treasure_lose",
+      "tracks": 39,
+      "size": 8579
+    },
+    {
+      "name": "sabeltann_stand_map",
+      "tracks": 35,
+      "size": 8017
+    },
+    {
+      "name": "sabeltann_stand_map_talk",
+      "tracks": 35,
+      "size": 7516
+    }
+  ]
+}

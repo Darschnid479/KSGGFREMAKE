@@ -1,0 +1,16 @@
+# Godot 4+ cache and auto-generated import artifacts
+godot_project/.godot/
+godot_project/**/*.import
+godot_project/*.translation
+
+# Auto-extracted textures unpacked by Godot from embedded .glb files
+godot_project/assets/levels/*.jpg
+godot_project/assets/levels/*.png
+godot_project/assets/models/*.jpg
+godot_project/assets/models/*.png
+
+# Temporary files & Python bytecode
+*.tmp
+__pycache__/
+*.pyc
+.DS_Store

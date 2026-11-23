@@ -1,0 +1,183 @@
+{
+  "file": "world_map_underwater1_gameplay.w3d",
+  "nodes": [
+    {
+      "name": "scriptingdata",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "object_coppercoin_1",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "resource = coppercoin;",
+      "sw_pos": [
+        -0.077,
+        40.919,
+        0.0
+      ],
+      "godot_pos": [
+        -0.077,
+        0.0,
+        -40.919
+      ]
+    },
+    {
+      "name": "object_coppercoin_2",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "resource = coppercoin;",
+      "sw_pos": [
+        2.069,
+        142.092,
+        0.0
+      ],
+      "godot_pos": [
+        2.069,
+        0.0,
+        -142.092
+      ]
+    },
+    {
+      "name": "object_coppercoin_3",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "resource = coppercoin;",
+      "sw_pos": [
+        1.414,
+        -29.295,
+        0.0
+      ],
+      "godot_pos": [
+        1.414,
+        0.0,
+        29.295
+      ]
+    },
+    {
+      "name": "shark_2",
+      "kind": "model",
+      "parent": "scriptingdata",
+      "userdata": "addanimatedmodel=shark|shark_swim;\r\nanimationendframe=500;\r\nswimobstacle=1;",
+      "sw_pos": [
+        144.582,
+        184.633,
+        0.0
+      ],
+      "godot_pos": [
+        144.582,
+        0.0,
+        -184.633
+      ]
+    },
+    {
+      "name": "piraya_3",
+      "kind": "model",
+      "parent": "scriptingdata",
+      "userdata": "addanimatedmodel=piraya|piraya_swim;\r\nanimationendframe=400;\r\nswimobstacle=1;",
+      "sw_pos": [
+        151.017,
+        10.571,
+        0.0
+      ],
+      "godot_pos": [
+        151.017,
+        0.0,
+        -10.571
+      ]
+    },
+    {
+      "name": "shark_1",
+      "kind": "model",
+      "parent": "scriptingdata",
+      "userdata": "addanimatedmodel=shark|shark_swim;\r\n\r\nanimationendframe=500;\r\nswimobstacle=1;",
+      "sw_pos": [
+        -145.516,
+        -118.432,
+        0.0
+      ],
+      "godot_pos": [
+        -145.516,
+        0.0,
+        118.432
+      ]
+    },
+    {
+      "name": "object_coppercoin_04",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "resource = coppercoin;",
+      "sw_pos": [
+        4.444,
+        106.43,
+        0.0
+      ],
+      "godot_pos": [
+        4.444,
+        0.0,
+        -106.43
+      ]
+    },
+    {
+      "name": "defaultview",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        125.268,
+        22.867,
+        499.148
+      ],
+      "godot_pos": [
+        125.268,
+        499.148,
+        -22.867
+      ]
+    },
+    {
+      "name": "Default MAX Light",
+      "kind": "light",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        125.268,
+        22.867,
+        499.148
+      ],
+      "godot_pos": [
+        125.268,
+        499.148,
+        -22.867
+      ]
+    }
+  ],
+  "skeletons": [],
+  "animations": [
+    {
+      "name": "shark_2-Key",
+      "tracks": 1,
+      "size": 4713
+    },
+    {
+      "name": "piraya_3-Key",
+      "tracks": 1,
+      "size": 5870
+    },
+    {
+      "name": "shark_1-Key",
+      "tracks": 1,
+      "size": 3728
+    }
+  ]
+}

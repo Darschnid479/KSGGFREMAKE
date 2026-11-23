@@ -1,0 +1,455 @@
+{
+  "file": "graal_bosslevel_gameplay.w3d",
+  "nodes": [
+    {
+      "name": "collisiondata",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -8.349,
+        22.243,
+        107.059
+      ],
+      "godot_pos": [
+        -8.349,
+        107.059,
+        -22.243
+      ]
+    },
+    {
+      "name": "Shape02",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-101.965,88.6595,214.118),vector(-78.689,88.7178,214.118),vector(-78.6976,111.201,214.118),vector(61.9999,111.201,214.118),vector(61.9913,88.7179,214.118),vector(85.6828,88.6598,214.118),vector(85.6829,-44.1743,214.118),vector(61.9915,-44.2324,214.118),vector(62.0002,-66.9271,214.118),vector(-78.6974,-66.927,214.118),vector(-78.6888,-44.2324,214.118),vector(-101.965,-44.1742,214.118)],#closed:1]]];",
+      "sw_pos": [
+        -10.301,
+        23.28,
+        123.618
+      ],
+      "godot_pos": [
+        -10.301,
+        123.618,
+        -23.28
+      ]
+    },
+    {
+      "name": "Line01",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-89.7461,87.3104,0),vector(-108.392,106.311,0),vector(-95.0606,119.924,0),vector(-71.7427,102.724,0)],#closed:0]]];",
+      "sw_pos": [
+        -92.635,
+        103.224,
+        0.0
+      ],
+      "godot_pos": [
+        -92.635,
+        0.0,
+        -103.224
+      ]
+    },
+    {
+      "name": "Line02",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-93.5034,-39.4737,0),vector(-108.27,-60.5069,0),vector(-96.0415,-73.4341,0),vector(-74.9112,-57.6644,0)],#closed:0]]];",
+      "sw_pos": [
+        -92.024,
+        -58.149,
+        0.0
+      ],
+      "godot_pos": [
+        -92.024,
+        0.0,
+        58.149
+      ]
+    },
+    {
+      "name": "Line03",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(57.9212,-57.7031,0),vector(77.0052,-74.7363,0),vector(90.4577,-60.9826,0),vector(73.323,-42.6008,0)],#closed:0]]];",
+      "sw_pos": [
+        75.594,
+        -58.847,
+        0.0
+      ],
+      "godot_pos": [
+        75.594,
+        0.0,
+        58.847
+      ]
+    },
+    {
+      "name": "Line04",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(60.036,99.6403,0),vector(78.2817,117.67,0),vector(92.3234,105.472,0),vector(72.7579,83.6353,0)],#closed:0]]];",
+      "sw_pos": [
+        75.681,
+        102.35,
+        0.0
+      ],
+      "godot_pos": [
+        75.681,
+        0.0,
+        -102.35
+      ]
+    },
+    {
+      "name": "Shape01",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(103.948,88.6799,215.328),vector(125.381,88.6683,215.328),vector(125.368,117.458,215.328),vector(111.387,138.856,215.328),vector(92.0944,157.242,215.328),vector(62.0556,157.248,215.328),vector(61.8457,134.727,215.141),vector(-78.8186,134.574,215.328),vector(-78.7527,157.248,215.328),vector(-106.181,157.242,215.328),vector(-124.531,139.514,215.328),vector(-142.065,117.454,215.328),vector(-142.079,88.6688,215.328),vector(-120.646,88.6799,215.328),vector(-120.646,-44.1945,215.328),vector(-142.078,-44.1832,215.328),vector(-142.28,-77.0278,215.348),vector(-128.122,-96.0841,215.328),vector(-109.187,-113.01,215.348),vector(-78.7531,-112.763,215.328),vector(-78.8188,-90.0889,215.328),vector(62.1209,-90.0889,215.328),vector(62.0553,-112.763,215.328),vector(88.8869,-113.272,215.348),vector(112.184,-95.9478,215.328),vector(125.219,-74.4033,215.348),vector(125.381,-44.1832,215.328),vector(103.948,-44.1946,215.328)],#closed:1]]];",
+      "sw_pos": [
+        -10.301,
+        23.28,
+        124.828
+      ],
+      "godot_pos": [
+        -10.301,
+        124.828,
+        -23.28
+      ]
+    },
+    {
+      "name": "Line05",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-101.008,-247.623,0),vector(-88.7799,-242.732,0),vector(-74.9792,-246.75,0),vector(-66.2446,-257.755,0),vector(-65.5458,-271.381,0),vector(-73.407,-283.086,0),vector(-86.6836,-287.977,0),vector(-100.135,-284.134,0),vector(-108.695,-272.779,0),vector(-109.568,-258.803,0)],#closed:1]]];",
+      "sw_pos": [
+        -87.505,
+        -265.302,
+        0.0
+      ],
+      "godot_pos": [
+        -87.505,
+        0.0,
+        265.302
+      ]
+    },
+    {
+      "name": "scriptingdata",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -17.509,
+        12.898,
+        105.879
+      ],
+      "godot_pos": [
+        -17.509,
+        105.879,
+        -12.898
+      ]
+    },
+    {
+      "name": "catapult_1",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        -94.503,
+        -59.199,
+        214.087
+      ],
+      "godot_pos": [
+        -94.503,
+        214.087,
+        59.199
+      ]
+    },
+    {
+      "name": "catapult_2",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        75.999,
+        -60.382,
+        214.087
+      ],
+      "godot_pos": [
+        75.999,
+        214.087,
+        60.382
+      ]
+    },
+    {
+      "name": "catapult_3",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        77.427,
+        102.954,
+        214.087
+      ],
+      "godot_pos": [
+        77.427,
+        214.087,
+        -102.954
+      ]
+    },
+    {
+      "name": "catapult_4",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        -93.24,
+        105.88,
+        214.087
+      ],
+      "godot_pos": [
+        -93.24,
+        214.087,
+        -105.88
+      ]
+    },
+    {
+      "name": "character_pinky",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        276.932,
+        -68.03,
+        0.0
+      ],
+      "godot_pos": [
+        276.932,
+        0.0,
+        68.03
+      ]
+    },
+    {
+      "name": "introcamera_3_box",
+      "kind": "model",
+      "parent": "scriptingdata",
+      "userdata": "animationstartframe=350;\r\nanimationendframe=440;",
+      "sw_pos": [
+        -136.124,
+        -133.557,
+        244.639
+      ],
+      "godot_pos": [
+        -136.124,
+        244.639,
+        133.557
+      ]
+    },
+    {
+      "name": "introcamera_3",
+      "kind": "camera",
+      "parent": "introcamera_3_box",
+      "userdata": "animationstartframe=350;\r\nanimationendframe=440;",
+      "sw_pos": [
+        -136.042,
+        -133.634,
+        244.686
+      ],
+      "godot_pos": [
+        -136.042,
+        244.686,
+        133.634
+      ]
+    },
+    {
+      "name": "introcamera_1_box",
+      "kind": "model",
+      "parent": "scriptingdata",
+      "userdata": "animationstartframe=0;\r\nanimationendframe=280;",
+      "sw_pos": [
+        -141.473,
+        -311.606,
+        10.499
+      ],
+      "godot_pos": [
+        -141.473,
+        10.499,
+        311.606
+      ]
+    },
+    {
+      "name": "introcamera_1",
+      "kind": "camera",
+      "parent": "introcamera_1_box",
+      "userdata": "animationstartframe=0;\r\nanimationendframe=280;",
+      "sw_pos": [
+        -141.441,
+        -311.72,
+        10.522
+      ],
+      "godot_pos": [
+        -141.441,
+        10.522,
+        311.72
+      ]
+    },
+    {
+      "name": "introcamera_2_box",
+      "kind": "model",
+      "parent": "scriptingdata",
+      "userdata": "animationstartframe=281;\r\nanimationendframe=350;",
+      "sw_pos": [
+        -360.25,
+        -332.458,
+        389.547
+      ],
+      "godot_pos": [
+        -360.25,
+        389.547,
+        332.458
+      ]
+    },
+    {
+      "name": "introcamera_2",
+      "kind": "camera",
+      "parent": "introcamera_2_box",
+      "userdata": "animationstartframe=281;\r\nanimationendframe=350;",
+      "sw_pos": [
+        -360.208,
+        -332.556,
+        389.604
+      ],
+      "godot_pos": [
+        -360.208,
+        389.604,
+        332.556
+      ]
+    },
+    {
+      "name": "behaviour",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "trigger = startmap;\r\naction = clearmapfromgamestate|graal_mountain;\r\n\r\ntrigger = resumemap;\r\naction = boss|setmaxhealth|40;\r\naction = boss|setmaxspeed|20;\r\nonce=0;\r\n\r\ntrigger = startmap_breathing;\r\naction = introcamera_1|start;\r\naction = pinky|playcustomanimation|pinky_graal_boss_intro;\r\naction = boss|playcustomanimation|graal_boss_intro;\r\n\r\ntrigger = startmap_breathing + 7;\r\naction = playsfx|gral_boss_loose_1_boss;\r\n\r\ntrigger = resumemap_breathing;\r\naction = playambience|graal_boss_ambience;\r\nonce = 0;\r\n\r\ntrigger = onlyresumemap;\r\naction = circlingcamera|start;\r\naction = camera|snap;\r\nonce = 0;\r\n\r\ntrigger = introcamera_1_finished;\r\naction = introcamera_2|start;\r\n\r\ntrigger = introcamera_2_finished;\r\naction = introcamera_3|start;\r\n\r\ntrigger = introcamera_3_finished;\r\naction = boss|jump|movingplatform_boss;\r\naction = circlingcamera|start;\r\n\r\ntrigger = pinky_graal_boss_intro_finished;\r\naction = boss|addtoattacklist|pinky;\r\n\r\ntrigger = pinky_graal_boss_intro_finished + 1;\r\naction = queue|savegame;\r\n\r\ntrigger = pinky_graal_boss_intro_finished + 2;\r\naction = startconversation|gral_boss_intro|nocamera|dontlock;\r\naction = playambience|graal_bosslevel_music;\r\n\r\ntrigger = gral_boss_intro_finished + 5;\r\naction = startconversation|gral_boss_youstink1|nocamera|dontlock;\r\n\r\ntrigger = gral_boss_youstink1_finished + 7;\r\naction = startconversation|gral_boss_youstink2|nocamera|dontlock;\r\n\r\ntrigger = catapult_fire;\r\naction = startconversation|gral_boss_takethat1|nocamera|dontlock;\r\n\r\nalltriggers = catapult_fire, catapult_fire;\r\naction = startconversation|gral_boss_takethat2|nocamera|dontlock;\r\n\r\nalltriggers = catapult_fire, catapult_fire, catapult_fire;\r\naction = startconversation|gral_boss_takethat3|nocamera|dontlock;\r\n\r\nalltriggers = catapult_fire, catapult_fire, catapult_fire, catapult_fire;\r\naction = startconversation|gral_boss_takethat4|nocamera|dontlock;\r\n\r\ntrigger = boss_died;\r\naction = startcharactercamera|boss;\r\naction = camera|snap;\r\naction = disableinput;\r\naction = playsfx|gral_boss_win_1_boss;\r\n\r\ntrigger = boss_died + 4;\r\naction = stopcharactercamera|boss;\r\naction = startcharactercamera|pinky;\r\n\r\ntrigger = boss_died + 5;\r\naction = pinky|playcustomanimation|win;\r\naction = playsfx|gral_boss_ididit_pinky;\r\n\r\ntrigger = boss_died + 7;\r\naction = pinky|addachievement|finishedgraal;\r\naction = proceedtomap|world_map;\r\n\r\ntrigger=shortcut;\r\naction = introcamera_1|stop;\r\naction = introcamera_2|stop;\r\naction = introcamera_3|stop;\r\naction = sendgameevent|introcamera_3_finished;\r\naction = pinky|zapto|catapult_2;",
+      "sw_pos": [
+        329.848,
+        91.295,
+        0.0
+      ],
+      "godot_pos": [
+        329.848,
+        0.0,
+        -91.295
+      ]
+    },
+    {
+      "name": "character_boss",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "resource=graal_boss;",
+      "sw_pos": [
+        209.689,
+        -164.441,
+        0.0
+      ],
+      "godot_pos": [
+        209.689,
+        0.0,
+        164.441
+      ]
+    },
+    {
+      "name": "movingplatform_boss",
+      "kind": "model",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        2.666,
+        18.817,
+        276.895
+      ],
+      "godot_pos": [
+        2.666,
+        276.895,
+        -18.817
+      ]
+    },
+    {
+      "name": "circlingcamera",
+      "kind": "camera",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        -150.956,
+        168.348,
+        260.441
+      ],
+      "godot_pos": [
+        -150.956,
+        260.441,
+        -168.348
+      ]
+    },
+    {
+      "name": "circlingcamera.Target",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -4.774,
+        15.51,
+        241.051
+      ],
+      "godot_pos": [
+        -4.774,
+        241.051,
+        -15.51
+      ]
+    },
+    {
+      "name": "defaultview",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -174.315,
+        187.187,
+        261.115
+      ],
+      "godot_pos": [
+        -174.315,
+        261.115,
+        -187.187
+      ]
+    },
+    {
+      "name": "Default MAX Light",
+      "kind": "light",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -174.315,
+        187.187,
+        261.115
+      ],
+      "godot_pos": [
+        -174.315,
+        261.115,
+        -187.187
+      ]
+    }
+  ],
+  "skeletons": [],
+  "animations": [
+    {
+      "name": "introcamera_3_box-Key",
+      "tracks": 1,
+      "size": 150
+    },
+    {
+      "name": "introcamera_1_box-Key",
+      "tracks": 1,
+      "size": 1103
+    },
+    {
+      "name": "introcamera_2_box-Key",
+      "tracks": 1,
+      "size": 306
+    }
+  ]
+}

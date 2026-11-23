@@ -1,0 +1,407 @@
+{
+  "file": "graal_underwater_gameplay.w3d",
+  "nodes": [
+    {
+      "name": "scriptingdata",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -184.129,
+        171.956,
+        -4.125
+      ],
+      "godot_pos": [
+        -184.129,
+        -4.125,
+        -171.956
+      ]
+    },
+    {
+      "name": "swimmer_pinky",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        -130.105,
+        93.604,
+        0.0
+      ],
+      "godot_pos": [
+        -130.105,
+        0.0,
+        -93.604
+      ]
+    },
+    {
+      "name": "validcameraarea",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#rectangle,#width:70.5843,#length:44.7568,#transform:[4.41473,0,0,0,0,4.41473,0,0,0,0,4.41473,0,-11.537,16.7561,-4.12527,1]]];",
+      "sw_pos": [
+        -11.537,
+        16.756,
+        -4.125
+      ],
+      "godot_pos": [
+        -11.537,
+        -4.125,
+        -16.756
+      ]
+    },
+    {
+      "name": "object_coppercoin_1",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "resource = coppercoin;",
+      "sw_pos": [
+        -129.351,
+        -38.351,
+        0.0
+      ],
+      "godot_pos": [
+        -129.351,
+        0.0,
+        38.351
+      ]
+    },
+    {
+      "name": "Global",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "trigger = resumemap;\r\naction = pinky|starttakeair|1;\r\nonce = 0;\r\n\r\ntrigger = resumemap;\r\nrequirements = difficulty_2_oreasier;\r\naction = queue|savegame;\r\n\r\ntrigger = resumemap_breathing;\r\naction = playambience|underwater_ambience;\r\naction = playambience|swimming_music;\r\naction = pinky|playcustomanimation|divein;\r\nonce = 0;\r\n\r\ntrigger = areatrigger_air1_enter;\r\naction = playsfx|swimming_ghasp_1_pinky;\r\naction = pinky|starttakeair|-15;\r\nonce = 0;\r\n\r\ntrigger=areatrigger_air1_leave;\r\naction=pinky|stoptakeair|-15;\r\nonce=0;\r\n\r\ntrigger = pinky_receiveditem_goldcoin;\r\naction = playsfx|underwater_goldcoin_1_pinky;\r\n\r\ntrigger = areatrigger_leave_enter;\r\naction =  resumemap|graal_bosslevel;\r\nonce = 0;",
+      "sw_pos": [
+        -13.305,
+        146.025,
+        0.0
+      ],
+      "godot_pos": [
+        -13.305,
+        0.0,
+        -146.025
+      ]
+    },
+    {
+      "name": "areatrigger_air1",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#rectangle,#width:21.3178,#length:171.452,#transform:[1,0,0,0,0,1,0,0,0,0,1,0,-0.941284,34.3224,-0.89015,1]]];",
+      "sw_pos": [
+        -0.941,
+        34.322,
+        -0.89
+      ],
+      "godot_pos": [
+        -0.941,
+        -0.89,
+        -34.322
+      ]
+    },
+    {
+      "name": "object_coppercoin_2",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "resource = coppercoin;",
+      "sw_pos": [
+        41.144,
+        39.639,
+        0.0
+      ],
+      "godot_pos": [
+        41.144,
+        0.0,
+        -39.639
+      ]
+    },
+    {
+      "name": "areatrigger_leave",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#rectangle,#width:72.3397,#length:36.7044,#transform:[1,0,0,0,0,1,0,0,0,0,1,0,112.075,97.5192,0,1]]];",
+      "sw_pos": [
+        112.075,
+        97.519,
+        0.0
+      ],
+      "godot_pos": [
+        112.075,
+        0.0,
+        -97.519
+      ]
+    },
+    {
+      "name": "object_coppercoin_3",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "resource = coppercoin;",
+      "sw_pos": [
+        -43.314,
+        38.015,
+        0.0
+      ],
+      "godot_pos": [
+        -43.314,
+        0.0,
+        -38.015
+      ]
+    },
+    {
+      "name": "areatrigger_leave2",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#rectangle,#width:72.3397,#length:36.7044,#transform:[1,0,0,0,0,1,0,0,0,0,1,0,-129.668,97.5192,0,1]]];",
+      "sw_pos": [
+        -129.668,
+        97.519,
+        0.0
+      ],
+      "godot_pos": [
+        -129.668,
+        0.0,
+        -97.519
+      ]
+    },
+    {
+      "name": "3dsound_bubbles",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#circle,#radius:64.1853,#position:vector(-1.08354,-51.3386,0)];sound=underwater_airbubbles;\r\nautostart=1;\r\nloop=1;\r\nfullvolumeradius=20;",
+      "sw_pos": [
+        -1.084,
+        -51.339,
+        0.0
+      ],
+      "godot_pos": [
+        -1.084,
+        0.0,
+        51.339
+      ]
+    },
+    {
+      "name": "collisiondata",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -10.706,
+        27.279,
+        0.0
+      ],
+      "godot_pos": [
+        -10.706,
+        0.0,
+        -27.279
+      ]
+    },
+    {
+      "name": "Circle01",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:12.5318,#position:vector(32.4038,-8.06051,0)];",
+      "sw_pos": [
+        32.404,
+        -8.061,
+        0.0
+      ],
+      "godot_pos": [
+        32.404,
+        0.0,
+        8.061
+      ]
+    },
+    {
+      "name": "Circle02",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:9.36453,#position:vector(-29.2526,-8.56178,0)];",
+      "sw_pos": [
+        -29.253,
+        -8.562,
+        0.0
+      ],
+      "godot_pos": [
+        -29.253,
+        0.0,
+        8.562
+      ]
+    },
+    {
+      "name": "Circle03",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:9.57679,#position:vector(82.531,-12.0707,0)];",
+      "sw_pos": [
+        82.531,
+        -12.071,
+        0.0
+      ],
+      "godot_pos": [
+        82.531,
+        0.0,
+        12.071
+      ]
+    },
+    {
+      "name": "Circle04",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:12.5318,#position:vector(-103.441,-11.5694,0)];",
+      "sw_pos": [
+        -103.441,
+        -11.569,
+        0.0
+      ],
+      "godot_pos": [
+        -103.441,
+        0.0,
+        11.569
+      ]
+    },
+    {
+      "name": "Circle05",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:10.1376,#position:vector(-28.2501,8.98273,0)];",
+      "sw_pos": [
+        -28.25,
+        8.983,
+        0.0
+      ],
+      "godot_pos": [
+        -28.25,
+        0.0,
+        -8.983
+      ]
+    },
+    {
+      "name": "Circle06",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:12.4008,#position:vector(31.4013,5.47383,0)];",
+      "sw_pos": [
+        31.401,
+        5.474,
+        0.0
+      ],
+      "godot_pos": [
+        31.401,
+        0.0,
+        -5.474
+      ]
+    },
+    {
+      "name": "Line01",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-149.057,115.252,0),vector(-147.553,68.6341,0),vector(-151.062,27.0285,0),vector(-151.563,-21.5949,0),vector(-146.049,-55.1801,0),vector(-110.459,-58.689,0),vector(-70.8582,-54.1775,0),vector(-8.70046,-57.6864,0),vector(33.4064,-58.1877,0),vector(53.9585,-61.1953,0),vector(92.0552,-57.6864,0),vector(126.142,-49.1648,0),vector(128.648,-1.54397,0),vector(128.648,51.0896,0),vector(130.152,115.252,0)],#closed:0]]];",
+      "sw_pos": [
+        -16.153,
+        -6.523,
+        0.0
+      ],
+      "godot_pos": [
+        -16.153,
+        0.0,
+        6.523
+      ]
+    },
+    {
+      "name": "Line02",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(91.5539,114.751,0),vector(92.0552,38.5578,0),vector(93.559,14.4967,0),vector(90.9152,-7.44727,0),vector(81.8963,-20.9662,0),vector(53.9585,-23.0987,0),vector(27.8411,-17.9596,0),vector(20.83,-7.44009,0),vector(20.2875,7.60227,0),vector(24.8361,16.0448,0),vector(62.4802,23.0184,0),vector(64.4852,60.6137,0),vector(19.872,55.0998,0),vector(-20.731,56.6036,0),vector(-64.3416,57.6061,0),vector(-63.8404,22.0158,0),vector(-29.2337,18.0561,0),vector(-20.2175,10.5421,0),vector(-22.2199,-8.94289,0),vector(-30.7335,-16.9602,0),vector(-69.3544,-19.0885,0),vector(-106.192,-22.3338,0),vector(-113.695,-13.8234,0),vector(-110.459,20.0107,0),vector(-108.955,69.6366,0),vector(-112.464,115.754,0)],#closed:0]]];",
+      "sw_pos": [
+        -4.916,
+        28.006,
+        0.0
+      ],
+      "godot_pos": [
+        -4.916,
+        0.0,
+        -28.006
+      ]
+    },
+    {
+      "name": "Line03",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-105.271,109.727,0),vector(-158.653,109.906,0)],#closed:0]]];",
+      "sw_pos": [
+        -131.962,
+        109.816,
+        0.0
+      ],
+      "godot_pos": [
+        -131.962,
+        0.0,
+        -109.816
+      ]
+    },
+    {
+      "name": "bubbles",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "particlesystem=1;\r\nparticleconfig = [#texture:\"bubble_32\",#lifeTime: 15000.0000, \"sizeRange.start\": 3.0000, \"sizeRange.end\": 3.0000, \"emitter.direction\": vector( 0.0000, 1.0000, 0.0000 ), \"emitter.angle\": 1.0000, \"emitter.minSpeed\":7.0000, \"emitter.maxSpeed\": 10.0000, \"emitter.numParticles\": 60];",
+      "sw_pos": [
+        -0.943,
+        -63.025,
+        -1.606
+      ],
+      "godot_pos": [
+        -0.943,
+        -1.606,
+        63.025
+      ]
+    },
+    {
+      "name": "bubbles01",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "particlesystem=1;\r\nparticleconfig = [#texture:\"bubble_32\",#lifeTime: 15000.0000, \"sizeRange.start\": 5.0000, \"sizeRange.end\": 5.0000, \"emitter.direction\": vector( 0.0000, 1.0000, 0.0000 ), \"emitter.angle\": 1.0000, \"emitter.minSpeed\": 5.0000, \"emitter.maxSpeed\": 7.0000, \"emitter.numParticles\": 10];",
+      "sw_pos": [
+        -0.943,
+        -59.787,
+        -1.606
+      ],
+      "godot_pos": [
+        -0.943,
+        -1.606,
+        59.787
+      ]
+    },
+    {
+      "name": "defaultview",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        74.135,
+        129.073,
+        -2.0
+      ],
+      "godot_pos": [
+        74.135,
+        -2.0,
+        -129.073
+      ]
+    },
+    {
+      "name": "Default MAX Light",
+      "kind": "light",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        74.135,
+        129.073,
+        -2.0
+      ],
+      "godot_pos": [
+        74.135,
+        -2.0,
+        -129.073
+      ]
+    }
+  ],
+  "skeletons": [],
+  "animations": []
+}

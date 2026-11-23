@@ -1,0 +1,3314 @@
+{
+  "file": "magakhan_palace_gameplay.w3d",
+  "nodes": [
+    {
+      "name": "collisiondata",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        13.074,
+        -221.829,
+        0.0
+      ],
+      "godot_pos": [
+        13.074,
+        0.0,
+        221.829
+      ]
+    },
+    {
+      "name": "Circle01",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:4.89792,#position:vector(130.019,-418.968,0)];",
+      "sw_pos": [
+        130.019,
+        -418.968,
+        0.0
+      ],
+      "godot_pos": [
+        130.019,
+        0.0,
+        418.968
+      ]
+    },
+    {
+      "name": "Circle02",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:4.89789,#position:vector(130.019,-318.561,0)];",
+      "sw_pos": [
+        130.019,
+        -318.561,
+        0.0
+      ],
+      "godot_pos": [
+        130.019,
+        0.0,
+        318.561
+      ]
+    },
+    {
+      "name": "Circle03",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:7.70463,#position:vector(97.4831,-430.513,0)];",
+      "sw_pos": [
+        97.483,
+        -430.513,
+        0.0
+      ],
+      "godot_pos": [
+        97.483,
+        0.0,
+        430.513
+      ]
+    },
+    {
+      "name": "Circle04",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:9.80205,#position:vector(146.462,-379.435,0)];",
+      "sw_pos": [
+        146.462,
+        -379.435,
+        0.0
+      ],
+      "godot_pos": [
+        146.462,
+        0.0,
+        379.435
+      ]
+    },
+    {
+      "name": "Circle05",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:9.44594,#position:vector(146.462,-255.238,0)];",
+      "sw_pos": [
+        146.462,
+        -255.238,
+        0.0
+      ],
+      "godot_pos": [
+        146.462,
+        0.0,
+        255.238
+      ]
+    },
+    {
+      "name": "Circle06",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:4.8979,#position:vector(130.369,-218.504,0)];",
+      "sw_pos": [
+        130.369,
+        -218.504,
+        0.0
+      ],
+      "godot_pos": [
+        130.369,
+        0.0,
+        218.504
+      ]
+    },
+    {
+      "name": "Circle07",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:7.03191,#position:vector(97.833,-196.813,0)];",
+      "sw_pos": [
+        97.833,
+        -196.813,
+        0.0
+      ],
+      "godot_pos": [
+        97.833,
+        0.0,
+        196.813
+      ]
+    },
+    {
+      "name": "Circle08",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:7.00575,#position:vector(25.4139,-32.7336,0)];",
+      "sw_pos": [
+        25.414,
+        -32.734,
+        0.0
+      ],
+      "godot_pos": [
+        25.414,
+        0.0,
+        32.734
+      ]
+    },
+    {
+      "name": "Circle09",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:4.21276,#position:vector(-226.576,335.69,0)];",
+      "sw_pos": [
+        -226.576,
+        335.69,
+        0.0
+      ],
+      "godot_pos": [
+        -226.576,
+        0.0,
+        -335.69
+      ]
+    },
+    {
+      "name": "Circle10",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:4.19821,#position:vector(-226.576,385.019,0)];",
+      "sw_pos": [
+        -226.576,
+        385.019,
+        0.0
+      ],
+      "godot_pos": [
+        -226.576,
+        0.0,
+        -385.019
+      ]
+    },
+    {
+      "name": "Circle11",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:3.4985,#position:vector(-279.403,386.418,0)];",
+      "sw_pos": [
+        -279.403,
+        386.418,
+        0.0
+      ],
+      "godot_pos": [
+        -279.403,
+        0.0,
+        -386.418
+      ]
+    },
+    {
+      "name": "Circle12",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:4.19821,#position:vector(-279.403,336.74,0)];",
+      "sw_pos": [
+        -279.403,
+        336.74,
+        0.0
+      ],
+      "godot_pos": [
+        -279.403,
+        0.0,
+        -336.74
+      ]
+    },
+    {
+      "name": "Circle13",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:4.19818,#position:vector(-278.703,432.948,0)];",
+      "sw_pos": [
+        -278.703,
+        432.948,
+        0.0
+      ],
+      "godot_pos": [
+        -278.703,
+        0.0,
+        -432.948
+      ]
+    },
+    {
+      "name": "Circle14",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:4.89789,#position:vector(-224.827,433.298,0)];",
+      "sw_pos": [
+        -224.827,
+        433.298,
+        0.0
+      ],
+      "godot_pos": [
+        -224.827,
+        0.0,
+        -433.298
+      ]
+    },
+    {
+      "name": "Circle15",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:6.9267,#position:vector(479.543,286.851,0)];",
+      "sw_pos": [
+        479.543,
+        286.851,
+        0.0
+      ],
+      "godot_pos": [
+        479.543,
+        0.0,
+        -286.851
+      ]
+    },
+    {
+      "name": "Circle16",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:6.64716,#position:vector(360.957,381.803,0)];",
+      "sw_pos": [
+        360.957,
+        381.803,
+        0.0
+      ],
+      "godot_pos": [
+        360.957,
+        0.0,
+        -381.803
+      ]
+    },
+    {
+      "name": "Circle17",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#circle,#radius:6.99698,#position:vector(274.195,442.327,0)];",
+      "sw_pos": [
+        274.195,
+        442.327,
+        0.0
+      ],
+      "godot_pos": [
+        274.195,
+        0.0,
+        -442.327
+      ]
+    },
+    {
+      "name": "Line01",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(34.3399,-1146.5,0),vector(36.8282,-1142.52,0),vector(36.5463,-1128.25,0),vector(29.798,-1125.46,0),vector(24.3313,-1123.44,0),vector(21.4006,-1111.17,0),vector(9.70968,-1101.97,0),vector(1.37571,-1100.57,0),vector(-6.81798,-1091.86,0),vector(-35.6769,-1083.3,0)],#closed:0]]];",
+      "sw_pos": [
+        -44.712,
+        -1092.063,
+        0.0
+      ],
+      "godot_pos": [
+        -44.712,
+        0.0,
+        1092.063
+      ]
+    },
+    {
+      "name": "Line02",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(33.3446,-1131.57,0),vector(38.3213,-1118.63,0),vector(38.3213,-1041.49,0),vector(-24.8821,-1040.5,0),vector(-24.3845,-1049.95,0),vector(-37.8214,-1049.95,0),vector(-37.8214,-1041.49,0),vector(-19.9055,-1030.05,0)],#closed:0]]];",
+      "sw_pos": [
+        -4.353,
+        -1062.955,
+        0.0
+      ],
+      "godot_pos": [
+        -4.353,
+        0.0,
+        1062.955
+      ]
+    },
+    {
+      "name": "Line03",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-64.8469,-1039.95,0),vector(-64.1472,-869.925,0),vector(-72.5436,-862.928,0),vector(-72.5436,-833.89,0),vector(-64.4971,-826.893,0),vector(-64.8469,-724.037,0),vector(-88.2869,-724.037,0)],#closed:0]]];",
+      "sw_pos": [
+        -70.245,
+        -840.238,
+        0.0
+      ],
+      "godot_pos": [
+        -70.245,
+        0.0,
+        840.238
+      ]
+    },
+    {
+      "name": "Line04",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-35.1097,-1039.6,0),vector(-34.7598,-869.925,0),vector(-27.0631,-862.228,0),vector(-27.0631,-833.89,0),vector(-35.1097,-826.194,0),vector(-35.1097,-724.387,0),vector(-13.0691,-723.688,0)],#closed:0]]];",
+      "sw_pos": [
+        -29.612,
+        -839.988,
+        0.0
+      ],
+      "godot_pos": [
+        -29.612,
+        0.0,
+        839.988
+      ]
+    },
+    {
+      "name": "Line05",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-83.0393,-554.36,0),vector(-73.5934,-562.756,0),vector(-100.882,-562.407,0),vector(-100.882,-579.549,0),vector(-112.077,-579.549,0),vector(-112.427,-597.741,0),vector(-95.6339,-614.534,0),vector(-87.5874,-614.184,0),vector(-87.5874,-611.735,0),vector(-77.7916,-611.735,0),vector(-78.1414,-622.581,0),vector(-82.6895,-622.931,0),vector(-81.9898,-651.618,0),vector(-64.1474,-652.318,0),vector(-64.4973,-724.387,0),vector(-73.2435,-734.533,0)],#closed:0]]];",
+      "sw_pos": [
+        -86.013,
+        -618.557,
+        0.0
+      ],
+      "godot_pos": [
+        -86.013,
+        0.0,
+        618.557
+      ]
+    },
+    {
+      "name": "Line06",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-34.4101,-724.387,0),vector(-34.4101,-653.368,0),vector(-16.2179,-653.018,0),vector(-16.2179,-621.881,0),vector(-21.8155,-621.881,0),vector(-21.8155,-613.135,0),vector(-12.3696,-613.135,0),vector(-3.97318,-614.184,0),vector(5.82262,-606.837,0),vector(8.15725,-609.724,0),vector(17.5888,-601.567,0),vector(17.9747,-579.975,0)],#closed:0]]];",
+      "sw_pos": [
+        -14.119,
+        -634.301,
+        0.0
+      ],
+      "godot_pos": [
+        -14.119,
+        0.0,
+        634.301
+      ]
+    },
+    {
+      "name": "Line07",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(22.6154,-580.599,0),vector(0.924719,-579.899,0),vector(0.22502,-561.707,0),vector(-25.6639,-562.057,0),vector(-7.82154,-550.162,0)],#closed:0]]];",
+      "sw_pos": [
+        -1.944,
+        -566.885,
+        0.0
+      ],
+      "godot_pos": [
+        -1.944,
+        0.0,
+        566.885
+      ]
+    },
+    {
+      "name": "Line08",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(25.7639,-409.522,0),vector(15.2684,-427.015,0),vector(-11.3202,-427.364,0),vector(-10.882,-392.428,0),vector(-4.24143,-392.109,0),vector(-4.52047,-389.823,0),vector(-10.7058,-390.194,0),vector(-10.6205,-385.033,0),vector(-26.7136,-385.732,0),vector(-28.113,-427.714,0),vector(-27.4133,-562.057,0),vector(-20.0664,-563.106,0)],#closed:0]]];",
+      "sw_pos": [
+        -10.402,
+        -448.443,
+        0.0
+      ],
+      "godot_pos": [
+        -10.402,
+        0.0,
+        448.443
+      ]
+    },
+    {
+      "name": "Line09",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-119.074,-435.761,0),vector(-121.173,-432.612,0),vector(-121.173,-428.064,0),vector(-72.544,-427.714,0),vector(-73.5935,-562.407,0),vector(-82.3398,-559.958,0)],#closed:0]]];",
+      "sw_pos": [
+        -98.316,
+        -474.419,
+        0.0
+      ],
+      "godot_pos": [
+        -98.316,
+        0.0,
+        474.419
+      ]
+    },
+    {
+      "name": "Line10",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-121.515,-429.022,0),vector(-137.628,-418.604,0),vector(-168.446,-418.846,0),vector(-176.1,-418.7,0),vector(-191.35,-418.746,0),vector(-191.366,-430.717,0),vector(-198.454,-431.024,0),vector(-205.137,-429.704,0),vector(-231.726,-424.566,0),vector(-231.726,-413.72,0),vector(-235.574,-400.076,0),vector(-242.221,-379.785,0),vector(-234.525,-371.738,0),vector(-226.828,-378.036,0),vector(-220.531,-369.989,0),vector(-226.828,-360.543,0),vector(-220.88,-354.945,0),vector(-212.134,-353.546,0),vector(-212.484,-344.8,0),vector(-220.531,-344.8,0),vector(-227.178,-355.645,0)],#closed:0]]];",
+      "sw_pos": [
+        -208.828,
+        -391.365,
+        0.0
+      ],
+      "godot_pos": [
+        -208.828,
+        0.0,
+        391.365
+      ]
+    },
+    {
+      "name": "Line11",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-223.329,-322.759,0),vector(-221.23,-326.258,0),vector(-212.484,-326.258,0),vector(-212.484,-317.512,0),vector(-221.93,-317.861,0),vector(-229.277,-321.01,0),vector(-250.268,-320.31,0),vector(-247.119,-311.214,0),vector(-254.466,-299.319,0),vector(-247.819,-274.13,0),vector(-272.308,-242.644,0),vector(-219.819,-241.971,0),vector(-220.181,-151.532,0),vector(-274.7,-151.423,0),vector(-274.47,-127.482,0),vector(-196.959,-127.453,0),vector(-197.776,-209.649,0),vector(-123.708,-209.617,0),vector(-103.717,-209.588,0),vector(19.4666,-209.408,0),vector(18.7669,-124.044,0),vector(-13.0695,-114.948,0)],#closed:0]]];",
+      "sw_pos": [
+        -188.038,
+        -267.483,
+        0.0
+      ],
+      "godot_pos": [
+        -188.038,
+        0.0,
+        267.483
+      ]
+    },
+    {
+      "name": "Line12",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(8.27135,-124.044,0),vector(8.97104,-19.7891,0),vector(121.273,-19.7891,0),vector(161.856,-60.7216,0),vector(162.028,-115.538,0),vector(169.811,-116.286,0),vector(169.91,-135.502,0),vector(162.148,-135.499,0),vector(162.205,-153.782,0),vector(150.66,-153.782,0),vector(150.66,-302.118,0),vector(174.45,-301.069,0)],#closed:0]]];",
+      "sw_pos": [
+        117.293,
+        -141.887,
+        0.0
+      ],
+      "godot_pos": [
+        117.293,
+        0.0,
+        141.887
+      ]
+    },
+    {
+      "name": "Line13",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(151.36,-301.768,0),vector(150.311,-479.309,0),vector(21.928,-479.426,0),vector(22.1985,-447.431,0),vector(82.9783,-447.218,0),vector(86.4413,-444.301,0),vector(65.9966,-444.507,0),vector(76.4921,-425.965,0),vector(78.9411,-415.12,0),vector(74.0432,-410.922,0),vector(55.5011,-415.47,0),vector(55.5011,-411.272,0),vector(37.6588,-413.371,0),vector(26.1137,-409.872,0)],#closed:0]]];",
+      "sw_pos": [
+        77.192,
+        -409.277,
+        0.0
+      ],
+      "godot_pos": [
+        77.192,
+        0.0,
+        409.277
+      ]
+    },
+    {
+      "name": "Line14",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-221.587,-324.555,0),vector(-271.266,-324.905,0),vector(-271.266,-327.354,0),vector(-279.663,-327.354,0),vector(-280.712,-317.558,0),vector(-277.913,-317.558,0),vector(-276.329,-150.126,0),vector(-276.156,-150.509,0),vector(-276.156,-126.405,0),vector(-276.329,-126.405,0),vector(-277.913,-45.7243,0),vector(-257.622,-60.7679,0)],#closed:0]]];",
+      "sw_pos": [
+        -267.243,
+        -255.722,
+        0.0
+      ],
+      "godot_pos": [
+        -267.243,
+        0.0,
+        255.722
+      ]
+    },
+    {
+      "name": "Line15",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-222.637,-347.295,0),vector(-274.415,-347.645,0),vector(-285.96,-343.447,0),vector(-295.406,-332.252,0),vector(-298.205,-321.056,0),vector(-298.205,-48.1732,0),vector(-317.097,-53.7709,0)],#closed:0]]];",
+      "sw_pos": [
+        -284.56,
+        -256.234,
+        0.0
+      ],
+      "godot_pos": [
+        -284.56,
+        0.0,
+        256.234
+      ]
+    },
+    {
+      "name": "Line16",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-298.205,-49.5728,0),vector(-298.205,-38.7275,0),vector(-295.406,-38.3776,0),vector(-295.756,-29.6314,0),vector(-305.202,-28.9317,0),vector(-305.202,-31.7305,0),vector(-335.988,-31.3806,0),vector(-335.988,-11.4392,0),vector(-359.778,-10.3896,0),vector(-360.128,27.0444,0),vector(-357.329,27.0444,0),vector(-357.329,36.4903,0),vector(-362.227,38.9393,0),vector(-378.32,37.19,0),vector(-396.513,39.639,0),vector(-418.903,37.19,0),vector(-440.244,37.19,0),vector(-459.835,38.2396,0),vector(-459.835,28.0939,0),vector(-483.975,23.5459,0),vector(-503.567,7.80261,0),vector(-506.365,-0.943645,0),vector(-528.756,-0.243946,0),vector(-529.106,3.95426,0),vector(-532.254,4.65396,0),vector(-532.954,63.7786,0),vector(-523.508,59.5804,0),vector(-516.861,50.4843,0),vector(-504.266,61.6795,0),vector(-497.619,63.4288,0),vector(-487.124,60.63,0),vector(-483.275,60.63,0),vector(-479.427,57.1315,0),vector(-474.179,69.7261,0),vector(-459.835,67.627,0),vector(-459.486,57.8312,0),vector(-462.284,53.9828,0),vector(-460.185,51.5339,0),vector(-443.392,53.9828,0),vector(-425.55,53.2831,0),vector(-411.206,51.184,0),vector(-391.615,51.5339,0),vector(-375.522,52.9333,0),vector(-360.828,52.2336,0),vector(-357.329,54.6825,0),vector(-356.979,64.1285,0),vector(-359.428,65.8777,0),vector(-359.079,70.0759,0),vector(-323.394,70.0759,0),vector(-323.744,-1.99319,0),vector(-296.455,-1.99319,0),vector(-296.455,77.7726,0),vector(-294.706,85.4693,0),vector(-284.91,107.86,0),vector(-252.374,171.183,0),vector(-242.578,162.436,0),vector(-229.634,153.34,0),vector(-255.873,102.262,0),vector(-268.02,75.5492,0),vector(-220.44,74.9982,0),vector(-220.022,53.3069,0),vector(-273.715,53.2525,0),vector(-274.765,-33.1299,0),vector(-277.913,-34.5293,0),vector(-277.913,-46.774,0)],#closed:0]]];",
+      "sw_pos": [
+        -386.948,
+        37.749,
+        0.0
+      ],
+      "godot_pos": [
+        -386.948,
+        0.0,
+        -37.749
+      ]
+    },
+    {
+      "name": "Line17",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-239.87,193.301,0),vector(-230.424,190.502,0),vector(-213.631,182.106,0),vector(-189.142,229.336,0),vector(-101.329,229.685,0),vector(-100.63,286.711,0),vector(-166.843,287.061,0),vector(-165.443,289.16,0),vector(-147.86,289.51,0),vector(-146.46,338.839,0),vector(-107.277,339.888,0),vector(-107.277,353.183,0),vector(-89.0847,353.183,0),vector(-82.7874,337.089,0)],#closed:0]]];",
+      "sw_pos": [
+        -150.383,
+        278.54,
+        0.0
+      ],
+      "godot_pos": [
+        -150.383,
+        0.0,
+        -278.54
+      ]
+    },
+    {
+      "name": "Line18",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-239.87,193.301,0),vector(-210.833,252.776,0),vector(-171.649,252.776,0),vector(-171.999,264.67,0),vector(-182.495,264.67,0),vector(-182.495,261.172,0),vector(-213.631,261.172,0),vector(-213.631,296.507,0),vector(-282.193,296.507,0),vector(-283.592,429.868,0),vector(-273.53,429.927,0),vector(-273.505,437.428,0),vector(-229.542,437.34,0),vector(-229.883,430.183,0),vector(-175.848,430.499,0),vector(-185.643,411.957,0),vector(-171.649,410.558,0),vector(-174.798,405.31,0),vector(-166.751,396.214,0),vector(-146.46,410.558,0),vector(-145.76,386.068,0),vector(-109.726,386.418,0),vector(-105.178,374.873,0),vector(-89.7844,373.124,0),vector(-89.4346,386.068,0)],#closed:0]]];",
+      "sw_pos": [
+        -180.243,
+        350.445,
+        0.0
+      ],
+      "godot_pos": [
+        -180.243,
+        0.0,
+        -350.445
+      ]
+    },
+    {
+      "name": "Line19",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-90.5559,374.568,0),vector(86.8181,374.218,0),vector(87.8677,371.769,0),vector(96.9638,372.119,0),vector(97.3136,394.509,0),vector(135.447,394.159,0),vector(135.447,437.191,0),vector(130.899,441.039,0),vector(131.249,536.548,0),vector(112.707,543.895,0)],#closed:0]]];",
+      "sw_pos": [
+        92.416,
+        424.002,
+        0.0
+      ],
+      "godot_pos": [
+        92.416,
+        0.0,
+        -424.002
+      ]
+    },
+    {
+      "name": "Line20",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-86.5992,351.027,0),vector(85.5783,351.521,0),vector(88.5469,353.006,0),vector(97.4526,353.006,0),vector(97.4526,332.72,0),vector(137.528,332.226,0),vector(136.539,291.16,0),vector(173.151,289.676,0),vector(217.68,327.773,0),vector(307.727,248.116,0),vector(360.172,204.082,0),vector(403.216,207.051,0),vector(403.711,162.522,0),vector(541.255,163.017,0),vector(540.953,175.109,0),vector(541.896,174.86,0),vector(541.894,180.952,0),vector(540.809,180.851,0),vector(540.265,202.598,0),vector(487.326,203.587,0),vector(487.326,292.645,0),vector(404.7,305.508,0),vector(402.721,270.875,0),vector(377.488,268.401,0),vector(345.824,283.739,0),vector(322.075,303.529,0),vector(302.779,322.825,0),vector(278.536,343.11,0),vector(256.272,361.417,0),vector(172.657,433.652,0),vector(166.719,484.613,0),vector(170.678,535.573,0),vector(185.026,530.131,0)],#closed:0]]];",
+      "sw_pos": [
+        280.416,
+        313.425,
+        0.0
+      ],
+      "godot_pos": [
+        280.416,
+        0.0,
+        -313.425
+      ]
+    },
+    {
+      "name": "Line21",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(457.275,409.444,0),vector(462.522,404.546,0),vector(466.021,406.995,0),vector(464.272,415.042,0),vector(479.665,437.782,0),vector(486.312,433.584,0),vector(490.51,438.482,0),vector(484.913,444.429,0),vector(494.009,459.123,0),vector(498.907,455.624,0),vector(503.105,455.974,0),vector(504.504,459.123,0),vector(499.606,466.12,0),vector(513.95,488.51,0),vector(518.848,487.461,0),vector(523.046,488.86,0),vector(522.347,492.708,0),vector(516.749,496.907,0),vector(499.956,585.069,0),vector(504.504,587.868,0),vector(504.504,592.416,0),vector(499.606,593.115,0),vector(495.408,591.366,0),vector(471.968,607.459,0),vector(475.117,611.658,0),vector(475.117,616.905,0),vector(470.219,616.905,0),vector(465.671,612.707,0),vector(450.977,622.153,0),vector(453.426,626.001,0),vector(453.426,630.899,0),vector(450.977,632.299,0),vector(444.68,627.051,0),vector(421.24,642.444,0),vector(421.94,646.643,0),vector(419.841,650.841,0),vector(417.392,650.491,0),vector(414.243,647.342,0),vector(413.193,643.494,0),vector(323.982,627.401,0),vector(321.883,632.299,0),vector(316.985,632.299,0),vector(316.635,627.401,0),vector(319.084,623.902,0),vector(302.641,600.112,0),vector(297.393,603.261,0),vector(293.545,602.561,0),vector(292.145,599.063,0),vector(297.393,593.815,0),vector(287.597,578.772,0),vector(282.699,582.27,0),vector(278.851,581.221,0),vector(278.851,577.022,0),vector(282.349,572.824,0),vector(267.306,548.685,0),vector(261.708,549.734,0),vector(258.91,547.985,0),vector(259.959,544.136,0),vector(265.907,541.338,0),vector(282,452.826,0),vector(278.151,449.677,0),vector(278.151,443.38,0),vector(284.449,444.079,0),vector(286.548,446.178,0),vector(309.638,429.735,0),vector(306.489,425.187,0),vector(306.489,422.039,0),vector(311.737,421.339,0),vector(338.737,459.529,0),vector(354.182,447.011,0),vector(348.471,440.931,0),vector(327.13,409.094,0),vector(328.53,405.596,0),vector(333.078,405.246,0),vector(339.025,409.794,0),vector(360.716,395.45,0),vector(360.016,389.503,0),vector(363.165,385.654,0),vector(368.413,393.701,0)],#closed:1]]];",
+      "sw_pos": [
+        389.802,
+        524.461,
+        0.0
+      ],
+      "godot_pos": [
+        389.802,
+        0.0,
+        -524.461
+      ]
+    },
+    {
+      "name": "Line22",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(171.392,535.687,0),vector(162.646,551.781,0),vector(176.99,566.824,0),vector(181.888,589.564,0),vector(203.928,597.611,0),vector(225.969,621.751,0),vector(235.065,624.549,0),vector(236.814,618.252,0),vector(203.579,590.964,0),vector(188.885,571.722,0),vector(176.29,524.842,0),vector(176.64,480.061,0),vector(217.573,423.385,0),vector(212.325,414.639,0)],#closed:0]]];",
+      "sw_pos": [
+        197.856,
+        550.831,
+        0.0
+      ],
+      "godot_pos": [
+        197.856,
+        0.0,
+        -550.831
+      ]
+    },
+    {
+      "name": "Line23",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(130.143,535.118,0),vector(141.523,579.646,0),vector(181.104,628.133,0),vector(209.8,668.704,0),vector(258.287,691.463,0),vector(284.509,682.557,0),vector(271.646,666.23,0),vector(258.782,641.492,0),vector(256.308,625.659,0),vector(257.298,599.437,0),vector(247.402,594.489,0),vector(232.559,582.12,0),vector(216.003,559.882,0),vector(214.055,548.633,0),vector(218.706,552.435,0),vector(228.107,568.762,0),vector(240.476,579.152,0),vector(258.782,588.057,0),vector(270.656,643.471,0),vector(290.447,669.199,0),vector(335.965,693.442,0),vector(439.37,702.842,0),vector(559.103,608.343,0),vector(546.734,496.032,0),vector(497.752,382.731,0),vector(433.433,331.77,0),vector(351.302,330.781,0),vector(274.119,366.898,0),vector(216.727,424.291,0)],#closed:0]]];",
+      "sw_pos": [
+        286.625,
+        569.427,
+        0.0
+      ],
+      "godot_pos": [
+        286.625,
+        0.0,
+        -569.427
+      ]
+    },
+    {
+      "name": "Line24",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-83.083,-304.153,0),vector(-74.9908,-283.923,0),vector(-54.2207,-275.831,0),vector(-33.99,-284.732,0),vector(-26.1675,-304.693,0),vector(-34.2598,-324.654,0),vector(-54.7601,-333.016,0),vector(-75.2605,-324.114,0)],#closed:1]]];",
+      "sw_pos": [
+        -54.592,
+        -304.389,
+        0.0
+      ],
+      "godot_pos": [
+        -54.592,
+        0.0,
+        304.389
+      ]
+    },
+    {
+      "name": "Line25",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-173.962,254.428,0),vector(-136.738,254.428,0)],#closed:0]]];",
+      "sw_pos": [
+        -155.35,
+        254.428,
+        0.0
+      ],
+      "godot_pos": [
+        -155.35,
+        0.0,
+        -254.428
+      ]
+    },
+    {
+      "name": "Shape01",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(8.69321,-486.939,-11.8093),vector(37.0211,-517.037,-2.67602),vector(29.6824,-554.544,-2.13362),vector(51.6454,-566.996,-2.9525),vector(64.205,-569.348,-2.41928),vector(98.5186,-552.949,-6.4275),vector(132.397,-540.052,-12.4968),vector(191.702,-529.865,-23.076),vector(235.734,-536.825,-33.6553),vector(290.444,-511.774,-35.0297),vector(303.368,-413.965,-36.8798),vector(300.483,-350.82,-34.9625),vector(299.756,-288.271,-33.8145),vector(301.709,-283.095,-33.7772),vector(302.195,-267.77,-33.4895),vector(300.245,-236.054,-32.9326),vector(298.582,-180.035,-25.738),vector(298.081,-173.027,-24.8477),vector(298.086,-166.35,-24.2435),vector(297.276,-166.276,-23.7737),vector(291.031,-120.978,-20.0902),vector(244.807,-99.0907,-16.2875),vector(177.422,-70.1282,-1.64764)],#closed:0]]];",
+      "sw_pos": [
+        -50.166,
+        -313.095,
+        -54.674
+      ],
+      "godot_pos": [
+        -50.166,
+        -54.674,
+        313.095
+      ]
+    },
+    {
+      "name": "Line26",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(16.9355,-501.271,0),vector(224.165,-500.189,0),vector(224.165,-479.628,0),vector(259.876,-479.087,0),vector(262.581,-157.629,0),vector(169.765,-157.653,0),vector(170.193,-72.7784,0),vector(182.048,-70.4933,0)],#closed:0]]];",
+      "sw_pos": [
+        208.384,
+        -432.375,
+        0.0
+      ],
+      "godot_pos": [
+        208.384,
+        0.0,
+        432.375
+      ]
+    },
+    {
+      "name": "door1_collision",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-74.9495,-508.993,0),vector(-24.2878,-509.368,0),vector(-24.663,-560.405,0),vector(-29.9168,-575.791,0),vector(-42.6761,-584.798,0),vector(-57.687,-585.548,0),vector(-69.3204,-576.167,0),vector(-75.7,-561.906,0)],#closed:1]]];dynamic=1;",
+      "sw_pos": [
+        -49.9,
+        -557.872,
+        0.0
+      ],
+      "godot_pos": [
+        -49.9,
+        0.0,
+        557.872
+      ]
+    },
+    {
+      "name": "Line30",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-75.4536,-1096.73,0),vector(-89.5252,-1092.64,0),vector(-98.6474,-1087.36,0),vector(-106.997,-1093.25,0),vector(-111.745,-1105.13,0),vector(-136.857,-1120.12,0),vector(-136.359,-1041.99,0),vector(-74.6487,-1041.49,0),vector(-74.6487,-1049.46,0),vector(-61.7094,-1049.46,0),vector(-61.7094,-1040.5,0),vector(-81.1183,-1032.54,0)],#closed:0]]];",
+      "sw_pos": [
+        -44.712,
+        -1092.063,
+        0.0
+      ],
+      "godot_pos": [
+        -44.712,
+        0.0,
+        1092.063
+      ]
+    },
+    {
+      "name": "enterlevel_collision",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-79.6981,-1097.62,0),vector(-33.7912,-1083.29,0)],#closed:0]]];dynamic=1;",
+      "sw_pos": [
+        -56.745,
+        -1090.456,
+        0.0
+      ],
+      "godot_pos": [
+        -56.745,
+        0.0,
+        1090.456
+      ]
+    },
+    {
+      "name": "Line27",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(277.791,-448.39,0),vector(280.546,-424.381,0),vector(286.308,-409.789,0),vector(277.924,-379.763,0),vector(259.253,-379.726,0)],#closed:0]]];",
+      "sw_pos": [
+        276.042,
+        -404.732,
+        0.0
+      ],
+      "godot_pos": [
+        276.042,
+        0.0,
+        404.732
+      ]
+    },
+    {
+      "name": "Line28",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(258.745,-351.591,0),vector(270.208,-352.898,0),vector(273.626,-350.797,0),vector(274.74,-329.345,0),vector(277.696,-319.564,0),vector(275.262,-308.811,0),vector(256.426,-308.33,0)],#closed:0]]];",
+      "sw_pos": [
+        267.294,
+        -326.002,
+        0.0
+      ],
+      "godot_pos": [
+        267.294,
+        0.0,
+        326.002
+      ]
+    },
+    {
+      "name": "Line29",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(300.372,-286.961,0),vector(277.317,-289.079,0),vector(256.92,-277.75,0)],#closed:0]]];",
+      "sw_pos": [
+        279.399,
+        -288.537,
+        0.0
+      ],
+      "godot_pos": [
+        279.399,
+        0.0,
+        288.537
+      ]
+    },
+    {
+      "name": "Line31",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(255.443,-242.561,0),vector(277.091,-234.563,0),vector(300.865,-244.31,0)],#closed:0]]];",
+      "sw_pos": [
+        278.396,
+        -241.236,
+        0.0
+      ],
+      "godot_pos": [
+        278.396,
+        0.0,
+        241.236
+      ]
+    },
+    {
+      "name": "Line32",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(300.051,-245.399,0),vector(317.029,-240.933,0),vector(330.044,-245.432,0),vector(332.044,-255.87,0),vector(317.798,-268.344,0),vector(323.546,-269.011,0),vector(323.689,-278.865,0),vector(316.568,-289.45,0),vector(300.404,-289.226,0)],#closed:0]]];",
+      "sw_pos": [
+        313.04,
+        -267.401,
+        0.0
+      ],
+      "godot_pos": [
+        313.04,
+        0.0,
+        267.401
+      ]
+    },
+    {
+      "name": "Line33",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(299.593,-216.996,0),vector(313.76,-220.755,0),vector(324.689,-216.196,0),vector(321.877,-211.367,0),vector(316.178,-210.465,0),vector(316.932,-188.559,0),vector(325.101,-174.47,0),vector(324.862,-160.965,0),vector(295.523,-157.432,0)],#closed:0]]];",
+      "sw_pos": [
+        312.214,
+        -188.755,
+        0.0
+      ],
+      "godot_pos": [
+        312.214,
+        0.0,
+        188.755
+      ]
+    },
+    {
+      "name": "Line34",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-176.402,-432.402,0),vector(-177.109,-459.97,0),vector(-283.141,-459.97,0),vector(-283.141,-485.418,0),vector(-146.006,-485.418,0),vector(-146.006,-459.263,0),vector(-153.075,-459.263,0),vector(-153.075,-433.815,0)],#closed:1]]];",
+      "sw_pos": [
+        -189.745,
+        -459.44,
+        0.0
+      ],
+      "godot_pos": [
+        -189.745,
+        0.0,
+        459.44
+      ]
+    },
+    {
+      "name": "Line35",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-518.01,58.7421,0),vector(-512.137,23.7576,0),vector(-519.946,23.6497,0),vector(-526.662,62.1011,0)],#closed:0]]];",
+      "sw_pos": [
+        -514.567,
+        38.956,
+        0.0
+      ],
+      "godot_pos": [
+        -514.567,
+        0.0,
+        -38.956
+      ]
+    },
+    {
+      "name": "Line36",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(503.895,367.454,0),vector(424.701,301.867,0)],#closed:0]]];",
+      "sw_pos": [
+        450.61,
+        331.979,
+        0.0
+      ],
+      "godot_pos": [
+        450.61,
+        0.0,
+        -331.979
+      ]
+    },
+    {
+      "name": "Line37",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(485.984,371.237,0),vector(565.844,353.78,0),vector(560.022,313.345,0),vector(542.027,312.845,0),vector(535.386,312.866,0),vector(514.932,312.87,0),vector(512.037,312.845,0),vector(474.049,313.345,0),vector(475.548,293.351,0)],#closed:0]]];",
+      "sw_pos": [
+        518.59,
+        322.564,
+        0.0
+      ],
+      "godot_pos": [
+        518.59,
+        0.0,
+        -322.564
+      ]
+    },
+    {
+      "name": "Line38",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(542.872,194.154,0),vector(542.872,137.604,0),vector(560.314,133.154,0),vector(573.028,137.604,0),vector(569.742,144.471,0),vector(565.107,143.529,0),vector(565.215,165.029,0),vector(572.52,177.686,0),vector(573.047,192.638,0),vector(547.868,197.697,0)],#closed:1]]];",
+      "sw_pos": [
+        557.3,
+        165.702,
+        0.0
+      ],
+      "godot_pos": [
+        557.3,
+        0.0,
+        -165.702
+      ]
+    },
+    {
+      "name": "Line39",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(542.515,220.546,0),vector(577.013,216.89,0),vector(585.344,227.491,0),vector(588.326,237.895,0),vector(596.264,248.086,0),vector(594.079,258.435,0),vector(575.474,263.966,0),vector(543.558,263.053,0)],#closed:1]]];",
+      "sw_pos": [
+        575.855,
+        237.981,
+        0.0
+      ],
+      "godot_pos": [
+        575.855,
+        0.0,
+        -237.981
+      ]
+    },
+    {
+      "name": "Line40",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(558.89,292.202,0),vector(573.373,285.353,0),vector(583.505,288.939,0),vector(582.649,295.319,0),vector(577.631,297.61,0),vector(580.978,317.494,0),vector(592.635,330.113,0),vector(593.253,344.102,0),vector(565.959,354.551,0),vector(559.59,313.513,0)],#closed:1]]];",
+      "sw_pos": [
+        577.092,
+        316.445,
+        0.0
+      ],
+      "godot_pos": [
+        577.092,
+        0.0,
+        -316.445
+      ]
+    },
+    {
+      "name": "Line41",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(169.928,288.908,0),vector(169.834,271.433,0),vector(158.07,267.182,0),vector(142.615,274.57,0),vector(117.342,275.784,0),vector(90.2942,271.463,0),vector(59.2059,278.657,0),vector(51.7647,290.097,0),vector(30.2147,306.299,0),vector(22.3217,319.014,0),vector(24.5553,331.095,0),vector(38.9889,343.254,0),vector(68.1782,322.524,0),vector(84.9452,322.508,0),vector(84.7986,288.924,0)],#closed:1]]];",
+      "sw_pos": [
+        80.956,
+        303.181,
+        0.0
+      ],
+      "godot_pos": [
+        80.956,
+        0.0,
+        -303.181
+      ]
+    },
+    {
+      "name": "Line42",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-85.9248,392.32,0),vector(-52.5452,392.32,0),vector(-37.1033,384.994,0),vector(-24.0335,393.63,0),vector(-16.3512,408.004,0),vector(-49.3694,429.914,0),vector(-58.6534,443.179,0),vector(-63.3809,458.928,0),vector(-78.1467,462.666,0),vector(-89.0065,459.675,0),vector(-101.148,447.485,0),vector(-113.154,444.408,0),vector(-135.367,447.541,0),vector(-135.769,438.432,0),vector(-84.383,438.526,0)],#closed:1]]];",
+      "sw_pos": [
+        -73.936,
+        424.105,
+        0.0
+      ],
+      "godot_pos": [
+        -73.936,
+        0.0,
+        -424.105
+      ]
+    },
+    {
+      "name": "Line43",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-157.36,431.653,0),vector(-153.74,441.648,0),vector(-157.647,448.016,0),vector(-171.358,451.976,0),vector(-187.225,447.734,0),vector(-216.538,457.621,0),vector(-224.287,437.71,0),vector(-229.887,459.751,0),vector(-247.205,468.587,0),vector(-263.489,460.458,0),vector(-263.635,437.441,0),vector(-154.165,437.827,0)],#closed:0]]];",
+      "sw_pos": [
+        -214.242,
+        445.948,
+        0.0
+      ],
+      "godot_pos": [
+        -214.242,
+        0.0,
+        -445.948
+      ]
+    },
+    {
+      "name": "Line44",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(539.21,567.081,0),vector(540.516,594.844,0),vector(545.574,595.029,0),vector(544.022,565.874,0)],#closed:1]]];",
+      "sw_pos": [
+        542.33,
+        580.707,
+        0.0
+      ],
+      "godot_pos": [
+        542.33,
+        0.0,
+        -580.707
+      ]
+    },
+    {
+      "name": "Line45",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(300.824,-267.639,0),vector(320.318,-267.389,0)],#closed:0]]];",
+      "sw_pos": [
+        310.571,
+        -267.514,
+        0.0
+      ],
+      "godot_pos": [
+        310.571,
+        0.0,
+        267.514
+      ]
+    },
+    {
+      "name": "Line46",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(139.718,273.86,0),vector(139.656,290.043,0)],#closed:0]]];",
+      "sw_pos": [
+        139.687,
+        281.952,
+        0.0
+      ],
+      "godot_pos": [
+        139.687,
+        0.0,
+        -281.952
+      ]
+    },
+    {
+      "name": "Line47",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(301.646,-267.875,0),vector(297.963,-287.678,0)],#closed:0]]];",
+      "sw_pos": [
+        301.69,
+        -279.183,
+        0.0
+      ],
+      "godot_pos": [
+        301.69,
+        0.0,
+        279.183
+      ]
+    },
+    {
+      "name": "Line48",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(319.213,-267.387,0),vector(300.834,-267.387,0)],#closed:0]]];",
+      "sw_pos": [
+        310.024,
+        -267.387,
+        0.0
+      ],
+      "godot_pos": [
+        310.024,
+        0.0,
+        267.387
+      ]
+    },
+    {
+      "name": "Line49",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(490.987,364.582,0),vector(509.866,361.816,0),vector(524.544,351.364,0),vector(535.723,342.3,0),vector(548.405,358.514,0)],#closed:0]]];",
+      "sw_pos": [
+        528.076,
+        352.786,
+        0.0
+      ],
+      "godot_pos": [
+        528.076,
+        0.0,
+        -352.786
+      ]
+    },
+    {
+      "name": "Line50",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-90.1144,390.455,0),vector(-63.7025,390.952,0),vector(-70.5218,424.281,0),vector(-85.5785,419.333,0)],#closed:0]]];",
+      "sw_pos": [
+        -78.472,
+        410.324,
+        0.0
+      ],
+      "godot_pos": [
+        -78.472,
+        0.0,
+        -410.324
+      ]
+    },
+    {
+      "name": "Line51",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-192.254,-430.57,0),vector(-175.455,-431.913,0),vector(-152.478,-433.83,0),vector(-115.778,-431.069,0)],#closed:0]]];",
+      "sw_pos": [
+        -154.016,
+        -430.82,
+        0.0
+      ],
+      "godot_pos": [
+        -154.016,
+        0.0,
+        430.82
+      ]
+    },
+    {
+      "name": "Line52",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-276.182,-120.246,0),vector(-276.182,-171.141,0)],#closed:0]]];",
+      "sw_pos": [
+        -276.182,
+        -145.694,
+        0.0
+      ],
+      "godot_pos": [
+        -276.182,
+        0.0,
+        145.694
+      ]
+    },
+    {
+      "name": "Line53",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(297.233,-157.75,0),vector(298.453,-176.384,0),vector(300.242,-218.896,0)],#closed:0]]];",
+      "sw_pos": [
+        299.535,
+        -188.323,
+        0.0
+      ],
+      "godot_pos": [
+        299.535,
+        0.0,
+        188.323
+      ]
+    },
+    {
+      "name": "Line54",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(292.101,-240.511,0),vector(293.959,-256.227,0),vector(301.329,-271.923,0)],#closed:0]]];",
+      "sw_pos": [
+        296.709,
+        -256.789,
+        0.0
+      ],
+      "godot_pos": [
+        296.709,
+        0.0,
+        256.789
+      ]
+    },
+    {
+      "name": "Line55",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(275.17,-308.587,0),vector(300.442,-308.751,0),vector(307.5,-288.886,0),vector(299.215,-287.283,0)],#closed:0]]];",
+      "sw_pos": [
+        294.646,
+        -293.376,
+        0.0
+      ],
+      "godot_pos": [
+        294.646,
+        0.0,
+        293.376
+      ]
+    },
+    {
+      "name": "Line56",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(139.745,280.764,0),vector(143.282,290.783,0)],#closed:0]]];",
+      "sw_pos": [
+        141.513,
+        285.773,
+        0.0
+      ],
+      "godot_pos": [
+        141.513,
+        0.0,
+        -285.773
+      ]
+    },
+    {
+      "name": "Line57",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-309.456,-2.19895,0),vector(-309.456,69.5667,0)],#closed:0]]];",
+      "sw_pos": [
+        -309.456,
+        33.684,
+        0.0
+      ],
+      "godot_pos": [
+        -309.456,
+        0.0,
+        -33.684
+      ]
+    },
+    {
+      "name": "Line58",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-151.597,-418.664,0),vector(-151.597,-439.75,0)],#closed:0]]];",
+      "sw_pos": [
+        -151.597,
+        -429.207,
+        0.0
+      ],
+      "godot_pos": [
+        -151.597,
+        0.0,
+        429.207
+      ]
+    },
+    {
+      "name": "Line59",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(300.798,-240.781,0),vector(276.746,-230.779,0),vector(258.648,-236.971,0)],#closed:0]]];",
+      "sw_pos": [
+        278.731,
+        -236.177,
+        0.0
+      ],
+      "godot_pos": [
+        278.731,
+        0.0,
+        236.177
+      ]
+    },
+    {
+      "name": "Line60",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-22.3701,-250.352,0),vector(-16.774,-255.353,0),vector(-23.3227,-262.616,0),vector(-29.2761,-257.258,0)],#closed:1]]];",
+      "sw_pos": [
+        -22.936,
+        -256.394,
+        0.0
+      ],
+      "godot_pos": [
+        -22.936,
+        0.0,
+        256.394
+      ]
+    },
+    {
+      "name": "Line61",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-139.679,-270.97,0),vector(-132.27,-279.221,0),vector(-139.005,-283.599,0),vector(-146.246,-275.348,0)],#closed:1]]];",
+      "sw_pos": [
+        -139.3,
+        -277.285,
+        0.0
+      ],
+      "godot_pos": [
+        -139.3,
+        0.0,
+        277.285
+      ]
+    },
+    {
+      "name": "Line62",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-175.756,-227.147,0),vector(-166.747,-236.24,0),vector(-173.819,-242.976,0),vector(-182.744,-233.378,0)],#closed:1]]];",
+      "sw_pos": [
+        -174.767,
+        -234.935,
+        0.0
+      ],
+      "godot_pos": [
+        -174.767,
+        0.0,
+        234.935
+      ]
+    },
+    {
+      "name": "Line63",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-93.5318,-340.485,0),vector(-88.7691,-346.676,0),vector(-100.676,-357.869,0),vector(-106.153,-351.677,0)],#closed:1]]];",
+      "sw_pos": [
+        -97.282,
+        -349.177,
+        0.0
+      ],
+      "godot_pos": [
+        -97.282,
+        0.0,
+        349.177
+      ]
+    },
+    {
+      "name": "Line64",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-15.8996,-368.823,0),vector(-10.1844,-376.92,0),vector(-16.3759,-380.968,0),vector(-23.2818,-373.348,0)],#closed:1]]];",
+      "sw_pos": [
+        -16.435,
+        -375.014,
+        0.0
+      ],
+      "godot_pos": [
+        -16.435,
+        0.0,
+        375.014
+      ]
+    },
+    {
+      "name": "Line65",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-184.976,-420.26,0),vector(-175.212,-410.497,0),vector(-164.258,-418.831,0),vector(-156.876,-420.26,0),vector(-152.828,-415.021,0),vector(-142.588,-415.021,0),vector(-137.587,-422.404,0)],#closed:0]]];",
+      "sw_pos": [
+        -159.189,
+        -417.471,
+        0.0
+      ],
+      "godot_pos": [
+        -159.189,
+        0.0,
+        417.471
+      ]
+    },
+    {
+      "name": "Line66",
+      "kind": "group",
+      "parent": "collisiondata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(278.314,-448.688,0),vector(285.792,-424.933,0),vector(291.951,-409.977,0),vector(288.432,-390.181,0),vector(282.713,-374.345,0),vector(259.398,-375.225,0),vector(258.958,-357.189,0),vector(272.155,-357.189,0),vector(279.634,-352.79,0),vector(280.953,-331.235,0),vector(282.713,-306.6,0)],#closed:0]]];",
+      "sw_pos": [
+        278.274,
+        -375.305,
+        0.0
+      ],
+      "godot_pos": [
+        278.274,
+        0.0,
+        375.305
+      ]
+    },
+    {
+      "name": "scriptingdata",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "character_guard1",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "resource = mk_henchman1;\r\ngroup = badguys;\r\nattacklist = sabeltann, pinky, pelle, pysa, langemann;",
+      "sw_pos": [
+        -202.163,
+        -334.995,
+        31.844
+      ],
+      "godot_pos": [
+        -202.163,
+        31.844,
+        334.995
+      ]
+    },
+    {
+      "name": "character_guard2",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "resource = mk_henchman1;\r\ngroup = badguys;\r\nattacklist = sabeltann, pinky, pelle, pysa, langemann;",
+      "sw_pos": [
+        92.503,
+        -241.287,
+        0.0
+      ],
+      "godot_pos": [
+        92.503,
+        0.0,
+        241.287
+      ]
+    },
+    {
+      "name": "character_langemann",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "resource = langemann;\r\nattacklist = badguys;",
+      "sw_pos": [
+        -41.124,
+        -1148.029,
+        0.0
+      ],
+      "godot_pos": [
+        -41.124,
+        0.0,
+        1148.029
+      ]
+    },
+    {
+      "name": "character_pelle",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "resource = pelle;\r\nattacklist = badguys;",
+      "sw_pos": [
+        -46.324,
+        -1181.583,
+        0.0
+      ],
+      "godot_pos": [
+        -46.324,
+        0.0,
+        1181.583
+      ]
+    },
+    {
+      "name": "character_sabeltann",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "resource = sabeltann;\r\nattacklist = badguys;",
+      "sw_pos": [
+        -60.323,
+        -1121.496,
+        0.0
+      ],
+      "godot_pos": [
+        -60.323,
+        0.0,
+        1121.496
+      ]
+    },
+    {
+      "name": "langemann_1",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-39.8028,-845.58,0),vector(-47.8655,-689.164,0),vector(-52.7031,-633.262,0),vector(-55.6383,-617.134,0)],#closed:0]]];target = langemann;\r\ntrigger = langemann_0_finished;\r\nspeed = walk;",
+      "sw_pos": [
+        -49.209,
+        -692.389,
+        0.0
+      ],
+      "godot_pos": [
+        -49.209,
+        0.0,
+        692.389
+      ]
+    },
+    {
+      "name": "langemann_2",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-54.1855,-610.988,0),vector(-50.3846,-427.789,0),vector(-33.6612,-358.615,0),vector(-22.7339,-359.267,0),vector(1.30363,-352.868,0)],#closed:0]]];target = langemann;\r\ntrigger = door1_open_finished;\r\nspeed = run;",
+      "sw_pos": [
+        -19.788,
+        -438.432,
+        0.0
+      ],
+      "godot_pos": [
+        -19.788,
+        0.0,
+        438.432
+      ]
+    },
+    {
+      "name": "langemann_3",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-16.303,-347.067,0),vector(-67.9291,-345.439,0),vector(-147.378,-365.418,0),vector(-179.802,-334.419,0),vector(-202.368,-338.249,0),vector(-283.527,-335.401,0),vector(-287.611,-326.619,0),vector(-288.371,-21.0352,0),vector(-311.936,-19.5149,0)],#closed:0]]];target = langemann;\r\nalltriggers = guard2_died, guard1_died, langemann_2_finished;\r\nspeed = run;",
+      "sw_pos": [
+        -192.686,
+        -267.042,
+        0.0
+      ],
+      "godot_pos": [
+        -192.686,
+        0.0,
+        267.042
+      ]
+    },
+    {
+      "name": "pelle_1",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-52.1656,-862.78,0),vector(-44.1029,-624.662,0),vector(-14.5397,-596.711,0),vector(9.93697,-591.884,0),vector(9.20271,-592.827,0)],#closed:0]]];target = pelle;\r\ntrigger = pelle_0_finished;\r\nspeed = walk;",
+      "sw_pos": [
+        -25.962,
+        -669.41,
+        0.0
+      ],
+      "godot_pos": [
+        -25.962,
+        0.0,
+        669.41
+      ]
+    },
+    {
+      "name": "pelle_2",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-24.1746,-598.757,0),vector(-44.4135,-588.248,0),vector(-48.176,-402.806,0),vector(-3.56245,-346.367,0),vector(65.7767,-333.466,0),vector(57.1765,-330.241,0)],#closed:0]]];target = pelle;\r\ntrigger = door1_open_finished;\r\nspeed = run;",
+      "sw_pos": [
+        5.396,
+        -432.727,
+        0.0
+      ],
+      "godot_pos": [
+        5.396,
+        0.0,
+        432.727
+      ]
+    },
+    {
+      "name": "pelle_3",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(55.2208,-326.619,0),vector(-26.1162,-261.245,0),vector(-138.62,-255.164,0),vector(-177.425,-334.707,0),vector(-202.589,-331.061,0),vector(-283.527,-334.908,0),vector(-289.131,-325.099,0),vector(-289.098,-146.41,0),vector(-285.038,69.9048,0),vector(-270.913,105.661,0),vector(-253.025,147.385,0)],#closed:0]]];target = pelle;\r\nalltriggers = guard2_died, guard1_died, pelle_2_finished;\r\nspeed = run;",
+      "sw_pos": [
+        -203.824,
+        -206.936,
+        0.0
+      ],
+      "godot_pos": [
+        -203.824,
+        0.0,
+        206.936
+      ]
+    },
+    {
+      "name": "sabeltann_1",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-59.1533,-843.43,0),vector(-51.6281,-824.079,0),vector(-49.4781,-703.677,0),vector(-56.4657,-621.974,0),vector(-82.7899,-593.307,0),vector(-79.4294,-593.679,0)],#closed:0]]];target = sabeltann;\r\ntrigger = sabeltann_0_finished;\r\nspeed = walk;",
+      "sw_pos": [
+        -59.798,
+        -716.792,
+        0.0
+      ],
+      "godot_pos": [
+        -59.798,
+        0.0,
+        716.792
+      ]
+    },
+    {
+      "name": "sabeltann_2",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-75.7729,-594.2,0),vector(-51.4479,-599.901,0),vector(-15.7204,-587.739,0)],#closed:0]]];target=sabeltann;\r\ntrigger=sabeltann_1_finished;\r\npingpong=1;\r\nspeed=20;",
+      "sw_pos": [
+        -47.647,
+        -593.947,
+        0.0
+      ],
+      "godot_pos": [
+        -47.647,
+        0.0,
+        593.947
+      ]
+    },
+    {
+      "name": "sabeltann_3",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-50.229,-590.649,0),vector(-50.9892,-499.43,0),vector(-57.8306,-430.256,0),vector(-85.1963,-387.687,0),vector(-158.553,-332.764,0),vector(-215.484,-333.544,0),vector(-283.624,-335.884,0),vector(-288.919,-328.395,0),vector(-288.919,-23.5713,0),vector(-287.4,63.0862,0),vector(-270.676,107.936,0),vector(-248.369,152.667,0)],#closed:0]]];target = sabeltann;\r\ntrigger = door1_open_finished;\r\nspeed = run;",
+      "sw_pos": [
+        -180.292,
+        -327.711,
+        0.0
+      ],
+      "godot_pos": [
+        -180.292,
+        0.0,
+        327.711
+      ]
+    },
+    {
+      "name": "sabeltann_4",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-215.235,223.393,0),vector(-197.096,240.3,0),vector(-132.594,242.987,0),vector(-132.057,272.55,0),vector(-195.483,276.313,0),vector(-169.134,361.531,0),vector(175.426,360.393,0),vector(175.642,381.53,0)],#closed:0]]];target = sabeltann;\r\nalltriggers = sabeltann_3_finished + 3, areatrigger_gofurther1_enter;\r\nspeed = run;",
+      "sw_pos": [
+        -189.417,
+        278.694,
+        0.0
+      ],
+      "godot_pos": [
+        -189.417,
+        0.0,
+        -278.694
+      ]
+    },
+    {
+      "name": "dooropen_camera",
+      "kind": "camera",
+      "parent": "scriptingdata",
+      "userdata": "snap = 1;",
+      "sw_pos": [
+        -51.029,
+        -641.03,
+        24.626
+      ],
+      "godot_pos": [
+        -51.029,
+        24.626,
+        641.03
+      ]
+    },
+    {
+      "name": "Behaviours",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "trigger = startmap;\r\naction = disableinput, enterlevel_collision|disablecollision, actionable_gatedown|enable, guard1|setattackmode|guard, areatrigger_nearpelle|disable, areatrigger_gofurther1|enable, areatrigger_endlevel|disable;\r\naction = clearmapfromgamestate|magakhan_jungle;\r\n\r\ntrigger = resumemap;\r\naction = queue|savegame;\r\nonce = 0;\r\n\r\ntrigger = resumemap_breathing;\r\naction = animatedcamera1|start;\r\n\r\ntrigger = resumemap_breathing;\r\naction = playambience|magakhan_palace_ambience;\r\naction = playambience|shangrila_palace_music;\r\nonce = 0;\r\n\r\ntrigger = startmap + 15;\r\naction = playsfx|magakhan_palace_gongfaraway_01;\r\n\r\ntrigger = magakhan_palace_gongfaraway_01_finished + 50;\r\naction = playsfx|magakhan_palace_gongfaraway_02;\r\nonce = 0;\r\n\r\ntrigger = magakhan_palace_gongfaraway_02_finished + 50;\r\naction = playsfx|magakhan_palace_gongfaraway_01;\r\nonce = 0;\r\n\r\ntrigger = pinky_receiveditem_gong_club;\r\naction = playsfx|recieveitem_special;\r\naction = actionable_gong1|enable, actionable_gong2|enable, actionable_gong3|enable, actionable_gong4|enable, actionable_gong5|enable;\r\n\r\nalltriggers = langemann_0_finished, sabeltann_0_finished, pelle_0_finished, pysa_0_finished, pinky_0_finished;\r\naction = enterlevel_collision|enablecollision;\r\n\r\ntrigger = resumemap_breathing + 5;\r\naction = startconversation|shangrila_palace_intro|nocamera|dontlock;\r\n\r\ntrigger = pinky_0_finished;\r\naction = enableinput, animatedcamera1|stop;\r\n\r\nalltriggers = sabeltann_1_finished, shangrila_palace_intro_finished;\r\naction = startconversation|shangrila_palace_getthisgateopen|dontlock|nocamera;\r\n\r\ntrigger = pelle_1_finished;\r\naction = pelle|startshout|shangrila_palace_letmethrowyou_pelle|7, actionable_throw1|enable;\r\n\r\ntrigger = actionable_throw1_actioned;\r\naction = pelle|throw|pinky|throw1, pelle|stopshout|shangrila_palace_letmethrowyou_pelle, actionable_ladder10|enable, actionable_ladder8|enable;\r\n\r\ntrigger = actionable_throw2_actioned;\r\naction = pelle|throw|pinky|throw2;\r\n\r\ntrigger = actionable_climb1_actioned;\r\naction = pinky|climbwithcamera|climb1;\r\nonce = 0;\r\n\r\ntrigger = actionable_climb2_actioned;\r\naction = pinky|climbwithcamera|climb2;\r\nonce = 0;\r\n\r\ntrigger = actionable_climb3_actioned;\r\naction = pinky|climbwithcamera|climb3;\r\nonce = 0;\r\n\r\ntrigger = actionable_climb4_actioned;\r\naction = pinky|climbwithcamera|climb4;\r\nonce = 0;\r\n\r\ntrigger = actionable_climb5_actioned;\r\naction = pinky|climbwithcamera|climb5;\r\nonce = 0;\r\n\r\ntrigger = actionable_climb6_actioned;\r\naction = pinky|climbwithcamera|climb6;\r\nonce = 0;\r\n\r\ntrigger = actionable_climb7_actioned;\r\naction = pinky|climbwithcamera|climb7;\r\nonce = 0;\r\n\r\ntrigger = actionable_climb8_actioned;\r\naction = pinky|climbwithcamera|climb8;\r\nonce = 0;\r\n\r\ntrigger = actionable_climb9_actioned;\r\naction = pinky|climbwithcamera|climb9;\r\nonce = 0;\r\n\r\ntrigger = actionable_climb10_actioned;\r\naction = pinky|climbwithcamera|climb10;\r\nonce = 0;\r\n\r\ntrigger = actionable_climb11_actioned;\r\naction = pinky|climbwithcamera|climb11;\r\nonce = 0;\r\n\r\ntrigger = areatrigger_courtyard_enter + 1;\r\nrequirements = difficulty_2_oreasier;\r\naction = queue|savegame;\r\nfirsttoreact = 1;\r\n\r\ntrigger = areatrigger_courtyard_enter + 1;\r\naction = startconversation|shangrila_palace_courtyard|nocamera|dontlock;\r\n\r\ntrigger = actionable_gatedown_actioned;\r\naction = door1|open, dooropen_camera|start, disableinput, startconversation|shangrila_palace_gatedown|nocamera|dontlock;\r\naction = playsfx|magakhan_palace_drawbridge;\r\nsnap = 1;\r\n\r\ntrigger = door1_open_finished;\r\naction = door1_collision|disablecollision, dooropen_camera|stop, enableinput, startconversation|shangrila_palace_letstakethisplace|dontlock|nocamera;\r\n\r\nalltriggers = guard1_died, guard2_died, door1_open_finished;\r\naction = queue|savegame;\r\n\r\ntrigger = pysa_2_finished;\r\naction = pysa|startshout|shangrila_palace_illstayhere_pysa|15;\r\n\r\ntrigger = langemann_3_finished;\r\naction = langemann|startshout|shangrila_palace_thisplaceisours_langemann|15;\r\n\r\ntrigger = sabeltann_3_finished;\r\naction = sabeltann|jump|actionable_jump1_2;\r\n\r\nalltriggers = pelle_3_finished, sabeltann_4_started;\r\naction = pelle|jump|actionable_jump1_2;\r\n\r\ntrigger = sabeltann_6_finished;\r\naction = animatedcamera_palace_camera|start, disableinput, startconversation|shangrila_palace_openthisdoor|nocamera;\r\n\r\ntrigger = shangrila_palace_openthisdoor_finished + 5;\r\naction = animatedcamera_palace_camera|stop, enableinput, sabeltann|startshout|shangrila_palace_openthisdoor_1_sabeltann|10;\r\n\r\ntrigger = shangrila_palace_openthisdoor_finished;\r\nrequirements = difficulty_2_oreasier;\r\naction = queue|savegame;\r\n\r\nalltriggers = shangrila_palace_openthisdoor_finished + 5, pelle_4_finished;\r\naction = areatrigger_nearpelle|enable;\r\n\r\ntrigger = areatrigger_nearpelle_enter;\r\naction = pelle|climb|ladder14_bottom, startconversation|shangrila_palace_somethingdownhere|nocamera|dontlock;\r\n\r\ntrigger = areatrigger_nearpelle_enter + 3;\r\naction = pelle|climb|ladder15_bottom;\r\n\r\ntrigger = pelle_5_finished;\r\naction = actionable_throw2|enable, pelle|startshout|shangrila_palace_letmethrowyou2_pelle|7;\r\n\r\ntrigger = breakablebarrel_20_smashed;\r\naction = actionable_jump_togong|enable, actionable_jump_fromgong|enable;\r\n\r\ntrigger = actionable_jump_togong_actioned;\r\naction = pinky|jump|jump_togong;\r\nonce = 0;\r\n\r\ntrigger = actionable_jump_fromgong_actioned;\r\naction = pinky|jump|jump_fromgong;\r\nonce = 0;\r\n\r\ntrigger = actionable_gong1_actioned;\r\naction = pinky|playcustomanimation|gong;\r\n\r\ntrigger = actionable_gong1_actioned + 2;\r\naction = camera_findgongs|start, disableinput;\r\n\r\ntrigger = actionable_gong1_actioned + 4;\r\naction = magakhan_gem1|activate;\r\naction = playsfx|magakhan_palace_greenlight;\r\n\r\ntrigger = actionable_gong1_actioned + 6;\r\naction = camera_findgongs|stop, enableinput, startconversation|shangrila_palace_gem1|nocamera|dontlock;\r\n\r\ntrigger = actionable_gong2_actioned;\r\naction = pinky|playcustomanimation|gong;\r\n\r\ntrigger = actionable_gong2_actioned + 2;\r\naction = camera_findgongs|start, disableinput;\r\n\r\ntrigger = actionable_gong2_actioned + 4;\r\naction = magakhan_gem2|activate;\r\naction = playsfx|magakhan_palace_greenlight;\r\n\r\ntrigger = actionable_gong2_actioned + 6;\r\naction = camera_findgongs|stop, enableinput, startconversation|shangrila_palace_gem2|nocamera|dontlock;\r\n\r\ntrigger = actionable_gong3_actioned;\r\naction = pinky|playcustomanimation|gong;\r\n\r\ntrigger = actionable_gong3_actioned + 2;\r\naction = camera_findgongs|start, disableinput;\r\n\r\ntrigger = actionable_gong3_actioned + 4;\r\naction = magakhan_gem3|activate;\r\naction = playsfx|magakhan_palace_greenlight;\r\n\r\ntrigger = actionable_gong3_actioned + 6;\r\naction = camera_findgongs|stop, enableinput, startconversation|shangrila_palace_gem3|nocamera|dontlock;\r\n\r\ntrigger = actionable_gong4_actioned;\r\naction = pinky|playcustomanimation|gong;\r\n\r\ntrigger = actionable_gong4_actioned + 2;\r\naction = camera_findgongs|start, disableinput;\r\n\r\ntrigger = actionable_gong4_actioned + 4;\r\naction = magakhan_gem4|activate;\r\naction = playsfx|magakhan_palace_greenlight;\r\n\r\ntrigger = actionable_gong4_actioned + 6;\r\naction = camera_findgongs|stop, enableinput, startconversation|shangrila_palace_gem4|nocamera|dontlock;\r\n\r\ntrigger = actionable_gong5_actioned;\r\naction = pinky|playcustomanimation|gong;\r\n\r\ntrigger = actionable_gong5_actioned + 2;\r\naction = camera_findgongs|start;\r\naction = camera|snap;\r\naction = disableinput;\r\n\r\ntrigger = actionable_gong5_actioned + 4;\r\naction = magakhan_gem5|activate;\r\naction = playsfx|magakhan_palace_greenlight;\r\n\r\ntrigger = actionable_gong5_actioned + 6;\r\naction = camera_findgongs|stop;\r\naction = camera|snap;\r\naction = enableinput;\r\naction = startconversation|shangrila_palace_gem5|nocamera|dontlock;\r\n\r\nalltriggers = actionable_gong1_actioned + 5, actionable_gong2_actioned + 5, actionable_gong3_actioned + 5, actionable_gong4_actioned + 5, actionable_gong5_actioned + 5;\r\naction = disableinput;\r\naction = camera_dooropen|start;\r\naction = areatrigger_endlevel|enable;\r\naction = areatrigger|nextlevel|enable;\r\naction = sabeltann|stopshout;\r\n\r\nalltriggers = actionable_gong1_actioned + 6, actionable_gong2_actioned + 6, actionable_gong3_actioned + 6, actionable_gong4_actioned + 6, actionable_gong5_actioned + 6;\r\naction = dungeon_door|open;\r\n\r\nalltriggers = actionable_gong1_actioned + 8, actionable_gong2_actioned + 8, actionable_gong3_actioned + 8, actionable_gong4_actioned + 8, actionable_gong5_actioned + 8;\r\naction = enableinput;\r\naction = camera_dooropen|stop;\r\naction = camera|snap;\r\n\r\ntrigger = areatrigger_endlevel_enter;\r\naction = camera_endlevel|start;\r\n\r\ntrigger = areatrigger_nextlevel_enter;\r\naction = sabeltann|zapto|gone, pelle|zapto|gone, pysa|zapto|gone, langemann|zapto|gone;\r\naction =  proceedtomap|magakhan_dungeon;",
+      "sw_pos": [
+        -175.52,
+        -666.133,
+        0.0
+      ],
+      "godot_pos": [
+        -175.52,
+        0.0,
+        666.133
+      ]
+    },
+    {
+      "name": "pelle_0",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-46.4518,-1165.47,0),vector(-46.4772,-867.901,0)],#closed:0]]];target = pelle;\r\ntrigger = startmap + 14;\r\nspeed = walk;",
+      "sw_pos": [
+        -45.351,
+        -985.736,
+        0.0
+      ],
+      "godot_pos": [
+        -45.351,
+        0.0,
+        985.736
+      ]
+    },
+    {
+      "name": "langemann_0",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-40.9122,-1143.71,0),vector(-40.1782,-851.389,0)],#closed:0]]];target = langemann;\r\ntrigger = startmap + 14;\r\nspeed = walk;",
+      "sw_pos": [
+        -41.679,
+        -975.979,
+        0.0
+      ],
+      "godot_pos": [
+        -41.679,
+        0.0,
+        975.979
+      ]
+    },
+    {
+      "name": "pinky_0",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-46.8469,-1194.25,0),vector(-47.9083,-886.147,0)],#closed:0]]];target = pinky;\r\ntrigger = startmap + 14;\r\nspeed = walk;",
+      "sw_pos": [
+        -47.378,
+        -1033.686,
+        0.0
+      ],
+      "godot_pos": [
+        -47.378,
+        0.0,
+        1033.686
+      ]
+    },
+    {
+      "name": "sabeltann_0",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-59.9715,-1110.4,0),vector(-60.4429,-854.391,0)],#closed:0]]];target = sabeltann;\r\ntrigger = startmap + 14;\r\nspeed = walk;",
+      "sw_pos": [
+        -57.816,
+        -977.855,
+        0.0
+      ],
+      "godot_pos": [
+        -57.816,
+        0.0,
+        977.855
+      ]
+    },
+    {
+      "name": "character_pinky",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        -47.171,
+        -1210.567,
+        -0.435
+      ],
+      "godot_pos": [
+        -47.171,
+        -0.435,
+        1210.567
+      ]
+    },
+    {
+      "name": "character_guard3",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "resource = mk_henchman1;\r\ngroup = badguys;\r\nattacklist = sabeltann, pinky, pelle, pysa, langemann;",
+      "sw_pos": [
+        278.827,
+        373.316,
+        0.0
+      ],
+      "godot_pos": [
+        278.827,
+        0.0,
+        -373.316
+      ]
+    },
+    {
+      "name": "character_guard4",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "resource = mk_henchman1;\r\ngroup = badguys;\r\nattacklist = sabeltann, pinky;",
+      "sw_pos": [
+        -270.725,
+        417.662,
+        0.0
+      ],
+      "godot_pos": [
+        -270.725,
+        0.0,
+        -417.662
+      ]
+    },
+    {
+      "name": "character_guard5",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "resource = mk_henchman1;\r\ngroup = badguys;\r\nattacklist = pinky;",
+      "sw_pos": [
+        416.794,
+        177.33,
+        0.0
+      ],
+      "godot_pos": [
+        416.794,
+        0.0,
+        -177.33
+      ]
+    },
+    {
+      "name": "guard2_1",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-155.562,-257.491,0),vector(-38.7965,-236.033,0),vector(30.5726,-264.449,0),vector(99.9227,-348.127,0),vector(100.026,-388.319,0),vector(40.6474,-388.319,0),vector(-20.1446,-344.492,0),vector(-96.488,-331.904,0),vector(-143.142,-369.893,0),vector(-181.314,-366.704,0)],#closed:1]]];target = guard2;\r\ntrigger = startmap;\r\nspeed = walk;",
+      "sw_pos": [
+        -47.36,
+        -335.302,
+        0.0
+      ],
+      "godot_pos": [
+        -47.36,
+        0.0,
+        335.302
+      ]
+    },
+    {
+      "name": "character_pysa",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "resource = pelle;\r\nattacklist = badguys;",
+      "sw_pos": [
+        -56.722,
+        -1181.953,
+        0.0
+      ],
+      "godot_pos": [
+        -56.722,
+        0.0,
+        1181.953
+      ]
+    },
+    {
+      "name": "pysa_0",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-56.1027,-1170.64,0),vector(-56.1027,-884.727,0)],#closed:0]]];target = pysa;\r\ntrigger = startmap + 14;\r\nspeed = walk;",
+      "sw_pos": [
+        -56.103,
+        -1027.682,
+        0.0
+      ],
+      "godot_pos": [
+        -56.103,
+        0.0,
+        1027.682
+      ]
+    },
+    {
+      "name": "actionable_throw1",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "icon = thrown;\r\nzmatters = 0;",
+      "sw_pos": [
+        7.8,
+        -590.89,
+        0.0
+      ],
+      "godot_pos": [
+        7.8,
+        0.0,
+        590.89
+      ]
+    },
+    {
+      "name": "throw1",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "zmatters = 0;",
+      "sw_pos": [
+        58.859,
+        -542.42,
+        -4.107
+      ],
+      "godot_pos": [
+        58.859,
+        -4.107,
+        542.42
+      ]
+    },
+    {
+      "name": "actionable_jump1_2",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "once = 0;",
+      "sw_pos": [
+        -220.184,
+        216.239,
+        197.621
+      ],
+      "godot_pos": [
+        -220.184,
+        197.621,
+        -216.239
+      ]
+    },
+    {
+      "name": "actionable_gatedown",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "icon = switch;\r\nzmatters = 0;",
+      "sw_pos": [
+        -15.294,
+        -395.795,
+        0.0
+      ],
+      "godot_pos": [
+        -15.294,
+        0.0,
+        395.795
+      ]
+    },
+    {
+      "name": "pelle_4",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-210.575,223.946,0),vector(-200.259,237.145,0),vector(-132.398,240.679,0),vector(-121.795,247.748,0),vector(-121.088,264.713,0),vector(-133.812,272.489,0),vector(-195.31,276.73,0),vector(-196.724,333.988,0),vector(-167.035,362.263,0),vector(113.16,361.624,0),vector(149.131,343.602,0),vector(149.975,301.723,0),vector(157.69,290.965,0)],#closed:0]]];target = pelle;\r\nalltriggers = pelle_3_finished + 3, sabeltann_4_started + 3;\r\nspeed = run;",
+      "sw_pos": [
+        -136.71,
+        280.547,
+        0.0
+      ],
+      "godot_pos": [
+        -136.71,
+        0.0,
+        -280.547
+      ]
+    },
+    {
+      "name": "actionable_gong1",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "zmatters = 0;\r\nicon = gong;",
+      "sw_pos": [
+        -141.658,
+        -472.924,
+        0.0
+      ],
+      "godot_pos": [
+        -141.658,
+        0.0,
+        472.924
+      ]
+    },
+    {
+      "name": "actionable_gong2",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "zmatters = 0;\r\nicon = gong;",
+      "sw_pos": [
+        -518.593,
+        38.388,
+        0.0
+      ],
+      "godot_pos": [
+        -518.593,
+        0.0,
+        -38.388
+      ]
+    },
+    {
+      "name": "actionable_gong3",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "zmatters = 0;\r\nicon = gong;",
+      "sw_pos": [
+        -70.297,
+        404.866,
+        0.0
+      ],
+      "godot_pos": [
+        -70.297,
+        0.0,
+        -404.866
+      ]
+    },
+    {
+      "name": "actionable_gong4",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "zmatters = 0;\r\nicon = gong;",
+      "sw_pos": [
+        526.946,
+        354.305,
+        0.0
+      ],
+      "godot_pos": [
+        526.946,
+        0.0,
+        -354.305
+      ]
+    },
+    {
+      "name": "actionable_gong5",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "zmatters = 0;\r\nicon = gong;",
+      "sw_pos": [
+        541.862,
+        581.701,
+        0.0
+      ],
+      "godot_pos": [
+        541.862,
+        0.0,
+        -581.701
+      ]
+    },
+    {
+      "name": "startcam",
+      "kind": "model",
+      "parent": "scriptingdata",
+      "userdata": "animationstartframe=0;\r\nanimationendframe=1000;",
+      "sw_pos": [
+        -645.07,
+        -833.199,
+        566.498
+      ],
+      "godot_pos": [
+        -645.07,
+        566.498,
+        833.199
+      ]
+    },
+    {
+      "name": "animatedcamera1",
+      "kind": "camera",
+      "parent": "startcam",
+      "userdata": "animationstartframe=0;\r\nanimationendframe=1000;",
+      "sw_pos": [
+        -648.286,
+        -829.32,
+        579.926
+      ],
+      "godot_pos": [
+        -648.286,
+        579.926,
+        829.32
+      ]
+    },
+    {
+      "name": "sabeltann_5",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(147.836,515.813,0),vector(156.838,582.835,0),vector(234.339,658.709,0),vector(245.42,617.368,0),vector(208.663,570.167,0),vector(191.169,523.682,0),vector(193.918,478.446,0),vector(213.912,457.453,0)],#closed:0]]];target = sabeltann;\r\nalltriggers = sabeltann_4_finished, areatrigger_mountainside_enter;\r\nspeed = run;",
+      "sw_pos": [
+        218.327,
+        546.675,
+        0.0
+      ],
+      "godot_pos": [
+        218.327,
+        0.0,
+        -546.675
+      ]
+    },
+    {
+      "name": "sabeltann_6",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(211.876,450.78,0),vector(250.047,412.608,0),vector(298.115,408.367,0)],#closed:0]]];target = sabeltann;\r\nalltriggers = sabeltann_5_finished, guard3_died;\r\nspeed = walk;",
+      "sw_pos": [
+        253.346,
+        423.919,
+        0.0
+      ],
+      "godot_pos": [
+        253.346,
+        0.0,
+        -423.919
+      ]
+    },
+    {
+      "name": "camera_findgongs",
+      "kind": "camera",
+      "parent": "scriptingdata",
+      "userdata": "once = 0;",
+      "sw_pos": [
+        233.139,
+        302.841,
+        413.368
+      ],
+      "godot_pos": [
+        233.139,
+        413.368,
+        -302.841
+      ]
+    },
+    {
+      "name": "actionable_throw2",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "icon = thrown;\r\nzmatters = 0;",
+      "sw_pos": [
+        41.193,
+        323.912,
+        178.807
+      ],
+      "godot_pos": [
+        41.193,
+        178.807,
+        -323.912
+      ]
+    },
+    {
+      "name": "throw2",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "zmatters = 0;",
+      "sw_pos": [
+        -42.795,
+        404.486,
+        177.509
+      ],
+      "godot_pos": [
+        -42.795,
+        177.509,
+        -404.486
+      ]
+    },
+    {
+      "name": "areatrigger_nearpelle",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#circle,#radius:38.5883,#position:vector(163.586,321.306,0)];",
+      "sw_pos": [
+        163.586,
+        321.306,
+        0.0
+      ],
+      "godot_pos": [
+        163.586,
+        0.0,
+        -321.306
+      ]
+    },
+    {
+      "name": "pelle_5",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(127.115,279.366,0),vector(80.1298,281.365,0),vector(42.1153,322.458,0)],#closed:0]]];target = pelle;\r\ntrigger = areatrigger_nearpelle_enter + 6;\r\nspeed = walk;",
+      "sw_pos": [
+        82.129,
+        295.361,
+        0.0
+      ],
+      "godot_pos": [
+        82.129,
+        0.0,
+        -295.361
+      ]
+    },
+    {
+      "name": "pysa_1",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-54.4961,-870.239,0),vector(-53.4964,-648.309,0),vector(-68.4917,-637.312,0),vector(-64.4929,-631.314,0)],#closed:0]]];target = pysa;\r\ntrigger = pysa_0_finished;\r\nspeed = walk;",
+      "sw_pos": [
+        -60.244,
+        -696.794,
+        0.0
+      ],
+      "godot_pos": [
+        -60.244,
+        0.0,
+        696.794
+      ]
+    },
+    {
+      "name": "pysa_2",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-49.1166,-613.958,0),vector(-53.3579,-352.411,0),vector(56.916,-277.482,0),vector(61.1573,-206.793,0),vector(60.1124,-121.086,0),vector(44.1174,-101.092,0)],#closed:0]]];target = pysa;\r\ntrigger = door1_open_finished;\r\nspeed = run;",
+      "sw_pos": [
+        19.971,
+        -278.804,
+        0.0
+      ],
+      "godot_pos": [
+        19.971,
+        0.0,
+        278.804
+      ]
+    },
+    {
+      "name": "jump4",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(316.482,-247.323,0),vector(313.483,-216.333,0)],#closed:0]]];",
+      "sw_pos": [
+        314.982,
+        -231.828,
+        0.0
+      ],
+      "godot_pos": [
+        314.982,
+        0.0,
+        231.828
+      ]
+    },
+    {
+      "name": "jump3",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(268.901,-311.631,0),vector(271.3,-281.312,0)],#closed:0]]];",
+      "sw_pos": [
+        270.996,
+        -297.807,
+        0.0
+      ],
+      "godot_pos": [
+        270.996,
+        0.0,
+        297.807
+      ]
+    },
+    {
+      "name": "jump2",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(269.119,-385.184,0),vector(266.306,-346.196,0)],#closed:0]]];",
+      "sw_pos": [
+        266.306,
+        -365.69,
+        0.0
+      ],
+      "godot_pos": [
+        266.306,
+        0.0,
+        365.69
+      ]
+    },
+    {
+      "name": "jump5",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(574.472,258.099,0),vector(573.059,290.615,0)],#closed:0]]];",
+      "sw_pos": [
+        573.766,
+        274.357,
+        0.0
+      ],
+      "godot_pos": [
+        573.766,
+        0.0,
+        -274.357
+      ]
+    },
+    {
+      "name": "jump6",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(558.214,189.531,0),vector(568.817,220.634,0)],#closed:0]]];",
+      "sw_pos": [
+        563.516,
+        205.082,
+        0.0
+      ],
+      "godot_pos": [
+        563.516,
+        0.0,
+        -205.082
+      ]
+    },
+    {
+      "name": "jump1",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-244.54,155.836,0),vector(-224.047,193.324,0)],#closed:0]]];",
+      "sw_pos": [
+        -234.294,
+        174.58,
+        0.0
+      ],
+      "godot_pos": [
+        -234.294,
+        0.0,
+        -174.58
+      ]
+    },
+    {
+      "name": "ladder2",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(296.73,-279.309,0),vector(309.145,-279.309,0)],#closed:0]]];",
+      "sw_pos": [
+        301.815,
+        -279.311,
+        0.0
+      ],
+      "godot_pos": [
+        301.815,
+        0.0,
+        279.311
+      ]
+    },
+    {
+      "name": "ladder12",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-254.712,443.241,0),vector(-254.675,436.154,0)],#closed:0]]];",
+      "sw_pos": [
+        -255.064,
+        434.347,
+        0.0
+      ],
+      "godot_pos": [
+        -255.064,
+        0.0,
+        -434.347
+      ]
+    },
+    {
+      "name": "areatrigger_gofurther1",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#circle,#radius:22.6644,#position:vector(-198.003,237.691,0)];",
+      "sw_pos": [
+        -198.003,
+        237.691,
+        0.0
+      ],
+      "godot_pos": [
+        -198.003,
+        0.0,
+        -237.691
+      ]
+    },
+    {
+      "name": "character_guard6",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "resource = mk_henchman1;\r\ngroup = badguys;\r\nattacklist = sabeltann, pinky, pelle, pysa, langemann;",
+      "sw_pos": [
+        105.933,
+        362.033,
+        0.0
+      ],
+      "godot_pos": [
+        105.933,
+        0.0,
+        -362.033
+      ]
+    },
+    {
+      "name": "guard3_patrol",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(229.151,511.774,0),vector(239.754,438.258,0),vector(340.132,359.087,0),vector(425.665,365.449,0)],#closed:0]]];target = guard3;\r\ntrigger = startmap;\r\nspeed = walk;\r\npingpong = 1;",
+      "sw_pos": [
+        308.675,
+        418.642,
+        0.0
+      ],
+      "godot_pos": [
+        308.675,
+        0.0,
+        -418.642
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_1",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "contains = goldcoin;",
+      "sw_pos": [
+        -267.832,
+        -145.507,
+        0.0
+      ],
+      "godot_pos": [
+        -267.832,
+        0.0,
+        145.507
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_2",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        -256.4,
+        -145.4,
+        0.0
+      ],
+      "godot_pos": [
+        -256.4,
+        0.0,
+        145.4
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_3",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "contains = coppercoin;",
+      "sw_pos": [
+        -264.1,
+        -136.024,
+        0.0
+      ],
+      "godot_pos": [
+        -264.1,
+        0.0,
+        136.024
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_4",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        -276.783,
+        -465.498,
+        0.0
+      ],
+      "godot_pos": [
+        -276.783,
+        0.0,
+        465.498
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_5",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "contains = apple;",
+      "sw_pos": [
+        -276.813,
+        -478.994,
+        0.0
+      ],
+      "godot_pos": [
+        -276.813,
+        0.0,
+        478.994
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_7",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "contains = coppercoin;",
+      "sw_pos": [
+        237.633,
+        -489.952,
+        0.0
+      ],
+      "godot_pos": [
+        237.633,
+        0.0,
+        489.952
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_8",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        39.103,
+        -472.898,
+        0.0
+      ],
+      "godot_pos": [
+        39.103,
+        0.0,
+        472.898
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_9",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "contains = apple;",
+      "sw_pos": [
+        30.369,
+        -463.909,
+        0.0
+      ],
+      "godot_pos": [
+        30.369,
+        0.0,
+        463.909
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_6",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "contains = coppercoin;",
+      "sw_pos": [
+        -332.972,
+        60.146,
+        0.0
+      ],
+      "godot_pos": [
+        -332.972,
+        0.0,
+        -60.146
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_10",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        -272.731,
+        305.082,
+        0.0
+      ],
+      "godot_pos": [
+        -272.731,
+        0.0,
+        -305.082
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_11",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        -272.731,
+        317.986,
+        0.0
+      ],
+      "godot_pos": [
+        -272.731,
+        0.0,
+        -317.986
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_12",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "contains = apple;",
+      "sw_pos": [
+        -259.263,
+        305.082,
+        0.0
+      ],
+      "godot_pos": [
+        -259.263,
+        0.0,
+        -305.082
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_13",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "contains = apple;",
+      "sw_pos": [
+        105.487,
+        386.872,
+        0.0
+      ],
+      "godot_pos": [
+        105.487,
+        0.0,
+        -386.872
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_14",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "contains = coppercoin;",
+      "sw_pos": [
+        481.371,
+        214.73,
+        0.0
+      ],
+      "godot_pos": [
+        481.371,
+        0.0,
+        -214.73
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_15",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "contains = coppercoin;",
+      "sw_pos": [
+        481.371,
+        250.887,
+        0.0
+      ],
+      "godot_pos": [
+        481.371,
+        0.0,
+        -250.887
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_16",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        481.371,
+        232.516,
+        0.0
+      ],
+      "godot_pos": [
+        481.371,
+        0.0,
+        -232.516
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_17",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        481.371,
+        266.863,
+        0.0
+      ],
+      "godot_pos": [
+        481.371,
+        0.0,
+        -266.863
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_18",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "contains = coppercoin;",
+      "sw_pos": [
+        566.542,
+        232.206,
+        0.0
+      ],
+      "godot_pos": [
+        566.542,
+        0.0,
+        -232.206
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_19",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "contains = apple;",
+      "sw_pos": [
+        566.542,
+        246.761,
+        0.0
+      ],
+      "godot_pos": [
+        566.542,
+        0.0,
+        -246.761
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_20",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        -130.506,
+        443.007,
+        0.0
+      ],
+      "godot_pos": [
+        -130.506,
+        0.0,
+        -443.007
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_22",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "contains = goldcoin;",
+      "sw_pos": [
+        384.687,
+        647.279,
+        0.0
+      ],
+      "godot_pos": [
+        384.687,
+        0.0,
+        -647.279
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_23",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "contains = apple;",
+      "sw_pos": [
+        347.661,
+        640.525,
+        0.0
+      ],
+      "godot_pos": [
+        347.661,
+        0.0,
+        -640.525
+      ]
+    },
+    {
+      "name": "object_breakablebarrel_24",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "contains = coppercoin;",
+      "sw_pos": [
+        -227.81,
+        63.917,
+        0.0
+      ],
+      "godot_pos": [
+        -227.81,
+        0.0,
+        -63.917
+      ]
+    },
+    {
+      "name": "actionable_jump_fromgong",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "icon = jump;\r\nonce = 0;\r\nzmatters = 0;",
+      "sw_pos": [
+        -136.005,
+        443.944,
+        0.0
+      ],
+      "godot_pos": [
+        -136.005,
+        0.0,
+        -443.944
+      ]
+    },
+    {
+      "name": "actionable_jump_togong",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "icon = jump;\r\nonce = 0;\r\nzmatters = 0;",
+      "sw_pos": [
+        -154.35,
+        443.247,
+        0.0
+      ],
+      "godot_pos": [
+        -154.35,
+        0.0,
+        -443.247
+      ]
+    },
+    {
+      "name": "jump_togong",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "zmatters = 0;",
+      "sw_pos": [
+        -132.256,
+        443.247,
+        0.0
+      ],
+      "godot_pos": [
+        -132.256,
+        0.0,
+        -443.247
+      ]
+    },
+    {
+      "name": "jump_fromgong",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "zmatters = 0;",
+      "sw_pos": [
+        -159.529,
+        443.944,
+        0.0
+      ],
+      "godot_pos": [
+        -159.529,
+        0.0,
+        -443.944
+      ]
+    },
+    {
+      "name": "guard6_patrol",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(129.559,360.742,0),vector(197.475,370.181,0),vector(371.016,240.323,0),vector(420.562,240.386,0)],#closed:0]]];target = guard6;\r\ntrigger = startmap;\r\nspeed = walk;\r\npingpong = 1;",
+      "sw_pos": [
+        162.739,
+        374.133,
+        0.0
+      ],
+      "godot_pos": [
+        162.739,
+        0.0,
+        -374.133
+      ]
+    },
+    {
+      "name": "areatrigger_endlevel",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#circle,#radius:15.6954,#position:vector(349.62,458.437,0)];",
+      "sw_pos": [
+        349.62,
+        458.437,
+        0.0
+      ],
+      "godot_pos": [
+        349.62,
+        0.0,
+        -458.437
+      ]
+    },
+    {
+      "name": "areatrigger_mountainside",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#circle,#radius:21.9476,#position:vector(150.058,455.169,0)];",
+      "sw_pos": [
+        150.058,
+        455.169,
+        0.0
+      ],
+      "godot_pos": [
+        150.058,
+        0.0,
+        -455.169
+      ]
+    },
+    {
+      "name": "gone",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        397.998,
+        537.059,
+        0.0
+      ],
+      "godot_pos": [
+        397.998,
+        0.0,
+        -537.059
+      ]
+    },
+    {
+      "name": "ladder4",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(311.066,-260.347,0),vector(311.066,-272.762,0)],#closed:0]]];",
+      "sw_pos": [
+        311.065,
+        -265.433,
+        0.0
+      ],
+      "godot_pos": [
+        311.065,
+        0.0,
+        265.433
+      ]
+    },
+    {
+      "name": "ladder3",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(292.831,-169.441,0),vector(305.246,-169.441,0)],#closed:0]]];",
+      "sw_pos": [
+        297.917,
+        -169.442,
+        0.0
+      ],
+      "godot_pos": [
+        297.917,
+        0.0,
+        169.442
+      ]
+    },
+    {
+      "name": "ladder1",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(166.016,-124.761,0),vector(178.431,-124.761,0)],#closed:0]]];",
+      "sw_pos": [
+        171.101,
+        -124.762,
+        0.0
+      ],
+      "godot_pos": [
+        171.101,
+        0.0,
+        124.762
+      ]
+    },
+    {
+      "name": "ladder11",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-198.769,-427.495,0),vector(-186.355,-427.495,0)],#closed:0]]];",
+      "sw_pos": [
+        -193.684,
+        -427.496,
+        0.0
+      ],
+      "godot_pos": [
+        -193.684,
+        0.0,
+        427.496
+      ]
+    },
+    {
+      "name": "ladder5",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-164.491,-425.231,0),vector(-164.491,-437.646,0)],#closed:0]]];",
+      "sw_pos": [
+        -164.493,
+        -430.317,
+        0.0
+      ],
+      "godot_pos": [
+        -164.493,
+        0.0,
+        430.317
+      ]
+    },
+    {
+      "name": "ladder6",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(537.883,177.782,0),vector(550.298,177.782,0)],#closed:0]]];",
+      "sw_pos": [
+        542.969,
+        177.78,
+        0.0
+      ],
+      "godot_pos": [
+        542.969,
+        0.0,
+        -177.78
+      ]
+    },
+    {
+      "name": "ladder7",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(557.526,327.224,0),vector(569.752,325.068,0)],#closed:0]]];",
+      "sw_pos": [
+        562.534,
+        326.339,
+        0.0
+      ],
+      "godot_pos": [
+        562.534,
+        0.0,
+        -326.339
+      ]
+    },
+    {
+      "name": "ladder9",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(448.036,303.474,0),vector(445.881,291.248,0)],#closed:0]]];",
+      "sw_pos": [
+        447.152,
+        298.466,
+        0.0
+      ],
+      "godot_pos": [
+        447.152,
+        0.0,
+        -298.466
+      ]
+    },
+    {
+      "name": "pickup_gong_club",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        344.41,
+        450.58,
+        422.054
+      ],
+      "godot_pos": [
+        344.41,
+        422.054,
+        -450.58
+      ]
+    },
+    {
+      "name": "ladder13",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(-219.872,444.294,0),vector(-226.96,444.258,0)],#closed:0]]];",
+      "sw_pos": [
+        -228.766,
+        444.647,
+        0.0
+      ],
+      "godot_pos": [
+        -228.766,
+        0.0,
+        -444.647
+      ]
+    },
+    {
+      "name": "ladder14",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(163.087,294.056,0),vector(163.087,281.641,0)],#closed:0]]];",
+      "sw_pos": [
+        163.085,
+        288.97,
+        0.0
+      ],
+      "godot_pos": [
+        163.085,
+        0.0,
+        -288.97
+      ]
+    },
+    {
+      "name": "ladder15",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(144.747,280.542,0),vector(132.332,280.542,0)],#closed:0]]];",
+      "sw_pos": [
+        139.661,
+        280.543,
+        0.0
+      ],
+      "godot_pos": [
+        139.661,
+        0.0,
+        -280.543
+      ]
+    },
+    {
+      "name": "areatrigger_nextlevel",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#circle,#radius:15.6954,#position:vector(361.654,472.943,0)];",
+      "sw_pos": [
+        361.654,
+        472.943,
+        0.0
+      ],
+      "godot_pos": [
+        361.654,
+        0.0,
+        -472.943
+      ]
+    },
+    {
+      "name": "pinky_end",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#linearSplines,#splines:[[#knots:[vector(344.059,450.332,0),vector(357.49,467.651,0)],#closed:0]]];target = pinky;\r\ntrigger = areatrigger_endlevel_enter;\r\nspeed = walk;\r\ndisablecollisions = 1;",
+      "sw_pos": [
+        350.774,
+        458.992,
+        0.0
+      ],
+      "godot_pos": [
+        350.774,
+        0.0,
+        -458.992
+      ]
+    },
+    {
+      "name": "camera_endlevel",
+      "kind": "camera",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        298.977,
+        376.327,
+        422.636
+      ],
+      "godot_pos": [
+        298.977,
+        422.636,
+        -376.327
+      ]
+    },
+    {
+      "name": "CameraPalace",
+      "kind": "model",
+      "parent": "scriptingdata",
+      "userdata": "snap=1;\r\nanimationstartframe=0;\r\nanimationendframe=220;",
+      "sw_pos": [
+        232.05,
+        280.758,
+        456.65
+      ],
+      "godot_pos": [
+        232.05,
+        456.65,
+        -280.758
+      ]
+    },
+    {
+      "name": "animatedcamera_palace_camera",
+      "kind": "camera",
+      "parent": "CameraPalace",
+      "userdata": "snap=1;\r\nanimationstartframe=0;\r\nanimationendframe=220;",
+      "sw_pos": [
+        232.974,
+        278.651,
+        447.397
+      ],
+      "godot_pos": [
+        232.974,
+        447.397,
+        -278.651
+      ]
+    },
+    {
+      "name": "camera_endlevel.Target",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        327.305,
+        420.075,
+        429.849
+      ],
+      "godot_pos": [
+        327.305,
+        429.849,
+        -420.075
+      ]
+    },
+    {
+      "name": "areatrigger_courtyard",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "splinedata=[#type:#rectangle,#width:23.2374,#length:53.2104,#transform:[1,0,0,0,0,1,0,0,0,0,1,0,150.906,-123.497,0,1]]];",
+      "sw_pos": [
+        150.906,
+        -123.497,
+        0.0
+      ],
+      "godot_pos": [
+        150.906,
+        0.0,
+        123.497
+      ]
+    },
+    {
+      "name": "walkoverpickup_coppercoin_01",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        48.112,
+        -538.313,
+        0.0
+      ],
+      "godot_pos": [
+        48.112,
+        0.0,
+        538.313
+      ]
+    },
+    {
+      "name": "walkoverpickup_coppercoin_02",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        -197.854,
+        -425.128,
+        50.0
+      ],
+      "godot_pos": [
+        -197.854,
+        50.0,
+        425.128
+      ]
+    },
+    {
+      "name": "walkoverpickup_coppercoin_04",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        57.503,
+        293.26,
+        210.0
+      ],
+      "godot_pos": [
+        57.503,
+        210.0,
+        -293.26
+      ]
+    },
+    {
+      "name": "walkoverpickup_coppercoin_05",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        257.348,
+        329.319,
+        250.0
+      ],
+      "godot_pos": [
+        257.348,
+        250.0,
+        -329.319
+      ]
+    },
+    {
+      "name": "camera_dooropen.Target",
+      "kind": "group",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        324.834,
+        422.361,
+        429.634
+      ],
+      "godot_pos": [
+        324.834,
+        429.634,
+        -422.361
+      ]
+    },
+    {
+      "name": "camera_dooropen",
+      "kind": "camera",
+      "parent": "scriptingdata",
+      "userdata": "",
+      "sw_pos": [
+        298.498,
+        373.666,
+        423.314
+      ],
+      "godot_pos": [
+        298.498,
+        423.314,
+        -373.666
+      ]
+    },
+    {
+      "name": "defaultview",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -1434.18,
+        444.626,
+        461.824
+      ],
+      "godot_pos": [
+        -1434.18,
+        461.824,
+        -444.626
+      ]
+    },
+    {
+      "name": "Ambient Light",
+      "kind": "light",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    }
+  ],
+  "skeletons": [],
+  "animations": [
+    {
+      "name": "startcam-Key",
+      "tracks": 1,
+      "size": 13431
+    },
+    {
+      "name": "CameraPalace-Key",
+      "tracks": 1,
+      "size": 1630
+    }
+  ]
+}

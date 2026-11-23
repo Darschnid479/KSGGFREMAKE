@@ -1,0 +1,1309 @@
+{
+  "file": "graal_bosslevel.w3d",
+  "nodes": [
+    {
+      "name": "DefaultView",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "UIAmbient",
+      "kind": "light",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "catapult",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "hiddenassets",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "userdata",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"catapult_idle\", #startxform: [#position: vector( -0.0155, 0.1543, 4.3181 ), #rotation: vector( 0.0000, 0.0000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"catapult_idle\", #startxform: [#position: vector( -0.0155, 0.1543, 4.3181 ), #rotation: vector( 0.0000, 0.0000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "catapult_rock",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "movingobstacle=1;\r\ndamage=99999;\r\nanimationendframe=70;",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"catapult_shoot\", #startxform: [#position: vector( -0.0155, 0.1543, 4.3181 ), #rotation: vector( 0.0000, 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000 )], #release_rock: \"8\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"catapult_shoot\", #startxform: [#position: vector( -0.0155, 0.1543, 4.3181 ), #rotation: vector( 0.0000, 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "objectlinkedtobonesplayerinfo",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[[#bonedmodel: \"catapult\", #object: \"catapult_rock\", #boneid: 9, #xform: [#rotation: vector( -144.8673, 90.0000, 0.0000 ),  ",
+      "kind": "group",
+      "parent": "objectlinkedtobonesplayerinfo",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz#position: vector( -5.0206, -0.3785, 0.3557 )]], [#bonedmodel: \"catapult\", #object: \"rope1\", #boneid: 10, #xform: [#rotatio ",
+      "kind": "group",
+      "parent": "zzz[[#bonedmodel: \"catapult\", #object: \"catapult_rock\", #boneid: 9, #xform: [#rotation: vector( -144.8673, 90.0000, 0.0000 ),  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzzn: vector( 126.2770, 90.0000, 0.0000 ), #position: vector( -0.1712, 0.1022, 0.0183 )]], [#bonedmodel: \"catapult\", #object:  ",
+      "kind": "group",
+      "parent": "zzz#position: vector( -5.0206, -0.3785, 0.3557 )]], [#bonedmodel: \"catapult\", #object: \"rope1\", #boneid: 10, #xform: [#rotatio ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz\"rope2\", #boneid: 4, #xform: [#rotation: vector( -54.6168, 90.0000, 0.0000 ), #position: vector( 1.5159, -0.3069, 0.0183 )] ",
+      "kind": "group",
+      "parent": "zzzn: vector( 126.2770, 90.0000, 0.0000 ), #position: vector( -0.1712, 0.1022, 0.0183 )]], [#bonedmodel: \"catapult\", #object:  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz], [#bonedmodel: \"catapult\", #object: \"rope3\", #boneid: 3, #xform: [#rotation: vector( -54.2966, 90.0000, 0.0000 ), #positi ",
+      "kind": "group",
+      "parent": "zzz\"rope2\", #boneid: 4, #xform: [#rotation: vector( -54.6168, 90.0000, 0.0000 ), #position: vector( 1.5159, -0.3069, 0.0183 )] ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzzon: vector( -0.6756, -0.1981, 0.0183 )]], [#bonedmodel: \"catapult\", #object: \"rope4\", #boneid: 11, #xform: [#rotation: vect ",
+      "kind": "group",
+      "parent": "zzz], [#bonedmodel: \"catapult\", #object: \"rope3\", #boneid: 3, #xform: [#rotation: vector( -54.2966, 90.0000, 0.0000 ), #positi ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzzor( 125.1769, 90.0000, 0.0000 ), #position: vector( 1.9123, 0.3713, 0.0183 )]]] ",
+      "kind": "group",
+      "parent": "zzzon: vector( -0.6756, -0.1981, 0.0183 )]], [#bonedmodel: \"catapult\", #object: \"rope4\", #boneid: 11, #xform: [#rotation: vect ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "Graal_Boss",
+      "kind": "model",
+      "parent": "hiddenassets",
+      "userdata": "",
+      "sw_pos": [
+        -0.004,
+        1.816,
+        11.313
+      ],
+      "godot_pos": [
+        -0.004,
+        11.313,
+        -1.816
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"graal_boss_die\", #startxform: [#position: vector( -0.0038, 1.8156, 11.3132 ), #rotation: vector( 0.0000, 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000 )]] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"graal_boss_die\", #startxform: [#position: vector( -0.0038, 1.8156, 11.3132 ), #rotation: vector( 0.0000, 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"graal_boss_hit\", #startxform: [#position: vector( -0.0038, 1.8156, 11.3132 ), #rotation: vector( 0.0000, 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000 )]]  ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"graal_boss_hit\", #startxform: [#position: vector( -0.0038, 1.8156, 11.3132 ), #rotation: vector( 0.0000, 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"graal_boss_intro\", #startxform: [#position: vector( 276.2313, -310.8201, 223.7500 ), #rotation: vector( 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000, 0.0000 )], #startatoriginalmotionstartposition: \"1\", #relocating: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"graal_boss_intro\", #startxform: [#position: vector( 276.2313, -310.8201, 223.7500 ), #rotation: vector( 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"graal_boss_run\", #startxform: [#position: vector( -0.0038, 1.8156, 11.3132 ), #rotation: vector( 0.0000, 0.00 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz00, 0.0000 )], #minimumspeed: \"0.8\", #maximumspeed: \"100\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"graal_boss_run\", #startxform: [#position: vector( -0.0038, 1.8156, 11.3132 ), #rotation: vector( 0.0000, 0.00 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"graal_boss_run_talk\", #startxform: [#position: vector( -0.0038, 1.8156, 11.3132 ), #rotation: vector( 0.0000, ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz 0.0000, 0.0000 )], #minimumspeed: \"0.8\", #maximumspeed: \"100\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"graal_boss_run_talk\", #startxform: [#position: vector( -0.0038, 1.8156, 11.3132 ), #rotation: vector( 0.0000, ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"graal_boss_shootfireball\", #startxform: [#position: vector( -0.0038, 1.8156, 11.3132 ), #rotation: vector( 0. ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0000, 0.0000, 0.0000 )], #shoot: \"12\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"graal_boss_shootfireball\", #startxform: [#position: vector( -0.0038, 1.8156, 11.3132 ), #rotation: vector( 0. ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"graal_boss_stand\", #startxform: [#position: vector( -0.0038, 1.8156, 11.3132 ), #rotation: vector( 0.0000, 0. ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0000, 0.0000 )], #minimumspeed: \"0.8\", #maximumspeed: \"100\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"graal_boss_stand\", #startxform: [#position: vector( -0.0038, 1.8156, 11.3132 ), #rotation: vector( 0.0000, 0. ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"graal_boss_stand_talk\", #startxform: [#position: vector( -0.0038, 1.8156, 11.3132 ), #rotation: vector( 0.000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz0, 0.0000, 0.0000 )], #minimumspeed: \"0.8\", #maximumspeed: \"100\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"graal_boss_stand_talk\", #startxform: [#position: vector( -0.0038, 1.8156, 11.3132 ), #rotation: vector( 0.000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"graal_boss_turnleft\", #startxform: [#position: vector( -0.0038, 1.8156, 11.3132 ), #rotation: vector( 0.0000, ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz 0.0000, 0.0000 )], #minimumspeed: \"0.8\", #maximumspeed: \"100\"]  ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"graal_boss_turnleft\", #startxform: [#position: vector( -0.0038, 1.8156, 11.3132 ), #rotation: vector( 0.0000, ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"graal_boss_turnright\", #startxform: [#position: vector( -0.0038, 1.8156, 11.3132 ), #rotation: vector( 0.0000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, 0.0000, 0.0000 )], #minimumspeed: \"0.8\", #maximumspeed: \"100\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"graal_boss_turnright\", #startxform: [#position: vector( -0.0038, 1.8156, 11.3132 ), #rotation: vector( 0.0000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"graal_boss_walk\", #startxform: [#position: vector( -0.0038, 1.8156, 11.3132 ), #rotation: vector( 0.0000, 0.0 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz000, 0.0000 )], #minimumspeed: \"0.8\", #maximumspeed: \"100\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"graal_boss_walk\", #startxform: [#position: vector( -0.0038, 1.8156, 11.3132 ), #rotation: vector( 0.0000, 0.0 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"graal_boss_walk_talk\", #startxform: [#position: vector( -0.0038, 1.8156, 11.3132 ), #rotation: vector( 0.0000 ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz, 0.0000, 0.0000 )], #minimumspeed: \"0.8\", #maximumspeed: \"100\"]  ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"graal_boss_walk_talk\", #startxform: [#position: vector( -0.0038, 1.8156, 11.3132 ), #rotation: vector( 0.0000 ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[[#bonedmodel: \"Graal_Boss\", #object: \"fire_emitter\", #boneid: 32, #xform: [#rotation: vector( 81.2947, 90.0000, 0.0000 ),  ",
+      "kind": "group",
+      "parent": "objectlinkedtobonesplayerinfo",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz#position: vector( 3.1715, -0.5361, 0.1185 )]]] ",
+      "kind": "group",
+      "parent": "zzz[[#bonedmodel: \"Graal_Boss\", #object: \"fire_emitter\", #boneid: 32, #xform: [#rotation: vector( 81.2947, 90.0000, 0.0000 ),  ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[#modelname: \"pinky_graal_boss_intro\", #startxform: [#position: vector( -97.2694, -267.9511, -10.6073 ), #rotation: vector( ",
+      "kind": "group",
+      "parent": "userdata",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz 0.0000, 0.0000, 113.1383 )], #startatoriginalmotionstartposition: \"1\", #relocating: \"1\"] ",
+      "kind": "group",
+      "parent": "zzz[#modelname: \"pinky_graal_boss_intro\", #startxform: [#position: vector( -97.2694, -267.9511, -10.6073 ), #rotation: vector( ",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "graal_castle",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "alwaysmovecamerainfront=1;\r\nhideforray=1;",
+      "sw_pos": [
+        -10.301,
+        23.28,
+        123.618
+      ],
+      "godot_pos": [
+        -10.301,
+        123.618,
+        -23.28
+      ]
+    },
+    {
+      "name": "well",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -86.662,
+        -268.303,
+        -7.79
+      ],
+      "godot_pos": [
+        -86.662,
+        -7.79,
+        268.303
+      ]
+    },
+    {
+      "name": "ground",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -147.202,
+        115.375,
+        -1.299
+      ],
+      "godot_pos": [
+        -147.202,
+        -1.299,
+        -115.375
+      ]
+    },
+    {
+      "name": "scene_light",
+      "kind": "light",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        963.889,
+        -637.736,
+        1220.878
+      ],
+      "godot_pos": [
+        963.889,
+        1220.878,
+        637.736
+      ]
+    },
+    {
+      "name": "scene_light.Target",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -74.505,
+        0.0,
+        -81.63
+      ],
+      "godot_pos": [
+        -74.505,
+        -81.63,
+        -0.0
+      ]
+    },
+    {
+      "name": "graal_trees",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -16.64,
+        32.614,
+        43.894
+      ],
+      "godot_pos": [
+        -16.64,
+        43.894,
+        -32.614
+      ]
+    },
+    {
+      "name": "well_water",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -86.662,
+        -268.303,
+        -7.79
+      ],
+      "godot_pos": [
+        -86.662,
+        -7.79,
+        268.303
+      ]
+    },
+    {
+      "name": "Direct01",
+      "kind": "light",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -27.486,
+        -259.985,
+        199.341
+      ],
+      "godot_pos": [
+        -27.486,
+        199.341,
+        259.985
+      ]
+    },
+    {
+      "name": "grass",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -102.248,
+        -294.445,
+        2.832
+      ],
+      "godot_pos": [
+        -102.248,
+        2.832,
+        294.445
+      ]
+    },
+    {
+      "name": "mk_torch_1",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -57.358,
+        -99.244,
+        68.869
+      ],
+      "godot_pos": [
+        -57.358,
+        68.869,
+        99.244
+      ]
+    },
+    {
+      "name": "mk_torch_02",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        50.885,
+        -99.244,
+        68.869
+      ],
+      "godot_pos": [
+        50.885,
+        68.869,
+        99.244
+      ]
+    },
+    {
+      "name": "mk_torch_03",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        50.885,
+        139.605,
+        68.869
+      ],
+      "godot_pos": [
+        50.885,
+        68.869,
+        -139.605
+      ]
+    },
+    {
+      "name": "mk_torch_04",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -57.358,
+        139.605,
+        68.869
+      ],
+      "godot_pos": [
+        -57.358,
+        68.869,
+        -139.605
+      ]
+    },
+    {
+      "name": "mk_torch_05",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -145.823,
+        -114.759,
+        235.793
+      ],
+      "godot_pos": [
+        -145.823,
+        235.793,
+        114.759
+      ]
+    },
+    {
+      "name": "mk_torch_06",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -76.289,
+        -43.197,
+        235.793
+      ],
+      "godot_pos": [
+        -76.289,
+        235.793,
+        43.197
+      ]
+    },
+    {
+      "name": "mk_torch_07",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -76.498,
+        87.611,
+        235.793
+      ],
+      "godot_pos": [
+        -76.498,
+        235.793,
+        -87.611
+      ]
+    },
+    {
+      "name": "mk_torch_08",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        -145.98,
+        158.862,
+        235.793
+      ],
+      "godot_pos": [
+        -145.98,
+        235.793,
+        -158.862
+      ]
+    },
+    {
+      "name": "mk_torch_09",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        128.993,
+        158.92,
+        235.793
+      ],
+      "godot_pos": [
+        128.993,
+        235.793,
+        -158.92
+      ]
+    },
+    {
+      "name": "mk_torch_10",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        59.638,
+        87.297,
+        235.793
+      ],
+      "godot_pos": [
+        59.638,
+        235.793,
+        -87.297
+      ]
+    },
+    {
+      "name": "mk_torch_11",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        59.672,
+        -43.404,
+        235.793
+      ],
+      "godot_pos": [
+        59.672,
+        235.793,
+        43.404
+      ]
+    },
+    {
+      "name": "mk_torch_12",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "billboard=1;",
+      "sw_pos": [
+        129.568,
+        -114.763,
+        235.793
+      ],
+      "godot_pos": [
+        129.568,
+        235.793,
+        114.763
+      ]
+    },
+    {
+      "name": "foginfo",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "color=#00ab99;\r\nfar=1416;\r\ndecaymode=exponential2;",
+      "sw_pos": [
+        3.164,
+        -806.088,
+        -163.53
+      ],
+      "godot_pos": [
+        3.164,
+        -163.53,
+        806.088
+      ]
+    },
+    {
+      "name": "background_mountains",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "fog=none;",
+      "sw_pos": [
+        1.295,
+        16.521,
+        85.3
+      ],
+      "godot_pos": [
+        1.295,
+        85.3,
+        -16.521
+      ]
+    },
+    {
+      "name": "skybox",
+      "kind": "model",
+      "parent": "World",
+      "userdata": "rotate=vector(0,0,05)\r\nfog=none;",
+      "sw_pos": [
+        1.295,
+        16.521,
+        385.62
+      ],
+      "godot_pos": [
+        1.295,
+        385.62,
+        -16.521
+      ]
+    },
+    {
+      "name": "MapExportCamera",
+      "kind": "camera",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -10.668,
+        -74.325,
+        615.463
+      ],
+      "godot_pos": [
+        -10.668,
+        615.463,
+        74.325
+      ]
+    },
+    {
+      "name": "MapExportCamera.Target",
+      "kind": "group",
+      "parent": "World",
+      "userdata": "",
+      "sw_pos": [
+        -10.738,
+        -74.325,
+        -0.001
+      ],
+      "godot_pos": [
+        -10.738,
+        -0.001,
+        74.325
+      ]
+    },
+    {
+      "name": "texturerenderformatinfo",
+      "kind": "group",
+      "parent": "",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "zzz[\"maga_ride_welltop\", #rgba8880] ",
+      "kind": "group",
+      "parent": "texturerenderformatinfo",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "godot_pos": [
+        0.0,
+        0.0,
+        -0.0
+      ]
+    },
+    {
+      "name": "TestLight",
+      "kind": "light",
+      "parent": "DefaultView",
+      "userdata": "",
+      "sw_pos": [
+        0.0,
+        0.0,
+        10.0
+      ],
+      "godot_pos": [
+        0.0,
+        10.0,
+        -0.0
+      ]
+    }
+  ],
+  "skeletons": [],
+  "animations": [
+    {
+      "name": "catapult",
+      "tracks": 11,
+      "size": 849
+    },
+    {
+      "name": "catapult_idle",
+      "tracks": 11,
+      "size": 866
+    },
+    {
+      "name": "catapult_shoot",
+      "tracks": 11,
+      "size": 2459
+    },
+    {
+      "name": "Graal_Boss",
+      "tracks": 64,
+      "size": 4955
+    },
+    {
+      "name": "graal_boss_die",
+      "tracks": 64,
+      "size": 40350
+    },
+    {
+      "name": "graal_boss_hit",
+      "tracks": 64,
+      "size": 21272
+    },
+    {
+      "name": "graal_boss_intro",
+      "tracks": 64,
+      "size": 64523
+    },
+    {
+      "name": "graal_boss_run",
+      "tracks": 64,
+      "size": 15508
+    },
+    {
+      "name": "graal_boss_run_talk",
+      "tracks": 64,
+      "size": 15513
+    },
+    {
+      "name": "graal_boss_shootfireball",
+      "tracks": 64,
+      "size": 16623
+    },
+    {
+      "name": "graal_boss_stand",
+      "tracks": 64,
+      "size": 15510
+    },
+    {
+      "name": "graal_boss_stand_talk",
+      "tracks": 64,
+      "size": 15515
+    },
+    {
+      "name": "graal_boss_turnleft",
+      "tracks": 64,
+      "size": 15513
+    },
+    {
+      "name": "graal_boss_turnright",
+      "tracks": 64,
+      "size": 15514
+    },
+    {
+      "name": "graal_boss_walk",
+      "tracks": 64,
+      "size": 15509
+    },
+    {
+      "name": "graal_boss_walk_talk",
+      "tracks": 64,
+      "size": 15514
+    },
+    {
+      "name": "pinky_graal_boss_intro",
+      "tracks": 39,
+      "size": 50144
+    }
+  ]
+}
