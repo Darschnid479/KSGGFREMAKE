@@ -189,6 +189,146 @@ def deform_humanoid_glb(glb_path: Path, drop_deg: float = 68.0, forward_deg: flo
     return f"fixed {deformed_verts} arm verts (shoulder_x={shoulder_x:.2f}, shoulder_y={shoulder_y:.2f})"
 
 
+def fix_graal_boss_rider(level_glb: Path, drop_deg: float = 68.0, forward_deg: float = 34.0) -> str:
+    """Poses Greven av Gral (riding the dragon inside graal_bosslevel.glb) out of T-pose
+    into a forward-leaning riding stance holding the dragon's reins/neck."""
+    if not level_glb.exists():
+        return "missing"
+    raw = bytearray(level_glb.read_bytes())
+    magic, version, total_len = struct.unpack_from("<4sII", raw, 0)
+    if magic != b"glTF":
+        return "not a GLB"
+
+    jlen, jtype = struct.unpack_from("<II", raw, 12)
+    gltf = json.loads(raw[20 : 20 + jlen].decode("utf-8"))
+    if gltf.get("asset", {}).get("extras", {}).get("graalRiderPoseFixed"):
+        return "already pose-fixed"
+
+    bin_hdr_off = 20 + jlen
+    blen, btype = struct.unpack_from("<II", raw, bin_hdr_off)
+    bin_off = bin_hdr_off + 8
+
+    target_prims = []
+    for m in gltf.get("meshes", []):
+        if "graalboss" not in m.get("name", "").lower():
+            continue
+        for pr in m.get("primitives", []):
+            mat_idx = pr.get("material")
+            mat_name = gltf["materials"][mat_idx].get("name", "").lower() if mat_idx is not None else ""
+            if "greven" in mat_name:
+                target_prims.append(pr)
+
+    if not target_prims:
+        return "greven primitive not found"
+
+    deformed_verts = 0
+    for pr in target_prims:
+        p_acc_idx = pr["attributes"]["POSITION"]
+        p_acc = gltf["accessors"][p_acc_idx]
+        p_bv = gltf["bufferViews"][p_acc["bufferView"]]
+        p_off = bin_off + p_bv.get("byteOffset", 0) + p_acc.get("byteOffset", 0)
+        pos = np.frombuffer(raw, dtype=np.float32, count=p_acc["count"] * 3, offset=p_off).reshape(-1, 3).copy()
+
+        n_acc_idx = pr["attributes"].get("NORMAL")
+        has_n = n_acc_idx is not None
+        if has_n:
+            n_acc = gltf["accessors"][n_acc_idx]
+            n_bv = gltf["bufferViews"][n_acc["bufferView"]]
+            n_off = bin_off + n_bv.get("byteOffset", 0) + n_acc.get("byteOffset", 0)
+            nrm = np.frombuffer(raw, dtype=np.float32, count=n_acc["count"] * 3, offset=n_off).reshape(-1, 3).copy()
+
+        ymin, ymax = float(pos[:, 1].min()), float(pos[:, 1].max())
+        h = ymax - ymin
+        cx = float(np.median(pos[:, 0]))
+        rel_x = pos[:, 0] - cx
+        ax = np.abs(rel_x)
+        sign_x = np.where(rel_x >= 0.0, 1.0, -1.0)
+
+        # Measure torso half-width and shoulder pivot for Greven
+        torso_mask = (pos[:, 1] >= ymin + 0.50 * h) & (pos[:, 1] <= ymin + 0.59 * h)
+        torso_half_w = float(np.percentile(ax[torso_mask], 92)) if torso_mask.any() else 0.22
+        shoulder_x = max(0.18, min(torso_half_w * 0.88, 0.26))
+
+        arm_band = (pos[:, 1] >= ymin + 0.65 * h) & (pos[:, 1] <= ymin + 0.82 * h) & (ax > shoulder_x * 1.25)
+        if arm_band.sum() < 10:
+            continue
+
+        shoulder_y = float(np.median(pos[arm_band, 1]))
+        shoulder_z = float(np.median(pos[arm_band, 2]))
+        arm_reach = max(float(ax[arm_band].max()) - shoulder_x, 0.35)
+
+        vy_lo = smoothstep(ymin + 0.59 * h, ymin + 0.67 * h, pos[:, 1])
+        vy_hi = 1.0 - smoothstep(ymin + 0.80 * h, ymin + 0.85 * h, pos[:, 1])
+        wy = vy_lo * vy_hi
+        wx = smoothstep(shoulder_x * 0.72, shoulder_x * 1.30, ax)
+        w = wx * wy
+
+        active = w > 1e-4
+        if not active.any():
+            continue
+        deformed_verts += int(active.sum())
+
+        px = cx + sign_x * shoulder_x
+        dx = pos[:, 0] - px
+        dy = pos[:, 1] - shoulder_y
+        dz = pos[:, 2] - shoulder_z
+
+        # Drop outstretched T-pose arms down toward dragon saddle
+        ang = -sign_x * w * math.radians(drop_deg)
+        ca, sa = np.cos(ang), np.sin(ang)
+        rx = dx * ca - dy * sa
+        ry = dx * sa + dy * ca
+        rz = dz
+
+        # Swing arms forward toward dragon head (-Z) + elbow bend for holding reins
+        elbow_w = smoothstep(shoulder_x + 0.28 * arm_reach, shoulder_x + 0.80 * arm_reach, ax) * wy
+        fang = (w * math.radians(forward_deg)) + (elbow_w * math.radians(24.0))
+        cf, sf = np.cos(fang), np.sin(fang)
+        ry2 = ry * cf - rz * sf
+        rz2 = ry * sf + rz * cf
+
+        # Subtle inward tuck of forearms/hands toward the dragon's neck
+        rx2 = rx - sign_x * (elbow_w * 0.09)
+
+        pos[active, 0] = (px + rx2)[active]
+        pos[active, 1] = (shoulder_y + ry2)[active]
+        pos[active, 2] = (shoulder_z + rz2)[active]
+
+        raw[p_off : p_off + pos.nbytes] = pos.astype(np.float32).tobytes()
+        p_acc["min"] = [float(pos[:, 0].min()), float(pos[:, 1].min()), float(pos[:, 2].min())]
+        p_acc["max"] = [float(pos[:, 0].max()), float(pos[:, 1].max()), float(pos[:, 2].max())]
+
+        if has_n:
+            nx, ny, nz = nrm[:, 0], nrm[:, 1], nrm[:, 2]
+            rnx = nx * ca - ny * sa
+            rny = nx * sa + ny * ca
+            rny2 = rny * cf - nz * sf
+            rnz2 = rny * sf + nz * cf
+            out_n = np.stack([rnx, rny2, rnz2], axis=1)
+            lens = np.linalg.norm(out_n, axis=1, keepdims=True)
+            out_n = np.where(lens > 1e-6, out_n / np.maximum(lens, 1e-6), nrm)
+            nrm[active] = out_n[active]
+            raw[n_off : n_off + nrm.nbytes] = nrm.astype(np.float32).tobytes()
+
+    gltf.setdefault("asset", {}).setdefault("extras", {})["graalRiderPoseFixed"] = True
+    json_bytes = json.dumps(gltf, separators=(",", ":")).encode("utf-8")
+    while len(json_bytes) % 4 != 0:
+        json_bytes += b" "
+    bin_bytes = bytes(raw[bin_off : bin_off + blen])
+    while len(bin_bytes) % 4 != 0:
+        bin_bytes += b"\x00"
+
+    new_total = 12 + 8 + len(json_bytes) + 8 + len(bin_bytes)
+    out = bytearray()
+    out += struct.pack("<4sII", b"glTF", 2, new_total)
+    out += struct.pack("<II", len(json_bytes), 0x4E4F534A)
+    out += json_bytes
+    out += struct.pack("<II", len(bin_bytes), 0x004E4942)
+    out += bin_bytes
+    level_glb.write_bytes(out)
+    return f"fixed {deformed_verts} Greven rider arm verts"
+
+
 def main():
     for glb in sorted(MODELS_DIR.glob("*.glb")):
         if glb.stem in NON_HUMANOIDS:
@@ -196,6 +336,9 @@ def main():
             continue
         msg = deform_humanoid_glb(glb)
         print(f"[POSE] {glb.name:22s} -> {msg}")
+
+    graal_lvl = MODELS_DIR.parent / "levels" / "graal_bosslevel.glb"
+    print(f"[POSE] {graal_lvl.name:22s} -> {fix_graal_boss_rider(graal_lvl)}")
 
 
 if __name__ == "__main__":
