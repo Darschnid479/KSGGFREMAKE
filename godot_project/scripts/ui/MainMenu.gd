@@ -255,9 +255,9 @@ func _setup_menu_ui() -> void:
 	_settings_panel = PanelContainer.new()
 	_settings_panel.set_anchors_preset(Control.PRESET_CENTER)
 	_settings_panel.offset_left = 40
-	_settings_panel.offset_right = 420
-	_settings_panel.offset_top = -120
-	_settings_panel.offset_bottom = 120
+	_settings_panel.offset_right = 460
+	_settings_panel.offset_top = -170
+	_settings_panel.offset_bottom = 170
 	_settings_panel.add_theme_stylebox_override("panel", _make_style())
 	_settings_panel.visible = false
 	ui.add_child(_settings_panel)
@@ -292,3 +292,38 @@ func _setup_menu_ui() -> void:
 		)
 		grow.add_child(gb)
 	sv.add_child(grow)
+
+	var vlbl := Label.new()
+	vlbl.text = "Karakterstemmer (undertekster alltid på norsk):"
+	vlbl.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	vlbl.add_theme_font_size_override("font_size", 15)
+	sv.add_child(vlbl)
+
+	var vrow := HBoxContainer.new()
+	vrow.alignment = BoxContainer.ALIGNMENT_CENTER
+	vrow.add_theme_constant_override("separation", 10)
+	var btn_no := Button.new()
+	var btn_orig := Button.new()
+	var refresh_voice_btns := func():
+		btn_no.text = ("★ Norsk" if GameState.voice_language == "no" else "Norsk")
+		btn_orig.text = ("★ Original CD" if GameState.voice_language == "orig" else "Original CD")
+	_style_button(btn_no)
+	_style_button(btn_orig)
+	btn_no.custom_minimum_size = Vector2(145, 42)
+	btn_orig.custom_minimum_size = Vector2(155, 42)
+	btn_no.pressed.connect(func():
+		AudioManager.play_sfx("menu_select")
+		GameState.voice_language = "no"
+		GameState.save_game()
+		refresh_voice_btns.call()
+	)
+	btn_orig.pressed.connect(func():
+		AudioManager.play_sfx("menu_select")
+		GameState.voice_language = "orig"
+		GameState.save_game()
+		refresh_voice_btns.call()
+	)
+	refresh_voice_btns.call()
+	vrow.add_child(btn_no)
+	vrow.add_child(btn_orig)
+	sv.add_child(vrow)

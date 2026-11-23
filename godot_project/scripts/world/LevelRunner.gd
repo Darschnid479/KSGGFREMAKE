@@ -14,6 +14,8 @@ const COIN_SCRIPT := preload("res://scripts/world/CollectibleCoin.gd")
 const BARREL_SCRIPT := preload("res://scripts/world/BreakableBarrel.gd")
 const HAZARD_SCRIPT := preload("res://scripts/world/UnderwaterHazard.gd")
 const CUTSCENE_SCRIPT := preload("res://scripts/ui/CutscenePlayer.gd")
+const HM_SCRIPT := preload("res://scripts/world/HeightmapSampler.gd")
+const STORY_SCRIPT := preload("res://scripts/world/StoryScriptEngine.gd")
 const OCEAN_SHADER := preload("res://shaders/ocean_water.gdshader")
 const ISLAND_TERRAIN_SHADER := preload("res://shaders/island_terrain.gdshader")
 
@@ -25,6 +27,10 @@ var _env_node: WorldEnvironment
 var _sun_node: DirectionalLight3D
 var _camera_rig: FollowCamera
 var _player_node: CharacterBody3D
+var _heightmap: HeightmapSampler
+var _level_geom: Node3D
+var _story_engine: StoryScriptEngine
+var _actors_by_name: Dictionary = {}
 
 # Karakter-katalog: kobler originale scriptingdata-navn til norske navn, modeller og rolle
 const CHARACTER_ROLES := {
@@ -62,6 +68,7 @@ func _ready() -> void:
 func load_level(level_id: String) -> void:
 	current_level_id = level_id
 	GameState.current_level_id = level_id
+	AudioManager.stop_voice(false)
 
 	if is_instance_valid(_world_root):
 		_world_root.queue_free()
@@ -70,12 +77,19 @@ func load_level(level_id: String) -> void:
 	_world_root = Node3D.new()
 	_world_root.name = "WorldRoot_" + level_id
 	add_child(_world_root)
+	_level_geom = null
+	_story_engine = null
+	_actors_by_name.clear()
+
+	# 0. Last 1:1 originalt binært høydekart (.hm) for millimeter-nøyaktig bakkekontakt (null sveving!)
+	_heightmap = HM_SCRIPT.new()
+	_heightmap.load_level(level_id)
 
 	var cfg := LevelCatalog.get_level(level_id)
 	GameState.set_objective(str(cfg.get("objective", "")))
 	AudioManager.play_music(str(cfg.get("music", "abra")))
 
-	# 1. Moderne AAA animasjonsspill-miljø (AgX, SSAO, SSIL, volumetrisk tåke, malt himmel)
+	# 1. Moderne AAA animasjonsspill-miljø (ACES, SSAO, SSIL, volumetrisk tåke, malt himmel)
 	_setup_modern_environment(cfg)
 
 	var mode := str(cfg.get("mode", "adventure"))
@@ -98,7 +112,7 @@ func load_level(level_id: String) -> void:
 		if bool(cfg.get("has_water", false)):
 			_spawn_modern_ocean(water_y, level_bounds, false)
 
-	# 4. Les originale gameplay-data (spawns, NPC-er, fiender, portaler, 2D-svømmehindre)
+	# 4. Les originale gameplay-data (spawns, NPC-er, fiender, portaler, 2D-svømmehindre, Global-historie)
 	var gp_data := _read_gameplay_json(level_id)
 	if gp_data.is_empty() and level_id == "world_map_underwater":
 		gp_data = _read_gameplay_json("world_map_underwater1")
@@ -130,15 +144,21 @@ func load_level(level_id: String) -> void:
 				_camera_rig.spring_arm.collision_mask = 0
 				_camera_rig.spring_arm.spring_length = 3.8
 			_camera_rig.rotation = Vector3(_camera_rig.pitch, _camera_rig.yaw, 0.0)
+		elif level_id == "cave":
+			# Kinematisk 1:1 åpningsvinkel bak Pinky som rammer inn Kaptein Sabeltann, Langemann, Pelle, Pysa og grotte-tunnelen!
+			_camera_rig.set_target(_player_node, 7.6, 2.05, false)
+			_camera_rig.yaw = -0.34
+			_camera_rig.pitch = -0.14
+			_camera_rig.rotation = Vector3(_camera_rig.pitch, _camera_rig.yaw, 0.0)
 		else:
 			_camera_rig.set_target(_player_node, 9.5, 2.4, false)
 		if _camera_rig.spring_arm and _player_node:
 			_camera_rig.spring_arm.add_excluded_object(_player_node.get_rid())
-		# 7. Spawn NPC-er, fiender, håndlagde tønner, dubloner, fakkelfat og portaler
+		# 7. Spawn NPC-er, fiender, originale 1:1 mynter, historie-objekter, portaler og 1:1 stemme-/historiemotor!
 		_populate_entities(level_id, cfg, gp_data, spawn_pos, level_bounds)
 		_add_biome_atmosphere(level_id, spawn_pos)
 
-	# 8. Spill av oppskalert animert historie-filmsekvens (videofrekvens) ved hvert nytt hovedkapittel!
+	# 8. Spill av oppskalert animert historie-filmsekvens ved overgangskapitler (cave og abra starter LIVE i 3D med stemmer!)
 	var pending_cut := GameState.get_pending_cutscene(level_id)
 	if pending_cut != "":
 		GameState.mark_cutscene_seen(pending_cut)
@@ -168,8 +188,8 @@ func _setup_modern_environment(cfg: Dictionary) -> void:
 		env.ambient_light_energy = 0.42
 	elif is_cave:
 		env.ambient_light_source = Environment.AMBIENT_SOURCE_COLOR
-		env.ambient_light_color = cfg.get("ambient_color", Color(0.16, 0.22, 0.30))
-		env.ambient_light_energy = 0.36
+		env.ambient_light_color = Color(0.24, 0.22, 0.28) if current_level_id == "cave" else cfg.get("ambient_color", Color(0.18, 0.24, 0.32))
+		env.ambient_light_energy = 0.46 if current_level_id == "cave" else 0.38
 	else:
 		env.ambient_light_source = Environment.AMBIENT_SOURCE_SKY
 		env.ambient_light_sky_contribution = 0.72
@@ -178,7 +198,7 @@ func _setup_modern_environment(cfg: Dictionary) -> void:
 
 	# Moderne AAA animasjons-pipeline: ACES kinokontrast + dyp SSAO + kontrollert SSIL – null melkeaktig «fade»!
 	env.tonemap_mode = Environment.TONE_MAPPER_ACES
-	env.tonemap_exposure = 1.02 if is_swim else (1.00 if not is_cave else 0.98)
+	env.tonemap_exposure = 1.02 if is_swim else (1.04 if current_level_id == "cave" else (1.00 if not is_cave else 0.98))
 	env.ssao_enabled = GameState.ssao_enabled
 	env.ssao_radius = 1.70
 	env.ssao_intensity = 2.05
@@ -207,16 +227,16 @@ func _setup_modern_environment(cfg: Dictionary) -> void:
 		env.fog_sky_affect = 0.20
 	else:
 		env.fog_mode = Environment.FOG_MODE_EXPONENTIAL
-		env.fog_density = float(cfg.get("fog_density", 0.0011)) * 0.68
+		env.fog_density = float(cfg.get("fog_density", 0.0011)) * (0.45 if current_level_id == "cave" else 0.68)
 		env.fog_sky_affect = 0.08 if is_graal else (0.24 if is_cave else 0.10)
 
 	# Diskret volumetrisk tåke for lysstråler uten å bleke teksturene i forgrunnen!
 	if GameState.volumetric_fog_enabled and (is_cave or is_graal or is_swim):
 		env.volumetric_fog_enabled = true
-		env.volumetric_fog_density = 0.0035 if is_swim else (0.015 if is_cave else 0.006)
-		env.volumetric_fog_albedo = Color(0.14, 0.66, 0.84) if is_swim else (Color(0.24, 0.85, 0.64) if "end" in current_level_id else Color(0.36, 0.46, 0.70))
-		env.volumetric_fog_emission = Color(0.01, 0.08, 0.14) if is_swim else (Color(0.03, 0.15, 0.11) if "end" in current_level_id else Color(0.02, 0.03, 0.07))
-		env.volumetric_fog_emission_energy = 0.06 if is_swim else (0.35 if is_cave else 0.20)
+		env.volumetric_fog_density = 0.0035 if is_swim else (0.0085 if current_level_id == "cave" else (0.015 if is_cave else 0.006))
+		env.volumetric_fog_albedo = Color(0.14, 0.66, 0.84) if is_swim else (Color(0.24, 0.85, 0.64) if "end" in current_level_id else Color(0.42, 0.38, 0.56))
+		env.volumetric_fog_emission = Color(0.01, 0.08, 0.14) if is_swim else (Color(0.03, 0.15, 0.11) if "end" in current_level_id else Color(0.02, 0.02, 0.04))
+		env.volumetric_fog_emission_energy = 0.06 if is_swim else (0.22 if current_level_id == "cave" else (0.35 if is_cave else 0.20))
 		env.volumetric_fog_anisotropy = 0.68
 		env.volumetric_fog_length = 42.0 if is_swim else 55.0
 
@@ -254,10 +274,7 @@ func _setup_modern_environment(cfg: Dictionary) -> void:
 
 
 const LEVEL_GLB_FALLBACKS := {
-	"graal_mountain": "graal_bosslevel",
-	"fatamorgana_palace": "fatamorgana_city",
 	"swimming": "magakhan_beach",
-	"outro": "abra",
 }
 
 
@@ -272,16 +289,41 @@ func _load_level_geometry(w3d_name: String, water_y: float) -> AABB:
 			var inst := scene.instantiate()
 			inst.name = "LevelGeometry"
 			_world_root.add_child(inst)
+			_level_geom = inst
 
 			var first := true
 			var min_v := Vector3.ZERO
 			var max_v := Vector3.ZERO
 			var lantern_count := 0
+			var torch_positions: Array[Vector3] = []
+			var lava_meshes: Array[MeshInstance3D] = []
 
 			for mi in _find_all_meshes(inst):
 				var nm := mi.name.to_lower()
 				# Skjul gamle flate 2005 Shockwave-vannflater og 2005 skybokser/bakgrunnskupler!
+				# Unntak: i grotten beholder vi det indre grottevannet (cavewater) og senker topwateroutside under sandstranden!
+				if nm == "cavewater":
+					var cw_mat := StandardMaterial3D.new()
+					cw_mat.albedo_color = Color(0.03, 0.14, 0.20, 0.86)
+					cw_mat.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
+					cw_mat.roughness = 0.24
+					cw_mat.metallic = 0.12
+					mi.material_override = cw_mat
+					continue
+				if nm == "topwateroutside":
+					mi.position.y -= 0.62
+					var ow_mat := StandardMaterial3D.new()
+					ow_mat.albedo_color = Color(0.02, 0.14, 0.24, 0.90)
+					ow_mat.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
+					ow_mat.roughness = 0.22
+					ow_mat.metallic = 0.15
+					mi.material_override = ow_mat
+					continue
 				if "water" in nm or "abrasea" in nm or nm.ends_with("sea") or nm.ends_with("sea2") or "background" in nm or "skybox" in nm:
+					mi.visible = false
+					continue
+				# Skjul gamle billboard-røyk/tåke-kort og shop-UI-hjelpemesher (BEHOLD portal1..portal7 = ekte grottegeometri!)
+				if "portalchoice" in nm or "foginfo" in nm or "lightsmoke" in nm or nm == "fog" or nm in ["shoplamp", "shopslingshot", "shopsword"]:
 					mi.visible = false
 					continue
 				# Erstatt gamle ugjennomsiktige Shockwave glow-plater med ekte varme Godot 4 OmniLight3D-lykter
@@ -297,9 +339,28 @@ func _load_level_geometry(w3d_name: String, water_y: float) -> AABB:
 						_world_root.add_child(lgt)
 						lantern_count += 1
 					continue
-				# Skjul usynlige UI/shop/fog-hjelpemesher
-				if "portalchoice" in nm or "fog" in nm or nm in ["shoplamp", "shopslingshot", "shopsword"]:
-					mi.visible = false
+				# Originale grottefakler (mktorch1..39): behold fakkelholderen og gi ekte varmt fakkelskjær!
+				if "mktorch" in nm or "mk_torch" in nm:
+					var taabb: AABB = mi.global_transform * mi.get_aabb()
+					var tpos := taabb.get_center() + Vector3(0.0, 0.45, 0.0)
+					if torch_positions.size() < 16:
+						var too_close := false
+						for prev in torch_positions:
+							if prev.distance_to(tpos) < 10.5:
+								too_close = true
+								break
+						if not too_close:
+							torch_positions.append(tpos)
+							var tl := OmniLight3D.new()
+							tl.position = tpos
+							tl.light_color = Color(1.0, 0.62, 0.22)
+							tl.light_energy = 4.6
+							tl.omni_range = 19.0
+							_world_root.add_child(tl)
+					continue
+				# Originale glødende lavabasseng (cavelava1, cavebigroomlava, cavelava2, endlava)
+				if "lava" in nm:
+					lava_meshes.append(mi)
 					continue
 
 				# 1:1 Gral-boss: Løft originale Greven av Gral på dragen (GraalBoss) og katapulten opp på borgen!
@@ -336,6 +397,24 @@ func _load_level_geometry(w3d_name: String, water_y: float) -> AABB:
 			# Oppgrader ALLE synlige nivåmaterialer til knivskarp AAA animasjons-PBR med 3D mikrodetalj!
 			VisualEnhancer.enhance_world_node(inst, current_level_id, water_y)
 
+			# Gi lavabassengene ekte glødende vulkansk oransje-rød emisjon etter PBR-oppgradering!
+			if not lava_meshes.is_empty():
+				var lava_mat := StandardMaterial3D.new()
+				lava_mat.albedo_color = Color(0.95, 0.28, 0.04)
+				lava_mat.roughness = 0.35
+				lava_mat.emission_enabled = true
+				lava_mat.emission = Color(1.0, 0.34, 0.05)
+				lava_mat.emission_energy_multiplier = 2.6
+				for lmi in lava_meshes:
+					lmi.material_override = lava_mat
+					var laabb: AABB = lmi.global_transform * lmi.get_aabb()
+					var ll := OmniLight3D.new()
+					ll.position = laabb.get_center() + Vector3(0.0, 3.0, 0.0)
+					ll.light_color = Color(1.0, 0.36, 0.08)
+					ll.light_energy = 5.0
+					ll.omni_range = 24.0
+					_world_root.add_child(ll)
+
 			if not first:
 				bounds = AABB(min_v, max_v - min_v)
 			return bounds
@@ -363,19 +442,19 @@ func _add_biome_atmosphere(level_id: String, spawn_pos: Vector3) -> void:
 	# Grusomme Gabriels grotte-finale: varme inngangsfakler + smaragdgrønn spøkelsesglød i kammeret foran!
 	elif level_id in ["cave_end_bosslevel", "cave_end", "cave"]:
 		var is_ghost := (level_id != "cave")
-		# Dempet varmt lyktelys bak Pinky (gir gyllen kantglød uten utbrenning!)
+		# Naturlig varm-nøytral grottelykt over inngangen (fremhever Sabeltanns hvite sminke, hatt og farger!)
 		var warm_torch := OmniLight3D.new()
-		warm_torch.position = spawn_pos + Vector3(-2.6, 2.8, 2.2)
-		warm_torch.light_color = Color(1.0, 0.64, 0.24)
-		warm_torch.light_energy = 2.8
-		warm_torch.omni_range = 16.0
+		warm_torch.position = spawn_pos + Vector3(0.8, 4.4, -2.6)
+		warm_torch.light_color = Color(1.0, 0.90, 0.78)
+		warm_torch.light_energy = 3.2
+		warm_torch.omni_range = 22.0
 		_world_root.add_child(warm_torch)
 
 		# Eterisk smaragdgrønt lys dypt inne i Grusomme Gabriels skattkammer
 		var chamber_glow := OmniLight3D.new()
 		chamber_glow.position = spawn_pos + Vector3(0.0, 5.5, -18.0)
-		chamber_glow.light_color = Color(0.18, 1.0, 0.64) if is_ghost else Color(1.0, 0.78, 0.34)
-		chamber_glow.light_energy = 7.5 if is_ghost else 4.5
+		chamber_glow.light_color = Color(0.18, 1.0, 0.64) if is_ghost else Color(1.0, 0.74, 0.36)
+		chamber_glow.light_energy = 7.5 if is_ghost else 4.0
 		chamber_glow.omni_range = 38.0
 		_world_root.add_child(chamber_glow)
 
@@ -509,22 +588,36 @@ func _create_camera_rig() -> FollowCamera:
 	return rig
 
 
+func _make_hm_callable() -> Callable:
+	return func(p: Vector3) -> float:
+		if _heightmap and _heightmap.valid:
+			return _heightmap.sample_y(p.x, p.z)
+		return -9999.0
+
+
 func _find_player_spawn(level_id: String, gp_data: Dictionary, bounds: AABB) -> Vector3:
-	# 1:1 Gral-bosskampen skjer oppe på borggårdens brystvern foran katapulten (Y = 21.41m, Z = -12.4)
+	# 1:1 Gral-bosskampen skjer oppe på borggårdens brystvern foran katapulten (Y = 21.48m, Z = -12.4)
 	if level_id == "graal_bosslevel":
-		return Vector3(-0.8, 21.8, -12.4)
+		var gy := _heightmap.sample_y(-0.8, -12.4) if (_heightmap and _heightmap.valid) else 21.48
+		return Vector3(-0.8, (gy if gy > -5000.0 else 21.48) + 0.05, -12.4)
 
 	var nodes: Array = gp_data.get("nodes", [])
 	for n in nodes:
 		var nm := str(n.get("name", "")).to_lower()
 		if nm == "character_pinky" or nm == "character_treasureseeker":
 			var gp: Array = n.get("godot_pos", [0, 0, 0])
-			var p := Vector3(float(gp[0]) * WORLD_SCALE, float(gp[1]) * WORLD_SCALE + 3.0, float(gp[2]) * WORLD_SCALE)
+			var px := float(gp[0]) * WORLD_SCALE
+			var pz := float(gp[2]) * WORLD_SCALE
+			if _heightmap and _heightmap.valid:
+				var hy := _heightmap.sample_y(px, pz)
+				if hy > -5000.0:
+					return Vector3(px, hy + 0.05, pz)
+			var p := Vector3(px, float(gp[1]) * WORLD_SCALE + 2.0, pz)
 			var hit := _raycast_ground(p, bounds)
 			if hit.y > -5000.0:
-				return hit + Vector3(0.0, 0.5, 0.0)
+				return hit + Vector3(0.0, 0.05, 0.0)
 	var center := bounds.get_center()
-	return _snap_to_surface(Vector3(center.x, bounds.position.y + bounds.size.y + 4.0, center.z), bounds)
+	return _snap_to_surface(Vector3(center.x, bounds.position.y + bounds.size.y + 4.0, center.z), bounds) + Vector3(0.0, 0.05, 0.0)
 
 
 func _build_world_map_islands() -> void:
@@ -727,6 +820,10 @@ func _make_stylized_island_mesh(radius: float, theme: String, height_fn: Callabl
 
 
 func _snap_to_surface(pos: Vector3, bounds: AABB) -> Vector3:
+	if _heightmap and _heightmap.valid:
+		var hy := _heightmap.sample_y(pos.x, pos.z)
+		if hy > -5000.0:
+			return Vector3(pos.x, hy, pos.z)
 	var space := get_world_3d().direct_space_state
 	if space:
 		var from := Vector3(pos.x, bounds.position.y + bounds.size.y + 20.0, pos.z)
@@ -734,8 +831,8 @@ func _snap_to_surface(pos: Vector3, bounds: AABB) -> Vector3:
 		var q := PhysicsRayQueryParameters3D.create(from, to)
 		var hit := space.intersect_ray(q)
 		if hit and hit.has("position"):
-			return hit["position"] + Vector3(0.0, 0.5, 0.0)
-	return Vector3(pos.x, maxf(pos.y, 1.5), pos.z)
+			return hit["position"]
+	return Vector3(pos.x, pos.y, pos.z)
 
 
 func _spawn_pinky(pos: Vector3, is_swim: bool) -> CharacterBody3D:
@@ -743,9 +840,12 @@ func _spawn_pinky(pos: Vector3, is_swim: bool) -> CharacterBody3D:
 	pinky.name = "Pinky"
 	pinky.is_swimming = is_swim
 	pinky.position = pos
-	# I Gral-bosskampen vender Pinky fremover mot Greven av Gral og katapulten med sverdet klart i hånden!
+	pinky.heightmap_sampler = _make_hm_callable()
+	# I Gral-bosskampen vender Pinky fremover mot Greven av Gral og katapulten; i grotten mot Kaptein Sabeltann!
 	if current_level_id == "graal_bosslevel":
 		pinky.rotation_degrees.y = -72.0
+	elif current_level_id == "cave":
+		pinky.rotation_degrees.y = -20.0
 	pinky.camera_rig = _camera_rig
 
 	var col := CollisionShape3D.new()
@@ -777,17 +877,30 @@ func _spawn_boat(pos: Vector3) -> CharacterBody3D:
 	return boat
 
 
+func _find_node_pos(nodes: Array, target_lower: String) -> Dictionary:
+	for n in nodes:
+		if str(n.get("name", "")).to_lower() == target_lower:
+			var gp: Array = n.get("godot_pos", [0, 0, 0])
+			return {"found": true, "pos": Vector3(float(gp[0]) * WORLD_SCALE, float(gp[1]) * WORLD_SCALE, float(gp[2]) * WORLD_SCALE)}
+	return {"found": false}
+
+
 func _populate_entities(level_id: String, cfg: Dictionary, gp_data: Dictionary, spawn_pos: Vector3, bounds: AABB) -> void:
 	# 1:1 Greven av Gral på dragen (selve GraalBoss-dragemodellen fra graal_bosslevel.glb svever over borgen)
 	if level_id == "graal_bosslevel":
 		GameState.emit_signal("boss_health_changed", "Greven av Gral", 260.0, 260.0)
 
+	var hm_cb := _make_hm_callable()
 	var nodes: Array = gp_data.get("nodes", [])
 	var spawned_chars := 0
 	var occupied_positions: Array[Vector3] = [spawn_pos]
+	var has_original_coins := false
 
 	for n in nodes:
 		var nm := str(n.get("name", "")).to_lower()
+		if nm.begins_with("walkoverpickup_coppercoin") or nm.begins_with("walkoverpickup_goldcoin"):
+			has_original_coins = true
+			continue
 		if not nm.begins_with("character_"):
 			continue
 		var key := nm.substr(10)
@@ -796,7 +909,7 @@ func _populate_entities(level_id: String, cfg: Dictionary, gp_data: Dictionary, 
 
 		var gp: Array = n.get("godot_pos", [0, 0, 0])
 		var pos := _snap_to_surface(
-			Vector3(float(gp[0]) * WORLD_SCALE, float(gp[1]) * WORLD_SCALE + 2.0, float(gp[2]) * WORLD_SCALE),
+			Vector3(float(gp[0]) * WORLD_SCALE, float(gp[1]) * WORLD_SCALE, float(gp[2]) * WORLD_SCALE),
 			bounds
 		)
 
@@ -815,8 +928,17 @@ func _populate_entities(level_id: String, cfg: Dictionary, gp_data: Dictionary, 
 			npc.display_name = matched_role["name"]
 			npc.model_resource = matched_role["model"]
 			npc.reward_coins = int(matched_role.get("coins", 5))
+			npc.heightmap_sampler = hm_cb
 			npc.position = pos
 			_world_root.add_child(npc)
+			if pos.distance_to(spawn_pos) < 18.0:
+				npc.face_toward(spawn_pos)
+			_actors_by_name[key] = npc
+			var base_k := str(matched_role["model"])
+			if not _actors_by_name.has(base_k):
+				_actors_by_name[base_k] = npc
+			if key.begins_with("pysa"):
+				_actors_by_name["pysa"] = npc
 		else:
 			var enemy: EnemyActor = ENEMY_SCRIPT.new()
 			enemy.enemy_name = matched_role["name"]
@@ -825,65 +947,98 @@ func _populate_entities(level_id: String, cfg: Dictionary, gp_data: Dictionary, 
 			enemy.attack_damage = float(matched_role.get("dmg", 12.0))
 			enemy.is_boss = (matched_role["role"] == "boss")
 			enemy.coin_drop = 25 if enemy.is_boss else 5
+			enemy.heightmap_sampler = hm_cb
 			enemy.position = pos
 			_world_root.add_child(enemy)
+			_actors_by_name[key] = enemy
 
-	# Portal til neste nivå i 100% original historierekkefølge
+	# 1:1 originale portaler på eksakte original-koordinater (ingen falsk portal foran skipets rekkverk eller rett ved grottestart!)
 	var next_id := str(cfg.get("next_level", "world_map"))
 	var next_info := LevelCatalog.get_level(next_id)
 	var portal: PortalTrigger = PORTAL_SCRIPT.new()
 	portal.target_level_id = next_id
-	if level_id == "graal_mountain":
+	var portal_pos := Vector3.ZERO
+	var use_custom_portal := false
+
+	if level_id == "cave":
+		# I grotten fortsetter historien ved Grusomme Gabriels kiste innerst i skattkammeret (areatrigger_chest)
+		var ch := _find_node_pos(nodes, "areatrigger_chest")
+		portal.portal_label = "Åpne Grusomme Gabriels kiste → Abra Havn"
+		portal_pos = _snap_to_surface(ch["pos"] if ch["found"] else Vector3(45.76, -6.5, -98.01), bounds)
+		use_custom_portal = true
+	elif level_id == "abra":
+		# Eksakt original seilingsportal på torget ved Miriam (actionable_portal) – IKKE bak skipsrekkverket!
+		var ap := _find_node_pos(nodes, "actionable_portal")
+		portal.portal_label = "Sett seil til De Syv Hav"
+		portal_pos = _snap_to_surface(ap["pos"] if ap["found"] else Vector3(-18.81, 0.0, -4.21), bounds)
+		use_custom_portal = true
+	elif level_id == "graal_mountain":
+		var aw := _find_node_pos(nodes, "actionable_well")
 		portal.portal_label = "Hopp i brønnen → Undervannstunnel (2D)"
+		portal_pos = _snap_to_surface(aw["pos"] if aw["found"] else Vector3(54.06, 0.0, -134.26), bounds)
+		use_custom_portal = true
+		# Original retur-portal ved stranden tilbake til Den Sorte Dame
+		var ret := _find_node_pos(nodes, "actionable_gotoworldmap")
+		if ret["found"]:
+			var rp: PortalTrigger = PORTAL_SCRIPT.new()
+			rp.target_level_id = "world_map"
+			rp.portal_label = "Tilbake til Den Sorte Dame"
+			rp.position = _snap_to_surface(ret["pos"], bounds) + Vector3(0.0, 0.15, 0.0)
+			_world_root.add_child(rp)
 	else:
 		portal.portal_label = "Reis til " + str(next_info.get("title", next_id))
-	var portal_raw := spawn_pos + Vector3(6.5, 2.0, -5.5)
-	if level_id == "graal_bosslevel":
-		portal_raw = Vector3(-6.2, 26.5, -5.5)
-	var phit := _raycast_ground(portal_raw, bounds)
-	portal.position = (phit + Vector3(0.0, 0.25, 0.0)) if phit.y > -5000.0 else spawn_pos + Vector3(6.0, 0.25, -5.0)
-	_world_root.add_child(portal)
-	occupied_positions.append(portal.position)
+		var portal_raw := spawn_pos + Vector3(6.5, 0.0, -5.5)
+		if level_id == "graal_bosslevel":
+			portal_raw = Vector3(-6.2, 21.5, -5.5)
+		portal_pos = _snap_to_surface(portal_raw, bounds)
+
+	portal.position = portal_pos + Vector3(0.0, 0.15, 0.0)
+	if use_custom_portal or true:
+		_world_root.add_child(portal)
+		occupied_positions.append(portal.position)
 
 	# 1:1 originale undervanns-brønner (2D side-scrolling dykk!) i Fata Morgana og Maga Khans fangehull
 	if level_id == "fatamorgana_city":
 		var well_p: PortalTrigger = PORTAL_SCRIPT.new()
 		well_p.target_level_id = "fatamorgana_underwater"
 		well_p.portal_label = "Dykk i brønnen etter kaken (2D)"
-		var wh := _raycast_ground(spawn_pos + Vector3(-5.5, 2.5, -4.5), bounds)
-		well_p.position = (wh + Vector3(0.0, 0.25, 0.0)) if wh.y > -5000.0 else spawn_pos + Vector3(-5.5, 0.25, -4.5)
+		var wn := _find_node_pos(nodes, "actionable_well")
+		var wbase: Vector3 = wn["pos"] if wn["found"] else spawn_pos + Vector3(-5.5, 0.0, -4.5)
+		well_p.position = _snap_to_surface(wbase, bounds) + Vector3(0.0, 0.15, 0.0)
 		_world_root.add_child(well_p)
 	elif level_id == "magakhan_dungeon":
 		var key_p: PortalTrigger = PORTAL_SCRIPT.new()
 		key_p.target_level_id = "magakhan_dungeon_underwater"
 		key_p.portal_label = "Dykk etter fangehullsnøkkelen (2D)"
-		var kh := _raycast_ground(spawn_pos + Vector3(-5.5, 2.5, -4.5), bounds)
-		key_p.position = (kh + Vector3(0.0, 0.25, 0.0)) if kh.y > -5000.0 else spawn_pos + Vector3(-5.5, 0.25, -4.5)
+		var kn := _find_node_pos(nodes, "actionable_well")
+		var kbase: Vector3 = kn["pos"] if kn["found"] else spawn_pos + Vector3(-5.5, 0.0, -4.5)
+		key_p.position = _snap_to_surface(kbase, bounds) + Vector3(0.0, 0.15, 0.0)
 		_world_root.add_child(key_p)
 
-	# Plasser pregede dubloner og håndlagde eiketønner KUN på flatt, tørt dekke og med klar avstand fra NPC-er!
+	# Spawn kun reserve-mynter/tønner på brett som IKKE allerede har originale walkoverpickup-mynter (unngår sirkel-rot på cave og abra!)
 	var min_dry_y: float = float(cfg.get("water_y", -99.0)) + 0.45 if bool(cfg.get("has_water", false)) else -999.0
-	for i in range(10):
-		var ang := (float(i) / 10.0) * TAU + 0.2
-		var rad := 6.0 + float(i % 3) * 3.5
-		var cand := spawn_pos + Vector3(cos(ang) * rad, 3.0, sin(ang) * rad)
-		var info := _raycast_ground_info(cand, bounds)
-		if info.has("position"):
-			var hit_pos: Vector3 = info["position"]
-			var hit_nrm: Vector3 = info["normal"]
-			if hit_pos.y > min_dry_y and hit_nrm.y > 0.86 and absf(hit_pos.y - spawn_pos.y) < 2.6:
-				var too_close := false
-				for occ in occupied_positions:
-					if hit_pos.distance_to(occ) < 2.8:
-						too_close = true
-						break
-				if too_close:
-					continue
-				var coin: CollectibleCoin = COIN_SCRIPT.new()
-				coin.position = hit_pos + Vector3(0.0, 0.60, 0.0)
-				_world_root.add_child(coin)
+	if not has_original_coins and level_id != "cave":
+		for i in range(10):
+			var ang := (float(i) / 10.0) * TAU + 0.2
+			var rad := 6.0 + float(i % 3) * 3.5
+			var cand := spawn_pos + Vector3(cos(ang) * rad, 3.0, sin(ang) * rad)
+			var info := _raycast_ground_info(cand, bounds)
+			if info.has("position"):
+				var hit_pos: Vector3 = info["position"]
+				var hit_nrm: Vector3 = info["normal"]
+				if hit_pos.y > min_dry_y and hit_nrm.y > 0.86 and absf(hit_pos.y - spawn_pos.y) < 2.6:
+					var too_close := false
+					for occ in occupied_positions:
+						if hit_pos.distance_to(occ) < 2.8:
+							too_close = true
+							break
+					if too_close:
+						continue
+					var coin: CollectibleCoin = COIN_SCRIPT.new()
+					coin.position = hit_pos + Vector3(0.0, 0.60, 0.0)
+					_world_root.add_child(coin)
 
-	if level_id != "graal_bosslevel":
+	if level_id != "graal_bosslevel" and level_id != "cave" and level_id != "abra":
 		for i in range(4):
 			var ang := (float(i) / 4.0) * TAU + 0.5
 			var cand := spawn_pos + Vector3(cos(ang) * 7.5, 3.0, sin(ang) * 7.5)
@@ -902,6 +1057,12 @@ func _populate_entities(level_id: String, cfg: Dictionary, gp_data: Dictionary, 
 					var barrel: BreakableBarrel = BARREL_SCRIPT.new()
 					barrel.position = hit_pos
 					_world_root.add_child(barrel)
+
+	# 8. Start 1:1 original historie-, samtale-, spline- og stemmemotor fra gameplay/<level_id>.json!
+	_story_engine = STORY_SCRIPT.new()
+	_story_engine.name = "StoryScriptEngine"
+	_world_root.add_child(_story_engine)
+	_story_engine.setup(level_id, gp_data, _world_root, _level_geom, _player_node, _camera_rig, _heightmap, _actors_by_name)
 
 
 # ==============================================================================

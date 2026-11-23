@@ -1,0 +1,2702 @@
+{
+  "abra_buylamp_shopkeeper": {
+    "speaker": "shopkeeper",
+    "speaker_name": "Kjøpmannen",
+    "cast": "abra",
+    "text": "En førsteklasses sjørøverlykt! Den lyser opp selv den mørkeste fangekjeller."
+  },
+  "abra_buyslingshot_shopkeeper": {
+    "speaker": "shopkeeper",
+    "speaker_name": "Kjøpmannen",
+    "cast": "abra",
+    "text": "En knallgod sprettert! Perfekt til å treffe mål og skremme fiender på avstand."
+  },
+  "abra_buysword_shopkeeper": {
+    "speaker": "shopkeeper",
+    "speaker_name": "Kjøpmannen",
+    "cast": "abra",
+    "text": "Et ekte sjørøversverd! Nå skal skjelettene få kjørt seg!"
+  },
+  "abra_canbuylamp_easy_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "abra",
+    "text": "Jeg trenger en lykt til de mørke grottene!"
+  },
+  "abra_canbuylamp_easy_2_shopkeeper": {
+    "speaker": "shopkeeper",
+    "speaker_name": "Kjøpmannen",
+    "cast": "abra",
+    "text": "Her har du en solid sjørøverlykt!"
+  },
+  "abra_canbuylamp_hard_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "abra",
+    "text": "Jeg trenger en lykt til de mørke grottene!"
+  },
+  "abra_canbuylamp_hard_2_shopkeeper": {
+    "speaker": "shopkeeper",
+    "speaker_name": "Kjøpmannen",
+    "cast": "abra",
+    "text": "Her har du en solid sjørøverlykt!"
+  },
+  "abra_canbuylamp_medium_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "abra",
+    "text": "Jeg trenger en lykt til de mørke grottene!"
+  },
+  "abra_canbuylamp_medium_2_shopkeeper": {
+    "speaker": "shopkeeper",
+    "speaker_name": "Kjøpmannen",
+    "cast": "abra",
+    "text": "Her har du en solid sjørøverlykt!"
+  },
+  "abra_canbuysling_easy_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "abra",
+    "text": "Kan jeg få kjøpe spretterten?"
+  },
+  "abra_canbuysling_easy_2_shopkeeper": {
+    "speaker": "shopkeeper",
+    "speaker_name": "Kjøpmannen",
+    "cast": "abra",
+    "text": "Vær så god, en knallgod sprettert til deg!"
+  },
+  "abra_canbuysling_hard_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "abra",
+    "text": "Kan jeg få kjøpe spretterten?"
+  },
+  "abra_canbuysling_hard_2_shopkeeper": {
+    "speaker": "shopkeeper",
+    "speaker_name": "Kjøpmannen",
+    "cast": "abra",
+    "text": "Vær så god, en knallgod sprettert til deg!"
+  },
+  "abra_canbuysling_medium_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "abra",
+    "text": "Kan jeg få kjøpe spretterten?"
+  },
+  "abra_canbuysling_medium_2_shopkeeper": {
+    "speaker": "shopkeeper",
+    "speaker_name": "Kjøpmannen",
+    "cast": "abra",
+    "text": "Vær så god, en knallgod sprettert til deg!"
+  },
+  "abra_canbuysword_easy_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "abra",
+    "text": "Jeg vil gjerne kjøpe det nye sverdet!"
+  },
+  "abra_canbuysword_easy_2_shopkeeper": {
+    "speaker": "shopkeeper",
+    "speaker_name": "Kjøpmannen",
+    "cast": "abra",
+    "text": "Et glimrende valg, Pinky! Bruk det vel!"
+  },
+  "abra_canbuysword_hard_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "abra",
+    "text": "Jeg vil gjerne kjøpe det nye sverdet!"
+  },
+  "abra_canbuysword_hard_2_shopkeeper": {
+    "speaker": "shopkeeper",
+    "speaker_name": "Kjøpmannen",
+    "cast": "abra",
+    "text": "Et glimrende valg, Pinky! Bruk det vel!"
+  },
+  "abra_canbuysword_medium_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "abra",
+    "text": "Jeg vil gjerne kjøpe det nye sverdet!"
+  },
+  "abra_canbuysword_medium_2_shopkeeper": {
+    "speaker": "shopkeeper",
+    "speaker_name": "Kjøpmannen",
+    "cast": "abra",
+    "text": "Et glimrende valg, Pinky! Bruk det vel!"
+  },
+  "abra_cantbuylamp_easy_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "abra",
+    "text": "Har jeg råd til lykten?"
+  },
+  "abra_cantbuylamp_easy_2_shopkeeper": {
+    "speaker": "shopkeeper",
+    "speaker_name": "Kjøpmannen",
+    "cast": "abra",
+    "text": "Ikke helt ennå, Pinky — kom tilbake med flere gullmynter!"
+  },
+  "abra_cantbuylamp_hard_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "abra",
+    "text": "Har jeg råd til lykten?"
+  },
+  "abra_cantbuylamp_hard_2_shopkeeper": {
+    "speaker": "shopkeeper",
+    "speaker_name": "Kjøpmannen",
+    "cast": "abra",
+    "text": "Ikke helt ennå, Pinky — kom tilbake med flere gullmynter!"
+  },
+  "abra_cantbuylamp_medium_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "abra",
+    "text": "Har jeg råd til lykten?"
+  },
+  "abra_cantbuylamp_medium_2_shopkeeper": {
+    "speaker": "shopkeeper",
+    "speaker_name": "Kjøpmannen",
+    "cast": "abra",
+    "text": "Ikke helt ennå, Pinky — kom tilbake med flere gullmynter!"
+  },
+  "abra_cantbuysling_easy_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "abra",
+    "text": "Kan jeg kjøpe spretterten nå?"
+  },
+  "abra_cantbuysling_easy_2_shopkeeper": {
+    "speaker": "shopkeeper",
+    "speaker_name": "Kjøpmannen",
+    "cast": "abra",
+    "text": "Du mangler noen mynter ennå, Pinky — samle litt mer gull!"
+  },
+  "abra_cantbuysling_hard_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "abra",
+    "text": "Kan jeg kjøpe spretterten nå?"
+  },
+  "abra_cantbuysling_hard_2_shopkeeper": {
+    "speaker": "shopkeeper",
+    "speaker_name": "Kjøpmannen",
+    "cast": "abra",
+    "text": "Du mangler noen mynter ennå, Pinky — samle litt mer gull!"
+  },
+  "abra_cantbuysling_medium_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "abra",
+    "text": "Kan jeg kjøpe spretterten nå?"
+  },
+  "abra_cantbuysling_medium_2_shopkeeper": {
+    "speaker": "shopkeeper",
+    "speaker_name": "Kjøpmannen",
+    "cast": "abra",
+    "text": "Du mangler noen mynter ennå, Pinky — samle litt mer gull!"
+  },
+  "abra_cantbuysword_easy_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "abra",
+    "text": "Har jeg nok gullmynter til sverdet?"
+  },
+  "abra_cantbuysword_easy_2_shopkeeper": {
+    "speaker": "shopkeeper",
+    "speaker_name": "Kjøpmannen",
+    "cast": "abra",
+    "text": "Beklager, Pinky, du trenger noen flere gullmynter først!"
+  },
+  "abra_cantbuysword_hard_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "abra",
+    "text": "Har jeg nok gullmynter til sverdet?"
+  },
+  "abra_cantbuysword_hard_2_shopkeeper": {
+    "speaker": "shopkeeper",
+    "speaker_name": "Kjøpmannen",
+    "cast": "abra",
+    "text": "Beklager, Pinky, du trenger noen flere gullmynter først!"
+  },
+  "abra_cantbuysword_medium_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "abra",
+    "text": "Har jeg nok gullmynter til sverdet?"
+  },
+  "abra_cantbuysword_medium_2_shopkeeper": {
+    "speaker": "shopkeeper",
+    "speaker_name": "Kjøpmannen",
+    "cast": "abra",
+    "text": "Beklager, Pinky, du trenger noen flere gullmynter først!"
+  },
+  "abra_cave_sunniva": {
+    "speaker": "sunniva",
+    "speaker_name": "Sunniva",
+    "cast": "abra",
+    "text": "Nå som du har alle kreftene, må du tilbake til Grusomme Gabriels grotte og møte spøkelset hans!"
+  },
+  "abra_curse2_sunniva": {
+    "speaker": "sunniva",
+    "speaker_name": "Sunniva",
+    "cast": "abra",
+    "text": "Skynd deg opp til Miriam av Gral, Pinky — hun vet hvordan forbannelsen kan brytes!"
+  },
+  "abra_curse_10_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "abra",
+    "text": "Det skal jeg gjøre! Hvordan kommer jeg raskt ut til havs?"
+  },
+  "abra_curse_11_miriam": {
+    "speaker": "miriam",
+    "speaker_name": "Miriam av Gral",
+    "cast": "abra",
+    "text": "Gå ned til brygga og bruk seilingsportalen ved Den Sorte Dame. Lykke til, unge sjørøver!"
+  },
+  "abra_curse_1_miriam": {
+    "speaker": "miriam",
+    "speaker_name": "Miriam av Gral",
+    "cast": "abra",
+    "text": "Velkommen tilbake, Pinky. Jeg så det allerede i krystallkulen min — dere har vekket Grusomme Gabriels forbannelse!"
+  },
+  "abra_curse_2_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "abra",
+    "text": "Miriam! Hele mannskapet er livredde! Hvordan kan vi bryte forbannelsen?"
+  },
+  "abra_curse_3_miriam": {
+    "speaker": "miriam",
+    "speaker_name": "Miriam av Gral",
+    "cast": "abra",
+    "text": "Bare tre eldgamle magiske skatter kan bryte Gabriels makt over Kaptein Sabeltann."
+  },
+  "abra_curse_4_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "abra",
+    "text": "Hvor finner vi de tre skattene?"
+  },
+  "abra_curse_5_miriam": {
+    "speaker": "miriam",
+    "speaker_name": "Miriam av Gral",
+    "cast": "abra",
+    "text": "Den første befinner seg på den mørke klippeøya Gral, voktet av Greven av Gral selv."
+  },
+  "abra_curse_6_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "abra",
+    "text": "Greven av Gral?! Da må vi sette seil med Den Sorte Dame med én gang!"
+  },
+  "abra_curse_7_miriam": {
+    "speaker": "miriam",
+    "speaker_name": "Miriam av Gral",
+    "cast": "abra",
+    "text": "Den andre skatten er skjult i den gylne ørkenbyen Fata Morgana, og den tredje dypt inne i Maga Khans jungelrike."
+  },
+  "abra_curse_8_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "abra",
+    "text": "Jeg skal finne alle tre og redde Kaptein Sabeltann, Miriam!"
+  },
+  "abra_curse_9_miriam": {
+    "speaker": "miriam",
+    "speaker_name": "Miriam av Gral",
+    "cast": "abra",
+    "text": "Ta med deg motet ditt, Pinky. Og stikk innom butikken i Abra Havn for bedre våpen og utstyr før du seiler!"
+  },
+  "abra_curse_sunniva": {
+    "speaker": "sunniva",
+    "speaker_name": "Sunniva",
+    "cast": "abra",
+    "text": "Hørte du hva som skjedde i grotten? Alle snakker om Grusomme Gabriels forbannelse!"
+  },
+  "abra_curseonyou_miriam": {
+    "speaker": "miriam",
+    "speaker_name": "Miriam av Gral",
+    "cast": "abra",
+    "text": "Forbannelsen vokser seg sterkere for hver dag, Pinky. Skynd deg av sted mot Gral!"
+  },
+  "abra_fatamorgana_sunniva": {
+    "speaker": "sunniva",
+    "speaker_name": "Sunniva",
+    "cast": "abra",
+    "text": "Neste stopp er den gylne ørkenbyen Fata Morgana!"
+  },
+  "abra_gocave_sunniva": {
+    "speaker": "sunniva",
+    "speaker_name": "Sunniva",
+    "cast": "abra",
+    "text": "Lykke til i det siste oppgjøret mot Grusomme Gabriel, Pinky!"
+  },
+  "abra_gofatamorgana_sunniva": {
+    "speaker": "sunniva",
+    "speaker_name": "Sunniva",
+    "cast": "abra",
+    "text": "Seil mot Fata Morgana og pass deg for vaktene til Sultanen!"
+  },
+  "abra_goshangrila_sunniva": {
+    "speaker": "sunniva",
+    "speaker_name": "Sunniva",
+    "cast": "abra",
+    "text": "Maga Khans øy er full av farlige feller og jungeldyr — vær forsiktig!"
+  },
+  "abra_hey_sunniva": {
+    "speaker": "sunniva",
+    "speaker_name": "Sunniva",
+    "cast": "abra",
+    "text": "Hei, Pinky! Godt å se deg trygt tilbake i Abra Havn!"
+  },
+  "abra_keepplaying_storyteller": {
+    "speaker": "storyteller",
+    "speaker_name": "Fortelleren",
+    "cast": "abra",
+    "text": "Bra jobbet! Du kan fortsatt utforske alle øyene og finne resten av skattene!"
+  },
+  "abra_lamp_sunniva": {
+    "speaker": "sunniva",
+    "speaker_name": "Sunniva",
+    "cast": "abra",
+    "text": "Tips: Kjøp lykten i butikken hvis du skal utforske mørke ganger — trykk L for å tenne den!"
+  },
+  "abra_liftthecurse1_miriam": {
+    "speaker": "miriam",
+    "speaker_name": "Miriam av Gral",
+    "cast": "abra",
+    "text": "Du må samle de magiske kreftene fra Gral, Fata Morgana og Maga Khans øy for å bryte forbannelsen!"
+  },
+  "abra_liftthecurse2_miriam": {
+    "speaker": "miriam",
+    "speaker_name": "Miriam av Gral",
+    "cast": "abra",
+    "text": "Krystallkulen lyser sterkt — du nærmer deg målet, Pinky!"
+  },
+  "abra_nohull1_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "abra",
+    "text": "Kan vi oppgradere skroget nå?"
+  },
+  "abra_nohull1_2_shipman": {
+    "speaker": "shipman",
+    "speaker_name": "Skipsbyggeren",
+    "cast": "abra",
+    "text": "Du trenger litt flere gullmynter for sterkere eikeplanker, Pinky!"
+  },
+  "abra_nohull2_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "abra",
+    "text": "Kan vi oppgradere skroget nå?"
+  },
+  "abra_nohull2_2_shipman": {
+    "speaker": "shipman",
+    "speaker_name": "Skipsbyggeren",
+    "cast": "abra",
+    "text": "Du trenger litt flere gullmynter for sterkere eikeplanker, Pinky!"
+  },
+  "abra_nohull3_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "abra",
+    "text": "Kan vi oppgradere skroget nå?"
+  },
+  "abra_nohull3_2_shipman": {
+    "speaker": "shipman",
+    "speaker_name": "Skipsbyggeren",
+    "cast": "abra",
+    "text": "Du trenger litt flere gullmynter for sterkere eikeplanker, Pinky!"
+  },
+  "abra_nohull4_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "abra",
+    "text": "Kan vi oppgradere skroget nå?"
+  },
+  "abra_nohull4_2_shipman": {
+    "speaker": "shipman",
+    "speaker_name": "Skipsbyggeren",
+    "cast": "abra",
+    "text": "Du trenger litt flere gullmynter for sterkere eikeplanker, Pinky!"
+  },
+  "abra_nosail1_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "abra",
+    "text": "Har vi råd til nye seil?"
+  },
+  "abra_nosail1_2_shipman": {
+    "speaker": "shipman",
+    "speaker_name": "Skipsbyggeren",
+    "cast": "abra",
+    "text": "Skaff litt mer gull først, så syr jeg de raskeste seilene på De Syv Hav!"
+  },
+  "abra_nosail2_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "abra",
+    "text": "Har vi råd til nye seil?"
+  },
+  "abra_nosail2_2_shipman": {
+    "speaker": "shipman",
+    "speaker_name": "Skipsbyggeren",
+    "cast": "abra",
+    "text": "Skaff litt mer gull først, så syr jeg de raskeste seilene på De Syv Hav!"
+  },
+  "abra_nosail3_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "abra",
+    "text": "Har vi råd til nye seil?"
+  },
+  "abra_nosail3_2_shipman": {
+    "speaker": "shipman",
+    "speaker_name": "Skipsbyggeren",
+    "cast": "abra",
+    "text": "Skaff litt mer gull først, så syr jeg de raskeste seilene på De Syv Hav!"
+  },
+  "abra_nosail4_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "abra",
+    "text": "Har vi råd til nye seil?"
+  },
+  "abra_nosail4_2_shipman": {
+    "speaker": "shipman",
+    "speaker_name": "Skipsbyggeren",
+    "cast": "abra",
+    "text": "Skaff litt mer gull først, så syr jeg de raskeste seilene på De Syv Hav!"
+  },
+  "abra_nothingforsale_shopkeeper": {
+    "speaker": "shopkeeper",
+    "speaker_name": "Kjøpmannen",
+    "cast": "abra",
+    "text": "Du har allerede alt det beste utstyret i hele Abra Havn, Pinky!"
+  },
+  "abra_opponent1_1_opponent1": {
+    "speaker": "opponent1",
+    "speaker_name": "Sjørøver",
+    "cast": "abra",
+    "text": "Hei, småen! Tror du virkelig du kan måle deg med en ekte sjørøver i sverdkamp?"
+  },
+  "abra_opponent1_2_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "abra",
+    "text": "Det skal vi snart finne ut av! Opp med sverdet!"
+  },
+  "abra_opponent1_3_opponent1": {
+    "speaker": "opponent1",
+    "speaker_name": "Sjørøver",
+    "cast": "abra",
+    "text": "Haha, da setter vi i gang!"
+  },
+  "abra_opponent1defeated_1_opponent1": {
+    "speaker": "opponent1",
+    "speaker_name": "Sjørøver",
+    "cast": "abra",
+    "text": "Au da! Du er jammen raskere med sverdet enn du ser ut til, Pinky!"
+  },
+  "abra_opponent2_1_opponent2": {
+    "speaker": "opponent2",
+    "speaker_name": "Sjørøver",
+    "cast": "abra",
+    "text": "Ingen slipper forbi meg uten en skikkelig fekteduell, Pinky!"
+  },
+  "abra_opponent2_2_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "abra",
+    "text": "Jeg er alltid klar for en kamp!"
+  },
+  "abra_opponent2_3_opponent2": {
+    "speaker": "opponent2",
+    "speaker_name": "Sjørøver",
+    "cast": "abra",
+    "text": "Forsvar deg, guttehvalp!"
+  },
+  "abra_opponent2defeated_1_opponent2": {
+    "speaker": "opponent2",
+    "speaker_name": "Sjørøver",
+    "cast": "abra",
+    "text": "Jeg overgir meg! Du slåss som en ekte sjørøver!"
+  },
+  "abra_opponent3_1_opponent3": {
+    "speaker": "opponent3",
+    "speaker_name": "Sjørøver",
+    "cast": "abra",
+    "text": "Jeg er den tøffeste fekteren på hele brygga i Abra Havn!"
+  },
+  "abra_opponent3_2_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "abra",
+    "text": "Vi får se på det! Hiv og hoi!"
+  },
+  "abra_opponent3_3_opponent3": {
+    "speaker": "opponent3",
+    "speaker_name": "Sjørøver",
+    "cast": "abra",
+    "text": "Nå skal du få smake stålet mitt!"
+  },
+  "abra_opponent3defeated_1_opponent3": {
+    "speaker": "opponent3",
+    "speaker_name": "Sjørøver",
+    "cast": "abra",
+    "text": "Utrolig! Du slo selv mesteren av Abra Havn!"
+  },
+  "abra_portal_no_1_miriam": {
+    "speaker": "miriam",
+    "speaker_name": "Miriam av Gral",
+    "cast": "abra",
+    "text": "Du må snakke med meg først før du kan bruke portalen, Pinky."
+  },
+  "abra_portal_yes_1_miriam": {
+    "speaker": "miriam",
+    "speaker_name": "Miriam av Gral",
+    "cast": "abra",
+    "text": "Portalen er klar! Stig inn når du vil seile ut på De Syv Hav!"
+  },
+  "abra_shangrila_shopkeeper": {
+    "speaker": "shopkeeper",
+    "speaker_name": "Kjøpmannen",
+    "cast": "abra",
+    "text": "Velkommen til sjørøverbutikken i Abra Havn! Klar for ferden til Maga Khans øy?"
+  },
+  "abra_shangrila_sunniva": {
+    "speaker": "sunniva",
+    "speaker_name": "Sunniva",
+    "cast": "abra",
+    "text": "Fantastisk! Nå er veien åpen til Maga Khans øy!"
+  },
+  "abra_slingshot_sunniva": {
+    "speaker": "sunniva",
+    "speaker_name": "Sunniva",
+    "cast": "abra",
+    "text": "Med spretterten kan du treffe brytere og fiender på lang avstand!"
+  },
+  "abra_tip3_1_sunniva": {
+    "speaker": "sunniva",
+    "speaker_name": "Sunniva",
+    "cast": "abra",
+    "text": "Knus tønner og kister i Abra Havn hvis du trenger flere gullmynter!"
+  },
+  "abra_treasures_1_sunniva": {
+    "speaker": "sunniva",
+    "speaker_name": "Sunniva",
+    "cast": "abra",
+    "text": "Det finnes skjulte skatter på havbunnen ute på De Syv Hav også!"
+  },
+  "abra_unlockcave_1_sunniva": {
+    "speaker": "sunniva",
+    "speaker_name": "Sunniva",
+    "cast": "abra",
+    "text": "Pinky! Miriam sier at veien til det siste oppgjøret i Grusomme Gabriels grotte nå er åpen!"
+  },
+  "abra_unlockcave_2_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "abra",
+    "text": "Endelig! Nå skal jeg gjøre slutt på forbannelsen en gang for alle!"
+  },
+  "abra_unlockcave_3_sunniva": {
+    "speaker": "sunniva",
+    "speaker_name": "Sunniva",
+    "cast": "abra",
+    "text": "Vær modig, Pinky — hele Abra Havn heier på deg!"
+  },
+  "abra_unlockfatamorgana_1_prostitute2": {
+    "speaker": "prostitute2",
+    "speaker_name": "Landsbykvinne",
+    "cast": "abra",
+    "text": "Har du hørt det, Pinky? Sjøveien til den rike ørkenbyen Fata Morgana er åpen!"
+  },
+  "abra_unlockfatamorgana_2_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "abra",
+    "text": "Flott! Da setter vi kursen mot Fata Morgana!"
+  },
+  "abra_unlockfatamorgana_3_prostitute2": {
+    "speaker": "prostitute2",
+    "speaker_name": "Landsbykvinne",
+    "cast": "abra",
+    "text": "Hils Sultanen hvis du kommer forbi de sultne palassvaktene!"
+  },
+  "abra_unlockshangrila_1_shopkeeper": {
+    "speaker": "shopkeeper",
+    "speaker_name": "Kjøpmannen",
+    "cast": "abra",
+    "text": "Gode nyheter, Pinky! Jeg har skaffet sjøkartet til Maga Khans mystiske øy!"
+  },
+  "abra_unlockshangrila_2_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "abra",
+    "text": "Takk! Nå drar vi til Maga Khans rike!"
+  },
+  "abra_unlockshangrila_3_shopkeeper": {
+    "speaker": "shopkeeper",
+    "speaker_name": "Kjøpmannen",
+    "cast": "abra",
+    "text": "Hold sverdet skarpt der ute, gutt!"
+  },
+  "abra_useportal1_miriam": {
+    "speaker": "miriam",
+    "speaker_name": "Miriam av Gral",
+    "cast": "abra",
+    "text": "Bruk portalen ved brygga for å seile ut med Den Sorte Dame!"
+  },
+  "abra_useportal2_miriam": {
+    "speaker": "miriam",
+    "speaker_name": "Miriam av Gral",
+    "cast": "abra",
+    "text": "Når som helst du vil tilbake til Abra Havn, kan du seile rett hjem til havnen."
+  },
+  "abra_useportal3_storyteller": {
+    "speaker": "storyteller",
+    "speaker_name": "Fortelleren",
+    "cast": "abra",
+    "text": "Gå inn i den magiske lysringen ved brygga eller Den Sorte Dame for å seile ut på verdenskartet!"
+  },
+  "abra_yeshull1_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "abra",
+    "text": "Kan du forsterke skroget på Den Sorte Dame?"
+  },
+  "abra_yeshull1_2_shipman": {
+    "speaker": "shipman",
+    "speaker_name": "Skipsbyggeren",
+    "cast": "abra",
+    "text": "Javisst! Nå tåler skuta dobbelt så mange kanonkuler!"
+  },
+  "abra_yeshull2_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "abra",
+    "text": "Kan du forsterke skroget på Den Sorte Dame?"
+  },
+  "abra_yeshull2_2_shipman": {
+    "speaker": "shipman",
+    "speaker_name": "Skipsbyggeren",
+    "cast": "abra",
+    "text": "Javisst! Nå tåler skuta dobbelt så mange kanonkuler!"
+  },
+  "abra_yeshull3_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "abra",
+    "text": "Kan du forsterke skroget på Den Sorte Dame?"
+  },
+  "abra_yeshull3_2_shipman": {
+    "speaker": "shipman",
+    "speaker_name": "Skipsbyggeren",
+    "cast": "abra",
+    "text": "Javisst! Nå tåler skuta dobbelt så mange kanonkuler!"
+  },
+  "abra_yeshull3_3_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "abra",
+    "text": "Kan du forsterke skroget på Den Sorte Dame?"
+  },
+  "abra_yessail1_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "abra",
+    "text": "Kan vi få større og raskere seil på Den Sorte Dame?"
+  },
+  "abra_yessail1_2_shipman": {
+    "speaker": "shipman",
+    "speaker_name": "Skipsbyggeren",
+    "cast": "abra",
+    "text": "Klart det! Nå fyker Den Sorte Dame over bølgene!"
+  },
+  "abra_yessail2_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "abra",
+    "text": "Kan vi få større og raskere seil på Den Sorte Dame?"
+  },
+  "abra_yessail2_2_shipman": {
+    "speaker": "shipman",
+    "speaker_name": "Skipsbyggeren",
+    "cast": "abra",
+    "text": "Klart det! Nå fyker Den Sorte Dame over bølgene!"
+  },
+  "abra_yessail3_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "abra",
+    "text": "Kan vi få større og raskere seil på Den Sorte Dame?"
+  },
+  "abra_yessail3_2_shipman": {
+    "speaker": "shipman",
+    "speaker_name": "Skipsbyggeren",
+    "cast": "abra",
+    "text": "Klart det! Nå fyker Den Sorte Dame over bølgene!"
+  },
+  "abra_yessail3_3_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "abra",
+    "text": "Kan vi få større og raskere seil på Den Sorte Dame?"
+  },
+  "cave_boss_change1_1_skeleton_boss": {
+    "speaker": "boss",
+    "speaker_name": "Grusomme Gabriel / Greven",
+    "cast": "cave_end_bosslevel",
+    "text": "Nok lek! Nå slipper jeg løs all min spøkelseskraft!"
+  },
+  "cave_boss_change1_2_skeleton_boss": {
+    "speaker": "boss",
+    "speaker_name": "Grusomme Gabriel / Greven",
+    "cast": "cave_end_bosslevel",
+    "text": "Kjenn kulden fra de dødes rike!"
+  },
+  "cave_boss_change1_3_pinky": {
+    "speaker": "boss",
+    "speaker_name": "Grusomme Gabriel / Greven",
+    "cast": "cave_end_bosslevel",
+    "text": "Det skremmer meg ikke! Her kommer jeg!"
+  },
+  "cave_boss_hint1_1_pinky": {
+    "speaker": "boss",
+    "speaker_name": "Grusomme Gabriel / Greven",
+    "cast": "cave_end_bosslevel",
+    "text": "Jeg må unngå ildkulene og slå til når han lander!"
+  },
+  "cave_boss_hint2_1_pinky": {
+    "speaker": "boss",
+    "speaker_name": "Grusomme Gabriel / Greven",
+    "cast": "cave_end_bosslevel",
+    "text": "Der åpnet forsvaret hans seg — angrip!"
+  },
+  "cave_boss_hint3_1_pinky": {
+    "speaker": "boss",
+    "speaker_name": "Grusomme Gabriel / Greven",
+    "cast": "cave_end_bosslevel",
+    "text": "Hold deg i bevegelse!"
+  },
+  "cave_boss_hint4_1_pinky": {
+    "speaker": "boss",
+    "speaker_name": "Grusomme Gabriel / Greven",
+    "cast": "cave_end_bosslevel",
+    "text": "Bare noen få hugg igjen nå!"
+  },
+  "cave_boss_hit_1_skeleton_boss": {
+    "speaker": "boss",
+    "speaker_name": "Grusomme Gabriel / Greven",
+    "cast": "cave_end_bosslevel",
+    "text": "Arrgh! Det sverdet brenner!"
+  },
+  "cave_boss_idle1_1_skeleton_boss": {
+    "speaker": "boss",
+    "speaker_name": "Grusomme Gabriel / Greven",
+    "cast": "cave_end_bosslevel",
+    "text": "Kom frem da, lille sjørøver! Hahahaha!"
+  },
+  "cave_boss_idle2_1_skeleton_boss": {
+    "speaker": "boss",
+    "speaker_name": "Grusomme Gabriel / Greven",
+    "cast": "cave_end_bosslevel",
+    "text": "Kom frem da, lille sjørøver! Hahahaha!"
+  },
+  "cave_boss_intro_1_skeleton_boss": {
+    "speaker": "boss",
+    "speaker_name": "Grusomme Gabriel / Greven",
+    "cast": "cave_end_bosslevel",
+    "text": "Lille sjørøver! Tror du virkelig at du kan beseire selveste Grusomme Gabriels spøkelse?!"
+  },
+  "cave_boss_intro_2_pinky": {
+    "speaker": "boss",
+    "speaker_name": "Grusomme Gabriel / Greven",
+    "cast": "cave_end_bosslevel",
+    "text": "Jeg er Pinky, verdens yngste sjørøver — og i dag slutter forbannelsen din!"
+  },
+  "cave_boss_intro_3_skeleton_boss": {
+    "speaker": "boss",
+    "speaker_name": "Grusomme Gabriel / Greven",
+    "cast": "cave_end_bosslevel",
+    "text": "Da skal du få smake min vrede! Hahahaha!"
+  },
+  "cave_boss_laugh1_1_skeleton_boss": {
+    "speaker": "boss",
+    "speaker_name": "Grusomme Gabriel / Greven",
+    "cast": "cave_end_bosslevel",
+    "text": "Hahahaha! Du kan ikke røre et spøkelse!"
+  },
+  "cave_boss_laugh2_1_skeleton_boss": {
+    "speaker": "boss",
+    "speaker_name": "Grusomme Gabriel / Greven",
+    "cast": "cave_end_bosslevel",
+    "text": "Mwahaha! Kaptein Sabeltann vil aldri bli fri!"
+  },
+  "cave_boss_wakeup1_1_skeleton_boss": {
+    "speaker": "boss",
+    "speaker_name": "Grusomme Gabriel / Greven",
+    "cast": "cave_end_bosslevel",
+    "text": "Du slipper ikke unna Grusomme Gabriels vrede!"
+  },
+  "cave_boss_wakeup2_1_skeleton_boss": {
+    "speaker": "boss",
+    "speaker_name": "Grusomme Gabriel / Greven",
+    "cast": "cave_end_bosslevel",
+    "text": "Du slipper ikke unna Grusomme Gabriels vrede!"
+  },
+  "cave_boss_wakeup3_1_skeleton_boss": {
+    "speaker": "boss",
+    "speaker_name": "Grusomme Gabriel / Greven",
+    "cast": "cave_end_bosslevel",
+    "text": "Du slipper ikke unna Grusomme Gabriels vrede!"
+  },
+  "cave_boss_win_1_skeleton_boss": {
+    "speaker": "boss",
+    "speaker_name": "Grusomme Gabriel / Greven",
+    "cast": "cave_end_bosslevel",
+    "text": "Neeeeei! Kraften min... forsvinner!"
+  },
+  "cave_boss_win_2_pinky": {
+    "speaker": "boss",
+    "speaker_name": "Grusomme Gabriel / Greven",
+    "cast": "cave_end_bosslevel",
+    "text": "Forbannelsen er brutt, Grusomme Gabriel!"
+  },
+  "cave_boss_win_3_skeleton_boss": {
+    "speaker": "boss",
+    "speaker_name": "Grusomme Gabriel / Greven",
+    "cast": "cave_end_bosslevel",
+    "text": "Hvordan kunne en liten gutt... overvinne meg?!"
+  },
+  "cave_boss_win_4_pinky": {
+    "speaker": "boss",
+    "speaker_name": "Grusomme Gabriel / Greven",
+    "cast": "cave_end_bosslevel",
+    "text": "Fordi ekte sjørøvere aldri gir opp!"
+  },
+  "cave_boss_win_5_skeleton_boss": {
+    "speaker": "boss",
+    "speaker_name": "Grusomme Gabriel / Greven",
+    "cast": "cave_end_bosslevel",
+    "text": "Forbannelsen over Kaptein Sabeltann... er hevet..."
+  },
+  "cave_boss_win_6_pinky": {
+    "speaker": "boss",
+    "speaker_name": "Grusomme Gabriel / Greven",
+    "cast": "cave_end_bosslevel",
+    "text": "Vi klarte det! Skatten og Kaptein Sabeltann er fri!"
+  },
+  "cave_boss_win_7_skeleton_boss": {
+    "speaker": "boss",
+    "speaker_name": "Grusomme Gabriel / Greven",
+    "cast": "cave_end_bosslevel",
+    "text": "Farvel... for alltid..."
+  },
+  "cave_boss_win_8_pinky": {
+    "speaker": "boss",
+    "speaker_name": "Grusomme Gabriel / Greven",
+    "cast": "cave_end_bosslevel",
+    "text": "Hiv og hoi! Nå feirer vi hjemme i Abra Havn!"
+  },
+  "cave_boss_win_9_skeleton_boss": {
+    "speaker": "boss",
+    "speaker_name": "Grusomme Gabriel / Greven",
+    "cast": "cave_end_bosslevel",
+    "text": "Aaaargh..."
+  },
+  "cave_end_dontworry_1_langemann": {
+    "speaker": "langemann",
+    "speaker_name": "Langemann",
+    "cast": "cave_end",
+    "text": "Ikke bekymre deg, Pinky — du klarer dette!"
+  },
+  "cave_end_gofirst_1_langemann": {
+    "speaker": "langemann",
+    "speaker_name": "Langemann",
+    "cast": "cave_end",
+    "text": "Det lyser uhyggelig grønt fra det innerste skattkammeret, kaptein..."
+  },
+  "cave_end_gofirst_2_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "cave_end",
+    "text": "Pinky, du har vist deg som den modigste av oss alle. Gå inn og møt Grusomme Gabriels spøkelse!"
+  },
+  "cave_end_gofirst_3_langemann": {
+    "speaker": "langemann",
+    "speaker_name": "Langemann",
+    "cast": "cave_end",
+    "text": "Vi dekker ryggen din, Pinky!"
+  },
+  "cave_end_gofirst_4_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "cave_end",
+    "text": "Jeg er ikke redd! Nå skal jeg knuse forbannelsen!"
+  },
+  "cave_end_intro_1_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "cave_end",
+    "text": "Vi er tilbake i Grusomme Gabriels grotte! Nå skal vi bryte forbannelsen en gang for alle!"
+  },
+  "cave_end_skeleton_1_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "cave_end",
+    "text": "Skjelettvakter! Hugg dem ned, Pinky!"
+  },
+  "cave_start_chamber_1_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "cave",
+    "text": "Se der! Midt i rommet står kisten til selveste Grusomme Gabriel!"
+  },
+  "cave_start_chest_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "cave",
+    "text": "Vi fant den! Se på den store, skumle kisten der borte!"
+  },
+  "cave_start_chest_2_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "cave",
+    "text": "Endelig! All verdens gull og edelstener tilhører Kongen på Havet!"
+  },
+  "cave_start_chest_3_langemann": {
+    "speaker": "langemann",
+    "speaker_name": "Langemann",
+    "cast": "cave",
+    "text": "Vær forsiktig, kaptein... Det blåser en iskald gufs fra den kisten..."
+  },
+  "cave_start_chest_4_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "cave",
+    "text": "Pelle! Pysa! Kom hit og brekk opp lokket med én gang!"
+  },
+  "cave_start_controls_1_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "cave",
+    "text": "Hiv og hoi, alle mann! Vi er endelig fremme ved Grusomme Gabriels grotte. Følg etter meg, Pinky, og bli ikke hengende etter!"
+  },
+  "cave_start_controlsintro_storyteller": {
+    "speaker": "storyteller",
+    "speaker_name": "Fortelleren",
+    "cast": "cave",
+    "text": "Bruk W, A, S og D eller piltastene for å styre Pinky gjennom grotten. Hold inne Shift for å løpe raskere!"
+  },
+  "cave_start_cratesintro_storyteller": {
+    "speaker": "storyteller",
+    "speaker_name": "Fortelleren",
+    "cast": "cave",
+    "text": "Gå inntil trekassen og dytt den bort til kanten slik at du kan klatre opp!"
+  },
+  "cave_start_donecrate_1_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "cave",
+    "text": "Flott jobbet, Pinky! Kom dere opp, gutter — vi nærmer oss den store hallen!"
+  },
+  "cave_start_findthechest_1_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "cave",
+    "text": "Der inne ligger skattkammeret! Finn kisten til Grusomme Gabriel!"
+  },
+  "cave_start_getbackin_benjamin": {
+    "speaker": "benjamin",
+    "speaker_name": "Benjamin",
+    "cast": "cave",
+    "text": "Skynd deg inn i grotten, Pinky! Kaptein Sabeltann venter ikke på noen!"
+  },
+  "cave_start_intro1_1_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "cave",
+    "text": "Jeg sverger på min hatt — kartet lyver ikke! Grusomme Gabriels skatt ligger dypt inne i disse grottene!"
+  },
+  "cave_start_intro1_2_langemann": {
+    "speaker": "langemann",
+    "speaker_name": "Langemann",
+    "cast": "cave",
+    "text": "Men kaptein... sier ikke sagnet at det hviler en forferdelig forbannelse over skatten hans?"
+  },
+  "cave_start_intro1_3_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "cave",
+    "text": "Sludder og pølsevev, Langemann! Ingen død sjørøver skal stoppe Kaptein Sabeltann fra å hente gullet sitt! Fremad, gutter!"
+  },
+  "cave_start_intro4_1_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "cave",
+    "text": "Godt hoppet, Pinky! Men se der borte — en svær klippekant sperrer veien videre!"
+  },
+  "cave_start_intro4_2_langemann": {
+    "speaker": "langemann",
+    "speaker_name": "Langemann",
+    "cast": "cave",
+    "text": "Vi kommer oss opp hvis vi skyver den gamle trekassen bort til fjellveggen, kaptein."
+  },
+  "cave_start_intro4_3_pysa": {
+    "speaker": "pysa",
+    "speaker_name": "Pysa",
+    "cast": "cave",
+    "text": "Å nei, den ser altfor tung ut for ryggen min, Pelle!"
+  },
+  "cave_start_intro4_4_pelle": {
+    "speaker": "pelle",
+    "speaker_name": "Pelle",
+    "cast": "cave",
+    "text": "La Pinky ta seg av kassen! Han er jo verdens yngste og sprekeste sjørøver!"
+  },
+  "cave_start_intro4_5_langemann": {
+    "speaker": "langemann",
+    "speaker_name": "Langemann",
+    "cast": "cave",
+    "text": "Dytt kassen på plass ved veggen, Pinky, så følger vi etter!"
+  },
+  "cave_start_jumpsintro_storyteller": {
+    "speaker": "storyteller",
+    "speaker_name": "Fortelleren",
+    "cast": "cave",
+    "text": "Trykk mellomromstasten for å hoppe over hindringer og kløfter!"
+  },
+  "cave_start_lookingforfood_skalken": {
+    "speaker": "skalken",
+    "speaker_name": "Skalken",
+    "cast": "cave",
+    "text": "Huff, finnes det virkelig ikke engang en tørr kjeks i denne kalde grotten? Gå videre du, Pinky!"
+  },
+  "cave_start_openchest_1_pelle": {
+    "speaker": "pelle",
+    "speaker_name": "Pelle",
+    "cast": "cave",
+    "text": "Javisst, kaptein! Kom igjen, Pysa, vi tar den!"
+  },
+  "cave_start_openchest_2_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "cave",
+    "text": "Få opp lokket, sier jeg! Jeg vil se gullet skinne!"
+  },
+  "cave_start_openchest_3_pelle": {
+    "speaker": "pelle",
+    "speaker_name": "Pelle",
+    "cast": "cave",
+    "text": "Jeg teller til tre, Pysa! En... to..."
+  },
+  "cave_start_openchest_4_pysa": {
+    "speaker": "pysa",
+    "speaker_name": "Pysa",
+    "cast": "cave",
+    "text": "Vent litt da, Pelle, jeg tror noe beveger seg nedi der!"
+  },
+  "cave_start_openchest_5_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "cave",
+    "text": "Åpne kisten nå, ellers får dere skrubbe dekket resten av året!"
+  },
+  "cave_start_openchest_6_pysa": {
+    "speaker": "pysa",
+    "speaker_name": "Pysa",
+    "cast": "cave",
+    "text": "Uffameg... greit da, vi løfter på tre!"
+  },
+  "cave_start_openchest_7_pelle": {
+    "speaker": "pelle",
+    "speaker_name": "Pelle",
+    "cast": "cave",
+    "text": "TRE! Nå åpner vi kisten!"
+  },
+  "cave_start_ready_1_pelle": {
+    "speaker": "pelle",
+    "speaker_name": "Pelle",
+    "cast": "cave",
+    "text": "Klar... ferdig... fly av sted, Pinky!"
+  },
+  "cave_start_release_1_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "cave",
+    "text": "Hva i alle dager?! Grønn røyk?! Kom dere unna!"
+  },
+  "cave_start_release_2_pysa": {
+    "speaker": "pysa",
+    "speaker_name": "Pysa",
+    "cast": "cave",
+    "text": "Hjelp! Det er Grusomme Gabriels spøkelse! Løp for livet!"
+  },
+  "cave_start_release_3_pelle": {
+    "speaker": "pelle",
+    "speaker_name": "Pelle",
+    "cast": "cave",
+    "text": "Vent på meg, Pysa! Forbannelsen er sluppet løs!"
+  },
+  "cave_start_releaseending_1_boss": {
+    "speaker": "boss",
+    "speaker_name": "Grusomme Gabriel / Greven",
+    "cast": "cave",
+    "text": "Hahahaha! Dere våget å forstyrre min hvile! Grusomme Gabriels forbannelse skal forfølge Kaptein Sabeltann over alle syv hav! Tilbake til Abra Havn — før mørket sluker dere alle!"
+  },
+  "cave_start_sword1_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "cave",
+    "text": "Kult! Med dette tresverdet kan jeg hugge meg rett gjennom den sprukne steinveggen!"
+  },
+  "cave_start_sword2_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "cave",
+    "text": "Hugg til! Nå ryker steinveggen!"
+  },
+  "cave_start_swordintro_storyteller": {
+    "speaker": "storyteller",
+    "speaker_name": "Fortelleren",
+    "cast": "cave",
+    "text": "Trykk venstre museknapp eller F for å svinge sverdet og knuse den sprukne steinveggen!"
+  },
+  "cave_start_throw_pelle": {
+    "speaker": "pelle",
+    "speaker_name": "Pelle",
+    "cast": "cave",
+    "text": "Kom hit da, Pinky, så slenger jeg deg over!"
+  },
+  "cave_start_throws_1_pelle": {
+    "speaker": "pelle",
+    "speaker_name": "Pelle",
+    "cast": "cave",
+    "text": "Bare still deg foran meg, Pinky, så kaster jeg deg rett over lavaen!"
+  },
+  "cave_start_watchout1_1_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "cave",
+    "text": "Se deg for ved kanten, Pinky! Ta fart og hopp over kløften!"
+  },
+  "cave_start_watchout2_1_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "cave",
+    "text": "Få fart på den kassen, Pinky! Skatten venter ikke!"
+  },
+  "cave_start_wow_1_langemann": {
+    "speaker": "langemann",
+    "speaker_name": "Langemann",
+    "cast": "cave",
+    "text": "Du store allverden! Se på den glødende lavaelven foran oss, kaptein!"
+  },
+  "cave_start_wow_2_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "cave",
+    "text": "Hrmpf! Det må finnes en bryter eller en vei over. Pelle, hjelp Pinky over til den andre siden!"
+  },
+  "fatamorgana_boss_intro": {
+    "speaker": "boss",
+    "speaker_name": "Grusomme Gabriel / Greven",
+    "cast": "fatamorgana_bosslevel",
+    "text": "Ingen dødelig skal ta skatten fra Fata Morganas haller!"
+  },
+  "fatamorgana_boss_itscomming1_1_pinky": {
+    "speaker": "boss",
+    "speaker_name": "Grusomme Gabriel / Greven",
+    "cast": "fatamorgana_bosslevel",
+    "text": "Pass opp, nå angriper den!"
+  },
+  "fatamorgana_boss_itscomming2_1_pinky": {
+    "speaker": "boss",
+    "speaker_name": "Grusomme Gabriel / Greven",
+    "cast": "fatamorgana_bosslevel",
+    "text": "Her kommer den igjen — hopp unna!"
+  },
+  "fatamorgana_boss_whatwasthat_1_pinky": {
+    "speaker": "boss",
+    "speaker_name": "Grusomme Gabriel / Greven",
+    "cast": "fatamorgana_bosslevel",
+    "text": "Hva var det?! Gulvet rister!"
+  },
+  "fatamorgana_boss_won_1_pinky": {
+    "speaker": "boss",
+    "speaker_name": "Grusomme Gabriel / Greven",
+    "cast": "fatamorgana_bosslevel",
+    "text": "Jaaa! Vi klarte det! Nå er Fata Morgana reddet, og kursen går mot Maga Khans øy!"
+  },
+  "fatamorgana_boss_yikes1_1_pinky": {
+    "speaker": "boss",
+    "speaker_name": "Grusomme Gabriel / Greven",
+    "cast": "fatamorgana_bosslevel",
+    "text": "Oi! Det var nære på!"
+  },
+  "fatamorgana_boss_yikes2_1_pinky": {
+    "speaker": "boss",
+    "speaker_name": "Grusomme Gabriel / Greven",
+    "cast": "fatamorgana_bosslevel",
+    "text": "Hjelpes, den er svær!"
+  },
+  "fatamorgana_city_bakeyourself_skalken": {
+    "speaker": "skalken",
+    "speaker_name": "Skalken",
+    "cast": "fatamorgana_city",
+    "text": "Bake fem kaker i denne varmen?! Nei, det får du skaffe i basaren selv, Pinky!"
+  },
+  "fatamorgana_city_cakeend_10_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "fatamorgana_city",
+    "text": "Flott jobbet, Pinky! Veien til palasset er vår!"
+  },
+  "fatamorgana_city_cakeend_1_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "fatamorgana_city",
+    "text": "Flott jobbet, Pinky! Veien til palasset er vår!"
+  },
+  "fatamorgana_city_cakeend_2_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "fatamorgana_city",
+    "text": "Alle kakene er levert — nå går vi inn!"
+  },
+  "fatamorgana_city_cakeend_3_guard3": {
+    "speaker": "guard3",
+    "speaker_name": "Palassvakt",
+    "cast": "fatamorgana_city",
+    "text": "Mmm, beste kakene vi noen gang har smakt! Stig på!"
+  },
+  "fatamorgana_city_cakeend_4_guard4": {
+    "speaker": "guard4",
+    "speaker_name": "Palassvakt",
+    "cast": "fatamorgana_city",
+    "text": "Mmm, beste kakene vi noen gang har smakt! Stig på!"
+  },
+  "fatamorgana_city_cakeend_5_guard2": {
+    "speaker": "guard2",
+    "speaker_name": "Palassvakt",
+    "cast": "fatamorgana_city",
+    "text": "Mmm, beste kakene vi noen gang har smakt! Stig på!"
+  },
+  "fatamorgana_city_cakeend_6_guard1": {
+    "speaker": "guard1",
+    "speaker_name": "Palassvakt",
+    "cast": "fatamorgana_city",
+    "text": "Mmm, beste kakene vi noen gang har smakt! Stig på!"
+  },
+  "fatamorgana_city_cakeend_7_guard3": {
+    "speaker": "guard3",
+    "speaker_name": "Palassvakt",
+    "cast": "fatamorgana_city",
+    "text": "Mmm, beste kakene vi noen gang har smakt! Stig på!"
+  },
+  "fatamorgana_city_cakeend_8_guard1": {
+    "speaker": "guard1",
+    "speaker_name": "Palassvakt",
+    "cast": "fatamorgana_city",
+    "text": "Mmm, beste kakene vi noen gang har smakt! Stig på!"
+  },
+  "fatamorgana_city_cakeend_9_guard4": {
+    "speaker": "guard4",
+    "speaker_name": "Palassvakt",
+    "cast": "fatamorgana_city",
+    "text": "Mmm, beste kakene vi noen gang har smakt! Stig på!"
+  },
+  "fatamorgana_city_cakesforsale_shopkeeper": {
+    "speaker": "shopkeeper",
+    "speaker_name": "Kjøpmannen",
+    "cast": "fatamorgana_city",
+    "text": "Ferske kaker til salgs! Kun noen få gullmynter!"
+  },
+  "fatamorgana_city_enoughcopper_1_shopkeeper": {
+    "speaker": "shopkeeper",
+    "speaker_name": "Kjøpmannen",
+    "cast": "fatamorgana_city",
+    "text": "Takk for handelen! Her er en nybakt kake!"
+  },
+  "fatamorgana_city_firstcake1_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "fatamorgana_city",
+    "text": "Jippi! Jeg fant den første kaken!"
+  },
+  "fatamorgana_city_firstcake2_1_pelle": {
+    "speaker": "pelle",
+    "speaker_name": "Pelle",
+    "cast": "fatamorgana_city",
+    "text": "Mmm, den så god ut, Pinky! Ikke la meg spise den!"
+  },
+  "fatamorgana_city_gate_10_guard2": {
+    "speaker": "guard2",
+    "speaker_name": "Palassvakt",
+    "cast": "fatamorgana_city",
+    "text": "Mmmm, jeg kjenner lukten av honningkake allerede!"
+  },
+  "fatamorgana_city_gate_11_guard4": {
+    "speaker": "guard4",
+    "speaker_name": "Palassvakt",
+    "cast": "fatamorgana_city",
+    "text": "Skynd deg, vi er skrubbsultne!"
+  },
+  "fatamorgana_city_gate_12_guard1": {
+    "speaker": "guard1",
+    "speaker_name": "Palassvakt",
+    "cast": "fatamorgana_city",
+    "text": "Husk å lete både i basaren og nede i brønnen!"
+  },
+  "fatamorgana_city_gate_13_guard3": {
+    "speaker": "guard3",
+    "speaker_name": "Palassvakt",
+    "cast": "fatamorgana_city",
+    "text": "Ingen kaker, ingen adgang!"
+  },
+  "fatamorgana_city_gate_14_guard2": {
+    "speaker": "guard2",
+    "speaker_name": "Palassvakt",
+    "cast": "fatamorgana_city",
+    "text": "Kom tilbake når du har alle kakene!"
+  },
+  "fatamorgana_city_gate_1_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "fatamorgana_city",
+    "text": "Åpne porten til Sultanens palass i Kaptein Sabeltanns navn!"
+  },
+  "fatamorgana_city_gate_2_guard3": {
+    "speaker": "guard3",
+    "speaker_name": "Palassvakt",
+    "cast": "fatamorgana_city",
+    "text": "Stopp! Ingen slipper inn i palasset uten tillatelse!"
+  },
+  "fatamorgana_city_gate_3_guard1": {
+    "speaker": "guard1",
+    "speaker_name": "Palassvakt",
+    "cast": "fatamorgana_city",
+    "text": "Med mindre... dere har med noen deilige kaker til oss vakter?"
+  },
+  "fatamorgana_city_gate_4_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "fatamorgana_city",
+    "text": "Kaker?! Hva slags tøys er dette?!"
+  },
+  "fatamorgana_city_gate_5_langemann": {
+    "speaker": "langemann",
+    "speaker_name": "Langemann",
+    "cast": "fatamorgana_city",
+    "text": "Det er nok enklere å skaffe dem kaker enn å slåss mot hele vaktstyrken, kaptein."
+  },
+  "fatamorgana_city_gate_6_guard2": {
+    "speaker": "guard2",
+    "speaker_name": "Palassvakt",
+    "cast": "fatamorgana_city",
+    "text": "Ja! Vi vil ha fem skikkelige Fata Morgana-kaker!"
+  },
+  "fatamorgana_city_gate_7_guard4": {
+    "speaker": "guard4",
+    "speaker_name": "Palassvakt",
+    "cast": "fatamorgana_city",
+    "text": "Fem store, søte kaker — så åpner vi porten!"
+  },
+  "fatamorgana_city_gate_8_guard1": {
+    "speaker": "guard1",
+    "speaker_name": "Palassvakt",
+    "cast": "fatamorgana_city",
+    "text": "Ikke én kake mindre!"
+  },
+  "fatamorgana_city_gate_9_guard3": {
+    "speaker": "guard3",
+    "speaker_name": "Palassvakt",
+    "cast": "fatamorgana_city",
+    "text": "Lykke til i basaren, småen!"
+  },
+  "fatamorgana_city_gotalltargets_1_carpet_salesman": {
+    "speaker": "carpet_salesman",
+    "speaker_name": "Teppehandleren",
+    "cast": "fatamorgana_city",
+    "text": "Utrolig sikte! Nå kan du bruke det flygende teppet mitt!"
+  },
+  "fatamorgana_city_gotfinalcake_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "fatamorgana_city",
+    "text": "Vær så god! Her er den femte og siste kaken!"
+  },
+  "fatamorgana_city_gotfinalcake_2_guard3": {
+    "speaker": "guard3",
+    "speaker_name": "Palassvakt",
+    "cast": "fatamorgana_city",
+    "text": "Hurra! Endelig festmåltid!"
+  },
+  "fatamorgana_city_gotfinalcake_3_guard2": {
+    "speaker": "guard2",
+    "speaker_name": "Palassvakt",
+    "cast": "fatamorgana_city",
+    "text": "Mmm, best i hele ørkenen!"
+  },
+  "fatamorgana_city_gotfinalcake_4_guard4": {
+    "speaker": "guard4",
+    "speaker_name": "Palassvakt",
+    "cast": "fatamorgana_city",
+    "text": "Porten er åpen — velkommen inn i palasset!"
+  },
+  "fatamorgana_city_gotfinalcake_5_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "fatamorgana_city",
+    "text": "Takk skal dere ha! Kom igjen, kaptein!"
+  },
+  "fatamorgana_city_gotfinalcake_6_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "fatamorgana_city",
+    "text": "Utmerket jobbet, Pinky! Nå inntar vi Sultanens palass!"
+  },
+  "fatamorgana_city_gotfinalcake_7_pelle": {
+    "speaker": "pelle",
+    "speaker_name": "Pelle",
+    "cast": "fatamorgana_city",
+    "text": "Kan jeg få en liten smule først?"
+  },
+  "fatamorgana_city_gotfinalcake_8_pysa": {
+    "speaker": "pysa",
+    "speaker_name": "Pysa",
+    "cast": "fatamorgana_city",
+    "text": "Løp etter kapteinen, Pelle!"
+  },
+  "fatamorgana_city_gotfinalcake_9_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "fatamorgana_city",
+    "text": "Inn i palasset!"
+  },
+  "fatamorgana_city_gotfourcakes_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "fatamorgana_city",
+    "text": "Her har dere fire kaker! Bare én igjen!"
+  },
+  "fatamorgana_city_gotfourcakes_2_guard1": {
+    "speaker": "guard1",
+    "speaker_name": "Palassvakt",
+    "cast": "fatamorgana_city",
+    "text": "Mmm, nydelig! Men vi mangler fortsatt den siste kaken!"
+  },
+  "fatamorgana_city_gotfourcakes_3_guard3": {
+    "speaker": "guard3",
+    "speaker_name": "Palassvakt",
+    "cast": "fatamorgana_city",
+    "text": "Finn den femte kaken, så åpner vi porten!"
+  },
+  "fatamorgana_city_gotfourcakes_4_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "fatamorgana_city",
+    "text": "Greit, jeg finner den siste med én gang!"
+  },
+  "fatamorgana_city_gotfourcakes_5_pysa": {
+    "speaker": "pysa",
+    "speaker_name": "Pysa",
+    "cast": "fatamorgana_city",
+    "text": "Kanskje den ligger nede i brønnen, Pinky?"
+  },
+  "fatamorgana_city_gotfourcakes_6_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "fatamorgana_city",
+    "text": "Sett fart, Pinky! Vi skal inn i det palasset i dag!"
+  },
+  "fatamorgana_city_gotfourcakes_7_pysa": {
+    "speaker": "pysa",
+    "speaker_name": "Pysa",
+    "cast": "fatamorgana_city",
+    "text": "Skal vi bare vente her i skyggen, Pelle?"
+  },
+  "fatamorgana_city_gotfourcakes_8_pelle": {
+    "speaker": "pelle",
+    "speaker_name": "Pelle",
+    "cast": "fatamorgana_city",
+    "text": "Ja, jeg er utslitt av all den lukten av kake!"
+  },
+  "fatamorgana_city_gotfourcakes_9_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "fatamorgana_city",
+    "text": "Late sjørøvere! Gå etter den siste kaken, Pinky!"
+  },
+  "fatamorgana_city_hittargets_1_carpet_salesman": {
+    "speaker": "carpet_salesman",
+    "speaker_name": "Teppehandleren",
+    "cast": "fatamorgana_city",
+    "text": "Treff alle blinkene med spretterten din, så skal du få låne det flygende teppet mitt!"
+  },
+  "fatamorgana_city_loose_1_arab_boy": {
+    "speaker": "boy",
+    "speaker_name": "Gutt i Fata Morgana",
+    "cast": "fatamorgana_city",
+    "text": "Haha, jeg vant! Prøv igjen hvis du tør!"
+  },
+  "fatamorgana_city_nocakeshere_pelle": {
+    "speaker": "pelle",
+    "speaker_name": "Pelle",
+    "cast": "fatamorgana_city",
+    "text": "Ingen kaker her, Pinky — bare sand!"
+  },
+  "fatamorgana_city_nocakeshere_pysa": {
+    "speaker": "pysa",
+    "speaker_name": "Pysa",
+    "cast": "fatamorgana_city",
+    "text": "Jeg har heller ikke funnet noen kaker!"
+  },
+  "fatamorgana_city_notalltargets_1_carpet_salesman": {
+    "speaker": "carpet_salesman",
+    "speaker_name": "Teppehandleren",
+    "cast": "fatamorgana_city",
+    "text": "Du har ikke truffet alle blinkene ennå! Prøv igjen med spretterten!"
+  },
+  "fatamorgana_city_notenoughcakes_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "fatamorgana_city",
+    "text": "Vi trenger flere kaker før vaktene åpner porten, Pinky!"
+  },
+  "fatamorgana_city_notenoughcopper_1_shopkeeper": {
+    "speaker": "shopkeeper",
+    "speaker_name": "Kjøpmannen",
+    "cast": "fatamorgana_city",
+    "text": "Beklager, gutten min, du trenger litt flere mynter for denne kaken!"
+  },
+  "fatamorgana_city_notgonnaeat_benjamin": {
+    "speaker": "benjamin",
+    "speaker_name": "Benjamin",
+    "cast": "fatamorgana_city",
+    "text": "Jeg lover, jeg rører ikke kakene!"
+  },
+  "fatamorgana_city_race_1_arab_boy": {
+    "speaker": "boy",
+    "speaker_name": "Gutt i Fata Morgana",
+    "cast": "fatamorgana_city",
+    "text": "Hei, fremmed! Tør du å kappkjøre med meg gjennom gatene i Fata Morgana?"
+  },
+  "fatamorgana_city_race_2_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "fatamorgana_city",
+    "text": "Klart jeg tør! Jeg løper raskere enn alle sjørøverne!"
+  },
+  "fatamorgana_city_race_3_arab_boy": {
+    "speaker": "boy",
+    "speaker_name": "Gutt i Fata Morgana",
+    "cast": "fatamorgana_city",
+    "text": "Vinner du, får du kaken min! Klar, ferdig, løp!"
+  },
+  "fatamorgana_city_raceover_arab_boy": {
+    "speaker": "boy",
+    "speaker_name": "Gutt i Fata Morgana",
+    "cast": "fatamorgana_city",
+    "text": "Det var et gøy kappløp, Pinky!"
+  },
+  "fatamorgana_city_thankscomeagain_shopkeeper": {
+    "speaker": "shopkeeper",
+    "speaker_name": "Kjøpmannen",
+    "cast": "fatamorgana_city",
+    "text": "Takk for besøket, velkommen igjen!"
+  },
+  "fatamorgana_city_wannaraceme_arab_boy": {
+    "speaker": "boy",
+    "speaker_name": "Gutt i Fata Morgana",
+    "cast": "fatamorgana_city",
+    "text": "Lyst på et nytt kappløp, Pinky?"
+  },
+  "fatamorgana_city_wetcake_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "fatamorgana_city",
+    "text": "Æsj, denne kaken fra brønnen er klissvåt, men vaktene merker det sikkert ikke!"
+  },
+  "fatamorgana_city_win_1_arab_boy": {
+    "speaker": "boy",
+    "speaker_name": "Gutt i Fata Morgana",
+    "cast": "fatamorgana_city",
+    "text": "Wow, du er lynrask! Her er kaken du vant!"
+  },
+  "fatamorgana_city_yum_1_pelle": {
+    "speaker": "pelle",
+    "speaker_name": "Pelle",
+    "cast": "fatamorgana_city",
+    "text": "Nam nam! Det lukter nybakte kaker over hele byen!"
+  },
+  "fatamorgana_palace_darkroom_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "fatamorgana_palace",
+    "text": "Her er det bekmørkt! Frem med lykten!"
+  },
+  "fatamorgana_palace_findkeys_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "fatamorgana_palace",
+    "text": "Løsningene ligger i flisgåtene og sidegangene — finn nøklene!"
+  },
+  "fatamorgana_palace_intro_1_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "fatamorgana_palace",
+    "text": "Her er vi inne i Sultanens palass! Finn nøklene og kom deg inn til tronsalen, Pinky!"
+  },
+  "fatamorgana_palace_keys_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "fatamorgana_palace",
+    "text": "Flott! En palassnøkkel!"
+  },
+  "fatamorgana_palace_platform_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "fatamorgana_palace",
+    "text": "Se, plattformen flyttet seg!"
+  },
+  "fatamorgana_palace_saveme1_sultan": {
+    "speaker": "sultan",
+    "speaker_name": "Sultanen",
+    "cast": "fatamorgana_palace",
+    "text": "Hjelp! Redd meg fra den forbannede palassvokteren!"
+  },
+  "fatamorgana_palace_saveme2_sultan": {
+    "speaker": "sultan",
+    "speaker_name": "Sultanen",
+    "cast": "fatamorgana_palace",
+    "text": "Skynd deg, unge sjørøver, åpne salen og overvinn vokteren!"
+  },
+  "fatamorgana_palace_tilepuzzle_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "fatamorgana_palace",
+    "text": "Aha! Jeg må tråkke på gulvflisene i riktig rekkefølge!"
+  },
+  "graal_boss_intro": {
+    "speaker": "boss",
+    "speaker_name": "Grusomme Gabriel / Greven",
+    "cast": "graal_bosslevel",
+    "text": "Hahahaha! Velkommen til min borg, lille sjørøver! Min drage skal gjøre kort prosess med deg!"
+  },
+  "gral_boss_falldown_1_boss": {
+    "speaker": "boss",
+    "speaker_name": "Grusomme Gabriel / Greven",
+    "cast": "graal_bosslevel",
+    "text": "Pass deg så du ikke faller ned fra muren!"
+  },
+  "gral_boss_ididit_pinky": {
+    "speaker": "boss",
+    "speaker_name": "Grusomme Gabriel / Greven",
+    "cast": "graal_bosslevel",
+    "text": "Jeg klarte det! Greven av Gral er beseiret! Nå drar vi videre mot Fata Morgana!"
+  },
+  "gral_boss_intro_1_boss": {
+    "speaker": "boss",
+    "speaker_name": "Grusomme Gabriel / Greven",
+    "cast": "graal_bosslevel",
+    "text": "Du våger å klatre opp av brønnen min?! Møt Greven av Gral og min ildsprutende drage!"
+  },
+  "gral_boss_loose_1_boss": {
+    "speaker": "boss",
+    "speaker_name": "Grusomme Gabriel / Greven",
+    "cast": "graal_bosslevel",
+    "text": "Umulig! Beseiret av en liten byssegutt!"
+  },
+  "gral_boss_takethat1_1_pinky": {
+    "speaker": "boss",
+    "speaker_name": "Grusomme Gabriel / Greven",
+    "cast": "graal_bosslevel",
+    "text": "Ta denne, Greven av Gral! Katapult, fyr!"
+  },
+  "gral_boss_takethat1_2_boss": {
+    "speaker": "boss",
+    "speaker_name": "Grusomme Gabriel / Greven",
+    "cast": "graal_bosslevel",
+    "text": "Au! Forbaskede guttehvalp! Du skal få angre!"
+  },
+  "gral_boss_takethat2_1_pinky": {
+    "speaker": "boss",
+    "speaker_name": "Grusomme Gabriel / Greven",
+    "cast": "graal_bosslevel",
+    "text": "Rett i blinken igjen! Slipp taket!"
+  },
+  "gral_boss_takethat2_2_boss": {
+    "speaker": "boss",
+    "speaker_name": "Grusomme Gabriel / Greven",
+    "cast": "graal_bosslevel",
+    "text": "Grrr! Ingen treffer dragen min ustraffet!"
+  },
+  "gral_boss_takethat3_1_pinky": {
+    "speaker": "boss",
+    "speaker_name": "Grusomme Gabriel / Greven",
+    "cast": "graal_bosslevel",
+    "text": "En fulltreffer til! Nå vakler han!"
+  },
+  "gral_boss_takethat3_2_boss": {
+    "speaker": "boss",
+    "speaker_name": "Grusomme Gabriel / Greven",
+    "cast": "graal_bosslevel",
+    "text": "Nei! Dette kan ikke skje!"
+  },
+  "gral_boss_takethat4_1_pinky": {
+    "speaker": "boss",
+    "speaker_name": "Grusomme Gabriel / Greven",
+    "cast": "graal_bosslevel",
+    "text": "Og her kommer nådestøtet, Greven av Gral!"
+  },
+  "gral_boss_takethat4_2_boss": {
+    "speaker": "boss",
+    "speaker_name": "Grusomme Gabriel / Greven",
+    "cast": "graal_bosslevel",
+    "text": "Neeeeei! Jeg faller! Vi sees igjen, Pinky!"
+  },
+  "gral_boss_win_1_boss": {
+    "speaker": "boss",
+    "speaker_name": "Grusomme Gabriel / Greven",
+    "cast": "graal_bosslevel",
+    "text": "Hahahaha! Greven av Gral seirer igjen!"
+  },
+  "gral_boss_youstink1_1_boss": {
+    "speaker": "boss",
+    "speaker_name": "Grusomme Gabriel / Greven",
+    "cast": "graal_bosslevel",
+    "text": "Bom! Du skyter som en blind landkrabbe!"
+  },
+  "gral_boss_youstink2_1_boss": {
+    "speaker": "boss",
+    "speaker_name": "Grusomme Gabriel / Greven",
+    "cast": "graal_bosslevel",
+    "text": "Hahahaha! Var det alt du hadde å by på?"
+  },
+  "gral_mountain_goahead1_1_pelle": {
+    "speaker": "pelle",
+    "speaker_name": "Pelle",
+    "cast": "graal_mountain",
+    "text": "Fortsett oppover stien, Pinky!"
+  },
+  "gral_mountain_goahead2_1_pelle": {
+    "speaker": "pelle",
+    "speaker_name": "Pelle",
+    "cast": "graal_mountain",
+    "text": "Vi nærmer oss toppen av Gral-fjellet!"
+  },
+  "gral_mountain_goahead3_1_pelle": {
+    "speaker": "pelle",
+    "speaker_name": "Pelle",
+    "cast": "graal_mountain",
+    "text": "Der oppe ser jeg brønnen som fører under borgmuren!"
+  },
+  "gral_mountain_goahead_pelle": {
+    "speaker": "pelle",
+    "speaker_name": "Pelle",
+    "cast": "graal_mountain",
+    "text": "Gå i forveien du, Pinky, jeg passer på ryggen din!"
+  },
+  "gral_mountain_intro_1_pelle": {
+    "speaker": "pelle",
+    "speaker_name": "Pelle",
+    "cast": "graal_mountain",
+    "text": "Uff, for et skummelt mørkt fjell! Vi må klatre helt opp til brønnen ved borgen til Greven av Gral, Pinky!"
+  },
+  "gral_mountain_light_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "graal_mountain",
+    "text": "Her var det mørkt! Bra jeg har med meg lykten!"
+  },
+  "gral_mountain_signs_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "graal_mountain",
+    "text": "Se på skiltene — de viser veien mot brønnen til Greven av Gral!"
+  },
+  "gral_mountain_throw_pelle": {
+    "speaker": "pelle",
+    "speaker_name": "Pelle",
+    "cast": "graal_mountain",
+    "text": "Kom hit, Pinky, så kaster jeg deg opp på neste klippehylle!"
+  },
+  "gral_mountain_waitforpelle_1_pinky": {
+    "speaker": "pelle",
+    "speaker_name": "Pelle",
+    "cast": "graal_mountain",
+    "text": "Kom igjen da, Pelle, jeg trenger hjelp til å komme videre!"
+  },
+  "gral_mountain_welldone1_1_pelle": {
+    "speaker": "pelle",
+    "speaker_name": "Pelle",
+    "cast": "graal_mountain",
+    "text": "Knallbra jobbet, Pinky!"
+  },
+  "gral_mountain_welldone2_1_pelle": {
+    "speaker": "pelle",
+    "speaker_name": "Pelle",
+    "cast": "graal_mountain",
+    "text": "Hurra! Nå hopper vi ned i brønnen og svømmer gjennom tunnelen til borgen!"
+  },
+  "outro_conversation": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "outro",
+    "text": "Hiv og hoi, alle mann! Grusomme Gabriels forbannelse er brutt, skatten er vår, og Pinky er en ekte sjørøver på Den Sorte Dame! Leve Kaptein Sabeltann!"
+  },
+  "pelle_intro_push": {
+    "speaker": "pelle",
+    "speaker_name": "Pelle",
+    "cast": "cave",
+    "text": "Hiv og hå! Nå skyver vi!"
+  },
+  "shangrila_beach_bar_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "magakhan_beach",
+    "text": "Hei Pelle og Pysa! Kaptein Sabeltann venter på dere ved porten!"
+  },
+  "shangrila_beach_bar_2_pelle": {
+    "speaker": "pelle",
+    "speaker_name": "Pelle",
+    "cast": "magakhan_beach",
+    "text": "Vi bare tar en liten kokosdrikk her hos mamma, Pinky!"
+  },
+  "shangrila_beach_bar_3_pysa": {
+    "speaker": "pysa",
+    "speaker_name": "Pysa",
+    "cast": "magakhan_beach",
+    "text": "Ja, vi kommer straks etter!"
+  },
+  "shangrila_beach_bar_4_pelle": {
+    "speaker": "pelle",
+    "speaker_name": "Pelle",
+    "cast": "magakhan_beach",
+    "text": "Vi bare tar en liten kokosdrikk her hos mamma, Pinky!"
+  },
+  "shangrila_beach_bar_5_pysa": {
+    "speaker": "pysa",
+    "speaker_name": "Pysa",
+    "cast": "magakhan_beach",
+    "text": "Ja, vi kommer straks etter!"
+  },
+  "shangrila_beach_bar_6_pelle": {
+    "speaker": "pelle",
+    "speaker_name": "Pelle",
+    "cast": "magakhan_beach",
+    "text": "Vi bare tar en liten kokosdrikk her hos mamma, Pinky!"
+  },
+  "shangrila_beach_comingsoon_benjamin": {
+    "speaker": "benjamin",
+    "speaker_name": "Benjamin",
+    "cast": "magakhan_beach",
+    "text": "Jeg kommer straks ned til porten, Pinky!"
+  },
+  "shangrila_beach_ending_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "magakhan_beach",
+    "text": "Alle mann samlet! Nå marsjerer vi inn i Maga Khans jungel!"
+  },
+  "shangrila_beach_gatherthemen_langemann": {
+    "speaker": "langemann",
+    "speaker_name": "Langemann",
+    "cast": "magakhan_beach",
+    "text": "Samle sammen mannskapet ved strandporten, Pinky!"
+  },
+  "shangrila_beach_goodtoseemyboys_malena": {
+    "speaker": "malena",
+    "speaker_name": "Malena Pirat",
+    "cast": "magakhan_beach",
+    "text": "Så koselig å se guttene mine igjen!"
+  },
+  "shangrila_beach_hint1_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "magakhan_beach",
+    "text": "Kanskje jeg finner det Skalken trenger borte ved palmene eller strandbaren!"
+  },
+  "shangrila_beach_hint2_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "magakhan_beach",
+    "text": "Kanskje jeg finner det Skalken trenger borte ved palmene eller strandbaren!"
+  },
+  "shangrila_beach_hint3_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "magakhan_beach",
+    "text": "Kanskje jeg finner det Skalken trenger borte ved palmene eller strandbaren!"
+  },
+  "shangrila_beach_intro_1_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "magakhan_beach",
+    "text": "Endelig fremme på Maga Khans øy! Men hvor har det blitt av resten av mannskapet?!"
+  },
+  "shangrila_beach_intro_2_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "magakhan_beach",
+    "text": "Hjelp Skalken og samle mannskapet, Pinky, så bryter vi oss inn i jungelen!"
+  },
+  "shangrila_beach_itburns_1_pelle": {
+    "speaker": "pelle",
+    "speaker_name": "Pelle",
+    "cast": "magakhan_beach",
+    "text": "Huuuh! Det brenner på tunga! Sterk saus!"
+  },
+  "shangrila_beach_justhanging2_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "magakhan_beach",
+    "text": "Kom ned nå, Benjamin!"
+  },
+  "shangrila_beach_justhanging2_2_benjamin": {
+    "speaker": "benjamin",
+    "speaker_name": "Benjamin",
+    "cast": "magakhan_beach",
+    "text": "Hopp ned da, jeg er rett bak deg!"
+  },
+  "shangrila_beach_justhanging2_3_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "magakhan_beach",
+    "text": "Kom ned nå, Benjamin!"
+  },
+  "shangrila_beach_justhanging_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "magakhan_beach",
+    "text": "Benjamin! Hva gjør du der oppe i treet?!"
+  },
+  "shangrila_beach_justhanging_2_benjamin": {
+    "speaker": "benjamin",
+    "speaker_name": "Benjamin",
+    "cast": "magakhan_beach",
+    "text": "Jeg bare tar en liten hvil over stranden, Pinky!"
+  },
+  "shangrila_beach_justhanging_3_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "magakhan_beach",
+    "text": "Kom ned nå, Kaptein Sabeltann roper på alle mann!"
+  },
+  "shangrila_beach_justhanging_4_benjamin": {
+    "speaker": "benjamin",
+    "speaker_name": "Benjamin",
+    "cast": "magakhan_beach",
+    "text": "Greit, greit — jeg kommer ned straks!"
+  },
+  "shangrila_beach_lookingforfood_1_skalken": {
+    "speaker": "skalken",
+    "speaker_name": "Skalken",
+    "cast": "magakhan_beach",
+    "text": "Pinky! Jeg trenger kokosnøtter og sterk saus til gryta mi før vi går inn i jungelen!"
+  },
+  "shangrila_beach_lookitsmom_1_pelle": {
+    "speaker": "pelle",
+    "speaker_name": "Pelle",
+    "cast": "magakhan_beach",
+    "text": "Se, Pysa! Det er mamma Malena borte ved strandbaren!"
+  },
+  "shangrila_beach_questcomplete_skalken": {
+    "speaker": "skalken",
+    "speaker_name": "Skalken",
+    "cast": "magakhan_beach",
+    "text": "Gryta er klar! Nå kan vi åpne porten inn til jungelen!"
+  },
+  "shangrila_beach_thanks_1_skalken": {
+    "speaker": "skalken",
+    "speaker_name": "Skalken",
+    "cast": "magakhan_beach",
+    "text": "Takk, Pinky! Akkurat det jeg trengte!"
+  },
+  "shangrila_beach_thanksalot_1_skalken": {
+    "speaker": "skalken",
+    "speaker_name": "Skalken",
+    "cast": "magakhan_beach",
+    "text": "Tusen takk! Nå har hele mannskapet krefter til jungelen!"
+  },
+  "shangrila_beach_welcomesons_1_malena": {
+    "speaker": "malena",
+    "speaker_name": "Malena Pirat",
+    "cast": "magakhan_beach",
+    "text": "Pelle! Pysa! Guttene mine! Så godt å se dere!"
+  },
+  "shangrila_beach_welcomesons_2_pelle": {
+    "speaker": "pelle",
+    "speaker_name": "Pelle",
+    "cast": "magakhan_beach",
+    "text": "Mamma Malena?! Hva gjør du på Maga Khans øy?"
+  },
+  "shangrila_beach_welcomesons_3_pysa": {
+    "speaker": "pysa",
+    "speaker_name": "Pysa",
+    "cast": "magakhan_beach",
+    "text": "Hei mamma! Vi er på skattejakt med Kaptein Sabeltann!"
+  },
+  "shangrila_beach_welcomesons_4_malena": {
+    "speaker": "malena",
+    "speaker_name": "Malena Pirat",
+    "cast": "magakhan_beach",
+    "text": "Pass godt på hverandre i jungelen, gutter!"
+  },
+  "shangrila_beach_wheresmycrew_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "magakhan_beach",
+    "text": "Hvor i all verden gjemmer Pelle, Pysa og Benjamin seg?"
+  },
+  "shangrila_boss_afterme_1_pinky": {
+    "speaker": "boss",
+    "speaker_name": "Grusomme Gabriel / Greven",
+    "cast": "magakhan_endboss_level",
+    "text": "Hei, drage! Se hit — fang meg hvis du kan!"
+  },
+  "shangrila_boss_distractthedragon_1_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "magakhan_endboss_level",
+    "text": "Distraher dragen, Pinky, så slår jeg til mot Maga Khan!"
+  },
+  "shangrila_boss_fight1_1_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "magakhan_endboss_level",
+    "text": "Maga Khan! Din tid som hersker over denne øya er forbi!"
+  },
+  "shangrila_boss_fight2_1_maga_khan": {
+    "speaker": "maga_khan",
+    "speaker_name": "Maga Khan",
+    "cast": "magakhan_endboss_level",
+    "text": "Hahahaha! Kaptein Sabeltann! Dragen min skal brenne dere til aske!"
+  },
+  "shangrila_boss_hint1_1_pinky": {
+    "speaker": "boss",
+    "speaker_name": "Grusomme Gabriel / Greven",
+    "cast": "magakhan_endboss_level",
+    "text": "Jeg må lokke dragen unna så Kaptein Sabeltann får fritt skudd!"
+  },
+  "shangrila_boss_hint2_1_pinky": {
+    "speaker": "boss",
+    "speaker_name": "Grusomme Gabriel / Greven",
+    "cast": "magakhan_endboss_level",
+    "text": "Hopp unna ildpusten!"
+  },
+  "shangrila_boss_loose_1_maga_khan": {
+    "speaker": "maga_khan",
+    "speaker_name": "Maga Khan",
+    "cast": "magakhan_endboss_level",
+    "text": "Nei! Dragen min! Hvordan er det mulig?!"
+  },
+  "shangrila_boss_loose_2_maga_khan": {
+    "speaker": "maga_khan",
+    "speaker_name": "Maga Khan",
+    "cast": "magakhan_endboss_level",
+    "text": "Forbaskede sjørøvere! Dette er ikke over!"
+  },
+  "shangrila_boss_win_1_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "magakhan_endboss_level",
+    "text": "Seier! Maga Khan er beseiret! Nå har vi alt vi trenger — sett seil tilbake til Grusomme Gabriels grotte!"
+  },
+  "shangrila_boss_youandme_1_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "magakhan_endboss_level",
+    "text": "Nå er det bare deg og meg, Maga Khan!"
+  },
+  "shangrila_dungeon_comewithmepirate_1_sirikit": {
+    "speaker": "sirikit",
+    "speaker_name": "Sirikit",
+    "cast": "magakhan_dungeon",
+    "text": "Stille, sjørøver! Jeg er Sirikit. Følg meg — jeg vet veien til Maga Khans drage!"
+  },
+  "shangrila_dungeon_comewithmepirate_2_pelle": {
+    "speaker": "pelle",
+    "speaker_name": "Pelle",
+    "cast": "magakhan_dungeon",
+    "text": "Hvor skal vi, Sirikit? Er det farlig der inne?"
+  },
+  "shangrila_dungeon_comewithmepirate_3_sirikit": {
+    "speaker": "sirikit",
+    "speaker_name": "Sirikit",
+    "cast": "magakhan_dungeon",
+    "text": "Maga Khan vokter den siste nøkkelen i dragekammeret rett frem."
+  },
+  "shangrila_dungeon_comewithmepirate_4_pelle": {
+    "speaker": "pelle",
+    "speaker_name": "Pelle",
+    "cast": "magakhan_dungeon",
+    "text": "Uffameg, en drage til?!"
+  },
+  "shangrila_dungeon_comewithmepirate_5_sirikit": {
+    "speaker": "sirikit",
+    "speaker_name": "Sirikit",
+    "cast": "magakhan_dungeon",
+    "text": "Kaptein Sabeltann og Pinky klarer dette sammen!"
+  },
+  "shangrila_dungeon_comewithmepirate_6_pelle": {
+    "speaker": "pelle",
+    "speaker_name": "Pelle",
+    "cast": "magakhan_dungeon",
+    "text": "Lykke til der inne, Pinky!"
+  },
+  "shangrila_dungeon_endconversation_1_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "magakhan_dungeon",
+    "text": "Nå går vi inn til Maga Khan! Gjør deg klar for kamp, Pinky!"
+  },
+  "shangrila_dungeon_findanotherway_1_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "magakhan_dungeon",
+    "text": "Flammene sperrer gangen! Finn spakene og nøkkelen til dragekammeret, Pinky!"
+  },
+  "shangrila_dungeon_gofurther1_1_langemann": {
+    "speaker": "langemann",
+    "speaker_name": "Langemann",
+    "cast": "magakhan_dungeon",
+    "text": "Bra jobbet! Fortsett videre innover i fangehullet, Pinky!"
+  },
+  "shangrila_dungeon_gofurther2_1_langemann": {
+    "speaker": "langemann",
+    "speaker_name": "Langemann",
+    "cast": "magakhan_dungeon",
+    "text": "Bra jobbet! Fortsett videre innover i fangehullet, Pinky!"
+  },
+  "shangrila_dungeon_gofurther3_1_langemann": {
+    "speaker": "langemann",
+    "speaker_name": "Langemann",
+    "cast": "magakhan_dungeon",
+    "text": "Bra jobbet! Fortsett videre innover i fangehullet, Pinky!"
+  },
+  "shangrila_dungeon_gofurther4_1_langemann": {
+    "speaker": "langemann",
+    "speaker_name": "Langemann",
+    "cast": "magakhan_dungeon",
+    "text": "Bra jobbet! Fortsett videre innover i fangehullet, Pinky!"
+  },
+  "shangrila_dungeon_gofurther5_1_langemann": {
+    "speaker": "langemann",
+    "speaker_name": "Langemann",
+    "cast": "magakhan_dungeon",
+    "text": "Bra jobbet! Fortsett videre innover i fangehullet, Pinky!"
+  },
+  "shangrila_dungeon_illstayhere_pysa": {
+    "speaker": "pysa",
+    "speaker_name": "Pysa",
+    "cast": "magakhan_dungeon",
+    "text": "Jeg blir stående vakt akkurat her jeg, Pinky!"
+  },
+  "shangrila_dungeon_needkey_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "magakhan_dungeon",
+    "text": "Døren er låst! Jeg må dykke i undervannskammeret etter fangehullsnøkkelen!"
+  },
+  "shangrila_dungeon_needrightkey_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "magakhan_dungeon",
+    "text": "Feil nøkkel — jeg må finne den riktige nøkkelen!"
+  },
+  "shangrila_dungeon_proceed1_1_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "magakhan_dungeon",
+    "text": "Bra jobbet! Fortsett videre innover i fangehullet, Pinky!"
+  },
+  "shangrila_dungeon_proceed2_1_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "magakhan_dungeon",
+    "text": "Bra jobbet! Fortsett videre innover i fangehullet, Pinky!"
+  },
+  "shangrila_dungeon_proceed3_1_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "magakhan_dungeon",
+    "text": "Bra jobbet! Fortsett videre innover i fangehullet, Pinky!"
+  },
+  "shangrila_dungeon_proceed4_1_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "magakhan_dungeon",
+    "text": "Bra jobbet! Fortsett videre innover i fangehullet, Pinky!"
+  },
+  "shangrila_jungle_crasybushmen_1_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "magakhan_jungle",
+    "text": "Pass deg for jungelkrigerne, Pinky!"
+  },
+  "shangrila_jungle_croc_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "magakhan_jungle",
+    "text": "Se opp for krokodillen i elven!"
+  },
+  "shangrila_jungle_freeus_langemann": {
+    "speaker": "langemann",
+    "speaker_name": "Langemann",
+    "cast": "magakhan_jungle",
+    "text": "Befri oss fra buret, Pinky!"
+  },
+  "shangrila_jungle_getawayfromher_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "magakhan_jungle",
+    "text": "Hold dere unna henne! Frem med sverdet!"
+  },
+  "shangrila_jungle_getusoutofhere_1_langemann": {
+    "speaker": "langemann",
+    "speaker_name": "Langemann",
+    "cast": "magakhan_jungle",
+    "text": "Pinky! Maga Khans krigere har fanget oss i buret!"
+  },
+  "shangrila_jungle_getusoutofhere_2_pysa": {
+    "speaker": "pysa",
+    "speaker_name": "Pysa",
+    "cast": "magakhan_jungle",
+    "text": "Slipp oss ut herfra før de lager suppe av oss!"
+  },
+  "shangrila_jungle_getusoutofhere_3_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "magakhan_jungle",
+    "text": "Finn spaken og befri mannskapet mitt med én gang, Pinky!"
+  },
+  "shangrila_jungle_getusoutofhere_4_pelle": {
+    "speaker": "pelle",
+    "speaker_name": "Pelle",
+    "cast": "magakhan_jungle",
+    "text": "Skynd deg, Pinky!"
+  },
+  "shangrila_jungle_getusoutofhere_5_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "magakhan_jungle",
+    "text": "Bra gutt! Nå stormer vi Maga Khans palass!"
+  },
+  "shangrila_jungle_getusoutofhere_6_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "magakhan_jungle",
+    "text": "Alle er fri! Mot Maga Khans palass!"
+  },
+  "shangrila_jungle_help_1_daughter": {
+    "speaker": "daughter",
+    "speaker_name": "Høvdingens datter",
+    "cast": "magakhan_jungle",
+    "text": "Hjelp! Redd meg fra jungelkrigerne!"
+  },
+  "shangrila_jungle_hetriedtoshootme_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "magakhan_jungle",
+    "text": "Hei! Han prøvde å skyte etter meg! Pass opp!"
+  },
+  "shangrila_jungle_imscared_1_pelle": {
+    "speaker": "pelle",
+    "speaker_name": "Pelle",
+    "cast": "magakhan_jungle",
+    "text": "Huff, jeg liker ikke denne mørke jungelen!"
+  },
+  "shangrila_jungle_imscared_2_pysa": {
+    "speaker": "pysa",
+    "speaker_name": "Pysa",
+    "cast": "magakhan_jungle",
+    "text": "Huff, jeg liker ikke denne mørke jungelen!"
+  },
+  "shangrila_jungle_imscared_3_pelle": {
+    "speaker": "pelle",
+    "speaker_name": "Pelle",
+    "cast": "magakhan_jungle",
+    "text": "Huff, jeg liker ikke denne mørke jungelen!"
+  },
+  "shangrila_jungle_intro_1_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "magakhan_jungle",
+    "text": "Hold øynene åpne! Maga Khans jungel er full av ville pantere og kjøttetende planter!"
+  },
+  "shangrila_jungle_intro_2_langemann": {
+    "speaker": "langemann",
+    "speaker_name": "Langemann",
+    "cast": "magakhan_jungle",
+    "text": "Jeg tar teten sammen med kapteinen. Følg godt etter, Pinky!"
+  },
+  "shangrila_jungle_meat_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "magakhan_jungle",
+    "text": "Et saftig kjøttstykke! Perfekt til den kjøttetende planten!"
+  },
+  "shangrila_jungle_meatplant_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "magakhan_jungle",
+    "text": "Oi, for en enorm kjøttetende plante! Den slipper oss nok forbi hvis jeg mater den!"
+  },
+  "shangrila_jungle_missedcrate_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "magakhan_jungle",
+    "text": "Oops, jeg må flytte kassen riktig!"
+  },
+  "shangrila_jungle_panther_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "magakhan_jungle",
+    "text": "Pass opp! En svart panter! Jeg må lokke den i fellen!"
+  },
+  "shangrila_jungle_thanks_1_daughter": {
+    "speaker": "daughter",
+    "speaker_name": "Høvdingens datter",
+    "cast": "magakhan_jungle",
+    "text": "Takk igjen, modige sjørøver!"
+  },
+  "shangrila_jungle_thanksforsavingme_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "magakhan_jungle",
+    "text": "Går det bra med deg?"
+  },
+  "shangrila_jungle_thanksforsavingme_2_daughter": {
+    "speaker": "daughter",
+    "speaker_name": "Høvdingens datter",
+    "cast": "magakhan_jungle",
+    "text": "Tusen takk, Pinky! Du reddet meg! Veien til Maga Khans palass ligger rett frem!"
+  },
+  "shangrila_jungle_trapped_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "magakhan_jungle",
+    "text": "Yes! Panteren er fanget i fellen!"
+  },
+  "shangrila_jungle_usethetrap_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "magakhan_jungle",
+    "text": "Aha! Hvis jeg lokker panteren inn i fellen, slipper vi forbi!"
+  },
+  "shangrila_palace_courtyard_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "magakhan_palace",
+    "text": "Se de store gongene rundt i gårdsplassen!"
+  },
+  "shangrila_palace_gatedown_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "magakhan_palace",
+    "text": "Porten til Maga Khans fangehull er åpen!"
+  },
+  "shangrila_palace_gem1_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "magakhan_palace",
+    "text": "Én gong slått! Fire igjen!"
+  },
+  "shangrila_palace_gem2_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "magakhan_palace",
+    "text": "To gonger! Tre igjen!"
+  },
+  "shangrila_palace_gem3_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "magakhan_palace",
+    "text": "Tre gonger! Bare to igjen!"
+  },
+  "shangrila_palace_gem4_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "magakhan_palace",
+    "text": "Fire gonger! Bare én igjen nå!"
+  },
+  "shangrila_palace_gem5_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "magakhan_palace",
+    "text": "Alle fem gongene! Hør — den store porten går opp!"
+  },
+  "shangrila_palace_getthisgateopen_1_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "magakhan_palace",
+    "text": "Få opp den porten ved å slå på alle gongene, Pinky!"
+  },
+  "shangrila_palace_illstayhere_pysa": {
+    "speaker": "pysa",
+    "speaker_name": "Pysa",
+    "cast": "magakhan_palace",
+    "text": "Jeg blir stående vakt akkurat her jeg, Pinky!"
+  },
+  "shangrila_palace_intro_1_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "magakhan_palace",
+    "text": "Her er Maga Khans festning! Porten til fangehullet er låst med fem hellige gonger!"
+  },
+  "shangrila_palace_intro_2_langemann": {
+    "speaker": "langemann",
+    "speaker_name": "Langemann",
+    "cast": "magakhan_palace",
+    "text": "Slå på alle fem gongene i gårdsplassen, Pinky, så åpnes porten!"
+  },
+  "shangrila_palace_intro_3_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "magakhan_palace",
+    "text": "Sett i gang! Maga Khan skal ikke slippe unna!"
+  },
+  "shangrila_palace_letmethrowyou2_pelle": {
+    "speaker": "pelle",
+    "speaker_name": "Pelle",
+    "cast": "magakhan_palace",
+    "text": "Kom hit, Pinky, så kaster jeg deg opp!"
+  },
+  "shangrila_palace_letmethrowyou_pelle": {
+    "speaker": "pelle",
+    "speaker_name": "Pelle",
+    "cast": "magakhan_palace",
+    "text": "Kom hit, Pinky, så kaster jeg deg opp!"
+  },
+  "shangrila_palace_letstakethisplace_1_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "magakhan_palace",
+    "text": "Fremad inn i fangehullet!"
+  },
+  "shangrila_palace_somethingdownhere_1_pelle": {
+    "speaker": "pelle",
+    "speaker_name": "Pelle",
+    "cast": "magakhan_palace",
+    "text": "Oi! Det er noe viktig nede her, Pinky!"
+  },
+  "shangrila_palace_thisplaceisours_langemann": {
+    "speaker": "langemann",
+    "speaker_name": "Langemann",
+    "cast": "magakhan_palace",
+    "text": "Hele gårdsplassen er vår!"
+  },
+  "sink_speech_01": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "world_map",
+    "text": "Rett til bunns med dem! Hiv og hoi!"
+  },
+  "sink_speech_02": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "world_map",
+    "text": "Et fiendeskip mindre på De Syv Hav!"
+  },
+  "sink_speech_03": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "world_map",
+    "text": "Der gikk de ned med mann og mus!"
+  },
+  "sink_speech_04": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "world_map",
+    "text": "Ingen tuller med Den Sorte Dame!"
+  },
+  "sink_speech_05": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "world_map",
+    "text": "Flott skutt, Pinky! Plukk opp gullet i vannet!"
+  },
+  "sink_speech_06": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "world_map",
+    "text": "Haha! Kongen på Havet vinner igjen!"
+  },
+  "skeleton_boss_intro": {
+    "speaker": "boss",
+    "speaker_name": "Grusomme Gabriel / Greven",
+    "cast": "cave_end_bosslevel",
+    "text": "Hahahaha! Så dere våget å vende tilbake til mitt skattkammer?!"
+  },
+  "swimming_ghasp_1_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "swimming",
+    "text": "Puh! Frisk luft! Bare pass på luftmåleren og følg luftboblene!"
+  },
+  "treasurehunt1_1_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "treasurehunt",
+    "text": "Hiv og hoi! Finn den nedgravde skatten før tiden går ut!"
+  },
+  "treasurehunt2_1_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "treasurehunt",
+    "text": "Hiv og hoi! Finn den nedgravde skatten før tiden går ut!"
+  },
+  "treasurehunt3_1_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "treasurehunt",
+    "text": "Hiv og hoi! Finn den nedgravde skatten før tiden går ut!"
+  },
+  "treasurehunt4_1_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "treasurehunt",
+    "text": "Hiv og hoi! Finn den nedgravde skatten før tiden går ut!"
+  },
+  "treasurehunt5_1_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "treasurehunt",
+    "text": "Hiv og hoi! Finn den nedgravde skatten før tiden går ut!"
+  },
+  "treasurehunt6_1_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "treasurehunt",
+    "text": "Hiv og hoi! Finn den nedgravde skatten før tiden går ut!"
+  },
+  "treasurehunt7_1_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "treasurehunt",
+    "text": "Hiv og hoi! Finn den nedgravde skatten før tiden går ut!"
+  },
+  "treasurehunt8_1_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "treasurehunt",
+    "text": "Hiv og hoi! Finn den nedgravde skatten før tiden går ut!"
+  },
+  "treasurehunt_ididit_pinky": {
+    "speaker": "pinky",
+    "speaker_name": "Pinky",
+    "cast": "treasurehunt",
+    "text": "Jippi! Jeg fant den nedgravde sjørøverskatten!"
+  },
+  "treasurehunt_idle_1_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "treasurehunt",
+    "text": "Følg kompasset og grav der skatten ligger gjemt, Pinky!"
+  },
+  "treasurehunt_loose1_1_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "treasurehunt",
+    "text": "Tiden rant ut! Prøv igjen og finn skatten raskere, Pinky!"
+  },
+  "treasurehunt_loose2_1_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "treasurehunt",
+    "text": "Tiden rant ut! Prøv igjen og finn skatten raskere, Pinky!"
+  },
+  "worldmap_alreadyvisited_storyteller": {
+    "speaker": "storyteller",
+    "speaker_name": "Fortelleren",
+    "cast": "world_map",
+    "text": "Du har allerede fullført hovedoppdraget på denne øya, men du kan besøke den igjen når du vil."
+  },
+  "worldmap_beenherebefore_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "world_map",
+    "text": "Her har vi allerede vært, Pinky — men det skader aldri med litt mer gull!"
+  },
+  "worldmap_cave_1_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "world_map",
+    "text": "Tilbake til Grusomme Gabriels grotte! Nå skal forbannelsen brytes for godt!"
+  },
+  "worldmap_cavetoabra_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "world_map",
+    "text": "Sett kursen hjem til Abra Havn, Pinky!"
+  },
+  "worldmap_fatamorgana_1_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "world_map",
+    "text": "Styr mot Fata Morgana! De gylne kuplene ligger rett forut!"
+  },
+  "worldmap_fatamorganatoabra_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "world_map",
+    "text": "Kurs mot Abra Havn, Pinky!"
+  },
+  "worldmap_fire3_sabeltann_03": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "world_map",
+    "text": "Full treffer! Senk skuta deres!"
+  },
+  "worldmap_fire_sabeltann_01": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "world_map",
+    "text": "Fyr løs med kanonene!"
+  },
+  "worldmap_fire_sabeltann_02": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "world_map",
+    "text": "Gi dem en bredside, Pinky!"
+  },
+  "worldmap_graal_1_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "world_map",
+    "text": "Sett kursen mot Gral, Pinky! Vi har en regning å gjøre opp med Greven av Gral!"
+  },
+  "worldmap_graaltoabra_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "world_map",
+    "text": "Bra seilt! La oss vende tilbake til Abra Havn!"
+  },
+  "worldmap_intro_1_storyteller": {
+    "speaker": "storyteller",
+    "speaker_name": "Fortelleren",
+    "cast": "world_map",
+    "text": "Velkommen ut på De Syv Hav! Styr Den Sorte Dame med W, A, S og D, og fyr av kanonene med venstre museknapp eller F mot fiendeskipene!"
+  },
+  "worldmap_shangrila_1_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "world_map",
+    "text": "Full fart mot Maga Khans øy, alle mann!"
+  },
+  "worldmap_shangrilatoabra_sabeltann": {
+    "speaker": "sabeltann",
+    "speaker_name": "Kaptein Sabeltann",
+    "cast": "world_map",
+    "text": "Hjem til Abra Havn med seieren i boks!"
+  }
+}

@@ -10,6 +10,14 @@ class_name PinkyController
 
 var camera_rig: FollowCamera
 var heightmap_sampler: Callable
+var input_locked: bool = false
+var is_talking: bool = false
+var is_pushing: bool = false
+var _animator: CharacterAnimator
+var _spline_pts: Array[Vector3] = []
+var _spline_idx: int = 0
+var _spline_speed: float = 4.2
+var _spline_cb: Callable
 var _attack_cooldown: float = 0.0
 var _swing_timer: float = 0.0
 var _step_timer: float = 0.0
@@ -47,9 +55,10 @@ func _setup_visuals() -> void:
 				var nm := m.name.to_lower()
 				if nm != "pinky" and ("crosshair" in nm or "shovel" in nm or "slingshot" in nm or "swoosh" in nm or "lamp" in nm):
 					m.visible = false
-			# Auto-juster høyde slik at føttene står på y=0 (kun basert på synlig kropp)
+			# Auto-juster høyde slik at føttene står nøyaktig på y=0 (null sveving!)
 			_align_model_to_floor(inst)
 			VisualEnhancer.enhance_character_node(_visual_root, true, 0.65)
+			_animator = CharacterAnimator.attach_to(inst, -1.0)
 	else:
 		_build_fallback_pinky()
 
@@ -131,6 +140,22 @@ func _setup_visuals() -> void:
 	_visual_root.add_child(_lamp_light)
 
 
+func walk_spline(points: Array[Vector3], speed: float = 4.2, on_done: Callable = Callable()) -> void:
+	_spline_pts = points
+	_spline_idx = 0
+	_spline_speed = speed
+	_spline_cb = on_done
+
+
+func face_toward(world_target: Vector3) -> void:
+	if not is_instance_valid(_visual_root):
+		return
+	var d := world_target - global_position
+	d.y = 0.0
+	if d.length_squared() > 0.01:
+		_visual_root.rotation.y = atan2(-d.x, -d.z)
+
+
 func _align_model_to_floor(inst: Node3D) -> void:
 	var min_y := 99999.0
 	var max_y := -99999.0
@@ -172,25 +197,13 @@ func _build_fallback_pinky() -> void:
 	body.material_override = m
 	_visual_root.add_child(body)
 
-	var hat := MeshInstance3D.new()
-	var cyl := CylinderMesh.new()
-	cyl.top_radius = 0.42
-	cyl.bottom_radius = 0.52
-	cyl.height = 0.25
-	hat.mesh = cyl
-	hat.position.y = 1.68
-	var hm := StandardMaterial3D.new()
-	hm.albedo_color = Color(0.12, 0.10, 0.14)
-	hat.material_override = hm
-	_visual_root.add_child(hat)
-
 
 func _on_weapon_changed(weapon_id: String) -> void:
 	if not is_instance_valid(_sword_mesh):
 		return
 	var info: Dictionary = GameState.WEAPONS.get(weapon_id, {})
 	var wtype := str(info.get("type", "melee"))
-	_sword_mesh.visible = (wtype == "melee")
+	_sword_mesh.visible = (wtype == "melee") and (weapon_id != "none")
 	var mat := _sword_mesh.material_override as StandardMaterial3D
 	if mat:
 		match weapon_id:
@@ -222,6 +235,8 @@ func _unhandled_input(event: InputEvent) -> void:
 				_lamp_light.visible = GameState.lamp_enabled
 			AudioManager.play_sfx("switch")
 
+	if input_locked:
+		return
 	if event.is_action_pressed("attack"):
 		_perform_attack()
 	elif event.is_action_pressed("interact"):
@@ -232,65 +247,85 @@ func _physics_process(delta: float) -> void:
 	_attack_cooldown = max(0.0, _attack_cooldown - delta)
 	if _swing_timer > 0.0:
 		_swing_timer = max(0.0, _swing_timer - delta)
-		var p := 1.0 - (_swing_timer / 0.26)
-		_sword_pivot.rotation = Vector3(-0.3, -1.2 + p * 2.4, 0.25)
+		var p := 1.0 - (_swing_timer / 0.28)
+		_sword_pivot.rotation = Vector3(-0.35 + sin(p * PI) * 0.4, -1.25 + p * 2.5, 0.25)
 	elif is_instance_valid(_sword_pivot):
-		_sword_pivot.rotation = _sword_pivot.rotation.lerp(Vector3(0.15, 0.15, 0.0), delta * 10.0)
+		_sword_pivot.rotation = _sword_pivot.rotation.lerp(Vector3(0.32, -0.35, -0.22), delta * 10.0)
 
-	# Bevegelsesretning relativt til kamera
-	var ix := Input.get_axis("move_left", "move_right")
-	var iz := Input.get_axis("move_forward", "move_backward")
 	var move_dir := Vector3.ZERO
-	if is_instance_valid(camera_rig):
-		move_dir = (camera_rig.get_right_xz() * ix) + (-camera_rig.get_forward_xz() * iz)
-	else:
-		move_dir = Vector3(ix, 0.0, iz)
-	if move_dir.length_squared() > 0.001:
-		move_dir = move_dir.normalized()
-
 	var spd := sprint_speed if Input.is_action_pressed("sprint") else walk_speed
+
+	# Historie-styrt spline-gange (f.eks. pinky_end, pinky_chestwalk)
+	if _spline_idx < _spline_pts.size():
+		var tgt := _spline_pts[_spline_idx]
+		var diff := Vector3(tgt.x - global_position.x, 0.0, tgt.z - global_position.z)
+		if diff.length() < 0.45:
+			_spline_idx += 1
+			if _spline_idx >= _spline_pts.size() and _spline_cb.is_valid():
+				var cb := _spline_cb
+				_spline_cb = Callable()
+				cb.call()
+		else:
+			move_dir = diff.normalized()
+			spd = _spline_speed
+	elif not input_locked:
+		# Bevegelsesretning relativt til kamera
+		var ix := Input.get_axis("move_left", "move_right")
+		var iz := Input.get_axis("move_forward", "move_backward")
+		if is_instance_valid(camera_rig):
+			move_dir = (camera_rig.get_right_xz() * ix) + (-camera_rig.get_forward_xz() * iz)
+		else:
+			move_dir = Vector3(ix, 0.0, iz)
+		if move_dir.length_squared() > 0.001:
+			move_dir = move_dir.normalized()
+
+	var hm_floor_y := -9999.0
+	if heightmap_sampler.is_valid() and not is_swimming:
+		hm_floor_y = heightmap_sampler.call(global_position)
+	var grounded := is_on_floor() or (hm_floor_y > -5000.0 and global_position.y <= hm_floor_y + 0.12 and velocity.y <= 0.1)
 	if is_swimming:
 		spd *= 0.72
 		var vy := 0.0
-		if Input.is_action_pressed("jump"):
-			vy = 5.0
-		elif Input.is_key_pressed(KEY_CTRL):
-			vy = -5.0
+		if not input_locked:
+			if Input.is_action_pressed("jump"):
+				vy = 5.0
+			elif Input.is_key_pressed(KEY_CTRL):
+				vy = -5.0
 		velocity = velocity.lerp(Vector3(move_dir.x * spd, vy, move_dir.z * spd), delta * 6.0)
 	else:
 		velocity.x = lerp(velocity.x, move_dir.x * spd, delta * 12.0)
 		velocity.z = lerp(velocity.z, move_dir.z * spd, delta * 12.0)
-		if is_on_floor():
-			if Input.is_action_just_pressed("jump"):
+		if grounded:
+			if not input_locked and Input.is_action_just_pressed("jump"):
 				velocity.y = jump_velocity
+				grounded = false
 				AudioManager.play_sfx("jump")
 		else:
 			velocity.y -= gravity * delta
 
 	move_and_slide()
 
-	# Heightmap sikkerhetsgulv (fra originale heightmap-data hvis 3D-mesh har små sprekker)
+	# Nøyaktig original heightmap-gulv (hindrer gjennomfall og sveving på alle brett!)
 	if heightmap_sampler.is_valid() and not is_swimming:
 		var hm_y: float = heightmap_sampler.call(global_position)
-		if hm_y > -500.0 and global_position.y < hm_y - 0.15 and velocity.y <= 0.0:
-			global_position.y = hm_y
-			velocity.y = 0.0
+		if hm_y > -5000.0:
+			if global_position.y <= hm_y + 0.08 and velocity.y <= 0.1:
+				global_position.y = hm_y
+				velocity.y = 0.0
+				grounded = true
 
-	# Roter Pinky mykt mot bevegelsesretning + gang-animasjon
+	# Roter Pinky mykt mot bevegelsesretning (-Z fremover!) + ekte skjelett-animasjoner!
 	var horiz_speed := Vector2(velocity.x, velocity.z).length()
-	if horiz_speed > 0.4 and is_instance_valid(_visual_root):
-		var target_yaw := atan2(move_dir.x, move_dir.z)
+	if horiz_speed > 0.35 and move_dir.length_squared() > 0.001 and is_instance_valid(_visual_root):
+		var target_yaw := atan2(-move_dir.x, -move_dir.z)
 		_visual_root.rotation.y = lerp_angle(_visual_root.rotation.y, target_yaw, delta * 12.0)
-		_bob_phase += delta * horiz_speed * 1.45
-		_visual_root.position.y = abs(sin(_bob_phase)) * 0.10
-		_visual_root.rotation.z = sin(_bob_phase) * 0.045
 		_step_timer -= delta
-		if _step_timer <= 0.0 and is_on_floor():
-			_step_timer = 0.34 if horiz_speed < 9.0 else 0.24
+		if _step_timer <= 0.0 and grounded:
+			_step_timer = 0.34 if horiz_speed < 8.0 else 0.24
 			AudioManager.play_sfx("step", 0.18)
-	elif is_instance_valid(_visual_root):
-		_visual_root.position.y = lerp(_visual_root.position.y, 0.0, delta * 8.0)
-		_visual_root.rotation.z = lerp(_visual_root.rotation.z, 0.0, delta * 8.0)
+
+	if is_instance_valid(_animator):
+		_animator.update_anim(delta, horiz_speed, grounded or is_swimming, is_talking, is_pushing, GameState.health <= 0.0)
 
 
 func _perform_attack() -> void:
@@ -298,6 +333,8 @@ func _perform_attack() -> void:
 		return
 	var info: Dictionary = GameState.WEAPONS.get(GameState.equipped_weapon, GameState.WEAPONS["sword"])
 	var wtype := str(info.get("type", "melee"))
+	if wtype == "none":
+		return
 	var dmg := float(info.get("damage", 25.0))
 	var rng := float(info.get("range", 2.8))
 
@@ -319,19 +356,21 @@ func _perform_attack() -> void:
 		rock.launch(global_position + Vector3(0.0, 1.35, 0.0) + dir * 0.7, dir, dmg)
 		return
 
-	# Nærkamp (sverd/sabel/kårde)
+	# Nærkamp (sverd/sabel/kårde) med ekte sverdhugg-animasjon!
 	_attack_cooldown = 0.34
-	_swing_timer = 0.26
+	_swing_timer = 0.28
+	if is_instance_valid(_animator):
+		_animator.trigger_attack()
 	AudioManager.play_sfx("sword")
 
-	var forward := _visual_root.global_transform.basis.z
+	var forward := -_visual_root.global_transform.basis.z
 	for node in get_tree().get_nodes_in_group("hittable"):
 		if not (node is Node3D):
 			continue
 		var diff: Vector3 = node.global_position - global_position
 		diff.y = 0.0
-		if diff.length() <= rng + 0.8:
-			if diff.length() < 1.2 or forward.dot(diff.normalized()) > -0.1:
+		if diff.length() <= rng + 1.0:
+			if diff.length() < 1.3 or forward.dot(diff.normalized()) > -0.15:
 				if node.has_method("take_hit"):
 					node.take_hit(dmg, global_position)
 

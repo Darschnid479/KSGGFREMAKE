@@ -7,13 +7,16 @@ signal coins_changed(coins: int)
 signal weapon_changed(weapon_id: String)
 signal objective_changed(text: String)
 signal dialogue_requested(speaker: String, lines: Array)
+signal voice_line_started(speaker_name: String, text: String, clip_key: String)
+signal voice_line_finished(clip_key: String)
 signal boss_health_changed(boss_name: String, current: float, maximum: float)
 signal level_change_requested(level_id: String)
 
 const SAVE_PATH := "user://sabeltann_hd_save.json"
 
 const WEAPONS := {
-	"woodensword": {"name": "Tresverd", "damage": 15.0, "range": 2.4, "type": "melee"},
+	"none": {"name": "Uten våpen", "damage": 0.0, "range": 0.0, "type": "none"},
+	"woodensword": {"name": "Tresverd", "damage": 18.0, "range": 2.6, "type": "melee"},
 	"sword": {"name": "Sjørøversabel", "damage": 28.0, "range": 2.8, "type": "melee"},
 	"goldsword": {"name": "Gullsverd", "damage": 45.0, "range": 3.0, "type": "melee"},
 	"rapier": {"name": "Sabeltanns kårde", "damage": 60.0, "range": 3.2, "type": "melee"},
@@ -44,9 +47,8 @@ const CANONICAL_STORY_ORDER := [
 	"outro",
 ]
 
+# Kun overgangs-filmsekvenser (cave og abra spilles ut direkte i ekte 3D med stemmer og animasjoner!)
 const LEVEL_CUTSCENES := {
-	"cave": "intro_cave",
-	"abra": "abra_miriam",
 	"graal_bosslevel": "graal_boss",
 	"fatamorgana_city": "fatamorgana_arrival",
 	"magakhan_endboss_level": "magakhan_dragon",
@@ -69,6 +71,7 @@ var quest_flags: Dictionary = {}
 var current_objective: String = ""
 var lamp_enabled: bool = false
 var suppress_cutscenes: bool = false
+var voice_language: String = "no" # "no" (Norske karakterstemmer) eller "orig" (Original CD-stemme)
 
 # Moderne AAA animasjons-grafikkinnstillinger
 var graphics_quality: String = "Ultra" # "Medium", "High", "Ultra"
@@ -88,8 +91,8 @@ func _ready() -> void:
 func reset_new_game(start_level: String = "cave") -> void:
 	current_level_id = start_level
 	health = max_health
-	coins = 25
-	equipped_weapon = "sword"
+	coins = 0 if start_level == "cave" else 25
+	equipped_weapon = "none" if start_level == "cave" else "sword"
 	visited_levels = [start_level]
 	story_achievements = ["unlockedgraal"]
 	seen_cutscenes = []
@@ -104,14 +107,9 @@ func reset_new_game(start_level: String = "cave") -> void:
 	save_game()
 
 
-func has_achievement(ach: String) -> bool:
-	return ach in story_achievements
-
-
 func grant_achievement(ach: String) -> void:
-	if not (ach in story_achievements):
-		story_achievements.append(ach)
-		save_game()
+	add_achievement(ach)
+	save_game()
 
 
 ## Returnerer 100% original neste hovedøy på Verdenskartet ut fra spillerens historiefremgang.
@@ -270,6 +268,16 @@ func apply_graphics_preset(preset: String) -> void:
 	save_game()
 
 
+func add_achievement(flag: String) -> void:
+	var low := flag.to_lower().strip_edges()
+	if low != "" and not (low in story_achievements):
+		story_achievements.append(low)
+
+
+func has_achievement(flag: String) -> bool:
+	return flag.to_lower().strip_edges() in story_achievements
+
+
 func save_game() -> void:
 	var payload := {
 		"current_level_id": current_level_id,
@@ -281,6 +289,7 @@ func save_game() -> void:
 		"seen_cutscenes": seen_cutscenes,
 		"quest_flags": quest_flags,
 		"graphics_quality": graphics_quality,
+		"voice_language": voice_language,
 	}
 	var f := FileAccess.open(SAVE_PATH, FileAccess.WRITE)
 	if f:
@@ -307,6 +316,7 @@ func load_game() -> void:
 	coins = int(parsed.get("coins", 25))
 	equipped_weapon = str(parsed.get("equipped_weapon", "sword"))
 	graphics_quality = str(parsed.get("graphics_quality", "Ultra"))
+	voice_language = str(parsed.get("voice_language", "no"))
 	var vl = parsed.get("visited_levels", ["cave"])
 	if typeof(vl) == TYPE_ARRAY:
 		visited_levels.clear()

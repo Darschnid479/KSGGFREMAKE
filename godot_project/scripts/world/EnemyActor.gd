@@ -13,11 +13,12 @@ class_name EnemyActor
 @export var coin_drop: int = 5
 
 var hp: float = 60.0
+var heightmap_sampler: Callable
 var _spawn_pos: Vector3
 var _attack_cd: float = 0.0
 var _hit_flash: float = 0.0
-var _bob_t: float = 0.0
 var _visual: Node3D
+var _animator: CharacterAnimator
 var _hp_label: Label3D
 
 const COIN_SCRIPT := preload("res://scripts/world/CollectibleCoin.gd")
@@ -70,6 +71,8 @@ func _ready() -> void:
 				_visual.add_child(glight)
 			else:
 				VisualEnhancer.enhance_character_node(_visual, true, 1.1 if is_boss else 0.72)
+				if not (model_resource in ["panther", "meatplant", "dog"]):
+					_animator = CharacterAnimator.attach_to(inst, -1.0)
 	else:
 		_build_fallback()
 
@@ -89,6 +92,10 @@ func _align_model(inst: Node3D) -> void:
 	var max_y := -99999.0
 	var found := false
 	for m in _find_meshes(inst):
+		var nm := m.name.to_lower()
+		if "shadow" in nm or "crosshair" in nm or "swoosh" in nm:
+			m.visible = false
+			continue
 		var aabb: AABB = m.get_aabb()
 		min_y = min(min_y, aabb.position.y)
 		max_y = max(max_y, aabb.position.y + aabb.size.y)
@@ -134,7 +141,7 @@ func _physics_process(delta: float) -> void:
 	_attack_cd = max(0.0, _attack_cd - delta)
 	if _hit_flash > 0.0:
 		_hit_flash = max(0.0, _hit_flash - delta)
-		_visual.scale = Vector3.ONE * (1.0 + _hit_flash * 0.45)
+		_visual.scale = Vector3.ONE * (1.0 + _hit_flash * 0.25)
 	else:
 		_visual.scale = Vector3.ONE
 
@@ -156,25 +163,39 @@ func _physics_process(delta: float) -> void:
 				var dir := diff.normalized()
 				velocity.x = dir.x * move_speed
 				velocity.z = dir.z * move_speed
-				_visual.rotation.y = lerp_angle(_visual.rotation.y, atan2(dir.x, dir.z), delta * 8.0)
-				_bob_t += delta * 7.5
-				_visual.position.y = abs(sin(_bob_t)) * 0.12
+				_visual.rotation.y = lerp_angle(_visual.rotation.y, atan2(-dir.x, -dir.z), delta * 8.0)
 			else:
 				velocity.x = 0.0
 				velocity.z = 0.0
+				if diff.length_squared() > 0.01:
+					var dir := diff.normalized()
+					_visual.rotation.y = lerp_angle(_visual.rotation.y, atan2(-dir.x, -dir.z), delta * 10.0)
 				if _attack_cd <= 0.0:
 					_attack_cd = 1.25
+					if is_instance_valid(_animator):
+						_animator.trigger_attack()
 					GameState.take_damage(attack_damage)
 		else:
 			velocity.x = lerp(velocity.x, 0.0, delta * 6.0)
 			velocity.z = lerp(velocity.z, 0.0, delta * 6.0)
 
 	move_and_slide()
+	if heightmap_sampler.is_valid():
+		var hm_y: float = heightmap_sampler.call(global_position)
+		if hm_y > -5000.0 and global_position.y <= hm_y + 0.12 and velocity.y <= 0.1:
+			global_position.y = hm_y
+			velocity.y = 0.0
+
+	if is_instance_valid(_animator):
+		var hspd := Vector2(velocity.x, velocity.z).length()
+		_animator.update_anim(delta, hspd, true, false, false, hp <= 0.0)
 
 
 func take_hit(damage: float, from_pos: Vector3) -> void:
 	hp = max(0.0, hp - damage)
 	_hit_flash = 0.2
+	if is_instance_valid(_animator):
+		_animator.trigger_hurt()
 	_update_label()
 	AudioManager.play_sfx("hit")
 

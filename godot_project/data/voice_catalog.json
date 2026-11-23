@@ -1,0 +1,2252 @@
+{
+  "abra_buylamp_shopkeeper": {
+    "raw_name": "abra_buylamp_shopkeeper",
+    "cast": "abra",
+    "speaker": "shopkeeper"
+  },
+  "abra_buyslingshot_shopkeeper": {
+    "raw_name": "abra_buyslingshot_shopkeeper",
+    "cast": "abra",
+    "speaker": "shopkeeper"
+  },
+  "abra_buysword_shopkeeper": {
+    "raw_name": "abra_buysword_shopkeeper",
+    "cast": "abra",
+    "speaker": "shopkeeper"
+  },
+  "abra_canbuylamp_easy_1_pinky": {
+    "raw_name": "abra_canbuylamp_easy_1_pinky",
+    "cast": "abra",
+    "speaker": "pinky"
+  },
+  "abra_canbuylamp_easy_2_shopkeeper": {
+    "raw_name": "abra_canbuylamp_easy_2_shopkeeper",
+    "cast": "abra",
+    "speaker": "shopkeeper"
+  },
+  "abra_canbuylamp_hard_1_pinky": {
+    "raw_name": "abra_canbuylamp_hard_1_pinky",
+    "cast": "abra",
+    "speaker": "pinky"
+  },
+  "abra_canbuylamp_hard_2_shopkeeper": {
+    "raw_name": "abra_canbuylamp_hard_2_shopkeeper",
+    "cast": "abra",
+    "speaker": "shopkeeper"
+  },
+  "abra_canbuylamp_medium_1_pinky": {
+    "raw_name": "abra_canbuylamp_medium_1_pinky",
+    "cast": "abra",
+    "speaker": "pinky"
+  },
+  "abra_canbuylamp_medium_2_shopkeeper": {
+    "raw_name": "abra_canbuylamp_medium_2_shopkeeper",
+    "cast": "abra",
+    "speaker": "shopkeeper"
+  },
+  "abra_canbuysling_easy_1_pinky": {
+    "raw_name": "abra_canbuysling_easy_1_pinky",
+    "cast": "abra",
+    "speaker": "pinky"
+  },
+  "abra_canbuysling_easy_2_shopkeeper": {
+    "raw_name": "abra_canbuysling_easy_2_shopkeeper",
+    "cast": "abra",
+    "speaker": "shopkeeper"
+  },
+  "abra_canbuysling_hard_1_pinky": {
+    "raw_name": "abra_canbuysling_hard_1_pinky",
+    "cast": "abra",
+    "speaker": "pinky"
+  },
+  "abra_canbuysling_hard_2_shopkeeper": {
+    "raw_name": "abra_canbuysling_hard_2_shopkeeper",
+    "cast": "abra",
+    "speaker": "shopkeeper"
+  },
+  "abra_canbuysling_medium_1_pinky": {
+    "raw_name": "abra_canbuysling_medium_1_pinky",
+    "cast": "abra",
+    "speaker": "pinky"
+  },
+  "abra_canbuysling_medium_2_shopkeeper": {
+    "raw_name": "abra_canbuysling_medium_2_shopkeeper",
+    "cast": "abra",
+    "speaker": "shopkeeper"
+  },
+  "abra_canbuysword_easy_1_pinky": {
+    "raw_name": "abra_canbuysword_easy_1_pinky",
+    "cast": "abra",
+    "speaker": "pinky"
+  },
+  "abra_canbuysword_easy_2_shopkeeper": {
+    "raw_name": "abra_canbuysword_easy_2_shopkeeper",
+    "cast": "abra",
+    "speaker": "shopkeeper"
+  },
+  "abra_canbuysword_hard_1_pinky": {
+    "raw_name": "abra_canbuysword_hard_1_pinky",
+    "cast": "abra",
+    "speaker": "pinky"
+  },
+  "abra_canbuysword_hard_2_shopkeeper": {
+    "raw_name": "abra_canbuysword_hard_2_shopkeeper",
+    "cast": "abra",
+    "speaker": "shopkeeper"
+  },
+  "abra_canbuysword_medium_1_pinky": {
+    "raw_name": "abra_canbuysword_medium_1_pinky",
+    "cast": "abra",
+    "speaker": "pinky"
+  },
+  "abra_canbuysword_medium_2_shopkeeper": {
+    "raw_name": "abra_canbuysword_medium_2_shopkeeper",
+    "cast": "abra",
+    "speaker": "shopkeeper"
+  },
+  "abra_cantbuylamp_easy_1_pinky": {
+    "raw_name": "abra_cantbuylamp_easy_1_pinky",
+    "cast": "abra",
+    "speaker": "pinky"
+  },
+  "abra_cantbuylamp_easy_2_shopkeeper": {
+    "raw_name": "abra_cantbuylamp_easy_2_shopkeeper",
+    "cast": "abra",
+    "speaker": "shopkeeper"
+  },
+  "abra_cantbuylamp_hard_1_pinky": {
+    "raw_name": "abra_cantbuylamp_hard_1_pinky",
+    "cast": "abra",
+    "speaker": "pinky"
+  },
+  "abra_cantbuylamp_hard_2_shopkeeper": {
+    "raw_name": "abra_cantbuylamp_hard_2_shopkeeper",
+    "cast": "abra",
+    "speaker": "shopkeeper"
+  },
+  "abra_cantbuylamp_medium_1_pinky": {
+    "raw_name": "abra_cantbuylamp_medium_1_pinky",
+    "cast": "abra",
+    "speaker": "pinky"
+  },
+  "abra_cantbuylamp_medium_2_shopkeeper": {
+    "raw_name": "abra_cantbuylamp_medium_2_shopkeeper",
+    "cast": "abra",
+    "speaker": "shopkeeper"
+  },
+  "abra_cantbuysling_easy_1_pinky": {
+    "raw_name": "abra_cantbuysling_easy_1_pinky",
+    "cast": "abra",
+    "speaker": "pinky"
+  },
+  "abra_cantbuysling_easy_2_shopkeeper": {
+    "raw_name": "abra_cantbuysling_easy_2_shopkeeper",
+    "cast": "abra",
+    "speaker": "shopkeeper"
+  },
+  "abra_cantbuysling_hard_1_pinky": {
+    "raw_name": "abra_cantbuysling_hard_1_pinky",
+    "cast": "abra",
+    "speaker": "pinky"
+  },
+  "abra_cantbuysling_hard_2_shopkeeper": {
+    "raw_name": "abra_cantbuysling_hard_2_shopkeeper",
+    "cast": "abra",
+    "speaker": "shopkeeper"
+  },
+  "abra_cantbuysling_medium_1_pinky": {
+    "raw_name": "abra_cantbuysling_medium_1_pinky",
+    "cast": "abra",
+    "speaker": "pinky"
+  },
+  "abra_cantbuysling_medium_2_shopkeeper": {
+    "raw_name": "abra_cantbuysling_medium_2_shopkeeper",
+    "cast": "abra",
+    "speaker": "shopkeeper"
+  },
+  "abra_cantbuysword_easy_1_pinky": {
+    "raw_name": "abra_cantbuysword_easy_1_pinky",
+    "cast": "abra",
+    "speaker": "pinky"
+  },
+  "abra_cantbuysword_easy_2_shopkeeper": {
+    "raw_name": "abra_cantbuysword_easy_2_shopkeeper",
+    "cast": "abra",
+    "speaker": "shopkeeper"
+  },
+  "abra_cantbuysword_hard_1_pinky": {
+    "raw_name": "abra_cantbuysword_hard_1_pinky",
+    "cast": "abra",
+    "speaker": "pinky"
+  },
+  "abra_cantbuysword_hard_2_shopkeeper": {
+    "raw_name": "abra_cantbuysword_hard_2_shopkeeper",
+    "cast": "abra",
+    "speaker": "shopkeeper"
+  },
+  "abra_cantbuysword_medium_1_pinky": {
+    "raw_name": "abra_cantbuysword_medium_1_pinky",
+    "cast": "abra",
+    "speaker": "pinky"
+  },
+  "abra_cantbuysword_medium_2_shopkeeper": {
+    "raw_name": "abra_cantbuysword_medium_2_shopkeeper",
+    "cast": "abra",
+    "speaker": "shopkeeper"
+  },
+  "abra_cave_sunniva": {
+    "raw_name": "abra_cave_sunniva",
+    "cast": "abra",
+    "speaker": "sunniva"
+  },
+  "abra_curse2_sunniva": {
+    "raw_name": "abra_curse2_sunniva",
+    "cast": "abra",
+    "speaker": "sunniva"
+  },
+  "abra_curseonyou_miriam": {
+    "raw_name": "abra_curseonyou_miriam",
+    "cast": "abra",
+    "speaker": "miriam"
+  },
+  "abra_curse_10_pinky": {
+    "raw_name": "abra_curse_10_pinky",
+    "cast": "abra",
+    "speaker": "pinky"
+  },
+  "abra_curse_11_miriam": {
+    "raw_name": "abra_curse_11_miriam",
+    "cast": "abra",
+    "speaker": "miriam"
+  },
+  "abra_curse_1_miriam": {
+    "raw_name": "abra_curse_1_miriam",
+    "cast": "abra",
+    "speaker": "miriam"
+  },
+  "abra_curse_2_pinky": {
+    "raw_name": "abra_curse_2_pinky",
+    "cast": "abra",
+    "speaker": "pinky"
+  },
+  "abra_curse_3_miriam": {
+    "raw_name": "abra_curse_3_miriam",
+    "cast": "abra",
+    "speaker": "miriam"
+  },
+  "abra_curse_4_pinky": {
+    "raw_name": "abra_curse_4_pinky",
+    "cast": "abra",
+    "speaker": "pinky"
+  },
+  "abra_curse_5_miriam": {
+    "raw_name": "abra_curse_5_miriam",
+    "cast": "abra",
+    "speaker": "miriam"
+  },
+  "abra_curse_6_pinky": {
+    "raw_name": "abra_curse_6_pinky",
+    "cast": "abra",
+    "speaker": "pinky"
+  },
+  "abra_curse_7_miriam": {
+    "raw_name": "abra_curse_7_miriam",
+    "cast": "abra",
+    "speaker": "miriam"
+  },
+  "abra_curse_8_pinky": {
+    "raw_name": "abra_curse_8_pinky",
+    "cast": "abra",
+    "speaker": "pinky"
+  },
+  "abra_curse_9_miriam": {
+    "raw_name": "abra_curse_9_miriam",
+    "cast": "abra",
+    "speaker": "miriam"
+  },
+  "abra_curse_sunniva": {
+    "raw_name": "abra_curse_sunniva",
+    "cast": "abra",
+    "speaker": "sunniva"
+  },
+  "abra_fatamorgana_sunniva": {
+    "raw_name": "abra_fatamorgana_sunniva",
+    "cast": "abra",
+    "speaker": "sunniva"
+  },
+  "abra_gocave_sunniva": {
+    "raw_name": "abra_gocave_sunniva",
+    "cast": "abra",
+    "speaker": "sunniva"
+  },
+  "abra_gofatamorgana_sunniva": {
+    "raw_name": "abra_gofatamorgana_sunniva",
+    "cast": "abra",
+    "speaker": "sunniva"
+  },
+  "abra_goshangrila_sunniva": {
+    "raw_name": "abra_goshangrila_sunniva",
+    "cast": "abra",
+    "speaker": "sunniva"
+  },
+  "abra_hey_sunniva": {
+    "raw_name": "abra_hey_sunniva",
+    "cast": "abra",
+    "speaker": "sunniva"
+  },
+  "abra_keepplaying_storyteller": {
+    "raw_name": "abra_keepplaying_storyteller",
+    "cast": "abra",
+    "speaker": "storyteller"
+  },
+  "abra_lamp_sunniva": {
+    "raw_name": "abra_lamp_sunniva",
+    "cast": "abra",
+    "speaker": "sunniva"
+  },
+  "abra_liftthecurse1_miriam": {
+    "raw_name": "abra_liftthecurse1_miriam",
+    "cast": "abra",
+    "speaker": "miriam"
+  },
+  "abra_liftthecurse2_miriam": {
+    "raw_name": "abra_liftthecurse2_miriam",
+    "cast": "abra",
+    "speaker": "miriam"
+  },
+  "abra_nohull1_1_pinky": {
+    "raw_name": "abra_nohull1_1_pinky",
+    "cast": "abra",
+    "speaker": "pinky"
+  },
+  "abra_nohull1_2_shipman": {
+    "raw_name": "abra_nohull1_2_shipman",
+    "cast": "abra",
+    "speaker": "shipman"
+  },
+  "abra_nohull2_1_pinky": {
+    "raw_name": "abra_nohull2_1_pinky",
+    "cast": "abra",
+    "speaker": "pinky"
+  },
+  "abra_nohull2_2_shipman": {
+    "raw_name": "abra_nohull2_2_shipman",
+    "cast": "abra",
+    "speaker": "shipman"
+  },
+  "abra_nohull3_1_pinky": {
+    "raw_name": "abra_nohull3_1_pinky",
+    "cast": "abra",
+    "speaker": "pinky"
+  },
+  "abra_nohull3_2_shipman": {
+    "raw_name": "abra_nohull3_2_shipman",
+    "cast": "abra",
+    "speaker": "shipman"
+  },
+  "abra_nohull4_1_pinky": {
+    "raw_name": "abra_nohull4_1_pinky",
+    "cast": "abra",
+    "speaker": "pinky"
+  },
+  "abra_nohull4_2_shipman": {
+    "raw_name": "abra_nohull4_2_shipman",
+    "cast": "abra",
+    "speaker": "shipman"
+  },
+  "abra_nosail1_1_pinky": {
+    "raw_name": "abra_nosail1_1_pinky",
+    "cast": "abra",
+    "speaker": "pinky"
+  },
+  "abra_nosail1_2_shipman": {
+    "raw_name": "abra_nosail1_2_shipman",
+    "cast": "abra",
+    "speaker": "shipman"
+  },
+  "abra_nosail2_1_pinky": {
+    "raw_name": "abra_nosail2_1_pinky",
+    "cast": "abra",
+    "speaker": "pinky"
+  },
+  "abra_nosail2_2_shipman": {
+    "raw_name": "abra_nosail2_2_shipman",
+    "cast": "abra",
+    "speaker": "shipman"
+  },
+  "abra_nosail3_1_pinky": {
+    "raw_name": "abra_nosail3_1_pinky",
+    "cast": "abra",
+    "speaker": "pinky"
+  },
+  "abra_nosail3_2_shipman": {
+    "raw_name": "abra_nosail3_2_shipman",
+    "cast": "abra",
+    "speaker": "shipman"
+  },
+  "abra_nosail4_1_pinky": {
+    "raw_name": "abra_nosail4_1_pinky",
+    "cast": "abra",
+    "speaker": "pinky"
+  },
+  "abra_nosail4_2_shipman": {
+    "raw_name": "abra_nosail4_2_shipman",
+    "cast": "abra",
+    "speaker": "shipman"
+  },
+  "abra_nothingforsale_shopkeeper": {
+    "raw_name": "abra_nothingforsale_shopkeeper",
+    "cast": "abra",
+    "speaker": "shopkeeper"
+  },
+  "abra_opponent1defeated_1_opponent1": {
+    "raw_name": "abra_opponent1defeated_1_opponent1",
+    "cast": "abra",
+    "speaker": "opponent1"
+  },
+  "abra_opponent1_1_opponent1": {
+    "raw_name": "abra_opponent1_1_opponent1",
+    "cast": "abra",
+    "speaker": "opponent1"
+  },
+  "abra_opponent1_2_pinky": {
+    "raw_name": "abra_opponent1_2_pinky",
+    "cast": "abra",
+    "speaker": "pinky"
+  },
+  "abra_opponent1_3_opponent1": {
+    "raw_name": "abra_opponent1_3_opponent1",
+    "cast": "abra",
+    "speaker": "opponent1"
+  },
+  "abra_opponent2defeated_1_opponent2": {
+    "raw_name": "abra_opponent2defeated_1_opponent2",
+    "cast": "abra",
+    "speaker": "opponent2"
+  },
+  "abra_opponent2_1_opponent2": {
+    "raw_name": "abra_opponent2_1_opponent2",
+    "cast": "abra",
+    "speaker": "opponent2"
+  },
+  "abra_opponent2_2_pinky": {
+    "raw_name": "abra_opponent2_2_pinky",
+    "cast": "abra",
+    "speaker": "pinky"
+  },
+  "abra_opponent2_3_opponent2": {
+    "raw_name": "abra_opponent2_3_opponent2",
+    "cast": "abra",
+    "speaker": "opponent2"
+  },
+  "abra_opponent3defeated_1_opponent3": {
+    "raw_name": "abra_opponent3defeated_1_opponent3",
+    "cast": "abra",
+    "speaker": "opponent3"
+  },
+  "abra_opponent3_1_opponent3": {
+    "raw_name": "abra_opponent3_1_opponent3",
+    "cast": "abra",
+    "speaker": "opponent3"
+  },
+  "abra_opponent3_2_pinky": {
+    "raw_name": "abra_opponent3_2_pinky",
+    "cast": "abra",
+    "speaker": "pinky"
+  },
+  "abra_opponent3_3_opponent3": {
+    "raw_name": "abra_opponent3_3_opponent3",
+    "cast": "abra",
+    "speaker": "opponent3"
+  },
+  "abra_portal_no_1_miriam": {
+    "raw_name": "abra_portal_no_1_miriam",
+    "cast": "abra",
+    "speaker": "miriam"
+  },
+  "abra_portal_yes_1_miriam": {
+    "raw_name": "abra_portal_yes_1_miriam",
+    "cast": "abra",
+    "speaker": "miriam"
+  },
+  "abra_shangrila_shopkeeper": {
+    "raw_name": "abra_shangrila_shopkeeper",
+    "cast": "abra",
+    "speaker": "shopkeeper"
+  },
+  "abra_shangrila_sunniva": {
+    "raw_name": "abra_shangrila_sunniva",
+    "cast": "abra",
+    "speaker": "sunniva"
+  },
+  "abra_slingshot_sunniva": {
+    "raw_name": "abra_slingshot_sunniva",
+    "cast": "abra",
+    "speaker": "sunniva"
+  },
+  "abra_tip3_1_sunniva": {
+    "raw_name": "abra_tip3_1_sunniva",
+    "cast": "abra",
+    "speaker": "sunniva"
+  },
+  "abra_treasures_1_sunniva": {
+    "raw_name": "abra_treasures_1_sunniva",
+    "cast": "abra",
+    "speaker": "sunniva"
+  },
+  "abra_unlockcave_1_sunniva": {
+    "raw_name": "abra_unlockcave_1_sunniva",
+    "cast": "abra",
+    "speaker": "sunniva"
+  },
+  "abra_unlockcave_2_pinky": {
+    "raw_name": "abra_unlockcave_2_pinky",
+    "cast": "abra",
+    "speaker": "pinky"
+  },
+  "abra_unlockcave_3_sunniva": {
+    "raw_name": "abra_unlockcave_3_sunniva",
+    "cast": "abra",
+    "speaker": "sunniva"
+  },
+  "abra_unlockfatamorgana_1_prostitute2": {
+    "raw_name": "abra_unlockfatamorgana_1_prostitute2",
+    "cast": "abra",
+    "speaker": "prostitute2"
+  },
+  "abra_unlockfatamorgana_2_pinky": {
+    "raw_name": "abra_unlockfatamorgana_2_pinky",
+    "cast": "abra",
+    "speaker": "pinky"
+  },
+  "abra_unlockfatamorgana_3_prostitute2": {
+    "raw_name": "abra_unlockfatamorgana_3_prostitute2",
+    "cast": "abra",
+    "speaker": "prostitute2"
+  },
+  "abra_unlockshangrila_1_shopkeeper": {
+    "raw_name": "abra_unlockshangrila_1_shopkeeper",
+    "cast": "abra",
+    "speaker": "shopkeeper"
+  },
+  "abra_unlockshangrila_2_pinky": {
+    "raw_name": "abra_unlockshangrila_2_pinky",
+    "cast": "abra",
+    "speaker": "pinky"
+  },
+  "abra_unlockshangrila_3_shopkeeper": {
+    "raw_name": "abra_unlockshangrila_3_shopkeeper",
+    "cast": "abra",
+    "speaker": "shopkeeper"
+  },
+  "abra_useportal1_miriam": {
+    "raw_name": "abra_useportal1_miriam",
+    "cast": "abra",
+    "speaker": "miriam"
+  },
+  "abra_useportal2_miriam": {
+    "raw_name": "abra_useportal2_miriam",
+    "cast": "abra",
+    "speaker": "miriam"
+  },
+  "abra_useportal3_storyteller": {
+    "raw_name": "abra_useportal3_storyteller",
+    "cast": "abra",
+    "speaker": "storyteller"
+  },
+  "abra_yeshull1_1_pinky": {
+    "raw_name": "abra_yeshull1_1_pinky",
+    "cast": "abra",
+    "speaker": "pinky"
+  },
+  "abra_yeshull1_2_shipman": {
+    "raw_name": "abra_yeshull1_2_shipman",
+    "cast": "abra",
+    "speaker": "shipman"
+  },
+  "abra_yeshull2_1_pinky": {
+    "raw_name": "abra_yeshull2_1_pinky",
+    "cast": "abra",
+    "speaker": "pinky"
+  },
+  "abra_yeshull2_2_shipman": {
+    "raw_name": "abra_yeshull2_2_shipman",
+    "cast": "abra",
+    "speaker": "shipman"
+  },
+  "abra_yeshull3_1_pinky": {
+    "raw_name": "abra_yeshull3_1_pinky",
+    "cast": "abra",
+    "speaker": "pinky"
+  },
+  "abra_yeshull3_2_shipman": {
+    "raw_name": "abra_yeshull3_2_shipman",
+    "cast": "abra",
+    "speaker": "shipman"
+  },
+  "abra_yeshull3_3_pinky": {
+    "raw_name": "abra_yeshull3_3_pinky",
+    "cast": "abra",
+    "speaker": "pinky"
+  },
+  "abra_yessail1_1_pinky": {
+    "raw_name": "abra_yessail1_1_pinky",
+    "cast": "abra",
+    "speaker": "pinky"
+  },
+  "abra_yessail1_2_shipman": {
+    "raw_name": "abra_yessail1_2_shipman",
+    "cast": "abra",
+    "speaker": "shipman"
+  },
+  "abra_yessail2_1_pinky": {
+    "raw_name": "abra_yessail2_1_pinky",
+    "cast": "abra",
+    "speaker": "pinky"
+  },
+  "abra_yessail2_2_shipman": {
+    "raw_name": "abra_yessail2_2_shipman",
+    "cast": "abra",
+    "speaker": "shipman"
+  },
+  "abra_yessail3_1_pinky": {
+    "raw_name": "abra_yessail3_1_pinky",
+    "cast": "abra",
+    "speaker": "pinky"
+  },
+  "abra_yessail3_2_shipman": {
+    "raw_name": "abra_yessail3_2_shipman",
+    "cast": "abra",
+    "speaker": "shipman"
+  },
+  "abra_yessail3_3_pinky": {
+    "raw_name": "abra_yessail3_3_pinky",
+    "cast": "abra",
+    "speaker": "pinky"
+  },
+  "pelle_intro_push": {
+    "raw_name": "pelle_intro_push",
+    "cast": "cave",
+    "speaker": "push"
+  },
+  "cave_start_chamber_1_sabeltann": {
+    "raw_name": "cave_start_chamber_1_sabeltann",
+    "cast": "cave",
+    "speaker": "sabeltann"
+  },
+  "cave_start_chest_1_pinky": {
+    "raw_name": "cave_start_chest_1_pinky",
+    "cast": "cave",
+    "speaker": "pinky"
+  },
+  "cave_start_chest_2_sabeltann": {
+    "raw_name": "cave_start_chest_2_sabeltann",
+    "cast": "cave",
+    "speaker": "sabeltann"
+  },
+  "cave_start_chest_3_langemann": {
+    "raw_name": "cave_start_chest_3_langemann",
+    "cast": "cave",
+    "speaker": "langemann"
+  },
+  "cave_start_chest_4_sabeltann": {
+    "raw_name": "cave_start_chest_4_sabeltann",
+    "cast": "cave",
+    "speaker": "sabeltann"
+  },
+  "cave_start_controlsintro_storyteller": {
+    "raw_name": "cave_start_controlsintro_storyteller",
+    "cast": "cave",
+    "speaker": "storyteller"
+  },
+  "cave_start_controls_1_sabeltann": {
+    "raw_name": "cave_start_controls_1_sabeltann",
+    "cast": "cave",
+    "speaker": "sabeltann"
+  },
+  "cave_start_cratesintro_storyteller": {
+    "raw_name": "cave_start_cratesintro_storyteller",
+    "cast": "cave",
+    "speaker": "storyteller"
+  },
+  "cave_start_donecrate_1_sabeltann": {
+    "raw_name": "cave_start_donecrate_1_sabeltann",
+    "cast": "cave",
+    "speaker": "sabeltann"
+  },
+  "cave_start_findthechest_1_sabeltann": {
+    "raw_name": "cave_start_findthechest_1_sabeltann",
+    "cast": "cave",
+    "speaker": "sabeltann"
+  },
+  "cave_start_getbackin_benjamin": {
+    "raw_name": "cave_start_getbackin_benjamin",
+    "cast": "cave",
+    "speaker": "benjamin"
+  },
+  "cave_start_intro1_1_sabeltann": {
+    "raw_name": "cave_start_intro1_1_sabeltann",
+    "cast": "cave",
+    "speaker": "sabeltann"
+  },
+  "cave_start_intro1_2_langemann": {
+    "raw_name": "cave_start_intro1_2_langemann",
+    "cast": "cave",
+    "speaker": "langemann"
+  },
+  "cave_start_intro1_3_sabeltann": {
+    "raw_name": "cave_start_intro1_3_sabeltann",
+    "cast": "cave",
+    "speaker": "sabeltann"
+  },
+  "cave_start_intro4_1_sabeltann": {
+    "raw_name": "cave_start_intro4_1_sabeltann",
+    "cast": "cave",
+    "speaker": "sabeltann"
+  },
+  "cave_start_intro4_2_langemann": {
+    "raw_name": "cave_start_intro4_2_langemann",
+    "cast": "cave",
+    "speaker": "langemann"
+  },
+  "cave_start_intro4_3_pysa": {
+    "raw_name": "cave_start_intro4_3_pysa",
+    "cast": "cave",
+    "speaker": "pysa"
+  },
+  "cave_start_intro4_4_pelle": {
+    "raw_name": "cave_start_intro4_4_pelle",
+    "cast": "cave",
+    "speaker": "pelle"
+  },
+  "cave_start_intro4_5_langemann": {
+    "raw_name": "cave_start_intro4_5_langemann",
+    "cast": "cave",
+    "speaker": "langemann"
+  },
+  "cave_start_jumpsintro_storyteller": {
+    "raw_name": "cave_start_jumpsintro_storyteller",
+    "cast": "cave",
+    "speaker": "storyteller"
+  },
+  "cave_start_lookingforfood_skalken": {
+    "raw_name": "cave_start_lookingforfood_skalken",
+    "cast": "cave",
+    "speaker": "skalken"
+  },
+  "cave_start_openchest_1_pelle": {
+    "raw_name": "cave_start_openchest_1_pelle",
+    "cast": "cave",
+    "speaker": "pelle"
+  },
+  "cave_start_openchest_2_sabeltann": {
+    "raw_name": "cave_start_openchest_2_sabeltann",
+    "cast": "cave",
+    "speaker": "sabeltann"
+  },
+  "cave_start_openchest_3_pelle": {
+    "raw_name": "cave_start_openchest_3_pelle",
+    "cast": "cave",
+    "speaker": "pelle"
+  },
+  "cave_start_openchest_4_pysa": {
+    "raw_name": "cave_start_openchest_4_pysa",
+    "cast": "cave",
+    "speaker": "pysa"
+  },
+  "cave_start_openchest_5_sabeltann": {
+    "raw_name": "cave_start_openchest_5_sabeltann",
+    "cast": "cave",
+    "speaker": "sabeltann"
+  },
+  "cave_start_openchest_6_pysa": {
+    "raw_name": "cave_start_openchest_6_pysa",
+    "cast": "cave",
+    "speaker": "pysa"
+  },
+  "cave_start_openchest_7_pelle": {
+    "raw_name": "cave_start_openchest_7_pelle",
+    "cast": "cave",
+    "speaker": "pelle"
+  },
+  "cave_start_ready_1_pelle": {
+    "raw_name": "cave_start_ready_1_pelle",
+    "cast": "cave",
+    "speaker": "pelle"
+  },
+  "cave_start_releaseending_1_boss": {
+    "raw_name": "cave_start_releaseending_1_boss",
+    "cast": "cave",
+    "speaker": "boss"
+  },
+  "cave_start_release_1_sabeltann": {
+    "raw_name": "cave_start_release_1_sabeltann",
+    "cast": "cave",
+    "speaker": "sabeltann"
+  },
+  "cave_start_release_2_pysa": {
+    "raw_name": "cave_start_release_2_pysa",
+    "cast": "cave",
+    "speaker": "pysa"
+  },
+  "cave_start_release_3_pelle": {
+    "raw_name": "cave_start_release_3_pelle",
+    "cast": "cave",
+    "speaker": "pelle"
+  },
+  "cave_start_sword1_1_pinky": {
+    "raw_name": "Cave_start_sword1_1_pinky",
+    "cast": "cave",
+    "speaker": "pinky"
+  },
+  "cave_start_sword2_1_pinky": {
+    "raw_name": "Cave_start_sword2_1_pinky",
+    "cast": "cave",
+    "speaker": "pinky"
+  },
+  "cave_start_swordintro_storyteller": {
+    "raw_name": "cave_start_swordintro_storyteller",
+    "cast": "cave",
+    "speaker": "storyteller"
+  },
+  "cave_start_throws_1_pelle": {
+    "raw_name": "cave_start_throws_1_pelle",
+    "cast": "cave",
+    "speaker": "pelle"
+  },
+  "cave_start_throw_pelle": {
+    "raw_name": "cave_start_throw_pelle",
+    "cast": "cave",
+    "speaker": "pelle"
+  },
+  "cave_start_watchout1_1_sabeltann": {
+    "raw_name": "cave_start_watchout1_1_sabeltann",
+    "cast": "cave",
+    "speaker": "sabeltann"
+  },
+  "cave_start_watchout2_1_sabeltann": {
+    "raw_name": "cave_start_watchout2_1_sabeltann",
+    "cast": "cave",
+    "speaker": "sabeltann"
+  },
+  "cave_start_wow_1_langemann": {
+    "raw_name": "cave_start_wow_1_langemann",
+    "cast": "cave",
+    "speaker": "langemann"
+  },
+  "cave_start_wow_2_sabeltann": {
+    "raw_name": "cave_start_wow_2_sabeltann",
+    "cast": "cave",
+    "speaker": "sabeltann"
+  },
+  "cave_end_dontworry_1_langemann": {
+    "raw_name": "cave_end_dontworry_1_langemann",
+    "cast": "cave_end",
+    "speaker": "langemann"
+  },
+  "cave_end_gofirst_1_langemann": {
+    "raw_name": "cave_end_gofirst_1_langemann",
+    "cast": "cave_end",
+    "speaker": "langemann"
+  },
+  "cave_end_gofirst_2_sabeltann": {
+    "raw_name": "cave_end_gofirst_2_sabeltann",
+    "cast": "cave_end",
+    "speaker": "sabeltann"
+  },
+  "cave_end_gofirst_3_langemann": {
+    "raw_name": "cave_end_gofirst_3_langemann",
+    "cast": "cave_end",
+    "speaker": "langemann"
+  },
+  "cave_end_gofirst_4_pinky": {
+    "raw_name": "cave_end_gofirst_4_pinky",
+    "cast": "cave_end",
+    "speaker": "pinky"
+  },
+  "cave_end_intro_1_sabeltann": {
+    "raw_name": "cave_end_intro_1_sabeltann",
+    "cast": "cave_end",
+    "speaker": "sabeltann"
+  },
+  "cave_end_skeleton_1_sabeltann": {
+    "raw_name": "cave_end_skeleton_1_sabeltann",
+    "cast": "cave_end",
+    "speaker": "sabeltann"
+  },
+  "cave_boss_hint2_1_pinky": {
+    "raw_name": "cave_boss_hint2_1_pinky",
+    "cast": "cave_end_bosslevel",
+    "speaker": "pinky"
+  },
+  "cave_boss_hint3_1_pinky": {
+    "raw_name": "cave_boss_hint3_1_pinky",
+    "cast": "cave_end_bosslevel",
+    "speaker": "pinky"
+  },
+  "cave_boss_hint4_1_pinky": {
+    "raw_name": "cave_boss_hint4_1_pinky",
+    "cast": "cave_end_bosslevel",
+    "speaker": "pinky"
+  },
+  "cave_boss_hit_1_skeleton_boss": {
+    "raw_name": "cave_boss_hit_1_skeleton_boss",
+    "cast": "cave_end_bosslevel",
+    "speaker": "boss"
+  },
+  "cave_boss_idle1_1_skeleton_boss": {
+    "raw_name": "cave_boss_idle1_1_skeleton_boss",
+    "cast": "cave_end_bosslevel",
+    "speaker": "boss"
+  },
+  "cave_boss_idle2_1_skeleton_boss": {
+    "raw_name": "cave_boss_idle2_1_skeleton_boss",
+    "cast": "cave_end_bosslevel",
+    "speaker": "boss"
+  },
+  "cave_boss_intro_1_skeleton_boss": {
+    "raw_name": "cave_boss_intro_1_skeleton_boss",
+    "cast": "cave_end_bosslevel",
+    "speaker": "boss"
+  },
+  "cave_boss_intro_2_pinky": {
+    "raw_name": "cave_boss_intro_2_pinky",
+    "cast": "cave_end_bosslevel",
+    "speaker": "pinky"
+  },
+  "cave_boss_intro_3_skeleton_boss": {
+    "raw_name": "cave_boss_intro_3_skeleton_boss",
+    "cast": "cave_end_bosslevel",
+    "speaker": "boss"
+  },
+  "cave_boss_laugh1_1_skeleton_boss": {
+    "raw_name": "cave_boss_laugh1_1_skeleton_boss",
+    "cast": "cave_end_bosslevel",
+    "speaker": "boss"
+  },
+  "cave_boss_laugh2_1_skeleton_boss": {
+    "raw_name": "cave_boss_laugh2_1_skeleton_boss",
+    "cast": "cave_end_bosslevel",
+    "speaker": "boss"
+  },
+  "cave_boss_wakeup1_1_skeleton_boss": {
+    "raw_name": "cave_boss_wakeup1_1_skeleton_boss",
+    "cast": "cave_end_bosslevel",
+    "speaker": "boss"
+  },
+  "cave_boss_wakeup2_1_skeleton_boss": {
+    "raw_name": "cave_boss_wakeup2_1_skeleton_boss",
+    "cast": "cave_end_bosslevel",
+    "speaker": "boss"
+  },
+  "cave_boss_wakeup3_1_skeleton_boss": {
+    "raw_name": "cave_boss_wakeup3_1_skeleton_boss",
+    "cast": "cave_end_bosslevel",
+    "speaker": "boss"
+  },
+  "cave_boss_win_1_skeleton_boss": {
+    "raw_name": "cave_boss_win_1_skeleton_boss",
+    "cast": "cave_end_bosslevel",
+    "speaker": "boss"
+  },
+  "cave_boss_win_2_pinky": {
+    "raw_name": "cave_boss_win_2_pinky",
+    "cast": "cave_end_bosslevel",
+    "speaker": "pinky"
+  },
+  "cave_boss_win_3_skeleton_boss": {
+    "raw_name": "cave_boss_win_3_skeleton_boss",
+    "cast": "cave_end_bosslevel",
+    "speaker": "boss"
+  },
+  "cave_boss_win_4_pinky": {
+    "raw_name": "cave_boss_win_4_pinky",
+    "cast": "cave_end_bosslevel",
+    "speaker": "pinky"
+  },
+  "cave_boss_win_5_skeleton_boss": {
+    "raw_name": "cave_boss_win_5_skeleton_boss",
+    "cast": "cave_end_bosslevel",
+    "speaker": "boss"
+  },
+  "cave_boss_win_6_pinky": {
+    "raw_name": "cave_boss_win_6_pinky",
+    "cast": "cave_end_bosslevel",
+    "speaker": "pinky"
+  },
+  "cave_boss_win_7_skeleton_boss": {
+    "raw_name": "cave_boss_win_7_skeleton_boss",
+    "cast": "cave_end_bosslevel",
+    "speaker": "boss"
+  },
+  "cave_boss_win_8_pinky": {
+    "raw_name": "cave_boss_win_8_pinky",
+    "cast": "cave_end_bosslevel",
+    "speaker": "pinky"
+  },
+  "cave_boss_win_9_skeleton_boss": {
+    "raw_name": "cave_boss_win_9_skeleton_boss",
+    "cast": "cave_end_bosslevel",
+    "speaker": "boss"
+  },
+  "skeleton_boss_intro": {
+    "raw_name": "skeleton_boss_intro",
+    "cast": "cave_end_bosslevel",
+    "speaker": "intro"
+  },
+  "cave_boss_change1_1_skeleton_boss": {
+    "raw_name": "cave_boss_change1_1_skeleton_boss",
+    "cast": "cave_end_bosslevel",
+    "speaker": "boss"
+  },
+  "cave_boss_change1_2_skeleton_boss": {
+    "raw_name": "cave_boss_change1_2_skeleton_boss",
+    "cast": "cave_end_bosslevel",
+    "speaker": "boss"
+  },
+  "cave_boss_change1_3_pinky": {
+    "raw_name": "cave_boss_change1_3_pinky",
+    "cast": "cave_end_bosslevel",
+    "speaker": "pinky"
+  },
+  "cave_boss_hint1_1_pinky": {
+    "raw_name": "cave_boss_hint1_1_pinky",
+    "cast": "cave_end_bosslevel",
+    "speaker": "pinky"
+  },
+  "fatamorgana_boss_whatwasthat_1_pinky": {
+    "raw_name": "fatamorgana_boss_whatwasthat_1_pinky",
+    "cast": "fatamorgana_bosslevel",
+    "speaker": "pinky"
+  },
+  "fatamorgana_boss_won_1_pinky": {
+    "raw_name": "fatamorgana_boss_won_1_pinky",
+    "cast": "fatamorgana_bosslevel",
+    "speaker": "pinky"
+  },
+  "fatamorgana_boss_yikes1_1_pinky": {
+    "raw_name": "fatamorgana_boss_yikes1_1_pinky",
+    "cast": "fatamorgana_bosslevel",
+    "speaker": "pinky"
+  },
+  "fatamorgana_boss_yikes2_1_pinky": {
+    "raw_name": "fatamorgana_boss_yikes2_1_pinky",
+    "cast": "fatamorgana_bosslevel",
+    "speaker": "pinky"
+  },
+  "fatamorgana_boss_intro": {
+    "raw_name": "fatamorgana_boss_intro",
+    "cast": "fatamorgana_bosslevel",
+    "speaker": "intro"
+  },
+  "fatamorgana_boss_itscomming1_1_pinky": {
+    "raw_name": "fatamorgana_boss_itscomming1_1_pinky",
+    "cast": "fatamorgana_bosslevel",
+    "speaker": "pinky"
+  },
+  "fatamorgana_boss_itscomming2_1_pinky": {
+    "raw_name": "fatamorgana_boss_itscomming2_1_pinky",
+    "cast": "fatamorgana_bosslevel",
+    "speaker": "pinky"
+  },
+  "fatamorgana_city_bakeyourself_skalken": {
+    "raw_name": "fatamorgana_city_bakeyourself_skalken",
+    "cast": "fatamorgana_city",
+    "speaker": "skalken"
+  },
+  "fatamorgana_city_cakeend_10_sabeltann": {
+    "raw_name": "fatamorgana_city_cakeend_10_sabeltann",
+    "cast": "fatamorgana_city",
+    "speaker": "sabeltann"
+  },
+  "fatamorgana_city_cakeend_1_sabeltann": {
+    "raw_name": "fatamorgana_city_cakeend_1_sabeltann",
+    "cast": "fatamorgana_city",
+    "speaker": "sabeltann"
+  },
+  "fatamorgana_city_cakeend_2_pinky": {
+    "raw_name": "fatamorgana_city_cakeend_2_pinky",
+    "cast": "fatamorgana_city",
+    "speaker": "pinky"
+  },
+  "fatamorgana_city_cakeend_3_guard3": {
+    "raw_name": "fatamorgana_city_cakeend_3_guard3",
+    "cast": "fatamorgana_city",
+    "speaker": "guard3"
+  },
+  "fatamorgana_city_cakeend_4_guard4": {
+    "raw_name": "fatamorgana_city_cakeend_4_guard4",
+    "cast": "fatamorgana_city",
+    "speaker": "guard4"
+  },
+  "fatamorgana_city_cakeend_5_guard2": {
+    "raw_name": "fatamorgana_city_cakeend_5_guard2",
+    "cast": "fatamorgana_city",
+    "speaker": "guard2"
+  },
+  "fatamorgana_city_cakeend_6_guard1": {
+    "raw_name": "fatamorgana_city_cakeend_6_guard1",
+    "cast": "fatamorgana_city",
+    "speaker": "guard1"
+  },
+  "fatamorgana_city_cakeend_7_guard3": {
+    "raw_name": "fatamorgana_city_cakeend_7_guard3",
+    "cast": "fatamorgana_city",
+    "speaker": "guard3"
+  },
+  "fatamorgana_city_cakeend_8_guard1": {
+    "raw_name": "fatamorgana_city_cakeend_8_guard1",
+    "cast": "fatamorgana_city",
+    "speaker": "guard1"
+  },
+  "fatamorgana_city_cakeend_9_guard4": {
+    "raw_name": "fatamorgana_city_cakeend_9_guard4",
+    "cast": "fatamorgana_city",
+    "speaker": "guard4"
+  },
+  "fatamorgana_city_cakesforsale_shopkeeper": {
+    "raw_name": "fatamorgana_city_cakesforsale_shopkeeper",
+    "cast": "fatamorgana_city",
+    "speaker": "shopkeeper"
+  },
+  "fatamorgana_city_enoughcopper_1_shopkeeper": {
+    "raw_name": "fatamorgana_city_enoughcopper_1_shopkeeper",
+    "cast": "fatamorgana_city",
+    "speaker": "shopkeeper"
+  },
+  "fatamorgana_city_firstcake1_1_pinky": {
+    "raw_name": "fatamorgana_city_firstcake1_1_pinky",
+    "cast": "fatamorgana_city",
+    "speaker": "pinky"
+  },
+  "fatamorgana_city_firstcake2_1_pelle": {
+    "raw_name": "fatamorgana_city_firstcake2_1_pelle",
+    "cast": "fatamorgana_city",
+    "speaker": "pelle"
+  },
+  "fatamorgana_city_gate_10_guard2": {
+    "raw_name": "fatamorgana_city_gate_10_guard2",
+    "cast": "fatamorgana_city",
+    "speaker": "guard2"
+  },
+  "fatamorgana_city_gate_11_guard4": {
+    "raw_name": "fatamorgana_city_gate_11_guard4",
+    "cast": "fatamorgana_city",
+    "speaker": "guard4"
+  },
+  "fatamorgana_city_gate_12_guard1": {
+    "raw_name": "fatamorgana_city_gate_12_guard1",
+    "cast": "fatamorgana_city",
+    "speaker": "guard1"
+  },
+  "fatamorgana_city_gate_13_guard3": {
+    "raw_name": "fatamorgana_city_gate_13_guard3",
+    "cast": "fatamorgana_city",
+    "speaker": "guard3"
+  },
+  "fatamorgana_city_gate_14_guard2": {
+    "raw_name": "fatamorgana_city_gate_14_guard2",
+    "cast": "fatamorgana_city",
+    "speaker": "guard2"
+  },
+  "fatamorgana_city_gate_1_sabeltann": {
+    "raw_name": "fatamorgana_city_gate_1_sabeltann",
+    "cast": "fatamorgana_city",
+    "speaker": "sabeltann"
+  },
+  "fatamorgana_city_gate_2_guard3": {
+    "raw_name": "fatamorgana_city_gate_2_guard3",
+    "cast": "fatamorgana_city",
+    "speaker": "guard3"
+  },
+  "fatamorgana_city_gate_3_guard1": {
+    "raw_name": "fatamorgana_city_gate_3_guard1",
+    "cast": "fatamorgana_city",
+    "speaker": "guard1"
+  },
+  "fatamorgana_city_gate_4_sabeltann": {
+    "raw_name": "fatamorgana_city_gate_4_sabeltann",
+    "cast": "fatamorgana_city",
+    "speaker": "sabeltann"
+  },
+  "fatamorgana_city_gate_5_langemann": {
+    "raw_name": "fatamorgana_city_gate_5_langemann",
+    "cast": "fatamorgana_city",
+    "speaker": "langemann"
+  },
+  "fatamorgana_city_gate_6_guard2": {
+    "raw_name": "fatamorgana_city_gate_6_guard2",
+    "cast": "fatamorgana_city",
+    "speaker": "guard2"
+  },
+  "fatamorgana_city_gate_7_guard4": {
+    "raw_name": "fatamorgana_city_gate_7_guard4",
+    "cast": "fatamorgana_city",
+    "speaker": "guard4"
+  },
+  "fatamorgana_city_gate_8_guard1": {
+    "raw_name": "fatamorgana_city_gate_8_guard1",
+    "cast": "fatamorgana_city",
+    "speaker": "guard1"
+  },
+  "fatamorgana_city_gate_9_guard3": {
+    "raw_name": "fatamorgana_city_gate_9_guard3",
+    "cast": "fatamorgana_city",
+    "speaker": "guard3"
+  },
+  "fatamorgana_city_gotalltargets_1_carpet_salesman": {
+    "raw_name": "fatamorgana_city_gotalltargets_1_carpet_salesman",
+    "cast": "fatamorgana_city",
+    "speaker": "carpet_salesman"
+  },
+  "fatamorgana_city_gotfinalcake_1_pinky": {
+    "raw_name": "fatamorgana_city_gotfinalcake_1_pinky",
+    "cast": "fatamorgana_city",
+    "speaker": "pinky"
+  },
+  "fatamorgana_city_gotfinalcake_2_guard3": {
+    "raw_name": "fatamorgana_city_gotfinalcake_2_guard3",
+    "cast": "fatamorgana_city",
+    "speaker": "guard3"
+  },
+  "fatamorgana_city_gotfinalcake_3_guard2": {
+    "raw_name": "fatamorgana_city_gotfinalcake_3_guard2",
+    "cast": "fatamorgana_city",
+    "speaker": "guard2"
+  },
+  "fatamorgana_city_gotfinalcake_4_guard4": {
+    "raw_name": "fatamorgana_city_gotfinalcake_4_guard4",
+    "cast": "fatamorgana_city",
+    "speaker": "guard4"
+  },
+  "fatamorgana_city_gotfinalcake_5_pinky": {
+    "raw_name": "fatamorgana_city_gotfinalcake_5_pinky",
+    "cast": "fatamorgana_city",
+    "speaker": "pinky"
+  },
+  "fatamorgana_city_gotfinalcake_6_sabeltann": {
+    "raw_name": "fatamorgana_city_gotfinalcake_6_sabeltann",
+    "cast": "fatamorgana_city",
+    "speaker": "sabeltann"
+  },
+  "fatamorgana_city_gotfinalcake_7_pelle": {
+    "raw_name": "fatamorgana_city_gotfinalcake_7_pelle",
+    "cast": "fatamorgana_city",
+    "speaker": "pelle"
+  },
+  "fatamorgana_city_gotfinalcake_8_pysa": {
+    "raw_name": "fatamorgana_city_gotfinalcake_8_pysa",
+    "cast": "fatamorgana_city",
+    "speaker": "pysa"
+  },
+  "fatamorgana_city_gotfinalcake_9_pinky": {
+    "raw_name": "fatamorgana_city_gotfinalcake_9_pinky",
+    "cast": "fatamorgana_city",
+    "speaker": "pinky"
+  },
+  "fatamorgana_city_gotfourcakes_1_pinky": {
+    "raw_name": "fatamorgana_city_gotfourcakes_1_pinky",
+    "cast": "fatamorgana_city",
+    "speaker": "pinky"
+  },
+  "fatamorgana_city_gotfourcakes_2_guard1": {
+    "raw_name": "fatamorgana_city_gotfourcakes_2_guard1",
+    "cast": "fatamorgana_city",
+    "speaker": "guard1"
+  },
+  "fatamorgana_city_gotfourcakes_3_guard3": {
+    "raw_name": "fatamorgana_city_gotfourcakes_3_guard3",
+    "cast": "fatamorgana_city",
+    "speaker": "guard3"
+  },
+  "fatamorgana_city_gotfourcakes_4_pinky": {
+    "raw_name": "fatamorgana_city_gotfourcakes_4_pinky",
+    "cast": "fatamorgana_city",
+    "speaker": "pinky"
+  },
+  "fatamorgana_city_gotfourcakes_5_pysa": {
+    "raw_name": "fatamorgana_city_gotfourcakes_5_pysa",
+    "cast": "fatamorgana_city",
+    "speaker": "pysa"
+  },
+  "fatamorgana_city_gotfourcakes_6_sabeltann": {
+    "raw_name": "fatamorgana_city_gotfourcakes_6_sabeltann",
+    "cast": "fatamorgana_city",
+    "speaker": "sabeltann"
+  },
+  "fatamorgana_city_gotfourcakes_7_pysa": {
+    "raw_name": "fatamorgana_city_gotfourcakes_7_pysa",
+    "cast": "fatamorgana_city",
+    "speaker": "pysa"
+  },
+  "fatamorgana_city_gotfourcakes_8_pelle": {
+    "raw_name": "fatamorgana_city_gotfourcakes_8_pelle",
+    "cast": "fatamorgana_city",
+    "speaker": "pelle"
+  },
+  "fatamorgana_city_gotfourcakes_9_sabeltann": {
+    "raw_name": "fatamorgana_city_gotfourcakes_9_sabeltann",
+    "cast": "fatamorgana_city",
+    "speaker": "sabeltann"
+  },
+  "fatamorgana_city_hittargets_1_carpet_salesman": {
+    "raw_name": "fatamorgana_city_hittargets_1_carpet_salesman",
+    "cast": "fatamorgana_city",
+    "speaker": "carpet_salesman"
+  },
+  "fatamorgana_city_loose_1_arab_boy": {
+    "raw_name": "fatamorgana_city_loose_1_arab_boy",
+    "cast": "fatamorgana_city",
+    "speaker": "boy"
+  },
+  "fatamorgana_city_nocakeshere_pelle": {
+    "raw_name": "fatamorgana_city_nocakeshere_pelle",
+    "cast": "fatamorgana_city",
+    "speaker": "pelle"
+  },
+  "fatamorgana_city_nocakeshere_pysa": {
+    "raw_name": "fatamorgana_city_nocakeshere_pysa",
+    "cast": "fatamorgana_city",
+    "speaker": "pysa"
+  },
+  "fatamorgana_city_notalltargets_1_carpet_salesman": {
+    "raw_name": "fatamorgana_city_notalltargets_1_carpet_salesman",
+    "cast": "fatamorgana_city",
+    "speaker": "carpet_salesman"
+  },
+  "fatamorgana_city_notenoughcakes_sabeltann": {
+    "raw_name": "fatamorgana_city_notenoughcakes_sabeltann",
+    "cast": "fatamorgana_city",
+    "speaker": "sabeltann"
+  },
+  "fatamorgana_city_notenoughcopper_1_shopkeeper": {
+    "raw_name": "fatamorgana_city_notenoughcopper_1_shopkeeper",
+    "cast": "fatamorgana_city",
+    "speaker": "shopkeeper"
+  },
+  "fatamorgana_city_notgonnaeat_benjamin": {
+    "raw_name": "fatamorgana_city_notgonnaeat_benjamin",
+    "cast": "fatamorgana_city",
+    "speaker": "benjamin"
+  },
+  "fatamorgana_city_raceover_arab_boy": {
+    "raw_name": "fatamorgana_city_raceover_arab_boy",
+    "cast": "fatamorgana_city",
+    "speaker": "boy"
+  },
+  "fatamorgana_city_race_1_arab_boy": {
+    "raw_name": "fatamorgana_city_race_1_arab_boy",
+    "cast": "fatamorgana_city",
+    "speaker": "boy"
+  },
+  "fatamorgana_city_race_2_pinky": {
+    "raw_name": "fatamorgana_city_race_2_pinky",
+    "cast": "fatamorgana_city",
+    "speaker": "pinky"
+  },
+  "fatamorgana_city_race_3_arab_boy": {
+    "raw_name": "fatamorgana_city_race_3_arab_boy",
+    "cast": "fatamorgana_city",
+    "speaker": "boy"
+  },
+  "fatamorgana_city_thankscomeagain_shopkeeper": {
+    "raw_name": "fatamorgana_city_thankscomeagain_shopkeeper",
+    "cast": "fatamorgana_city",
+    "speaker": "shopkeeper"
+  },
+  "fatamorgana_city_wannaraceme_arab_boy": {
+    "raw_name": "fatamorgana_city_wannaraceme_arab_boy",
+    "cast": "fatamorgana_city",
+    "speaker": "boy"
+  },
+  "fatamorgana_city_wetcake_1_pinky": {
+    "raw_name": "fatamorgana_city_wetcake_1_pinky",
+    "cast": "fatamorgana_city",
+    "speaker": "pinky"
+  },
+  "fatamorgana_city_win_1_arab_boy": {
+    "raw_name": "fatamorgana_city_win_1_arab_boy",
+    "cast": "fatamorgana_city",
+    "speaker": "boy"
+  },
+  "fatamorgana_city_yum_1_pelle": {
+    "raw_name": "fatamorgana_city_yum_1_pelle",
+    "cast": "fatamorgana_city",
+    "speaker": "pelle"
+  },
+  "fatamorgana_palace_darkroom_1_pinky": {
+    "raw_name": "fatamorgana_palace_darkroom_1_pinky",
+    "cast": "fatamorgana_palace",
+    "speaker": "pinky"
+  },
+  "fatamorgana_palace_findkeys_sabeltann": {
+    "raw_name": "fatamorgana_palace_findkeys_sabeltann",
+    "cast": "fatamorgana_palace",
+    "speaker": "sabeltann"
+  },
+  "fatamorgana_palace_intro_1_sabeltann": {
+    "raw_name": "fatamorgana_palace_intro_1_sabeltann",
+    "cast": "fatamorgana_palace",
+    "speaker": "sabeltann"
+  },
+  "fatamorgana_palace_keys_1_pinky": {
+    "raw_name": "fatamorgana_palace_keys_1_pinky",
+    "cast": "fatamorgana_palace",
+    "speaker": "pinky"
+  },
+  "fatamorgana_palace_platform_1_pinky": {
+    "raw_name": "fatamorgana_palace_platform_1_pinky",
+    "cast": "fatamorgana_palace",
+    "speaker": "pinky"
+  },
+  "fatamorgana_palace_saveme1_sultan": {
+    "raw_name": "fatamorgana_palace_saveme1_sultan",
+    "cast": "fatamorgana_palace",
+    "speaker": "sultan"
+  },
+  "fatamorgana_palace_saveme2_sultan": {
+    "raw_name": "fatamorgana_palace_saveme2_sultan",
+    "cast": "fatamorgana_palace",
+    "speaker": "sultan"
+  },
+  "fatamorgana_palace_tilepuzzle_1_pinky": {
+    "raw_name": "fatamorgana_palace_tilepuzzle_1_pinky",
+    "cast": "fatamorgana_palace",
+    "speaker": "pinky"
+  },
+  "gral_boss_falldown_1_boss": {
+    "raw_name": "gral_boss_falldown_1_boss",
+    "cast": "graal_bosslevel",
+    "speaker": "boss"
+  },
+  "gral_boss_ididit_pinky": {
+    "raw_name": "gral_boss_ididit_pinky",
+    "cast": "graal_bosslevel",
+    "speaker": "pinky"
+  },
+  "gral_boss_intro_1_boss": {
+    "raw_name": "gral_boss_intro_1_boss",
+    "cast": "graal_bosslevel",
+    "speaker": "boss"
+  },
+  "gral_boss_loose_1_boss": {
+    "raw_name": "gral_boss_loose_1_boss",
+    "cast": "graal_bosslevel",
+    "speaker": "boss"
+  },
+  "gral_boss_takethat1_1_pinky": {
+    "raw_name": "gral_boss_takethat1_1_pinky",
+    "cast": "graal_bosslevel",
+    "speaker": "pinky"
+  },
+  "gral_boss_takethat1_2_boss": {
+    "raw_name": "gral_boss_takethat1_2_boss",
+    "cast": "graal_bosslevel",
+    "speaker": "boss"
+  },
+  "gral_boss_takethat2_1_pinky": {
+    "raw_name": "gral_boss_takethat2_1_pinky",
+    "cast": "graal_bosslevel",
+    "speaker": "pinky"
+  },
+  "gral_boss_takethat2_2_boss": {
+    "raw_name": "gral_boss_takethat2_2_boss",
+    "cast": "graal_bosslevel",
+    "speaker": "boss"
+  },
+  "gral_boss_takethat3_1_pinky": {
+    "raw_name": "gral_boss_takethat3_1_pinky",
+    "cast": "graal_bosslevel",
+    "speaker": "pinky"
+  },
+  "gral_boss_takethat3_2_boss": {
+    "raw_name": "gral_boss_takethat3_2_boss",
+    "cast": "graal_bosslevel",
+    "speaker": "boss"
+  },
+  "gral_boss_takethat4_1_pinky": {
+    "raw_name": "gral_boss_takethat4_1_pinky",
+    "cast": "graal_bosslevel",
+    "speaker": "pinky"
+  },
+  "gral_boss_takethat4_2_boss": {
+    "raw_name": "gral_boss_takethat4_2_boss",
+    "cast": "graal_bosslevel",
+    "speaker": "boss"
+  },
+  "gral_boss_win_1_boss": {
+    "raw_name": "gral_boss_win_1_boss",
+    "cast": "graal_bosslevel",
+    "speaker": "boss"
+  },
+  "gral_boss_youstink1_1_boss": {
+    "raw_name": "gral_boss_youstink1_1_boss",
+    "cast": "graal_bosslevel",
+    "speaker": "boss"
+  },
+  "gral_boss_youstink2_1_boss": {
+    "raw_name": "gral_boss_youstink2_1_boss",
+    "cast": "graal_bosslevel",
+    "speaker": "boss"
+  },
+  "graal_boss_intro": {
+    "raw_name": "graal_boss_intro",
+    "cast": "graal_bosslevel",
+    "speaker": "intro"
+  },
+  "gral_mountain_goahead1_1_pelle": {
+    "raw_name": "gral_mountain_goahead1_1_pelle",
+    "cast": "graal_mountain",
+    "speaker": "pelle"
+  },
+  "gral_mountain_goahead2_1_pelle": {
+    "raw_name": "gral_mountain_goahead2_1_pelle",
+    "cast": "graal_mountain",
+    "speaker": "pelle"
+  },
+  "gral_mountain_goahead3_1_pelle": {
+    "raw_name": "gral_mountain_goahead3_1_pelle",
+    "cast": "graal_mountain",
+    "speaker": "pelle"
+  },
+  "gral_mountain_goahead_pelle": {
+    "raw_name": "gral_mountain_goahead_pelle",
+    "cast": "graal_mountain",
+    "speaker": "pelle"
+  },
+  "gral_mountain_intro_1_pelle": {
+    "raw_name": "gral_mountain_intro_1_pelle",
+    "cast": "graal_mountain",
+    "speaker": "pelle"
+  },
+  "gral_mountain_light_1_pinky": {
+    "raw_name": "gral_mountain_light_1_pinky",
+    "cast": "graal_mountain",
+    "speaker": "pinky"
+  },
+  "gral_mountain_signs_1_pinky": {
+    "raw_name": "gral_mountain_signs_1_pinky",
+    "cast": "graal_mountain",
+    "speaker": "pinky"
+  },
+  "gral_mountain_throw_pelle": {
+    "raw_name": "gral_mountain_throw_pelle",
+    "cast": "graal_mountain",
+    "speaker": "pelle"
+  },
+  "gral_mountain_waitforpelle_1_pinky": {
+    "raw_name": "gral_mountain_waitforpelle_1_pinky",
+    "cast": "graal_mountain",
+    "speaker": "pinky"
+  },
+  "gral_mountain_welldone1_1_pelle": {
+    "raw_name": "gral_mountain_welldone1_1_pelle",
+    "cast": "graal_mountain",
+    "speaker": "pelle"
+  },
+  "gral_mountain_welldone2_1_pelle": {
+    "raw_name": "gral_mountain_welldone2_1_pelle",
+    "cast": "graal_mountain",
+    "speaker": "pelle"
+  },
+  "shangrila_beach_bar_6_pelle": {
+    "raw_name": "shangrila_beach_bar_6_pelle",
+    "cast": "magakhan_beach",
+    "speaker": "pelle"
+  },
+  "shangrila_beach_comingsoon_benjamin": {
+    "raw_name": "shangrila_beach_comingsoon_benjamin",
+    "cast": "magakhan_beach",
+    "speaker": "benjamin"
+  },
+  "shangrila_beach_ending_sabeltann": {
+    "raw_name": "shangrila_beach_ending_sabeltann",
+    "cast": "magakhan_beach",
+    "speaker": "sabeltann"
+  },
+  "shangrila_beach_gatherthemen_langemann": {
+    "raw_name": "shangrila_beach_gatherthemen_langemann",
+    "cast": "magakhan_beach",
+    "speaker": "langemann"
+  },
+  "shangrila_beach_goodtoseemyboys_malena": {
+    "raw_name": "shangrila_beach_goodtoseemyboys_malena",
+    "cast": "magakhan_beach",
+    "speaker": "malena"
+  },
+  "shangrila_beach_hint1_1_pinky": {
+    "raw_name": "shangrila_beach_hint1_1_pinky",
+    "cast": "magakhan_beach",
+    "speaker": "pinky"
+  },
+  "shangrila_beach_hint2_1_pinky": {
+    "raw_name": "shangrila_beach_hint2_1_pinky",
+    "cast": "magakhan_beach",
+    "speaker": "pinky"
+  },
+  "shangrila_beach_hint3_1_pinky": {
+    "raw_name": "shangrila_beach_hint3_1_pinky",
+    "cast": "magakhan_beach",
+    "speaker": "pinky"
+  },
+  "shangrila_beach_intro_1_sabeltann": {
+    "raw_name": "shangrila_beach_intro_1_sabeltann",
+    "cast": "magakhan_beach",
+    "speaker": "sabeltann"
+  },
+  "shangrila_beach_intro_2_sabeltann": {
+    "raw_name": "shangrila_beach_intro_2_sabeltann",
+    "cast": "magakhan_beach",
+    "speaker": "sabeltann"
+  },
+  "shangrila_beach_itburns_1_pelle": {
+    "raw_name": "shangrila_beach_itburns_1_pelle",
+    "cast": "magakhan_beach",
+    "speaker": "pelle"
+  },
+  "shangrila_beach_justhanging2_1_pinky": {
+    "raw_name": "shangrila_beach_justhanging2_1_pinky",
+    "cast": "magakhan_beach",
+    "speaker": "pinky"
+  },
+  "shangrila_beach_justhanging2_2_benjamin": {
+    "raw_name": "shangrila_beach_justhanging2_2_benjamin",
+    "cast": "magakhan_beach",
+    "speaker": "benjamin"
+  },
+  "shangrila_beach_justhanging2_3_pinky": {
+    "raw_name": "shangrila_beach_justhanging2_3_pinky",
+    "cast": "magakhan_beach",
+    "speaker": "pinky"
+  },
+  "shangrila_beach_justhanging_1_pinky": {
+    "raw_name": "shangrila_beach_justhanging_1_pinky",
+    "cast": "magakhan_beach",
+    "speaker": "pinky"
+  },
+  "shangrila_beach_justhanging_2_benjamin": {
+    "raw_name": "shangrila_beach_justhanging_2_benjamin",
+    "cast": "magakhan_beach",
+    "speaker": "benjamin"
+  },
+  "shangrila_beach_justhanging_3_pinky": {
+    "raw_name": "shangrila_beach_justhanging_3_pinky",
+    "cast": "magakhan_beach",
+    "speaker": "pinky"
+  },
+  "shangrila_beach_justhanging_4_benjamin": {
+    "raw_name": "shangrila_beach_justhanging_4_benjamin",
+    "cast": "magakhan_beach",
+    "speaker": "benjamin"
+  },
+  "shangrila_beach_lookingforfood_1_skalken": {
+    "raw_name": "shangrila_beach_lookingforfood_1_skalken",
+    "cast": "magakhan_beach",
+    "speaker": "skalken"
+  },
+  "shangrila_beach_lookitsmom_1_pelle": {
+    "raw_name": "shangrila_beach_lookitsmom_1_pelle",
+    "cast": "magakhan_beach",
+    "speaker": "pelle"
+  },
+  "shangrila_beach_questcomplete_skalken": {
+    "raw_name": "shangrila_beach_questcomplete_skalken",
+    "cast": "magakhan_beach",
+    "speaker": "skalken"
+  },
+  "shangrila_beach_thanksalot_1_skalken": {
+    "raw_name": "shangrila_beach_thanksalot_1_skalken",
+    "cast": "magakhan_beach",
+    "speaker": "skalken"
+  },
+  "shangrila_beach_thanks_1_skalken": {
+    "raw_name": "shangrila_beach_thanks_1_skalken",
+    "cast": "magakhan_beach",
+    "speaker": "skalken"
+  },
+  "shangrila_beach_welcomesons_1_malena": {
+    "raw_name": "shangrila_beach_welcomesons_1_malena",
+    "cast": "magakhan_beach",
+    "speaker": "malena"
+  },
+  "shangrila_beach_welcomesons_2_pelle": {
+    "raw_name": "shangrila_beach_welcomesons_2_pelle",
+    "cast": "magakhan_beach",
+    "speaker": "pelle"
+  },
+  "shangrila_beach_welcomesons_3_pysa": {
+    "raw_name": "shangrila_beach_welcomesons_3_pysa",
+    "cast": "magakhan_beach",
+    "speaker": "pysa"
+  },
+  "shangrila_beach_welcomesons_4_malena": {
+    "raw_name": "shangrila_beach_welcomesons_4_malena",
+    "cast": "magakhan_beach",
+    "speaker": "malena"
+  },
+  "shangrila_beach_wheresmycrew_sabeltann": {
+    "raw_name": "shangrila_beach_wheresmycrew_sabeltann",
+    "cast": "magakhan_beach",
+    "speaker": "sabeltann"
+  },
+  "shangrila_beach_bar_1_pinky": {
+    "raw_name": "shangrila_beach_bar_1_pinky",
+    "cast": "magakhan_beach",
+    "speaker": "pinky"
+  },
+  "shangrila_beach_bar_2_pelle": {
+    "raw_name": "shangrila_beach_bar_2_pelle",
+    "cast": "magakhan_beach",
+    "speaker": "pelle"
+  },
+  "shangrila_beach_bar_3_pysa": {
+    "raw_name": "shangrila_beach_bar_3_pysa",
+    "cast": "magakhan_beach",
+    "speaker": "pysa"
+  },
+  "shangrila_beach_bar_4_pelle": {
+    "raw_name": "shangrila_beach_bar_4_pelle",
+    "cast": "magakhan_beach",
+    "speaker": "pelle"
+  },
+  "shangrila_beach_bar_5_pysa": {
+    "raw_name": "shangrila_beach_bar_5_pysa",
+    "cast": "magakhan_beach",
+    "speaker": "pysa"
+  },
+  "shangrila_dungeon_comewithmepirate_1_sirikit": {
+    "raw_name": "shangrila_dungeon_comewithmepirate_1_sirikit",
+    "cast": "magakhan_dungeon",
+    "speaker": "sirikit"
+  },
+  "shangrila_dungeon_comewithmepirate_2_pelle": {
+    "raw_name": "shangrila_dungeon_comewithmepirate_2_pelle",
+    "cast": "magakhan_dungeon",
+    "speaker": "pelle"
+  },
+  "shangrila_dungeon_comewithmepirate_3_sirikit": {
+    "raw_name": "shangrila_dungeon_comewithmepirate_3_sirikit",
+    "cast": "magakhan_dungeon",
+    "speaker": "sirikit"
+  },
+  "shangrila_dungeon_comewithmepirate_4_pelle": {
+    "raw_name": "shangrila_dungeon_comewithmepirate_4_pelle",
+    "cast": "magakhan_dungeon",
+    "speaker": "pelle"
+  },
+  "shangrila_dungeon_comewithmepirate_5_sirikit": {
+    "raw_name": "shangrila_dungeon_comewithmepirate_5_sirikit",
+    "cast": "magakhan_dungeon",
+    "speaker": "sirikit"
+  },
+  "shangrila_dungeon_comewithmepirate_6_pelle": {
+    "raw_name": "shangrila_dungeon_comewithmepirate_6_pelle",
+    "cast": "magakhan_dungeon",
+    "speaker": "pelle"
+  },
+  "shangrila_dungeon_endconversation_1_sabeltann": {
+    "raw_name": "shangrila_dungeon_endconversation_1_sabeltann",
+    "cast": "magakhan_dungeon",
+    "speaker": "sabeltann"
+  },
+  "shangrila_dungeon_findanotherway_1_sabeltann": {
+    "raw_name": "shangrila_dungeon_findanotherway_1_sabeltann",
+    "cast": "magakhan_dungeon",
+    "speaker": "sabeltann"
+  },
+  "shangrila_dungeon_gofurther1_1_langemann": {
+    "raw_name": "shangrila_dungeon_gofurther1_1_langemann",
+    "cast": "magakhan_dungeon",
+    "speaker": "langemann"
+  },
+  "shangrila_dungeon_gofurther2_1_langemann": {
+    "raw_name": "shangrila_dungeon_gofurther2_1_langemann",
+    "cast": "magakhan_dungeon",
+    "speaker": "langemann"
+  },
+  "shangrila_dungeon_gofurther3_1_langemann": {
+    "raw_name": "shangrila_dungeon_gofurther3_1_langemann",
+    "cast": "magakhan_dungeon",
+    "speaker": "langemann"
+  },
+  "shangrila_dungeon_gofurther4_1_langemann": {
+    "raw_name": "shangrila_dungeon_gofurther4_1_langemann",
+    "cast": "magakhan_dungeon",
+    "speaker": "langemann"
+  },
+  "shangrila_dungeon_gofurther5_1_langemann": {
+    "raw_name": "shangrila_dungeon_gofurther5_1_langemann",
+    "cast": "magakhan_dungeon",
+    "speaker": "langemann"
+  },
+  "shangrila_dungeon_illstayhere_pysa": {
+    "raw_name": "shangrila_dungeon_illstayhere_pysa",
+    "cast": "magakhan_dungeon",
+    "speaker": "pysa"
+  },
+  "shangrila_dungeon_needkey_1_pinky": {
+    "raw_name": "shangrila_dungeon_needkey_1_pinky",
+    "cast": "magakhan_dungeon",
+    "speaker": "pinky"
+  },
+  "shangrila_dungeon_needrightkey_1_pinky": {
+    "raw_name": "shangrila_dungeon_needrightkey_1_pinky",
+    "cast": "magakhan_dungeon",
+    "speaker": "pinky"
+  },
+  "shangrila_dungeon_proceed1_1_sabeltann": {
+    "raw_name": "shangrila_dungeon_proceed1_1_sabeltann",
+    "cast": "magakhan_dungeon",
+    "speaker": "sabeltann"
+  },
+  "shangrila_dungeon_proceed2_1_sabeltann": {
+    "raw_name": "shangrila_dungeon_proceed2_1_sabeltann",
+    "cast": "magakhan_dungeon",
+    "speaker": "sabeltann"
+  },
+  "shangrila_dungeon_proceed3_1_sabeltann": {
+    "raw_name": "shangrila_dungeon_proceed3_1_sabeltann",
+    "cast": "magakhan_dungeon",
+    "speaker": "sabeltann"
+  },
+  "shangrila_dungeon_proceed4_1_sabeltann": {
+    "raw_name": "shangrila_dungeon_proceed4_1_sabeltann",
+    "cast": "magakhan_dungeon",
+    "speaker": "sabeltann"
+  },
+  "shangrila_boss_afterme_1_pinky": {
+    "raw_name": "shangrila_boss_afterme_1_pinky",
+    "cast": "magakhan_endboss_level",
+    "speaker": "pinky"
+  },
+  "shangrila_boss_distractthedragon_1_sabeltann": {
+    "raw_name": "shangrila_boss_distractthedragon_1_sabeltann",
+    "cast": "magakhan_endboss_level",
+    "speaker": "sabeltann"
+  },
+  "shangrila_boss_fight1_1_sabeltann": {
+    "raw_name": "shangrila_boss_fight1_1_sabeltann",
+    "cast": "magakhan_endboss_level",
+    "speaker": "sabeltann"
+  },
+  "shangrila_boss_fight2_1_maga_khan": {
+    "raw_name": "shangrila_boss_fight2_1_maga_khan",
+    "cast": "magakhan_endboss_level",
+    "speaker": "maga_khan"
+  },
+  "shangrila_boss_hint1_1_pinky": {
+    "raw_name": "shangrila_boss_hint1_1_pinky",
+    "cast": "magakhan_endboss_level",
+    "speaker": "pinky"
+  },
+  "shangrila_boss_hint2_1_pinky": {
+    "raw_name": "shangrila_boss_hint2_1_pinky",
+    "cast": "magakhan_endboss_level",
+    "speaker": "pinky"
+  },
+  "shangrila_boss_loose_1_maga_khan": {
+    "raw_name": "shangrila_boss_loose_1_maga_khan",
+    "cast": "magakhan_endboss_level",
+    "speaker": "maga_khan"
+  },
+  "shangrila_boss_loose_2_maga_khan": {
+    "raw_name": "shangrila_boss_loose_2_maga_khan",
+    "cast": "magakhan_endboss_level",
+    "speaker": "maga_khan"
+  },
+  "shangrila_boss_win_1_sabeltann": {
+    "raw_name": "shangrila_boss_win_1_sabeltann",
+    "cast": "magakhan_endboss_level",
+    "speaker": "sabeltann"
+  },
+  "shangrila_boss_youandme_1_sabeltann": {
+    "raw_name": "shangrila_boss_youandme_1_sabeltann",
+    "cast": "magakhan_endboss_level",
+    "speaker": "sabeltann"
+  },
+  "shangrila_jungle_crasybushmen_1_sabeltann": {
+    "raw_name": "shangrila_jungle_crasybushmen_1_sabeltann",
+    "cast": "magakhan_jungle",
+    "speaker": "sabeltann"
+  },
+  "shangrila_jungle_croc_1_pinky": {
+    "raw_name": "shangrila_jungle_croc_1_pinky",
+    "cast": "magakhan_jungle",
+    "speaker": "pinky"
+  },
+  "shangrila_jungle_freeus_langemann": {
+    "raw_name": "shangrila_jungle_freeus_langemann",
+    "cast": "magakhan_jungle",
+    "speaker": "langemann"
+  },
+  "shangrila_jungle_getawayfromher_1_pinky": {
+    "raw_name": "shangrila_jungle_getawayfromher_1_pinky",
+    "cast": "magakhan_jungle",
+    "speaker": "pinky"
+  },
+  "shangrila_jungle_getusoutofhere_1_langemann": {
+    "raw_name": "shangrila_jungle_getusoutofhere_1_langemann",
+    "cast": "magakhan_jungle",
+    "speaker": "langemann"
+  },
+  "shangrila_jungle_getusoutofhere_2_pysa": {
+    "raw_name": "shangrila_jungle_getusoutofhere_2_pysa",
+    "cast": "magakhan_jungle",
+    "speaker": "pysa"
+  },
+  "shangrila_jungle_getusoutofhere_3_sabeltann": {
+    "raw_name": "shangrila_jungle_getusoutofhere_3_sabeltann",
+    "cast": "magakhan_jungle",
+    "speaker": "sabeltann"
+  },
+  "shangrila_jungle_getusoutofhere_4_pelle": {
+    "raw_name": "shangrila_jungle_getusoutofhere_4_pelle",
+    "cast": "magakhan_jungle",
+    "speaker": "pelle"
+  },
+  "shangrila_jungle_getusoutofhere_5_sabeltann": {
+    "raw_name": "shangrila_jungle_getusoutofhere_5_sabeltann",
+    "cast": "magakhan_jungle",
+    "speaker": "sabeltann"
+  },
+  "shangrila_jungle_getusoutofhere_6_pinky": {
+    "raw_name": "shangrila_jungle_getusoutofhere_6_pinky",
+    "cast": "magakhan_jungle",
+    "speaker": "pinky"
+  },
+  "shangrila_jungle_help_1_daughter": {
+    "raw_name": "shangrila_jungle_help_1_daughter",
+    "cast": "magakhan_jungle",
+    "speaker": "daughter"
+  },
+  "shangrila_jungle_hetriedtoshootme_1_pinky": {
+    "raw_name": "shangrila_jungle_hetriedtoshootme_1_pinky",
+    "cast": "magakhan_jungle",
+    "speaker": "pinky"
+  },
+  "shangrila_jungle_imscared_1_pelle": {
+    "raw_name": "shangrila_jungle_imscared_1_pelle",
+    "cast": "magakhan_jungle",
+    "speaker": "pelle"
+  },
+  "shangrila_jungle_imscared_2_pysa": {
+    "raw_name": "shangrila_jungle_imscared_2_pysa",
+    "cast": "magakhan_jungle",
+    "speaker": "pysa"
+  },
+  "shangrila_jungle_imscared_3_pelle": {
+    "raw_name": "shangrila_jungle_imscared_3_pelle",
+    "cast": "magakhan_jungle",
+    "speaker": "pelle"
+  },
+  "shangrila_jungle_intro_1_sabeltann": {
+    "raw_name": "shangrila_jungle_intro_1_sabeltann",
+    "cast": "magakhan_jungle",
+    "speaker": "sabeltann"
+  },
+  "shangrila_jungle_intro_2_langemann": {
+    "raw_name": "shangrila_jungle_intro_2_langemann",
+    "cast": "magakhan_jungle",
+    "speaker": "langemann"
+  },
+  "shangrila_jungle_meatplant_1_pinky": {
+    "raw_name": "shangrila_jungle_meatplant_1_pinky",
+    "cast": "magakhan_jungle",
+    "speaker": "pinky"
+  },
+  "shangrila_jungle_meat_1_pinky": {
+    "raw_name": "shangrila_jungle_meat_1_pinky",
+    "cast": "magakhan_jungle",
+    "speaker": "pinky"
+  },
+  "shangrila_jungle_missedcrate_1_pinky": {
+    "raw_name": "shangrila_jungle_missedcrate_1_pinky",
+    "cast": "magakhan_jungle",
+    "speaker": "pinky"
+  },
+  "shangrila_jungle_panther_1_pinky": {
+    "raw_name": "shangrila_jungle_panther_1_pinky",
+    "cast": "magakhan_jungle",
+    "speaker": "pinky"
+  },
+  "shangrila_jungle_thanksforsavingme_1_pinky": {
+    "raw_name": "shangrila_jungle_thanksforsavingme_1_pinky",
+    "cast": "magakhan_jungle",
+    "speaker": "pinky"
+  },
+  "shangrila_jungle_thanksforsavingme_2_daughter": {
+    "raw_name": "shangrila_jungle_thanksforsavingme_2_daughter",
+    "cast": "magakhan_jungle",
+    "speaker": "daughter"
+  },
+  "shangrila_jungle_thanks_1_daughter": {
+    "raw_name": "shangrila_jungle_thanks_1_daughter",
+    "cast": "magakhan_jungle",
+    "speaker": "daughter"
+  },
+  "shangrila_jungle_trapped_1_pinky": {
+    "raw_name": "shangrila_jungle_trapped_1_pinky",
+    "cast": "magakhan_jungle",
+    "speaker": "pinky"
+  },
+  "shangrila_jungle_usethetrap_1_pinky": {
+    "raw_name": "shangrila_jungle_usethetrap_1_pinky",
+    "cast": "magakhan_jungle",
+    "speaker": "pinky"
+  },
+  "shangrila_palace_courtyard_1_pinky": {
+    "raw_name": "shangrila_palace_courtyard_1_pinky",
+    "cast": "magakhan_palace",
+    "speaker": "pinky"
+  },
+  "shangrila_palace_gatedown_1_pinky": {
+    "raw_name": "shangrila_palace_gatedown_1_pinky",
+    "cast": "magakhan_palace",
+    "speaker": "pinky"
+  },
+  "shangrila_palace_gem1_1_pinky": {
+    "raw_name": "shangrila_palace_gem1_1_pinky",
+    "cast": "magakhan_palace",
+    "speaker": "pinky"
+  },
+  "shangrila_palace_gem2_1_pinky": {
+    "raw_name": "shangrila_palace_gem2_1_pinky",
+    "cast": "magakhan_palace",
+    "speaker": "pinky"
+  },
+  "shangrila_palace_gem3_1_pinky": {
+    "raw_name": "shangrila_palace_gem3_1_pinky",
+    "cast": "magakhan_palace",
+    "speaker": "pinky"
+  },
+  "shangrila_palace_gem4_1_pinky": {
+    "raw_name": "shangrila_palace_gem4_1_pinky",
+    "cast": "magakhan_palace",
+    "speaker": "pinky"
+  },
+  "shangrila_palace_gem5_1_pinky": {
+    "raw_name": "shangrila_palace_gem5_1_pinky",
+    "cast": "magakhan_palace",
+    "speaker": "pinky"
+  },
+  "shangrila_palace_getthisgateopen_1_sabeltann": {
+    "raw_name": "shangrila_palace_getthisgateopen_1_sabeltann",
+    "cast": "magakhan_palace",
+    "speaker": "sabeltann"
+  },
+  "shangrila_palace_illstayhere_pysa": {
+    "raw_name": "shangrila_palace_illstayhere_pysa",
+    "cast": "magakhan_palace",
+    "speaker": "pysa"
+  },
+  "shangrila_palace_intro_1_sabeltann": {
+    "raw_name": "shangrila_palace_intro_1_sabeltann",
+    "cast": "magakhan_palace",
+    "speaker": "sabeltann"
+  },
+  "shangrila_palace_intro_2_langemann": {
+    "raw_name": "shangrila_palace_intro_2_langemann",
+    "cast": "magakhan_palace",
+    "speaker": "langemann"
+  },
+  "shangrila_palace_intro_3_sabeltann": {
+    "raw_name": "shangrila_palace_intro_3_sabeltann",
+    "cast": "magakhan_palace",
+    "speaker": "sabeltann"
+  },
+  "shangrila_palace_letmethrowyou2_pelle": {
+    "raw_name": "shangrila_palace_letmethrowyou2_pelle",
+    "cast": "magakhan_palace",
+    "speaker": "pelle"
+  },
+  "shangrila_palace_letmethrowyou_pelle": {
+    "raw_name": "shangrila_palace_letmethrowyou_pelle",
+    "cast": "magakhan_palace",
+    "speaker": "pelle"
+  },
+  "shangrila_palace_letstakethisplace_1_sabeltann": {
+    "raw_name": "shangrila_palace_letstakethisplace_1_sabeltann",
+    "cast": "magakhan_palace",
+    "speaker": "sabeltann"
+  },
+  "shangrila_palace_somethingdownhere_1_pelle": {
+    "raw_name": "shangrila_palace_somethingdownhere_1_pelle",
+    "cast": "magakhan_palace",
+    "speaker": "pelle"
+  },
+  "shangrila_palace_thisplaceisours_langemann": {
+    "raw_name": "shangrila_palace_thisplaceisours_langemann",
+    "cast": "magakhan_palace",
+    "speaker": "langemann"
+  },
+  "outro_conversation": {
+    "raw_name": "outro_conversation",
+    "cast": "outro",
+    "speaker": "conversation"
+  },
+  "swimming_ghasp_1_pinky": {
+    "raw_name": "swimming_ghasp_1_pinky",
+    "cast": "swimming",
+    "speaker": "pinky"
+  },
+  "treasurehunt1_1_sabeltann": {
+    "raw_name": "treasurehunt1_1_sabeltann",
+    "cast": "treasurehunt",
+    "speaker": "sabeltann"
+  },
+  "treasurehunt2_1_sabeltann": {
+    "raw_name": "treasurehunt2_1_sabeltann",
+    "cast": "treasurehunt",
+    "speaker": "sabeltann"
+  },
+  "treasurehunt3_1_sabeltann": {
+    "raw_name": "treasurehunt3_1_sabeltann",
+    "cast": "treasurehunt",
+    "speaker": "sabeltann"
+  },
+  "treasurehunt4_1_sabeltann": {
+    "raw_name": "treasurehunt4_1_sabeltann",
+    "cast": "treasurehunt",
+    "speaker": "sabeltann"
+  },
+  "treasurehunt5_1_sabeltann": {
+    "raw_name": "treasurehunt5_1_sabeltann",
+    "cast": "treasurehunt",
+    "speaker": "sabeltann"
+  },
+  "treasurehunt6_1_sabeltann": {
+    "raw_name": "treasurehunt6_1_sabeltann",
+    "cast": "treasurehunt",
+    "speaker": "sabeltann"
+  },
+  "treasurehunt7_1_sabeltann": {
+    "raw_name": "treasurehunt7_1_sabeltann",
+    "cast": "treasurehunt",
+    "speaker": "sabeltann"
+  },
+  "treasurehunt8_1_sabeltann": {
+    "raw_name": "treasurehunt8_1_sabeltann",
+    "cast": "treasurehunt",
+    "speaker": "sabeltann"
+  },
+  "treasurehunt_ididit_pinky": {
+    "raw_name": "treasurehunt_ididit_pinky",
+    "cast": "treasurehunt",
+    "speaker": "pinky"
+  },
+  "treasurehunt_idle_1_sabeltann": {
+    "raw_name": "treasurehunt_idle_1_sabeltann",
+    "cast": "treasurehunt",
+    "speaker": "sabeltann"
+  },
+  "treasurehunt_loose1_1_sabeltann": {
+    "raw_name": "treasurehunt_loose1_1_sabeltann",
+    "cast": "treasurehunt",
+    "speaker": "sabeltann"
+  },
+  "treasurehunt_loose2_1_sabeltann": {
+    "raw_name": "treasurehunt_loose2_1_sabeltann",
+    "cast": "treasurehunt",
+    "speaker": "sabeltann"
+  },
+  "worldmap_cavetoabra_sabeltann": {
+    "raw_name": "worldmap_cavetoabra_sabeltann",
+    "cast": "world_map",
+    "speaker": "sabeltann"
+  },
+  "worldmap_cave_1_sabeltann": {
+    "raw_name": "worldmap_cave_1_sabeltann",
+    "cast": "world_map",
+    "speaker": "sabeltann"
+  },
+  "worldmap_fatamorganatoabra_sabeltann": {
+    "raw_name": "worldmap_fatamorganatoabra_sabeltann",
+    "cast": "world_map",
+    "speaker": "sabeltann"
+  },
+  "worldmap_fatamorgana_1_sabeltann": {
+    "raw_name": "worldmap_fatamorgana_1_sabeltann",
+    "cast": "world_map",
+    "speaker": "sabeltann"
+  },
+  "worldmap_fire3_sabeltann_03": {
+    "raw_name": "worldmap_fire3_sabeltann_03",
+    "cast": "world_map",
+    "speaker": "sabeltann"
+  },
+  "worldmap_fire_sabeltann_01": {
+    "raw_name": "worldmap_fire_sabeltann_01",
+    "cast": "world_map",
+    "speaker": "sabeltann"
+  },
+  "worldmap_fire_sabeltann_02": {
+    "raw_name": "worldmap_fire_sabeltann_02",
+    "cast": "world_map",
+    "speaker": "sabeltann"
+  },
+  "worldmap_graaltoabra_sabeltann": {
+    "raw_name": "worldmap_graaltoabra_sabeltann",
+    "cast": "world_map",
+    "speaker": "sabeltann"
+  },
+  "worldmap_graal_1_sabeltann": {
+    "raw_name": "worldmap_graal_1_sabeltann",
+    "cast": "world_map",
+    "speaker": "sabeltann"
+  },
+  "worldmap_intro_1_storyteller": {
+    "raw_name": "worldmap_intro_1_storyteller",
+    "cast": "world_map",
+    "speaker": "storyteller"
+  },
+  "worldmap_shangrilatoabra_sabeltann": {
+    "raw_name": "worldmap_shangrilatoabra_sabeltann",
+    "cast": "world_map",
+    "speaker": "sabeltann"
+  },
+  "worldmap_shangrila_1_sabeltann": {
+    "raw_name": "worldmap_shangrila_1_sabeltann",
+    "cast": "world_map",
+    "speaker": "sabeltann"
+  },
+  "sink_speech_01": {
+    "raw_name": "sink_speech_01",
+    "cast": "world_map",
+    "speaker": "01"
+  },
+  "sink_speech_02": {
+    "raw_name": "sink_speech_02",
+    "cast": "world_map",
+    "speaker": "02"
+  },
+  "sink_speech_03": {
+    "raw_name": "sink_speech_03",
+    "cast": "world_map",
+    "speaker": "03"
+  },
+  "sink_speech_04": {
+    "raw_name": "sink_speech_04",
+    "cast": "world_map",
+    "speaker": "04"
+  },
+  "sink_speech_05": {
+    "raw_name": "sink_speech_05",
+    "cast": "world_map",
+    "speaker": "05"
+  },
+  "sink_speech_06": {
+    "raw_name": "sink_speech_06",
+    "cast": "world_map",
+    "speaker": "06"
+  },
+  "worldmap_alreadyvisited_storyteller": {
+    "raw_name": "worldmap_alreadyvisited_storyteller",
+    "cast": "world_map",
+    "speaker": "storyteller"
+  },
+  "worldmap_beenherebefore_sabeltann": {
+    "raw_name": "worldmap_beenherebefore_sabeltann",
+    "cast": "world_map",
+    "speaker": "sabeltann"
+  }
+}

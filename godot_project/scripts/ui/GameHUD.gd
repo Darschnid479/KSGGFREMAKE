@@ -81,7 +81,13 @@ var _boss_bar: ProgressBar
 var _air_panel: PanelContainer
 var _air_bar: ProgressBar
 
+var _subtitle_panel: PanelContainer
+var _subtitle_speaker: Label
+var _subtitle_text: Label
+
 var _pause_panel: PanelContainer
+var _voice_btn_no: Button
+var _voice_btn_orig: Button
 var _is_paused: bool = false
 
 
@@ -92,6 +98,8 @@ func _ready() -> void:
 	GameState.air_changed.connect(_on_air_changed)
 	GameState.coins_changed.connect(_on_coins_changed)
 	GameState.dialogue_requested.connect(_on_dialogue_requested)
+	GameState.voice_line_started.connect(_on_voice_line_started)
+	GameState.voice_line_finished.connect(_on_voice_line_finished)
 	GameState.boss_health_changed.connect(_on_boss_health_changed)
 	GameState.level_change_requested.connect(_on_level_changed)
 
@@ -256,6 +264,55 @@ func _build_ui() -> void:
 	next_btn.pressed.connect(_advance_dialogue)
 	dv.add_child(next_btn)
 
+	# 4B. Kinematisk undertekst-banner for norske karakterstemmer (vises automatisk mens noen snakker!)
+	_subtitle_panel = PanelContainer.new()
+	_subtitle_panel.set_anchors_preset(Control.PRESET_CENTER_BOTTOM)
+	_subtitle_panel.offset_left = -430
+	_subtitle_panel.offset_right = 430
+	_subtitle_panel.offset_top = -134
+	_subtitle_panel.offset_bottom = -24
+	var sub_style := StyleBoxFlat.new()
+	sub_style.bg_color = Color(0.06, 0.04, 0.03, 0.88)
+	sub_style.border_color = Color(0.86, 0.66, 0.26, 0.90)
+	sub_style.set_border_width_all(2)
+	sub_style.set_corner_radius_all(10)
+	sub_style.content_margin_left = 22
+	sub_style.content_margin_right = 22
+	sub_style.content_margin_top = 10
+	sub_style.content_margin_bottom = 10
+	_subtitle_panel.add_theme_stylebox_override("panel", sub_style)
+	_subtitle_panel.visible = false
+	add_child(_subtitle_panel)
+
+	var sv := VBoxContainer.new()
+	sv.add_theme_constant_override("separation", 4)
+	_subtitle_panel.add_child(sv)
+
+	var top_sub := HBoxContainer.new()
+	sv.add_child(top_sub)
+
+	_subtitle_speaker = Label.new()
+	_subtitle_speaker.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	_subtitle_speaker.add_theme_font_size_override("font_size", 19)
+	_subtitle_speaker.add_theme_color_override("font_color", Color(1.0, 0.84, 0.30))
+	_subtitle_speaker.add_theme_color_override("font_outline_color", Color(0.05, 0.03, 0.01, 0.95))
+	_subtitle_speaker.add_theme_constant_override("outline_size", 4)
+	top_sub.add_child(_subtitle_speaker)
+
+	var skip_hint := Label.new()
+	skip_hint.text = "[Tab] Neste"
+	skip_hint.add_theme_font_size_override("font_size", 13)
+	skip_hint.add_theme_color_override("font_color", Color(0.76, 0.72, 0.62, 0.85))
+	top_sub.add_child(skip_hint)
+
+	_subtitle_text = Label.new()
+	_subtitle_text.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	_subtitle_text.add_theme_font_size_override("font_size", 18)
+	_subtitle_text.add_theme_color_override("font_color", Color(0.98, 0.96, 0.90))
+	_subtitle_text.add_theme_color_override("font_outline_color", Color(0.04, 0.03, 0.02, 0.92))
+	_subtitle_text.add_theme_constant_override("outline_size", 3)
+	sv.add_child(_subtitle_text)
+
 	# 5. Pausemeny (ESC – enkel 1:1 uten jukse-nivåvelger)
 	_build_pause_menu()
 
@@ -263,10 +320,10 @@ func _build_ui() -> void:
 func _build_pause_menu() -> void:
 	_pause_panel = PanelContainer.new()
 	_pause_panel.set_anchors_preset(Control.PRESET_CENTER)
-	_pause_panel.offset_left = -220
-	_pause_panel.offset_right = 220
-	_pause_panel.offset_top = -155
-	_pause_panel.offset_bottom = 155
+	_pause_panel.offset_left = -245
+	_pause_panel.offset_right = 245
+	_pause_panel.offset_top = -185
+	_pause_panel.offset_bottom = 185
 	_pause_panel.add_theme_stylebox_override("panel", _make_panel_style())
 	_pause_panel.visible = false
 	add_child(_pause_panel)
@@ -300,6 +357,28 @@ func _build_pause_menu() -> void:
 		gfx_row.add_child(gb)
 	pv.add_child(gfx_row)
 
+	var voice_row := HBoxContainer.new()
+	voice_row.alignment = BoxContainer.ALIGNMENT_CENTER
+	var v_lbl := Label.new()
+	v_lbl.text = "Stemmer: "
+	voice_row.add_child(v_lbl)
+	_voice_btn_no = Button.new()
+	_voice_btn_orig = Button.new()
+	_voice_btn_no.pressed.connect(func():
+		GameState.voice_language = "no"
+		GameState.save_game()
+		_refresh_pause_voice_buttons()
+	)
+	_voice_btn_orig.pressed.connect(func():
+		GameState.voice_language = "orig"
+		GameState.save_game()
+		_refresh_pause_voice_buttons()
+	)
+	voice_row.add_child(_voice_btn_no)
+	voice_row.add_child(_voice_btn_orig)
+	pv.add_child(voice_row)
+	_refresh_pause_voice_buttons()
+
 	var menu_btn := Button.new()
 	menu_btn.text = "Tilbake til hovedmeny"
 	menu_btn.custom_minimum_size = Vector2(0, 42)
@@ -310,8 +389,15 @@ func _build_pause_menu() -> void:
 	pv.add_child(menu_btn)
 
 
+func _refresh_pause_voice_buttons() -> void:
+	if is_instance_valid(_voice_btn_no):
+		_voice_btn_no.text = ("★ Norsk" if GameState.voice_language == "no" else "Norsk")
+	if is_instance_valid(_voice_btn_orig):
+		_voice_btn_orig.text = ("★ Original CD" if GameState.voice_language == "orig" else "Original CD")
+
+
 func _process(_delta: float) -> void:
-	# Vis kontekstuelt handlingsikon nederst til høyre når Pinky er nær NPC/portal
+	# Vis kontekstuelt handlingsikon nederst til høyre når Pinky er nær NPC/portal/historie-objekt
 	var players := get_tree().get_nodes_in_group("player")
 	if players.is_empty() or _dialogue_panel.visible or _is_paused:
 		_action_panel.visible = false
@@ -331,6 +417,8 @@ func _process(_delta: float) -> void:
 					nearest_txt = "[E] " + (node as PortalTrigger).portal_label
 				elif node is NpcActor:
 					nearest_txt = "[E] " + (node as NpcActor).display_name
+				elif node.has_method("get_interact_prompt"):
+					nearest_txt = str(node.call("get_interact_prompt"))
 				else:
 					nearest_txt = "[E] Bruk"
 	_action_panel.visible = (nearest_txt != "")
@@ -353,6 +441,8 @@ func _unhandled_input(event: InputEvent) -> void:
 func _toggle_pause() -> void:
 	_is_paused = not _is_paused
 	_pause_panel.visible = _is_paused
+	if _is_paused:
+		_refresh_pause_voice_buttons()
 	get_tree().paused = _is_paused
 
 
@@ -375,9 +465,27 @@ func _on_coins_changed(coins: int) -> void:
 func _on_level_changed(level_id: String) -> void:
 	if is_instance_valid(_boss_panel):
 		_boss_panel.visible = false
+	if is_instance_valid(_subtitle_panel):
+		_subtitle_panel.visible = false
 	if is_instance_valid(_air_panel):
 		var cfg := LevelCatalog.get_level(level_id)
 		_air_panel.visible = (str(cfg.get("mode", "")) == "swimming")
+
+
+func _on_voice_line_started(speaker_name: String, text: String, _clip_key: String) -> void:
+	if not is_instance_valid(_subtitle_panel):
+		return
+	if text.strip_edges() == "":
+		_subtitle_panel.visible = false
+		return
+	_subtitle_speaker.text = speaker_name if speaker_name != "" else "Forteller"
+	_subtitle_text.text = text
+	_subtitle_panel.visible = true
+
+
+func _on_voice_line_finished(_clip_key: String) -> void:
+	if is_instance_valid(_subtitle_panel) and not AudioManager.is_voice_playing():
+		_subtitle_panel.visible = false
 
 
 func _on_dialogue_requested(speaker: String, lines: Array) -> void:
