@@ -27,9 +27,12 @@ signal interact_requested(npc: NpcActor)
 func _ready() -> void:
 	add_to_group("interactable")
 	add_to_group("npc")
+	# NPC-er blokkerer ikke Pinky i trange huleganger (E-interaksjon skjer via gruppe-avstand!)
+	collision_layer = 4
+	collision_mask = 0
 	var col := CollisionShape3D.new()
 	var cap := CapsuleShape3D.new()
-	cap.radius = 0.42
+	cap.radius = 0.36
 	cap.height = 1.8
 	col.shape = cap
 	col.position.y = 0.9
@@ -48,19 +51,13 @@ func _ready() -> void:
 			VisualEnhancer.enhance_character_node(_visual, true, 0.72)
 			if not (model_resource in ["dog", "panther", "meatplant", "movablecrate"]):
 				_animator = CharacterAnimator.attach_to(inst, -1.0)
+			if "pysa" in npc_id.to_lower() and _animator:
+				# Gi Pysa egen blågrønn piratnyanse og litt lavere vekst så han skiller seg klart fra Pelle!
+				_visual.scale = Vector3(0.95, 0.92, 0.95)
+				for sm in _animator.materials:
+					sm.set_shader_parameter("albedo_tint", Color(0.84, 0.92, 0.96, 1.0))
 	else:
 		_build_fallback()
-
-	var lbl := Label3D.new()
-	lbl.name = "NameLabel"
-	lbl.text = display_name
-	lbl.position.y = 2.25
-	lbl.billboard = BaseMaterial3D.BILLBOARD_ENABLED
-	lbl.font_size = 26
-	lbl.outline_size = 7
-	lbl.modulate = Color(1.0, 0.94, 0.76, 0.0)
-	lbl.visible = false
-	add_child(lbl)
 
 
 func walk_spline(points: Array[Vector3], speed: float = 3.8, on_done: Callable = Callable()) -> void:
@@ -166,15 +163,6 @@ func _physics_process(delta: float) -> void:
 
 	if is_instance_valid(_animator):
 		_animator.update_anim(delta, _cur_speed, true, is_talking, false, false)
-
-	var lbl := get_node_or_null("NameLabel") as Label3D
-	if lbl:
-		var players := get_tree().get_nodes_in_group("player")
-		if not players.is_empty():
-			var d := global_position.distance_to((players[0] as Node3D).global_position)
-			lbl.visible = d < 5.5
-			if lbl.visible:
-				lbl.modulate.a = clampf(1.0 - (d - 2.5) / 3.0, 0.0, 0.92)
 
 
 func get_interact_prompt() -> String:

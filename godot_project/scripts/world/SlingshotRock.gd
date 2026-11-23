@@ -38,7 +38,8 @@ func _physics_process(delta: float) -> void:
 	for node in get_tree().get_nodes_in_group("hittable"):
 		if not (node is Node3D):
 			continue
-		if global_position.distance_to(node.global_position + Vector3(0.0, 1.0, 0.0)) <= 1.3 + _radius:
+		var hit_rad: float = node.get_hit_radius() if node.has_method("get_hit_radius") else 1.3
+		if global_position.distance_to(node.global_position + Vector3(0.0, 1.0, 0.0)) <= hit_rad + _radius:
 			if node.has_method("take_hit"):
 				node.take_hit(_damage, global_position)
 			queue_free()

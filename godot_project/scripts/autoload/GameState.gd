@@ -59,6 +59,8 @@ const LEVEL_CUTSCENES := {
 var current_level_id: String = "cave"
 var max_health: float = 100.0
 var health: float = 100.0
+signal shop_requested(title: String, items: Array)
+
 var max_air: float = 100.0
 var air: float = 100.0
 var coins: int = 25
@@ -93,7 +95,11 @@ func reset_new_game(start_level: String = "cave") -> void:
 	health = max_health
 	coins = 0 if start_level == "cave" else 25
 	equipped_weapon = "none" if start_level == "cave" else "sword"
-	visited_levels = [start_level]
+	if start_level == "cave":
+		unlocked_weapons = ([] as Array[String])
+	else:
+		unlocked_weapons = (["woodensword", "sword", "slingshot", "lamp"] as Array[String])
+	visited_levels = ([start_level] as Array[String])
 	story_achievements = ["unlockedgraal"]
 	seen_cutscenes = []
 	quest_flags = {}
@@ -208,13 +214,33 @@ func set_air(cur: float, mx: float = 100.0) -> void:
 	emit_signal("air_changed", air, max_air)
 
 
-func equip_weapon(weapon_id: String) -> void:
-	if weapon_id in unlocked_weapons:
-		equipped_weapon = weapon_id
-		if weapon_id == "lamp":
-			lamp_enabled = not lamp_enabled
+func has_weapon(weapon_id: String) -> bool:
+	return weapon_id in unlocked_weapons
+
+
+func unlock_weapon(weapon_id: String, auto_equip: bool = true) -> void:
+	if weapon_id.is_empty() or weapon_id == "none":
+		return
+	if not (weapon_id in unlocked_weapons):
+		unlocked_weapons.append(weapon_id)
+	if auto_equip or equipped_weapon == "none" or equipped_weapon.is_empty():
+		equip_weapon(weapon_id)
+	else:
 		emit_signal("weapon_changed", equipped_weapon)
-		AudioManager.play_sfx("switch")
+
+
+func equip_weapon(weapon_id: String) -> void:
+	if weapon_id == "none":
+		equipped_weapon = "none"
+		emit_signal("weapon_changed", equipped_weapon)
+		return
+	if not (weapon_id in unlocked_weapons):
+		unlocked_weapons.append(weapon_id)
+	equipped_weapon = weapon_id
+	if weapon_id == "lamp":
+		lamp_enabled = not lamp_enabled
+	emit_signal("weapon_changed", equipped_weapon)
+	AudioManager.play_sfx("switch")
 
 
 func set_objective(text: String) -> void:

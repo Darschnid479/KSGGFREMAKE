@@ -27,12 +27,27 @@ var _sword_pivot: Node3D
 var _sword_mesh: MeshInstance3D
 var _lamp_light: OmniLight3D
 var _interact_targets: Array[Node] = []
+var _last_safe_pos: Vector3 = Vector3.ZERO
+var _safe_tick: float = 0.0
+var _leap_active: bool = false
+var _leap_from: Vector3 = Vector3.ZERO
+var _leap_to: Vector3 = Vector3.ZERO
+var _leap_t: float = 0.0
+var _leap_dur: float = 0.65
+var _leap_arc: float = 1.6
+var _leap_is_climb: bool = false
+var _leap_cb: Callable
 
 const ROCK_SCENE := preload("res://scripts/world/SlingshotRock.gd")
 
 
 func _ready() -> void:
 	add_to_group("player")
+	collision_layer = 2
+	collision_mask = 1
+	floor_max_angle = deg_to_rad(62.0)
+	floor_snap_length = 0.35
+	_last_safe_pos = global_position
 	_setup_visuals()
 	GameState.weapon_changed.connect(_on_weapon_changed)
 	_on_weapon_changed(GameState.equipped_weapon)
@@ -227,6 +242,24 @@ func _on_weapon_changed(weapon_id: String) -> void:
 		_lamp_light.visible = GameState.lamp_enabled
 
 
+func leap_to(dest_pos: Vector3, duration: float = 0.62, arc_height: float = 1.8, is_climb: bool = false, on_done: Callable = Callable()) -> void:
+	if _leap_active:
+		return
+	_leap_active = true
+	_leap_from = global_position
+	_leap_to = dest_pos
+	_leap_t = 0.0
+	_leap_dur = maxf(duration, 0.25)
+	_leap_arc = arc_height
+	_leap_is_climb = is_climb
+	_leap_cb = on_done
+	velocity = Vector3.ZERO
+	var d := dest_pos - _leap_from
+	d.y = 0.0
+	if d.length_squared() > 0.01 and is_instance_valid(_visual_root):
+		_visual_root.rotation.y = atan2(-d.x, -d.z)
+
+
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventKey and event.pressed and not event.echo:
 		if event.keycode == KEY_L:
@@ -234,8 +267,16 @@ func _unhandled_input(event: InputEvent) -> void:
 			if is_instance_valid(_lamp_light):
 				_lamp_light.visible = GameState.lamp_enabled
 			AudioManager.play_sfx("switch")
+		elif event.keycode == KEY_1:
+			for w in ["rapier", "goldsword", "sword", "woodensword"]:
+				if GameState.has_weapon(w):
+					GameState.equip_weapon(w)
+					break
+		elif event.keycode == KEY_2:
+			if GameState.has_weapon("slingshot"):
+				GameState.equip_weapon("slingshot")
 
-	if input_locked:
+	if input_locked or _leap_active:
 		return
 	if event.is_action_pressed("attack"):
 		_perform_attack()
@@ -251,6 +292,27 @@ func _physics_process(delta: float) -> void:
 		_sword_pivot.rotation = Vector3(-0.35 + sin(p * PI) * 0.4, -1.25 + p * 2.5, 0.25)
 	elif is_instance_valid(_sword_pivot):
 		_sword_pivot.rotation = _sword_pivot.rotation.lerp(Vector3(0.32, -0.35, -0.22), delta * 10.0)
+
+	# 0. Assistert hopp over kløft / stige-klatring / Pelle-kast
+	if _leap_active:
+		_leap_t += delta / _leap_dur
+		if _leap_t >= 1.0:
+			global_position = _leap_to
+			_last_safe_pos = _leap_to
+			_leap_active = false
+			velocity = Vector3.ZERO
+			var lcb := _leap_cb
+			_leap_cb = Callable()
+			if lcb.is_valid():
+				lcb.call()
+		else:
+			var pos := _leap_from.lerp(_leap_to, _leap_t)
+			if not _leap_is_climb:
+				pos.y += sin(_leap_t * PI) * _leap_arc
+			global_position = pos
+		if is_instance_valid(_animator):
+			_animator.update_anim(delta, 5.5 if _leap_is_climb else 0.0, _leap_is_climb, false, false, false)
+		return
 
 	var move_dir := Vector3.ZERO
 	var spd := sprint_speed if Input.is_action_pressed("sprint") else walk_speed
@@ -282,7 +344,7 @@ func _physics_process(delta: float) -> void:
 	var hm_floor_y := -9999.0
 	if heightmap_sampler.is_valid() and not is_swimming:
 		hm_floor_y = heightmap_sampler.call(global_position)
-	var grounded := is_on_floor() or (hm_floor_y > -5000.0 and global_position.y <= hm_floor_y + 0.12 and velocity.y <= 0.1)
+	var grounded := is_on_floor() or (hm_floor_y > -5000.0 and global_position.y <= hm_floor_y + 0.16 and velocity.y <= 0.1)
 	if is_swimming:
 		spd *= 0.72
 		var vy := 0.0
@@ -297,6 +359,8 @@ func _physics_process(delta: float) -> void:
 		velocity.z = lerp(velocity.z, move_dir.z * spd, delta * 12.0)
 		if grounded:
 			if not input_locked and Input.is_action_just_pressed("jump"):
+				if _try_nearby_leap():
+					return
 				velocity.y = jump_velocity
 				grounded = false
 				AudioManager.play_sfx("jump")
@@ -305,14 +369,31 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
-	# Nøyaktig original heightmap-gulv (hindrer gjennomfall og sveving på alle brett!)
+	# Nøyaktig original heightmap-gulv (mykt steg opp/ned uten å sette seg fast i trimesh!)
 	if heightmap_sampler.is_valid() and not is_swimming:
 		var hm_y: float = heightmap_sampler.call(global_position)
 		if hm_y > -5000.0:
-			if global_position.y <= hm_y + 0.08 and velocity.y <= 0.1:
+			if global_position.y <= hm_y + 0.18 and velocity.y <= 0.15:
 				global_position.y = hm_y
 				velocity.y = 0.0
 				grounded = true
+			_safe_tick += delta
+			if grounded and _safe_tick >= 0.25:
+				_safe_tick = 0.0
+				# Ikke lagre trygg posisjon midt nede i lava!
+				var in_cave_lava := ("cave" in GameState.current_level_id) and hm_y < -10.55 and global_position.x > -20.0 and global_position.x < 10.0 and global_position.z > -28.0 and global_position.z < 5.0
+				if not in_cave_lava:
+					_last_safe_pos = global_position
+
+	# Sikkerhetsnett mot å falle i avgrunner, vann eller glødende lava!
+	if not is_swimming and _last_safe_pos != Vector3.ZERO:
+		var fell_void := (hm_floor_y <= -5000.0 and global_position.y < _last_safe_pos.y - 3.6) or (global_position.y < _last_safe_pos.y - 7.5)
+		var fell_lava := ("cave" in GameState.current_level_id) and hm_floor_y > -5000.0 and hm_floor_y < -10.55 and global_position.y <= -10.50 and global_position.x > -20.0 and global_position.x < 10.0 and global_position.z > -28.0 and global_position.z < 5.0
+		if fell_void or fell_lava:
+			GameState.take_damage(12.0)
+			AudioManager.play_sfx("hit")
+			global_position = _last_safe_pos + Vector3(0.0, 0.35, 0.0)
+			velocity = Vector3.ZERO
 
 	# Roter Pinky mykt mot bevegelsesretning (-Z fremover!) + ekte skjelett-animasjoner!
 	var horiz_speed := Vector2(velocity.x, velocity.z).length()
@@ -328,11 +409,34 @@ func _physics_process(delta: float) -> void:
 		_animator.update_anim(delta, horiz_speed, grounded or is_swimming, is_talking, is_pushing, GameState.health <= 0.0)
 
 
+func _try_nearby_leap() -> bool:
+	var best: Node = null
+	var best_d := 3.4
+	for node in get_tree().get_nodes_in_group("leap_interactable"):
+		if node is Node3D:
+			var d := global_position.distance_to((node as Node3D).global_position)
+			if d < best_d:
+				best_d = d
+				best = node
+	if best and best.has_method("interact"):
+		best.interact(self)
+		return true
+	return false
+
+
 func _perform_attack() -> void:
 	if _attack_cooldown > 0.0:
 		return
 	var info: Dictionary = GameState.WEAPONS.get(GameState.equipped_weapon, GameState.WEAPONS["sword"])
 	var wtype := str(info.get("type", "melee"))
+	if wtype == "none":
+		# Auto-velg beste opplåste sverd hvis spilleren har funnet det eller trykker angrip
+		for w in ["rapier", "goldsword", "sword", "woodensword"]:
+			if GameState.has_weapon(w):
+				GameState.equip_weapon(w)
+				info = GameState.WEAPONS.get(w, {})
+				wtype = str(info.get("type", "melee"))
+				break
 	if wtype == "none":
 		return
 	var dmg := float(info.get("damage", 25.0))
@@ -369,15 +473,15 @@ func _perform_attack() -> void:
 			continue
 		var diff: Vector3 = node.global_position - global_position
 		diff.y = 0.0
-		if diff.length() <= rng + 1.0:
-			if diff.length() < 1.3 or forward.dot(diff.normalized()) > -0.15:
+		if diff.length() <= rng + 1.2:
+			if diff.length() < 1.6 or forward.dot(diff.normalized()) > -0.25:
 				if node.has_method("take_hit"):
 					node.take_hit(dmg, global_position)
 
 
 func _perform_interact() -> void:
 	var best: Node = null
-	var best_d := 4.5
+	var best_d := 4.8
 	for node in get_tree().get_nodes_in_group("interactable"):
 		if not (node is Node3D):
 			continue

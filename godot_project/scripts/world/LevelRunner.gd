@@ -16,6 +16,8 @@ const HAZARD_SCRIPT := preload("res://scripts/world/UnderwaterHazard.gd")
 const CUTSCENE_SCRIPT := preload("res://scripts/ui/CutscenePlayer.gd")
 const HM_SCRIPT := preload("res://scripts/world/HeightmapSampler.gd")
 const STORY_SCRIPT := preload("res://scripts/world/StoryScriptEngine.gd")
+const GRAAL_BOSS_SCRIPT := preload("res://scripts/world/GraalBossController.gd")
+const ENEMY_SHIP_SCRIPT := preload("res://scripts/world/EnemyShip.gd")
 const OCEAN_SHADER := preload("res://shaders/ocean_water.gdshader")
 const ISLAND_TERRAIN_SHADER := preload("res://shaders/island_terrain.gdshader")
 
@@ -31,6 +33,13 @@ var _heightmap: HeightmapSampler
 var _level_geom: Node3D
 var _story_engine: StoryScriptEngine
 var _actors_by_name: Dictionary = {}
+var _colliders_by_name: Dictionary = {}
+var _graal_boss_mesh: Mesh
+var _graal_boss_mat: Material
+var _catapult_mesh: Mesh
+var _catapult_mat: Material
+var _catapult_rock_mesh: Mesh
+var _graal_boss_ctrl: GraalBossController
 
 # Karakter-katalog: kobler originale scriptingdata-navn til norske navn, modeller og rolle
 const CHARACTER_ROLES := {
@@ -80,6 +89,13 @@ func load_level(level_id: String) -> void:
 	_level_geom = null
 	_story_engine = null
 	_actors_by_name.clear()
+	_colliders_by_name.clear()
+	_graal_boss_mesh = null
+	_graal_boss_mat = null
+	_catapult_mesh = null
+	_catapult_mat = null
+	_catapult_rock_mesh = null
+	_graal_boss_ctrl = null
 
 	# 0. Last 1:1 originalt binært høydekart (.hm) for millimeter-nøyaktig bakkekontakt (null sveving!)
 	_heightmap = HM_SCRIPT.new()
@@ -135,14 +151,16 @@ func load_level(level_id: String) -> void:
 		_populate_underwater_entities(level_id, cfg, gp_data)
 	else:
 		var spawn_pos := _find_player_spawn(level_id, gp_data, level_bounds)
+		_build_3d_spline_walls(gp_data, spawn_pos)
 		_player_node = _spawn_pinky(spawn_pos, false)
+		var is_tight_indoor := level_id in [
+			"cave", "cave_end", "cave_end_bosslevel",
+			"magakhan_dungeon", "magakhan_palace", "fatamorgana_palace", "graal_bosslevel"
+		]
 		if level_id == "graal_bosslevel":
-			_camera_rig.set_target(_player_node, 3.8, 1.75, false)
-			_camera_rig.yaw = -1.52
-			_camera_rig.pitch = -0.07
-			if _camera_rig.spring_arm:
-				_camera_rig.spring_arm.collision_mask = 0
-				_camera_rig.spring_arm.spring_length = 3.8
+			_camera_rig.set_target(_player_node, 3.8, 2.65, false)
+			_camera_rig.yaw = -0.68
+			_camera_rig.pitch = -0.14
 			_camera_rig.rotation = Vector3(_camera_rig.pitch, _camera_rig.yaw, 0.0)
 		elif level_id == "cave":
 			# Kinematisk 1:1 åpningsvinkel bak Pinky som rammer inn Kaptein Sabeltann, Langemann, Pelle, Pysa og grotte-tunnelen!
@@ -150,10 +168,18 @@ func load_level(level_id: String) -> void:
 			_camera_rig.yaw = -0.34
 			_camera_rig.pitch = -0.14
 			_camera_rig.rotation = Vector3(_camera_rig.pitch, _camera_rig.yaw, 0.0)
+		elif level_id == "abra":
+			_camera_rig.set_target(_player_node, 6.4, 2.35, false)
+			_camera_rig.yaw = -1.25
+			_camera_rig.pitch = -0.15
+			_camera_rig.rotation = Vector3(_camera_rig.pitch, _camera_rig.yaw, 0.0)
 		else:
 			_camera_rig.set_target(_player_node, 9.5, 2.4, false)
-		if _camera_rig.spring_arm and _player_node:
-			_camera_rig.spring_arm.add_excluded_object(_player_node.get_rid())
+		if _camera_rig.spring_arm:
+			if is_tight_indoor:
+				_camera_rig.spring_arm.collision_mask = 0
+			if _player_node:
+				_camera_rig.spring_arm.add_excluded_object(_player_node.get_rid())
 		# 7. Spawn NPC-er, fiender, originale 1:1 mynter, historie-objekter, portaler og 1:1 stemme-/historiemotor!
 		_populate_entities(level_id, cfg, gp_data, spawn_pos, level_bounds)
 		_add_biome_atmosphere(level_id, spawn_pos)
@@ -363,28 +389,25 @@ func _load_level_geometry(w3d_name: String, water_y: float) -> AABB:
 					lava_meshes.append(mi)
 					continue
 
-				# 1:1 Gral-boss: Løft originale Greven av Gral på dragen (GraalBoss) og katapulten opp på borgen!
+				# 1:1 Gral-boss: Trekk ut originale GraalBoss-dragen, katapult og steinprosjektil for interaktiv bosskamp!
 				if w3d_name == "graal_bosslevel" and nm == "graalboss":
-					mi.position = Vector3(6.8, 23.8, -11.6)
-					mi.rotation_degrees = Vector3(-6.0, 102.0, 0.0)
-					mi.scale = Vector3.ONE * 1.28
-					var dragon_glow := OmniLight3D.new()
-					dragon_glow.position = Vector3(0.0, 1.4, 1.2)
-					dragon_glow.light_color = Color(1.0, 0.44, 0.12)
-					dragon_glow.light_energy = 6.2
-					dragon_glow.omni_range = 22.0
-					mi.add_child(dragon_glow)
+					_graal_boss_mesh = mi.mesh
+					mi.visible = false
 					continue
 				if w3d_name == "graal_bosslevel" and nm == "catapult":
-					mi.position = Vector3(-7.6, 22.8, -11.6)
-					mi.rotation_degrees = Vector3(0.0, 90.0, 0.0)
-					mi.create_trimesh_collision()
+					_catapult_mesh = mi.mesh
+					mi.visible = false
 					continue
 				if w3d_name == "graal_bosslevel" and nm == "catapultrock":
+					_catapult_rock_mesh = mi.mesh
 					mi.visible = false
 					continue
 
-				mi.create_trimesh_collision()
+				# Når vi har et eksakt 1:1 høydekart (.hm) + 3D spline-vegger, skal IKKE ujevne hule-/steinmesher blokkere Pinky!
+				var use_hm := (_heightmap != null and _heightmap.valid)
+				var is_walkable_deck := ("deck" in nm or "plank" in nm or "bridge" in nm or "pier" in nm or "dock" in nm or "gangway" in nm or "stair" in nm or "castlefloor" in nm) and not ("cave" in nm or "portal" in nm or "rock" in nm or "cliff" in nm or "mountain" in nm or "terrain" in nm or "wall" in nm)
+				if (not use_hm) or is_walkable_deck:
+					mi.create_trimesh_collision()
 				var aabb: AABB = mi.global_transform * mi.get_aabb()
 				if first:
 					min_v = aabb.position
@@ -396,6 +419,13 @@ func _load_level_geometry(w3d_name: String, water_y: float) -> AABB:
 
 			# Oppgrader ALLE synlige nivåmaterialer til knivskarp AAA animasjons-PBR med 3D mikrodetalj!
 			VisualEnhancer.enhance_world_node(inst, current_level_id, water_y)
+			if w3d_name == "graal_bosslevel":
+				for mi2 in _find_all_meshes(inst):
+					var nm2 := mi2.name.to_lower()
+					if nm2 == "graalboss":
+						_graal_boss_mat = mi2.material_override if mi2.material_override else mi2.get_active_material(0)
+					elif nm2 == "catapult":
+						_catapult_mat = mi2.material_override if mi2.material_override else mi2.get_active_material(0)
 
 			# Gi lavabassengene ekte glødende vulkansk oransje-rød emisjon etter PBR-oppgradering!
 			if not lava_meshes.is_empty():
@@ -596,10 +626,10 @@ func _make_hm_callable() -> Callable:
 
 
 func _find_player_spawn(level_id: String, gp_data: Dictionary, bounds: AABB) -> Vector3:
-	# 1:1 Gral-bosskampen skjer oppe på borggårdens brystvern foran katapulten (Y = 21.48m, Z = -12.4)
+	# 1:1 Gral-bosskampen skjer oppe på borggårdens flate sørlige brystvern ved Catapult_1 (Y = 21.48m)
 	if level_id == "graal_bosslevel":
-		var gy := _heightmap.sample_y(-0.8, -12.4) if (_heightmap and _heightmap.valid) else 21.48
-		return Vector3(-0.8, (gy if gy > -5000.0 else 21.48) + 0.05, -12.4)
+		var gy := _heightmap.sample_y(-6.8, 7.85) if (_heightmap and _heightmap.valid) else 21.48
+		return Vector3(-6.8, (gy if gy > -5000.0 else 21.48) + 0.05, 7.85)
 
 	var nodes: Array = gp_data.get("nodes", [])
 	for n in nodes:
@@ -701,7 +731,7 @@ func _build_world_map_islands() -> void:
 	dive_buoy.position = Vector3(-9.5, 0.25, 11.5)
 	_world_root.add_child(dive_buoy)
 
-	# Plasser 2 originale fiendeskip fra world_map.glb ute på havet med skummende kjølvann!
+	# Plasser 2 originale patruljerende og senkbare fiendeskip fra world_map.glb ute på havet!
 	if ResourceLoader.exists("res://assets/levels/world_map.glb"):
 		var sc := load("res://assets/levels/world_map.glb") as PackedScene
 		if sc:
@@ -709,16 +739,17 @@ func _build_world_map_islands() -> void:
 				[Vector3(17.5, 0.0, -2.5), -0.6],
 				[Vector3(-15.5, 0.0, -5.5), 1.1],
 			]:
-				var ship := sc.instantiate()
-				ship.position = sp_info[0]
-				ship.rotation.y = sp_info[1]
-				ship.scale = Vector3.ONE * 0.42
-				for mi in _find_all_meshes(ship):
+				var ship_vis := sc.instantiate()
+				ship_vis.scale = Vector3.ONE * 0.42
+				for mi in _find_all_meshes(ship_vis):
 					var nm := mi.name.to_lower()
 					mi.visible = (nm in ["enemyship", "enemyrailing"])
-				VisualEnhancer.enhance_world_node(ship, "abra", 0.0)
-				VisualEnhancer.attach_ship_wake(ship, 1.8)
-				_world_root.add_child(ship)
+				VisualEnhancer.enhance_world_node(ship_vis, "abra", 0.0)
+				VisualEnhancer.attach_ship_wake(ship_vis, 1.8)
+				var eship: EnemyShip = ENEMY_SHIP_SCRIPT.new()
+				eship.name = "EnemyShip"
+				_world_root.add_child(eship)
+				eship.setup_ship(ship_vis, sp_info[0], sp_info[1])
 
 
 func _sample_island_height(fx: float, fz: float, radius: float, theme: String, n_shape: FastNoiseLite, n_detail: FastNoiseLite) -> float:
@@ -841,9 +872,9 @@ func _spawn_pinky(pos: Vector3, is_swim: bool) -> CharacterBody3D:
 	pinky.is_swimming = is_swim
 	pinky.position = pos
 	pinky.heightmap_sampler = _make_hm_callable()
-	# I Gral-bosskampen vender Pinky fremover mot Greven av Gral og katapulten; i grotten mot Kaptein Sabeltann!
+	# I Gral-bosskampen vender Pinky fremover mot borggården, katapultene og dragen; i grotten mot Kaptein Sabeltann!
 	if current_level_id == "graal_bosslevel":
-		pinky.rotation_degrees.y = -72.0
+		pinky.rotation_degrees.y = -38.0
 	elif current_level_id == "cave":
 		pinky.rotation_degrees.y = -20.0
 	pinky.camera_rig = _camera_rig
@@ -985,15 +1016,20 @@ func _populate_entities(level_id: String, cfg: Dictionary, gp_data: Dictionary, 
 			rp.portal_label = "Tilbake til Den Sorte Dame"
 			rp.position = _snap_to_surface(ret["pos"], bounds) + Vector3(0.0, 0.15, 0.0)
 			_world_root.add_child(rp)
+	elif level_id == "graal_bosslevel":
+		portal.portal_label = "Seil videre → Fata Morgana!"
+		var gy := _heightmap.sample_y(-0.8, -5.0) if (_heightmap and _heightmap.valid) else 21.48
+		portal_pos = Vector3(-0.8, (gy if gy > -5000.0 else 21.48), -5.0)
+		use_custom_portal = false # Aktiveres først når Greven av Gral er beseiret!
 	else:
 		portal.portal_label = "Reis til " + str(next_info.get("title", next_id))
 		var portal_raw := spawn_pos + Vector3(6.5, 0.0, -5.5)
-		if level_id == "graal_bosslevel":
-			portal_raw = Vector3(-6.2, 21.5, -5.5)
 		portal_pos = _snap_to_surface(portal_raw, bounds)
 
 	portal.position = portal_pos + Vector3(0.0, 0.15, 0.0)
-	if use_custom_portal or true:
+	if level_id == "graal_bosslevel":
+		_spawn_graal_boss_arena(gp_data, bounds, spawn_pos, portal)
+	else:
 		_world_root.add_child(portal)
 		occupied_positions.append(portal.position)
 
@@ -1062,7 +1098,238 @@ func _populate_entities(level_id: String, cfg: Dictionary, gp_data: Dictionary, 
 	_story_engine = STORY_SCRIPT.new()
 	_story_engine.name = "StoryScriptEngine"
 	_world_root.add_child(_story_engine)
-	_story_engine.setup(level_id, gp_data, _world_root, _level_geom, _player_node, _camera_rig, _heightmap, _actors_by_name)
+	_story_engine.setup(level_id, gp_data, _world_root, _level_geom, _player_node, _camera_rig, _heightmap, _actors_by_name, _colliders_by_name)
+
+
+func _build_3d_spline_walls(gp_data: Dictionary, spawn_pos: Vector3) -> void:
+	# Konverter originalspillets 2D XZ-splines (Line*, Shape*, Circle*, *_collision) til glatte loddrette vegger!
+	var shared_body := StaticBody3D.new()
+	shared_body.name = "SplineCollision3D"
+	shared_body.collision_layer = 1
+	shared_body.collision_mask = 0
+	_world_root.add_child(shared_body)
+
+	var re_vec := RegEx.new()
+	re_vec.compile("vector\\(([\\-\\d.]+),([\\-\\d.]+),([\\-\\d.]+)\\)")
+	var re_rad := RegEx.new()
+	re_rad.compile("#radius:([\\d.]+)")
+
+	for n in gp_data.get("nodes", []):
+		var low := str(n.get("name", "")).to_lower()
+		var ud := str(n.get("userdata", ""))
+		if not ("splinedata" in ud):
+			continue
+		if "validposition" in low or "3dsound" in low or "particle" in low or "platform_collision" in low:
+			continue
+		if low.begins_with("jump") or low.begins_with("ladder") or low.begins_with("areatrigger"):
+			continue
+		var is_wall_node := low.begins_with("line") or low.begins_with("shape") or low.begins_with("circle") or ("collision" in low)
+		if not is_wall_node:
+			continue
+
+		var is_named_toggle := ("collision" in low)
+		var target_body: StaticBody3D = shared_body
+		if is_named_toggle:
+			target_body = StaticBody3D.new()
+			target_body.name = "Col_" + str(n.get("name", ""))
+			target_body.collision_layer = 1
+			target_body.collision_mask = 0
+			_world_root.add_child(target_body)
+			_colliders_by_name[low] = target_body
+			if low.ends_with("_collision"):
+				_colliders_by_name[low.substr(0, low.length() - 10)] = target_body
+
+		if "#linearSplines" in ud:
+			var pts: Array[Vector2] = []
+			for m in re_vec.search_all(ud):
+				pts.append(Vector2(float(m.get_string(1)) * WORLD_SCALE, -float(m.get_string(2)) * WORLD_SCALE))
+			if "#closed:1" in ud and pts.size() >= 3:
+				pts.append(pts[0])
+			for i in range(pts.size() - 1):
+				var a := pts[i]
+				var b := pts[i + 1]
+				var seg := b - a
+				var seg_len := seg.length()
+				if seg_len < 0.08:
+					continue
+				var mid := (a + b) * 0.5
+				var hy := _heightmap.sample_y(mid.x, mid.y) if (_heightmap and _heightmap.valid) else spawn_pos.y
+				if hy < -5000.0:
+					hy = spawn_pos.y
+				var cs := CollisionShape3D.new()
+				var bx := BoxShape3D.new()
+				bx.size = Vector3(seg_len + 0.14, 16.0, 0.24)
+				cs.shape = bx
+				cs.position = Vector3(mid.x, hy + 5.5, mid.y)
+				cs.rotation.y = -atan2(seg.y, seg.x)
+				target_body.add_child(cs)
+		elif "#type:#circle" in ud:
+			var rm := re_rad.search(ud)
+			var vm := re_vec.search(ud)
+			if rm and vm:
+				var rad := maxf(float(rm.get_string(1)) * WORLD_SCALE * 0.85, 0.24)
+				var cx := float(vm.get_string(1)) * WORLD_SCALE
+				var cz := -float(vm.get_string(2)) * WORLD_SCALE
+				var hy := _heightmap.sample_y(cx, cz) if (_heightmap and _heightmap.valid) else spawn_pos.y
+				if hy < -5000.0:
+					hy = spawn_pos.y
+				var cs := CollisionShape3D.new()
+				var cyl := CylinderShape3D.new()
+				cyl.radius = rad
+				cyl.height = 16.0
+				cs.shape = cyl
+				cs.position = Vector3(cx, hy + 5.5, cz)
+				target_body.add_child(cs)
+
+
+func _spawn_graal_boss_arena(gp_data: Dictionary, bounds: AABB, _spawn_pos: Vector3, exit_portal: PortalTrigger) -> void:
+	# 1. Flygende interaktiv Greven av Gral på drage over borggården
+	var boss: GraalBossController = GRAAL_BOSS_SCRIPT.new()
+	boss.name = "GraalBossController"
+	var dragon_vis := Node3D.new()
+	if _graal_boss_mesh:
+		var dmi := MeshInstance3D.new()
+		dmi.mesh = _graal_boss_mesh
+		if _graal_boss_mat:
+			dmi.material_override = _graal_boss_mat
+		dmi.scale = Vector3.ONE * 1.32
+		dragon_vis.add_child(dmi)
+	else:
+		var dmi := MeshInstance3D.new()
+		var sm := SphereMesh.new()
+		sm.radius = 1.8
+		sm.height = 3.2
+		dmi.mesh = sm
+		var dm := StandardMaterial3D.new()
+		dm.albedo_color = Color(0.55, 0.14, 0.10)
+		dm.emission_enabled = true
+		dm.emission = Color(0.85, 0.25, 0.05)
+		dmi.material_override = dm
+		dragon_vis.add_child(dmi)
+	_world_root.add_child(boss)
+	boss.setup_visual(dragon_vis, _player_node)
+	_graal_boss_ctrl = boss
+
+	boss.boss_defeated.connect(func():
+		if is_instance_valid(exit_portal) and not exit_portal.is_inside_tree():
+			_world_root.add_child(exit_portal)
+	)
+
+	# 2. Alle 4 interaktive hjørne-katapulter på brystvernet (bruk med sverdhugg eller [E]!)
+	var cat_positions: Array[Vector3] = []
+	for cname in ["catapult_1", "catapult_2", "catapult_3", "catapult_4"]:
+		var res := _find_node_pos(gp_data.get("nodes", []), cname)
+		if res["found"]:
+			cat_positions.append(_snap_to_surface(res["pos"], bounds))
+	if cat_positions.is_empty():
+		for fp in [
+			Vector3(-9.45, 21.41, 5.92),
+			Vector3(7.60, 21.41, 6.04),
+			Vector3(7.74, 21.41, -10.30),
+			Vector3(-9.32, 21.41, -10.59),
+		]:
+			cat_positions.append(_snap_to_surface(fp, bounds))
+
+	var center_arena := Vector3(0.3, 21.5, -1.9)
+	for i in range(cat_positions.size()):
+		var cpos: Vector3 = cat_positions[i]
+		var cat := StoryInteractable.new()
+		cat.name = "Catapult_%d" % (i + 1)
+		cat.position = cpos
+		cat.is_blocking = false
+		cat.add_to_group("interactable")
+		cat.add_to_group("hittable")
+		cat.prompt_text = "[E] / [Slå] Avfyr katapult!"
+
+		var cs := CollisionShape3D.new()
+		var sph := SphereShape3D.new()
+		sph.radius = 2.0
+		cs.shape = sph
+		cat.add_child(cs)
+
+		var cvis := Node3D.new()
+		if _catapult_mesh:
+			var cmi := MeshInstance3D.new()
+			cmi.mesh = _catapult_mesh
+			if _catapult_mat:
+				cmi.material_override = _catapult_mat
+			cvis.add_child(cmi)
+		else:
+			var cmi := MeshInstance3D.new()
+			var bx := BoxMesh.new()
+			bx.size = Vector3(1.6, 1.2, 2.2)
+			cmi.mesh = bx
+			cmi.position.y = 0.6
+			cvis.add_child(cmi)
+		var look_dir := Vector3(center_arena.x - cpos.x, 0.0, center_arena.z - cpos.z)
+		if look_dir.length() > 0.1:
+			cvis.rotation.y = atan2(-look_dir.x, -look_dir.z)
+		cat.add_child(cvis)
+
+		var ring := MeshInstance3D.new()
+		var tm := TorusMesh.new()
+		tm.inner_radius = 1.35
+		tm.outer_radius = 1.65
+		ring.mesh = tm
+		ring.position.y = 0.08
+		var rmat := StandardMaterial3D.new()
+		rmat.albedo_color = Color(1.0, 0.78, 0.22)
+		rmat.emission_enabled = true
+		rmat.emission = Color(1.0, 0.68, 0.12)
+		rmat.emission_energy_multiplier = 2.0
+		ring.material_override = rmat
+		cat.add_child(ring)
+
+		var state := {"ready_ms": 0}
+		var fire_cb := func(_p = null):
+			var now := Time.get_ticks_msec()
+			if now < int(state["ready_ms"]):
+				return
+			if not is_instance_valid(_graal_boss_ctrl):
+				return
+			state["ready_ms"] = now + 2600
+			AudioManager.play_sfx("explosion", 0.75)
+
+			var tw_cat := cat.create_tween()
+			tw_cat.tween_property(cvis, "scale", Vector3(1.12, 0.85, 1.12), 0.12)
+			tw_cat.tween_property(cvis, "scale", Vector3.ONE, 0.28)
+
+			var boulder := MeshInstance3D.new()
+			if _catapult_rock_mesh:
+				boulder.mesh = _catapult_rock_mesh
+			else:
+				var bsph := SphereMesh.new()
+				bsph.radius = 0.45
+				bsph.height = 0.9
+				boulder.mesh = bsph
+			var bmat := StandardMaterial3D.new()
+			bmat.albedo_color = Color(0.85, 0.48, 0.15)
+			bmat.emission_enabled = true
+			bmat.emission = Color(1.0, 0.44, 0.08)
+			bmat.emission_energy_multiplier = 2.8
+			boulder.material_override = bmat
+			_world_root.add_child(boulder)
+			boulder.global_position = cpos + Vector3(0.0, 2.2, 0.0)
+
+			var start_p := boulder.global_position
+			var tw_b := _world_root.create_tween()
+			tw_b.tween_method(func(t: float):
+				if not is_instance_valid(boulder) or not is_instance_valid(_graal_boss_ctrl):
+					return
+				var mid_p := start_p.lerp(_graal_boss_ctrl.global_position, t)
+				mid_p.y += sin(t * PI) * 4.5
+				boulder.global_position = mid_p
+			, 0.0, 1.0, 0.58)
+			tw_b.tween_callback(func():
+				if is_instance_valid(boulder):
+					boulder.queue_free()
+				if is_instance_valid(_graal_boss_ctrl):
+					_graal_boss_ctrl.hit_by_catapult(65.0)
+			)
+
+		cat.on_interact_cb = fire_cb
+		cat.on_hit_cb = func(): fire_cb.call(null)
+		_world_root.add_child(cat)
 
 
 # ==============================================================================

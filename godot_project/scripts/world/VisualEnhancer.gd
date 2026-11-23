@@ -231,9 +231,7 @@ static func enhance_character_node(root: Node, add_shadow: bool = true, shadow_r
 			var dup := (mat as StandardMaterial3D).duplicate() as StandardMaterial3D
 			dup.diffuse_mode = BaseMaterial3D.DIFFUSE_BURLEY
 			dup.specular_mode = BaseMaterial3D.SPECULAR_SCHLICK_GGX
-			# Rik, dyp karakter-albedo (fjerner blek/fadet 2005-look!)
-			dup.albedo_color = Color(dup.albedo_color.r * 0.84, dup.albedo_color.g * 0.84, dup.albedo_color.b * 0.84, dup.albedo_color.a)
-			dup.roughness = clampf(maxf(dup.roughness, 0.52), 0.48, 0.78)
+			dup.roughness = clampf(maxf(dup.roughness, 0.50), 0.45, 0.78)
 			dup.metallic = minf(dup.metallic, 0.25)
 			if fab_nrm and not dup.normal_enabled:
 				dup.normal_enabled = true

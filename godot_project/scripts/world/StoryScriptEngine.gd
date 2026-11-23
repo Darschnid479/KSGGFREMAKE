@@ -12,9 +12,10 @@ var player: Node3D
 var camera_rig: FollowCamera
 var heightmap: HeightmapSampler
 var actors: Dictionary = {} # lower_key -> Node3D (pinky, sabeltann, langemann, pelle, pysa, skalken, benjamin, miriam, ...)
+var colliders: Dictionary = {} # lower_name -> StaticBody3D
 var nodes_by_name: Dictionary = {} # lower_name -> Dictionary (raw json node)
 
-var _rules: Array = [] # Global trigger rules
+var _rules: Array = [] # Global/behaviour trigger rules
 var _splines: Array = [] # Spline walk/run definitions
 var _area_triggers: Array = [] # Circle/rect area triggers
 var _fired_events: Dictionary = {} # event_name -> true
@@ -26,12 +27,13 @@ var _conv_name: String = ""
 var _conv_locked: bool = false
 var _active_speaker_node: Node3D = null
 var _input_lock_failsafe: float = 0.0
+var _elapsed: float = 0.0
 var _re_vec: RegEx
 var _re_rad: RegEx
 var _re_rect: RegEx
 
 
-func setup(p_level_id: String, gp_data: Dictionary, p_world_root: Node3D, p_level_geom: Node3D, p_player: Node3D, p_cam: FollowCamera, p_hm: HeightmapSampler, p_actors: Dictionary) -> void:
+func setup(p_level_id: String, gp_data: Dictionary, p_world_root: Node3D, p_level_geom: Node3D, p_player: Node3D, p_cam: FollowCamera, p_hm: HeightmapSampler, p_actors: Dictionary, p_colliders: Dictionary = {}) -> void:
 	level_id = p_level_id
 	world_root = p_world_root
 	level_geom = p_level_geom
@@ -39,6 +41,8 @@ func setup(p_level_id: String, gp_data: Dictionary, p_world_root: Node3D, p_leve
 	camera_rig = p_cam
 	heightmap = p_hm
 	actors = p_actors
+	colliders = p_colliders
+	_elapsed = 0.0
 	if player:
 		actors["pinky"] = player
 
@@ -53,7 +57,7 @@ func setup(p_level_id: String, gp_data: Dictionary, p_world_root: Node3D, p_leve
 	_wire_npc_interactions()
 	_spawn_story_interactables()
 
-	# Start originalspillets map-oppstartssekvens (startmap -> startmap_breathing)!
+	# Start originalspillets map-oppstartssekvens (uten å fryse spillerkontrollen på startmap!)
 	emit_event("startmap")
 	emit_event("resumemap")
 	_schedule(0.10, func():
@@ -69,6 +73,9 @@ func _unhandled_input(event: InputEvent) -> void:
 		if event.keycode == KEY_TAB or event.keycode == KEY_ENTER:
 			if AudioManager.is_voice_playing():
 				AudioManager.skip_current_voice()
+			elif player and "input_locked" in player and player.input_locked:
+				player.input_locked = false
+				_input_lock_failsafe = 0.0
 
 
 func _parse_gameplay_nodes(gp_data: Dictionary) -> void:
@@ -81,12 +88,15 @@ func _parse_gameplay_nodes(gp_data: Dictionary) -> void:
 		if ud.strip_edges() == "":
 			continue
 
-		if low == "global":
+		var ud_low := ud.to_lower()
+		if low in ["global", "behaviour", "behaviours", "timeline", "abrashop", "catapults"]:
 			_parse_global_rules(ud)
 		elif low.begins_with("areatrigger_"):
 			_parse_area_trigger(low, n, ud)
-		elif "#linearSplines" in ud and "target" in ud.to_lower() and "trigger" in ud.to_lower():
+		elif "#linearsplines" in ud_low and "target" in ud_low and ("trigger" in ud_low or "alltriggers" in ud_low):
 			_parse_spline_walk(low, ud)
+		elif (not ("#linearsplines" in ud_low)) and (not ("#type:#circle" in ud_low)) and ("trigger =" in ud_low or "trigger=" in ud_low or "alltriggers =" in ud_low):
+			_parse_global_rules(ud)
 
 
 func _parse_global_rules(ud: String) -> void:
@@ -193,8 +203,8 @@ func _parse_spline_walk(low_name: String, ud: String) -> void:
 			var v := s.substr(eq + 1).strip_edges().to_lower()
 			if k == "target":
 				target = v
-			elif k == "trigger":
-				trig_raw = v
+			elif k == "trigger" or k == "alltriggers":
+				trig_raw = v.split(",")[0].strip_edges()
 			elif k == "speed":
 				speed = 6.2 if v == "run" else 3.8
 	if target != "" and trig_raw != "":
@@ -211,10 +221,14 @@ func _parse_spline_walk(low_name: String, ud: String) -> void:
 
 
 func _trigger_level_opening_voice() -> void:
-	# For brett som ikke har egen startconversation i Global, spill av originalens introduksjonsreplikk!
+	# For brett som ikke har egen startconversation i Global (eller forsinket grotte-intro), spill originalens åpningsreplikk straks!
 	if AudioManager.is_voice_playing() or not _conv_queue.is_empty():
 		return
 	match level_id:
+		"cave":
+			if not GameState.has_achievement("played_cave_intro"):
+				GameState.add_achievement("played_cave_intro")
+				start_conversation("cave_start_intro1", true, true)
 		"abra":
 			if not GameState.has_achievement("talked_miriam_intro"):
 				GameState.add_achievement("talked_miriam_intro")
@@ -269,7 +283,7 @@ func _pick_npc_conversation(key: String) -> String:
 		"abra":
 			if "miriam" in k: return "abra_curse"
 			if "sunniva" in k: return "abra_curse2_sunniva" if not GameState.has_achievement("met_miriam") else "abra_hey_sunniva"
-			if "shopkeeper" in k: return "abra_buysword_shopkeeper"
+			if "shopkeeper" in k: return "abra_buylamp_shopkeeper"
 			if "sabeltann" in k: return "worldmap_graal"
 			if "langemann" in k: return "abra_useportal1_miriam"
 			if "pelle" in k: return "gral_mountain_intro"
@@ -298,15 +312,37 @@ func _pick_npc_conversation(key: String) -> String:
 
 
 func _on_npc_interacted(npc: NpcActor) -> void:
+	var k := npc.npc_id.to_lower()
+	if "shopkeeper" in k:
+		_open_pirate_shop()
+	if level_id == "abra" and "miriam" in k:
+		GameState.add_achievement("met_miriam")
+		GameState.add_achievement("unlockedgraal")
+		if not GameState.has_achievement("miriam_travel_coins"):
+			GameState.add_achievement("miriam_travel_coins")
+			if GameState.coins < 12:
+				GameState.add_coins(12)
+		GameState.set_objective("Snakk med Kjøpmannen for å kjøpe lykt/sprettert, og gå til seilingsportalen ved brygga!")
 	var cid := npc.story_conversation_id
 	if cid == "":
 		cid = _pick_npc_conversation(npc.npc_id)
-	if cid == "":
-		return
-	if level_id == "abra" and "miriam" in npc.npc_id:
-		GameState.add_achievement("met_miriam")
-		GameState.set_objective("Gå til seilingsportalen ved brygga i Abra Havn for å sette seil mot Gral!")
-	start_conversation(cid, true, true)
+	if cid != "":
+		start_conversation(cid, true, true)
+
+
+func _open_pirate_shop() -> void:
+	if level_id == "fatamorgana_city":
+		GameState.emit_signal("shop_requested", "Kjøpmannen — Fata Morgana", [
+			{"id": "goldsword", "name": "Gullsverd (Gylden klinge, 40 skade)", "cost": 25, "weapon": "goldsword"},
+			{"id": "heal", "name": "Krydret Honningkake (+60 Liv)", "cost": 5, "heal": 60.0},
+		])
+	else:
+		GameState.emit_signal("shop_requested", "Kjøpmannens Sjørøverbutikk — Abra Havn", [
+			{"id": "lamp", "name": "Gruvelykt (Lyser opp mørke huler)", "cost": 8, "weapon": "lamp", "achievement": "gotlamp"},
+			{"id": "slingshot", "name": "Pinkys Sprettert (Avstandsskudd)", "cost": 12, "weapon": "slingshot", "achievement": "gotslingshot"},
+			{"id": "sword", "name": "Stålsverd (30 nærkamp-skade)", "cost": 18, "weapon": "sword", "achievement": "gotsword"},
+			{"id": "heal", "name": "Styrkedrikk (+50 Liv)", "cost": 4, "heal": 50.0},
+		])
 
 
 func _spawn_story_interactables() -> void:
@@ -328,9 +364,134 @@ func _spawn_story_interactables() -> void:
 			world_root.add_child(c)
 			coin_count += 1
 
-	# 2. I Grusomme Gabriels grotte (cave): plasser ekte originale historie-objekter!
+	# 2. Generer ALLE originale hopp (jump_*) og stiger (ladder_*) fra gameplay-JSON på tvers av alle brett!
+	_spawn_jumps_and_ladders()
+
+	# 3. Generer originale oppdragsskatter (pickup_*) på alle brett (kake, nøkler, kokosnøtter, klubbe osv.)
+	_spawn_all_pickups()
+
+	# 4. I Grusomme Gabriels grotte (cave): plasser ekte originale historie-objekter!
 	if level_id == "cave":
 		_spawn_cave_story_objects()
+
+
+func _spawn_jumps_and_ladders() -> void:
+	for low in nodes_by_name.keys():
+		if not (low.begins_with("jump") or low.begins_with("ladder")):
+			continue
+		if "tutorial" in low or "cameratrigger" in low:
+			continue
+		var n: Dictionary = nodes_by_name[low]
+		var ud := str(n.get("userdata", ""))
+		if not ("splinedata" in ud):
+			continue
+		var pts: Array[Vector3] = []
+		for m in _re_vec.search_all(ud):
+			var gx := float(m.get_string(1)) * WORLD_SCALE
+			var gz := -float(m.get_string(2)) * WORLD_SCALE
+			var vz := float(m.get_string(3)) * WORLD_SCALE
+			var gy := _sample_floor_y(gx, gz, vz)
+			pts.append(Vector3(gx, gy, gz))
+		if pts.size() < 2:
+			continue
+		var a := pts[0]
+		var b := pts[pts.size() - 1]
+		if a.distance_to(b) < 0.45:
+			continue
+
+		var is_climb: bool = low.begins_with("ladder")
+		var ev_base: String = str(low)
+		for pair in [[a, b, false], [b, a, true]]:
+			var from_p: Vector3 = pair[0]
+			var to_p: Vector3 = pair[1]
+			var is_rev: bool = pair[2]
+			var trig := StoryInteractable.new()
+			trig.name = ("Ladder_" if is_climb else "Jump_") + ev_base + ("_Top" if is_rev else "_Start")
+			trig.position = from_p
+			trig.is_blocking = false
+			trig.add_to_group("interactable")
+			trig.add_to_group("leap_interactable")
+			if is_climb:
+				trig.prompt_text = "[Space / E] Klatre ned stigen" if is_rev else "[Space / E] Klatre opp stigen"
+			else:
+				trig.prompt_text = "[Space / E] Hopp over kløften"
+
+			var ring := MeshInstance3D.new()
+			var tm := TorusMesh.new()
+			tm.inner_radius = 0.50
+			tm.outer_radius = 0.58
+			ring.mesh = tm
+			ring.position.y = 0.04
+			var rmat := StandardMaterial3D.new()
+			rmat.albedo_color = Color(0.95, 0.78, 0.25, 0.52) if is_climb else Color(0.32, 0.88, 1.0, 0.45)
+			rmat.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
+			rmat.emission_enabled = true
+			rmat.emission = Color(rmat.albedo_color.r, rmat.albedo_color.g, rmat.albedo_color.b)
+			rmat.emission_energy_multiplier = 0.55
+			ring.material_override = rmat
+			trig.add_child(ring)
+
+			trig.on_interact_cb = func(p):
+				var actor: Node = p if (p != null and p.has_method("leap_to")) else player
+				if is_instance_valid(actor) and actor.has_method("leap_to"):
+					var dist := from_p.distance_to(to_p)
+					var dur := clampf(dist * (0.14 if is_climb else 0.09), 0.48, 1.25)
+					var arc := 0.0 if is_climb else clampf(dist * 0.28, 1.35, 3.0)
+					actor.leap_to(to_p + Vector3(0.0, 0.12, 0.0), dur, arc, is_climb, func():
+						emit_event(ev_base + "_finished")
+					)
+			world_root.add_child(trig)
+
+
+func _spawn_all_pickups() -> void:
+	for low in nodes_by_name.keys():
+		if not low.begins_with("pickup_"):
+			continue
+		if low == "pickup_woodensword" or level_id == "abra":
+			continue
+		var n: Dictionary = nodes_by_name[low]
+		var gp: Array = n.get("godot_pos", [0, 0, 0])
+		var gx := float(gp[0]) * WORLD_SCALE
+		var gz := float(gp[2]) * WORLD_SCALE
+		var gy := _sample_floor_y(gx, gz, float(gp[1]) * WORLD_SCALE)
+
+		var area := Area3D.new()
+		area.name = "Pickup_" + low
+		area.position = Vector3(gx, gy + 0.72, gz)
+		var cs := CollisionShape3D.new()
+		var sp := SphereShape3D.new()
+		sp.radius = 1.6
+		cs.shape = sp
+		area.add_child(cs)
+
+		var orb := MeshInstance3D.new()
+		var sm := SphereMesh.new()
+		sm.radius = 0.34
+		sm.height = 0.68
+		orb.mesh = sm
+		var mat := StandardMaterial3D.new()
+		mat.albedo_color = Color(1.0, 0.85, 0.28)
+		mat.emission_enabled = true
+		mat.emission = Color(1.0, 0.72, 0.16)
+		mat.emission_energy_multiplier = 1.8
+		orb.material_override = mat
+		area.add_child(orb)
+
+		var pk_id: String = str(low)
+		area.body_entered.connect(func(body: Node):
+			if body.is_in_group("player"):
+				GameState.add_achievement("got_" + pk_id)
+				GameState.heal(25.0)
+				GameState.add_coins(5)
+				AudioManager.play_sfx("coinpopup")
+				if "sword" in pk_id:
+					GameState.unlock_weapon("sword", true)
+				elif "goldsword" in pk_id:
+					GameState.unlock_weapon("goldsword", true)
+				emit_event(pk_id + "_pickedup")
+				area.queue_free()
+		)
+		world_root.add_child(area)
 
 
 func _spawn_cave_story_objects() -> void:
@@ -345,7 +506,7 @@ func _spawn_cave_story_objects() -> void:
 		area.position = pos
 		var cs := CollisionShape3D.new()
 		var sp := SphereShape3D.new()
-		sp.radius = 1.6
+		sp.radius = 1.8
 		cs.shape = sp
 		area.add_child(cs)
 
@@ -370,7 +531,7 @@ func _spawn_cave_story_objects() -> void:
 
 		area.body_entered.connect(func(body: Node):
 			if body.is_in_group("player"):
-				GameState.equip_weapon("woodensword")
+				GameState.unlock_weapon("woodensword", true)
 				AudioManager.play_sfx("coinpopup")
 				start_conversation("cave_start_sword1", true, true)
 				_schedule(3.5, func(): AudioManager.play_voice("cave_start_swordintro_storyteller"))
@@ -388,6 +549,7 @@ func _spawn_cave_story_objects() -> void:
 		var crate := StoryInteractable.new()
 		crate.name = "CratePuzzle1"
 		crate.position = pos
+		crate.is_blocking = true
 		crate.add_to_group("interactable")
 		crate.prompt_text = "[E] Dytt kassen på plass"
 		var cs := CollisionShape3D.new()
@@ -409,11 +571,18 @@ func _spawn_cave_story_objects() -> void:
 			mi.mesh = m
 			mi.position.y = 0.65
 			crate.add_child(mi)
+		var dest_crate := crate.position + Vector3(1.8, 0.0, -2.2)
+		if nodes_by_name.has("correctposition1"):
+			var cp: Array = nodes_by_name["correctposition1"].get("godot_pos", [])
+			if cp.size() >= 3:
+				var dx := float(cp[0]) * WORLD_SCALE
+				var dz := float(cp[2]) * WORLD_SCALE
+				dest_crate = Vector3(dx, _sample_floor_y(dx, dz, crate.position.y), dz)
 		crate.on_interact_cb = func(_p):
 			if not crate.get_meta("solved", false):
 				crate.set_meta("solved", true)
 				AudioManager.play_sfx("bashbarrel_01")
-				_moving_meshes.append({"node": crate, "target_pos": crate.position + Vector3(1.8, 0.0, -2.2), "speed": 3.0})
+				_moving_meshes.append({"node": crate, "target_pos": dest_crate, "speed": 3.0})
 				emit_event("cratepuzzle1_in_correctposition")
 		world_root.add_child(crate)
 
@@ -428,6 +597,7 @@ func _spawn_cave_story_objects() -> void:
 		var wall := StoryInteractable.new()
 		wall.name = cname
 		wall.position = pos
+		wall.is_blocking = false
 		wall.add_to_group("hittable")
 		wall.add_to_group("interactable")
 		wall.prompt_text = "[Venstreklikk / E] Knus den sprukne steinveggen"
@@ -440,9 +610,12 @@ func _spawn_cave_story_objects() -> void:
 		var wall_id: String = str(cname)
 		var crush_fn := func():
 			AudioManager.play_sfx("cave_crushablewall")
+			_disable_collider(wall_id + "_collision")
+			_disable_collider(wall_id)
 			if is_instance_valid(level_geom):
 				for mi in _find_meshes(level_geom):
-					if "crushrock" in mi.name.to_lower() and mi.global_position.distance_to(pos) < 8.0:
+					var mn := mi.name.to_lower()
+					if ("crushrock" in mn or "crushable" in mn) and mi.global_position.distance_to(pos) < 8.5:
 						mi.visible = false
 			emit_event(wall_id + "_crushed")
 			wall.queue_free()
@@ -459,20 +632,51 @@ func _spawn_cave_story_objects() -> void:
 		var trig := StoryInteractable.new()
 		trig.name = "ActionableThrow"
 		trig.position = pos
+		trig.is_blocking = false
 		trig.add_to_group("interactable")
 		trig.prompt_text = "[E] La Pelle kaste deg over lavaen"
 		var cs := CollisionShape3D.new()
 		var sp := SphereShape3D.new()
-		sp.radius = 1.8
+		sp.radius = 2.0
 		cs.shape = sp
 		trig.add_child(cs)
-		trig.on_interact_cb = func(_p):
-			emit_event("actionable_throw_actioned")
+		trig.on_interact_cb = func(p):
 			AudioManager.play_sfx("jump")
-			if is_instance_valid(player):
-				var dest := Vector3(-5.7, _sample_floor_y(-5.7, -23.5, -8.5) + 0.3, -23.5)
-				player.global_position = dest
+			var actor: Node = p if (p != null and p.has_method("leap_to")) else player
+			var dest := Vector3(-5.7, _sample_floor_y(-5.7, -23.5, -8.5) + 0.15, -23.5)
+			if is_instance_valid(actor) and actor.has_method("leap_to"):
+				actor.leap_to(dest, 0.92, 3.8, false, func():
+					emit_event("actionable_throw_actioned")
+				)
+			else:
+				if is_instance_valid(player):
+					player.global_position = dest
+				emit_event("actionable_throw_actioned")
 		world_root.add_child(trig)
+
+
+func _disable_collider(cname: String) -> void:
+	var k := cname.to_lower().strip_edges()
+	if not colliders.has(k):
+		return
+	var sb = colliders[k]
+	if is_instance_valid(sb) and sb is StaticBody3D:
+		(sb as StaticBody3D).collision_layer = 0
+		for c in sb.get_children():
+			if c is CollisionShape3D:
+				(c as CollisionShape3D).set_deferred("disabled", true)
+
+
+func _enable_collider(cname: String) -> void:
+	var k := cname.to_lower().strip_edges()
+	if not colliders.has(k):
+		return
+	var sb = colliders[k]
+	if is_instance_valid(sb) and sb is StaticBody3D:
+		(sb as StaticBody3D).collision_layer = 1
+		for c in sb.get_children():
+			if c is CollisionShape3D:
+				(c as CollisionShape3D).set_deferred("disabled", false)
 
 
 func emit_event(event_name: String) -> void:
@@ -546,9 +750,11 @@ func _execute_action(raw: String) -> void:
 
 	match cmd:
 		"disableinput":
+			if _elapsed < 1.2:
+				return
 			if player and "input_locked" in player:
 				player.input_locked = true
-				_input_lock_failsafe = 14.0
+				_input_lock_failsafe = 5.0
 		"enableinput":
 			if player and "input_locked" in player:
 				player.input_locked = false
@@ -557,7 +763,7 @@ func _execute_action(raw: String) -> void:
 			if parts.size() >= 2:
 				var cname := parts[1].strip_edges().to_lower()
 				var nocam := "nocamera" in raw.to_lower()
-				var dontlock := "dontlock" in raw.to_lower()
+				var dontlock := "dontlock" in raw.to_lower() or _elapsed < 1.5
 				start_conversation(cname, nocam, dontlock)
 		"playsfx", "playsound":
 			if parts.size() >= 2:
@@ -588,6 +794,13 @@ func _execute_action(raw: String) -> void:
 					nxt = "abra" # Etter grotten drar mannskapet rett til Miriam av Gral i Abra Havn!
 				GameState.complete_level_story(level_id)
 				GameState.request_level(nxt)
+		"adduseitem", "selectuseitem", "give", "addtoinventory":
+			if parts.size() >= 2:
+				var item := parts[1].strip_edges().to_lower()
+				if item in ["woodensword", "sword", "goldsword", "rapier", "slingshot", "lamp"]:
+					GameState.unlock_weapon(item, cmd in ["selectuseitem", "give"])
+				else:
+					GameState.add_achievement("got_" + item)
 		_:
 			if parts.size() >= 2:
 				var sub := parts[1].strip_edges().to_lower()
@@ -600,16 +813,49 @@ func _execute_target_action(target: String, sub: String, parts: PackedStringArra
 			for t in _area_triggers:
 				if t["name"] == target:
 					t["enabled"] = true
+			_enable_collider(target)
 		"disable":
 			for t in _area_triggers:
 				if t["name"] == target:
 					t["enabled"] = false
+			_disable_collider(target)
+		"disablecollision":
+			_disable_collider(target)
+		"enablecollision":
+			_enable_collider(target)
+		"open", "crush", "removefromworld", "scaleout":
+			_disable_collider(target)
+			_disable_collider(target + "_collision")
+			if is_instance_valid(level_geom):
+				var mi := _find_mesh_by_name(level_geom, target)
+				if mi:
+					mi.visible = false
+			if sub == "crush":
+				AudioManager.play_sfx("cave_crushablewall")
+				emit_event(target + "_crushed")
+			elif sub == "open":
+				AudioManager.play_sfx("door")
+				emit_event(target + "_opened")
+		"close":
+			_enable_collider(target)
+			_enable_collider(target + "_collision")
+			if is_instance_valid(level_geom):
+				var mi := _find_mesh_by_name(level_geom, target)
+				if mi:
+					mi.visible = true
+		"adduseitem", "selectuseitem", "give", "addtoinventory":
+			if parts.size() >= 3:
+				var item := parts[2].strip_edges().to_lower()
+				if item in ["woodensword", "sword", "goldsword", "rapier", "slingshot", "lamp"]:
+					GameState.unlock_weapon(item, sub in ["selectuseitem", "give"])
+				else:
+					GameState.add_achievement("got_" + item)
 		"addachievement":
 			if parts.size() >= 3:
 				GameState.add_achievement(parts[2].strip_edges().to_lower())
 		"resethealth":
 			GameState.heal(100.0)
-		"jump":
+		"jump", "throw", "climbwithcamera":
 			if parts.size() >= 3:
 				var jname := parts[2].strip_edges().to_lower()
 				if actors.has(target) and nodes_by_name.has(jname):
@@ -620,7 +866,10 @@ func _execute_target_action(target: String, sub: String, parts: PackedStringArra
 						var gz := -float(m.get_string(2)) * WORLD_SCALE
 						pts.append(Vector3(gx, _sample_floor_y(gx, gz, 0.0), gz))
 					var act_node = actors[target]
-					if not pts.is_empty() and act_node.has_method("walk_spline"):
+					if pts.size() >= 2 and act_node.has_method("leap_to"):
+						var dest := pts[pts.size() - 1]
+						act_node.leap_to(dest, 0.85, 0.0 if sub == "climbwithcamera" else 2.6, sub == "climbwithcamera", func(): emit_event(jname + "_finished"))
+					elif not pts.is_empty() and act_node.has_method("walk_spline"):
 						act_node.walk_spline(pts, 5.6, func(): emit_event(jname + "_finished"))
 					else:
 						emit_event(jname + "_finished")
@@ -742,6 +991,7 @@ func _run_spline(sp: Dictionary) -> void:
 
 
 func _physics_process(delta: float) -> void:
+	_elapsed += delta
 	# 1. Tidsforsinkede triggere
 	var keep_timers: Array = []
 	for t in _pending_timers:

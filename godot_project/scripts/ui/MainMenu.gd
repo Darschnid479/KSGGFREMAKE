@@ -215,12 +215,31 @@ func _setup_menu_ui() -> void:
 	sep.custom_minimum_size = Vector2(0, 6)
 	vb.add_child(sep)
 
+	var load_panel := PanelContainer.new()
+	load_panel.set_anchors_preset(Control.PRESET_CENTER)
+	load_panel.offset_left = -210
+	load_panel.offset_right = 210
+	load_panel.offset_top = -48
+	load_panel.offset_bottom = 48
+	load_panel.add_theme_stylebox_override("panel", _make_style())
+	load_panel.visible = false
+	ui.add_child(load_panel)
+	var load_lbl := Label.new()
+	load_lbl.text = "Laster inn eventyret..."
+	load_lbl.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	load_lbl.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	load_lbl.add_theme_font_size_override("font_size", 22)
+	load_lbl.add_theme_color_override("font_color", Color(1.0, 0.88, 0.36))
+	load_panel.add_child(load_lbl)
+
 	if GameState.has_save():
 		var cont_btn := Button.new()
 		cont_btn.text = "Fortsett spill"
 		_style_button(cont_btn)
 		cont_btn.pressed.connect(func():
 			AudioManager.play_sfx("menu_select")
+			load_panel.visible = true
+			await get_tree().process_frame
 			get_tree().change_scene_to_file("res://scenes/GameLevel.tscn")
 		)
 		vb.add_child(cont_btn)
@@ -230,6 +249,8 @@ func _setup_menu_ui() -> void:
 	_style_button(start_btn)
 	start_btn.pressed.connect(func():
 		AudioManager.play_sfx("menu_select")
+		load_panel.visible = true
+		await get_tree().process_frame
 		# 1:1 historieflyt: starter alltid i Grusomme Gabriels grotte
 		GameState.reset_new_game("cave")
 		get_tree().change_scene_to_file("res://scenes/GameLevel.tscn")

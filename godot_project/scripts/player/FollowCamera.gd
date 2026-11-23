@@ -99,15 +99,21 @@ func set_target(node: Node3D, dist: float = 9.5, height: float = 2.6, is_top_dow
 func _unhandled_input(event: InputEvent) -> void:
 	var lock_orbit := top_down_mode or side_2d_mode
 	if event is InputEventMouseButton:
-		if event.button_index == MOUSE_BUTTON_RIGHT and not lock_orbit:
+		if (event.button_index == MOUSE_BUTTON_RIGHT or event.button_index == MOUSE_BUTTON_MIDDLE) and not lock_orbit:
 			_rotating = event.pressed
 		elif event.button_index == MOUSE_BUTTON_WHEEL_UP and event.pressed:
 			distance = clampf(distance - (4.0 if top_down_mode else 1.2), min_distance, max_distance)
 		elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN and event.pressed:
 			distance = clampf(distance + (4.0 if top_down_mode else 1.2), min_distance, max_distance)
+	elif event is InputEventKey and event.pressed and not event.echo and not lock_orbit:
+		if event.keycode == KEY_C:
+			if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
+				Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+			else:
+				Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	elif event is InputEventMouseMotion and not lock_orbit and (_rotating or Input.mouse_mode == Input.MOUSE_MODE_CAPTURED):
 		yaw -= event.relative.x * GameState.mouse_sensitivity
-		pitch = clampf(pitch - event.relative.y * GameState.mouse_sensitivity, -1.15, 0.25)
+		pitch = clampf(pitch - event.relative.y * GameState.mouse_sensitivity, -0.95, 0.14)
 
 
 func _physics_process(delta: float) -> void:
@@ -123,9 +129,14 @@ func _physics_process(delta: float) -> void:
 
 	if not top_down_mode and not side_2d_mode:
 		if Input.is_key_pressed(KEY_Q):
-			yaw += 1.8 * delta
+			yaw += 2.0 * delta
 		if Input.is_key_pressed(KEY_R):
-			yaw -= 1.8 * delta
+			yaw -= 2.0 * delta
+		# Myk moderne tredjepersons-oppfølging når spilleren svinger med A/D (uten at kamera kjemper mot musen)
+		if not _rotating and Input.mouse_mode != Input.MOUSE_MODE_CAPTURED:
+			var turn_in := Input.get_axis("move_left", "move_right")
+			if absf(turn_in) > 0.1 and not Input.is_action_pressed("move_backward"):
+				yaw -= turn_in * 0.92 * delta
 
 	rotation = Vector3(pitch, yaw, 0.0)
 	if spring_arm:

@@ -15,6 +15,7 @@ uniform float base_metallic : hint_range(0.0, 1.0) = 0.0;
 uniform float mesh_min_y = 0.0;
 uniform float mesh_height = 1.66;
 uniform float torso_half_w = 0.22;
+uniform float leg_max_x = 0.24;
 uniform float z_center = 0.0;
 uniform float forward_sign = -1.0; // -1.0 hvis karakteren ser mot -Z, +1.0 hvis +Z
 
@@ -66,13 +67,14 @@ void vertex() {
 	float knee_y = mesh_min_y + 0.24 * h;
 	float waist_y = mesh_min_y + 0.50 * h;
 	float sh_y = mesh_min_y + 0.74 * h;
-	float elbow_y = mesh_min_y + 0.58 * h;
+	float elbow_y = mesh_min_y + 0.54 * h;
 	float neck_y = mesh_min_y + 0.80 * h;
 	float fwd = -forward_sign; // +1 når karakteren ser mot -Z
 
-	// 1. BEIN & KNÆR (yn < 0.49) – ekte hierarkisk knebøy + lårsving for venstre (x < 0) og høyre (x > 0) bein!
-	float leg_mask = 1.0 - smoothstep(0.42, 0.50, yn);
-	float shin_mask = 1.0 - smoothstep(0.20, 0.28, yn);
+	// 1. BEIN & KNÆR (yn < 0.49 OG |x| innenfor beinsonen slik at hendene i A-posen ALDRI blir dratt med beina!)
+	float leg_x_mask = 1.0 - smoothstep(leg_max_x * 0.88, leg_max_x * 1.12, abs(p.x));
+	float leg_mask = (1.0 - smoothstep(0.42, 0.50, yn)) * leg_x_mask;
+	float shin_mask = (1.0 - smoothstep(0.20, 0.28, yn)) * leg_x_mask;
 	float l_side = 1.0 - smoothstep(-0.04, 0.02, p.x);
 	float r_side = smoothstep(-0.02, 0.04, p.x);
 
@@ -99,33 +101,34 @@ void vertex() {
 		}
 	}
 
-	// 2. ARMER & ALBUER (x utenfor brystkassen i arm-høydebåndet)
-	float arm_band = smoothstep(0.32, 0.44, yn) * (1.0 - smoothstep(0.76, 0.85, yn));
-	float arm_x = smoothstep(torso_half_w * 0.78, torso_half_w * 1.18, abs(p.x));
+	// 2. ARMER, ALBUER & HENDER (fanger hele armen og hengende hender fra yn=0.25 til 0.85 utenfor bein/torso!)
+	float arm_band = smoothstep(0.25, 0.34, yn) * (1.0 - smoothstep(0.77, 0.86, yn));
+	float arm_inner = mix(leg_max_x * 0.92, torso_half_w * 0.85, smoothstep(0.42, 0.65, yn));
+	float arm_x = smoothstep(arm_inner * 0.86, arm_inner * 1.14, abs(p.x));
 	float arm_mask = arm_band * arm_x;
-	float forearm_mask = arm_mask * (1.0 - smoothstep(0.53, 0.62, yn));
+	float forearm_mask = arm_mask * (1.0 - smoothstep(0.50, 0.60, yn));
 
 	if (arm_mask > 0.001) {
-		float left_x = 1.0 - smoothstep(-0.05, 0.0, p.x);
-		float right_x = smoothstep(0.0, 0.05, p.x);
+		float left_x = 1.0 - smoothstep(-0.04, 0.01, p.x);
+		float right_x = smoothstep(-0.01, 0.04, p.x);
 		float al = arm_mask * left_x;
 		float ar = arm_mask * right_x;
 		float fl = forearm_mask * left_x;
 		float fr = forearm_mask * right_x;
 
-		// Bøy underarmen fremover rundt albuen
+		// Bøy underarmen + hånden fremover rundt albuen
 		float elb_a = (l_elbow_bend * fl + r_elbow_bend * fr) * fwd;
 		if (abs(elb_a) > 0.0005) {
-			vec3 ep = vec3(sign(p.x) * torso_half_w * 1.15, elbow_y, z_center);
+			vec3 ep = vec3(sign(p.x) * torso_half_w * 1.12, elbow_y, z_center);
 			p = ep + rot_x(p - ep, elb_a);
 			n = rot_x(n, elb_a);
 		}
 
-		// Sving hele armen rundt skulderen (frem/tilbake + ut til siden)
+		// Sving hele armen rundt skulderen (frem/tilbake + senk armene naturlig inn mot hoftene!)
 		float sh_pitch = (l_arm_pitch * al + r_arm_pitch * ar) * fwd;
 		float sh_out = (-l_arm_out * al + r_arm_out * ar);
 		if (abs(sh_pitch) > 0.0005 || abs(sh_out) > 0.0005) {
-			vec3 sp = vec3(sign(p.x) * torso_half_w * 0.92, sh_y, z_center);
+			vec3 sp = vec3(sign(p.x) * torso_half_w * 0.78, sh_y, z_center);
 			vec3 rel = p - sp;
 			rel = rot_z(rel, sh_out);
 			rel = rot_x(rel, sh_pitch);
@@ -171,18 +174,18 @@ void fragment() {
 	if (has_albedo_tex) {
 		alb *= texture(albedo_tex, UV).rgb;
 	}
-	// Naturlig moderne animasjonskontrast (unngår dobbel metning og rødlig hud under fakkelys!)
-	alb = pow(max(alb, vec3(0.0001)), vec3(1.04)) * 1.04;
+	// Frisk, balansert animasjonsfarge uten dobbel formørking eller rødstikk
+	alb = pow(max(alb, vec3(0.0001)), vec3(1.02)) * 1.12;
 	float lum = dot(alb, vec3(0.299, 0.587, 0.114));
-	alb = mix(vec3(lum), alb, 1.03);
+	alb = mix(vec3(lum), alb, 1.04);
 
 	if (has_fabric_normal) {
 		NORMAL_MAP = texture(fabric_normal_tex, UV * 7.5).rgb;
-		NORMAL_MAP_DEPTH = 0.32;
+		NORMAL_MAP_DEPTH = 0.28;
 	}
 
 	ALBEDO = clamp(alb, vec3(0.0), vec3(1.0));
 	METALLIC = base_metallic;
-	ROUGHNESS = clamp(base_roughness, 0.24, 0.90);
-	SPECULAR = 0.38;
+	ROUGHNESS = clamp(base_roughness, 0.30, 0.88);
+	SPECULAR = 0.34;
 }
