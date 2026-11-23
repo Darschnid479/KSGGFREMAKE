@@ -373,35 +373,36 @@ static func spawn_fire_brazier(parent: Node, pos: Vector3, scale_val: float = 1.
 		fl.material_override = fmat
 		root.add_child(fl)
 
-	# Stigende glødende gnister (GPUParticles3D)
+	# Stigende myke glødende gnister (alfablandede runde glør – null flate gule åttekantede sirkler!)
 	var pts := GPUParticles3D.new()
 	pts.position = Vector3(0.0, 1.0, 0.0)
-	pts.amount = 28
-	pts.lifetime = 1.6
-	pts.preprocess = 1.2
+	pts.amount = 24
+	pts.lifetime = 1.5
+	pts.preprocess = 1.0
 	var pmat := ParticleProcessMaterial.new()
 	pmat.emission_shape = ParticleProcessMaterial.EMISSION_SHAPE_SPHERE
-	pmat.emission_sphere_radius = 0.28
+	pmat.emission_sphere_radius = 0.25
 	pmat.direction = Vector3(0.0, 1.0, 0.0)
-	pmat.spread = 24.0
+	pmat.spread = 22.0
 	pmat.initial_velocity_min = 1.2
-	pmat.initial_velocity_max = 2.6
-	pmat.gravity = Vector3(0.25, 0.4, 0.0)
-	pmat.scale_min = 0.04
-	pmat.scale_max = 0.11
+	pmat.initial_velocity_max = 2.5
+	pmat.gravity = Vector3(0.22, 0.4, 0.0)
+	pmat.scale_min = 0.45
+	pmat.scale_max = 1.0
 	pmat.color = Color(1.0, 0.68, 0.22)
 	pts.process_material = pmat
-	var qm := SphereMesh.new()
-	qm.radius = 0.14
-	qm.height = 0.28
-	qm.radial_segments = 6
-	qm.rings = 4
+	var qm := QuadMesh.new()
+	qm.size = Vector2(0.16, 0.16)
 	var qmat := StandardMaterial3D.new()
+	qmat.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
+	qmat.blend_mode = BaseMaterial3D.BLEND_MODE_ADD
+	qmat.billboard_mode = BaseMaterial3D.BILLBOARD_PARTICLES
 	qmat.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
-	qmat.albedo_color = Color(1.0, 0.78, 0.28)
+	qmat.albedo_texture = get_soft_glow_tex()
+	qmat.albedo_color = Color(1.0, 0.72, 0.26, 0.95)
 	qmat.emission_enabled = true
-	qmat.emission = Color(1.0, 0.56, 0.12)
-	qmat.emission_energy_multiplier = 4.0
+	qmat.emission = Color(1.0, 0.56, 0.14)
+	qmat.emission_energy_multiplier = 2.2
 	qm.material = qmat
 	pts.draw_pass_1 = qm
 	root.add_child(pts)
@@ -417,65 +418,349 @@ static func spawn_fire_brazier(parent: Node, pos: Vector3, scale_val: float = 1.
 	return root
 
 
-## Atmosfæriske svevende 3D-partikler per biom (gullstøv, glør, grønne spøkelsessporer).
+static var _cached_glow_tex: Texture2D
+
+## Myk radial glød-tekstur (eliminerer alle harde gule prikker/sirkler i luften!).
+static func get_soft_glow_tex() -> Texture2D:
+	if _cached_glow_tex == null:
+		var img := Image.create(64, 64, false, Image.FORMAT_RGBA8)
+		for y in range(64):
+			for x in range(64):
+				var dx := (float(x) / 63.0 - 0.5) * 2.0
+				var dy := (float(y) / 63.0 - 0.5) * 2.0
+				var d := sqrt(dx * dx + dy * dy)
+				var a := pow(clampf(1.0 - d, 0.0, 1.0), 2.8)
+				img.set_pixel(x, y, Color(1.0, 1.0, 1.0, a))
+		_cached_glow_tex = ImageTexture.create_from_image(img)
+	return _cached_glow_tex
+
+
+## Atmosfæriske svevende lysstøv-partikler med myk radial glød (aldri harde gule sirkler!).
 static func spawn_ambient_particles(parent: Node, center: Vector3, biome: String) -> GPUParticles3D:
 	var pts := GPUParticles3D.new()
 	pts.name = "AmbientAtmosphereParticles"
-	pts.position = center + Vector3(0.0, 3.5, 0.0)
-	pts.amount = 90
-	pts.lifetime = 5.5
-	pts.preprocess = 3.0
+	pts.position = center + Vector3(0.0, 4.5, 0.0)
+	pts.amount = 42 if biome == "graal_bosslevel" else 64
+	pts.lifetime = 5.0
+	pts.preprocess = 2.5
 	pts.visibility_aabb = AABB(Vector3(-45, -20, -45), Vector3(90, 45, 90))
 
 	var pmat := ParticleProcessMaterial.new()
-	pmat.emission_shape = ParticleProcessMaterial.EMISSION_SHAPE_BOX
-	pmat.emission_box_extents = Vector3(22.0, 8.0, 22.0)
+	pmat.emission_shape = ParticleProcessMaterial.EMISSION_SHAPE_RING
+	pmat.emission_ring_radius = 18.0
+	pmat.emission_ring_inner_radius = 7.0
+	pmat.emission_ring_height = 8.0
 
-	var col := Color(1.0, 0.92, 0.68)
-	var em_energy := 2.4
+	var col := Color(1.0, 0.90, 0.62, 0.72)
+	var em_energy := 1.4
 	if biome in ["cave_end", "cave_end_bosslevel"]:
-		col = Color(0.28, 1.0, 0.66)
-		em_energy = 3.6
-		pmat.direction = Vector3(0.0, 1.0, 0.0)
-		pmat.initial_velocity_min = 0.3
-		pmat.initial_velocity_max = 0.8
-		pmat.gravity = Vector3(0.0, 0.18, 0.0)
-	elif biome in ["graal_bosslevel", "graal_mountain", "magakhan_dungeon", "magakhan_endboss_level"]:
-		col = Color(1.0, 0.56, 0.16)
-		em_energy = 4.2
-		pmat.direction = Vector3(0.3, 1.0, 0.1)
-		pmat.initial_velocity_min = 0.7
-		pmat.initial_velocity_max = 1.6
-		pmat.gravity = Vector3(0.2, 0.35, 0.0)
-	else:
-		# Varmt gyllent solstøv / hav-glitter i Abra Havn og Fata Morgana
-		col = Color(1.0, 0.92, 0.66)
+		col = Color(0.24, 1.0, 0.66, 0.78)
 		em_energy = 2.0
+		pmat.direction = Vector3(0.0, 1.0, 0.0)
+		pmat.initial_velocity_min = 0.25
+		pmat.initial_velocity_max = 0.65
+		pmat.gravity = Vector3(0.0, 0.14, 0.0)
+	elif biome in ["graal_bosslevel", "graal_mountain", "magakhan_dungeon", "magakhan_endboss_level"]:
+		col = Color(1.0, 0.56, 0.18, 0.85)
+		em_energy = 2.2
+		pmat.direction = Vector3(0.2, 1.0, 0.1)
+		pmat.initial_velocity_min = 0.6
+		pmat.initial_velocity_max = 1.4
+		pmat.gravity = Vector3(0.18, 0.25, 0.0)
+	else:
 		pmat.direction = Vector3(0.2, 0.3, 0.0)
 		pmat.initial_velocity_min = 0.15
-		pmat.initial_velocity_max = 0.45
-		pmat.gravity = Vector3(0.05, 0.05, 0.0)
+		pmat.initial_velocity_max = 0.40
+		pmat.gravity = Vector3(0.04, 0.04, 0.0)
 
-	pmat.spread = 45.0
-	pmat.scale_min = 0.03
-	pmat.scale_max = 0.07
+	pmat.spread = 38.0
+	pmat.scale_min = 0.45
+	pmat.scale_max = 0.95
 	pts.process_material = pmat
 
-	var sp := SphereMesh.new()
-	sp.radius = 0.14
-	sp.height = 0.28
-	sp.radial_segments = 6
-	sp.rings = 4
+	var qm := QuadMesh.new()
+	qm.size = Vector2(0.18, 0.18)
 	var smat := StandardMaterial3D.new()
+	smat.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
+	smat.blend_mode = BaseMaterial3D.BLEND_MODE_ADD
+	smat.billboard_mode = BaseMaterial3D.BILLBOARD_PARTICLES
 	smat.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
+	smat.albedo_texture = get_soft_glow_tex()
 	smat.albedo_color = col
 	smat.emission_enabled = true
-	smat.emission = col
+	smat.emission = Color(col.r, col.g, col.b)
 	smat.emission_energy_multiplier = em_energy
-	sp.material = smat
-	pts.draw_pass_1 = sp
+	qm.material = smat
+	pts.draw_pass_1 = qm
 	parent.add_child(pts)
 	return pts
+
+
+## Skummel gotisk bakgrunns-fjellkjede + 3D forgrenede lynnedslag rundt Gral-borgen!
+static func spawn_graal_scary_backdrop(parent: Node) -> void:
+	var root := Node3D.new()
+	root.name = "GraalScaryBackdrop"
+	parent.add_child(root)
+
+	# 0. Mørk tåkedal under borgen slik at ingen tom grå avgrunn noen gang synes!
+	var valley := MeshInstance3D.new()
+	var vm := PlaneMesh.new()
+	vm.size = Vector2(440.0, 440.0)
+	valley.mesh = vm
+	valley.position = Vector3(0.0, -4.0, 0.0)
+	var vmat := StandardMaterial3D.new()
+	vmat.albedo_color = Color(0.018, 0.022, 0.052)
+	vmat.roughness = 0.96
+	valley.material_override = vmat
+	root.add_child(valley)
+
+	# 1. Ruvende taggete 360-graders gotiske fjelltopper som rammer inn horisonten under uværsskyene!
+	var n_mtn := FastNoiseLite.new()
+	n_mtn.seed = 666
+	n_mtn.noise_type = FastNoiseLite.TYPE_SIMPLEX_SMOOTH
+	n_mtn.frequency = 0.032
+	n_mtn.fractal_octaves = 5
+
+	var sample_mtn_h := func(fx: float, fz: float, rt: float) -> float:
+		var envelope := sin(rt * PI)
+		var ridge1 := pow(1.0 - absf(n_mtn.get_noise_2d(fx * 0.55, fz * 0.55)), 2.1)
+		var ridge2 := pow(1.0 - absf(n_mtn.get_noise_2d(fx * 1.25 + 23.0, fz * 1.25 - 14.0)), 2.3)
+		var crag := ridge1 * 32.0 + ridge2 * 16.0
+		return -12.0 + envelope * (18.0 + crag)
+
+	var st := SurfaceTool.new()
+	st.begin(Mesh.PRIMITIVE_TRIANGLES)
+	var rings := 26
+	var segs := 112
+	var r_inner := 52.0
+	var r_outer := 175.0
+
+	var r_verts: Array = []
+	var r_cols: Array = []
+	var r_uvs: Array = []
+	for ri in range(rings + 1):
+		var rt := float(ri) / float(rings)
+		var r_cur := lerpf(r_inner, r_outer, rt)
+		var rv: Array[Vector3] = []
+		var rc: Array[Color] = []
+		var ru: Array[Vector2] = []
+		for si in range(segs + 1):
+			var ang := (float(si) / float(segs)) * TAU
+			var fx := cos(ang) * r_cur
+			var fz := sin(ang) * r_cur
+			var h: float = float(sample_mtn_h.call(fx, fz, rt))
+
+			# Dyp mørk gotisk obsidian/skifer-gradient med kjølig sølvblått månelys på eggene
+			var col := Color(0.012, 0.015, 0.036)
+			if h > 30.0:
+				col = Color(0.058, 0.072, 0.145)
+			elif h > 18.0:
+				col = Color(0.030, 0.036, 0.080)
+			elif h > 6.0:
+				col = Color(0.018, 0.022, 0.052)
+			rv.append(Vector3(fx, h, fz))
+			rc.append(col)
+			ru.append(Vector2(fx * 0.045, fz * 0.045))
+		r_verts.append(rv)
+		r_cols.append(rc)
+		r_uvs.append(ru)
+
+	# Riktig vikling slik at alle fjell-normaler peker OPP og UT mot spilleren!
+	for ri in range(rings):
+		for si in range(segs):
+			var v00: Vector3 = r_verts[ri][si]
+			var v10: Vector3 = r_verts[ri + 1][si]
+			var v01: Vector3 = r_verts[ri][si + 1]
+			var v11: Vector3 = r_verts[ri + 1][si + 1]
+			var c00: Color = r_cols[ri][si]
+			var c10: Color = r_cols[ri + 1][si]
+			var c01: Color = r_cols[ri][si + 1]
+			var c11: Color = r_cols[ri + 1][si + 1]
+			var u00: Vector2 = r_uvs[ri][si]
+			var u10: Vector2 = r_uvs[ri + 1][si]
+			var u01: Vector2 = r_uvs[ri][si + 1]
+			var u11: Vector2 = r_uvs[ri + 1][si + 1]
+			for tri in [
+				[v00, c00, u00], [v10, c10, u10], [v11, c11, u11],
+				[v00, c00, u00], [v11, c11, u11], [v01, c01, u01],
+			]:
+				st.set_color(tri[1])
+				st.set_uv(tri[2])
+				st.add_vertex(tri[0])
+
+	st.generate_normals()
+	st.generate_tangents()
+	var mtn := MeshInstance3D.new()
+	mtn.mesh = st.commit()
+	var mmat := StandardMaterial3D.new()
+	mmat.vertex_color_use_as_albedo = true
+	mmat.roughness = 0.88
+	var rock_img := n_mtn.get_seamless_image(256, 256)
+	rock_img.bump_map_to_normal_map(7.0)
+	mmat.normal_enabled = true
+	mmat.normal_texture = ImageTexture.create_from_image(rock_img)
+	mmat.normal_scale = 1.4
+	mmat.rim_enabled = true
+	mmat.rim = 0.45
+	mmat.rim_tint = 0.55
+	mtn.material_override = mmat
+	root.add_child(mtn)
+
+	# 2. Gotiske ruin-vakttårn forankret DYPT nede i fjellryggene med smale glødende vindussprekker!
+	var spire_mat := StandardMaterial3D.new()
+	spire_mat.albedo_color = Color(0.022, 0.025, 0.052)
+	spire_mat.roughness = 0.90
+	var win_mat := StandardMaterial3D.new()
+	win_mat.albedo_color = Color(1.0, 0.44, 0.14)
+	win_mat.emission_enabled = true
+	win_mat.emission = Color(1.0, 0.34, 0.08)
+	win_mat.emission_energy_multiplier = 2.8
+
+	for sp in [
+		[Vector2(82.0, -52.0), 1.15],
+		[Vector2(98.0, -18.0), 1.35],
+		[Vector2(86.0, 14.0), 1.10],
+		[Vector2(28.0, -86.0), 1.25],
+	]:
+		var pxz: Vector2 = sp[0]
+		var r_pt := pxz.length()
+		var rt_pt := clampf((r_pt - r_inner) / (r_outer - r_inner), 0.05, 0.95)
+		var base_y: float = float(sample_mtn_h.call(pxz.x, pxz.y, rt_pt))
+		var snode := Node3D.new()
+		snode.position = Vector3(pxz.x, base_y, pxz.y)
+		snode.scale = Vector3.ONE * float(sp[1])
+		root.add_child(snode)
+		# Dypt forankret steintårn som går 16m ned i fjellet (svever ALDRI!)
+		var twr := MeshInstance3D.new()
+		var tc := CylinderMesh.new()
+		tc.top_radius = 1.6
+		tc.bottom_radius = 3.0
+		tc.height = 30.0
+		tc.radial_segments = 8
+		twr.mesh = tc
+		twr.position.y = -3.0
+		twr.material_override = spire_mat
+		snode.add_child(twr)
+		# Krans / brystvern rundt tårntoppen
+		var crown := MeshInstance3D.new()
+		var cc := CylinderMesh.new()
+		cc.top_radius = 2.15
+		cc.bottom_radius = 1.95
+		cc.height = 2.0
+		cc.radial_segments = 8
+		crown.mesh = cc
+		crown.position.y = 12.2
+		crown.material_override = spire_mat
+		snode.add_child(crown)
+		# Spisst gotisk spir
+		var roof := MeshInstance3D.new()
+		var rc2 := CylinderMesh.new()
+		rc2.top_radius = 0.06
+		rc2.bottom_radius = 2.05
+		rc2.height = 9.0
+		rc2.radial_segments = 8
+		roof.mesh = rc2
+		roof.position.y = 17.5
+		roof.material_override = spire_mat
+		snode.add_child(roof)
+		# Smalt vertikalt gotisk spissvindu mot borgen (IKKE en ring rundt tårnet!)
+		var w := MeshInstance3D.new()
+		var wb := BoxMesh.new()
+		wb.size = Vector3(3.4, 2.3, 0.55)
+		w.mesh = wb
+		w.position.y = 7.6
+		w.material_override = win_mat
+		snode.add_child(w)
+
+	# 3. Alle 4 sylskarpe 3D forgrenede lynnedslag batchet i ÉN eneste GPU-mesh med HDR-bloom!
+	var bolt_st := SurfaceTool.new()
+	bolt_st.begin(Mesh.PRIMITIVE_TRIANGLES)
+	_append_3d_lightning_bolt(bolt_st, Vector3(76.0, 96.0, -52.0), Vector3(70.0, 24.0, -48.0), 101, 0.24)
+	_append_3d_lightning_bolt(bolt_st, Vector3(92.0, 102.0, -10.0), Vector3(84.0, 26.0, -16.0), 202, 0.22)
+	_append_3d_lightning_bolt(bolt_st, Vector3(24.0, 94.0, -84.0), Vector3(18.0, 24.0, -78.0), 303, 0.22)
+	_append_3d_lightning_bolt(bolt_st, Vector3(-28.0, 92.0, -80.0), Vector3(-22.0, 22.0, -72.0), 404, 0.20)
+	bolt_st.generate_normals()
+
+	var bolts_mi := MeshInstance3D.new()
+	bolts_mi.name = "LightningBolts"
+	bolts_mi.mesh = bolt_st.commit()
+	bolts_mi.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+	var core_mat := StandardMaterial3D.new()
+	core_mat.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
+	core_mat.albedo_color = Color(0.92, 0.96, 1.0)
+	core_mat.emission_enabled = true
+	core_mat.emission = Color(0.65, 0.82, 1.0)
+	core_mat.emission_energy_multiplier = 7.5
+	bolts_mi.material_override = core_mat
+	root.add_child(bolts_mi)
+
+	# Enkelt felles lynglød-lys som lyser opp de gotiske fjelltoppene bak Greven av Gral!
+	var flash := OmniLight3D.new()
+	flash.position = Vector3(68.0, 48.0, -34.0)
+	flash.light_color = Color(0.55, 0.74, 1.0)
+	flash.light_energy = 11.0
+	flash.omni_range = 85.0
+	flash.shadow_enabled = false
+	root.add_child(flash)
+
+
+static func _append_3d_lightning_bolt(st: SurfaceTool, start_p: Vector3, end_p: Vector3, seed_val: int, width: float) -> void:
+	var rng := RandomNumberGenerator.new()
+	rng.seed = seed_val
+
+	var pts: Array[Vector3] = []
+	var steps := 18
+	for i in range(steps + 1):
+		var t := float(i) / float(steps)
+		var p := start_p.lerp(end_p, t)
+		if i > 0 and i < steps:
+			var jitter := sin(t * PI) * 4.4
+			p.x += rng.randf_range(-jitter, jitter)
+			p.z += rng.randf_range(-jitter, jitter)
+		pts.append(p)
+
+	_append_bolt_ribbon(st, pts, width)
+
+	for b_idx in [4, 8, 12]:
+		var b_start: Vector3 = pts[b_idx]
+		var b_dir := Vector3(rng.randf_range(-1.0, 1.0), -1.25, rng.randf_range(-1.0, 1.0)).normalized()
+		var b_pts: Array[Vector3] = [b_start]
+		var cur := b_start
+		for j in range(1, 6):
+			cur += b_dir * rng.randf_range(3.0, 5.2) + Vector3(rng.randf_range(-1.8, 1.8), -0.6, rng.randf_range(-1.8, 1.8))
+			b_pts.append(cur)
+		_append_bolt_ribbon(st, b_pts, width * 0.50)
+
+
+static func _append_bolt_ribbon(st: SurfaceTool, pts: Array[Vector3], width: float) -> void:
+	var n_seg := pts.size() - 1
+	for i in range(n_seg):
+		var a := pts[i]
+		var b := pts[i + 1]
+		var dir := (b - a).normalized()
+		var t0 := lerpf(1.0, 0.35, float(i) / float(max(n_seg, 1)))
+		var t1 := lerpf(1.0, 0.35, float(i + 1) / float(max(n_seg, 1)))
+		var side1 := dir.cross(Vector3.RIGHT)
+		if side1.length_squared() < 0.01:
+			side1 = dir.cross(Vector3.FORWARD)
+		side1 = side1.normalized()
+		var side2 := dir.cross(side1).normalized()
+		for svec: Vector3 in [side1, side2]:
+			var w0: Vector3 = svec * (width * t0)
+			var w1: Vector3 = svec * (width * t1)
+			# Begge sider (front + bak) slik at lynet synes fra alle vinkler med standard CULL_BACK!
+			st.add_vertex(a - w0)
+			st.add_vertex(a + w0)
+			st.add_vertex(b + w1)
+			st.add_vertex(a - w0)
+			st.add_vertex(b + w1)
+			st.add_vertex(b - w1)
+			st.add_vertex(a - w0)
+			st.add_vertex(b + w1)
+			st.add_vertex(a + w0)
+			st.add_vertex(a - w0)
+			st.add_vertex(b - w1)
+			st.add_vertex(b + w1)
 
 
 ## Skummende organisk V-kjølvann med bølgeskum-shader bak skipene på verdenskartet!
@@ -515,54 +800,108 @@ static func attach_ship_wake(ship_node: Node3D, wake_scale: float = 1.0) -> void
 	ship_node.add_child(wake)
 
 
-## Dekorer hver øy på Verdenskartet med håndlagde stiliserte 3D-palmer, tårn, sjørøverhus, kupler og fyrtårn!
-static func decorate_world_map_island(root: Node3D, radius: float, theme: String, seed_val: int, is_active_story: bool) -> void:
+## Dekorer hver øy på Verdenskartet med eksakt høyde-plassering (null nedsunkne hus!), klippesteiner, skjær, busker og landemerker!
+static func decorate_world_map_island(root: Node3D, radius: float, theme: String, seed_val: int, is_active_story: bool, height_fn: Callable) -> void:
 	var rng := RandomNumberGenerator.new()
 	rng.seed = seed_val * 1337
 
-	# 1. Hovedlandemerke midt på øya (slik at hver øy ser umiddelbart gjenkjennelig ut ovenfra!)
+	# Kyst-kampesteiner + taggete skjær ute i lagunen på ALLE øyer for ekte skulpturert animasjons-terreng!
+	var rock_col := Color(0.24, 0.22, 0.20)
+	if theme == "castle":
+		rock_col = Color(0.11, 0.10, 0.16)
+	elif theme == "desert":
+		rock_col = Color(0.56, 0.36, 0.18)
+	elif theme == "jungle":
+		rock_col = Color(0.18, 0.21, 0.16)
+	for _r in range(18):
+		var ang := rng.randf() * TAU
+		var d := rng.randf_range(radius * 0.45, radius * 1.12)
+		var rx := cos(ang) * d
+		var rz := sin(ang) * d
+		var ry: float = float(height_fn.call(rx, rz))
+		if ry > -1.4:
+			_add_coastal_rock(root, Vector3(rx, maxf(ry, -0.35), rz), rng.randf_range(0.75, 1.95), rock_col, theme == "castle")
+
+	# Frodig buskas og gress-tuer på grønne øyer
+	if theme in ["harbor", "jungle", "palm"]:
+		for _b in range(14):
+			var ang := rng.randf() * TAU
+			var d := rng.randf_range(radius * 0.28, radius * 0.72)
+			var bx := cos(ang) * d
+			var bz := sin(ang) * d
+			var by: float = float(height_fn.call(bx, bz))
+			if by > 1.2:
+				_add_mini_bush(root, Vector3(bx, by - 0.08, bz), rng.randf_range(0.65, 1.25), theme == "jungle")
+
+	# Hovedlandemerker og bespokte detaljer plassert PÅ eksakt terrenghøyde!
 	match theme:
 		"harbor":
-			# Abra Havn: Sjørøverlandsby med varme lysende vinduer + hvitt fyrtårn
-			for h_off in [Vector3(-2.6, 2.2, 2.2), Vector3(1.8, 2.5, 1.5), Vector3(-0.6, 3.4, -1.8), Vector3(3.0, 1.9, -1.2)]:
-				_add_mini_house(root, h_off, rng.randf_range(0.0, TAU), Color(0.46, 0.28, 0.16), Color(0.58, 0.18, 0.12))
-			_add_lighthouse(root, Vector3(0.2, 4.2, 0.2), Color(1.0, 0.84, 0.36))
+			# Abra Havn: Tre-brygge ut i vika + sjørøverlandsby på terrassene + fyrtårn!
+			_add_mini_dock(root, Vector3(0.0, 0.35, radius * 0.76), 0.0)
+			for h_xz in [Vector2(-4.2, 3.0), Vector2(3.6, 2.8), Vector2(-3.2, -2.6), Vector2(3.8, -2.2), Vector2(0.0, 4.4)]:
+				var hy: float = float(height_fn.call(h_xz.x, h_xz.y))
+				if hy > 0.6:
+					_add_mini_house(root, Vector3(h_xz.x, hy - 0.15, h_xz.y), rng.randf_range(0.0, TAU), Color(0.42, 0.26, 0.15), Color(0.58, 0.15, 0.10))
+			var ly: float = float(height_fn.call(0.0, -0.5))
+			_add_lighthouse(root, Vector3(0.0, ly - 0.25, -0.5), Color(1.0, 0.86, 0.38))
+			for _i in range(13):
+				var ang := rng.randf() * TAU
+				var d := rng.randf_range(radius * 0.34, radius * 0.72)
+				var px := cos(ang) * d
+				var pz := sin(ang) * d
+				var py: float = float(height_fn.call(px, pz))
+				if py > 0.8:
+					_add_mini_palm(root, Vector3(px, py - 0.1, pz), rng.randf_range(0.75, 1.15))
+		"castle":
+			# Gral: Mørk gotisk borg helt på den taggete fjelltoppen + svarte furutrær og skarpe klipper!
+			var cy: float = float(height_fn.call(0.0, 0.0))
+			_add_mini_castle(root, Vector3(0.0, cy - 0.7, 0.0))
+			for _i in range(18):
+				var ang := rng.randf() * TAU
+				var d := rng.randf_range(radius * 0.36, radius * 0.76)
+				var px := cos(ang) * d
+				var pz := sin(ang) * d
+				var py: float = float(height_fn.call(px, pz))
+				if py > 0.8:
+					_add_mini_pine(root, Vector3(px, py - 0.15, pz), rng.randf_range(0.80, 1.35))
+		"desert":
+			# Fata Morgana: Sultanpalass med gullkupler + fargerike basar-telt + oase-palmer + brygge!
+			var py0: float = float(height_fn.call(0.0, -0.8))
+			_add_mini_arabian_palace(root, Vector3(0.0, py0 - 0.45, -0.8))
+			_add_mini_dock(root, Vector3(0.0, 0.35, radius * 0.74), 0.0)
+			for b_info in [[Vector2(-4.4, 3.2), Color(0.78, 0.14, 0.16)], [Vector2(4.2, 2.8), Color(0.12, 0.50, 0.62)], [Vector2(-1.4, 4.8), Color(0.84, 0.56, 0.12)], [Vector2(2.6, 5.2), Color(0.62, 0.18, 0.52)]]:
+				var bxz: Vector2 = b_info[0]
+				var by: float = float(height_fn.call(bxz.x, bxz.y))
+				if by > 0.5:
+					_add_mini_bazaar_tent(root, Vector3(bxz.x, by - 0.1, bxz.y), b_info[1])
 			for _i in range(11):
 				var ang := rng.randf() * TAU
-				var d := rng.randf_range(radius * 0.28, radius * 0.62)
-				_add_mini_palm(root, Vector3(cos(ang) * d, 1.4, sin(ang) * d), rng.randf_range(0.85, 1.3))
-		"castle":
-			# Gral: Mørk gotisk borg med 4 tårn og magisk oransje drageflamme på toppen!
-			_add_mini_castle(root, Vector3(0.0, 5.4, 0.0))
-			for _i in range(12):
-				var ang := rng.randf() * TAU
-				var d := rng.randf_range(radius * 0.34, radius * 0.64)
-				_add_mini_pine(root, Vector3(cos(ang) * d, 1.8, sin(ang) * d), rng.randf_range(0.9, 1.35))
-		"desert":
-			# Fata Morgana: Gyllent arabisk sultanpalass med hvite/gylne kupler, minareter og daddelpalmer!
-			_add_mini_arabian_palace(root, Vector3(0.0, 3.4, 0.0))
-			for _i in range(9):
-				var ang := rng.randf() * TAU
-				var d := rng.randf_range(radius * 0.34, radius * 0.62)
-				_add_mini_palm(root, Vector3(cos(ang) * d, 1.3, sin(ang) * d), rng.randf_range(0.8, 1.2))
+				var d := rng.randf_range(radius * 0.36, radius * 0.72)
+				var px := cos(ang) * d
+				var pz := sin(ang) * d
+				var py: float = float(height_fn.call(px, pz))
+				if py > 0.6:
+					_add_mini_palm(root, Vector3(px, py - 0.1, pz), rng.randf_range(0.72, 1.15))
 		"jungle":
-			# Maga Khans øy: Tett smaragdgrønn tropisk regnskog + tempelpyramide!
-			_add_mini_jungle_temple(root, Vector3(0.0, 4.4, 0.0))
-			for _i in range(20):
+			# Maga Khans øy: Tempelpyramide på toppen + tett dypgrønn regnskog + vulkanske klippesteiner!
+			var ty: float = float(height_fn.call(0.0, 0.0))
+			_add_mini_jungle_temple(root, Vector3(0.0, ty - 0.45, 0.0))
+			for _i in range(24):
 				var ang := rng.randf() * TAU
-				var d := rng.randf_range(radius * 0.24, radius * 0.66)
-				_add_mini_palm(root, Vector3(cos(ang) * d, 1.6, sin(ang) * d), rng.randf_range(0.95, 1.45))
+				var d := rng.randf_range(radius * 0.28, radius * 0.75)
+				var px := cos(ang) * d
+				var pz := sin(ang) * d
+				var py: float = float(height_fn.call(px, pz))
+				if py > 0.7:
+					_add_mini_palm(root, Vector3(px, py - 0.1, pz), rng.randf_range(0.78, 1.30))
 		_:
-			# Skattejakt-øya: Tropiske palmer + skinnende gullskattkiste-glød!
-			for _i in range(8):
-				var ang := rng.randf() * TAU
-				var d := rng.randf_range(radius * 0.24, radius * 0.58)
-				_add_mini_palm(root, Vector3(cos(ang) * d, 1.3, sin(ang) * d), rng.randf_range(0.9, 1.3))
+			# Skattejakt-øya: Skattkiste på høyden + palmer + klipper!
+			var ky: float = float(height_fn.call(0.0, 0.0))
 			var chest := MeshInstance3D.new()
 			var b := BoxMesh.new()
 			b.size = Vector3(1.8, 1.2, 1.2)
 			chest.mesh = b
-			chest.position = Vector3(0.0, 3.8, 0.0)
+			chest.position = Vector3(0.0, ky + 0.5, 0.0)
 			var cmat := StandardMaterial3D.new()
 			cmat.albedo_color = Color(0.95, 0.74, 0.18)
 			cmat.metallic = 0.85
@@ -572,82 +911,179 @@ static func decorate_world_map_island(root: Node3D, radius: float, theme: String
 			cmat.emission_energy_multiplier = 1.6
 			chest.material_override = cmat
 			root.add_child(chest)
+			for _i in range(10):
+				var ang := rng.randf() * TAU
+				var d := rng.randf_range(radius * 0.30, radius * 0.68)
+				var px := cos(ang) * d
+				var pz := sin(ang) * d
+				var py: float = float(height_fn.call(px, pz))
+				if py > 0.6:
+					_add_mini_palm(root, Vector3(px, py - 0.1, pz), rng.randf_range(0.78, 1.15))
 
-	# Hvis øya er gjeldende historiemål: varm gyllen fyrtårn-lysstråle rett over øya!
+	# Diskret varm gyllen markør over gjeldende historiemål
 	if is_active_story:
 		var beam := MeshInstance3D.new()
 		var cyl := CylinderMesh.new()
-		cyl.top_radius = 0.35
-		cyl.bottom_radius = 1.6
-		cyl.height = 18.0
+		cyl.top_radius = 0.25
+		cyl.bottom_radius = 1.15
+		cyl.height = 16.0
 		beam.mesh = cyl
-		beam.position = Vector3(0.0, 12.0, 0.0)
+		beam.position = Vector3(0.0, 15.0, 0.0)
 		beam.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
 		var bmat := StandardMaterial3D.new()
 		bmat.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
 		bmat.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
-		bmat.albedo_color = Color(1.0, 0.86, 0.38, 0.22)
+		bmat.albedo_color = Color(1.0, 0.86, 0.38, 0.16)
 		beam.material_override = bmat
 		root.add_child(beam)
+
+
+static func _add_coastal_rock(parent: Node3D, pos: Vector3, s: float, col: Color, jagged: bool = false) -> void:
+	var n := Node3D.new()
+	n.position = pos
+	n.rotation_degrees = Vector3(randf_range(-14.0, 14.0), randf_range(0.0, 360.0), randf_range(-14.0, 14.0))
+	parent.add_child(n)
+
+	var mat := StandardMaterial3D.new()
+	mat.albedo_color = col
+	mat.roughness = 0.86
+
+	# Fasettert klynge av 2 skarpe klippesteiner (ser ut som ekte skulpturert berg, ikke runde kuler!)
+	for k in range(2):
+		var r := MeshInstance3D.new()
+		var cm := CylinderMesh.new()
+		cm.top_radius = (0.12 if jagged else 0.38) * s
+		cm.bottom_radius = (0.95 if k == 0 else 0.68) * s
+		cm.height = ((2.2 if jagged else 1.25) if k == 0 else 0.95) * s
+		cm.radial_segments = 5
+		r.mesh = cm
+		r.position = Vector3(0.0 if k == 0 else 0.55 * s, cm.height * 0.32, 0.0 if k == 0 else 0.35 * s)
+		r.rotation_degrees = Vector3(randf_range(-16.0, 16.0), float(k) * 73.0, randf_range(-16.0, 16.0))
+		r.material_override = mat
+		n.add_child(r)
+
+
+static func _add_mini_bush(parent: Node3D, pos: Vector3, s: float, dark_jungle: bool = false) -> void:
+	var n := Node3D.new()
+	n.position = pos
+	n.scale = Vector3.ONE * s
+	parent.add_child(n)
+	var bmat := StandardMaterial3D.new()
+	bmat.albedo_color = Color(0.06, 0.24, 0.08) if dark_jungle else Color(0.10, 0.32, 0.10)
+	bmat.roughness = 0.84
+	for off in [Vector3(0.0, 0.35, 0.0), Vector3(0.45, 0.25, 0.2), Vector3(-0.38, 0.28, -0.25)]:
+		var m := MeshInstance3D.new()
+		var sp := SphereMesh.new()
+		sp.radius = 0.52
+		sp.height = 0.78
+		sp.radial_segments = 7
+		sp.rings = 4
+		m.mesh = sp
+		m.position = off
+		m.material_override = bmat
+		n.add_child(m)
+
+
+static func _add_mini_dock(parent: Node3D, pos: Vector3, rot_y: float) -> void:
+	var n := Node3D.new()
+	n.position = pos
+	n.rotation.y = rot_y
+	parent.add_child(n)
+	var wmat := StandardMaterial3D.new()
+	wmat.albedo_color = Color(0.36, 0.21, 0.10)
+	wmat.roughness = 0.84
+	var plank := MeshInstance3D.new()
+	var bm := BoxMesh.new()
+	bm.size = Vector3(2.2, 0.25, 5.4)
+	plank.mesh = bm
+	plank.position = Vector3(0.0, 0.25, 1.8)
+	plank.material_override = wmat
+	n.add_child(plank)
+	for px in [-0.95, 0.95]:
+		for pz in [0.2, 2.0, 3.8]:
+			var post := MeshInstance3D.new()
+			var pc := CylinderMesh.new()
+			pc.top_radius = 0.16
+			pc.bottom_radius = 0.18
+			pc.height = 1.8
+			post.mesh = pc
+			post.position = Vector3(px, -0.25, pz)
+			post.material_override = wmat
+			n.add_child(post)
+
+
+static func _add_mini_bazaar_tent(parent: Node3D, pos: Vector3, col: Color) -> void:
+	var n := Node3D.new()
+	n.position = pos
+	n.rotation.y = randf_range(0.0, TAU)
+	parent.add_child(n)
+	var t := MeshInstance3D.new()
+	var cm := CylinderMesh.new()
+	cm.top_radius = 0.12
+	cm.bottom_radius = 1.45
+	cm.height = 1.5
+	cm.radial_segments = 4
+	t.mesh = cm
+	t.position.y = 0.9
+	var mat := StandardMaterial3D.new()
+	mat.albedo_color = col
+	mat.roughness = 0.72
+	t.material_override = mat
+	n.add_child(t)
 
 
 static func _add_mini_palm(parent: Node3D, pos: Vector3, s: float) -> void:
 	var n := Node3D.new()
 	n.position = pos
 	n.scale = Vector3.ONE * s
-	n.rotation_degrees = Vector3(randf_range(-10.0, 10.0), randf_range(0.0, 360.0), randf_range(-10.0, 10.0))
+	n.rotation_degrees = Vector3(randf_range(-12.0, 12.0), randf_range(0.0, 360.0), randf_range(-12.0, 12.0))
 	parent.add_child(n)
 
 	var trunk := MeshInstance3D.new()
 	var tc := CylinderMesh.new()
-	tc.top_radius = 0.14
-	tc.bottom_radius = 0.28
-	tc.height = 3.0
+	tc.top_radius = 0.13
+	tc.bottom_radius = 0.26
+	tc.height = 2.9
 	trunk.mesh = tc
-	trunk.position.y = 1.5
+	trunk.position.y = 1.45
 	var tmat := StandardMaterial3D.new()
-	tmat.albedo_color = Color(0.44, 0.28, 0.14)
+	tmat.albedo_color = Color(0.36, 0.22, 0.10)
 	tmat.roughness = 0.88
 	trunk.material_override = tmat
 	n.add_child(trunk)
 
-	# Frodig avrundet Pixar-løvkrone med buede palmeblader (ingen firkantede kryss!)
+	# Rike dypgrønne smaragd- og olivenpalmeblader (ikke knall-lime leketøysgrønn!)
 	var lmat := StandardMaterial3D.new()
-	lmat.albedo_color = Color(0.14, 0.48, 0.16)
+	lmat.albedo_color = Color(0.07, 0.30, 0.09)
 	lmat.diffuse_mode = BaseMaterial3D.DIFFUSE_BURLEY
-	lmat.roughness = 0.70
+	lmat.roughness = 0.74
 	lmat.rim_enabled = true
-	lmat.rim = 0.38
+	lmat.rim = 0.28
 
 	var lmat_bright := StandardMaterial3D.new()
-	lmat_bright.albedo_color = Color(0.24, 0.62, 0.20)
+	lmat_bright.albedo_color = Color(0.14, 0.42, 0.12)
 	lmat_bright.diffuse_mode = BaseMaterial3D.DIFFUSE_BURLEY
-	lmat_bright.roughness = 0.66
+	lmat_bright.roughness = 0.70
 	lmat_bright.rim_enabled = true
-	lmat_bright.rim = 0.42
+	lmat_bright.rim = 0.32
 
-	# Myk tropisk krone i sentrum + 7 buede, spisse palmeblader
 	var core := MeshInstance3D.new()
 	var cs := SphereMesh.new()
-	cs.radius = 0.82
-	cs.height = 0.95
+	cs.radius = 0.56
+	cs.height = 0.65
 	core.mesh = cs
-	core.position.y = 3.05
-	core.material_override = lmat_bright
+	core.position.y = 2.95
+	core.material_override = lmat
 	n.add_child(core)
 
 	for i in range(7):
 		var ang := (float(i) / 7.0) * TAU + randf_range(-0.15, 0.15)
 		var frond := MeshInstance3D.new()
-		var fm := SphereMesh.new()
-		fm.radius = 0.42
-		fm.height = 2.0
-		fm.radial_segments = 8
-		fm.rings = 5
+		var fm := PrismMesh.new()
+		fm.size = Vector3(0.58, 2.05, 0.14)
 		frond.mesh = fm
-		frond.scale = Vector3(0.85, 1.0, 0.24)
-		frond.position = Vector3(sin(ang) * 0.95, 2.88, cos(ang) * 0.95)
-		frond.rotation = Vector3(1.18, ang, 0.0)
+		frond.position = Vector3(sin(ang) * 0.95, 2.82, cos(ang) * 0.95)
+		frond.rotation = Vector3(1.24, ang, 0.0)
 		frond.material_override = lmat if (i % 2 == 0) else lmat_bright
 		n.add_child(frond)
 
@@ -656,17 +1092,19 @@ static func _add_mini_pine(parent: Node3D, pos: Vector3, s: float) -> void:
 	var n := Node3D.new()
 	n.position = pos
 	n.scale = Vector3.ONE * s
+	n.rotation_degrees = Vector3(randf_range(-6.0, 6.0), randf_range(0.0, 360.0), randf_range(-6.0, 6.0))
 	parent.add_child(n)
 
 	var lmat := StandardMaterial3D.new()
-	lmat.albedo_color = Color(0.10, 0.22, 0.16)
-	lmat.roughness = 0.82
-	for tier in [[0.0, 1.4, 2.6, 1.3], [0.0, 2.7, 2.2, 0.95]]:
+	lmat.albedo_color = Color(0.06, 0.15, 0.11)
+	lmat.roughness = 0.86
+	for tier in [[0.0, 1.1, 2.2, 1.25], [0.0, 2.1, 2.0, 0.96], [0.0, 3.0, 1.7, 0.68]]:
 		var c := MeshInstance3D.new()
 		var cm := CylinderMesh.new()
-		cm.top_radius = 0.05
+		cm.top_radius = 0.04
 		cm.bottom_radius = float(tier[3])
 		cm.height = float(tier[2])
+		cm.radial_segments = 6
 		c.mesh = cm
 		c.position.y = float(tier[1])
 		c.material_override = lmat

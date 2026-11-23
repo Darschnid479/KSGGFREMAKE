@@ -53,38 +53,72 @@ func _setup_visuals() -> void:
 	else:
 		_build_fallback_pinky()
 
-	# Sverd / våpen-pivot ved høyre senket hånd
+	# Sjørøversabel holdt tydelig og FREMOVER i Pinkys høyre hånd (klar til å slå katapulten og fiender!)
 	_sword_pivot = Node3D.new()
-	_sword_pivot.position = Vector3(0.30, 0.78, 0.14)
-	_sword_pivot.rotation_degrees = Vector3(12.0, 8.0, -6.0)
+	_sword_pivot.position = Vector3(0.32, 0.90, -0.20)
+	_sword_pivot.rotation_degrees = Vector3(22.0, -24.0, -14.0)
 	_visual_root.add_child(_sword_pivot)
 
 	_sword_mesh = MeshInstance3D.new()
 	var blade := BoxMesh.new()
-	blade.size = Vector3(0.035, 0.075, 0.92)
+	blade.size = Vector3(0.032, 0.092, 0.88)
 	_sword_mesh.mesh = blade
-	_sword_mesh.position = Vector3(0.0, 0.0, 0.46)
+	_sword_mesh.position = Vector3(0.0, 0.02, -0.48)
 	var mat := StandardMaterial3D.new()
-	mat.albedo_color = Color(0.90, 0.93, 0.98)
-	mat.metallic = 0.92
-	mat.roughness = 0.16
+	mat.albedo_color = Color(0.92, 0.95, 1.0)
+	mat.metallic = 0.94
+	mat.roughness = 0.14
 	mat.rim_enabled = true
-	mat.rim = 0.4
+	mat.rim = 0.55
 	_sword_mesh.material_override = mat
 	_sword_pivot.add_child(_sword_mesh)
 
-	# Gull-parerstang og håndtak på sabelen
+	# Spiss sabeltupp fremover
+	var tip := MeshInstance3D.new()
+	var tip_m := PrismMesh.new()
+	tip_m.size = Vector3(0.032, 0.22, 0.092)
+	tip.mesh = tip_m
+	tip.position = Vector3(0.0, 0.0, -0.52)
+	tip.rotation_degrees = Vector3(-90.0, 0.0, 0.0)
+	tip.material_override = mat
+	_sword_mesh.add_child(tip)
+
+	# Utsmykket gull-parerstang, håndbøyle og sverdfeste i Pinkys hånd
+	var gmat := StandardMaterial3D.new()
+	gmat.albedo_color = Color(0.98, 0.78, 0.22)
+	gmat.metallic = 0.94
+	gmat.roughness = 0.20
+
 	var guard := MeshInstance3D.new()
 	var gbox := BoxMesh.new()
-	gbox.size = Vector3(0.22, 0.06, 0.05)
+	gbox.size = Vector3(0.18, 0.16, 0.045)
 	guard.mesh = gbox
-	guard.position = Vector3(0.0, 0.0, 0.02)
-	var gmat := StandardMaterial3D.new()
-	gmat.albedo_color = Color(0.96, 0.78, 0.24)
-	gmat.metallic = 0.92
-	gmat.roughness = 0.22
+	guard.position = Vector3(0.0, -0.01, 0.44)
 	guard.material_override = gmat
 	_sword_mesh.add_child(guard)
+
+	var grip := MeshInstance3D.new()
+	var gcyl := CylinderMesh.new()
+	gcyl.top_radius = 0.028
+	gcyl.bottom_radius = 0.030
+	gcyl.height = 0.18
+	grip.mesh = gcyl
+	grip.position = Vector3(0.0, -0.01, 0.54)
+	grip.rotation_degrees = Vector3(90.0, 0.0, 0.0)
+	var grip_mat := StandardMaterial3D.new()
+	grip_mat.albedo_color = Color(0.24, 0.12, 0.06)
+	grip_mat.roughness = 0.78
+	grip.material_override = grip_mat
+	_sword_mesh.add_child(grip)
+
+	var pommel := MeshInstance3D.new()
+	var psph := SphereMesh.new()
+	psph.radius = 0.044
+	psph.height = 0.088
+	pommel.mesh = psph
+	pommel.position = Vector3(0.0, -0.01, 0.64)
+	pommel.material_override = gmat
+	_sword_mesh.add_child(pommel)
 
 	# Lykt-lys (Lykte-lampe)
 	_lamp_light = OmniLight3D.new()

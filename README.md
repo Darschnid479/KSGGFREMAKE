@@ -103,7 +103,7 @@ KSGGFREMAKE/
 │   │   ├── player/            # PinkyController.gd, BoatController.gd, FollowCamera.gd
 │   │   ├── world/             # LevelRunner.gd, VisualEnhancer.gd, NpcActor.gd, EnemyActor.gd, m.fl.
 │   │   └── ui/                # MainMenu.gd, GameHUD.gd, CutscenePlayer.gd
-│   ├── shaders/               # ocean_water, stylized_sky, storm_sky, world_pbr_enhance, ship_wake, cutscene_fx
+│   ├── shaders/               # ocean_water, stylized_sky, storm_sky, island_terrain, world_pbr_enhance, ship_wake, cutscene_fx
 │   ├── data/gameplay/         # 33 ekstraherte originale nivådata-JSON-er
 │   └── assets/
 │       ├── cutscenes/         # 7 oppskalerte Pixar-stil 1600x900 animerte historie-sekvenser

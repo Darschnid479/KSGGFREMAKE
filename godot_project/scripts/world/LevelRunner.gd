@@ -13,6 +13,7 @@ const COIN_SCRIPT := preload("res://scripts/world/CollectibleCoin.gd")
 const BARREL_SCRIPT := preload("res://scripts/world/BreakableBarrel.gd")
 const CUTSCENE_SCRIPT := preload("res://scripts/ui/CutscenePlayer.gd")
 const OCEAN_SHADER := preload("res://shaders/ocean_water.gdshader")
+const ISLAND_TERRAIN_SHADER := preload("res://shaders/island_terrain.gdshader")
 
 const WORLD_SCALE := 0.1 # Samme 0.1-skala som OBJ->GLB-konvertereren (Shockwave-enheter -> meter)
 
@@ -106,7 +107,16 @@ func load_level(level_id: String) -> void:
 	else:
 		var spawn_pos := _find_player_spawn(level_id, gp_data, level_bounds)
 		_player_node = _spawn_pinky(spawn_pos, mode == "swimming")
-		_camera_rig.set_target(_player_node, 9.5, 2.4, false)
+		if level_id == "graal_bosslevel":
+			_camera_rig.set_target(_player_node, 3.8, 1.75, false)
+			_camera_rig.yaw = -1.52
+			_camera_rig.pitch = -0.07
+			if _camera_rig.spring_arm:
+				_camera_rig.spring_arm.collision_mask = 0
+				_camera_rig.spring_arm.spring_length = 3.8
+			_camera_rig.rotation = Vector3(_camera_rig.pitch, _camera_rig.yaw, 0.0)
+		else:
+			_camera_rig.set_target(_player_node, 9.5, 2.4, false)
 		if _camera_rig.spring_arm and _player_node:
 			_camera_rig.spring_arm.add_excluded_object(_player_node.get_rid())
 		# 7. Spawn NPC-er, fiender, håndlagde tønner, dubloner, fakkelfat og portaler
@@ -305,15 +315,17 @@ func _add_biome_atmosphere(level_id: String, spawn_pos: Vector3) -> void:
 	# Svevende atmosfæriske partikler i alle verdener
 	VisualEnhancer.spawn_ambient_particles(_world_root, spawn_pos, level_id)
 
-	# Gral-borgen: 4 brennende smijerns-fakkelfat langs brystvernet + drageglør!
-	if level_id == "graal_bosslevel":
-		for bpos in [
-			Vector3(-9.2, 21.42, -12.4),
-			Vector3(-0.8, 21.42, -13.6),
-			Vector3(3.8, 21.42, -13.6),
-			Vector3(9.4, 21.42, -11.4),
-		]:
-			VisualEnhancer.spawn_fire_brazier(_world_root, bpos, 0.92)
+	# Gral-borgen: 4 brennende smijerns-fakkelfat + skummel taggete fjellkjede og 3D lynnedslag!
+	if level_id == "graal_bosslevel" or level_id == "graal_mountain":
+		VisualEnhancer.spawn_graal_scary_backdrop(_world_root)
+		if level_id == "graal_bosslevel":
+			for bpos in [
+				Vector3(-9.2, 21.42, -12.4),
+				Vector3(-0.8, 21.42, -13.6),
+				Vector3(3.8, 21.42, -13.6),
+				Vector3(9.4, 21.42, -11.4),
+			]:
+				VisualEnhancer.spawn_fire_brazier(_world_root, bpos, 0.92)
 
 	# Grusomme Gabriels grotte-finale: varme inngangsfakler + smaragdgrønn spøkelsesglød i kammeret foran!
 	elif level_id in ["cave_end_bosslevel", "cave_end", "cave"]:
@@ -465,9 +477,9 @@ func _create_camera_rig() -> FollowCamera:
 
 
 func _find_player_spawn(level_id: String, gp_data: Dictionary, bounds: AABB) -> Vector3:
-	# 1:1 Gral-bosskampen skjer oppe på borggårdens brystvern (Y = 21.41m, Z = -12.4)
+	# 1:1 Gral-bosskampen skjer oppe på borggårdens brystvern foran katapulten (Y = 21.41m, Z = -12.4)
 	if level_id == "graal_bosslevel":
-		return Vector3(-3.5, 21.8, -12.4)
+		return Vector3(-0.8, 21.8, -12.4)
 
 	var nodes: Array = gp_data.get("nodes", [])
 	for n in nodes:
@@ -483,27 +495,27 @@ func _find_player_spawn(level_id: String, gp_data: Dictionary, bounds: AABB) -> 
 
 
 func _build_world_map_islands() -> void:
-	# Moderne animasjonsspill-øyer med håndlagde palmer, sjørøverlandsby, Gral-borg, arabiske kupler og laguner!
+	# Moderne animasjonsspill-øyer med synkrone steinnormaler, skulpturerte klippeterrasser og håndlagde landemerker!
 	var active_story_id := GameState.get_active_story_island()
 	var islands := [
-		{"name": "Abra Havn", "id": "abra", "pos": Vector3(-34.0, 0.0, 22.0), "r": 14.0, "seed": 11, "theme": "harbor"},
-		{"name": "Gral", "id": "graal_mountain", "pos": Vector3(-28.0, 0.0, -25.0), "r": 15.0, "seed": 23, "theme": "castle"},
-		{"name": "Fata Morgana", "id": "fatamorgana_city", "pos": Vector3(34.0, 0.0, -21.0), "r": 14.5, "seed": 37, "theme": "desert"},
-		{"name": "Maga Khans øy", "id": "magakhan_beach", "pos": Vector3(40.0, 0.0, 22.0), "r": 15.5, "seed": 53, "theme": "jungle"},
-		{"name": "Skattejakt-øya", "id": "treasurehunt", "pos": Vector3(4.0, 0.0, -40.0), "r": 11.5, "seed": 71, "theme": "palm"},
+		{"name": "Abra Havn", "id": "abra", "pos": Vector3(-29.0, 0.0, 18.0), "r": 13.8, "seed": 11, "theme": "harbor"},
+		{"name": "Gral", "id": "graal_mountain", "pos": Vector3(-25.0, 0.0, -17.5), "r": 14.5, "seed": 23, "theme": "castle"},
+		{"name": "Fata Morgana", "id": "fatamorgana_city", "pos": Vector3(29.0, 0.0, -16.0), "r": 14.0, "seed": 37, "theme": "desert"},
+		{"name": "Maga Khans øy", "id": "magakhan_beach", "pos": Vector3(32.0, 0.0, 18.5), "r": 14.8, "seed": 53, "theme": "jungle"},
+		{"name": "Skattejakt-øya", "id": "treasurehunt", "pos": Vector3(2.0, 0.0, -29.0), "r": 10.5, "seed": 71, "theme": "palm"},
 	]
 
+	# Synkron prosedyrell støy- og normaltekstur (100% klar allerede på bilde 1!)
 	var micro_noise := FastNoiseLite.new()
+	micro_noise.seed = 404
 	micro_noise.noise_type = FastNoiseLite.TYPE_SIMPLEX_SMOOTH
-	micro_noise.frequency = 0.09
+	micro_noise.frequency = 0.08
 	micro_noise.fractal_octaves = 5
-	var normal_tex := NoiseTexture2D.new()
-	normal_tex.width = 256
-	normal_tex.height = 256
-	normal_tex.seamless = true
-	normal_tex.as_normal_map = true
-	normal_tex.bump_strength = 6.0
-	normal_tex.noise = micro_noise
+	var noise_img := micro_noise.get_seamless_image(256, 256)
+	var height_noise_tex := ImageTexture.create_from_image(noise_img)
+	var nrm_img := noise_img.duplicate() as Image
+	nrm_img.bump_map_to_normal_map(8.5)
+	var normal_tex := ImageTexture.create_from_image(nrm_img)
 
 	for isl in islands:
 		var root := Node3D.new()
@@ -512,20 +524,35 @@ func _build_world_map_islands() -> void:
 
 		var r: float = isl["r"]
 		var theme: String = isl["theme"]
+		var seed_v: int = int(isl["seed"])
 		var isl_id: String = str(isl["id"])
 		var is_active := (isl_id == active_story_id)
 		var unlocked := GameState.is_island_unlocked(isl_id)
 
-		var terrain := _make_stylized_island_mesh(r, int(isl["seed"]), theme, normal_tex)
+		var n_shape := FastNoiseLite.new()
+		n_shape.seed = seed_v
+		n_shape.noise_type = FastNoiseLite.TYPE_SIMPLEX_SMOOTH
+		n_shape.frequency = 0.095
+		n_shape.fractal_octaves = 5
+
+		var n_detail := FastNoiseLite.new()
+		n_detail.seed = seed_v + 99
+		n_detail.noise_type = FastNoiseLite.TYPE_CELLULAR
+		n_detail.frequency = 0.22
+
+		var height_fn := func(fx: float, fz: float) -> float:
+			return _sample_island_height(fx, fz, r, theme, n_shape, n_detail)
+
+		var terrain := _make_stylized_island_mesh(r, theme, height_fn, height_noise_tex, normal_tex)
 		root.add_child(terrain)
 
-		# Dekorer øya med palmer, hus, borg, palass eller jungeltempel!
-		VisualEnhancer.decorate_world_map_island(root, r, theme, int(isl["seed"]), is_active)
+		# Dekorer øya med eksakt terrenghøyde (null nedsunkne hus!), brygger, klippesteiner, busker, palmer og landemerker!
+		VisualEnhancer.decorate_world_map_island(root, r, theme, seed_v, is_active, height_fn)
 
 		# Navneskilt over øya
 		var lbl := Label3D.new()
 		lbl.text = str(isl["name"]) + (" ★" if is_active else ("" if unlocked else " (Låst)"))
-		lbl.position = Vector3(0.0, 12.2, 0.0)
+		lbl.position = Vector3(0.0, 14.5, 0.0)
 		lbl.billboard = BaseMaterial3D.BILLBOARD_ENABLED
 		lbl.font_size = 64
 		lbl.outline_size = 16
@@ -537,7 +564,7 @@ func _build_world_map_islands() -> void:
 		portal.is_world_map_buoy = true
 		portal.target_level_id = isl_id if unlocked else active_story_id
 		portal.portal_label = "Gå i land: " + str(isl["name"])
-		portal.position = (isl["pos"] as Vector3) + Vector3(0.0, 0.25, r * 0.92 + 2.8)
+		portal.position = (isl["pos"] as Vector3) + Vector3(0.0, 0.25, r * 0.95 + 2.8)
 		_world_root.add_child(portal)
 
 	# Plasser 2 originale fiendeskip fra world_map.glb ute på havet med skummende kjølvann!
@@ -545,8 +572,8 @@ func _build_world_map_islands() -> void:
 		var sc := load("res://assets/levels/world_map.glb") as PackedScene
 		if sc:
 			for sp_info in [
-				[Vector3(19.0, 0.0, -4.0), -0.6],
-				[Vector3(-17.0, 0.0, -9.0), 1.1],
+				[Vector3(17.5, 0.0, -2.5), -0.6],
+				[Vector3(-15.5, 0.0, -5.5), 1.1],
 			]:
 				var ship := sc.instantiate()
 				ship.position = sp_info[0]
@@ -560,82 +587,63 @@ func _build_world_map_islands() -> void:
 				_world_root.add_child(ship)
 
 
-func _make_stylized_island_mesh(radius: float, seed_val: int, theme: String, normal_tex: Texture2D) -> MeshInstance3D:
-	var n_shape := FastNoiseLite.new()
-	n_shape.seed = seed_val
-	n_shape.noise_type = FastNoiseLite.TYPE_SIMPLEX_SMOOTH
-	n_shape.frequency = 0.085
-	n_shape.fractal_octaves = 5
+func _sample_island_height(fx: float, fz: float, radius: float, theme: String, n_shape: FastNoiseLite, n_detail: FastNoiseLite) -> float:
+	var r_cur := Vector2(fx, fz).length()
+	var rt := clampf(r_cur / (radius * 1.55), 0.0, 1.0)
+	# Organisk kystlinje med tydelige viker, nes og klippeodder!
+	var ang := atan2(fz, fx)
+	var cove := sin(ang * 3.0 + float(n_shape.seed)) * 0.10 + cos(ang * 5.0 - float(n_shape.seed) * 0.5) * 0.06
+	var coast_warp := n_shape.get_noise_2d(fx * 0.72, fz * 0.72) * 0.34 + cove
+	var nd := (r_cur / radius) + coast_warp * clampf(rt * 2.1, 0.0, 1.0)
 
-	var n_detail := FastNoiseLite.new()
-	n_detail.seed = seed_val + 99
-	n_detail.noise_type = FastNoiseLite.TYPE_CELLULAR
-	n_detail.frequency = 0.22
+	# Flere dramatiske fjellrygger og klippetopper på hver øy (skarpe 3D-skygger!)
+	var ridge := pow(1.0 - absf(n_shape.get_noise_2d(fx * 1.45, fz * 1.45)), 1.85) * 0.85
+	var crag := (0.5 + 0.5 * n_detail.get_noise_2d(fx * 1.15, fz * 1.15)) * 0.55
+	# Sekundære fjellknatter langs kanten slik at øya ikke bare er en jevn kuppel!
+	var sub_peak_a := exp(-Vector2(fx - radius * 0.38, fz + radius * 0.25).length_squared() / (radius * radius * 0.09)) * 4.4
+	var sub_peak_b := exp(-Vector2(fx + radius * 0.36, fz - radius * 0.22).length_squared() / (radius * radius * 0.08)) * 3.8
 
-	# Sirkulært polarrutenett: null firkantede undervannskanter og brede frodige øyer der alle palmer står trygt på land!
-	var rings := 28
-	var segs := 56
+	var peak := 14.5 if theme == "castle" else (9.6 if theme == "desert" else 11.8)
+	if nd < 0.96:
+		var land_t := clampf(1.0 - nd / 0.96, 0.0, 1.0)
+		var base_cone := pow(land_t, 0.62) * peak * (0.48 + 0.56 * ridge + 0.34 * crag)
+		var extra_crags := (sub_peak_a + sub_peak_b) * smoothstep(0.08, 0.45, land_t)
+		var raw_h := 0.25 + base_cone + extra_crags
+		# Tydelige bratte klippeterrasser med flate platåer (gir skarp 3D-skygge og tydelig klippeshader!)
+		var step_h := 2.6 if theme == "castle" else 2.2
+		var frac := fmod(raw_h, step_h) / step_h
+		var terrace := floorf(raw_h / step_h) * step_h + smoothstep(0.18, 0.58, frac) * step_h
+		var terr_w := 0.72 if theme == "castle" else (0.45 if theme == "desert" else 0.58)
+		return lerpf(raw_h, terrace, terr_w)
+	elif nd < 1.48:
+		var slope_t := clampf((nd - 0.96) / 0.52, 0.0, 1.0)
+		return lerpf(0.25, -11.5, slope_t * slope_t * (3.0 - 2.0 * slope_t))
+	return -11.8
+
+
+func _make_stylized_island_mesh(radius: float, theme: String, height_fn: Callable, noise_tex: Texture2D, normal_tex: Texture2D) -> MeshInstance3D:
+	var rings := 42
+	var segs := 72
 	var max_r := radius * 1.55
 	var st := SurfaceTool.new()
 	st.begin(Mesh.PRIMITIVE_TRIANGLES)
 
 	var ring_verts: Array = []
-	var ring_cols: Array = []
 	var ring_uvs: Array = []
 
 	for ri in range(rings + 1):
 		var rt := float(ri) / float(rings)
 		var r_cur := rt * max_r
 		var rv: Array[Vector3] = []
-		var rc: Array[Color] = []
 		var ru: Array[Vector2] = []
 		for si in range(segs + 1):
 			var ang := (float(si) / float(segs)) * TAU
 			var fx := cos(ang) * r_cur
 			var fz := sin(ang) * r_cur
-			var coast_warp := n_shape.get_noise_2d(fx * 0.65, fz * 0.65) * 0.24
-			var nd := (r_cur / radius) + coast_warp * clampf(rt * 2.0, 0.0, 1.0)
-			var ridge := absf(n_shape.get_noise_2d(fx * 1.3, fz * 1.3)) * 0.65 + (0.5 + 0.5 * n_detail.get_noise_2d(fx, fz)) * 0.35
-
-			var peak := 9.2 if theme == "castle" else (6.0 if theme == "desert" else 7.6)
-			var h := -11.5
-			if nd < 0.96:
-				# Bred, frodig tørr øy over havflaten
-				var land_t := clampf(1.0 - nd / 0.96, 0.0, 1.0)
-				h = 0.15 + pow(land_t, 0.78) * peak * (0.68 + 0.46 * ridge)
-			elif nd < 1.48:
-				# Myk sandbanke ned fra kysten (0.15m) til under havbunnen (-11.5m)
-				var slope_t := clampf((nd - 0.96) / 0.52, 0.0, 1.0)
-				h = lerpf(0.15, -11.5, slope_t * slope_t * (3.0 - 2.0 * slope_t))
-
-			# Sørg for at aller ytterste ring alltid ligger trygt under havbunnen (-10.5m)
-			if ri == rings:
-				h = -11.8
-
-			var c := Color(0.04, 0.14, 0.22)
-			if h >= -2.5 and h < 0.12:
-				c = Color(0.56, 0.54, 0.36) if theme != "castle" else Color(0.14, 0.16, 0.22)
-			elif h >= 0.12 and h < 1.25:
-				c = Color(0.90, 0.76, 0.46) if theme != "castle" else Color(0.22, 0.20, 0.26)
-			elif h >= 1.25 and h < 4.5:
-				match theme:
-					"desert": c = Color(0.86, 0.66, 0.34)
-					"castle": c = Color(0.24, 0.22, 0.30)
-					"jungle": c = Color(0.12, 0.48, 0.16)
-					_: c = Color(0.20, 0.52, 0.20)
-			elif h >= 4.5:
-				match theme:
-					"desert": c = Color(0.74, 0.54, 0.28)
-					"castle": c = Color(0.32, 0.30, 0.38)
-					_: c = Color(0.30, 0.36, 0.26)
-			var tint := 0.88 + 0.24 * (0.5 + 0.5 * n_shape.get_noise_2d(fx * 2.2, fz * 2.2))
-			c = Color(c.r * tint, c.g * tint, c.b * tint, 1.0)
-
+			var h: float = -11.8 if ri == rings else float(height_fn.call(fx, fz))
 			rv.append(Vector3(fx, h, fz))
-			rc.append(c)
-			ru.append(Vector2(fx / max_r * 3.0, fz / max_r * 3.0))
+			ru.append(Vector2(fx / max_r * 4.0, fz / max_r * 4.0))
 		ring_verts.append(rv)
-		ring_cols.append(rc)
 		ring_uvs.append(ru)
 
 	for ri in range(rings):
@@ -644,35 +652,36 @@ func _make_stylized_island_mesh(radius: float, seed_val: int, theme: String, nor
 			var v10: Vector3 = ring_verts[ri + 1][si]
 			var v01: Vector3 = ring_verts[ri][si + 1]
 			var v11: Vector3 = ring_verts[ri + 1][si + 1]
-			var c00: Color = ring_cols[ri][si]
-			var c10: Color = ring_cols[ri + 1][si]
-			var c01: Color = ring_cols[ri][si + 1]
-			var c11: Color = ring_cols[ri + 1][si + 1]
 			var u00: Vector2 = ring_uvs[ri][si]
 			var u10: Vector2 = ring_uvs[ri + 1][si]
 			var u01: Vector2 = ring_uvs[ri][si + 1]
 			var u11: Vector2 = ring_uvs[ri + 1][si + 1]
 			for tri in [
-				[v00, c00, u00], [v10, c10, u10], [v11, c11, u11],
-				[v00, c00, u00], [v11, c11, u11], [v01, c01, u01],
+				[v00, u00], [v10, u10], [v11, u11],
+				[v00, u00], [v11, u11], [v01, u01],
 			]:
-				st.set_color(tri[1])
-				st.set_uv(tri[2])
+				st.set_uv(tri[1])
 				st.add_vertex(tri[0])
 
 	st.generate_normals()
 	st.generate_tangents()
 	var mi := MeshInstance3D.new()
 	mi.mesh = st.commit()
-	var mat := StandardMaterial3D.new()
-	mat.vertex_color_use_as_albedo = true
-	mat.diffuse_mode = BaseMaterial3D.DIFFUSE_BURLEY
-	mat.roughness = 0.84
-	mat.metallic = 0.02
-	mat.normal_enabled = true
-	mat.normal_texture = normal_tex
-	mat.normal_scale = 0.78
-	mi.material_override = mat
+
+	var theme_id := 0
+	match theme:
+		"castle": theme_id = 1
+		"desert": theme_id = 2
+		"jungle": theme_id = 3
+		"palm": theme_id = 4
+		_: theme_id = 0
+
+	var smat := ShaderMaterial.new()
+	smat.shader = ISLAND_TERRAIN_SHADER
+	smat.set_shader_parameter("theme_id", theme_id)
+	smat.set_shader_parameter("noise_tex", noise_tex)
+	smat.set_shader_parameter("detail_normal_tex", normal_tex)
+	mi.material_override = smat
 	return mi
 
 
@@ -693,6 +702,9 @@ func _spawn_pinky(pos: Vector3, is_swim: bool) -> CharacterBody3D:
 	pinky.name = "Pinky"
 	pinky.is_swimming = is_swim
 	pinky.position = pos
+	# I Gral-bosskampen vender Pinky fremover mot Greven av Gral og katapulten med sverdet klart i hånden!
+	if current_level_id == "graal_bosslevel":
+		pinky.rotation_degrees.y = -72.0
 	pinky.camera_rig = _camera_rig
 
 	var col := CollisionShape3D.new()
