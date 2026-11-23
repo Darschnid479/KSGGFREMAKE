@@ -7,66 +7,60 @@ class_name GameHUD
 
 class PirateHealthMedallion extends Control:
 	var health_ratio: float = 1.0
+	var portrait_tex: Texture2D = null
 
 	func _init() -> void:
-		custom_minimum_size = Vector2(156, 156)
+		custom_minimum_size = Vector2(158, 158)
+		if ResourceLoader.exists("res://assets/ui/pinky_portrait.png"):
+			portrait_tex = load("res://assets/ui/pinky_portrait.png") as Texture2D
 
 	func set_ratio(r: float) -> void:
 		health_ratio = clampf(r, 0.0, 1.0)
 		queue_redraw()
 
 	func _draw() -> void:
-		var c := Vector2(78, 78)
-		# Ytre mørk treramme + messingkant
-		draw_circle(c, 68.0, Color(0.14, 0.09, 0.05, 0.94))
-		draw_arc(c, 68.0, 0.0, TAU, 64, Color(0.82, 0.62, 0.24, 0.95), 4.0, true)
+		var c := Vector2(79, 79)
+		# Ytre mørk slitt eik + antikk messingramme
+		draw_circle(c, 71.0, Color(0.08, 0.05, 0.03, 0.92))
+		draw_arc(c, 71.0, 0.0, TAU, 72, Color(0.68, 0.50, 0.22, 0.96), 3.5, true)
+		draw_arc(c, 67.5, 0.0, TAU, 72, Color(0.28, 0.19, 0.08, 0.95), 2.5, true)
 
-		# Bakgrunnsspor for buet helsemåler (tilsvarer healthbar_bottom)
+		# Mørkt spor for buet helsemåler
 		var start_a := PI * 0.72
 		var sweep := PI * 1.56
-		draw_arc(c, 55.0, start_a, start_a + sweep, 48, Color(0.24, 0.12, 0.10, 0.9), 14.0, true)
+		draw_arc(c, 58.0, start_a, start_a + sweep, 56, Color(0.18, 0.08, 0.06, 0.92), 13.0, true)
 
-		# Aktiv rød-gull helsebue (tilsvarer healthbar_top / healthbar_amount22)
+		# Aktiv dyp karmosinrød helsebue med gyllen kantglans
 		if health_ratio > 0.01:
-			var fill_col := Color(0.86, 0.14, 0.14, 1.0) if health_ratio > 0.3 else Color(1.0, 0.35, 0.12, 1.0)
-			draw_arc(c, 55.0, start_a, start_a + sweep * health_ratio, 48, fill_col, 11.0, true)
+			var fill_col := Color(0.76, 0.11, 0.10, 1.0) if health_ratio > 0.3 else Color(0.95, 0.28, 0.08, 1.0)
+			draw_arc(c, 58.0, start_a, start_a + sweep * health_ratio, 56, fill_col, 10.0, true)
+			draw_arc(c, 60.5, start_a, start_a + sweep * health_ratio, 56, Color(1.0, 0.62, 0.42, 0.35), 2.0, true)
 
-		# Indre portrettmedaljong (Pinkys blå bandana + rød/hvit piratskjorte-ikon)
-		draw_circle(c, 42.0, Color(0.16, 0.24, 0.38, 0.98))
-		draw_arc(c, 42.0, 0.0, TAU, 48, Color(0.90, 0.72, 0.28, 0.95), 3.0, true)
+		# Live-action portrett av Pinky i midten
+		if portrait_tex:
+			draw_texture_rect(portrait_tex, Rect2(c - Vector2(46, 46), Vector2(92, 92)), false)
+		else:
+			draw_circle(c, 46.0, Color(0.14, 0.18, 0.26, 0.98))
 
-		# Stilisert Pinky-portrett i medaljongen
-		# Skuldre (rød/hvit sjørøvertrøye)
-		draw_circle(c + Vector2(0, 26), 21.0, Color(0.76, 0.16, 0.16))
-		draw_rect(Rect2(c.x - 16, c.y + 18, 32, 6), Color(0.95, 0.92, 0.86))
-		# Ansikt
-		draw_circle(c + Vector2(0, 2), 16.0, Color(0.92, 0.76, 0.62))
-		# Blå bandana
-		draw_arc(c + Vector2(0, -1), 15.5, PI * 1.05, PI * 1.95, 24, Color(0.10, 0.44, 0.82), 9.0, true)
-		# Øyne
-		draw_circle(c + Vector2(-5.5, 2), 2.2, Color(0.10, 0.10, 0.14))
-		draw_circle(c + Vector2(5.5, 2), 2.2, Color(0.10, 0.10, 0.14))
-		# Smil
-		draw_arc(c + Vector2(0, 6), 5.5, 0.2, PI - 0.2, 12, Color(0.45, 0.18, 0.14), 2.0, true)
+		# Indre antikk messingring rundt portrettet
+		draw_arc(c, 47.0, 0.0, TAU, 64, Color(0.78, 0.58, 0.24, 0.98), 3.2, true)
+		draw_arc(c, 45.0, 0.0, TAU, 64, Color(0.14, 0.09, 0.04, 0.85), 1.5, true)
 
 
 class GoldCoinBadge extends Control:
-	var coin_count: int = 0
+	var coin_tex: Texture2D = null
 
 	func _init() -> void:
-		custom_minimum_size = Vector2(140, 62)
-
-	func set_coins(v: int) -> void:
-		coin_count = v
-		queue_redraw()
+		custom_minimum_size = Vector2(64, 64)
+		if ResourceLoader.exists("res://assets/ui/gold_doubloon.png"):
+			coin_tex = load("res://assets/ui/gold_doubloon.png") as Texture2D
 
 	func _draw() -> void:
-		# Gullmynt-ikon (tilsvarer goldcoin nederst til venstre ved siden av helsemedaljongen)
-		var cc := Vector2(30, 31)
-		draw_circle(cc, 24.0, Color(0.68, 0.46, 0.10, 0.96))
-		draw_circle(cc, 20.0, Color(0.98, 0.80, 0.22, 1.0))
-		draw_arc(cc, 15.0, 0.0, TAU, 32, Color(0.76, 0.54, 0.12, 0.9), 2.2, true)
-		draw_circle(cc, 6.0, Color(0.84, 0.60, 0.12, 0.8))
+		if coin_tex:
+			draw_texture_rect(coin_tex, Rect2(Vector2(4, 4), Vector2(56, 56)), false)
+		else:
+			var cc := Vector2(32, 32)
+			draw_circle(cc, 24.0, Color(0.78, 0.58, 0.14, 0.96))
 
 
 var _medallion: PirateHealthMedallion
@@ -116,15 +110,15 @@ func _make_panel_style(bg: Color = Color(0.11, 0.07, 0.04, 0.92), border: Color 
 
 
 func _build_ui() -> void:
-	# 1. Bunn-venstre: Original 1:1 Pinky-helsemedaljong + Gullmynter (rect 34,704 + 241,864 i originalen)
+	# 1. Bunn-venstre: Original 1:1 Pinky live-action helsemedaljong + Gullmynter
 	var bl := HBoxContainer.new()
 	bl.set_anchors_preset(Control.PRESET_BOTTOM_LEFT)
 	bl.offset_left = 22
 	bl.offset_right = 360
-	bl.offset_top = -176
+	bl.offset_top = -178
 	bl.offset_bottom = -16
 	bl.alignment = BoxContainer.ALIGNMENT_BEGIN
-	bl.add_theme_constant_override("separation", 6)
+	bl.add_theme_constant_override("separation", 10)
 	add_child(bl)
 
 	_medallion = PirateHealthMedallion.new()
@@ -132,7 +126,7 @@ func _build_ui() -> void:
 
 	var coin_wrap := HBoxContainer.new()
 	coin_wrap.size_flags_vertical = Control.SIZE_SHRINK_END
-	coin_wrap.add_theme_constant_override("separation", -76)
+	coin_wrap.add_theme_constant_override("separation", 8)
 	bl.add_child(coin_wrap)
 
 	_coin_badge = GoldCoinBadge.new()
@@ -141,10 +135,10 @@ func _build_ui() -> void:
 	_coin_label = Label.new()
 	_coin_label.text = "25"
 	_coin_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
-	_coin_label.add_theme_font_size_override("font_size", 28)
-	_coin_label.add_theme_color_override("font_color", Color(1.0, 0.88, 0.32))
-	_coin_label.add_theme_color_override("font_outline_color", Color(0.12, 0.07, 0.02, 0.95))
-	_coin_label.add_theme_constant_override("outline_size", 6)
+	_coin_label.add_theme_font_size_override("font_size", 30)
+	_coin_label.add_theme_color_override("font_color", Color(0.98, 0.84, 0.34))
+	_coin_label.add_theme_color_override("font_outline_color", Color(0.08, 0.05, 0.02, 0.96))
+	_coin_label.add_theme_constant_override("outline_size", 7)
 	coin_wrap.add_child(_coin_label)
 
 	# 2. Bunn-høyre: Kontekstuelt handlingsikon (tilsvarer actionicon i originalen, skjult til man er nær NPC/portal)
@@ -328,8 +322,6 @@ func _on_health_changed(cur: float, mx: float) -> void:
 
 
 func _on_coins_changed(coins: int) -> void:
-	if is_instance_valid(_coin_badge):
-		_coin_badge.set_coins(coins)
 	if is_instance_valid(_coin_label):
 		_coin_label.text = "%d" % coins
 

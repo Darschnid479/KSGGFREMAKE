@@ -11,6 +11,7 @@ const PORTAL_SCRIPT := preload("res://scripts/world/PortalTrigger.gd")
 const COIN_SCRIPT := preload("res://scripts/world/CollectibleCoin.gd")
 const BARREL_SCRIPT := preload("res://scripts/world/BreakableBarrel.gd")
 const OCEAN_SHADER := preload("res://shaders/ocean_water.gdshader")
+const STORM_SKY_SHADER := preload("res://shaders/storm_sky.gdshader")
 
 const WORLD_SCALE := 0.1 # Samme 0.1-skala som OBJ->GLB-konvertereren (Shockwave-enheter -> meter)
 
@@ -116,13 +117,18 @@ func _setup_modern_environment(cfg: Dictionary) -> void:
 	var is_indoor := not bool(cfg.get("has_water", false)) and float(cfg.get("fog_density", 0.002)) >= 0.006
 
 	var sky := Sky.new()
-	var sky_mat := ProceduralSkyMaterial.new()
-	sky_mat.sky_top_color = cfg.get("sky_top", Color(0.16, 0.48, 0.88))
-	sky_mat.sky_horizon_color = cfg.get("sky_horizon", Color(0.68, 0.84, 0.96))
-	sky_mat.ground_bottom_color = cfg.get("fog_color", Color(0.15, 0.25, 0.35))
-	sky_mat.ground_horizon_color = cfg.get("sky_horizon", Color(0.68, 0.84, 0.96))
-	sky_mat.sun_angle_max = 28.0
-	sky.sky_material = sky_mat
+	if current_level_id in ["graal_bosslevel", "graal_mountain"]:
+		var ssm := ShaderMaterial.new()
+		ssm.shader = STORM_SKY_SHADER
+		sky.sky_material = ssm
+	else:
+		var sky_mat := ProceduralSkyMaterial.new()
+		sky_mat.sky_top_color = cfg.get("sky_top", Color(0.16, 0.48, 0.88))
+		sky_mat.sky_horizon_color = cfg.get("sky_horizon", Color(0.68, 0.84, 0.96))
+		sky_mat.ground_bottom_color = cfg.get("fog_color", Color(0.15, 0.25, 0.35))
+		sky_mat.ground_horizon_color = cfg.get("sky_horizon", Color(0.68, 0.84, 0.96))
+		sky_mat.sun_angle_max = 28.0
+		sky.sky_material = sky_mat
 
 	env.background_mode = Environment.BG_SKY
 	env.sky = sky
@@ -150,6 +156,7 @@ func _setup_modern_environment(cfg: Dictionary) -> void:
 	env.fog_enabled = GameState.fog_enabled
 	env.fog_light_color = cfg.get("fog_color", Color(0.66, 0.78, 0.88))
 	env.fog_density = float(cfg.get("fog_density", 0.0018))
+	env.fog_sky_affect = 0.10 if current_level_id in ["graal_bosslevel", "graal_mountain"] else 0.45
 	env.adjustment_enabled = true
 	env.adjustment_contrast = 1.06
 	env.adjustment_saturation = 1.12
@@ -194,7 +201,7 @@ func _load_level_geometry(w3d_name: String) -> AABB:
 
 			for mi in _find_all_meshes(inst):
 				var nm := mi.name.to_lower()
-				# Skjul gamle flate Shockwave-vannflater slik at vår moderne Gerstner-havshader vises
+				# Skjul gamle flate Shockwave-vannflater slik at vår moderne havshader vises
 				if "water" in nm or "abrasea" in nm or nm.ends_with("sea") or nm.ends_with("sea2"):
 					mi.visible = false
 					continue
@@ -213,6 +220,27 @@ func _load_level_geometry(w3d_name: String) -> AABB:
 					continue
 				# Skjul usynlige UI/shop/fog-hjelpemesher
 				if "portalchoice" in nm or "fog" in nm or nm in ["shoplamp", "shopslingshot", "shopsword"]:
+					mi.visible = false
+					continue
+
+				# 1:1 Gral-boss: Løft originale Greven av Gral på dragen (GraalBoss) og katapulten opp på borgen!
+				if w3d_name == "graal_bosslevel" and nm == "graalboss":
+					mi.position = Vector3(6.8, 23.6, -11.6)
+					mi.rotation_degrees = Vector3(-6.0, 102.0, 0.0)
+					mi.scale = Vector3.ONE * 1.25
+					var dragon_glow := OmniLight3D.new()
+					dragon_glow.position = Vector3(0.0, 1.4, 1.2)
+					dragon_glow.light_color = Color(1.0, 0.56, 0.22)
+					dragon_glow.light_energy = 4.6
+					dragon_glow.omni_range = 20.0
+					mi.add_child(dragon_glow)
+					continue
+				if w3d_name == "graal_bosslevel" and nm == "catapult":
+					mi.position = Vector3(-7.6, 22.8, -11.6)
+					mi.rotation_degrees = Vector3(0.0, 90.0, 0.0)
+					mi.create_trimesh_collision()
+					continue
+				if w3d_name == "graal_bosslevel" and nm == "catapultrock":
 					mi.visible = false
 					continue
 
@@ -338,14 +366,27 @@ func _find_player_spawn(level_id: String, gp_data: Dictionary, bounds: AABB) -> 
 
 
 func _build_world_map_islands() -> void:
-	# Bygger organiske 3D-øyer med landemerker (borg, kupler, palmer/hus) og fiendeskip sett ovenfra
+	# Fotorealistiske, røffe 3D-terrengøyer (FastNoiseLite-displaced mesh + PBR normaldetalj) sett ovenfra
 	var islands := [
-		{"name": "Abra Havn", "id": "abra", "pos": Vector3(-34.0, 0.0, 22.0), "r": 12.0, "col": Color(0.24, 0.44, 0.22), "theme": "harbor"},
-		{"name": "Gral", "id": "graal_mountain", "pos": Vector3(-28.0, 0.0, -26.0), "r": 13.0, "col": Color(0.28, 0.24, 0.34), "theme": "castle"},
-		{"name": "Fata Morgana", "id": "fatamorgana_city", "pos": Vector3(34.0, 0.0, -22.0), "r": 12.5, "col": Color(0.78, 0.62, 0.36), "theme": "desert"},
-		{"name": "Maga Khans øy", "id": "magakhan_beach", "pos": Vector3(40.0, 0.0, 22.0), "r": 13.5, "col": Color(0.16, 0.40, 0.18), "theme": "jungle"},
-		{"name": "Skattejakt-øya", "id": "treasurehunt", "pos": Vector3(4.0, 0.0, -40.0), "r": 9.5, "col": Color(0.36, 0.54, 0.24), "theme": "palm"},
+		{"name": "Abra Havn", "id": "abra", "pos": Vector3(-34.0, 0.0, 22.0), "r": 14.0, "seed": 11, "theme": "harbor"},
+		{"name": "Gral", "id": "graal_mountain", "pos": Vector3(-28.0, 0.0, -25.0), "r": 15.0, "seed": 23, "theme": "castle"},
+		{"name": "Fata Morgana", "id": "fatamorgana_city", "pos": Vector3(34.0, 0.0, -21.0), "r": 14.5, "seed": 37, "theme": "desert"},
+		{"name": "Maga Khans øy", "id": "magakhan_beach", "pos": Vector3(40.0, 0.0, 22.0), "r": 15.5, "seed": 53, "theme": "jungle"},
+		{"name": "Skattejakt-øya", "id": "treasurehunt", "pos": Vector3(4.0, 0.0, -40.0), "r": 11.5, "seed": 71, "theme": "palm"},
 	]
+
+	# Felles finkornet PBR normal-tekstur for stein/terreng-mikrodetaljer
+	var micro_noise := FastNoiseLite.new()
+	micro_noise.noise_type = FastNoiseLite.TYPE_SIMPLEX_SMOOTH
+	micro_noise.frequency = 0.09
+	micro_noise.fractal_octaves = 5
+	var normal_tex := NoiseTexture2D.new()
+	normal_tex.width = 256
+	normal_tex.height = 256
+	normal_tex.seamless = true
+	normal_tex.as_normal_map = true
+	normal_tex.bump_strength = 6.5
+	normal_tex.noise = micro_noise
 
 	for isl in islands:
 		var root := Node3D.new()
@@ -353,105 +394,25 @@ func _build_world_map_islands() -> void:
 		_world_root.add_child(root)
 
 		var r: float = isl["r"]
-		var sand_mat := StandardMaterial3D.new()
-		sand_mat.albedo_color = Color(0.82, 0.72, 0.48)
-		sand_mat.roughness = 0.90
-
-		var land_mat := StandardMaterial3D.new()
-		land_mat.albedo_color = isl["col"]
-		land_mat.roughness = 0.88
-
-		# Organisk flerlags øyform (flere overlappende klipper/koller istedenfor én flat kjegle)
-		var lobes := [
-			[Vector3(0.0, -0.4, 0.0), Vector3(r * 1.15, 2.2, r * 0.92)],
-			[Vector3(r * 0.38, -0.5, -r * 0.22), Vector3(r * 0.75, 1.8, r * 0.68)],
-			[Vector3(-r * 0.34, -0.5, r * 0.26), Vector3(r * 0.68, 1.7, r * 0.72)],
-		]
-		for lb in lobes:
-			var smi := MeshInstance3D.new()
-			var sph := SphereMesh.new()
-			sph.radius = 1.0; sph.height = 2.0
-			smi.mesh = sph
-			smi.position = lb[0]
-			smi.scale = lb[1]
-			smi.material_override = sand_mat
-			root.add_child(smi)
-
-		var hills := [
-			[Vector3(-r * 0.1, 0.5, -r * 0.1), Vector3(r * 0.72, r * 0.45, r * 0.64)],
-			[Vector3(r * 0.28, 0.4, r * 0.12), Vector3(r * 0.48, r * 0.32, r * 0.44)],
-		]
-		for hl in hills:
-			var hmi := MeshInstance3D.new()
-			var hsp := SphereMesh.new()
-			hsp.radius = 1.0; hsp.height = 2.0
-			hmi.mesh = hsp
-			hmi.position = hl[0]
-			hmi.scale = hl[1]
-			hmi.material_override = land_mat
-			root.add_child(hmi)
-
-		# Landemerker per øy (borg på Gral, kupler på Fata Morgana, hus i Abra Havn, trær i jungelen)
 		var theme: String = isl["theme"]
-		if theme == "castle":
-			var keep := MeshInstance3D.new()
-			var kb := BoxMesh.new()
-			kb.size = Vector3(5.5, 6.5, 5.5)
-			keep.mesh = kb
-			keep.position = Vector3(-1.0, 5.8, -1.0)
-			var kmat := StandardMaterial3D.new()
-			kmat.albedo_color = Color(0.42, 0.38, 0.44); kmat.roughness = 0.85
-			keep.material_override = kmat
-			root.add_child(keep)
-		elif theme == "desert":
-			var dome := MeshInstance3D.new()
-			var ds := SphereMesh.new()
-			ds.radius = 3.2; ds.height = 6.4
-			dome.mesh = ds
-			dome.position = Vector3(0.0, 5.2, 0.0)
-			var dmat := StandardMaterial3D.new()
-			dmat.albedo_color = Color(0.92, 0.82, 0.58); dmat.roughness = 0.75
-			dome.material_override = dmat
-			root.add_child(dome)
-		elif theme == "harbor":
-			for hx in [-3.2, 0.5, 3.6]:
-				var house := MeshInstance3D.new()
-				var hb := BoxMesh.new()
-				hb.size = Vector3(2.4, 2.6, 2.2)
-				house.mesh = hb
-				house.position = Vector3(hx, 3.8, 1.5)
-				var hst := StandardMaterial3D.new()
-				hst.albedo_color = Color(0.55, 0.34, 0.22); hst.roughness = 0.85
-				house.material_override = hst
-				root.add_child(house)
-		else:
-			var tmat := StandardMaterial3D.new()
-			tmat.albedo_color = Color(0.12, 0.36, 0.14); tmat.roughness = 0.9
-			for ti in range(5):
-				var ang := float(ti) * 1.25
-				var tree := MeshInstance3D.new()
-				var ts := SphereMesh.new()
-				ts.radius = 2.0; ts.height = 3.2
-				tree.mesh = ts
-				tree.position = Vector3(cos(ang) * r * 0.32, 4.2, sin(ang) * r * 0.32)
-				tree.material_override = tmat
-				root.add_child(tree)
+		var terrain := _make_realistic_island_mesh(r, int(isl["seed"]), theme, normal_tex)
+		root.add_child(terrain)
 
-		# Navneskilt over øya (tydelig lesbart ovenfra)
+		# Navneskilt over øya
 		var lbl := Label3D.new()
 		lbl.text = str(isl["name"])
-		lbl.position = Vector3(0.0, 9.5, 0.0)
+		lbl.position = Vector3(0.0, 10.5, 0.0)
 		lbl.billboard = BaseMaterial3D.BILLBOARD_ENABLED
-		lbl.font_size = 76
+		lbl.font_size = 70
 		lbl.outline_size = 16
-		lbl.modulate = Color(1.0, 0.94, 0.72)
+		lbl.modulate = Color(0.96, 0.90, 0.74)
 		root.add_child(lbl)
 
 		# Portal / havn ved øya
 		var portal: PortalTrigger = PORTAL_SCRIPT.new()
 		portal.target_level_id = isl["id"]
 		portal.portal_label = "Gå i land: " + str(isl["name"])
-		portal.position = (isl["pos"] as Vector3) + Vector3(0.0, 0.5, r + 3.5)
+		portal.position = (isl["pos"] as Vector3) + Vector3(0.0, 0.4, r * 0.92 + 2.8)
 		_world_root.add_child(portal)
 
 	# Plasser 2 originale fiendeskip fra world_map.glb ute på havet
@@ -470,6 +431,96 @@ func _build_world_map_islands() -> void:
 					var nm := mi.name.to_lower()
 					mi.visible = (nm in ["enemyship", "enemyrailing"])
 				_world_root.add_child(ship)
+
+
+func _make_realistic_island_mesh(radius: float, seed_val: int, theme: String, normal_tex: Texture2D) -> MeshInstance3D:
+	var n_shape := FastNoiseLite.new()
+	n_shape.seed = seed_val
+	n_shape.noise_type = FastNoiseLite.TYPE_SIMPLEX_SMOOTH
+	n_shape.frequency = 0.09
+	n_shape.fractal_octaves = 5
+
+	var n_detail := FastNoiseLite.new()
+	n_detail.seed = seed_val + 99
+	n_detail.noise_type = FastNoiseLite.TYPE_CELLULAR
+	n_detail.frequency = 0.22
+
+	var grid := 44
+	var span := radius * 2.3
+	var st := SurfaceTool.new()
+	st.begin(Mesh.PRIMITIVE_TRIANGLES)
+
+	var verts: Array[Vector3] = []
+	var cols: Array[Color] = []
+	var uvs: Array[Vector2] = []
+	verts.resize((grid + 1) * (grid + 1))
+	cols.resize((grid + 1) * (grid + 1))
+	uvs.resize((grid + 1) * (grid + 1))
+
+	for gz in range(grid + 1):
+		for gx in range(grid + 1):
+			var fx := (float(gx) / float(grid) - 0.5) * span
+			var fz := (float(gz) / float(grid) - 0.5) * span
+			var dist := Vector2(fx, fz).length() / radius
+			var coast_warp := n_shape.get_noise_2d(fx * 0.7, fz * 0.7) * 0.34
+			var radial := clampf(1.0 - (dist + coast_warp), 0.0, 1.0)
+			var ridge := absf(n_shape.get_noise_2d(fx * 1.4, fz * 1.4)) * 0.8 + (0.5 + 0.5 * n_detail.get_noise_2d(fx, fz)) * 0.45
+			var h := -1.8
+			if radial > 0.01:
+				var peak := 9.2 if theme == "castle" else (6.5 if theme == "desert" else 7.8)
+				h = -1.2 + pow(radial, 1.25) * peak * (0.55 + 0.75 * ridge)
+
+			# Dype naturtro jord-/stein-/skogsfarger (ingen utbleket hvit sand)
+			var c := Color(0.11, 0.10, 0.08) # Våt mørk kyststein
+			if h > 0.02 and h < 0.75:
+				c = Color(0.42, 0.36, 0.24) if theme != "castle" else Color(0.16, 0.15, 0.15)
+			elif h >= 0.75 and h < 3.4:
+				match theme:
+					"desert": c = Color(0.46, 0.35, 0.20)
+					"castle": c = Color(0.15, 0.14, 0.16)
+					"jungle": c = Color(0.07, 0.17, 0.06)
+					_: c = Color(0.12, 0.20, 0.09)
+			elif h >= 3.4:
+				match theme:
+					"desert": c = Color(0.38, 0.28, 0.17)
+					"castle": c = Color(0.20, 0.19, 0.21)
+					_: c = Color(0.18, 0.17, 0.15)
+			var tint := 0.80 + 0.36 * (0.5 + 0.5 * n_shape.get_noise_2d(fx * 2.5, fz * 2.5))
+			c = Color(c.r * tint, c.g * tint, c.b * tint, 1.0)
+
+			var idx := gz * (grid + 1) + gx
+			verts[idx] = Vector3(fx, h, fz)
+			cols[idx] = c
+			uvs[idx] = Vector2(float(gx) / float(grid) * 6.0, float(gz) / float(grid) * 6.0)
+
+	for gz in range(grid):
+		for gx in range(grid):
+			var i0 := gz * (grid + 1) + gx
+			var i1 := i0 + 1
+			var i2 := (gz + 1) * (grid + 1) + gx
+			var i3 := i2 + 1
+			for tri in [[i0, i1, i3], [i0, i3, i2]]:
+				# Hopp over flate undervannstrekanter slik at øyene aldri får firkantet ramme i sjøen
+				if verts[tri[0]].y < -1.1 and verts[tri[1]].y < -1.1 and verts[tri[2]].y < -1.1:
+					continue
+				for vi in tri:
+					st.set_color(cols[vi])
+					st.set_uv(uvs[vi])
+					st.add_vertex(verts[vi])
+
+	st.generate_normals()
+	st.generate_tangents()
+	var mi := MeshInstance3D.new()
+	mi.mesh = st.commit()
+	var mat := StandardMaterial3D.new()
+	mat.vertex_color_use_as_albedo = true
+	mat.roughness = 0.92
+	mat.metallic = 0.02
+	mat.normal_enabled = true
+	mat.normal_texture = normal_tex
+	mat.normal_scale = 0.85
+	mi.material_override = mat
+	return mi
 
 
 func _snap_to_surface(pos: Vector3, bounds: AABB) -> Vector3:
@@ -521,17 +572,9 @@ func _spawn_boat(pos: Vector3) -> CharacterBody3D:
 
 
 func _populate_entities(level_id: String, cfg: Dictionary, gp_data: Dictionary, spawn_pos: Vector3, bounds: AABB) -> void:
-	# Spesiell 1:1 boss-plassering oppe på Gral-borgen
+	# 1:1 Greven av Gral på dragen (selve GraalBoss-dragemodellen fra graal_bosslevel.glb svever over borgen)
 	if level_id == "graal_bosslevel":
-		var boss: EnemyActor = ENEMY_SCRIPT.new()
-		boss.enemy_name = "Gral-vokteren"
-		boss.model_resource = "maga_khan"
-		boss.max_hp = 240.0
-		boss.attack_damage = 18.0
-		boss.is_boss = true
-		boss.coin_drop = 30
-		boss.position = Vector3(4.5, 21.8, -12.4)
-		_world_root.add_child(boss)
+		GameState.emit_signal("boss_health_changed", "Greven av Gral", 260.0, 260.0)
 
 	var nodes: Array = gp_data.get("nodes", [])
 	var spawned_chars := 0
