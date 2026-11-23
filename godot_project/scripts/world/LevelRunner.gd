@@ -53,14 +53,17 @@ const CHARACTER_ROLES := {
 	"benjamin": {"name": "Benjamin", "model": "benjamin", "role": "npc", "coins": 5},
 	"sultan": {"name": "Sultanen", "model": "sultan", "role": "npc", "coins": 20},
 	"shopkeeper": {"name": "Kjøpmannen", "model": "shopkeeper", "role": "npc", "coins": 0},
+	"shipman": {"name": "Skipsmannen", "model": "shopkeeper", "role": "npc", "coins": 0},
 	"sirikit": {"name": "Sirikit", "model": "sirikit", "role": "npc", "coins": 10},
 	"malena": {"name": "Malena", "model": "malena", "role": "npc", "coins": 10},
 	"daughter": {"name": "Høvdingens datter", "model": "chiefs_daughter", "role": "npc", "coins": 10},
+	"skeleton_boss": {"name": "Skjelettkonge", "model": "skeleton", "role": "boss", "hp": 280.0, "dmg": 20.0},
 	"skeleton": {"name": "Skjelettvakt", "model": "skeleton", "role": "enemy", "hp": 55.0, "dmg": 10.0},
 	"guard": {"name": "Palassvakt", "model": "arab_guard1", "role": "enemy", "hp": 70.0, "dmg": 14.0},
 	"henchman": {"name": "Maga Khans kriger", "model": "mk_henchman1", "role": "enemy", "hp": 75.0, "dmg": 15.0},
 	"tribesman": {"name": "Jungelkriger", "model": "tribesman", "role": "enemy", "hp": 65.0, "dmg": 13.0},
 	"panther": {"name": "Svart panter", "model": "panther", "role": "enemy", "hp": 80.0, "dmg": 18.0},
+	"liger": {"name": "Fatamorganas panter", "model": "panther", "role": "boss", "hp": 240.0, "dmg": 18.0},
 	"meatplant": {"name": "Kjøttetende plante", "model": "meatplant", "role": "enemy", "hp": 90.0, "dmg": 16.0},
 	"opponent": {"name": "Fiendtlig pirat", "model": "opponent1", "role": "enemy", "hp": 65.0, "dmg": 12.0},
 	"ghost": {"name": "Grusomme Gabriels spøkelse", "model": "ghost", "role": "boss", "hp": 260.0, "dmg": 20.0},
@@ -977,6 +980,7 @@ func _populate_entities(level_id: String, cfg: Dictionary, gp_data: Dictionary, 
 			enemy.max_hp = float(matched_role.get("hp", 60.0))
 			enemy.attack_damage = float(matched_role.get("dmg", 12.0))
 			enemy.is_boss = (matched_role["role"] == "boss")
+			enemy.passive_until_hit = ("onlyguard" in str(n.get("userdata", "")).to_lower())
 			enemy.coin_drop = 25 if enemy.is_boss else 5
 			enemy.heightmap_sampler = hm_cb
 			enemy.position = pos
@@ -1578,7 +1582,12 @@ func _raycast_ground_info(pos: Vector3, bounds: AABB) -> Dictionary:
 
 
 func _match_character_role(key: String) -> Dictionary:
+	if CHARACTER_ROLES.has(key):
+		return CHARACTER_ROLES[key]
+	var best_k := ""
 	for k in CHARACTER_ROLES.keys():
-		if key == k or key.begins_with(k):
-			return CHARACTER_ROLES[k]
+		if key.begins_with(k) and k.length() > best_k.length():
+			best_k = k
+	if best_k != "":
+		return CHARACTER_ROLES[best_k]
 	return {}

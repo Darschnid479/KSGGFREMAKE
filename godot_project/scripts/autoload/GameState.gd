@@ -59,6 +59,7 @@ const LEVEL_CUTSCENES := {
 var current_level_id: String = "cave"
 var max_health: float = 100.0
 var health: float = 100.0
+var _is_respawning: bool = false
 signal shop_requested(title: String, items: Array)
 
 var max_air: float = 100.0
@@ -91,6 +92,7 @@ func _ready() -> void:
 
 
 func reset_new_game(start_level: String = "cave") -> void:
+	_is_respawning = false
 	current_level_id = start_level
 	health = max_health
 	coins = 0 if start_level == "cave" else 25
@@ -192,12 +194,16 @@ func add_coins(amount: int) -> void:
 
 
 func take_damage(amount: float) -> void:
+	if _is_respawning:
+		return
 	health = clampf(health - amount, 0.0, max_health)
 	emit_signal("health_changed", health, max_health)
 	AudioManager.play_sfx("hit")
 	if health <= 0.0:
+		_is_respawning = true
 		await get_tree().create_timer(1.5).timeout
 		health = max_health
+		_is_respawning = false
 		emit_signal("health_changed", health, max_health)
 		emit_signal("level_change_requested", current_level_id)
 
@@ -310,6 +316,7 @@ func save_game() -> void:
 		"health": health,
 		"coins": coins,
 		"equipped_weapon": equipped_weapon,
+		"unlocked_weapons": unlocked_weapons,
 		"visited_levels": visited_levels,
 		"story_achievements": story_achievements,
 		"seen_cutscenes": seen_cutscenes,
@@ -339,10 +346,18 @@ func load_game() -> void:
 		return
 	current_level_id = str(parsed.get("current_level_id", "cave"))
 	health = float(parsed.get("health", 100.0))
+	if health <= 0.0:
+		health = max_health
 	coins = int(parsed.get("coins", 25))
 	equipped_weapon = str(parsed.get("equipped_weapon", "sword"))
 	graphics_quality = str(parsed.get("graphics_quality", "Ultra"))
 	voice_language = str(parsed.get("voice_language", "no"))
+	if parsed.has("unlocked_weapons"):
+		var uw = parsed.get("unlocked_weapons", [])
+		if typeof(uw) == TYPE_ARRAY:
+			unlocked_weapons.clear()
+			for item in uw:
+				unlocked_weapons.append(str(item))
 	var vl = parsed.get("visited_levels", ["cave"])
 	if typeof(vl) == TYPE_ARRAY:
 		visited_levels.clear()

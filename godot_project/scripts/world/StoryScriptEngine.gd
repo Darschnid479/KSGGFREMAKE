@@ -266,8 +266,10 @@ func _wire_npc_interactions() -> void:
 		var node = actors[key]
 		if node is NpcActor:
 			var npc := node as NpcActor
-			npc.story_conversation_id = _pick_npc_conversation(str(key))
-			npc.interact_requested.connect(_on_npc_interacted)
+			if npc.story_conversation_id == "":
+				npc.story_conversation_id = _pick_npc_conversation(str(key))
+			if not npc.interact_requested.is_connected(_on_npc_interacted):
+				npc.interact_requested.connect(_on_npc_interacted)
 
 
 func _pick_npc_conversation(key: String) -> String:
@@ -284,6 +286,7 @@ func _pick_npc_conversation(key: String) -> String:
 			if "miriam" in k: return "abra_curse"
 			if "sunniva" in k: return "abra_curse2_sunniva" if not GameState.has_achievement("met_miriam") else "abra_hey_sunniva"
 			if "shopkeeper" in k: return "abra_buylamp_shopkeeper"
+			if "shipman" in k: return "abra_buylamp_shopkeeper"
 			if "sabeltann" in k: return "worldmap_graal"
 			if "langemann" in k: return "abra_useportal1_miriam"
 			if "pelle" in k: return "gral_mountain_intro"
@@ -313,7 +316,9 @@ func _pick_npc_conversation(key: String) -> String:
 
 func _on_npc_interacted(npc: NpcActor) -> void:
 	var k := npc.npc_id.to_lower()
-	if "shopkeeper" in k:
+	if "shipman" in k:
+		_open_ship_shop()
+	elif "shopkeeper" in k:
 		_open_pirate_shop()
 	if level_id == "abra" and "miriam" in k:
 		GameState.add_achievement("met_miriam")
@@ -328,6 +333,14 @@ func _on_npc_interacted(npc: NpcActor) -> void:
 		cid = _pick_npc_conversation(npc.npc_id)
 	if cid != "":
 		start_conversation(cid, true, true)
+
+
+func _open_ship_shop() -> void:
+	GameState.emit_signal("shop_requested", "Skipsmannen — Oppgrader Den Sorte Dame", [
+		{"id": "ship_sail", "name": "Forsterkede Råseil (+30% fart på havet)", "cost": 10, "achievement": "ship_sail"},
+		{"id": "ship_cannon", "name": "Doble Messingkanoner (Raskere skuddtakt)", "cost": 15, "achievement": "ship_cannon"},
+		{"id": "ship_hull", "name": "Eikeforsterket Skrog (+50% helse)", "cost": 12, "achievement": "ship_hull", "heal": 50.0},
+	])
 
 
 func _open_pirate_shop() -> void:

@@ -18,6 +18,10 @@ const ROCK_SCENE := preload("res://scripts/world/SlingshotRock.gd")
 
 func _ready() -> void:
 	add_to_group("player")
+	if GameState.has_achievement("ship_sail"):
+		max_speed *= 1.32
+	if GameState.has_achievement("ship_cannon"):
+		cannon_cooldown *= 0.62
 	_ship_visual = Node3D.new()
 	add_child(_ship_visual)
 

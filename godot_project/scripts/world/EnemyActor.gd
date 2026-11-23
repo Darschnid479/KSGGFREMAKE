@@ -11,6 +11,7 @@ class_name EnemyActor
 @export var attack_range: float = 2.3
 @export var is_boss: bool = false
 @export var coin_drop: int = 5
+@export var passive_until_hit: bool = false
 
 var hp: float = 60.0
 var heightmap_sampler: Callable
@@ -84,7 +85,7 @@ func _ready() -> void:
 	_hp_label.font_size = 34 if is_boss else 24
 	_hp_label.outline_size = 8
 	_hp_label.modulate = Color(1.0, 0.42, 0.34)
-	_hp_label.visible = is_boss
+	_hp_label.visible = false
 	add_child(_hp_label)
 	_update_label()
 
@@ -156,9 +157,9 @@ func _physics_process(delta: float) -> void:
 		var diff := p.global_position - global_position
 		diff.y = 0.0
 		var dist := diff.length()
-		if is_instance_valid(_hp_label) and not is_boss:
-			_hp_label.visible = dist < 10.0
-		if dist < aggro_range:
+		if is_instance_valid(_hp_label):
+			_hp_label.visible = (not is_boss and hp < max_hp and dist < 10.0)
+		if not passive_until_hit and dist < aggro_range:
 			if is_boss:
 				GameState.emit_signal("boss_health_changed", enemy_name, hp, max_hp)
 			if dist > attack_range:
@@ -194,6 +195,7 @@ func _physics_process(delta: float) -> void:
 
 
 func take_hit(damage: float, from_pos: Vector3) -> void:
+	passive_until_hit = false
 	hp = max(0.0, hp - damage)
 	_hit_flash = 0.2
 	if is_instance_valid(_animator):
@@ -216,6 +218,7 @@ func take_hit(damage: float, from_pos: Vector3) -> void:
 			get_parent().add_child(c)
 		if is_boss:
 			GameState.complete_level_story(GameState.current_level_id)
+			GameState.add_coins(25)
 			GameState.emit_signal("boss_health_changed", "", 0.0, 0.0)
 			GameState.set_objective("Boss beseiret! Gå til portalen for å fortsette historien!")
 		queue_free()
