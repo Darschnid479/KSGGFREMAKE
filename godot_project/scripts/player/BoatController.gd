@@ -32,17 +32,21 @@ func _ready() -> void:
 				var nm := mi.name.to_lower()
 				mi.visible = (nm in ["darklady", "railing", "frontdecoration"])
 			inst.scale = Vector3.ONE * 0.48
+			VisualEnhancer.enhance_world_node(inst, "abra", 0.0)
 			loaded_real = true
 
 	if not loaded_real:
 		_build_fallback_ship()
 
+	# Skummende kjølvann bak Den Sorte Dame
+	VisualEnhancer.attach_ship_wake(_ship_visual, 1.05)
+
 	# Varm akterlanterne på skuta
 	var lantern := OmniLight3D.new()
 	lantern.position = Vector3(0.0, 3.6, 5.2)
 	lantern.light_color = Color(1.0, 0.76, 0.34)
-	lantern.light_energy = 4.0
-	lantern.omni_range = 18.0
+	lantern.light_energy = 4.2
+	lantern.omni_range = 20.0
 	_ship_visual.add_child(lantern)
 
 

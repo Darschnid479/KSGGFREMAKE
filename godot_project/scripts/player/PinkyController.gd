@@ -49,6 +49,7 @@ func _setup_visuals() -> void:
 					m.visible = false
 			# Auto-juster høyde slik at føttene står på y=0 (kun basert på synlig kropp)
 			_align_model_to_floor(inst)
+			VisualEnhancer.enhance_character_node(_visual_root, true, 0.65)
 	else:
 		_build_fallback_pinky()
 
@@ -64,9 +65,11 @@ func _setup_visuals() -> void:
 	_sword_mesh.mesh = blade
 	_sword_mesh.position = Vector3(0.0, 0.0, 0.46)
 	var mat := StandardMaterial3D.new()
-	mat.albedo_color = Color(0.86, 0.89, 0.95)
-	mat.metallic = 0.88
-	mat.roughness = 0.20
+	mat.albedo_color = Color(0.90, 0.93, 0.98)
+	mat.metallic = 0.92
+	mat.roughness = 0.16
+	mat.rim_enabled = true
+	mat.rim = 0.4
 	_sword_mesh.material_override = mat
 	_sword_pivot.add_child(_sword_mesh)
 
@@ -77,17 +80,17 @@ func _setup_visuals() -> void:
 	guard.mesh = gbox
 	guard.position = Vector3(0.0, 0.0, 0.02)
 	var gmat := StandardMaterial3D.new()
-	gmat.albedo_color = Color(0.92, 0.72, 0.22)
-	gmat.metallic = 0.90
-	gmat.roughness = 0.25
+	gmat.albedo_color = Color(0.96, 0.78, 0.24)
+	gmat.metallic = 0.92
+	gmat.roughness = 0.22
 	guard.material_override = gmat
 	_sword_mesh.add_child(guard)
 
 	# Lykt-lys (Lykte-lampe)
 	_lamp_light = OmniLight3D.new()
 	_lamp_light.position = Vector3(-0.32, 1.15, 0.35)
-	_lamp_light.light_color = Color(1.0, 0.82, 0.45)
-	_lamp_light.light_energy = 3.2
+	_lamp_light.light_color = Color(1.0, 0.80, 0.42)
+	_lamp_light.light_energy = 2.8
 	_lamp_light.omni_range = 16.0
 	_lamp_light.shadow_enabled = true
 	_lamp_light.visible = GameState.lamp_enabled

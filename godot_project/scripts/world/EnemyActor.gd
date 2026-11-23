@@ -54,27 +54,32 @@ func _ready() -> void:
 			if is_spectral:
 				var gmat := StandardMaterial3D.new()
 				gmat.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
-				gmat.albedo_color = Color(0.32, 0.96, 0.68, 0.72)
+				gmat.albedo_color = Color(0.28, 1.0, 0.68, 0.78)
 				gmat.emission_enabled = true
-				gmat.emission = Color(0.18, 0.95, 0.58)
-				gmat.emission_energy_multiplier = 2.2
+				gmat.emission = Color(0.16, 1.0, 0.58)
+				gmat.emission_energy_multiplier = 2.8
+				gmat.rim_enabled = true
+				gmat.rim = 0.85
 				for mi in _find_meshes(inst):
 					mi.material_override = gmat
 				var glight := OmniLight3D.new()
 				glight.position.y = 1.8
-				glight.light_color = Color(0.25, 1.0, 0.62)
-				glight.light_energy = 3.5
-				glight.omni_range = 12.0
+				glight.light_color = Color(0.22, 1.0, 0.62)
+				glight.light_energy = 5.0
+				glight.omni_range = 16.0
 				_visual.add_child(glight)
+			else:
+				VisualEnhancer.enhance_character_node(_visual, true, 1.1 if is_boss else 0.72)
 	else:
 		_build_fallback()
 
 	_hp_label = Label3D.new()
 	_hp_label.position.y = 3.6 if is_boss else 2.35
 	_hp_label.billboard = BaseMaterial3D.BILLBOARD_ENABLED
-	_hp_label.font_size = 38 if is_boss else 28
+	_hp_label.font_size = 34 if is_boss else 24
 	_hp_label.outline_size = 8
-	_hp_label.modulate = Color(1.0, 0.38, 0.32)
+	_hp_label.modulate = Color(1.0, 0.42, 0.34)
+	_hp_label.visible = is_boss
 	add_child(_hp_label)
 	_update_label()
 
@@ -142,6 +147,8 @@ func _physics_process(delta: float) -> void:
 		var diff := p.global_position - global_position
 		diff.y = 0.0
 		var dist := diff.length()
+		if is_instance_valid(_hp_label) and not is_boss:
+			_hp_label.visible = dist < 10.0
 		if dist < aggro_range:
 			if is_boss:
 				GameState.emit_signal("boss_health_changed", enemy_name, hp, max_hp)
@@ -185,6 +192,7 @@ func take_hit(damage: float, from_pos: Vector3) -> void:
 			c.position = global_position + Vector3(randf_range(-1.4, 1.4), 0.8, randf_range(-1.4, 1.4))
 			get_parent().add_child(c)
 		if is_boss:
+			GameState.complete_level_story(GameState.current_level_id)
 			GameState.emit_signal("boss_health_changed", "", 0.0, 0.0)
-			GameState.set_objective("Boss beseiret! Gå til portalen for å fortsette eventyret!")
+			GameState.set_objective("Boss beseiret! Gå til portalen for å fortsette historien!")
 		queue_free()

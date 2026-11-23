@@ -73,16 +73,20 @@ func _ready() -> void:
 			var inst := sc.instantiate()
 			_visual.add_child(inst)
 			_align_model(inst)
+			VisualEnhancer.enhance_character_node(_visual, true, 0.72)
 	else:
 		_build_fallback()
 
+	# Diskret navneskilt som kun toner inn når Pinky går helt bort til karakteren
 	var lbl := Label3D.new()
-	lbl.text = "%s\n[E] Snakk" % display_name
-	lbl.position.y = 2.35
+	lbl.name = "NameLabel"
+	lbl.text = display_name
+	lbl.position.y = 2.25
 	lbl.billboard = BaseMaterial3D.BILLBOARD_ENABLED
-	lbl.font_size = 34
-	lbl.outline_size = 8
-	lbl.modulate = Color(1.0, 0.94, 0.72)
+	lbl.font_size = 26
+	lbl.outline_size = 7
+	lbl.modulate = Color(1.0, 0.94, 0.76, 0.0)
+	lbl.visible = false
 	add_child(lbl)
 
 
@@ -127,6 +131,14 @@ func _process(delta: float) -> void:
 	_bob_t += delta * 2.0
 	if is_instance_valid(_visual):
 		_visual.position.y = sin(_bob_t) * 0.04
+	var lbl := get_node_or_null("NameLabel") as Label3D
+	if lbl:
+		var players := get_tree().get_nodes_in_group("player")
+		if not players.is_empty() and is_instance_valid(players[0]):
+			var d := global_position.distance_to((players[0] as Node3D).global_position)
+			var a := clampf(1.0 - (d - 4.2) / 3.0, 0.0, 1.0)
+			lbl.visible = a > 0.03
+			lbl.modulate.a = a
 
 
 func interact(actor: Node) -> void:

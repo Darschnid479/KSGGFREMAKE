@@ -16,49 +16,72 @@ func _ready() -> void:
 func _setup_3d_backdrop() -> void:
 	var env_node := WorldEnvironment.new()
 	var env := Environment.new()
-	var sky := Sky.new()
-	var smat := ProceduralSkyMaterial.new()
-	smat.sky_top_color = Color(0.10, 0.24, 0.54)
-	smat.sky_horizon_color = Color(0.88, 0.56, 0.34)
-	smat.ground_bottom_color = Color(0.04, 0.12, 0.22)
-	smat.ground_horizon_color = Color(0.62, 0.44, 0.32)
-	sky.sky_material = smat
 	env.background_mode = Environment.BG_SKY
-	env.sky = sky
+	env.sky = VisualEnhancer.create_biome_sky("menu", {})
 	env.ambient_light_source = Environment.AMBIENT_SOURCE_SKY
-	env.ambient_light_sky_contribution = 0.65
-	env.tonemap_mode = Environment.TONE_MAPPER_ACES
+	env.ambient_light_sky_contribution = 0.78
+	env.ambient_light_energy = 0.74
+	# Moderne AgX kinematisk tonemapping (Pixar / Blender) + SSAO + SSIL indirekte lys
+	env.tonemap_mode = Environment.TONE_MAPPER_AGX
+	env.tonemap_exposure = 1.12
+	env.ssao_enabled = true
+	env.ssao_radius = 1.5
+	env.ssao_intensity = 1.65
+	env.ssil_enabled = true
+	env.ssil_radius = 4.5
+	env.ssil_intensity = 0.95
 	env.glow_enabled = true
-	env.glow_intensity = 0.35
-	env.glow_bloom = 0.14
-	env.glow_hdr_threshold = 1.35
+	env.glow_normalized = true
+	env.glow_intensity = 0.42
+	env.glow_bloom = 0.16
+	env.glow_hdr_threshold = 1.15
 	env.fog_enabled = true
-	env.fog_light_color = Color(0.72, 0.58, 0.46)
-	env.fog_density = 0.0020
+	env.fog_light_color = Color(0.92, 0.66, 0.44)
+	env.fog_density = 0.0011
+	env.fog_sky_affect = 0.12
+	env.adjustment_enabled = true
+	env.adjustment_contrast = 1.08
+	env.adjustment_saturation = 1.16
 	env_node.environment = env
 	add_child(env_node)
 
 	var sun := DirectionalLight3D.new()
-	sun.light_color = Color(1.0, 0.84, 0.58)
-	sun.light_energy = 1.9
+	sun.light_color = Color(1.0, 0.80, 0.48)
+	sun.light_energy = 2.45
 	sun.shadow_enabled = true
-	sun.rotation_degrees = Vector3(-28.0, 38.0, 0.0)
+	sun.shadow_blur = 1.8
+	sun.directional_shadow_mode = DirectionalLight3D.SHADOW_PARALLEL_4_SPLITS
+	sun.rotation_degrees = Vector3(-16.0, 32.0, 0.0)
 	add_child(sun)
 
-	# Animasjonshav i forgrunnen (eksakt vannlinje for Abra Havn)
+	# Kald motsatt himmel-kantbelysning for myk Pixar-dybde på skutesiden
+	var fill := DirectionalLight3D.new()
+	fill.light_color = Color(0.42, 0.64, 0.98)
+	fill.light_energy = 0.48
+	fill.shadow_enabled = false
+	fill.rotation_degrees = Vector3(-28.0, -145.0, 0.0)
+	add_child(fill)
+
+	# Sea of Thieves-inspirert turkis-gull solnedgangshav med ekte skum rundt bryggestolpene
 	var water := MeshInstance3D.new()
 	var pm := PlaneMesh.new()
-	pm.size = Vector2(440, 440)
+	pm.size = Vector2(460, 460)
 	pm.subdivide_width = 128
 	pm.subdivide_depth = 128
 	water.mesh = pm
 	water.position.y = -0.10
 	var wmat := ShaderMaterial.new()
 	wmat.shader = OCEAN_SHADER
+	wmat.set_shader_parameter("deep_color", Color(0.015, 0.14, 0.28, 1.0))
+	wmat.set_shader_parameter("mid_color", Color(0.03, 0.34, 0.46, 1.0))
+	wmat.set_shader_parameter("shallow_color", Color(0.10, 0.62, 0.64, 1.0))
+	wmat.set_shader_parameter("sun_dir", Vector3(0.45, 0.18, -0.88))
+	wmat.set_shader_parameter("sun_tint", Color(1.0, 0.82, 0.46))
+	wmat.set_shader_parameter("sparkle_strength", 1.4)
 	water.material_override = wmat
 	add_child(water)
 
-	# Last full HD Abra Havn som 3D-bakgrunn
+	# Last full HD Abra Havn som 3D-bakgrunn med oppgraderte AAA PBR-materialer og varme lykter
 	var hero_loaded := false
 	var hero_center := Vector3(0.0, 5.0, 0.0)
 	var cam_dist := 32.0
@@ -69,6 +92,7 @@ func _setup_3d_backdrop() -> void:
 				var inst := sc.instantiate()
 				add_child(inst)
 				_clean_menu_backdrop(inst)
+				VisualEnhancer.enhance_world_node(inst, "menu", -0.10)
 				hero_loaded = true
 				break
 
@@ -79,12 +103,16 @@ func _setup_3d_backdrop() -> void:
 		island.mesh = cyl
 		add_child(island)
 
+	# Svevende gyllent solstøv i forgrunnen
+	VisualEnhancer.spawn_ambient_particles(self, hero_center, "abra")
+
 	_cam_pivot = Node3D.new()
 	_cam_pivot.position = hero_center
 	add_child(_cam_pivot)
 
 	var cam := Camera3D.new()
 	cam.position = Vector3(0.0, 8.0, cam_dist)
+	cam.fov = 58.0
 	cam.current = true
 	_cam_pivot.add_child(cam)
 	cam.look_at(hero_center, Vector3.UP)
@@ -94,8 +122,19 @@ func _clean_menu_backdrop(node: Node) -> void:
 	if node is MeshInstance3D:
 		var mi := node as MeshInstance3D
 		var nm := mi.name.to_lower()
-		if "water" in nm or "abrasea" in nm or "glow" in nm or "portalchoice" in nm or nm in ["shoplamp", "shopslingshot", "shopsword"]:
+		# Skjul gamle flate vannflater, bakgrunns-skyggeboks (slik at vår nye solnedgangshimmel skinner!) og glød-plater
+		if "water" in nm or "abrasea" in nm or "abrabackground" in nm or "portalchoice" in nm or nm in ["shoplamp", "shopslingshot", "shopsword"]:
 			mi.visible = false
+		elif "glow" in nm:
+			mi.visible = false
+			if nm.begins_with("glow"):
+				var laabb: AABB = mi.global_transform * mi.get_aabb()
+				var lgt := OmniLight3D.new()
+				lgt.position = laabb.get_center()
+				lgt.light_color = Color(1.0, 0.72, 0.30)
+				lgt.light_energy = 3.6
+				lgt.omni_range = 14.0
+				add_child(lgt)
 	for c in node.get_children():
 		_clean_menu_backdrop(c)
 
