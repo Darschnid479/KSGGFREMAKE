@@ -101,12 +101,12 @@ void vertex() {
 		}
 	}
 
-	// 2. ARMER, ALBUER & HENDER (fanger hele armen og hengende hender fra yn=0.25 til 0.85 utenfor bein/torso!)
-	float arm_band = smoothstep(0.25, 0.34, yn) * (1.0 - smoothstep(0.77, 0.86, yn));
-	float arm_inner = mix(leg_max_x * 0.92, torso_half_w * 0.85, smoothstep(0.42, 0.65, yn));
-	float arm_x = smoothstep(arm_inner * 0.86, arm_inner * 1.14, abs(p.x));
+	// 2. ARMER, ALBUER & HENDER (fanger hele overarm + underarm fra skulder og ut, slik at ingen blir stående i T/A-pose!)
+	float arm_band = smoothstep(0.24, 0.34, yn) * (1.0 - smoothstep(0.79, 0.88, yn));
+	float arm_inner = mix(leg_max_x * 0.84, torso_half_w * 0.84, smoothstep(0.40, 0.64, yn));
+	float arm_x = smoothstep(arm_inner * 0.82, arm_inner * 1.12, abs(p.x));
 	float arm_mask = arm_band * arm_x;
-	float forearm_mask = arm_mask * (1.0 - smoothstep(0.50, 0.60, yn));
+	float forearm_mask = arm_mask * (1.0 - smoothstep(0.50, 0.62, yn));
 
 	if (arm_mask > 0.001) {
 		float left_x = 1.0 - smoothstep(-0.04, 0.01, p.x);
@@ -128,7 +128,7 @@ void vertex() {
 		float sh_pitch = (l_arm_pitch * al + r_arm_pitch * ar) * fwd;
 		float sh_out = (-l_arm_out * al + r_arm_out * ar);
 		if (abs(sh_pitch) > 0.0005 || abs(sh_out) > 0.0005) {
-			vec3 sp = vec3(sign(p.x) * torso_half_w * 0.78, sh_y, z_center);
+			vec3 sp = vec3(sign(p.x) * torso_half_w * 0.72, sh_y, z_center);
 			vec3 rel = p - sp;
 			rel = rot_z(rel, sh_out);
 			rel = rot_x(rel, sh_pitch);
@@ -172,20 +172,26 @@ void vertex() {
 void fragment() {
 	vec3 alb = albedo_tint.rgb;
 	if (has_albedo_tex) {
-		alb *= texture(albedo_tex, UV).rgb;
+		vec3 c_tex = texture(albedo_tex, UV).rgb;
+		vec2 tx_sz = 1.0 / max(vec2(textureSize(albedo_tex, 0)), vec2(64.0));
+		vec3 b_tex = (
+			texture(albedo_tex, UV + vec2(tx_sz.x, 0.0)).rgb +
+			texture(albedo_tex, UV - vec2(tx_sz.x, 0.0)).rgb +
+			texture(albedo_tex, UV + vec2(0.0, tx_sz.y)).rgb +
+			texture(albedo_tex, UV - vec2(0.0, tx_sz.y)).rgb
+		) * 0.25;
+		alb *= clamp(c_tex + (c_tex - b_tex) * 0.60, vec3(0.0), vec3(1.12));
 	}
-	// Frisk, balansert animasjonsfarge uten dobbel formørking eller rødstikk
-	alb = pow(max(alb, vec3(0.0001)), vec3(1.02)) * 1.12;
 	float lum = dot(alb, vec3(0.299, 0.587, 0.114));
-	alb = mix(vec3(lum), alb, 1.04);
+	alb = mix(vec3(lum), alb, 1.03);
 
 	if (has_fabric_normal) {
-		NORMAL_MAP = texture(fabric_normal_tex, UV * 7.5).rgb;
-		NORMAL_MAP_DEPTH = 0.28;
+		NORMAL_MAP = texture(fabric_normal_tex, UV * 9.0).rgb;
+		NORMAL_MAP_DEPTH = 0.20;
 	}
 
 	ALBEDO = clamp(alb, vec3(0.0), vec3(1.0));
 	METALLIC = base_metallic;
-	ROUGHNESS = clamp(base_roughness, 0.30, 0.88);
-	SPECULAR = 0.34;
+	ROUGHNESS = clamp(max(base_roughness, 0.58), 0.55, 0.90);
+	SPECULAR = 0.16;
 }

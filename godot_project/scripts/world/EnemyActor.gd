@@ -6,7 +6,7 @@ class_name EnemyActor
 @export var model_resource: String = "skeleton"
 @export var max_hp: float = 60.0
 @export var attack_damage: float = 12.0
-@export var move_speed: float = 4.4
+@export var move_speed: float = 2.9
 @export var aggro_range: float = 15.0
 @export var attack_range: float = 2.3
 @export var is_boss: bool = false
@@ -15,6 +15,7 @@ class_name EnemyActor
 
 var hp: float = 60.0
 var heightmap_sampler: Callable
+var initial_yaw: float = 0.0
 var _spawn_pos: Vector3
 var _attack_cd: float = 0.0
 var _hit_flash: float = 0.0
@@ -42,6 +43,7 @@ func _ready() -> void:
 	add_child(col)
 
 	_visual = Node3D.new()
+	_visual.rotation.y = initial_yaw
 	add_child(_visual)
 
 	var glb_path := "res://assets/models/%s.glb" % model_resource

@@ -15,7 +15,8 @@
         0.0,
         10.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "UIAmbient",
@@ -31,7 +32,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Default MAX Light",
@@ -47,7 +49,8 @@
         -0.0,
         64.705,
         241.481
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "w3dcompilerdummy",
@@ -63,7 +66,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "TestLight",
@@ -79,7 +83,8 @@
         0.0,
         10.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     }
   ],
   "skeletons": [],

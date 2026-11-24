@@ -15,7 +15,8 @@
         0.0,
         10.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "skalken",
@@ -31,7 +32,8 @@
         -0.039,
         9.799,
         0.136
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "skalken_proxy",
@@ -47,7 +49,8 @@
         -0.039,
         9.799,
         0.136
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "hiddenassets",
@@ -63,7 +66,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "userdata",
@@ -79,7 +83,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"skalken_breathe\", #startxform: [#position: vector( -0.0394, 0.3421, 9.7228 ), #rotation: vector( 0.0000, 0.00 ",
@@ -95,7 +100,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz00, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
@@ -111,7 +117,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"skalken_give\", #startxform: [#position: vector( -0.0394, 0.3421, 9.7228 ), #rotation: vector( 0.0000, 0.0000, ",
@@ -127,7 +134,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #mountstart: \"0\", #mountend: \"35\"] ",
@@ -143,7 +151,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"skalken_receive\", #startxform: [#position: vector( -0.0394, 0.3421, 9.7228 ), #rotation: vector( 0.0000, 0.00 ",
@@ -159,7 +168,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz00, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #mountstart: \"35\"] ",
@@ -175,7 +185,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"skalken_stand\", #startxform: [#position: vector( -0.0394, 0.3421, 9.7228 ), #rotation: vector( 0.0000, 0.0000 ",
@@ -191,7 +202,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
@@ -207,7 +219,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"skalken_talk\", #startxform: [#position: vector( -0.0394, 0.3421, 9.7228 ), #rotation: vector( 0.0000, 0.0000, ",
@@ -223,7 +236,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
@@ -239,7 +253,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"skalken_turnleft\", #startxform: [#position: vector( -0.0394, 0.3421, 9.7228 ), #rotation: vector( 0.0000, 0.0 ",
@@ -255,7 +270,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
@@ -271,7 +287,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"skalken_turnright\", #startxform: [#position: vector( -0.0394, 0.3421, 9.7228 ), #rotation: vector( 0.0000, 0. ",
@@ -287,7 +304,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
@@ -303,7 +321,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"skalken_walk\", #startxform: [#position: vector( 0.3859, 0.0974, 9.5096 ), #rotation: vector( 0.0000, 0.0000,  ",
@@ -319,7 +338,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0.0000 )], #distancepercycle: \"14.866\", #minimumspeed: \"0.1\", #maximumspeed: \"1.5\"] ",
@@ -335,7 +355,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"skalken_walk_talk\", #startxform: [#position: vector( 0.3859, 0.0974, 9.5096 ), #rotation: vector( 0.0000, 0.0 ",
@@ -351,7 +372,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz000, 0.0000 )], #distancepercycle: \"14.866\", #minimumspeed: \"0.1\", #maximumspeed: \"1.5\"] ",
@@ -367,7 +389,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "objectlinkedtobonesplayerinfo",
@@ -383,7 +406,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[[#bonedmodel: \"skalken\", #object: \"coconut_hand\", #boneid: 18, #xform: [#rotation: vector( 175.7484, 12.8852, -179.9642 ), ",
@@ -399,7 +423,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz #position: vector( 0.4312, 0.8761, 1.3385 )]]] ",
@@ -415,7 +440,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "TestLight",
@@ -431,7 +457,8 @@
         0.0,
         10.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     }
   ],
   "skeletons": [],

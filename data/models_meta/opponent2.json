@@ -15,7 +15,8 @@
         0.0,
         10.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "opponent2",
@@ -31,7 +32,8 @@
         0.0,
         9.132,
         -0.005
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "opponent2_proxy",
@@ -47,7 +49,8 @@
         0.0,
         6.958,
         0.136
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "hiddenassets",
@@ -63,7 +66,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "userdata",
@@ -79,7 +83,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"opponent2_die\", #startxform: [#position: vector( -0.5224, -2.9929, 4.8476 ), #rotation: vector( 0.0000, 0.000 ",
@@ -95,7 +100,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0, 0.0000 )]] ",
@@ -111,7 +117,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"opponent2_give\", #startxform: [#position: vector( 0.1076, 0.6707, 8.8316 ), #rotation: vector( 0.0000, 0.0000 ",
@@ -127,7 +134,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz, 0.0000 )], #mountstart: \"0\", #mountend: \"35\"] ",
@@ -143,7 +151,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"opponent2_hit\", #startxform: [#position: vector( -0.5224, -0.8450, 8.6180 ), #rotation: vector( 0.0000, 0.000 ",
@@ -159,7 +168,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0, 0.0000 )]]  ",
@@ -175,7 +185,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"opponent2_stand\", #startxform: [#position: vector( 0.1076, 0.6707, 8.8316 ), #rotation: vector( 0.0000, 0.000 ",
@@ -191,7 +202,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0, 0.0000 )]]   ",
@@ -207,7 +219,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"opponent2_stand_breathe\", #startxform: [#position: vector( 0.1076, 0.6707, 8.8316 ), #rotation: vector( 0.000 ",
@@ -223,7 +236,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0, 0.0000, 0.0000 )]] ",
@@ -239,7 +253,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"opponent2_stand_sword\", #startxform: [#position: vector( -0.5224, -0.8451, 8.6181 ), #rotation: vector( 0.000 ",
@@ -255,7 +270,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0, 0.0000, 0.0000 )]]  ",
@@ -271,7 +287,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"opponent2_stand_talk\", #startxform: [#position: vector( 0.1076, 0.6707, 8.8316 ), #rotation: vector( 0.0000,  ",
@@ -287,7 +304,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0.0000, 0.0000 )]] ",
@@ -303,7 +321,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"opponent2_swordswing\", #startxform: [#position: vector( -0.5224, -0.8451, 8.6181 ), #rotation: vector( 0.0000 ",
@@ -319,7 +338,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz, 0.0000, 0.0000 )], #inpact: \"16\"] ",
@@ -335,7 +355,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"opponent2_turnleft\", #startxform: [#position: vector( -0.5224, -0.8451, 8.6181 ), #rotation: vector( 0.0000,  ",
@@ -351,7 +372,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0.0000, 0.0000 )]]  ",
@@ -367,7 +389,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"opponent2_turnright\", #startxform: [#position: vector( -0.5224, -0.8451, 8.6181 ), #rotation: vector( 0.0000, ",
@@ -383,7 +406,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz 0.0000, 0.0000 )]] ",
@@ -399,7 +423,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"opponent2_walk\", #startxform: [#position: vector( 0.6032, 0.9480, 8.3982 ), #rotation: vector( 0.0000, 0.0000 ",
@@ -415,7 +440,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz, 0.0000 )], #distancepercycle: \"15.075\", #minimumspeed: \"0.7\", #maximumspeed: \"1.5\"] ",
@@ -431,7 +457,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"opponent2_walk_talk\", #startxform: [#position: vector( 0.6032, 0.9480, 8.3982 ), #rotation: vector( 0.0000, 0 ",
@@ -447,7 +474,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz.0000, 0.0000 )], #distancepercycle: \"15.075\", #minimumspeed: \"0.7\", #maximumspeed: \"1.5\"] ",
@@ -463,7 +491,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "objectlinkedtobonesplayerinfo",
@@ -479,7 +508,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[[#bonedmodel: \"opponent2\", #object: \"dizzystars\", #boneid: 19, #xform: [#rotation: vector( 157.5397, 90.0000, 0.0000 ), #p ",
@@ -495,7 +525,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzzosition: vector( -3.5986, -2.6911, 0.1234 )]], [#bonedmodel: \"opponent2\", #object: \"sword_hand\", #boneid: 7, #xform: [#rota ",
@@ -511,7 +542,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzztion: vector( 86.4372, -67.9637, 3.4677 ), #position: vector( 1.1611, 2.2758, -0.7572 )]], [#bonedmodel: \"opponent2\", #obje ",
@@ -527,7 +559,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzzct: \"sword_belt\", #boneid: 1, #xform: [#rotation: vector( -43.7081, 2.1300, -21.4046 ), #position: vector( 3.1847, -0.7216, ",
@@ -543,7 +576,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz -0.1043 )]]] ",
@@ -559,7 +593,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "TestLight",
@@ -575,7 +610,8 @@
         0.0,
         10.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     }
   ],
   "skeletons": [],

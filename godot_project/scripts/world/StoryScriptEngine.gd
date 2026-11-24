@@ -206,7 +206,7 @@ func _parse_spline_walk(low_name: String, ud: String) -> void:
 			elif k == "trigger" or k == "alltriggers":
 				trig_raw = v.split(",")[0].strip_edges()
 			elif k == "speed":
-				speed = 6.2 if v == "run" else 3.8
+				speed = 4.4 if v == "run" else 2.6
 	if target != "" and trig_raw != "":
 		var tspec := _parse_trigger_spec(trig_raw)
 		_splines.append({
@@ -430,24 +430,9 @@ func _spawn_jumps_and_ladders() -> void:
 			trig.set_meta("leap_dest", to_p + Vector3(0.0, 0.12, 0.0))
 			trig.set_meta("leap_is_climb", is_climb)
 			if is_climb:
-				trig.prompt_text = "[Piltast / Space] Klatre ned stigen" if is_rev else "[Piltast / Space] Klatre opp stigen"
+				trig.prompt_text = "[Space / E] Klatre ned stigen" if is_rev else "[Space / E] Klatre opp stigen"
 			else:
-				trig.prompt_text = "[Piltast / Space] Hopp over kløften"
-
-			var ring := MeshInstance3D.new()
-			var tm := TorusMesh.new()
-			tm.inner_radius = 0.50
-			tm.outer_radius = 0.58
-			ring.mesh = tm
-			ring.position.y = 0.04
-			var rmat := StandardMaterial3D.new()
-			rmat.albedo_color = Color(0.95, 0.78, 0.25, 0.52) if is_climb else Color(0.32, 0.88, 1.0, 0.45)
-			rmat.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
-			rmat.emission_enabled = true
-			rmat.emission = Color(rmat.albedo_color.r, rmat.albedo_color.g, rmat.albedo_color.b)
-			rmat.emission_energy_multiplier = 0.55
-			ring.material_override = rmat
-			trig.add_child(ring)
+				trig.prompt_text = "[Space / E] Hopp over kløften"
 
 			trig.on_interact_cb = func(p):
 				var actor: Node = p if (p != null and p.has_method("leap_to")) else player
@@ -480,7 +465,7 @@ func _spawn_jumps_and_ladders() -> void:
 			jt.add_to_group("leap_interactable")
 			jt.set_meta("leap_dest", tp + Vector3(0.0, 0.12, 0.0))
 			jt.set_meta("leap_is_climb", false)
-			jt.prompt_text = "[Piltast / Space] Hopp over til gongen"
+			jt.prompt_text = "[Space / E] Hopp over til gongen"
 			jt.on_interact_cb = func(p):
 				var actor: Node = p if (p != null and p.has_method("leap_to")) else player
 				if is_instance_valid(actor) and actor.has_method("leap_to"):
@@ -513,22 +498,7 @@ func _spawn_all_throws() -> void:
 		trig.add_to_group("leap_interactable")
 		trig.set_meta("leap_dest", dpos)
 		trig.set_meta("leap_is_climb", false)
-		trig.prompt_text = "[E / Piltast] La Pelle kaste deg over til stenen"
-
-		var ring := MeshInstance3D.new()
-		var tm := TorusMesh.new()
-		tm.inner_radius = 0.65
-		tm.outer_radius = 0.78
-		ring.mesh = tm
-		ring.position.y = 0.05
-		var rmat := StandardMaterial3D.new()
-		rmat.albedo_color = Color(1.0, 0.72, 0.18, 0.65)
-		rmat.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
-		rmat.emission_enabled = true
-		rmat.emission = Color(1.0, 0.65, 0.12)
-		rmat.emission_energy_multiplier = 0.75
-		ring.material_override = rmat
-		trig.add_child(ring)
+		trig.prompt_text = "[Space / E] La Pelle kaste deg over"
 
 		var cs := CollisionShape3D.new()
 		var sp := SphereShape3D.new()

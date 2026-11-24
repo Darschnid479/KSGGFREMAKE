@@ -15,7 +15,8 @@
         -5.719,
         0.0,
         -92.104
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "character_pinky",
@@ -31,7 +32,8 @@
         -2.664,
         0.0,
         -70.749
-      ]
+      ],
+      "godot_yaw": -3.1416
     },
     {
       "name": "Global",
@@ -47,7 +49,8 @@
         77.99,
         0.0,
         -88.547
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "actionable_lever1",
@@ -63,7 +66,8 @@
         -49.357,
         0.0,
         -68.877
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "actionable_lever2",
@@ -79,7 +83,8 @@
         -49.357,
         0.0,
         -40.149
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "guard1_patrol",
@@ -95,7 +100,8 @@
         -287.972,
         0.0,
         361.153
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "character_guard1",
@@ -111,7 +117,8 @@
         -338.305,
         0.0,
         360.652
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "actionable_lever3",
@@ -127,7 +134,8 @@
         -20.821,
         0.0,
         9.158
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "actionable_lever4",
@@ -143,7 +151,8 @@
         9.101,
         0.0,
         9.158
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "character_pelle",
@@ -159,7 +168,8 @@
         27.504,
         0.0,
         -70.978
-      ]
+      ],
+      "godot_yaw": 2.7925
     },
     {
       "name": "pysa_1",
@@ -175,7 +185,8 @@
         -1.069,
         0.0,
         -8.563
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "character_sabeltann",
@@ -191,7 +202,8 @@
         10.142,
         0.0,
         -55.749
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "sabeltann_0",
@@ -207,7 +219,8 @@
         2.785,
         0.0,
         -36.528
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "sabeltann_1",
@@ -223,7 +236,8 @@
         2.073,
         0.0,
         42.258
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "sabeltann_2",
@@ -239,7 +253,8 @@
         65.908,
         0.0,
         58.157
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "sabeltann_3",
@@ -255,7 +270,8 @@
         193.104,
         0.0,
         53.174
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "character_pysa",
@@ -271,7 +287,8 @@
         13.006,
         0.0,
         -88.394
-      ]
+      ],
+      "godot_yaw": 2.618
     },
     {
       "name": "character_langemann",
@@ -287,7 +304,8 @@
         -8.732,
         0.0,
         -91.009
-      ]
+      ],
+      "godot_yaw": 1.8326
     },
     {
       "name": "langemann_0",
@@ -303,7 +321,8 @@
         -27.84,
         0.0,
         -88.404
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "langemann_1",
@@ -319,7 +338,8 @@
         -92.174,
         0.0,
         -19.9
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "areatrigger_follow1",
@@ -335,7 +355,8 @@
         -239.368,
         0.0,
         48.293
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "langemann_2",
@@ -351,7 +372,8 @@
         -215.423,
         0.0,
         56.964
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "langemann_3",
@@ -367,7 +389,8 @@
         -245.484,
         0.0,
         213.998
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "areatrigger_fire1",
@@ -383,7 +406,8 @@
         -236.153,
         0.0,
         118.979
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "areatrigger_fire2",
@@ -399,7 +423,8 @@
         -249.168,
         0.0,
         161.907
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "areatrigger_fire3",
@@ -415,7 +440,8 @@
         -236.021,
         0.0,
         197.156
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "areatrigger_fire4",
@@ -431,7 +457,8 @@
         -249.376,
         0.0,
         240.162
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "areatrigger_fire5",
@@ -447,7 +474,8 @@
         -235.782,
         0.0,
         281.775
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "areatrigger_fire6",
@@ -463,7 +491,8 @@
         -249.597,
         0.0,
         313.666
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "areatrigger_fire7",
@@ -479,7 +508,8 @@
         -331.639,
         0.0,
         182.201
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "areatrigger_fire8",
@@ -495,7 +525,8 @@
         -345.646,
         0.0,
         124.884
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "areatrigger_fire9",
@@ -511,7 +542,8 @@
         -331.719,
         0.0,
         58.464
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "character_guard3",
@@ -527,7 +559,8 @@
         672.402,
         0.0,
         175.242
-      ]
+      ],
+      "godot_yaw": 0.7854
     },
     {
       "name": "character_guard4",
@@ -543,7 +576,8 @@
         640.637,
         0.0,
         204.155
-      ]
+      ],
+      "godot_yaw": 0.7854
     },
     {
       "name": "character_guard5",
@@ -559,7 +593,8 @@
         735.11,
         0.0,
         384.711
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "character_guard6",
@@ -575,7 +610,8 @@
         774.54,
         0.0,
         384.711
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "character_guard7",
@@ -591,7 +627,8 @@
         755.035,
         0.0,
         365.03
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "character_guard8",
@@ -607,7 +644,8 @@
         774.54,
         0.0,
         530.513
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "character_guard9",
@@ -623,7 +661,8 @@
         735.029,
         0.0,
         530.513
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "character_guard10",
@@ -639,7 +678,8 @@
         735.029,
         0.0,
         484.506
-      ]
+      ],
+      "godot_yaw": -3.1416
     },
     {
       "name": "character_guard11",
@@ -655,7 +695,8 @@
         775.235,
         0.0,
         484.506
-      ]
+      ],
+      "godot_yaw": -3.1416
     },
     {
       "name": "langemann_4",
@@ -671,7 +712,8 @@
         -171.663,
         0.0,
         431.592
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "areatrigger_follow2",
@@ -687,7 +729,8 @@
         -224.889,
         0.0,
         479.264
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "object_breakablebarrel_1",
@@ -703,7 +746,8 @@
         -162.963,
         0.0,
         406.289
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "object_breakablebarrel_2",
@@ -719,7 +763,8 @@
         -151.546,
         0.0,
         406.289
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "object_breakablebarrel_3",
@@ -735,7 +780,8 @@
         -486.976,
         0.0,
         316.296
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "object_breakablebarrel_4",
@@ -751,7 +797,8 @@
         -495.644,
         0.0,
         307.916
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "object_breakablebarrel_5",
@@ -767,7 +814,8 @@
         -427.239,
         0.0,
         312.372
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "object_breakablebarrel_6",
@@ -783,7 +831,8 @@
         -375.802,
         0.0,
         -27.116
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "object_breakablebarrel_7",
@@ -799,7 +848,8 @@
         -375.802,
         0.0,
         -43.771
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "object_breakablebarrel_8",
@@ -815,7 +865,8 @@
         -78.645,
         0.0,
         155.405
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "object_breakablebarrel_9",
@@ -831,7 +882,8 @@
         -294.195,
         0.0,
         511.366
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "character_guard2",
@@ -847,7 +899,8 @@
         -440.102,
         0.0,
         265.599
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "actionable_key1",
@@ -863,7 +916,8 @@
         -273.436,
         0.0,
         480.303
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "actionable_key1b",
@@ -879,7 +933,8 @@
         -273.436,
         0.0,
         480.303
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "pickup_key1",
@@ -895,7 +950,8 @@
         -341.428,
         -26.381,
         -90.797
-      ]
+      ],
+      "godot_yaw": -0.3491
     },
     {
       "name": "object_breakablebarrel_10",
@@ -911,7 +967,8 @@
         -235.127,
         0.0,
         533.564
-      ]
+      ],
+      "godot_yaw": 0.8727
     },
     {
       "name": "object_breakablebarrel_11",
@@ -927,7 +984,8 @@
         -227.321,
         0.0,
         524.291
-      ]
+      ],
+      "godot_yaw": 0.8727
     },
     {
       "name": "areatrigger_key2",
@@ -943,7 +1001,8 @@
         -6.799,
         0.0,
         109.393
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "areatrigger_doorlever1",
@@ -959,7 +1018,8 @@
         -4.837,
         0.0,
         75.739
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "pelle_1",
@@ -975,7 +1035,8 @@
         97.982,
         0.0,
         7.669
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "areatrigger_danger9",
@@ -991,7 +1052,8 @@
         413.251,
         0.0,
         15.457
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "areatrigger_firelever1",
@@ -1007,7 +1069,8 @@
         -242.768,
         0.0,
         342.072
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "areatrigger_firelever2",
@@ -1023,7 +1086,8 @@
         -338.552,
         0.0,
         -20.042
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "areatrigger_doorlever2",
@@ -1039,7 +1103,8 @@
         439.775,
         0.0,
         92.839
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "sabeltann_4",
@@ -1055,7 +1120,8 @@
         423.011,
         0.0,
         75.564
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "jump_toplatform",
@@ -1071,7 +1137,8 @@
         -120.477,
         0.0,
         358.699
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "jump_fromplatform",
@@ -1087,7 +1154,8 @@
         -120.046,
         0.0,
         275.578
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Area of effect",
@@ -1103,7 +1171,8 @@
         131.794,
         0.0,
         -86.327
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "character_guard12",
@@ -1119,7 +1188,8 @@
         -341.681,
         0.0,
         461.348
-      ]
+      ],
+      "godot_yaw": -1.9199
     },
     {
       "name": "character_guard13",
@@ -1135,7 +1205,8 @@
         -299.846,
         0.0,
         456.592
-      ]
+      ],
+      "godot_yaw": -3.1416
     },
     {
       "name": "langemann_killguards",
@@ -1151,7 +1222,8 @@
         -278.989,
         0.0,
         481.159
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "manualmovingplatform_1",
@@ -1167,7 +1239,8 @@
         -121.112,
         -34.883,
         348.541
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "platform_collisiondata",
@@ -1183,7 +1256,8 @@
         -121.016,
         0.0,
         348.678
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line76",
@@ -1199,7 +1273,8 @@
         -120.931,
         0.0,
         348.65
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "actionable_lever5",
@@ -1215,7 +1290,8 @@
         581.432,
         0.0,
         136.728
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "actionable_lever6",
@@ -1231,7 +1307,8 @@
         601.707,
         0.0,
         116.759
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "areatrigger_pastgrid",
@@ -1247,7 +1324,8 @@
         465.705,
         0.0,
         57.695
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "actionable_lever7",
@@ -1263,7 +1341,8 @@
         739.438,
         0.0,
         292.869
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "actionable_lever8",
@@ -1279,7 +1358,8 @@
         767.583,
         0.0,
         292.869
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "sabeltann_7",
@@ -1295,7 +1375,8 @@
         750.042,
         0.0,
         296.115
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "sabeltann_6",
@@ -1311,7 +1392,8 @@
         701.159,
         0.0,
         241.774
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "sabeltann_5",
@@ -1327,7 +1409,8 @@
         605.534,
         0.0,
         141.008
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "sabeltann_8",
@@ -1343,7 +1426,8 @@
         762.186,
         0.0,
         413.72
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "actionable_lever9",
@@ -1359,7 +1443,8 @@
         738.763,
         0.0,
         441.99
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "actionable_lever10",
@@ -1375,7 +1460,8 @@
         766.971,
         0.0,
         441.99
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "sabeltann_9",
@@ -1391,7 +1477,8 @@
         754.834,
         0.0,
         454.636
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "sabeltann_10",
@@ -1407,7 +1494,8 @@
         580.715,
         0.0,
         659.089
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "sabeltann_end",
@@ -1423,7 +1511,8 @@
         182.693,
         0.0,
         685.578
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "areatrigger_sabeltannend",
@@ -1439,7 +1528,8 @@
         374.29,
         0.0,
         730.741
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "actionable_lever11",
@@ -1455,7 +1545,8 @@
         359.233,
         0.0,
         686.211
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "actionable_lever12",
@@ -1471,7 +1562,8 @@
         386.487,
         0.0,
         686.211
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "camera_endlevel",
@@ -1487,7 +1579,8 @@
         372.74,
         23.872,
         778.79
-      ]
+      ],
+      "godot_yaw": -0.0045
     },
     {
       "name": "areatrigger_neardoor",
@@ -1503,7 +1596,8 @@
         373.251,
         0.0,
         675.622
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "pinky_end",
@@ -1519,7 +1613,8 @@
         373.25,
         0.0,
         669.692
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "areatrigger_nextlevel",
@@ -1535,7 +1630,8 @@
         373.731,
         0.0,
         645.429
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "camera_endlevel.Target",
@@ -1551,7 +1647,8 @@
         373.194,
         15.245,
         677.911
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "guard12_territory",
@@ -1567,7 +1664,8 @@
         -363.464,
         0.0,
         492.032
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "guard13_territory",
@@ -1583,7 +1681,8 @@
         -363.464,
         0.0,
         492.032
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "guard3_territory",
@@ -1599,7 +1698,8 @@
         641.619,
         0.0,
         174.791
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "guard4_territory",
@@ -1615,7 +1715,8 @@
         641.619,
         0.0,
         174.791
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "guard5_territory",
@@ -1631,7 +1732,8 @@
         754.579,
         0.0,
         360.926
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "guard6_territory",
@@ -1647,7 +1749,8 @@
         754.579,
         0.0,
         360.926
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "guard7_territory",
@@ -1663,7 +1766,8 @@
         754.579,
         0.0,
         360.926
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "guard8_territory",
@@ -1679,7 +1783,8 @@
         754.259,
         0.0,
         513.307
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "guard9_territory",
@@ -1695,7 +1800,8 @@
         754.259,
         0.0,
         513.307
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "guard10_territory",
@@ -1711,7 +1817,8 @@
         754.259,
         0.0,
         513.307
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "guard11_territory",
@@ -1727,7 +1834,8 @@
         754.259,
         0.0,
         513.307
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "object_breakablebarrel_12",
@@ -1743,7 +1851,8 @@
         107.636,
         0.0,
         29.703
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "object_breakablebarrel_13",
@@ -1759,7 +1868,8 @@
         78.545,
         0.0,
         29.703
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "object_breakablebarrel_14",
@@ -1775,7 +1885,8 @@
         141.93,
         0.0,
         29.703
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "object_breakablebarrel_15",
@@ -1791,7 +1902,8 @@
         170.407,
         0.0,
         29.703
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "object_breakablebarrel_16",
@@ -1807,7 +1919,8 @@
         217.339,
         0.0,
         16.856
-      ]
+      ],
+      "godot_yaw": 0.7854
     },
     {
       "name": "object_breakablebarrel_17",
@@ -1823,7 +1936,8 @@
         694.462,
         0.0,
         201.311
-      ]
+      ],
+      "godot_yaw": 0.7854
     },
     {
       "name": "object_breakablebarrel_18",
@@ -1839,7 +1953,8 @@
         666.963,
         0.0,
         228.095
-      ]
+      ],
+      "godot_yaw": 0.7854
     },
     {
       "name": "object_breakablebarrel_19",
@@ -1855,7 +1970,8 @@
         217.339,
         0.0,
         85.888
-      ]
+      ],
+      "godot_yaw": 0.7854
     },
     {
       "name": "object_breakablebarrel_20",
@@ -1871,7 +1987,8 @@
         732.895,
         0.0,
         413.237
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "object_breakablebarrel_21",
@@ -1887,7 +2004,8 @@
         776.506,
         0.0,
         413.077
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "object_breakablebarrel_22",
@@ -1903,7 +2021,8 @@
         349.742,
         0.0,
         767.263
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "object_breakablebarrel_23",
@@ -1919,7 +2038,8 @@
         369.304,
         0.0,
         767.263
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "object_breakablebarrel_24",
@@ -1935,7 +2055,8 @@
         378.816,
         0.0,
         767.263
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "object_breakablebarrel_25",
@@ -1951,7 +2072,8 @@
         397.462,
         0.0,
         767.263
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "object_breakablebarrel_26",
@@ -1967,7 +2089,8 @@
         388.01,
         0.0,
         767.263
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "object_breakablebarrel_27",
@@ -1983,7 +2106,8 @@
         359.731,
         0.0,
         767.263
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "manualmovingplatform_1_validpositions",
@@ -1999,7 +2123,8 @@
         -108.327,
         0.0,
         284.827
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "manualmovingplatform_1_validpositions_2",
@@ -2015,7 +2140,8 @@
         -175.833,
         0.0,
         276.798
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "manualmovingplatform_1_validpositions_3",
@@ -2031,7 +2157,8 @@
         -110.46,
         0.0,
         232.078
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "manualmovingplatform_1_validpositions_4",
@@ -2047,7 +2174,8 @@
         -141.845,
         0.0,
         318.884
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "manualmovingplatform_1_validpositions_5",
@@ -2063,7 +2191,8 @@
         12.963,
         0.0,
         273.746
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "manualmovingplatform_1_validpositions_6",
@@ -2079,7 +2208,8 @@
         39.057,
         0.0,
         296.938
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "manualmovingplatform_1_validpositions_7",
@@ -2095,7 +2225,8 @@
         68.28,
         0.0,
         295.352
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "manualmovingplatform_1_validpositions_8",
@@ -2111,7 +2242,8 @@
         57.269,
         0.0,
         318.297
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "manualmovingplatform_1_validpositions_1",
@@ -2127,7 +2259,8 @@
         -142.751,
         0.0,
         348.795
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "actionable_well",
@@ -2143,7 +2276,8 @@
         -338.206,
         0.0,
         483.076
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "pelle_2",
@@ -2159,7 +2293,8 @@
         371.851,
         0.0,
         57.577
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "pelle_3",
@@ -2175,7 +2310,8 @@
         571.334,
         0.0,
         100.875
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "pelle_4",
@@ -2191,7 +2327,8 @@
         721.709,
         0.0,
         283.892
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "pelle_5",
@@ -2207,7 +2344,8 @@
         739.687,
         0.0,
         417.891
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "pelle_6",
@@ -2223,7 +2361,8 @@
         738.035,
         0.0,
         547.204
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "character_sirikit",
@@ -2239,7 +2378,8 @@
         1023.798,
         0.0,
         772.148
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "teleport1",
@@ -2255,7 +2395,8 @@
         643.56,
         0.0,
         654.712
-      ]
+      ],
+      "godot_yaw": -1.6581
     },
     {
       "name": "sirikit_0",
@@ -2271,7 +2412,8 @@
         698.603,
         0.0,
         623.962
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "sirikit_camera",
@@ -2287,7 +2429,8 @@
         766.418,
         19.577,
         554.237
-      ]
+      ],
+      "godot_yaw": 2.3712
     },
     {
       "name": "sirikit_camera.Target",
@@ -2303,7 +2446,8 @@
         680.731,
         16.135,
         642.539
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "teleport2",
@@ -2319,7 +2463,8 @@
         1037.413,
         0.0,
         754.448
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "firebreath_1",
@@ -2335,7 +2480,8 @@
         -256.572,
         -24.429,
         118.89
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "firebreath_2",
@@ -2351,7 +2497,8 @@
         -228.386,
         -24.429,
         161.698
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "firebreath_3",
@@ -2367,7 +2514,8 @@
         -256.572,
         -24.429,
         196.915
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "firebreath_4",
@@ -2383,7 +2531,8 @@
         -228.386,
         -24.429,
         239.961
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "firebreath_5",
@@ -2399,7 +2548,8 @@
         -256.572,
         -24.429,
         281.65
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "firebreath_6",
@@ -2415,7 +2565,8 @@
         -228.386,
         -24.429,
         313.571
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "firebreath_7",
@@ -2431,7 +2582,8 @@
         -351.933,
         -24.429,
         181.937
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "firebreath_8",
@@ -2447,7 +2599,8 @@
         -324.912,
         -24.429,
         125.148
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "firebreath_9",
@@ -2463,7 +2616,8 @@
         -351.933,
         -24.429,
         58.558
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "3dsound_lava",
@@ -2479,7 +2633,8 @@
         -87.142,
         0.0,
         292.957
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "areatrigger_flame3",
@@ -2495,7 +2650,8 @@
         -48.717,
         0.0,
         -68.676
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "areatrigger_flame2",
@@ -2511,7 +2667,8 @@
         -48.717,
         0.0,
         -39.509
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "misc",
@@ -2527,7 +2684,8 @@
         76.758,
         0.0,
         -53.789
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "areatrigger_flame0",
@@ -2543,7 +2701,8 @@
         -20.423,
         0.0,
         9.28
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "areatrigger_flame1",
@@ -2559,7 +2718,8 @@
         9.438,
         0.0,
         9.28
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "areatrigger_flame4",
@@ -2575,7 +2735,8 @@
         581.617,
         0.0,
         136.509
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "areatrigger_flame5",
@@ -2591,7 +2752,8 @@
         601.688,
         0.0,
         116.605
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "areatrigger_flame6",
@@ -2607,7 +2769,8 @@
         767.788,
         0.0,
         292.939
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "areatrigger_flame7",
@@ -2623,7 +2786,8 @@
         739.555,
         0.0,
         292.939
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "areatrigger_flame8",
@@ -2639,7 +2803,8 @@
         386.616,
         0.0,
         686.647
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "areatrigger_flame9",
@@ -2655,7 +2820,8 @@
         358.914,
         0.0,
         686.647
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "3dsound_fire1",
@@ -2671,7 +2837,8 @@
         -243.648,
         0.0,
         119.453
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "badtile1_areatrigger",
@@ -2687,7 +2854,8 @@
         282.429,
         0.0,
         10.5
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "badtile2_areatrigger",
@@ -2703,7 +2871,8 @@
         292.931,
         0.0,
         10.5
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "badtile3_areatrigger",
@@ -2719,7 +2888,8 @@
         303.34,
         0.0,
         10.5
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "badtile4_areatrigger",
@@ -2735,7 +2905,8 @@
         313.736,
         0.0,
         10.5
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "badtile5_areatrigger",
@@ -2751,7 +2922,8 @@
         324.263,
         0.0,
         10.5
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "badtile6_areatrigger",
@@ -2767,7 +2939,8 @@
         334.816,
         0.0,
         10.5
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "badtile7_areatrigger",
@@ -2783,7 +2956,8 @@
         334.816,
         0.0,
         20.74
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "badtile8_areatrigger",
@@ -2799,7 +2973,8 @@
         334.816,
         0.0,
         31.275
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "badtile9_areatrigger",
@@ -2815,7 +2990,8 @@
         282.791,
         0.0,
         31.212
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "badtile10_areatrigger",
@@ -2831,7 +3007,8 @@
         292.785,
         0.0,
         31.212
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "badtile11_areatrigger",
@@ -2847,7 +3024,8 @@
         282.57,
         0.0,
         41.588
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "badtile12_areatrigger",
@@ -2863,7 +3041,8 @@
         292.791,
         0.0,
         41.588
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "badtile13_areatrigger",
@@ -2879,7 +3058,8 @@
         282.537,
         0.0,
         62.536
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "badtile14_areatrigger",
@@ -2895,7 +3075,8 @@
         292.881,
         0.0,
         62.531
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "badtile15_areatrigger",
@@ -2911,7 +3092,8 @@
         303.323,
         0.0,
         31.195
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "badtile16_areatrigger",
@@ -2927,7 +3109,8 @@
         313.766,
         0.0,
         31.195
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "badtile17_areatrigger",
@@ -2943,7 +3126,8 @@
         313.766,
         0.0,
         41.648
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "badtile18_areatrigger",
@@ -2959,7 +3143,8 @@
         313.766,
         0.0,
         52.189
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "badtile19_areatrigger",
@@ -2975,7 +3160,8 @@
         324.196,
         0.0,
         52.189
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "badtile20_areatrigger",
@@ -2991,7 +3177,8 @@
         334.688,
         0.0,
         52.177
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "badtile21_areatrigger",
@@ -3007,7 +3194,8 @@
         334.688,
         0.0,
         62.49
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "badtile22_areatrigger",
@@ -3023,7 +3211,8 @@
         345.155,
         0.0,
         62.49
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "badtile23_areatrigger",
@@ -3039,7 +3228,8 @@
         355.608,
         0.0,
         62.49
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "badtile24_areatrigger",
@@ -3055,7 +3245,8 @@
         366.046,
         0.0,
         62.49
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "badtile25_areatrigger",
@@ -3071,7 +3262,8 @@
         376.584,
         0.0,
         62.49
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "badtile26_areatrigger",
@@ -3087,7 +3279,8 @@
         418.463,
         0.0,
         62.49
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "badtile27_areatrigger",
@@ -3103,7 +3296,8 @@
         418.463,
         0.0,
         52.152
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "badtile28_areatrigger",
@@ -3119,7 +3313,8 @@
         407.976,
         0.0,
         52.152
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "badtile29_areatrigger",
@@ -3135,7 +3330,8 @@
         397.504,
         0.0,
         52.152
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "badtile30_areatrigger",
@@ -3151,7 +3347,8 @@
         397.504,
         0.0,
         41.839
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "badtile31_areatrigger",
@@ -3167,7 +3364,8 @@
         418.439,
         0.0,
         31.076
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "badtile32_areatrigger",
@@ -3183,7 +3381,8 @@
         418.439,
         0.0,
         20.813
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "badtile33_areatrigger",
@@ -3199,7 +3398,8 @@
         418.439,
         0.0,
         10.415
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "badtile34_areatrigger",
@@ -3215,7 +3415,8 @@
         407.952,
         0.0,
         10.415
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "badtile35_areatrigger",
@@ -3231,7 +3432,8 @@
         407.952,
         0.0,
         20.74
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "badtile36_areatrigger",
@@ -3247,7 +3449,8 @@
         387.038,
         0.0,
         20.74
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "badtile37_areatrigger",
@@ -3263,7 +3466,8 @@
         376.754,
         0.0,
         10.502
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "badtile38_areatrigger",
@@ -3279,7 +3483,8 @@
         376.754,
         0.0,
         20.827
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "badtile39_areatrigger",
@@ -3295,7 +3500,8 @@
         376.754,
         0.0,
         31.128
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "badtile40_areatrigger",
@@ -3311,7 +3517,8 @@
         376.754,
         0.0,
         41.564
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "badtile41_areatrigger",
@@ -3327,7 +3534,8 @@
         366.164,
         0.0,
         41.564
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "badtile42_areatrigger",
@@ -3343,7 +3551,8 @@
         355.748,
         0.0,
         41.564
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "badtile43_areatrigger",
@@ -3359,7 +3568,8 @@
         355.748,
         0.0,
         31.276
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "badtile44_areatrigger",
@@ -3375,7 +3585,8 @@
         355.748,
         0.0,
         20.692
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "areatrigger_flame10",
@@ -3391,7 +3602,8 @@
         739.188,
         0.0,
         441.737
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "areatrigger_flame11",
@@ -3407,7 +3619,8 @@
         767.301,
         0.0,
         441.737
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "areatrigger_savegame1",
@@ -3423,7 +3636,8 @@
         200.653,
         0.0,
         49.964
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "camera_fire.Target",
@@ -3439,7 +3653,8 @@
         -242.141,
         -26.009,
         208.862
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "camera_fire",
@@ -3455,7 +3670,8 @@
         -242.572,
         -24.357,
         277.356
-      ]
+      ],
+      "godot_yaw": -0.0063
     },
     {
       "name": "areatrigger_firstflames",
@@ -3471,7 +3687,8 @@
         -69.312,
         0.0,
         -54.181
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "areatrigger_falselever01",
@@ -3487,7 +3704,8 @@
         -4.837,
         0.0,
         75.739
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "areatrigger_falselever02",
@@ -3503,7 +3721,8 @@
         -45.419,
         0.0,
         50.984
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "areatrigger_tilepuzzle",
@@ -3519,7 +3738,8 @@
         349.49,
         0.0,
         32.031
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "3dsound_fire2",
@@ -3535,7 +3755,8 @@
         -243.648,
         0.0,
         163.039
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "3dsound_fire3",
@@ -3551,7 +3772,8 @@
         -243.648,
         0.0,
         198.899
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "3dsound_fire4",
@@ -3567,7 +3789,8 @@
         -243.648,
         0.0,
         241.151
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "3dsound_fire5",
@@ -3583,7 +3806,8 @@
         -243.648,
         0.0,
         282.451
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "3dsound_fire6",
@@ -3599,7 +3823,8 @@
         -243.648,
         0.0,
         314.222
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "3dsound_fire7",
@@ -3615,7 +3840,8 @@
         -338.198,
         0.0,
         182.773
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "3dsound_fire8",
@@ -3631,7 +3857,8 @@
         -338.198,
         0.0,
         125.289
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "3dsound_fire9",
@@ -3647,7 +3874,8 @@
         -338.198,
         0.0,
         58.948
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "areatrigger_beforelions",
@@ -3663,7 +3891,8 @@
         -243.166,
         0.0,
         63.604
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "guard1_territory",
@@ -3679,7 +3908,8 @@
         -361.514,
         0.0,
         336.518
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "actionable_key2",
@@ -3695,7 +3925,8 @@
         -5.962,
         0.0,
         102.239
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "collisiondata",
@@ -3711,7 +3942,8 @@
         142.577,
         124.789,
         323.068
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle01",
@@ -3727,7 +3959,8 @@
         -338.944,
         140.962,
         499.765
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle02",
@@ -3743,7 +3976,8 @@
         29.376,
         140.962,
         87.736
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle03",
@@ -3759,7 +3993,8 @@
         27.605,
         140.962,
         13.945
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle04",
@@ -3775,7 +4010,8 @@
         9.6,
         140.962,
         9.103
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle05",
@@ -3791,7 +4027,8 @@
         -20.507,
         140.962,
         9.103
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle06",
@@ -3807,7 +4044,8 @@
         -40.578,
         140.962,
         87.441
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle07",
@@ -3823,7 +4061,8 @@
         -39.988,
         140.962,
         13.649
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle08",
@@ -3839,7 +4078,8 @@
         -3.387,
         140.962,
         -54.829
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle09",
@@ -3855,7 +4095,8 @@
         -49.138,
         140.962,
         -39.481
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle10",
@@ -3871,7 +4112,8 @@
         -48.843,
         140.962,
         -68.702
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle11",
@@ -3887,7 +4129,8 @@
         124.641,
         140.962,
         27.01
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle12",
@@ -3903,7 +4146,8 @@
         124.641,
         140.962,
         74.744
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle15",
@@ -3919,7 +4163,8 @@
         484.946,
         140.962,
         14.411
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle16",
@@ -3935,7 +4180,8 @@
         484.946,
         140.962,
         87.102
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle17",
@@ -3951,7 +4197,8 @@
         620.394,
         140.962,
         183.296
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle18",
@@ -3967,7 +4214,8 @@
         649.713,
         140.962,
         155.916
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle19",
@@ -3983,7 +4231,8 @@
         780.799,
         140.962,
         351.697
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle20",
@@ -3999,7 +4248,8 @@
         729.188,
         140.962,
         351.697
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle23",
@@ -4015,7 +4265,8 @@
         756.326,
         140.962,
         499.502
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle26",
@@ -4031,7 +4282,8 @@
         410.075,
         140.962,
         764.097
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle27",
@@ -4047,7 +4299,8 @@
         336.899,
         140.962,
         765.309
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle28",
@@ -4063,7 +4316,8 @@
         358.706,
         140.962,
         686.56
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle29",
@@ -4079,7 +4333,8 @@
         386.814,
         140.962,
         686.56
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle30",
@@ -4095,7 +4350,8 @@
         338.111,
         140.962,
         666.691
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle31",
@@ -4111,7 +4367,8 @@
         329.145,
         140.962,
         643.915
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle32",
@@ -4127,7 +4384,8 @@
         420.978,
         140.962,
         644.157
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle33",
@@ -4143,7 +4401,8 @@
         423.886,
         140.962,
         654.818
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle34",
@@ -4159,7 +4418,8 @@
         409.151,
         140.962,
         667.31
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle35",
@@ -4175,7 +4435,8 @@
         338.047,
         140.962,
         666.625
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle36",
@@ -4191,7 +4452,8 @@
         265.845,
         140.962,
         580.556
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle37",
@@ -4207,7 +4469,8 @@
         266.53,
         140.962,
         490.434
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle38",
@@ -4223,7 +4486,8 @@
         327.868,
         140.962,
         426.012
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle39",
@@ -4239,7 +4503,8 @@
         420.731,
         140.962,
         424.299
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle40",
@@ -4255,7 +4520,8 @@
         475.558,
         140.962,
         491.804
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle41",
@@ -4271,7 +4537,8 @@
         483.782,
         140.962,
         581.926
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line01",
@@ -4287,7 +4554,8 @@
         -378.178,
         140.962,
         507.509
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line02",
@@ -4303,7 +4571,8 @@
         -364.423,
         140.962,
         519.885
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line03",
@@ -4319,7 +4588,8 @@
         -367.804,
         140.962,
         511.077
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line04",
@@ -4335,7 +4605,8 @@
         -392.297,
         140.962,
         462.405
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line05",
@@ -4351,7 +4622,8 @@
         -369.808,
         140.962,
         442.473
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line06",
@@ -4367,7 +4639,8 @@
         -395.219,
         140.962,
         481.816
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line07",
@@ -4383,7 +4656,8 @@
         -394.088,
         140.962,
         440.49
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line08",
@@ -4399,7 +4673,8 @@
         -307.454,
         140.962,
         435.064
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line09",
@@ -4415,7 +4690,8 @@
         -283.4,
         140.962,
         446.334
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line10",
@@ -4431,7 +4707,8 @@
         -283.47,
         140.962,
         523.002
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line11",
@@ -4447,7 +4724,8 @@
         -220.264,
         140.962,
         510.931
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line12",
@@ -4463,7 +4741,8 @@
         -266.39,
         140.962,
         510.879
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line13",
@@ -4479,7 +4758,8 @@
         -265.033,
         140.962,
         446.647
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line14",
@@ -4495,7 +4775,8 @@
         -220.055,
         140.962,
         447.012
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line15",
@@ -4511,7 +4792,8 @@
         -250.504,
         140.962,
         409.922
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line17",
@@ -4527,7 +4809,8 @@
         -266.077,
         140.962,
         390.086
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line18",
@@ -4543,7 +4826,8 @@
         -221.464,
         140.962,
         389.72
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line19",
@@ -4559,7 +4843,8 @@
         -266.912,
         140.962,
         326.475
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line20",
@@ -4575,7 +4860,8 @@
         -220.63,
         140.962,
         326.736
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line21",
@@ -4591,7 +4877,8 @@
         -223.447,
         140.962,
         313.953
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line22",
@@ -4607,7 +4894,8 @@
         -262.894,
         140.962,
         281.393
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line23",
@@ -4623,7 +4911,8 @@
         -223.291,
         140.962,
         239.963
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line24",
@@ -4639,7 +4928,8 @@
         -219.847,
         140.962,
         220.188
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line25",
@@ -4655,7 +4945,8 @@
         -266.755,
         140.962,
         220.136
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line26",
@@ -4671,7 +4962,8 @@
         -263.573,
         140.962,
         196.864
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line27",
@@ -4687,7 +4979,8 @@
         -224.952,
         140.962,
         161.852
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line28",
@@ -4703,7 +4996,8 @@
         -221.047,
         140.962,
         138.685
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line29",
@@ -4719,7 +5013,8 @@
         -265.816,
         140.962,
         138.685
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line30",
@@ -4735,7 +5030,8 @@
         -263.207,
         140.962,
         118.857
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line31",
@@ -4751,7 +5047,8 @@
         -266.129,
         140.962,
         63.339
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line32",
@@ -4767,7 +5064,8 @@
         -218.192,
         140.962,
         59.985
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line33",
@@ -4783,7 +5081,8 @@
         -214.316,
         140.962,
         11.369
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line34",
@@ -4799,7 +5098,8 @@
         -249.798,
         140.962,
         22.431
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line35",
@@ -4815,7 +5115,8 @@
         -299.263,
         140.962,
         -10.511
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line36",
@@ -4831,7 +5132,8 @@
         -379.409,
         140.962,
         -10.72
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line37",
@@ -4847,7 +5149,8 @@
         -381.235,
         140.962,
         -62.046
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line38",
@@ -4863,7 +5166,8 @@
         -296.811,
         140.962,
         -61.577
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line39",
@@ -4879,7 +5183,8 @@
         -346.015,
         140.962,
         -98.78
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line40",
@@ -4895,7 +5200,8 @@
         -298.08,
         140.962,
         -122.73
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line41",
@@ -4911,7 +5217,8 @@
         -338.762,
         140.962,
         -124.295
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line42",
@@ -4927,7 +5234,8 @@
         -370.685,
         140.962,
         -106.241
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line43",
@@ -4943,7 +5251,8 @@
         -477.578,
         140.962,
         357.644
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line44",
@@ -4959,7 +5268,8 @@
         -425.563,
         140.962,
         337.918
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line45",
@@ -4975,7 +5285,8 @@
         -425.342,
         140.962,
         383.447
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line46",
@@ -4991,7 +5302,8 @@
         -369.85,
         140.962,
         381.012
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line49",
@@ -5007,7 +5319,8 @@
         -502.159,
         140.962,
         269.955
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line50",
@@ -5023,7 +5336,8 @@
         -500.043,
         140.962,
         321.437
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line51",
@@ -5039,7 +5353,8 @@
         -417.2,
         140.962,
         321.733
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line52",
@@ -5055,7 +5370,8 @@
         -459.433,
         140.962,
         269.513
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line53",
@@ -5071,7 +5387,8 @@
         -421.209,
         140.962,
         233.06
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line54",
@@ -5087,7 +5404,8 @@
         -440.258,
         140.962,
         222.191
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line55",
@@ -5103,7 +5421,8 @@
         -481.866,
         140.962,
         235.126
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line56",
@@ -5119,7 +5438,8 @@
         -486.121,
         140.962,
         221.622
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line57",
@@ -5135,7 +5455,8 @@
         -362.078,
         140.962,
         276.172
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line58",
@@ -5151,7 +5472,8 @@
         -317.139,
         140.962,
         275.803
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line59",
@@ -5167,7 +5489,8 @@
         -316.549,
         140.962,
         212.49
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line60",
@@ -5183,7 +5506,8 @@
         -361.709,
         140.962,
         212.269
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line61",
@@ -5199,7 +5523,8 @@
         -359.938,
         140.962,
         182.088
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line62",
@@ -5215,7 +5540,8 @@
         -317.287,
         140.962,
         154.49
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line63",
@@ -5231,7 +5557,8 @@
         -361.488,
         140.962,
         154.933
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line64",
@@ -5247,7 +5574,8 @@
         -318.172,
         140.962,
         124.752
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line65",
@@ -5263,7 +5591,8 @@
         -317.656,
         140.962,
         90.586
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line66",
@@ -5279,7 +5608,8 @@
         -363.333,
         140.962,
         91.25
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line67",
@@ -5295,7 +5625,8 @@
         -359.422,
         140.962,
         58.782
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line68",
@@ -5311,7 +5642,8 @@
         -317.287,
         140.962,
         33.176
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line69",
@@ -5327,7 +5659,8 @@
         -363.038,
         140.962,
         33.619
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line71",
@@ -5343,7 +5676,8 @@
         -159.235,
         140.962,
         10.034
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line72",
@@ -5359,7 +5693,8 @@
         -159.678,
         140.962,
         57.113
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line73",
@@ -5375,7 +5710,8 @@
         -110.452,
         140.962,
         36.699
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Shape02",
@@ -5391,7 +5727,8 @@
         -353.428,
         112.616,
         421.751
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Shape03",
@@ -5407,7 +5744,8 @@
         -353.428,
         112.616,
         421.751
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Shape04",
@@ -5423,7 +5761,8 @@
         -353.428,
         112.616,
         421.751
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Shape05",
@@ -5439,7 +5778,8 @@
         -351.538,
         112.616,
         421.732
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Shape06",
@@ -5455,7 +5795,8 @@
         -351.358,
         112.616,
         421.751
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Shape07",
@@ -5471,7 +5812,8 @@
         -352.264,
         112.616,
         421.751
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Shape08",
@@ -5487,7 +5829,8 @@
         -351.502,
         112.616,
         421.751
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "door1collision",
@@ -5503,7 +5846,8 @@
         -53.649,
         140.962,
         -54.567
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "door2collision",
@@ -5519,7 +5863,8 @@
         -2.554,
         140.962,
         -5.096
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "key1collision",
@@ -5535,7 +5880,8 @@
         -271.932,
         140.962,
         480.101
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line75",
@@ -5551,7 +5897,8 @@
         -246.309,
         140.962,
         540.819
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "door3collision",
@@ -5567,7 +5914,8 @@
         44.447,
         140.962,
         50.94
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line74",
@@ -5583,7 +5931,8 @@
         350.982,
         140.962,
         68.045
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "key2collision",
@@ -5599,7 +5948,8 @@
         -6.412,
         140.962,
         102.654
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "collision_metaldoor",
@@ -5615,7 +5965,8 @@
         350.54,
         140.962,
         82.165
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle13",
@@ -5631,7 +5982,8 @@
         601.859,
         140.962,
         116.561
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle14",
@@ -5647,7 +5999,8 @@
         581.436,
         140.962,
         136.529
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle42",
@@ -5663,7 +6016,8 @@
         767.744,
         140.962,
         293.004
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle43",
@@ -5679,7 +6033,8 @@
         739.503,
         140.962,
         293.004
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle44",
@@ -5695,7 +6050,8 @@
         766.924,
         140.962,
         442.44
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle45",
@@ -5711,7 +6067,8 @@
         738.683,
         140.962,
         442.096
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "door6collision",
@@ -5727,7 +6084,8 @@
         597.855,
         140.962,
         132.24
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "door7collision",
@@ -5743,7 +6101,8 @@
         672.565,
         140.962,
         205.783
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "doorx1collision",
@@ -5759,7 +6118,8 @@
         758.665,
         140.962,
         301.597
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "doorx2collision",
@@ -5775,7 +6135,8 @@
         757.534,
         140.962,
         403.387
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "doorx3collision",
@@ -5791,7 +6152,8 @@
         754.673,
         140.962,
         449.193
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "doorx4collision",
@@ -5807,7 +6169,8 @@
         756.61,
         140.962,
         553.246
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "sabeltannonlycollision",
@@ -5823,7 +6186,8 @@
         321.652,
         140.962,
         728.242
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "endcollision",
@@ -5839,7 +6203,8 @@
         373.442,
         140.962,
         677.652
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle21",
@@ -5855,7 +6220,8 @@
         34.331,
         140.962,
         70.688
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle22",
@@ -5871,7 +6237,8 @@
         34.104,
         140.962,
         31.658
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle24",
@@ -5887,7 +6254,8 @@
         63.15,
         140.962,
         31.658
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle25",
@@ -5903,7 +6271,8 @@
         62.923,
         140.962,
         71.369
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle46",
@@ -5919,7 +6288,8 @@
         187.047,
         140.962,
         31.658
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle47",
@@ -5935,7 +6305,8 @@
         187.047,
         140.962,
         71.369
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle48",
@@ -5951,7 +6322,8 @@
         211.937,
         140.962,
         31.1
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle49",
@@ -5967,7 +6339,8 @@
         211.937,
         140.962,
         71.856
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle50",
@@ -5983,7 +6356,8 @@
         490.534,
         140.962,
         32.863
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle51",
@@ -5999,7 +6373,8 @@
         490.373,
         140.962,
         72.014
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle52",
@@ -6015,7 +6390,8 @@
         517.972,
         140.962,
         32.703
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle53",
@@ -6031,7 +6407,8 @@
         679.69,
         140.962,
         184.652
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle54",
@@ -6047,7 +6424,8 @@
         650.05,
         140.962,
         212.632
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle55",
@@ -6063,7 +6441,8 @@
         767.984,
         140.962,
         313.238
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle56",
@@ -6079,7 +6458,8 @@
         739.584,
         140.962,
         313.238
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle57",
@@ -6095,7 +6475,8 @@
         732.33,
         140.962,
         460.449
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle58",
@@ -6111,7 +6492,8 @@
         776.007,
         140.962,
         460.375
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle59",
@@ -6127,7 +6509,8 @@
         733.256,
         140.962,
         541.989
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle60",
@@ -6143,7 +6526,8 @@
         775.853,
         140.962,
         541.652
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle61",
@@ -6159,7 +6543,8 @@
         775.302,
         140.962,
         568.93
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle62",
@@ -6175,7 +6560,8 @@
         667.964,
         140.962,
         625.175
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle63",
@@ -6191,7 +6577,8 @@
         698.666,
         140.962,
         654.614
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle64",
@@ -6207,7 +6594,8 @@
         648.819,
         140.962,
         643.871
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle65",
@@ -6223,7 +6611,8 @@
         678.62,
         140.962,
         672.905
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle66",
@@ -6239,7 +6628,8 @@
         595.352,
         140.962,
         748.328
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle67",
@@ -6255,7 +6645,8 @@
         565.388,
         140.962,
         706.943
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle68",
@@ -6271,7 +6662,8 @@
         565.371,
         140.962,
         750.887
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle69",
@@ -6287,7 +6679,8 @@
         440.129,
         140.962,
         707.396
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle70",
@@ -6303,7 +6696,8 @@
         440.129,
         140.962,
         750.965
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line77",
@@ -6319,7 +6713,8 @@
         -137.902,
         140.962,
         10.526
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line79",
@@ -6335,7 +6730,8 @@
         -240.375,
         140.962,
         409.485
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line80",
@@ -6351,7 +6747,8 @@
         -255.497,
         140.962,
         393.052
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line78",
@@ -6367,7 +6764,8 @@
         -230.991,
         140.962,
         141.555
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line82",
@@ -6383,7 +6781,8 @@
         -254.054,
         140.962,
         32.665
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line70",
@@ -6399,7 +6798,8 @@
         -150.035,
         140.962,
         173.639
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line83",
@@ -6415,7 +6815,8 @@
         -306.691,
         106.626,
         336.654
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line84",
@@ -6431,7 +6832,8 @@
         -306.467,
         106.626,
         379.646
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line85",
@@ -6447,7 +6849,8 @@
         -416.74,
         116.755,
         270.096
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line86",
@@ -6463,7 +6866,8 @@
         -423.764,
         140.962,
         247.793
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line87",
@@ -6479,7 +6883,8 @@
         -437.178,
         140.962,
         239.578
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line88",
@@ -6495,7 +6900,8 @@
         -355.008,
         140.962,
         444.676
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line89",
@@ -6511,7 +6917,8 @@
         -72.751,
         140.962,
         191.641
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line90",
@@ -6527,7 +6934,8 @@
         -169.455,
         140.962,
         378.921
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line91",
@@ -6543,7 +6951,8 @@
         -72.921,
         140.962,
         378.808
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line92",
@@ -6559,7 +6968,8 @@
         -18.788,
         140.962,
         101.323
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line93",
@@ -6575,7 +6985,8 @@
         6.167,
         140.962,
         101.879
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line94",
@@ -6591,7 +7002,8 @@
         -473.42,
         140.962,
         329.16
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line95",
@@ -6607,7 +7019,8 @@
         -444.208,
         140.962,
         329.16
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line98",
@@ -6623,7 +7036,8 @@
         -273.475,
         140.962,
         495.109
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line99",
@@ -6639,7 +7053,8 @@
         -272.1,
         140.962,
         465.784
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line100",
@@ -6655,7 +7070,8 @@
         -211.683,
         140.962,
         495.321
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line101",
@@ -6671,7 +7087,8 @@
         -211.444,
         140.962,
         465.755
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line102",
@@ -6687,7 +7104,8 @@
         -324.214,
         140.962,
         329.096
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line103",
@@ -6703,7 +7121,8 @@
         -353.399,
         140.962,
         329.321
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line104",
@@ -6719,7 +7138,8 @@
         -352.56,
         140.962,
         -1.252
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line105",
@@ -6735,7 +7155,8 @@
         -324.192,
         140.962,
         -0.292
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line106",
@@ -6751,7 +7172,8 @@
         -425.106,
         140.962,
         222.663
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line107",
@@ -6767,7 +7189,8 @@
         -65.669,
         140.962,
         183.732
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line108",
@@ -6783,7 +7206,8 @@
         -64.545,
         140.962,
         151.374
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line109",
@@ -6799,7 +7223,8 @@
         -106.552,
         140.962,
         5.952
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "collision_pastgrid",
@@ -6815,7 +7240,8 @@
         499.551,
         140.962,
         51.62
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line111",
@@ -6831,7 +7257,8 @@
         7.87,
         0.0,
         -1.625
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line110",
@@ -6847,7 +7274,8 @@
         -20.069,
         0.0,
         -1.638
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle73",
@@ -6863,7 +7291,8 @@
         281.769,
         0.0,
         101.193
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle72",
@@ -6879,7 +7308,8 @@
         354.553,
         0.0,
         101.193
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Circle71",
@@ -6895,7 +7325,8 @@
         419.676,
         0.0,
         101.193
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line47",
@@ -6911,7 +7342,8 @@
         -373.5,
         0.0,
         348.224
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line48",
@@ -6927,7 +7359,8 @@
         -273.308,
         0.0,
         380.489
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Line16",
@@ -6943,7 +7376,8 @@
         -273.348,
         0.0,
         339.057
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "dragonhead01",
@@ -6959,7 +7393,8 @@
         -120.117,
         20.228,
         208.122
-      ]
+      ],
+      "godot_yaw": -1.5708
     },
     {
       "name": "dragonhead02",
@@ -6975,7 +7410,8 @@
         -18.09,
         20.228,
         283.609
-      ]
+      ],
+      "godot_yaw": -1.5708
     },
     {
       "name": "dragonhead03",
@@ -6991,7 +7427,8 @@
         -196.942,
         20.228,
         283.716
-      ]
+      ],
+      "godot_yaw": -1.5708
     },
     {
       "name": "dragonhead04",
@@ -7007,7 +7444,8 @@
         -120.139,
         20.228,
         361.517
-      ]
+      ],
+      "godot_yaw": -1.5708
     },
     {
       "name": "defaultview",
@@ -7023,7 +7461,8 @@
         4.645,
         246.476,
         -52.184
-      ]
+      ],
+      "godot_yaw": -0.0
     }
   ],
   "skeletons": [],

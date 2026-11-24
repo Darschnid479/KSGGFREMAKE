@@ -28,26 +28,35 @@ static func get_pbr_pack(pack_name: String) -> Dictionary:
 
 
 static func _pick_pbr_pack_name(mat_name: String, biome: String) -> String:
-	# 2.5D undervanns-grunnfjell på "blackwall" / "black" slik at ingen flate mørkeblå tomrom finnes!
+	# 2.5D undervanns-grunnfjell på "blackwall" / "black"
 	if "blackwall" in mat_name or mat_name.strip_edges().begins_with("black "):
 		return "cutaway_bedrock"
 	if "gold" in mat_name or "rail" in mat_name or "skull" in mat_name or "brass" in mat_name or "metal" in mat_name or "bell" in mat_name or "cannon" in mat_name:
 		return "forged_metal"
 	if "roof" in mat_name or "tile" in mat_name or "shingle" in mat_name:
 		return "roof_shingles"
-	if "plank" in mat_name or "wood" in mat_name or "hull" in mat_name or "dock" in mat_name or "bridge" in mat_name or "pole" in mat_name or "door" in mat_name or "box" in mat_name or "crate" in mat_name or "catapult" in mat_name or "rowboat" in mat_name or "scaffold" in mat_name or "balcony" in mat_name or "housewall" in mat_name or "mainbuilding" in mat_name:
+	if "plank" in mat_name or "wood" in mat_name or "hull" in mat_name or "dock" in mat_name or "bridge" in mat_name or "pole" in mat_name or "door" in mat_name or "box" in mat_name or "crate" in mat_name or "catapult" in mat_name or "rowboat" in mat_name or "scaffold" in mat_name or "balcony" in mat_name or "housewall" in mat_name or "mainbuilding" in mat_name or "darklady" in mat_name:
 		return "wood_planks"
-	if biome in ["fatamorgana_city", "fatamorgana_palace", "fatamorgana_bosslevel"] and ("sultan" in mat_name or "wall" in mat_name or "plain" in mat_name or "ground" in mat_name or "entrance" in mat_name):
+	if biome in ["fatamorgana_city", "fatamorgana_palace", "fatamorgana_bosslevel"] and ("sultan" in mat_name or "wall" in mat_name or "plain" in mat_name or "ground" in mat_name or "entrance" in mat_name or "tower" in mat_name):
 		return "sandstone_wall"
-	if "stone" in mat_name or "rock" in mat_name or "brick" in mat_name or "cave" in mat_name or "castle" in mat_name or "well" in mat_name or "foundation" in mat_name or "chimney" in mat_name or "pussle" in mat_name or "puussle" in mat_name or "under" in mat_name or "dungeon" in mat_name or "ground" in mat_name:
+	if biome in ["cave", "cave_end", "cave_end_bosslevel", "graal_mountain"] and not ("brick" in mat_name or "castle" in mat_name or "well" in mat_name):
+		return "rock_natural"
+	if "rock" in mat_name or "cliff" in mat_name or "cave" in mat_name or "mountain" in mat_name or "moss" in mat_name or "tunnel" in mat_name:
+		return "rock_natural"
+	if "stone" in mat_name or "brick" in mat_name or "castle" in mat_name or "well" in mat_name or "foundation" in mat_name or "chimney" in mat_name or "pussle" in mat_name or "puussle" in mat_name or "under" in mat_name or "dungeon" in mat_name or "ground" in mat_name:
 		return "stone_masonry"
 	if biome in ["abra", "menu", "outro"]:
 		return "wood_planks"
-	return "stone_masonry"
+	return "rock_natural"
 
 
-## Oppgrader alle materialer på en 3D-verden til knivskarp moderne AAA PBR med nye sømløse 512x512 teksturer og normalmaps!
+## Oppgrader alle materialer på en 3D-verden til skarp og naturlig moderne PBR uten overmettet «fade»/plastglans.
 static func enhance_world_node(root: Node, biome: String = "abra", water_y: float = -999.0) -> void:
+	var is_dark_biome := biome in [
+		"cave", "cave_end", "cave_end_bosslevel",
+		"graal_bosslevel", "graal_mountain",
+		"magakhan_dungeon", "magakhan_endboss_level"
+	]
 	for mi in _collect_meshes(root):
 		if not mi.visible or mi.mesh == null:
 			continue
@@ -60,18 +69,17 @@ static func enhance_world_node(root: Node, biome: String = "abra", water_y: floa
 			var sm := mat as StandardMaterial3D
 			var mat_name := sm.resource_name.to_lower() + " " + mname
 
-			# Ikke erstatt alfa-utskjæringer (rigg/tauverk/løvverk/sjøgress) – bare gi dyp rik kontrast!
+			# Alfa-utskjæringer (rigg/tauverk/løvverk/dragevinger): skarp alpha-scissor uten oransje glødsøl!
 			if sm.transparency != BaseMaterial3D.TRANSPARENCY_DISABLED:
 				var dup := sm.duplicate() as StandardMaterial3D
 				dup.diffuse_mode = BaseMaterial3D.DIFFUSE_BURLEY
 				dup.specular_mode = BaseMaterial3D.SPECULAR_SCHLICK_GGX
-				dup.roughness = clampf(dup.roughness, 0.35, 0.82)
-				dup.albedo_color = Color(dup.albedo_color.r * 0.86, dup.albedo_color.g * 0.88, dup.albedo_color.b * 0.86, dup.albedo_color.a)
+				dup.roughness = clampf(maxf(dup.roughness, 0.52), 0.48, 0.88)
 				if "phoenixdefuse2" in mat_name:
-					dup.emission_enabled = true
-					dup.emission = Color(1.0, 0.36, 0.08)
-					dup.emission_energy_multiplier = 0.95
-					dup.emission_texture = dup.albedo_texture
+					dup.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA_SCISSOR
+					dup.alpha_scissor_threshold = 0.45
+					dup.cull_mode = BaseMaterial3D.CULL_DISABLED
+					dup.emission_enabled = false
 				mi.set_surface_override_material(si, dup)
 				continue
 
@@ -82,7 +90,6 @@ static func enhance_world_node(root: Node, biome: String = "abra", water_y: floa
 				mi.set_surface_override_material(si, bg)
 				continue
 
-			# Bygg knivskarp moderne AAA PBR-shader med ekte 512x512 teksturpakke for denne overflatetypen!
 			var sh := ShaderMaterial.new()
 			sh.shader = WORLD_PBR_SHADER
 			sh.set_shader_parameter("albedo_tint", sm.albedo_color)
@@ -114,93 +121,97 @@ static func enhance_world_node(root: Node, biome: String = "abra", water_y: floa
 			else:
 				sh.set_shader_parameter("has_pbr_pack", false)
 
-			var pbr_blend := 0.50
-			var tile_scale := 0.36
-			var contrast_gamma := 1.24
-			var rough := clampf(sm.roughness, 0.25, 0.90)
+			var pbr_blend := 0.28
+			var tile_scale := 0.72
+			var contrast_gamma := 1.03
+			var rough := clampf(maxf(sm.roughness, 0.56), 0.35, 0.92)
 			var metal := sm.metallic
-			var sat := 1.24
-			var rim_str := 0.06
+			var sat := 1.03
+			var rim_str := 0.02
 			var rim_col := Color(0.86, 0.94, 1.0)
 			var em_col := Color(0.0, 0.0, 0.0)
 			var em_energy := 0.0
-			var nrm_str := 1.50
+			var nrm_str := 0.78
 
 			if is_cutaway:
-				# Mørkt, matt 2.5D grunnfjell-skifer som rammer inn den opplyste steintunnelen uten gjenskinn!
-				pbr_blend = 0.98
-				tile_scale = 0.24
-				contrast_gamma = 1.05
+				pbr_blend = 0.92
+				tile_scale = 0.28
+				contrast_gamma = 1.02
 				rough = 0.92
-				sat = 0.72
-				nrm_str = 1.35
+				sat = 0.85
+				nrm_str = 0.95
 				rim_str = 0.0
 				sh.set_shader_parameter("has_albedo_tex", false)
-				sh.set_shader_parameter("albedo_tint", Color(0.18, 0.24, 0.30, 1.0))
+				sh.set_shader_parameter("albedo_tint", Color(0.20, 0.26, 0.32, 1.0))
 			elif pack_name == "wood_planks":
-				pbr_blend = 0.64
-				tile_scale = 0.46
-				rough = 0.58
-				nrm_str = 1.75
-			elif pack_name == "stone_masonry":
-				pbr_blend = 0.66
-				tile_scale = 0.36
-				rough = 0.70
-				nrm_str = 1.85
-			elif pack_name == "sandstone_wall":
-				pbr_blend = 0.60
-				tile_scale = 0.40
+				pbr_blend = 0.28
+				tile_scale = 0.76
 				rough = 0.72
-				nrm_str = 1.65
+				nrm_str = 0.65
+			elif pack_name == "rock_natural":
+				pbr_blend = 0.36
+				tile_scale = 0.62
+				rough = 0.84
+				nrm_str = 0.92
+			elif pack_name == "stone_masonry":
+				pbr_blend = 0.32
+				tile_scale = 0.58
+				rough = 0.78
+				nrm_str = 0.84
+			elif pack_name == "sandstone_wall":
+				pbr_blend = 0.24
+				tile_scale = 0.68
+				rough = 0.86
+				sat = 0.96
+				nrm_str = 0.55
 			elif pack_name == "roof_shingles":
-				pbr_blend = 0.68
-				tile_scale = 0.44
-				rough = 0.60
-				nrm_str = 1.75
+				pbr_blend = 0.34
+				tile_scale = 0.72
+				rough = 0.70
+				nrm_str = 0.78
 			elif pack_name == "forged_metal":
-				pbr_blend = 0.64
-				tile_scale = 0.78
-				metal = maxf(metal, 0.76)
-				rough = 0.22
-				nrm_str = 1.45
+				pbr_blend = 0.30
+				tile_scale = 0.95
+				metal = maxf(metal, 0.72)
+				rough = 0.28
+				nrm_str = 0.62
 
 			if not is_cutaway:
 				if biome in ["cave", "cave_end", "cave_end_bosslevel"]:
-					contrast_gamma = 1.24
-					sat = 1.24
-					rim_str = 0.08
-					rim_col = Color(0.28, 0.95, 0.72) if "end" in biome else Color(0.55, 0.88, 1.0)
+					contrast_gamma = 1.04
+					sat = 1.02
+					rim_str = 0.02
 				elif biome in ["graal_bosslevel", "graal_mountain"]:
-					contrast_gamma = 1.24
-					sat = 1.22
-					rim_str = 0.10
+					contrast_gamma = 1.04
+					sat = 1.02
+					rim_str = 0.04
 					rim_col = Color(0.55, 0.72, 1.0)
 				elif biome in ["fatamorgana_city", "fatamorgana_palace", "fatamorgana_bosslevel"]:
-					contrast_gamma = 1.28
-					sat = 1.28
-				elif biome in ["abra", "menu", "outro"]:
-					contrast_gamma = 1.30
-					sat = 1.28
+					contrast_gamma = 1.02
+					sat = 0.96
 
-			if "window" in mat_name or "lantern" in mat_name or "bright" in mat_name:
-				em_col = Color(1.0, 0.64, 0.20)
-				em_energy = 1.10
-				rough = 0.26
-				pbr_blend = 0.12
+			if is_dark_biome and ("window" in mat_name or "lantern" in mat_name):
+				em_col = Color(1.0, 0.68, 0.26)
+				em_energy = 0.85
+				rough = 0.34
+				pbr_blend = 0.10
+			elif "lantern" in mat_name:
+				em_col = Color(1.0, 0.72, 0.30)
+				em_energy = 0.45
+				rough = 0.34
 			elif is_boss:
 				if "greven" in mat_name:
-					contrast_gamma = 1.18
-					rough = 0.56
-					rim_str = 0.32
-					rim_col = Color(0.68, 0.84, 1.0)
+					contrast_gamma = 1.02
+					rough = 0.68
+					rim_str = 0.08
 				else:
-					contrast_gamma = 1.22
-					rough = 0.44
-					sat = 1.32
+					contrast_gamma = 1.02
+					rough = 0.56
+					sat = 1.04
 					em_col = Color(0.0, 0.0, 0.0)
 					em_energy = 0.0
-					rim_str = 0.48
-					rim_col = Color(1.0, 0.48, 0.12)
+					rim_str = 0.12
+					rim_col = Color(1.0, 0.52, 0.18)
 
 			sh.set_shader_parameter("base_roughness", rough)
 			sh.set_shader_parameter("base_metallic", metal)
@@ -217,7 +228,7 @@ static func enhance_world_node(root: Node, biome: String = "abra", water_y: floa
 			mi.set_surface_override_material(si, sh)
 
 
-## Oppgrader karaktermodeller (Pinky, Sabeltann, Pelle, Pysa, Skalken, fiender) med skarp vevd tøy-normalmap & rik kontrast (ingen blass vask!).
+## Oppgrader karaktermodeller med naturlig matt stoff/hud og null plastikk-glans!
 static func enhance_character_node(root: Node, add_shadow: bool = true, shadow_radius: float = 0.72) -> void:
 	var fab := get_pbr_pack("fabric_detail")
 	var fab_nrm: Texture2D = fab.get("normal", null)
@@ -231,16 +242,16 @@ static func enhance_character_node(root: Node, add_shadow: bool = true, shadow_r
 			var dup := (mat as StandardMaterial3D).duplicate() as StandardMaterial3D
 			dup.diffuse_mode = BaseMaterial3D.DIFFUSE_BURLEY
 			dup.specular_mode = BaseMaterial3D.SPECULAR_SCHLICK_GGX
-			dup.roughness = clampf(maxf(dup.roughness, 0.50), 0.45, 0.78)
-			dup.metallic = minf(dup.metallic, 0.25)
+			dup.roughness = clampf(maxf(dup.roughness, 0.62), 0.58, 0.88)
+			dup.metallic = minf(dup.metallic, 0.12)
 			if fab_nrm and not dup.normal_enabled:
 				dup.normal_enabled = true
 				dup.normal_texture = fab_nrm
-				dup.normal_scale = 0.45
+				dup.normal_scale = 0.25
 				dup.detail_enabled = false
 			dup.rim_enabled = true
-			dup.rim = 0.18
-			dup.rim_tint = 0.55
+			dup.rim = 0.05
+			dup.rim_tint = 0.35
 			dup.subsurf_scatter_enabled = false
 			mi.set_surface_override_material(si, dup)
 

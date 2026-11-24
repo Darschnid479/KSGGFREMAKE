@@ -36,23 +36,30 @@ func _bind_meshes(root: Node, forward_sign: float) -> void:
 
 	var min_y := 99999.0
 	var max_y := -99999.0
-	var min_x := 99999.0
-	var max_x := -99999.0
 	var min_z := 99999.0
 	var max_z := -99999.0
+	var chest_xs: Array[float] = []
 	for mi in meshes:
 		var aabb: AABB = mi.get_aabb()
 		min_y = minf(min_y, aabb.position.y)
 		max_y = maxf(max_y, aabb.position.y + aabb.size.y)
-		min_x = minf(min_x, aabb.position.x)
-		max_x = maxf(max_x, aabb.position.x + aabb.size.x)
 		min_z = minf(min_z, aabb.position.z)
 		max_z = maxf(max_z, aabb.position.z + aabb.size.z)
 
 	var h: float = maxf(max_y - min_y, 0.25)
-	var total_w: float = max_x - min_x
-	var half_w: float = clampf(total_w * 0.22, h * 0.11, h * 0.18)
-	var leg_mx: float = clampf(total_w * 0.26, h * 0.12, h * 0.20)
+	for mi in meshes:
+		var mdt := MeshDataTool.new()
+		if mi.mesh and mi.mesh.get_surface_count() > 0:
+			if mdt.create_from_surface(mi.mesh, 0) == OK:
+				for vi in range(mdt.get_vertex_count()):
+					var v := mdt.get_vertex(vi)
+					var yn := (v.y - min_y) / h
+					if yn >= 0.48 and yn <= 0.72:
+						chest_xs.append(absf(v.x))
+	chest_xs.sort()
+	var chest_med: float = chest_xs[int(chest_xs.size() * 0.45)] if not chest_xs.is_empty() else (h * 0.14)
+	var half_w: float = clampf(chest_med * 0.85, h * 0.08, h * 0.16)
+	var leg_mx: float = clampf(half_w * 1.15, h * 0.10, h * 0.19)
 	var z_mid: float = (min_z + max_z) * 0.5
 	var fab := VisualEnhancer.get_pbr_pack("fabric_detail")
 	var fab_nrm: Texture2D = fab.get("normal", null)
@@ -67,8 +74,8 @@ func _bind_meshes(root: Node, forward_sign: float) -> void:
 			if orig is StandardMaterial3D:
 				var std := orig as StandardMaterial3D
 				sm.set_shader_parameter("albedo_tint", std.albedo_color)
-				sm.set_shader_parameter("base_roughness", clampf(std.roughness, 0.38, 0.85))
-				sm.set_shader_parameter("base_metallic", std.metallic)
+				sm.set_shader_parameter("base_roughness", clampf(std.roughness, 0.52, 0.90))
+				sm.set_shader_parameter("base_metallic", minf(std.metallic, 0.12))
 				if std.albedo_texture:
 					sm.set_shader_parameter("has_albedo_tex", true)
 					sm.set_shader_parameter("albedo_tex", std.albedo_texture)
@@ -85,17 +92,17 @@ func _bind_meshes(root: Node, forward_sign: float) -> void:
 			sm.set_shader_parameter("leg_max_x", leg_mx)
 			sm.set_shader_parameter("z_center", z_mid)
 			sm.set_shader_parameter("forward_sign", forward_sign)
-			# Start umiddelbart i naturlig avslappet positur (aldri stiv A-pose på bilde 1!)
-			sm.set_shader_parameter("l_arm_out", -0.54)
-			sm.set_shader_parameter("r_arm_out", -0.54)
-			sm.set_shader_parameter("l_elbow_bend", 0.24)
-			sm.set_shader_parameter("r_elbow_bend", 0.26)
+			# Start umiddelbart med naturlig avslappede armer langs siden (null T/A-pose!)
+			sm.set_shader_parameter("l_arm_out", -0.88)
+			sm.set_shader_parameter("r_arm_out", -0.88)
+			sm.set_shader_parameter("l_elbow_bend", 0.28)
+			sm.set_shader_parameter("r_elbow_bend", 0.30)
 			mi.set_surface_override_material(si, sm)
 			materials.append(sm)
-	_cur["l_arm_out"] = -0.54
-	_cur["r_arm_out"] = -0.54
-	_cur["l_elbow_bend"] = 0.24
-	_cur["r_elbow_bend"] = 0.26
+	_cur["l_arm_out"] = -0.88
+	_cur["r_arm_out"] = -0.88
+	_cur["l_elbow_bend"] = 0.28
+	_cur["r_elbow_bend"] = 0.30
 
 
 func _collect_body_meshes(node: Node, out: Array[MeshInstance3D]) -> void:
@@ -131,16 +138,16 @@ func update_anim(delta: float, move_speed: float, on_floor: bool, is_talking: bo
 		"hip_bob": 0.0, "hip_twist": 0.0, "torso_lean": 0.0, "torso_twist": 0.0,
 		"head_nod": 0.0, "head_yaw": 0.0,
 		"l_thigh_pitch": 0.0, "l_knee_bend": 0.0, "r_thigh_pitch": 0.0, "r_knee_bend": 0.0,
-		"l_arm_pitch": 0.0, "l_arm_out": -0.54, "l_elbow_bend": 0.24,
-		"r_arm_pitch": 0.0, "r_arm_out": -0.54, "r_elbow_bend": 0.26,
+		"l_arm_pitch": 0.0, "l_arm_out": -0.88, "l_elbow_bend": 0.28,
+		"r_arm_pitch": 0.0, "r_arm_out": -0.88, "r_elbow_bend": 0.30,
 	}
 
 	if is_dead:
 		state = "die"
 		tgt["torso_lean"] = -1.35
 		tgt["hip_bob"] = -0.32
-		tgt["l_arm_out"] = 0.25
-		tgt["r_arm_out"] = 0.25
+		tgt["l_arm_out"] = -0.25
+		tgt["r_arm_out"] = -0.25
 	elif not on_floor:
 		state = "jump"
 		phase += delta * 4.0
@@ -151,43 +158,43 @@ func update_anim(delta: float, move_speed: float, on_floor: bool, is_talking: bo
 		tgt["r_knee_bend"] = 0.78
 		tgt["l_arm_pitch"] = 0.58
 		tgt["r_arm_pitch"] = 0.46
-		tgt["l_arm_out"] = -0.10
-		tgt["r_arm_out"] = -0.10
+		tgt["l_arm_out"] = -0.40
+		tgt["r_arm_out"] = -0.40
 		tgt["l_elbow_bend"] = 0.58
 		tgt["r_elbow_bend"] = 0.58
 	elif is_pushing:
 		state = "push"
-		phase += delta * 7.5
+		phase += delta * 6.5
 		var s := sin(phase)
-		tgt["torso_lean"] = 0.40
-		tgt["hip_bob"] = absf(s) * 0.028
-		tgt["l_thigh_pitch"] = s * 0.55
-		tgt["r_thigh_pitch"] = -s * 0.55
-		tgt["l_knee_bend"] = maxf(0.0, -cos(phase)) * 0.72 + 0.15
-		tgt["r_knee_bend"] = maxf(0.0, cos(phase)) * 0.72 + 0.15
-		tgt["l_arm_pitch"] = 1.15
-		tgt["r_arm_pitch"] = 1.15
-		tgt["l_arm_out"] = -0.25
-		tgt["r_arm_out"] = -0.25
+		tgt["torso_lean"] = 0.38
+		tgt["hip_bob"] = absf(s) * 0.024
+		tgt["l_thigh_pitch"] = s * 0.50
+		tgt["r_thigh_pitch"] = -s * 0.50
+		tgt["l_knee_bend"] = maxf(0.0, -cos(phase)) * 0.68 + 0.15
+		tgt["r_knee_bend"] = maxf(0.0, cos(phase)) * 0.68 + 0.15
+		tgt["l_arm_pitch"] = 1.10
+		tgt["r_arm_pitch"] = 1.10
+		tgt["l_arm_out"] = -0.52
+		tgt["r_arm_out"] = -0.52
 		tgt["l_elbow_bend"] = 0.22
 		tgt["r_elbow_bend"] = 0.22
-	elif _smooth_speed > 0.35:
-		var is_run := _smooth_speed > 6.8
+	elif _smooth_speed > 0.30:
+		var is_run := _smooth_speed > 4.2
 		state = "run" if is_run else "walk"
-		var freq := clampf(_smooth_speed * (1.28 if is_run else 1.55), 5.0, 14.5)
+		var freq := clampf(_smooth_speed * (1.55 if is_run else 1.85), 4.2, 10.2)
 		phase += delta * freq
 		var s := sin(phase)
 		var c := cos(phase)
-		var stride := clampf(_smooth_speed / 8.5, 0.42, 1.15)
-		var leg_amp := (0.90 if is_run else 0.62) * stride
-		var knee_amp := (1.22 if is_run else 0.80) * stride
-		var arm_amp := (0.86 if is_run else 0.56) * stride
+		var stride := clampf(_smooth_speed / 4.8, 0.48, 1.12)
+		var leg_amp := (0.82 if is_run else 0.56) * stride
+		var knee_amp := (1.10 if is_run else 0.74) * stride
+		var arm_amp := (0.78 if is_run else 0.50) * stride
 
-		tgt["hip_bob"] = absf(s) * (0.045 if is_run else 0.026) * stride
-		tgt["hip_twist"] = s * 0.14 * stride
-		tgt["torso_twist"] = -s * 0.18 * stride
-		tgt["torso_lean"] = (0.22 if is_run else 0.08) * stride
-		tgt["head_nod"] = -absf(s) * 0.06
+		tgt["hip_bob"] = absf(s) * (0.036 if is_run else 0.022) * stride
+		tgt["hip_twist"] = s * 0.12 * stride
+		tgt["torso_twist"] = -s * 0.15 * stride
+		tgt["torso_lean"] = (0.18 if is_run else 0.06) * stride
+		tgt["head_nod"] = -absf(s) * 0.05
 
 		tgt["l_thigh_pitch"] = s * leg_amp
 		tgt["r_thigh_pitch"] = -s * leg_amp
@@ -196,34 +203,34 @@ func update_anim(delta: float, move_speed: float, on_floor: bool, is_talking: bo
 
 		tgt["l_arm_pitch"] = -s * arm_amp
 		tgt["r_arm_pitch"] = s * arm_amp
-		tgt["l_arm_out"] = -0.34 if is_run else -0.44
-		tgt["r_arm_out"] = -0.34 if is_run else -0.44
-		tgt["l_elbow_bend"] = (0.86 if is_run else 0.38) + maxf(0.0, -s) * 0.32
-		tgt["r_elbow_bend"] = (0.86 if is_run else 0.38) + maxf(0.0, s) * 0.32
+		tgt["l_arm_out"] = -0.78 if is_run else -0.84
+		tgt["r_arm_out"] = -0.78 if is_run else -0.84
+		tgt["l_elbow_bend"] = (0.80 if is_run else 0.36) + maxf(0.0, -s) * 0.28
+		tgt["r_elbow_bend"] = (0.80 if is_run else 0.36) + maxf(0.0, s) * 0.28
 	elif is_talking:
 		state = "talk"
-		phase += delta * 4.4
-		tgt["hip_bob"] = sin(phase * 0.65) * 0.012
-		tgt["torso_twist"] = sin(phase * 0.7) * 0.14
-		tgt["torso_lean"] = 0.05 + sin(phase * 1.1) * 0.04
-		tgt["head_nod"] = sin(phase * 1.9) * 0.18
-		tgt["head_yaw"] = sin(phase * 0.85) * 0.20
-		tgt["l_arm_pitch"] = 0.42 + sin(phase * 1.3) * 0.26
-		tgt["r_arm_pitch"] = 0.54 + cos(phase * 1.5) * 0.30
-		tgt["l_arm_out"] = -0.26 + sin(phase * 1.1) * 0.10
-		tgt["r_arm_out"] = -0.26 + cos(phase * 1.2) * 0.10
-		tgt["l_elbow_bend"] = 0.74 + sin(phase * 1.7) * 0.22
-		tgt["r_elbow_bend"] = 0.80 + cos(phase * 1.4) * 0.22
+		phase += delta * 4.2
+		tgt["hip_bob"] = sin(phase * 0.65) * 0.010
+		tgt["torso_twist"] = sin(phase * 0.7) * 0.12
+		tgt["torso_lean"] = 0.04 + sin(phase * 1.1) * 0.03
+		tgt["head_nod"] = sin(phase * 1.9) * 0.16
+		tgt["head_yaw"] = sin(phase * 0.85) * 0.18
+		tgt["l_arm_pitch"] = 0.36 + sin(phase * 1.3) * 0.24
+		tgt["r_arm_pitch"] = 0.46 + cos(phase * 1.5) * 0.28
+		tgt["l_arm_out"] = -0.72 + sin(phase * 1.1) * 0.08
+		tgt["r_arm_out"] = -0.72 + cos(phase * 1.2) * 0.08
+		tgt["l_elbow_bend"] = 0.68 + sin(phase * 1.7) * 0.20
+		tgt["r_elbow_bend"] = 0.74 + cos(phase * 1.4) * 0.20
 	else:
 		state = "idle"
-		phase += delta * 2.1
-		tgt["hip_bob"] = sin(phase) * 0.010
-		tgt["torso_lean"] = sin(phase * 0.8) * 0.025
-		tgt["head_yaw"] = sin(phase * 0.45) * 0.09
-		tgt["l_arm_out"] = -0.54 + sin(phase) * 0.02
-		tgt["r_arm_out"] = -0.54 + sin(phase) * 0.02
-		tgt["l_elbow_bend"] = 0.24
-		tgt["r_elbow_bend"] = 0.26
+		phase += delta * 2.0
+		tgt["hip_bob"] = sin(phase) * 0.008
+		tgt["torso_lean"] = sin(phase * 0.8) * 0.02
+		tgt["head_yaw"] = sin(phase * 0.45) * 0.08
+		tgt["l_arm_out"] = -0.88 + sin(phase) * 0.015
+		tgt["r_arm_out"] = -0.88 + sin(phase) * 0.015
+		tgt["l_elbow_bend"] = 0.28
+		tgt["r_elbow_bend"] = 0.30
 
 	if attack_t > 0.0:
 		var u := 1.0 - (attack_t / 0.38)

@@ -15,7 +15,8 @@
         0.0,
         10.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Maga_Khan",
@@ -31,7 +32,8 @@
         0.0,
         7.997,
         0.136
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Maga_Khan_proxy",
@@ -47,7 +49,8 @@
         0.0,
         7.997,
         0.136
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "hiddenassets",
@@ -63,7 +66,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "userdata",
@@ -79,7 +83,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"Maga_Khan_die\", #startxform: [#position: vector( 0.2658, 0.4511, 7.0605 ), #rotation: vector( 0.0000, 0.0000, ",
@@ -95,7 +100,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
@@ -111,7 +117,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"Maga_Khan_hit\", #startxform: [#position: vector( 0.2658, -0.4478, 6.8779 ), #rotation: vector( 0.0000, 0.0000 ",
@@ -127,7 +134,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
@@ -143,7 +151,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"Maga_Khan_run\", #startxform: [#position: vector( -0.7496, -0.1360, 7.2902 ), #rotation: vector( 0.0000, 0.000 ",
@@ -159,7 +168,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0, 0.0000 )], #distancepercycle: \"26.105\", #minimumspeed: \"0.7\", #maximumspeed: \"1.5\"] ",
@@ -175,7 +185,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"Maga_Khan_stand\", #startxform: [#position: vector( 0.4061, 0.2484, 7.8358 ), #rotation: vector( 0.0000, 0.000 ",
@@ -191,7 +202,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
@@ -207,7 +219,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"Maga_Khan_standsword\", #startxform: [#position: vector( 0.2658, -0.4478, 6.8779 ), #rotation: vector( 0.0000, ",
@@ -223,7 +236,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz 0.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
@@ -239,7 +253,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"Maga_Khan_stand_breathe\", #startxform: [#position: vector( 0.4061, 0.2484, 7.8358 ), #rotation: vector( 0.000 ",
@@ -255,7 +270,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0, 0.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
@@ -271,7 +287,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"Maga_Khan_stand_talk\", #startxform: [#position: vector( 0.4061, 0.2484, 7.8358 ), #rotation: vector( 0.0000,  ",
@@ -287,7 +304,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
@@ -303,7 +321,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"Maga_Khan_swordswing\", #startxform: [#position: vector( 0.2658, -0.4478, 6.8779 ), #rotation: vector( 0.0000, ",
@@ -319,7 +338,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz 0.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #impact: \"14\"] ",
@@ -335,7 +355,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"Maga_Khan_turnleft\", #startxform: [#position: vector( 0.4061, 0.2484, 7.8358 ), #rotation: vector( 0.0000, 0. ",
@@ -351,7 +372,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
@@ -367,7 +389,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"Maga_Khan_turnright\", #startxform: [#position: vector( 0.4061, 0.2484, 7.8358 ), #rotation: vector( 0.0000, 0 ",
@@ -383,7 +406,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
@@ -399,7 +423,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"Maga_Khan_walk\", #startxform: [#position: vector( -0.5651, -0.1360, 7.7315 ), #rotation: vector( 0.0000, 0.00 ",
@@ -415,7 +440,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz00, 0.0000 )], #distancepercycle: \"20.152\", #minimumspeed: \"0.1\", #maximumspeed: \"1.5\"] ",
@@ -431,7 +457,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"Maga_Khan_walk_talk\", #startxform: [#position: vector( -0.5651, -0.1360, 7.7315 ), #rotation: vector( 0.0000, ",
@@ -447,7 +474,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz 0.0000, 0.0000 )], #distancepercycle: \"20.152\", #minimumspeed: \"0.1\", #maximumspeed: \"1.5\"] ",
@@ -463,7 +491,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"Maga_Khan_win\", #startxform: [#position: vector( 0.4061, 0.2484, 7.8358 ), #rotation: vector( 0.0000, 0.0000, ",
@@ -479,7 +508,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz 0.0000 )]] ",
@@ -495,7 +525,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "objectlinkedtobonesplayerinfo",
@@ -511,7 +542,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[[#bonedmodel: \"Maga_Khan\", #object: \"sword_hand\", #boneid: 24, #xform: [#rotation: vector( 80.0996, -77.8509, 9.7887 ), #p ",
@@ -527,7 +559,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzzosition: vector( 1.3215, 2.4789, -0.4947 )]], [#bonedmodel: \"Maga_Khan\", #object: \"dizzystars\", #boneid: 35, #xform: [#rota ",
@@ -543,7 +576,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzztion: vector( 90.0000, 90.0000, 0.0000 ), #position: vector( -0.7102, -0.5428, -0.2067 )]]] ",
@@ -559,7 +593,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "TestLight",
@@ -575,7 +610,8 @@
         0.0,
         10.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     }
   ],
   "skeletons": [],

@@ -15,7 +15,8 @@
         0.0,
         10.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "skeleton",
@@ -31,7 +32,8 @@
         0.0,
         9.945,
         -0.005
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "skeleton_proxy",
@@ -47,7 +49,8 @@
         0.0,
         6.958,
         0.136
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "hiddenassets",
@@ -63,7 +66,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "userdata",
@@ -79,7 +83,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"Skeleton_die\", #startxform: [#position: vector( 0.3419, 0.0046, 9.5203 ), #rotation: vector( 0.0000, 0.0000,  ",
@@ -95,7 +100,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0.0000 )]] ",
@@ -111,7 +117,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"Skeleton_hit\", #startxform: [#position: vector( 0.3419, 0.0046, 9.5203 ), #rotation: vector( 0.0000, 0.0000,  ",
@@ -127,7 +134,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0.0000 )]]  ",
@@ -143,7 +151,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"Skeleton_ressurect\", #startxform: [#position: vector( 0.3419, 0.0046, 1.4266 ), #rotation: vector( 0.0000, 0. ",
@@ -159,7 +168,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0000, 0.0000 )]] ",
@@ -175,7 +185,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"Skeleton_run\", #startxform: [#position: vector( 0.3419, 0.0046, 9.0881 ), #rotation: vector( 0.0000, 0.0000,  ",
@@ -191,7 +202,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0.0000 )], #distancepercycle: \"9.069\", #minimumspeed: \"0.7\", #maximumspeed: \"1.4\"] ",
@@ -207,7 +219,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"Skeleton_stand\", #startxform: [#position: vector( 0.3419, 0.0046, 9.5203 ), #rotation: vector( 0.0000, 0.0000 ",
@@ -223,7 +236,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz, 0.0000 )]] ",
@@ -239,7 +253,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"Skeleton_swordswing\", #startxform: [#position: vector( 0.3419, 0.0046, 9.5203 ), #rotation: vector( 0.0000, 0 ",
@@ -255,7 +270,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz.0000, 0.0000 )], #impact: \"17\"] ",
@@ -271,7 +287,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"Skeleton_walk\", #startxform: [#position: vector( 0.3419, 0.0046, 9.0881 ), #rotation: vector( 0.0000, 0.0000, ",
@@ -287,7 +304,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz 0.0000 )], #distancepercycle: \"9.069\", #minimumspeed: \"0.7\", #maximumspeed: \"1.4\"] ",
@@ -303,7 +321,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "objectlinkedtobonesplayerinfo",
@@ -319,7 +338,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[[#bonedmodel: \"skeleton\", #object: \"sword_hand\", #boneid: 8, #xform: [#rotation: vector( 94.0119, 73.0471, -175.4553 ), #p ",
@@ -335,7 +355,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzzosition: vector( 0.2471, -2.7373, 0.2335 )]]] ",
@@ -351,7 +372,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "TestLight",
@@ -367,7 +389,8 @@
         0.0,
         10.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     }
   ],
   "skeletons": [],

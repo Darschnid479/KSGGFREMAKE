@@ -15,7 +15,8 @@
         0.0,
         10.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "sirikit",
@@ -31,7 +32,8 @@
         0.0,
         8.691,
         0.136
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "sirikit_proxy",
@@ -47,7 +49,8 @@
         0.0,
         8.691,
         0.136
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "hiddenassets",
@@ -63,7 +66,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "userdata",
@@ -79,7 +83,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"sirikit_stand\", #startxform: [#position: vector( 0.0200, -0.1360, 8.6913 ), #rotation: vector( 0.0000, 0.0000 ",
@@ -95,7 +100,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
@@ -111,7 +117,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"sirikit_stand_talk\", #startxform: [#position: vector( 0.0200, -0.1360, 8.6913 ), #rotation: vector( 0.0000, 0 ",
@@ -127,7 +134,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
@@ -143,7 +151,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"Sirikit_turnleft\", #startxform: [#position: vector( 0.0200, -0.1360, 8.6913 ), #rotation: vector( 0.0000, 0.0 ",
@@ -159,7 +168,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
@@ -175,7 +185,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"Sirikit_turnright\", #startxform: [#position: vector( 0.0200, -0.1360, 8.6913 ), #rotation: vector( 0.0000, 0. ",
@@ -191,7 +202,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
@@ -207,7 +219,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"sirikit_walk\", #startxform: [#position: vector( -0.1714, -0.1274, 8.5203 ), #rotation: vector( 0.0000, 0.0000 ",
@@ -223,7 +236,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz, 0.0000 )], #distancepercycle: \"17.69\", #minimumspeed: \"0.1\", #maximumspeed: \"1.5\"] ",
@@ -239,7 +253,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"sirikit_walk_talk\", #startxform: [#position: vector( -0.1714, -0.1274, 8.5203 ), #rotation: vector( 0.0000, 0 ",
@@ -255,7 +270,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz.0000, 0.0000 )], #distancepercycle: \"17.69\", #minimumspeed: \"0.1\", #maximumspeed: \"1.5\"] ",
@@ -271,7 +287,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "TestLight",
@@ -287,7 +304,8 @@
         0.0,
         10.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     }
   ],
   "skeletons": [],

@@ -15,7 +15,8 @@
         0.0,
         10.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Panther",
@@ -31,7 +32,8 @@
         0.0,
         8.793,
         3.283
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Panther_proxy",
@@ -47,7 +49,8 @@
         0.0,
         8.793,
         3.283
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "hiddenassets",
@@ -63,7 +66,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "userdata",
@@ -79,7 +83,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"Panther\", #startxform: [#position: vector( 0.0000, -3.2830, 4.0046 ), #rotation: vector( -0.7120, 0.0000, 0.0 ",
@@ -95,7 +100,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #impact: \"13\"] ",
@@ -111,7 +117,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"Panther_attack_long\", #startxform: [#position: vector( 0.0000, -3.2830, 4.0046 ), #rotation: vector( -0.7120, ",
@@ -127,7 +134,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz 0.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #impact: \"30\"] ",
@@ -143,7 +151,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"Panther_hit\", #startxform: [#position: vector( 0.0000, -3.2830, 4.0046 ), #rotation: vector( -0.7120, 0.0000, ",
@@ -159,7 +168,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
@@ -175,7 +185,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"Panther_run\", #startxform: [#position: vector( 0.0000, -3.2830, 8.7389 ), #rotation: vector( -0.7120, 0.0000, ",
@@ -191,7 +202,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz 0.0000 )], #distancepercycle: \"40.991\", #minimumspeed: \"0.7\", #maximumspeed: \"1.5\"] ",
@@ -207,7 +219,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"Panther_run_away\", #startxform: [#position: vector( 0.0000, -3.2830, 8.5382 ), #rotation: vector( -0.7120, 0. ",
@@ -223,7 +236,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0000, 0.0000 )], #distancepercycle: \"40.991\", #minimumspeed: \"0.7\", #maximumspeed: \"1.5\"] ",
@@ -239,7 +253,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"Panther_stand\", #startxform: [#position: vector( 0.0000, -3.2830, 4.0046 ), #rotation: vector( -0.7120, 0.000 ",
@@ -255,7 +270,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
@@ -271,7 +287,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"panther_turnleft\", #startxform: [#position: vector( 0.0000, -3.2830, 4.0046 ), #rotation: vector( -0.7120, 0. ",
@@ -287,7 +304,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
@@ -303,7 +321,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"panther_turnright\", #startxform: [#position: vector( 0.0000, -3.2830, 4.0046 ), #rotation: vector( -0.7120, 0 ",
@@ -319,7 +338,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
@@ -335,7 +355,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"Panther_walk\", #startxform: [#position: vector( 0.0000, -3.2830, 8.7295 ), #rotation: vector( -0.7120, 0.0000 ",
@@ -351,7 +372,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz, 0.0000 )], #distancepercycle: \"17.186\", #minimumspeed: \"0.7\", #maximumspeed: \"1.5\"] ",
@@ -367,7 +389,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"Panther_walk_backwards\", #startxform: [#position: vector( 0.0000, -3.2830, 8.4578 ), #rotation: vector( -0.71 ",
@@ -383,7 +406,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz20, 0.0000, 0.0000 )], #distancepercycle: \"-17.186\", #minimumspeed: \"0.7\", #maximumspeed: \"1.5\"] ",
@@ -399,7 +423,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "TestLight",
@@ -415,7 +440,8 @@
         0.0,
         10.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     }
   ],
   "skeletons": [

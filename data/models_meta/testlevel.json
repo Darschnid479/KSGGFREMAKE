@@ -15,7 +15,8 @@
         0.0,
         10.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "userdata",
@@ -31,7 +32,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"crush_rock_1\", #startxform: [#position: vector( -8.3874, -0.0078, 42.0452 ), #rotation: vector( 0.0000, 0.000 ",
@@ -47,7 +49,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0, 0.0000 )]] ",
@@ -63,7 +66,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"crush_rock_2\", #startxform: [#position: vector( 4.2545, -0.0081, 36.0282 ), #rotation: vector( 0.0000, 0.0000 ",
@@ -79,7 +83,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz, 0.0000 )]] ",
@@ -95,7 +100,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"crush_rock_3\", #startxform: [#position: vector( -16.1062, -0.0077, 29.2818 ), #rotation: vector( 0.0000, 0.00 ",
@@ -111,7 +117,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz00, 0.0000 )]] ",
@@ -127,7 +134,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"crush_rock_4\", #startxform: [#position: vector( 3.3428, -0.0075, 23.2648 ), #rotation: vector( 0.0000, 0.0000 ",
@@ -143,7 +151,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz, 0.0000 )]]  ",
@@ -159,7 +168,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"crush_rock_5\", #startxform: [#position: vector( -13.7144, 0.0000, 20.4082 ), #rotation: vector( 0.0000, 0.000 ",
@@ -175,7 +185,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0, 0.0000 )]]  ",
@@ -191,7 +202,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"crush_rock_6\", #startxform: [#position: vector( 17.0786, 0.0000, 17.8556 ), #rotation: vector( 0.0000, 0.0000 ",
@@ -207,7 +219,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz, 0.0000 )]]   ",
@@ -223,7 +236,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"crush_rock_7\", #startxform: [#position: vector( -23.2780, 0.0000, 14.5735 ), #rotation: vector( 0.0000, 0.000 ",
@@ -239,7 +253,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0, 0.0000 )]]   ",
@@ -255,7 +270,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"crush_rock_8\", #startxform: [#position: vector( -13.0065, 0.0000, 14.7559 ), #rotation: vector( 0.0000, 0.000 ",
@@ -271,7 +287,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0, 0.0000 )]]    ",
@@ -287,7 +304,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"crush_rock_9\", #startxform: [#position: vector( 1.0332, 0.0000, 14.8167 ), #rotation: vector( 0.0000, 0.0000, ",
@@ -303,7 +321,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz 0.0000 )]] ",
@@ -319,7 +338,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"crush_rock_10\", #startxform: [#position: vector( -11.4263, 0.0000, 24.4196 ), #rotation: vector( 0.0000, 0.00 ",
@@ -335,7 +355,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz00, 0.0000 )]]  ",
@@ -351,7 +372,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"crush_rock_11\", #startxform: [#position: vector( 2.5527, 0.0000, 5.8823 ), #rotation: vector( 0.0000, 0.0000, ",
@@ -367,7 +389,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz 0.0000 )]]  ",
@@ -383,7 +406,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"crush_rock_12\", #startxform: [#position: vector( 19.5705, 0.0000, 6.3077 ), #rotation: vector( 0.0000, 0.0000 ",
@@ -399,7 +423,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz, 0.0000 )]]    ",
@@ -415,7 +440,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "crushablewall",
@@ -431,7 +457,8 @@
         0.0,
         0.0,
         0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "crush_rock_1",
@@ -447,7 +474,8 @@
         -8.387,
         42.045,
         0.008
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "crush_rock_2",
@@ -463,7 +491,8 @@
         4.254,
         36.028,
         0.008
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "crush_rock_3",
@@ -479,7 +508,8 @@
         -16.106,
         29.282,
         0.008
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "crush_rock_4",
@@ -495,7 +525,8 @@
         3.343,
         23.265,
         0.008
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "crush_rock_5",
@@ -511,7 +542,8 @@
         -13.714,
         20.408,
         0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "crush_rock_6",
@@ -527,7 +559,8 @@
         17.079,
         17.856,
         0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "crush_rock_7",
@@ -543,7 +576,8 @@
         -23.278,
         14.574,
         0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "crush_rock_8",
@@ -559,7 +593,8 @@
         -13.007,
         14.756,
         0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "crush_rock_9",
@@ -575,7 +610,8 @@
         1.033,
         14.817,
         0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "crush_rock_10",
@@ -591,7 +627,8 @@
         -11.426,
         24.42,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "crush_rock_11",
@@ -607,7 +644,8 @@
         2.553,
         5.882,
         0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "crush_rock_12",
@@ -623,7 +661,8 @@
         19.571,
         6.308,
         0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "hiddenassets",
@@ -639,7 +678,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_test1\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0.0000,  ",
@@ -655,7 +695,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
@@ -671,7 +712,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_test2\", #startxform: [#position: vector( -12.1200, 22.8346, 6.9287 ), #rotation: vector( 0.0000, 0.0000 ",
@@ -687,7 +729,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
@@ -703,7 +746,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "TestLight",
@@ -719,7 +763,8 @@
         0.0,
         10.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     }
   ],
   "skeletons": [],

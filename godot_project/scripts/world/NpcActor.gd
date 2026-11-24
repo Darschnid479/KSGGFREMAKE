@@ -11,13 +11,14 @@ class_name NpcActor
 
 var heightmap_sampler: Callable
 var story_conversation_id: String = ""
+var initial_yaw: float = 0.0
 var is_talking: bool = false
 var _visual: Node3D
 var _animator: CharacterAnimator
 var _talked: bool = false
 var _spline_pts: Array[Vector3] = []
 var _spline_idx: int = 0
-var _spline_speed: float = 3.8
+var _spline_speed: float = 2.6
 var _spline_cb: Callable
 var _cur_speed: float = 0.0
 
@@ -39,6 +40,7 @@ func _ready() -> void:
 	add_child(col)
 
 	_visual = Node3D.new()
+	_visual.rotation.y = initial_yaw
 	add_child(_visual)
 
 	var glb_path := "res://assets/models/%s.glb" % model_resource

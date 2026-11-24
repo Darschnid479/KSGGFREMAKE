@@ -15,7 +15,8 @@
         0.0,
         10.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "carpet_salesman",
@@ -31,7 +32,8 @@
         0.0,
         7.093,
         0.59
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "carpet_salesman_proxy",
@@ -47,7 +49,8 @@
         0.0,
         6.958,
         0.136
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "hiddenassets",
@@ -63,7 +66,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "userdata",
@@ -79,7 +83,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"carpet_salesman_give\", #startxform: [#position: vector( 0.0000, -0.3075, 6.8351 ), #rotation: vector( 0.0000, ",
@@ -95,7 +100,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz 0.0000, 0.0000 )], #mountstart: \"17\", #mountend: \"35\"] ",
@@ -111,7 +117,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"carpet_salesman_stand\", #startxform: [#position: vector( 0.0000, -0.3075, 6.8351 ), #rotation: vector( 0.0000 ",
@@ -127,7 +134,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz, 0.0000, 0.0000 )]] ",
@@ -143,7 +151,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"carpet_salesman_stand_breathe\", #startxform: [#position: vector( 0.0000, -0.3075, 6.8351 ), #rotation: vector ",
@@ -159,7 +168,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz( 0.0000, 0.0000, 0.0000 )]] ",
@@ -175,7 +185,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"carpet_salesman_stand_talk\", #startxform: [#position: vector( 0.0000, -0.3075, 6.8351 ), #rotation: vector( 0 ",
@@ -191,7 +202,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz.0000, 0.0000, 0.0000 )]] ",
@@ -207,7 +219,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "objectlinkedtobonesplayerinfo",
@@ -223,7 +236,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[[#bonedmodel: \"carpet_salesman\", #object: \"cake\", #boneid: 7, #xform: [#rotation: vector( 0.8626, 33.0722, -88.2740 ), #po ",
@@ -239,7 +253,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzzsition: vector( 1.3534, -0.2124, 0.0010 )]]] ",
@@ -255,7 +270,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "TestLight",
@@ -271,7 +287,8 @@
         0.0,
         10.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     }
   ],
   "skeletons": [],

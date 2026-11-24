@@ -15,7 +15,8 @@
         0.0,
         10.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "crosshair",
@@ -31,7 +32,8 @@
         -0.015,
         -0.038,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "hiddenassets",
@@ -47,7 +49,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "userdata",
@@ -63,7 +66,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"crosshair_move\", #startxform: [#position: vector( 0.0000, -0.0056, -0.0400 ), #rotation: vector( 0.0000, 0.00 ",
@@ -79,7 +83,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz00, 0.0000 )]] ",
@@ -95,7 +100,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "lamp",
@@ -111,7 +117,8 @@
         0.0,
         3.944,
         0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "pinky",
@@ -127,7 +134,8 @@
         0.0,
         6.958,
         0.136
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "pinky_proxy",
@@ -143,7 +151,8 @@
         0.0,
         6.958,
         0.136
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_climbintowell\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000,  ",
@@ -159,7 +168,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
@@ -175,7 +185,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_climboncrate\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0 ",
@@ -191,7 +202,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #foot1up: \" 18->26, 37->42, 57->63\", #foot2up: \" 1->8, 18->33, 47 ",
@@ -207,7 +219,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz->54\"] ",
@@ -223,7 +236,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_climboutofwell\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, ",
@@ -239,7 +253,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz 0.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
@@ -255,7 +270,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_climb_down\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9577 ), #rotation: vector( 0.0000, 0.0 ",
@@ -271,7 +287,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz000, 0.0000 )], #collisionradius: \"2.7742\", #foot1up: \" 1->8,  20->28, 37->50\", #foot2up: \" 9->20, 28->50\"] ",
@@ -287,7 +304,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_climb_up\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9577 ), #rotation: vector( 0.0000, 0.000 ",
@@ -303,7 +321,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0, 0.0000 )], #foot1up: \" 7->12,  21->27, 40->46, 57->67\", #foot2up: \" 9->20, 31->36, 48->53, 61->70\"] ",
@@ -319,7 +338,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_die\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0.0000, 0. ",
@@ -335,7 +355,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
@@ -351,7 +372,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_dig\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0.0000, 0. ",
@@ -367,7 +389,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0000 )], #mountstart: \"7\", #mountend: \"145\", #mountitem: \"shovel\", #pickup1: \"28\", #drop1: \"48\", #pickup2: \"68\", #drop2: \"8 ",
@@ -383,7 +406,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz8r\", #pickup3: \"108\", #drop3: \"129\", #foot1up: \" 10->18, 138->152\", #spawncontainingitem: \"119\", #playsfx_dig: \"0\"] ",
@@ -399,7 +423,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_divein\", #startxform: [#position: vector( 0.0000, -12.9862, 35.2833 ), #rotation: vector( 0.0000, 0.000 ",
@@ -415,7 +440,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
@@ -431,7 +457,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_float\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0.0000,  ",
@@ -447,7 +474,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
@@ -463,7 +491,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_float_hit\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0.00 ",
@@ -479,7 +508,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz00, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
@@ -495,7 +525,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_give\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0.0000, 0 ",
@@ -511,7 +542,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #mountstart: \"0\", #mountend: \"35\"] ",
@@ -527,7 +559,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_gong\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0.0000, 0 ",
@@ -543,7 +576,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #mountitem: \"gong_club\", #mountstart: \"11\", #mountstop: \"80\", #foot1up: \" ",
@@ -559,7 +593,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz 20->24, 33->35\", #playsfx_bashgong: \"0\"] ",
@@ -575,7 +610,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_hit\", #startxform: [#position: vector( 0.0054, -0.8531, 6.1973 ), #rotation: vector( 0.0000, 0.0000, 0. ",
@@ -591,7 +627,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0000 )], #minimumspeed: \"0\", #maximumspeed: \"0\", #allowstopat: \"22\", #foot2up: \" 1->16\"] ",
@@ -607,7 +644,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_hit_speedvariation1\", #startxform: [#position: vector( -0.4005, -0.0024, 5.6183 ), #rotation: vector( 0 ",
@@ -623,7 +661,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz.0000, 0.0000, 0.0000 )], #distancepercycle: \"24.8547\", #minimumspeed: \"0.7\", #maximumspeed: \"1.5\", #foot1up: \" 0->8, 16->2 ",
@@ -639,7 +678,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz2\", #foot2up: \" 5->20\"] ",
@@ -655,7 +695,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_hit_speedvariation2\", #startxform: [#position: vector( 0.0054, -0.2808, 6.6332 ), #rotation: vector( 0. ",
@@ -671,7 +712,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0000, 0.0000, 0.0000 )], #distancepercycle: \"13.6958\", #minimumspeed: \"0.1\", #maximumspeed: \"1.5\", #foot1up: \" 0->8, 25->30 ",
@@ -687,7 +729,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz\", #foot2up: \" 11->23\"] ",
@@ -703,7 +746,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_jump\", #startxform: [#position: vector( 0.0000, -0.5037, 6.9013 ), #rotation: vector( 0.0000, 0.0000, 0 ",
@@ -719,7 +763,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz.0000 )], #startmoving: \"5\", #stopmoving: \"32\", #allowstopat: \"35\", #foot1up: \" 1->2, 6->31\", #foot2up: \" 10->33\"] ",
@@ -735,7 +780,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_magicswitch\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0. ",
@@ -751,7 +797,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
@@ -767,7 +814,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_pickup\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0.0000, ",
@@ -783,7 +831,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #mountstart: \"25\", #mountend: \"57\", #pickupmodelposition: \"vector(1.184 ",
@@ -799,7 +848,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz,5.822,0)\", #foot2up: \" 2->9, 51->59\"] ",
@@ -815,7 +865,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_pickup_high\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0. ",
@@ -831,7 +882,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #mountstart: \"20\", #mountend: \"53\", #pickupmodelposition: \"vector( ",
@@ -847,7 +899,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz1.833,4.257,0)\"] ",
@@ -863,7 +916,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_pull\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0.0000, 0 ",
@@ -879,7 +933,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #foot1up: \" 6->9, 28->31, 47->52\", #foot2up: \" 13->19, 42->45, 54->59\"] ",
@@ -895,7 +950,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"movablecrate_pull\", #startxform: [#position: vector( 0.0000, 10.0000, 0.0000 ), #rotation: vector( 0.0000, 0. ",
@@ -911,7 +967,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0000, 0.0000 )]] ",
@@ -927,7 +984,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_push\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0.0000, 0 ",
@@ -943,7 +1001,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #foot1up: \" 23->29, 41->48\", #foot2up: \" 3->11, 29->37\", #playsfx_pushcra ",
@@ -959,7 +1018,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzzte: \"0\"] ",
@@ -975,7 +1035,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"movablecrate_push\", #startxform: [#position: vector( 0.0000, 10.0000, 0.0000 ), #rotation: vector( 0.0000, 0. ",
@@ -991,7 +1052,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0000, 0.0000 )]]  ",
@@ -1007,7 +1069,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_putsomethinginjug\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.00 ",
@@ -1023,7 +1086,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz00, 0.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #mountitem: \"beach_hotsauce\", #mountstart: \"10\", #playsfx_pu ",
@@ -1039,7 +1103,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzztsomethinginjug: \"0\"] ",
@@ -1055,7 +1120,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_receive\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0.0000 ",
@@ -1071,7 +1137,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #mountstart: \"35\", #mountend: \"65\"] ",
@@ -1087,7 +1154,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_run\", #startxform: [#position: vector( 0.0000, -0.1360, 6.0831 ), #rotation: vector( 0.0000, 0.0000, 0. ",
@@ -1103,7 +1171,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0000 )], #distancepercycle: \"24.8547\", #minimumspeed: \"0.9\", #maximumspeed: \"1.5\", #foot1up: \" 0->8, 16->22\", #foot2up: \" 5 ",
@@ -1119,7 +1188,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz->20\"] ",
@@ -1135,7 +1205,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_run_talk\", #startxform: [#position: vector( 0.0000, -0.1360, 6.0831 ), #rotation: vector( 0.0000, 0.000 ",
@@ -1151,7 +1222,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0, 0.0000 )], #distancepercycle: \"24.8547\", #minimumspeed: \"0.9\", #maximumspeed: \"1.5\", #foot1up: \" 0->8, 16->22\", #foot2up ",
@@ -1167,7 +1239,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz: \" 5->20\"] ",
@@ -1183,7 +1256,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_shadow\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0.0000, ",
@@ -1199,7 +1273,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
@@ -1215,7 +1290,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_slingshot_shoot\", #startxform: [#position: vector( 0.0054, -1.6550, 6.5300 ), #rotation: vector( 0.0000 ",
@@ -1231,7 +1307,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz, 0.0000, 0.0000 )], #shoot: \"17\"] ",
@@ -1247,7 +1324,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_slingshot_shoot_end\", #startxform: [#position: vector( -0.0484, -1.7148, 6.4335 ), #rotation: vector( 0 ",
@@ -1263,7 +1341,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz.0000, 0.0000, 0.0000 )], #shoot: \"17\", #playsfx_slingshot: \"0\"] ",
@@ -1279,7 +1358,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_slingshot_shoot_loop\", #startxform: [#position: vector( -0.0629, -1.7934, 6.5790 ), #rotation: vector(  ",
@@ -1295,7 +1375,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0.0000, 0.0000, 0.0000 )], #shoot: \"17\"] ",
@@ -1311,7 +1392,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_slingshot_shoot_start\", #startxform: [#position: vector( 0.0054, -1.6550, 6.5300 ), #rotation: vector(  ",
@@ -1327,7 +1409,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0.0000, 0.0000, 0.0000 )], #shoot: \"17\"]  ",
@@ -1343,7 +1426,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_slingshot_stand\", #startxform: [#position: vector( 0.0054, -1.6550, 6.5300 ), #rotation: vector( 0.0000 ",
@@ -1359,7 +1443,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz, 0.0000, 0.0000 )], #minimumspeed: \"0\", #maximumspeed: \"0\"] ",
@@ -1375,7 +1460,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_stand\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0.0000,  ",
@@ -1391,7 +1477,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"]  ",
@@ -1407,7 +1494,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_stand_breathe\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000,  ",
@@ -1423,7 +1511,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"]  ",
@@ -1439,7 +1528,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_stand_lamp\", #startxform: [#position: vector( 0.0054, -0.8531, 6.1973 ), #rotation: vector( 0.0000, 0.0 ",
@@ -1455,7 +1545,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz000, 0.0000 )], #minimumspeed: \"0\", #maximumspeed: \"0\", #mountitem: \"lamp\"] ",
@@ -1471,7 +1562,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_stand_lamp_talk\", #startxform: [#position: vector( 0.0054, -0.8531, 6.1973 ), #rotation: vector( 0.0000 ",
@@ -1487,7 +1579,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz, 0.0000, 0.0000 )], #minimumspeed: \"0\", #maximumspeed: \"0\", #mountitem: \"lamp\"] ",
@@ -1503,7 +1596,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_stand_sword\", #startxform: [#position: vector( 0.0054, -0.8531, 6.1973 ), #rotation: vector( 0.0000, 0. ",
@@ -1519,7 +1613,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0000, 0.0000 )], #minimumspeed: \"0\", #maximumspeed: \"0\"] ",
@@ -1535,7 +1630,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_stand_sword_talk\", #startxform: [#position: vector( 0.0054, -0.8531, 6.1973 ), #rotation: vector( 0.000 ",
@@ -1551,7 +1647,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0, 0.0000, 0.0000 )], #minimumspeed: \"0\", #maximumspeed: \"0\"] ",
@@ -1567,7 +1664,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_stand_talk\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0.0 ",
@@ -1583,7 +1681,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"] ",
@@ -1599,7 +1698,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_swim\", #startxform: [#position: vector( 0.0000, 0.2534, 7.1181 ), #rotation: vector( 0.0000, 0.0000, 0. ",
@@ -1615,7 +1715,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #foot1up: \" 0->11, 53->71, 120->250\"] ",
@@ -1631,7 +1732,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_swordswing\", #startxform: [#position: vector( 0.0054, -0.8531, 6.1973 ), #rotation: vector( 0.0000, 0.0 ",
@@ -1647,7 +1749,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz000, 0.0000 )], #impact: \"6\", #allowstopat: \"18\", #playsfx_sword_swing: \"0\"] ",
@@ -1663,7 +1766,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_swordswing_speedvariation1\", #startxform: [#position: vector( 0.0000, -0.1360, 6.0831 ), #rotation: vec ",
@@ -1679,7 +1783,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzztor( 0.0000, 0.0000, 0.0000 )], #distancepercycle: \"24.8547\", #minimumspeed: \"0.7\", #maximumspeed: \"1.5\", #foot1up: \" 0->8, ",
@@ -1695,7 +1800,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz 16->22\", #foot2up: \" 5->20\", #impact: \"6\"] ",
@@ -1711,7 +1817,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_swordswing_speedvariation2\", #startxform: [#position: vector( 0.0000, 0.0297, 6.7262 ), #rotation: vect ",
@@ -1727,7 +1834,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzzor( 0.0000, 0.0000, 0.0000 )], #distancepercycle: \"13.6958\", #minimumspeed: \"0.1\", #maximumspeed: \"1.5\", #foot1up: \" 0->8,  ",
@@ -1743,7 +1851,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz25->30\", #foot2up: \" 11->23\", #inpact: \"6\"] ",
@@ -1759,7 +1868,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_thrown\", #startxform: [#position: vector( 2.2578, 0.2261, 6.9287 ), #rotation: vector( 0.0000, 0.0000,  ",
@@ -1775,7 +1885,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0.0000 )], #startmoving: \"70\", #stopmoving: \"105\"] ",
@@ -1791,7 +1902,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_turnleft\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0.000 ",
@@ -1807,7 +1919,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #foot1up: \" 12->19\", #foot2up: \" 2->11\"] ",
@@ -1823,7 +1936,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_turnleft\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0.000  ",
@@ -1839,7 +1953,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #foot1up: \" 12->19\", #foot2up: \" 2->11\"]  ",
@@ -1855,7 +1970,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_turnleft_lamp\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000,  ",
@@ -1871,7 +1987,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #foot1up: \" 12->19\", #foot2up: \" 2->11\"] ",
@@ -1887,7 +2004,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_turnright\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0.00 ",
@@ -1903,7 +2021,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz00, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #foot1up: \" 2->11\", #foot2up: \" 12->19\"] ",
@@ -1919,7 +2038,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_turnright\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0.00  ",
@@ -1935,7 +2055,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz00, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #foot1up: \" 2->11\", #foot2up: \" 12->19\"]  ",
@@ -1951,7 +2072,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_turnright_lamp\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, ",
@@ -1967,7 +2089,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz 0.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #foot1up: \" 2->11\", #foot2up: \" 12->19\"] ",
@@ -1983,7 +2106,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_turnright_lamp\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000,  ",
@@ -1999,7 +2123,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz 0.0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #foot1up: \" 2->11\", #foot2up: \" 12->19\"]  ",
@@ -2015,7 +2140,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_walk\", #startxform: [#position: vector( 0.0000, 0.0297, 6.7262 ), #rotation: vector( 0.0000, 0.0000, 0. ",
@@ -2031,7 +2157,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0000 )], #distancepercycle: \"13.6958\", #minimumspeed: \"0.1\", #maximumspeed: \"1.9\", #foot1up: \" 0->8, 25->30\", #foot2up: \" 1 ",
@@ -2047,7 +2174,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz1->23\"] ",
@@ -2063,7 +2191,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_walkbackwards\", #startxform: [#position: vector( 0.0000, 0.0297, 6.7262 ), #rotation: vector( 0.0000, 0 ",
@@ -2079,7 +2208,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz.0000, 0.0000 )], #distancepercycle: \"-13.6958\", #minimumspeed: \"0.1\", #maximumspeed: \"1.5\", #foot1up: \" 0->6, 24->30\", #fo ",
@@ -2095,7 +2225,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzzot2up: \" 8->23\"] ",
@@ -2111,7 +2242,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_walkbackwards_lamp\", #startxform: [#position: vector( 0.0000, 0.0297, 6.7262 ), #rotation: vector( 0.00 ",
@@ -2127,7 +2259,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz00, 0.0000, 0.0000 )], #distancepercycle: \"-13.6958\", #minimumspeed: \"0.1\", #maximumspeed: \"1.5\", #foot1up: \" 0->6, 24->30\" ",
@@ -2143,7 +2276,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz, #foot2up: \" 8->23\", #mountitem: \"lamp\"] ",
@@ -2159,7 +2293,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_walk_lamp\", #startxform: [#position: vector( 0.0000, -0.7257, 6.6883 ), #rotation: vector( 0.0000, 0.00 ",
@@ -2175,7 +2310,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz00, 0.0000 )], #distancepercycle: \"13.6958\", #minimumspeed: \"0.1\", #maximumspeed: \"1.1\", #foot1up: \" 0->8, 25->30\", #foot2u ",
@@ -2191,7 +2327,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzzp: \" 11->23\", #mountitem: \"lamp\"] ",
@@ -2207,7 +2344,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_walk_lamp_talk\", #startxform: [#position: vector( 0.0000, -0.7257, 6.6883 ), #rotation: vector( 0.0000, ",
@@ -2223,7 +2361,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz 0.0000, 0.0000 )], #distancepercycle: \"13.6958\", #minimumspeed: \"0.1\", #maximumspeed: \"1.1\", #foot1up: \" 0->8, 25->30\", #f ",
@@ -2239,7 +2378,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzzoot2up: \" 11->23\", #mountitem: \"lamp\"] ",
@@ -2255,7 +2395,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_walk_talk\", #startxform: [#position: vector( 0.0000, 0.0297, 6.7262 ), #rotation: vector( 0.0000, 0.000 ",
@@ -2271,7 +2412,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0, 0.0000 )], #distancepercycle: \"13.6958\", #minimumspeed: \"0.1\", #maximumspeed: \"1.9\", #foot1up: \" 0->8, 25->30\", #foot2up ",
@@ -2287,7 +2429,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz: \" 11->23\"] ",
@@ -2303,7 +2446,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_win\", #startxform: [#position: vector( 0.0000, -0.1360, 6.9287 ), #rotation: vector( 0.0000, 0.0000, 0. ",
@@ -2319,7 +2463,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\"]  ",
@@ -2335,7 +2480,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "objectlinkedtobonesplayerinfo",
@@ -2351,7 +2497,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[[#bonedmodel: \"pinky\", #object: \"coconut_hand\", #boneid: 24, #xform: [#rotation: vector( -0.7591, 13.8958, 0.0119 ), #posi ",
@@ -2367,7 +2514,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzztion: vector( 0.4543, -0.1851, -1.5185 )]], [#bonedmodel: \"pinky\", #object: \"sword_hand\", #boneid: 24, #xform: [#rotation:  ",
@@ -2383,7 +2531,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzzvector( 81.3465, -76.0313, 8.5736 ), #position: vector( 1.3048, 2.4786, -0.5377 )]], [#bonedmodel: \"pinky\", #object: \"beach ",
@@ -2399,7 +2548,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz_hotsauce_hand\", #boneid: 24, #xform: [#rotation: vector( -95.7591, 13.8958, 0.0119 ), #position: vector( 0.9680, -1.1925,  ",
@@ -2415,7 +2565,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz-0.8908 )]], [#bonedmodel: \"pinky\", #object: \"sword_belt\", #boneid: 40, #xform: [#rotation: vector( 38.5534, 74.1111, -10.3 ",
@@ -2431,7 +2582,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz815 ), #position: vector( 0.3280, 0.6041, -2.4901 )]], [#bonedmodel: \"pinky\", #object: \"shovel_hand\", #boneid: 24, #xform:  ",
@@ -2447,7 +2599,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#rotation: vector( -16.3111, -18.1552, -95.1178 ), #position: vector( -0.4477, -0.5619, -2.8485 )]], [#bonedmodel: \"pinky\" ",
@@ -2463,7 +2616,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz, #object: \"gong_club_hand\", #boneid: 24, #xform: [#rotation: vector( -92.7025, -76.5896, 2.6584 ), #position: vector( 0.83 ",
@@ -2479,7 +2633,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz26, 2.3599, -0.4668 )]], [#bonedmodel: \"pinky\", #object: \"bubble_emitter\", #boneid: 39, #xform: [#rotation: vector( 77.2381 ",
@@ -2495,7 +2650,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz, 90.0000, 0.0000 ), #position: vector( 0.5546, 0.9469, -0.3529 )]], [#bonedmodel: \"pinky\", #object: \"swordstick_hand\", #bo ",
@@ -2511,7 +2667,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzzneid: 24, #xform: [#rotation: vector( -1.9910, 13.7757, -5.1361 ), #position: vector( 1.3060, 2.5088, -0.5213 )]], [#bonedm ",
@@ -2527,7 +2684,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzzodel: \"pinky\", #object: \"swordstick_belt\", #boneid: 40, #xform: [#rotation: vector( -110.5638, 78.5701, -67.3935 ), #positi ",
@@ -2543,7 +2701,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzzon: vector( 0.1413, 0.5827, -2.6383 )]], [#bonedmodel: \"pinky\", #object: \"lamp\", #boneid: 18, #xform: [#rotation: vector( 1 ",
@@ -2559,7 +2718,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz72.8494, -9.1716, 83.3955 ), #position: vector( 0.8637, 0.0352, 0.5576 )]], [#bonedmodel: \"pinky\", #object: \"goldsword_hand ",
@@ -2575,7 +2735,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz\", #boneid: 24, #xform: [#rotation: vector( -2.4191, 13.7083, -6.9381 ), #position: vector( 1.4727, 2.7595, -0.5382 )]], [# ",
@@ -2591,7 +2752,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzzbonedmodel: \"pinky\", #object: \"goldsword_belt\", #boneid: 40, #xform: [#rotation: vector( -163.8621, 6.0000, -136.2074 ), #p ",
@@ -2607,7 +2769,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzzosition: vector( 0.1493, 0.5364, -2.5885 )]], [#bonedmodel: \"pinky\", #object: \"woodensword_hand\", #boneid: 24, #xform: [#ro ",
@@ -2623,7 +2786,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzztation: vector( -2.7291, 13.6510, -8.2489 ), #position: vector( 1.2850, 2.0074, -0.5151 )]], [#bonedmodel: \"pinky\", #object ",
@@ -2639,7 +2803,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz: \"woodensword_belt\", #boneid: 40, #xform: [#rotation: vector( -15.9129, -7.5178, 50.6848 ), #position: vector( 0.5813, 0.1 ",
@@ -2655,7 +2820,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz930, -2.4378 )]], [#bonedmodel: \"pinky\", #object: \"meat_hand\", #boneid: 24, #xform: [#rotation: vector( -2.7923, 13.6385, - ",
@@ -2671,7 +2837,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz8.5167 ), #position: vector( 1.1727, 1.0643, -0.5792 )]], [#bonedmodel: \"pinky\", #object: \"cake\", #boneid: 24, #xform: [#ro ",
@@ -2687,7 +2854,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzztation: vector( -117.8632, -82.1260, 25.2034 ), #position: vector( 1.1849, -0.9546, -1.3884 )]], [#bonedmodel: \"pinky\", #ob ",
@@ -2703,7 +2871,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzzject: \"key\", #boneid: 24, #xform: [#rotation: vector( 92.6551, -73.8805, 177.6434 ), #position: vector( 1.3251, -0.0568, -1 ",
@@ -2719,7 +2888,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz.4884 )]], [#bonedmodel: \"pinky\", #object: \"dizzystars\", #boneid: 33, #xform: [#rotation: vector( -108.5537, 90.0000, 0.000 ",
@@ -2735,7 +2905,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0 ), #position: vector( -2.3766, 1.9343, 0.1234 )]], [#bonedmodel: \"pinky\", #object: \"slingshot_belt\", #boneid: 40, #xform: ",
@@ -2751,7 +2922,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz [#rotation: vector( -102.4279, -13.0108, -144.7905 ), #position: vector( 0.5157, -1.8245, 2.1430 )]], [#bonedmodel: \"pinky ",
@@ -2767,7 +2939,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz\", #object: \"slingshot_hand\", #boneid: 18, #xform: [#rotation: vector( 88.8747, 48.8943, 179.3518 ), #position: vector( 1.2 ",
@@ -2783,7 +2956,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz010, 0.6265, 0.4040 )]], [#bonedmodel: \"pinky\", #object: \"shop_slingshot\", #boneid: 24, #xform: [#rotation: vector( -13.322 ",
@@ -2799,7 +2973,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz4, -4.0582, -103.4692 ), #position: vector( 1.1882, 0.5455, -0.6220 )]], [#bonedmodel: \"pinky\", #object: \"shop_sword\", #bon ",
@@ -2815,7 +2990,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzzeid: 24, #xform: [#rotation: vector( -14.7668, 6.5991, -97.2645 ), #position: vector( 1.1460, 2.5694, -1.0473 )]], [#bonedm ",
@@ -2831,7 +3007,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzzodel: \"pinky\", #object: \"shop_lamp\", #boneid: 24, #xform: [#rotation: vector( 108.5491, 76.0894, -172.9122 ), #position: ve ",
@@ -2847,7 +3024,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzzctor( 0.7663, -1.0836, -1.0253 )]]] ",
@@ -2863,7 +3041,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "shovel",
@@ -2879,7 +3058,8 @@
         0.0,
         8.622,
         0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "slingshot",
@@ -2895,7 +3075,8 @@
         0.0,
         -0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "slingshot_mounted",
@@ -2911,7 +3092,8 @@
         0.0,
         -0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "slingshot_rock",
@@ -2927,7 +3109,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"slingshot_shoot\", #startxform: [#position: vector( 0.2987, 3.3344, 11.4561 ), #rotation: vector( -1.0003, -2. ",
@@ -2943,7 +3126,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz9810, 175.4536 )], #linktobone: \"left_upper_fingers\"] ",
@@ -2959,7 +3143,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"slingshot_shoot_end\", #startxform: [#position: vector( 0.2987, 3.3344, 11.4561 ), #rotation: vector( -1.0003, ",
@@ -2975,7 +3160,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz -2.9810, 175.4536 )], #linktobone: \"left_upper_fingers\"] ",
@@ -2991,7 +3177,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"slingshot_shoot_start\", #startxform: [#position: vector( 0.2987, 3.3344, 11.4561 ), #rotation: vector( -1.000 ",
@@ -3007,7 +3194,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz3, -2.9810, 175.4536 )], #linktobone: \"left_upper_fingers\"] ",
@@ -3023,7 +3211,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"slingshot_stand\", #startxform: [#position: vector( 0.2987, 3.3344, 11.4561 ), #rotation: vector( -1.0003, -2. ",
@@ -3039,7 +3228,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz9810, 175.4536 )], #linktobone: \"left_upper_fingers\"]  ",
@@ -3055,7 +3245,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "swoosh_pinky_swordswing",
@@ -3071,7 +3262,8 @@
         0.0,
         0.0,
         0.136
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "TestLight",
@@ -3087,7 +3279,8 @@
         0.0,
         10.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     }
   ],
   "skeletons": [

@@ -35,7 +35,7 @@ var _story_engine: StoryScriptEngine
 var _actors_by_name: Dictionary = {}
 var _colliders_by_name: Dictionary = {}
 var _graal_boss_mesh: Mesh
-var _graal_boss_mat: Material
+var _graal_boss_mats: Array[Material] = []
 var _catapult_mesh: Mesh
 var _catapult_mat: Material
 var _catapult_rock_mesh: Mesh
@@ -94,7 +94,7 @@ func load_level(level_id: String) -> void:
 	_actors_by_name.clear()
 	_colliders_by_name.clear()
 	_graal_boss_mesh = null
-	_graal_boss_mat = null
+	_graal_boss_mats.clear()
 	_catapult_mesh = null
 	_catapult_mat = null
 	_catapult_rock_mesh = null
@@ -142,8 +142,13 @@ func load_level(level_id: String) -> void:
 
 	# 6. Spawn spiller (Pinky i 3D, Pinky i 2D-svømming, eller Den Sorte Dame på verdenskartet)
 	if mode == "boat":
-		_player_node = _spawn_boat(Vector3(0.0, 0.0, 8.0))
-		_camera_rig.set_target(_player_node, 74.0, 2.0, true, false)
+		var abra_pos := _get_world_map_island_pos("abra")
+		_player_node = _spawn_boat(abra_pos + Vector3(-24.0, 0.0, 32.0))
+		_player_node.rotation.y = 0.72
+		if _player_node is BoatController:
+			var target_isl := GameState.get_active_story_island()
+			(_player_node as BoatController).set_target_island(_get_world_map_island_pos(target_isl), true)
+		_camera_rig.set_target(_player_node, 96.0, 2.0, true, false)
 	elif mode == "swimming":
 		_build_underwater_spline_walls(gp_data)
 		var swim_pos := _find_swimmer_spawn(level_id, gp_data)
@@ -156,31 +161,38 @@ func load_level(level_id: String) -> void:
 		var spawn_pos := _find_player_spawn(level_id, gp_data, level_bounds)
 		_build_3d_spline_walls(gp_data, spawn_pos)
 		_player_node = _spawn_pinky(spawn_pos, false)
-		var is_tight_indoor := level_id in [
-			"cave", "cave_end", "cave_end_bosslevel",
-			"magakhan_dungeon", "magakhan_palace", "fatamorgana_palace", "graal_bosslevel"
-		]
+		for n_sp in gp_data.get("nodes", []):
+			var nm_sp := str(n_sp.get("name", "")).to_lower()
+			if nm_sp == "character_pinky" or nm_sp == "character_treasureseeker":
+				if n_sp.has("godot_yaw"):
+					var gyaw := float(n_sp.get("godot_yaw", 0.0))
+					if level_id != "graal_bosslevel" or absf(gyaw) > 0.001:
+						_player_node.rotation.y = gyaw
+				break
 		if level_id == "graal_bosslevel":
-			_camera_rig.set_target(_player_node, 3.8, 2.65, false)
-			_camera_rig.yaw = -0.68
-			_camera_rig.pitch = -0.14
+			_camera_rig.set_target(_player_node, 4.3, 2.35, false)
+			_camera_rig.yaw = -1.18
+			_camera_rig.pitch = -0.26
 			_camera_rig.rotation = Vector3(_camera_rig.pitch, _camera_rig.yaw, 0.0)
 		elif level_id == "cave":
-			# Kinematisk 1:1 åpningsvinkel bak Pinky som rammer inn Kaptein Sabeltann, Langemann, Pelle, Pysa og grotte-tunnelen!
-			_camera_rig.set_target(_player_node, 7.6, 2.05, false)
+			# Nært 1:1 originalkamera bak Pinky (rammer inn Sabeltann og Langemann rett foran)
+			_camera_rig.set_target(_player_node, 4.4, 1.62, false)
 			_camera_rig.yaw = -0.34
-			_camera_rig.pitch = -0.14
-			_camera_rig.rotation = Vector3(_camera_rig.pitch, _camera_rig.yaw, 0.0)
-		elif level_id == "abra":
-			_camera_rig.set_target(_player_node, 6.4, 2.35, false)
-			_camera_rig.yaw = -1.25
 			_camera_rig.pitch = -0.15
 			_camera_rig.rotation = Vector3(_camera_rig.pitch, _camera_rig.yaw, 0.0)
+		elif level_id == "abra":
+			_camera_rig.set_target(_player_node, 4.3, 1.65, false)
+			_camera_rig.yaw = _player_node.rotation.y
+			_camera_rig.pitch = -0.16
+			_camera_rig.rotation = Vector3(_camera_rig.pitch, _camera_rig.yaw, 0.0)
 		else:
-			_camera_rig.set_target(_player_node, 9.5, 2.4, false)
+			_camera_rig.set_target(_player_node, 4.4, 1.65, false)
+			_camera_rig.yaw = _player_node.rotation.y
+			_camera_rig.pitch = -0.17
+			_camera_rig.rotation = Vector3(_camera_rig.pitch, _camera_rig.yaw, 0.0)
 		if _camera_rig.spring_arm:
-			if is_tight_indoor:
-				_camera_rig.spring_arm.collision_mask = 0
+			# Unngå at SpringArm3D krasjer inn i usynlige spline-vegger, rekkverk og master bak ryggen til Pinky!
+			_camera_rig.spring_arm.collision_mask = 0
 			if _player_node:
 				_camera_rig.spring_arm.add_excluded_object(_player_node.get_rid())
 		# 7. Spawn NPC-er, fiender, originale 1:1 mynter, historie-objekter, portaler og 1:1 stemme-/historiemotor!
@@ -207,43 +219,44 @@ func _setup_modern_environment(cfg: Dictionary) -> void:
 	var is_cave := current_level_id in ["cave", "cave_end", "cave_end_bosslevel", "magakhan_dungeon"]
 	var is_graal := current_level_id in ["graal_bosslevel", "graal_mountain"]
 	var is_swim := str(cfg.get("mode", "")) == "swimming"
+	var is_world_map := current_level_id == "world_map"
 
 	env.background_mode = Environment.BG_SKY
 	env.sky = VisualEnhancer.create_biome_sky(current_level_id, cfg)
 
 	if is_swim:
 		env.ambient_light_source = Environment.AMBIENT_SOURCE_COLOR
-		env.ambient_light_color = Color(0.08, 0.28, 0.40)
-		env.ambient_light_energy = 0.42
+		env.ambient_light_color = Color(0.10, 0.30, 0.42)
+		env.ambient_light_energy = 0.48
 	elif is_cave:
 		env.ambient_light_source = Environment.AMBIENT_SOURCE_COLOR
-		env.ambient_light_color = Color(0.24, 0.22, 0.28) if current_level_id == "cave" else cfg.get("ambient_color", Color(0.18, 0.24, 0.32))
-		env.ambient_light_energy = 0.46 if current_level_id == "cave" else 0.38
+		env.ambient_light_color = Color(0.28, 0.25, 0.30) if current_level_id == "cave" else cfg.get("ambient_color", Color(0.22, 0.26, 0.34))
+		env.ambient_light_energy = 0.54 if current_level_id == "cave" else 0.44
 	else:
 		env.ambient_light_source = Environment.AMBIENT_SOURCE_SKY
-		env.ambient_light_sky_contribution = 0.72
-		env.ambient_light_color = cfg.get("ambient_color", Color(0.36, 0.56, 0.86))
-		env.ambient_light_energy = clampf(float(cfg.get("ambient_energy", 0.65)) * 0.58, 0.32, 0.44)
+		env.ambient_light_sky_contribution = 0.68
+		env.ambient_light_color = cfg.get("ambient_color", Color(0.42, 0.58, 0.82))
+		env.ambient_light_energy = clampf(float(cfg.get("ambient_energy", 0.62)) * 0.56, 0.34, 0.46)
 
-	# Moderne AAA animasjons-pipeline: ACES kinokontrast + dyp SSAO + kontrollert SSIL – null melkeaktig «fade»!
-	env.tonemap_mode = Environment.TONE_MAPPER_ACES
-	env.tonemap_exposure = 1.02 if is_swim else (1.04 if current_level_id == "cave" else (1.00 if not is_cave else 0.98))
+	# Balansert AgX tone-mapping + naturlig kontrast uten overbrent oransje/gul-stikk
+	env.tonemap_mode = Environment.TONE_MAPPER_AGX
+	env.tonemap_exposure = 1.02 if is_swim else (1.06 if current_level_id == "cave" else (0.98 if not is_cave else 1.00))
 	env.ssao_enabled = GameState.ssao_enabled
-	env.ssao_radius = 1.70
-	env.ssao_intensity = 2.05
-	env.ssao_power = 1.55
-	env.ssao_detail = 0.72
+	env.ssao_radius = 1.55
+	env.ssao_intensity = 1.45
+	env.ssao_power = 1.25
+	env.ssao_detail = 0.65
 
-	# Sanntids indirekte bounce-lys (dempet slik at dype skygger og skarpe PBR-teksturer bevares!)
+	# Dempet indirekte bounce-lys
 	env.ssil_enabled = GameState.ssil_enabled
-	env.ssil_radius = 4.0
-	env.ssil_intensity = 0.62
+	env.ssil_radius = 3.5
+	env.ssil_intensity = 0.45
 
 	env.glow_enabled = GameState.glow_enabled
 	env.glow_normalized = true
-	env.glow_intensity = 0.34 if is_swim else 0.36
-	env.glow_bloom = 0.10 if is_swim else 0.12
-	env.glow_hdr_threshold = 1.25
+	env.glow_intensity = 0.22 if is_swim else 0.22
+	env.glow_bloom = 0.05
+	env.glow_hdr_threshold = 1.35
 
 	env.fog_enabled = GameState.fog_enabled
 	env.fog_light_color = cfg.get("fog_color", Color(0.62, 0.78, 0.94))
@@ -252,51 +265,53 @@ func _setup_modern_environment(cfg: Dictionary) -> void:
 		env.fog_mode = Environment.FOG_MODE_DEPTH
 		env.fog_depth_begin = 11.2
 		env.fog_depth_end = 36.0
-		env.fog_density = 0.48
+		env.fog_density = 0.46
 		env.fog_sky_affect = 0.20
 	else:
 		env.fog_mode = Environment.FOG_MODE_EXPONENTIAL
-		env.fog_density = float(cfg.get("fog_density", 0.0011)) * (0.45 if current_level_id == "cave" else 0.68)
-		env.fog_sky_affect = 0.08 if is_graal else (0.24 if is_cave else 0.10)
+		var fog_scale := 0.22 if is_world_map else (0.40 if current_level_id == "cave" else 0.55)
+		env.fog_density = float(cfg.get("fog_density", 0.0010)) * fog_scale
+		env.fog_sky_affect = 0.06 if is_graal else (0.20 if is_cave else 0.08)
 
-	# Diskret volumetrisk tåke for lysstråler uten å bleke teksturene i forgrunnen!
+	# Diskret volumetrisk tåke kun i dype huler/bossrom
 	if GameState.volumetric_fog_enabled and (is_cave or is_graal or is_swim):
 		env.volumetric_fog_enabled = true
-		env.volumetric_fog_density = 0.0035 if is_swim else (0.0085 if current_level_id == "cave" else (0.015 if is_cave else 0.006))
-		env.volumetric_fog_albedo = Color(0.14, 0.66, 0.84) if is_swim else (Color(0.24, 0.85, 0.64) if "end" in current_level_id else Color(0.42, 0.38, 0.56))
+		env.volumetric_fog_density = 0.0030 if is_swim else (0.0065 if current_level_id == "cave" else (0.012 if is_cave else 0.005))
+		env.volumetric_fog_albedo = Color(0.14, 0.66, 0.84) if is_swim else (Color(0.24, 0.85, 0.64) if "end" in current_level_id else Color(0.44, 0.40, 0.54))
 		env.volumetric_fog_emission = Color(0.01, 0.08, 0.14) if is_swim else (Color(0.03, 0.15, 0.11) if "end" in current_level_id else Color(0.02, 0.02, 0.04))
-		env.volumetric_fog_emission_energy = 0.06 if is_swim else (0.22 if current_level_id == "cave" else (0.35 if is_cave else 0.20))
-		env.volumetric_fog_anisotropy = 0.68
+		env.volumetric_fog_emission_energy = 0.05 if is_swim else (0.18 if current_level_id == "cave" else (0.28 if is_cave else 0.16))
+		env.volumetric_fog_anisotropy = 0.65
 		env.volumetric_fog_length = 42.0 if is_swim else 55.0
 
 	env.adjustment_enabled = true
-	env.adjustment_contrast = 1.14
-	env.adjustment_saturation = 1.18
+	env.adjustment_brightness = 1.0
+	env.adjustment_contrast = 1.03
+	env.adjustment_saturation = 1.04
 
 	_env_node.environment = env
 	_world_root.add_child(_env_node)
 
-	# Hovedlys (skarp varm sol / sølvblått måneskinn / krystallklart undervannslys) med 4K skygger
+	# Hovedlys med ren skyggekvalitet og balansert eksponering
 	_sun_node = DirectionalLight3D.new()
 	if is_swim:
-		_sun_node.light_color = Color(0.80, 0.96, 1.0)
-		_sun_node.light_energy = 2.05
+		_sun_node.light_color = Color(0.82, 0.96, 1.0)
+		_sun_node.light_energy = 1.75
 	else:
-		_sun_node.light_color = cfg.get("sun_color", Color(1.0, 0.90, 0.68))
-		_sun_node.light_energy = float(cfg.get("sun_energy", 2.25)) * 1.08
+		_sun_node.light_color = cfg.get("sun_color", Color(1.0, 0.93, 0.78))
+		_sun_node.light_energy = float(cfg.get("sun_energy", 2.15)) * 0.86
 	_sun_node.shadow_enabled = true
-	_sun_node.shadow_blur = 1.6
+	_sun_node.shadow_blur = 1.4
 	_sun_node.directional_shadow_mode = DirectionalLight3D.SHADOW_PARALLEL_4_SPLITS
-	_sun_node.directional_shadow_max_distance = 220.0
+	_sun_node.directional_shadow_max_distance = 320.0 if is_world_map else 220.0
 	var sang: Vector3 = Vector3(-30.0, 18.0, 0.0) if is_swim else cfg.get("sun_angles", Vector3(-36.0, 36.0, 0.0))
 	_sun_node.rotation_degrees = sang
 	_world_root.add_child(_sun_node)
 
-	# Dempet motsatt Pixar-fyllbelysning (bevarer dype skygger og 3D-dybde!)
+	# Nøytral kald himmelfylling som løfter skyggedetaljer naturlig
 	if not is_cave:
 		var fill := DirectionalLight3D.new()
-		fill.light_color = Color(1.0, 0.60, 0.26) if is_graal else (Color(0.24, 0.72, 0.90) if is_swim else Color(0.36, 0.62, 1.0))
-		fill.light_energy = 0.24 if is_graal else (0.18 if is_swim else 0.26)
+		fill.light_color = Color(0.88, 0.62, 0.36) if is_graal else (Color(0.28, 0.72, 0.90) if is_swim else Color(0.54, 0.72, 0.98))
+		fill.light_energy = 0.24 if is_graal else (0.20 if is_swim else 0.28)
 		fill.shadow_enabled = false
 		fill.rotation_degrees = Vector3(-24.0, sang.y + 165.0, 0.0)
 		_world_root.add_child(fill)
@@ -408,7 +423,7 @@ func _load_level_geometry(w3d_name: String, water_y: float) -> AABB:
 
 				# Når vi har et eksakt 1:1 høydekart (.hm) + 3D spline-vegger, skal IKKE ujevne hule-/steinmesher blokkere Pinky!
 				var use_hm := (_heightmap != null and _heightmap.valid)
-				var is_walkable_deck := ("deck" in nm or "plank" in nm or "bridge" in nm or "pier" in nm or "dock" in nm or "gangway" in nm or "stair" in nm or "castlefloor" in nm) and not ("cave" in nm or "portal" in nm or "rock" in nm or "cliff" in nm or "mountain" in nm or "terrain" in nm or "wall" in nm)
+				var is_walkable_deck := ("deck" in nm or "plank" in nm or "bridge" in nm or "pier" in nm or "dock" in nm or "gangway" in nm or "stair" in nm or "castlefloor" in nm or "flyingcarpet" in nm or (current_level_id == "fatamorgana_city" and nm == "ground")) and not ("cave" in nm or "portal" in nm or "rock" in nm or "cliff" in nm or "mountain" in nm or "terrain" in nm or "wall" in nm)
 				if (not use_hm) or is_walkable_deck:
 					mi.create_trimesh_collision()
 				var aabb: AABB = mi.global_transform * mi.get_aabb()
@@ -426,7 +441,10 @@ func _load_level_geometry(w3d_name: String, water_y: float) -> AABB:
 				for mi2 in _find_all_meshes(inst):
 					var nm2 := mi2.name.to_lower()
 					if nm2 == "graalboss":
-						_graal_boss_mat = mi2.material_override if mi2.material_override else mi2.get_active_material(0)
+						_graal_boss_mats.clear()
+						var scnt := mi2.mesh.get_surface_count() if mi2.mesh else 0
+						for si in range(scnt):
+							_graal_boss_mats.append(mi2.get_active_material(si))
 					elif nm2 == "catapult":
 						_catapult_mat = mi2.material_override if mi2.material_override else mi2.get_active_material(0)
 
@@ -528,7 +546,7 @@ func _spawn_world_map_seabed() -> void:
 	var bed := MeshInstance3D.new()
 	bed.name = "WorldMapSeabed"
 	var pm := PlaneMesh.new()
-	pm.size = Vector2(900.0, 900.0)
+	pm.size = Vector2(2400.0, 2400.0)
 	bed.mesh = pm
 	bed.position = Vector3(0.0, -10.5, 0.0)
 	var mat := StandardMaterial3D.new()
@@ -542,12 +560,12 @@ func _spawn_modern_ocean(water_y: float, bounds: AABB, is_world_map: bool = fals
 	var water := MeshInstance3D.new()
 	water.name = "ModernOcean"
 	var pm := PlaneMesh.new()
-	var span: float = maxf(maxf(bounds.size.x, bounds.size.z) * 2.4, 520.0)
+	var span: float = maxf(maxf(bounds.size.x, bounds.size.z) * 2.4, 2200.0 if is_world_map else 560.0)
 	pm.size = Vector2(span, span)
-	pm.subdivide_width = 128
-	pm.subdivide_depth = 128
+	pm.subdivide_width = 160 if is_world_map else 128
+	pm.subdivide_depth = 160 if is_world_map else 128
 	water.mesh = pm
-	water.position = Vector3(bounds.get_center().x, water_y, bounds.get_center().z)
+	water.position = Vector3(0.0 if is_world_map else bounds.get_center().x, water_y, 0.0 if is_world_map else bounds.get_center().z)
 
 	var sm := ShaderMaterial.new()
 	sm.shader = OCEAN_SHADER
@@ -555,11 +573,11 @@ func _spawn_modern_ocean(water_y: float, bounds: AABB, is_world_map: bool = fals
 		sm.set_shader_parameter("deep_color", Color(0.015, 0.17, 0.36, 1.0))
 		sm.set_shader_parameter("mid_color", Color(0.02, 0.40, 0.56, 1.0))
 		sm.set_shader_parameter("shallow_color", Color(0.08, 0.72, 0.72, 1.0))
-		sm.set_shader_parameter("depth_fade", 3.2)
-		sm.set_shader_parameter("foam_width", 0.55)
-		sm.set_shader_parameter("wave_height", 0.22)
-		sm.set_shader_parameter("cloud_shadow_strength", 0.20)
-		sm.set_shader_parameter("sparkle_strength", 1.35)
+		sm.set_shader_parameter("depth_fade", 3.4)
+		sm.set_shader_parameter("foam_width", 0.52)
+		sm.set_shader_parameter("wave_height", 0.24)
+		sm.set_shader_parameter("cloud_shadow_strength", 0.16)
+		sm.set_shader_parameter("sparkle_strength", 1.15)
 	elif current_level_id == "fatamorgana_city":
 		sm.set_shader_parameter("deep_color", Color(0.02, 0.28, 0.44, 1.0))
 		sm.set_shader_parameter("mid_color", Color(0.04, 0.52, 0.62, 1.0))
@@ -567,9 +585,9 @@ func _spawn_modern_ocean(water_y: float, bounds: AABB, is_world_map: bool = fals
 		sm.set_shader_parameter("sun_dir", Vector3(0.62, 0.28, -0.74))
 		sm.set_shader_parameter("sun_tint", Color(1.0, 0.90, 0.58))
 		sm.set_shader_parameter("depth_fade", 3.6)
-		sm.set_shader_parameter("foam_width", 0.85)
+		sm.set_shader_parameter("foam_width", 0.80)
 		sm.set_shader_parameter("wave_height", 0.12)
-		sm.set_shader_parameter("sparkle_strength", 1.2)
+		sm.set_shader_parameter("sparkle_strength", 1.1)
 	else:
 		sm.set_shader_parameter("deep_color", Color(0.015, 0.16, 0.34, 1.0))
 		sm.set_shader_parameter("mid_color", Color(0.02, 0.38, 0.52, 1.0))
@@ -577,9 +595,9 @@ func _spawn_modern_ocean(water_y: float, bounds: AABB, is_world_map: bool = fals
 		sm.set_shader_parameter("sun_dir", Vector3(-0.52, 0.32, -0.78))
 		sm.set_shader_parameter("sun_tint", Color(1.0, 0.94, 0.72))
 		sm.set_shader_parameter("depth_fade", 4.2)
-		sm.set_shader_parameter("foam_width", 0.95)
+		sm.set_shader_parameter("foam_width", 0.90)
 		sm.set_shader_parameter("wave_height", 0.16)
-		sm.set_shader_parameter("sparkle_strength", 1.1)
+		sm.set_shader_parameter("sparkle_strength", 1.0)
 
 	water.material_override = sm
 	_world_root.add_child(water)
@@ -603,19 +621,19 @@ func _create_camera_rig() -> FollowCamera:
 
 	var arm := SpringArm3D.new()
 	arm.name = "SpringArm3D"
-	arm.spring_length = 9.5
+	arm.spring_length = 4.2
 	arm.collision_mask = 1
-	arm.margin = 0.65
+	arm.margin = 0.45
 	var arm_shape := SphereShape3D.new()
-	arm_shape.radius = 0.45
+	arm_shape.radius = 0.35
 	arm.shape = arm_shape
 	rig.add_child(arm)
 
 	var cam := Camera3D.new()
 	cam.name = "Camera3D"
-	cam.fov = 62.0
+	cam.fov = 56.0
 	cam.near = 0.15
-	cam.far = 600.0
+	cam.far = 900.0
 	cam.current = true
 	arm.add_child(cam)
 	return rig
@@ -641,28 +659,49 @@ func _find_player_spawn(level_id: String, gp_data: Dictionary, bounds: AABB) -> 
 			var gp: Array = n.get("godot_pos", [0, 0, 0])
 			var px := float(gp[0]) * WORLD_SCALE
 			var pz := float(gp[2]) * WORLD_SCALE
+			var py := float(gp[1]) * WORLD_SCALE
 			if _heightmap and _heightmap.valid:
 				var hy := _heightmap.sample_y(px, pz)
 				if hy > -5000.0:
 					return Vector3(px, hy + 0.05, pz)
-			var p := Vector3(px, float(gp[1]) * WORLD_SCALE + 2.0, pz)
+				# Brygger som stikker rett utenfor .hm-kant (f.eks. fatamorgana_city) kan raycastes eller bruke nærliggende bryggehøyde
+				var hit_edge := _raycast_ground(Vector3(px, maxf(py, 0.5) + 4.0, pz), bounds)
+				if hit_edge.y > -5000.0:
+					return hit_edge + Vector3(0.0, 0.05, 0.0)
+				for off in [Vector2(0, -3), Vector2(3, 0), Vector2(-3, 0), Vector2(0, 3)]:
+					var hy2 := _heightmap.sample_y(px + off.x, pz + off.y)
+					if hy2 > -5000.0:
+						return Vector3(px, maxf(py, hy2) + 0.05, pz)
+				return Vector3(px, maxf(py, 0.25) + 0.05, pz)
+			var p := Vector3(px, py + 2.0, pz)
 			var hit := _raycast_ground(p, bounds)
 			if hit.y > -5000.0:
 				return hit + Vector3(0.0, 0.05, 0.0)
+			return Vector3(px, maxf(py, 0.25), pz)
 	var center := bounds.get_center()
 	return _snap_to_surface(Vector3(center.x, bounds.position.y + bounds.size.y + 4.0, center.z), bounds) + Vector3(0.0, 0.05, 0.0)
 
 
+const WORLD_MAP_ISLANDS := [
+	{"name": "Abra Havn", "id": "abra", "pos": Vector3(220.0, 0.0, 130.0), "r": 24.0, "seed": 11, "theme": "harbor"},
+	{"name": "Gral", "id": "graal_mountain", "pos": Vector3(-195.0, 0.0, -195.0), "r": 26.0, "seed": 23, "theme": "castle"},
+	{"name": "Fata Morgana", "id": "fatamorgana_city", "pos": Vector3(245.0, 0.0, -145.0), "r": 24.5, "seed": 37, "theme": "desert"},
+	{"name": "Maga Khans øy", "id": "magakhan_beach", "pos": Vector3(-185.0, 0.0, 145.0), "r": 26.0, "seed": 53, "theme": "jungle"},
+	{"name": "Skattejakt-øya", "id": "treasurehunt", "pos": Vector3(10.0, 0.0, -25.0), "r": 18.5, "seed": 71, "theme": "palm"},
+]
+
+
+func _get_world_map_island_pos(level_id: String) -> Vector3:
+	for isl in WORLD_MAP_ISLANDS:
+		if str(isl["id"]) == level_id:
+			return isl["pos"]
+	return WORLD_MAP_ISLANDS[0]["pos"]
+
+
 func _build_world_map_islands() -> void:
-	# Moderne animasjonsspill-øyer med synkrone steinnormaler, skulpturerte klippeterrasser og håndlagde landemerker!
+	# Moderne animasjonsspill-øyer fordelt utover et stort åpent karibisk hav (200-440m mellom øyene)!
 	var active_story_id := GameState.get_active_story_island()
-	var islands := [
-		{"name": "Abra Havn", "id": "abra", "pos": Vector3(-29.0, 0.0, 18.0), "r": 13.8, "seed": 11, "theme": "harbor"},
-		{"name": "Gral", "id": "graal_mountain", "pos": Vector3(-25.0, 0.0, -17.5), "r": 14.5, "seed": 23, "theme": "castle"},
-		{"name": "Fata Morgana", "id": "fatamorgana_city", "pos": Vector3(29.0, 0.0, -16.0), "r": 14.0, "seed": 37, "theme": "desert"},
-		{"name": "Maga Khans øy", "id": "magakhan_beach", "pos": Vector3(32.0, 0.0, 18.5), "r": 14.8, "seed": 53, "theme": "jungle"},
-		{"name": "Skattejakt-øya", "id": "treasurehunt", "pos": Vector3(2.0, 0.0, -29.0), "r": 10.5, "seed": 71, "theme": "palm"},
-	]
+	var islands := WORLD_MAP_ISLANDS
 
 	# Synkron prosedyrell støy- og normaltekstur (100% klar allerede på bilde 1!)
 	var micro_noise := FastNoiseLite.new()
@@ -708,13 +747,16 @@ func _build_world_map_islands() -> void:
 		# Dekorer øya med eksakt terrenghøyde (null nedsunkne hus!), brygger, klippesteiner, busker, palmer og landemerker!
 		VisualEnhancer.decorate_world_map_island(root, r, theme, seed_v, is_active, height_fn)
 
-		# Navneskilt over øya
+		# Navneskilt over øya (vises tydelig når man seiler i nærheten av øya)
 		var lbl := Label3D.new()
 		lbl.text = str(isl["name"]) + (" ★" if is_active else ("" if unlocked else " (Låst)"))
-		lbl.position = Vector3(0.0, 14.5, 0.0)
+		lbl.position = Vector3(0.0, 22.0, 0.0)
 		lbl.billboard = BaseMaterial3D.BILLBOARD_ENABLED
-		lbl.font_size = 64
-		lbl.outline_size = 16
+		lbl.font_size = 76
+		lbl.outline_size = 18
+		lbl.visibility_range_begin = 0.0
+		lbl.visibility_range_end = 180.0
+		lbl.visibility_range_fade_mode = GeometryInstance3D.VISIBILITY_RANGE_FADE_SELF
 		lbl.modulate = Color(1.0, 0.90, 0.44) if is_active else (Color(0.96, 0.94, 0.86) if unlocked else Color(0.65, 0.68, 0.74))
 		root.add_child(lbl)
 
@@ -723,7 +765,7 @@ func _build_world_map_islands() -> void:
 		portal.is_world_map_buoy = true
 		portal.target_level_id = isl_id if unlocked else active_story_id
 		portal.portal_label = "Gå i land: " + str(isl["name"])
-		portal.position = (isl["pos"] as Vector3) + Vector3(0.0, 0.25, r * 0.95 + 2.8)
+		portal.position = (isl["pos"] as Vector3) + Vector3(0.0, 0.25, r * 0.95 + 4.5)
 		_world_root.add_child(portal)
 
 	# 1:1 original dykkebøye ute på havet (world_map_underwater1..10 skipsvrak-dykk i 2D!)
@@ -731,19 +773,20 @@ func _build_world_map_islands() -> void:
 	dive_buoy.is_world_map_buoy = true
 	dive_buoy.target_level_id = "world_map_underwater"
 	dive_buoy.portal_label = "Dykk til skipsvraket (2D)"
-	dive_buoy.position = Vector3(-9.5, 0.25, 11.5)
+	dive_buoy.position = Vector3(115.0, 0.25, 48.0)
 	_world_root.add_child(dive_buoy)
 
-	# Plasser 2 originale patruljerende og senkbare fiendeskip fra world_map.glb ute på havet!
+	# Plasser originale patruljerende og senkbare fiendeskip fra world_map.glb langs havrutene!
 	if ResourceLoader.exists("res://assets/levels/world_map.glb"):
 		var sc := load("res://assets/levels/world_map.glb") as PackedScene
 		if sc:
 			for sp_info in [
-				[Vector3(17.5, 0.0, -2.5), -0.6],
-				[Vector3(-15.5, 0.0, -5.5), 1.1],
+				[Vector3(105.0, 0.0, -45.0), -0.6],
+				[Vector3(-85.0, 0.0, 20.0), 1.1],
+				[Vector3(-75.0, 0.0, -110.0), 2.2],
 			]:
 				var ship_vis := sc.instantiate()
-				ship_vis.scale = Vector3.ONE * 0.42
+				ship_vis.scale = Vector3.ONE * 0.46
 				for mi in _find_all_meshes(ship_vis):
 					var nm := mi.name.to_lower()
 					mi.visible = (nm in ["enemyship", "enemyrailing"])
@@ -956,6 +999,7 @@ func _populate_entities(level_id: String, cfg: Dictionary, gp_data: Dictionary, 
 			continue
 
 		occupied_positions.append(pos)
+		var orig_yaw := float(n.get("godot_yaw", 0.0))
 		if matched_role["role"] == "npc":
 			var npc: NpcActor = NPC_SCRIPT.new()
 			npc.npc_id = key
@@ -963,9 +1007,10 @@ func _populate_entities(level_id: String, cfg: Dictionary, gp_data: Dictionary, 
 			npc.model_resource = matched_role["model"]
 			npc.reward_coins = int(matched_role.get("coins", 5))
 			npc.heightmap_sampler = hm_cb
+			npc.initial_yaw = orig_yaw
 			npc.position = pos
 			_world_root.add_child(npc)
-			if pos.distance_to(spawn_pos) < 18.0:
+			if absf(orig_yaw) < 0.001 and pos.distance_to(spawn_pos) < 12.0 and not (level_id in ["fatamorgana_city"]):
 				npc.face_toward(spawn_pos)
 			_actors_by_name[key] = npc
 			var base_k := str(matched_role["model"])
@@ -983,6 +1028,7 @@ func _populate_entities(level_id: String, cfg: Dictionary, gp_data: Dictionary, 
 			enemy.passive_until_hit = ("onlyguard" in str(n.get("userdata", "")).to_lower())
 			enemy.coin_drop = 25 if enemy.is_boss else 5
 			enemy.heightmap_sampler = hm_cb
+			enemy.initial_yaw = orig_yaw
 			enemy.position = pos
 			_world_root.add_child(enemy)
 			_actors_by_name[key] = enemy
@@ -1194,9 +1240,10 @@ func _spawn_graal_boss_arena(gp_data: Dictionary, bounds: AABB, _spawn_pos: Vect
 	if _graal_boss_mesh:
 		var dmi := MeshInstance3D.new()
 		dmi.mesh = _graal_boss_mesh
-		if _graal_boss_mat:
-			dmi.material_override = _graal_boss_mat
-		dmi.scale = Vector3.ONE * 1.32
+		for si in range(mini(_graal_boss_mesh.get_surface_count(), _graal_boss_mats.size())):
+			if _graal_boss_mats[si]:
+				dmi.set_surface_override_material(si, _graal_boss_mats[si])
+		dmi.scale = Vector3.ONE * 1.15
 		dragon_vis.add_child(dmi)
 	else:
 		var dmi := MeshInstance3D.new()
@@ -1269,20 +1316,6 @@ func _spawn_graal_boss_arena(gp_data: Dictionary, bounds: AABB, _spawn_pos: Vect
 		if look_dir.length() > 0.1:
 			cvis.rotation.y = atan2(-look_dir.x, -look_dir.z)
 		cat.add_child(cvis)
-
-		var ring := MeshInstance3D.new()
-		var tm := TorusMesh.new()
-		tm.inner_radius = 1.35
-		tm.outer_radius = 1.65
-		ring.mesh = tm
-		ring.position.y = 0.08
-		var rmat := StandardMaterial3D.new()
-		rmat.albedo_color = Color(1.0, 0.78, 0.22)
-		rmat.emission_enabled = true
-		rmat.emission = Color(1.0, 0.68, 0.12)
-		rmat.emission_energy_multiplier = 2.0
-		ring.material_override = rmat
-		cat.add_child(ring)
 
 		var state := {"ready_ms": 0}
 		var fire_cb := func(_p = null):

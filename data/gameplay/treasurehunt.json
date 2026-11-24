@@ -15,7 +15,8 @@
         -36.531,
         0.0,
         -51.292
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "character_treasureseeker",
@@ -31,7 +32,8 @@
         0.369,
         0.0,
         -1.107
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "behaviour",
@@ -47,7 +49,8 @@
         -72.694,
         0.0,
         -100.738
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "character_sabeltann",
@@ -63,7 +66,8 @@
         -18.888,
         0.0,
         -4.797
-      ]
+      ],
+      "godot_yaw": -1.8987
     },
     {
       "name": "puzzlecam",
@@ -79,7 +83,8 @@
         3.663,
         43.373,
         31.541
-      ]
+      ],
+      "godot_yaw": 0.3237
     },
     {
       "name": "treasureseekgame",
@@ -95,7 +100,8 @@
         57.912,
         0.0,
         -74.747
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "puzzlecam.Target",
@@ -111,7 +117,8 @@
         -7.539,
         41.156,
         -1.845
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "offset_treasurehunt1",
@@ -127,7 +134,8 @@
         111.806,
         0.0,
         -46.656
-      ]
+      ],
+      "godot_yaw": -1.2984
     },
     {
       "name": "offset_treasurehunt2",
@@ -143,7 +151,8 @@
         108.777,
         0.0,
         117.47
-      ]
+      ],
+      "godot_yaw": -3.0779
     },
     {
       "name": "offset_treasurehunt4",
@@ -159,7 +168,8 @@
         -62.109,
         0.0,
         74.521
-      ]
+      ],
+      "godot_yaw": -1.1992
     },
     {
       "name": "offset_treasurehunt3",
@@ -175,7 +185,8 @@
         99.75,
         0.0,
         111.152
-      ]
+      ],
+      "godot_yaw": 0.2763
     },
     {
       "name": "offset_treasurehunt5",
@@ -191,7 +202,8 @@
         -1.005,
         0.0,
         140.622
-      ]
+      ],
+      "godot_yaw": 0.2763
     },
     {
       "name": "offset_treasurehunt6",
@@ -207,7 +219,8 @@
         9.127,
         0.0,
         146.4
-      ]
+      ],
+      "godot_yaw": -0.7847
     },
     {
       "name": "offset_treasurehunt8",
@@ -223,7 +236,8 @@
         54.665,
         0.0,
         166.922
-      ]
+      ],
+      "godot_yaw": -1.991
     },
     {
       "name": "offset_treasurehunt7",
@@ -239,7 +253,8 @@
         66.17,
         0.0,
         182.964
-      ]
+      ],
+      "godot_yaw": -1.8109
     },
     {
       "name": "defaultview",
@@ -255,7 +270,8 @@
         4.919,
         -2.0,
         27.82
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Default MAX Light",
@@ -271,7 +287,8 @@
         4.919,
         -2.0,
         27.82
-      ]
+      ],
+      "godot_yaw": -0.0
     }
   ],
   "skeletons": [],

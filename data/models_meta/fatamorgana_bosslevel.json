@@ -15,7 +15,8 @@
         0.0,
         10.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "fatamorgana_boss",
@@ -31,7 +32,8 @@
         0.0,
         14.974,
         5.39
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "fatamorgana_boss_proxy",
@@ -47,7 +49,8 @@
         0.0,
         6.958,
         0.136
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "hiddenassets",
@@ -63,7 +66,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "userdata",
@@ -79,7 +83,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"fatamorgana_boss_die\", #startxform: [#position: vector( 0.0000, -6.2638, 14.0536 ), #rotation: vector( 0.0000 ",
@@ -95,7 +100,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz, 0.0000, 0.0000 )]] ",
@@ -111,7 +117,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"fatamorgana_boss_hitvase\", #startxform: [#position: vector( 0.0000, -5.3904, 14.9744 ), #rotation: vector( 0. ",
@@ -127,7 +134,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0000, 0.0000, 0.0000 )], #relocating: \"1\"] ",
@@ -143,7 +151,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"fatamorgana_boss_intro\", #startxform: [#position: vector( -155.9043, 70.4798, 14.9744 ), #rotation: vector( 0 ",
@@ -159,7 +168,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz.0000, 0.0000, -90.0000 )], #startatoriginalmotionstartposition: \"1\", #relocating: \"1\"] ",
@@ -175,7 +185,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"fatamorgana_boss_run\", #startxform: [#position: vector( 0.0000, -5.3904, 14.9744 ), #rotation: vector( 0.0000 ",
@@ -191,7 +202,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz, 0.0000, 0.0000 )], #distancepercycle: \"285.572\", #minimumspeed: \"0.1\", #maximumspeed: \"1\", #foot1up: \" 0->32\"] ",
@@ -207,7 +219,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"fatamorgana_boss_stand\", #startxform: [#position: vector( 0.0000, -6.2638, 14.0536 ), #rotation: vector( 0.00 ",
@@ -223,7 +236,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz00, 0.0000, 0.0000 )]] ",
@@ -239,7 +253,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"fatamorgana_boss_walk\", #startxform: [#position: vector( 0.0000, -5.3904, 14.9744 ), #rotation: vector( 0.000 ",
@@ -255,7 +270,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0, 0.0000, 0.0000 )], #distancepercycle: \"285.572\", #minimumspeed: \"0.1\", #maximumspeed: \"1\", #foot1up: \" 0->32\"] ",
@@ -271,7 +287,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Particle View 01",
@@ -287,7 +304,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "bossroom",
@@ -303,7 +321,8 @@
         19.053,
         88.862,
         -95.846
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "MapExportCamera",
@@ -319,7 +338,8 @@
         -7.728,
         682.206,
         -71.315
-      ]
+      ],
+      "godot_yaw": -0.001
     },
     {
       "name": "MapExportCamera.Target",
@@ -335,7 +355,8 @@
         -7.792,
         119.045,
         -71.315
-      ]
+      ],
+      "godot_yaw": 0.0
     },
     {
       "name": "foginfo",
@@ -351,7 +372,8 @@
         3.164,
         -44.467,
         806.088
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "scene_light",
@@ -367,7 +389,8 @@
         548.464,
         854.071,
         -464.12
-      ]
+      ],
+      "godot_yaw": 2.1938
     },
     {
       "name": "scene_light.Target",
@@ -383,7 +406,8 @@
         -0.0,
         -71.871,
         -70.085
-      ]
+      ],
+      "godot_yaw": 0.0
     },
     {
       "name": "door1_1",
@@ -399,7 +423,8 @@
         -17.634,
         -0.427,
         158.627
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "door1_2",
@@ -415,7 +440,8 @@
         22.072,
         -0.427,
         158.627
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "mk_flame_05",
@@ -431,7 +457,8 @@
         27.088,
         2.422,
         138.678
-      ]
+      ],
+      "godot_yaw": 3.1416
     },
     {
       "name": "mk_flame_06",
@@ -447,7 +474,8 @@
         -21.106,
         2.422,
         138.678
-      ]
+      ],
+      "godot_yaw": 3.1416
     },
     {
       "name": "mk_flame_07",
@@ -463,7 +491,8 @@
         -21.106,
         2.422,
         49.884
-      ]
+      ],
+      "godot_yaw": 3.1416
     },
     {
       "name": "mk_flame_08",
@@ -479,7 +508,8 @@
         26.895,
         2.422,
         49.884
-      ]
+      ],
+      "godot_yaw": 3.1416
     },
     {
       "name": "mk_flame_29",
@@ -495,7 +525,8 @@
         -84.507,
         30.007,
         -275.575
-      ]
+      ],
+      "godot_yaw": 3.1416
     },
     {
       "name": "mk_flame_30",
@@ -511,7 +542,8 @@
         -154.361,
         30.007,
         -237.644
-      ]
+      ],
+      "godot_yaw": 3.1416
     },
     {
       "name": "mk_flame_31",
@@ -527,7 +559,8 @@
         -154.361,
         30.007,
         -160.008
-      ]
+      ],
+      "godot_yaw": 3.1416
     },
     {
       "name": "mk_flame_32",
@@ -543,7 +576,8 @@
         -154.361,
         30.007,
         -89.553
-      ]
+      ],
+      "godot_yaw": 3.1416
     },
     {
       "name": "mk_flame_33",
@@ -559,7 +593,8 @@
         -154.361,
         30.007,
         -21.968
-      ]
+      ],
+      "godot_yaw": 3.1416
     },
     {
       "name": "mk_flame_34",
@@ -575,7 +610,8 @@
         -84.455,
         30.007,
         16.158
-      ]
+      ],
+      "godot_yaw": 3.1416
     },
     {
       "name": "mk_flame_35",
@@ -591,7 +627,8 @@
         101.913,
         30.007,
         16.158
-      ]
+      ],
+      "godot_yaw": 3.1416
     },
     {
       "name": "mk_flame_36",
@@ -607,7 +644,8 @@
         161.799,
         30.007,
         -21.863
-      ]
+      ],
+      "godot_yaw": 3.1416
     },
     {
       "name": "mk_flame_37",
@@ -623,7 +661,8 @@
         161.799,
         30.007,
         -89.558
-      ]
+      ],
+      "godot_yaw": 3.1416
     },
     {
       "name": "mk_flame_38",
@@ -639,7 +678,8 @@
         161.799,
         30.007,
         -159.994
-      ]
+      ],
+      "godot_yaw": 3.1416
     },
     {
       "name": "mk_flame_39",
@@ -655,7 +695,8 @@
         161.799,
         30.007,
         -237.587
-      ]
+      ],
+      "godot_yaw": 3.1416
     },
     {
       "name": "mk_flame_40",
@@ -671,7 +712,8 @@
         101.958,
         30.007,
         -275.593
-      ]
+      ],
+      "godot_yaw": 3.1416
     },
     {
       "name": "light_smoke_1",
@@ -687,7 +729,8 @@
         37.232,
         173.511,
         -126.451
-      ]
+      ],
+      "godot_yaw": -3.1416
     },
     {
       "name": "door_right",
@@ -703,7 +746,8 @@
         20.721,
         123.314,
         6.909
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "door_left",
@@ -719,7 +763,8 @@
         -16.478,
         123.314,
         6.701
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pinky_intro\", #startxform: [#position: vector( -1.5990, 23.6754, 7.0478 ), #rotation: vector( 0.0000, 0.0000, ",
@@ -735,7 +780,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz 0.0000 )], #startatoriginalmotionstartposition: \"1\", #relocating: \"1\"] ",
@@ -751,7 +797,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"door_right\", #startxform: [#position: vector( 20.7207, -6.9094, 123.3141 ), #rotation: vector( 0.0000, 0.0000 ",
@@ -767,7 +814,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz, 0.0000 )]] ",
@@ -783,7 +831,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"door_left\", #startxform: [#position: vector( -16.4782, -6.7007, 123.3141 ), #rotation: vector( 0.0000, 0.0000 ",
@@ -799,7 +848,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz, 0.0000 )]]  ",
@@ -815,7 +865,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"vase_piece_00\", #startxform: [#position: vector( -0.3883, -0.3240, 2.7125 ), #rotation: vector( 0.0000, 0.000 ",
@@ -831,7 +882,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0, 0.0000 )]] ",
@@ -847,7 +899,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"vase_piece_01\", #startxform: [#position: vector( 1.3787, 5.5030, 13.2681 ), #rotation: vector( 0.0000, 0.0000 ",
@@ -863,7 +916,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz, 0.0000 )]]   ",
@@ -879,7 +933,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"vase_piece_02\", #startxform: [#position: vector( 2.0913, -3.5471, 4.0717 ), #rotation: vector( 0.0000, 0.0000 ",
@@ -895,7 +950,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz, 0.0000 )]]    ",
@@ -911,7 +967,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"vase_piece_03\", #startxform: [#position: vector( 2.0601, -3.5009, 23.0282 ), #rotation: vector( 0.0000, 0.000 ",
@@ -927,7 +984,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0, 0.0000 )]]  ",
@@ -943,7 +1001,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"vase_piece_04\", #startxform: [#position: vector( -4.9083, 0.0000, 23.5805 ), #rotation: vector( 0.0000, 0.000 ",
@@ -959,7 +1018,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0, 0.0000 )]]   ",
@@ -975,7 +1035,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"vase_piece_05\", #startxform: [#position: vector( 2.0913, 3.5963, 22.6025 ), #rotation: vector( 0.0000, 0.0000 ",
@@ -991,7 +1052,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz, 0.0000 )]]     ",
@@ -1007,7 +1069,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"vase_piece_06\", #startxform: [#position: vector( 6.6110, 3.9447, 14.7589 ), #rotation: vector( 0.0000, 0.0000 ",
@@ -1023,7 +1086,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz, 0.0000 )]]      ",
@@ -1039,7 +1103,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"vase_piece_07\", #startxform: [#position: vector( 1.7007, 3.5999, 4.9696 ), #rotation: vector( 0.0000, 0.0000, ",
@@ -1055,7 +1120,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz 0.0000 )]] ",
@@ -1071,7 +1137,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"vase_piece_08\", #startxform: [#position: vector( 0.0000, 7.3110, 16.1472 ), #rotation: vector( 0.0000, 0.0000 ",
@@ -1087,7 +1154,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz, 0.0000 )]]       ",
@@ -1103,7 +1171,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"vase_piece_09\", #startxform: [#position: vector( -5.5832, -1.6889, 6.3989 ), #rotation: vector( 0.0000, 0.000 ",
@@ -1119,7 +1188,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0, 0.0000 )]]    ",
@@ -1135,7 +1205,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"vase_piece_10\", #startxform: [#position: vector( -6.5680, -3.9104, 14.7589 ), #rotation: vector( 0.0000, 0.00 ",
@@ -1151,7 +1222,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz00, 0.0000 )]] ",
@@ -1167,7 +1239,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"vase_piece_11\", #startxform: [#position: vector( -0.5484, -6.1427, 14.7589 ), #rotation: vector( 0.0000, 0.00 ",
@@ -1183,7 +1256,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz00, 0.0000 )]]  ",
@@ -1199,7 +1273,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"vase_piece_12\", #startxform: [#position: vector( -6.5885, 3.9688, 13.3998 ), #rotation: vector( 0.0000, 0.000 ",
@@ -1215,7 +1290,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0, 0.0000 )]]     ",
@@ -1231,7 +1307,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"vase_piece_13\", #startxform: [#position: vector( 2.0096, -4.7015, 14.7589 ), #rotation: vector( 0.0000, 0.000 ",
@@ -1247,7 +1324,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0, 0.0000 )]]      ",
@@ -1263,7 +1341,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"vase_piece_14\", #startxform: [#position: vector( 7.2149, -2.6561, 14.7589 ), #rotation: vector( 0.0000, 0.000 ",
@@ -1279,7 +1358,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0, 0.0000 )]]       ",
@@ -1295,7 +1375,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"vase_piece_15\", #startxform: [#position: vector( -0.0001, 0.0000, 24.9912 ), #rotation: vector( 0.0000, 0.000 ",
@@ -1311,7 +1392,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0, 0.0000 )]]        ",
@@ -1327,7 +1409,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "vase",
@@ -1343,7 +1426,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "vase_piece_00",
@@ -1359,7 +1443,8 @@
         -0.388,
         2.713,
         0.324
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "vase_piece_01",
@@ -1375,7 +1460,8 @@
         1.379,
         13.268,
         -5.503
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "vase_piece_02",
@@ -1391,7 +1477,8 @@
         2.091,
         4.072,
         3.547
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "vase_piece_03",
@@ -1407,7 +1494,8 @@
         2.06,
         23.028,
         3.501
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "vase_piece_04",
@@ -1423,7 +1511,8 @@
         -4.908,
         23.581,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "vase_piece_05",
@@ -1439,7 +1528,8 @@
         2.091,
         22.603,
         -3.596
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "vase_piece_06",
@@ -1455,7 +1545,8 @@
         6.611,
         14.759,
         -3.945
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "vase_piece_07",
@@ -1471,7 +1562,8 @@
         1.701,
         4.97,
         -3.6
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "vase_piece_08",
@@ -1487,7 +1579,8 @@
         -0.0,
         16.147,
         -7.311
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "vase_piece_09",
@@ -1503,7 +1596,8 @@
         -5.583,
         6.399,
         1.689
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "vase_piece_10",
@@ -1519,7 +1613,8 @@
         -6.568,
         14.759,
         3.91
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "vase_piece_11",
@@ -1535,7 +1630,8 @@
         -0.548,
         14.759,
         6.143
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "vase_piece_12",
@@ -1551,7 +1647,8 @@
         -6.588,
         13.4,
         -3.969
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "vase_piece_13",
@@ -1567,7 +1664,8 @@
         2.01,
         14.759,
         4.701
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "vase_piece_14",
@@ -1583,7 +1681,8 @@
         7.215,
         14.759,
         2.656
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "vase_piece_15",
@@ -1599,7 +1698,8 @@
         -0.0,
         24.991,
         0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "vase_impostor",
@@ -1615,7 +1715,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "TestLight",
@@ -1631,7 +1732,8 @@
         0.0,
         10.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     }
   ],
   "skeletons": [],

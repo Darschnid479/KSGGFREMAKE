@@ -140,6 +140,8 @@ def parse_w3d_nodes(path: Path):
         wm = get_world_mat(k)
         # Convert Shockwave Z-up (X, Y, Z) to Godot Y-up: (X, Z, -Y)
         sx, sy, sz = wm[12], wm[13], wm[14]
+        fwd_x, fwd_z = wm[4], -wm[5]
+        godot_yaw = math.atan2(-fwd_x, -fwd_z) if (abs(fwd_x) > 1e-4 or abs(fwd_z) > 1e-4) else 0.0
         result_nodes.append({
             "name": n["name"],
             "kind": n["kind"],
@@ -147,6 +149,7 @@ def parse_w3d_nodes(path: Path):
             "userdata": n["userdata"],
             "sw_pos": [round(sx, 3), round(sy, 3), round(sz, 3)],
             "godot_pos": [round(sx, 3), round(sz, 3), round(-sy, 3)],
+            "godot_yaw": round(godot_yaw, 4),
         })
 
     return {

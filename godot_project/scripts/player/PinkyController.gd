@@ -2,10 +2,10 @@ extends CharacterBody3D
 class_name PinkyController
 ## Spillerkontroll for Pinky (port av characterManager_pinky.ls + BehaviourManualControl.ls).
 
-@export var walk_speed: float = 7.5
-@export var sprint_speed: float = 12.0
-@export var jump_velocity: float = 8.2
-@export var gravity: float = 22.0
+@export var walk_speed: float = 3.6
+@export var sprint_speed: float = 5.4
+@export var jump_velocity: float = 6.8
+@export var gravity: float = 20.0
 @export var is_swimming: bool = false
 
 var camera_rig: FollowCamera
@@ -16,7 +16,7 @@ var is_pushing: bool = false
 var _animator: CharacterAnimator
 var _spline_pts: Array[Vector3] = []
 var _spline_idx: int = 0
-var _spline_speed: float = 4.2
+var _spline_speed: float = 3.0
 var _spline_cb: Callable
 var _attack_cooldown: float = 0.0
 var _swing_timer: float = 0.0
@@ -80,32 +80,31 @@ func _setup_visuals() -> void:
 	else:
 		_build_fallback_pinky()
 
-	# Sjørøversabel holdt tydelig og FREMOVER i Pinkys høyre hånd (klar til å slå katapulten og fiender!)
+	# Sjørøversabel med realistisk slank, buet stål-klinge (ikke hvit lysende firkantpinne!)
 	_sword_pivot = Node3D.new()
-	_sword_pivot.position = Vector3(0.32, 0.90, -0.20)
-	_sword_pivot.rotation_degrees = Vector3(22.0, -24.0, -14.0)
+	_sword_pivot.position = Vector3(0.32, 0.88, -0.18)
+	_sword_pivot.rotation_degrees = Vector3(18.0, -20.0, -12.0)
 	_visual_root.add_child(_sword_pivot)
 
 	_sword_mesh = MeshInstance3D.new()
 	var blade := BoxMesh.new()
-	blade.size = Vector3(0.032, 0.092, 0.88)
+	blade.size = Vector3(0.014, 0.052, 0.72)
 	_sword_mesh.mesh = blade
-	_sword_mesh.position = Vector3(0.0, 0.02, -0.48)
+	_sword_mesh.position = Vector3(0.0, 0.01, -0.38)
 	var mat := StandardMaterial3D.new()
-	mat.albedo_color = Color(0.92, 0.95, 1.0)
-	mat.metallic = 0.94
-	mat.roughness = 0.14
-	mat.rim_enabled = true
-	mat.rim = 0.55
+	mat.albedo_color = Color(0.46, 0.50, 0.56)
+	mat.metallic = 0.82
+	mat.roughness = 0.30
+	mat.rim_enabled = false
 	_sword_mesh.material_override = mat
 	_sword_pivot.add_child(_sword_mesh)
 
 	# Spiss sabeltupp fremover
 	var tip := MeshInstance3D.new()
 	var tip_m := PrismMesh.new()
-	tip_m.size = Vector3(0.032, 0.22, 0.092)
+	tip_m.size = Vector3(0.014, 0.16, 0.052)
 	tip.mesh = tip_m
-	tip.position = Vector3(0.0, 0.0, -0.52)
+	tip.position = Vector3(0.0, 0.0, -0.44)
 	tip.rotation_degrees = Vector3(-90.0, 0.0, 0.0)
 	tip.material_override = mat
 	_sword_mesh.add_child(tip)
@@ -226,21 +225,21 @@ func _on_weapon_changed(weapon_id: String) -> void:
 	if mat:
 		match weapon_id:
 			"woodensword":
-				mat.albedo_color = Color(0.58, 0.38, 0.20)
-				mat.metallic = 0.05
-				mat.roughness = 0.78
+				mat.albedo_color = Color(0.48, 0.31, 0.16)
+				mat.metallic = 0.04
+				mat.roughness = 0.80
 			"goldsword":
-				mat.albedo_color = Color(1.0, 0.82, 0.22)
-				mat.metallic = 0.92
-				mat.roughness = 0.18
+				mat.albedo_color = Color(0.82, 0.64, 0.20)
+				mat.metallic = 0.85
+				mat.roughness = 0.28
 			"rapier":
-				mat.albedo_color = Color(0.92, 0.95, 1.0)
-				mat.metallic = 0.96
-				mat.roughness = 0.12
+				mat.albedo_color = Color(0.58, 0.62, 0.68)
+				mat.metallic = 0.84
+				mat.roughness = 0.26
 			_:
-				mat.albedo_color = Color(0.80, 0.84, 0.90)
-				mat.metallic = 0.82
-				mat.roughness = 0.25
+				mat.albedo_color = Color(0.46, 0.50, 0.56)
+				mat.metallic = 0.72
+				mat.roughness = 0.30
 	if is_instance_valid(_lamp_light):
 		_lamp_light.visible = GameState.lamp_enabled
 
@@ -356,21 +355,14 @@ func _physics_process(delta: float) -> void:
 		hm_floor_y = heightmap_sampler.call(global_position)
 	var grounded := is_on_floor() or (hm_floor_y > -5000.0 and global_position.y <= hm_floor_y + 0.16 and velocity.y <= 0.1)
 
-	# 1. Original 1:1 hopp ved kant-kollisjon: hold piltast / WASD mot kanten så hopper Pinky over med animasjon!
-	if grounded and not input_locked and _leap_cooldown <= 0.0 and move_dir.length_squared() > 0.05:
-		if _try_directional_edge_leap(move_dir, delta):
-			return
-	else:
-		_edge_push_timer = 0.0
-
 	if is_swimming:
 		spd *= 0.72
 		var vy := 0.0
 		if not input_locked:
 			if Input.is_action_pressed("jump"):
-				vy = 5.0
+				vy = 4.2
 			elif Input.is_key_pressed(KEY_CTRL):
-				vy = -5.0
+				vy = -4.2
 		velocity = velocity.lerp(Vector3(move_dir.x * spd, vy, move_dir.z * spd), delta * 6.0)
 	else:
 		velocity.x = lerp(velocity.x, move_dir.x * spd, delta * 12.0)
@@ -384,7 +376,7 @@ func _physics_process(delta: float) -> void:
 				velocity.z = 0.0
 		if grounded:
 			if not input_locked and Input.is_action_just_pressed("jump"):
-				if _try_nearby_leap(move_dir):
+				if _leap_cooldown <= 0.0 and _try_nearby_leap(move_dir):
 					return
 				velocity.y = jump_velocity
 				grounded = false
@@ -441,56 +433,16 @@ func _physics_process(delta: float) -> void:
 
 	# Roter Pinky mykt mot bevegelsesretning (-Z fremover!) + ekte skjelett-animasjoner!
 	var horiz_speed := Vector2(velocity.x, velocity.z).length()
-	if horiz_speed > 0.35 and move_dir.length_squared() > 0.001 and is_instance_valid(_visual_root):
+	if horiz_speed > 0.30 and move_dir.length_squared() > 0.001 and is_instance_valid(_visual_root):
 		var target_yaw := atan2(-move_dir.x, -move_dir.z)
 		_visual_root.rotation.y = lerp_angle(_visual_root.rotation.y, target_yaw, delta * 12.0)
 		_step_timer -= delta
 		if _step_timer <= 0.0 and grounded:
-			_step_timer = 0.34 if horiz_speed < 8.0 else 0.24
+			_step_timer = 0.42 if horiz_speed < 4.2 else 0.30
 			AudioManager.play_sfx("step", 0.18)
 
 	if is_instance_valid(_animator):
 		_animator.update_anim(delta, horiz_speed, grounded or is_swimming, is_talking, is_pushing, GameState.health <= 0.0)
-
-
-func _try_directional_edge_leap(move_dir: Vector3, delta: float) -> bool:
-	var inp := Vector2(move_dir.x, move_dir.z)
-	if inp.length_squared() < 0.01:
-		_edge_push_timer = 0.0
-		return false
-	inp = inp.normalized()
-
-	var best: Node = null
-	var best_score := -1.0
-	for node in get_tree().get_nodes_in_group("leap_interactable"):
-		if not (node is Node3D) or not node.has_meta("leap_dest"):
-			continue
-		var np := (node as Node3D).global_position
-		if absf(np.y - global_position.y) > 1.8:
-			continue
-		var dist_xz := Vector2(np.x - global_position.x, np.z - global_position.z).length()
-		var max_edge_d := 2.25 if is_on_wall() else 1.25
-		if dist_xz > max_edge_d:
-			continue
-		var dest: Vector3 = node.get_meta("leap_dest")
-		var to_dest := Vector2(dest.x - global_position.x, dest.z - global_position.z)
-		if to_dest.length() < 0.25:
-			continue
-		var dir_dot := inp.dot(to_dest.normalized())
-		if dir_dot > 0.55 and (is_on_wall() or dist_xz <= 1.25):
-			var score := dir_dot * 2.0 - dist_xz * 0.4
-			if score > best_score:
-				best_score = score
-				best = node
-	if best and best.has_method("interact"):
-		_edge_push_timer += delta
-		if is_on_wall() or _edge_push_timer >= 0.06:
-			_edge_push_timer = 0.0
-			best.interact(self)
-			return true
-	else:
-		_edge_push_timer = 0.0
-	return false
 
 
 func _try_nearby_leap(move_dir: Vector3 = Vector3.ZERO) -> bool:

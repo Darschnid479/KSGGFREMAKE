@@ -137,37 +137,6 @@ func _make_panel_style(bg: Color = Color(0.11, 0.07, 0.04, 0.92), border: Color 
 
 
 func _build_ui() -> void:
-	# 0. Topp-venstre: Kompakt oppdrags- og våpenlinje så spilleren alltid vet neste mål!
-	_status_panel = PanelContainer.new()
-	_status_panel.set_anchors_preset(Control.PRESET_TOP_LEFT)
-	_status_panel.offset_left = 20
-	_status_panel.offset_top = 16
-	_status_panel.offset_right = 540
-	_status_panel.offset_bottom = 92
-	var st_top := _make_panel_style(Color(0.08, 0.05, 0.03, 0.80), Color(0.78, 0.58, 0.22, 0.85))
-	st_top.set_border_width_all(2)
-	st_top.content_margin_left = 14
-	st_top.content_margin_right = 14
-	st_top.content_margin_top = 8
-	st_top.content_margin_bottom = 8
-	_status_panel.add_theme_stylebox_override("panel", st_top)
-	add_child(_status_panel)
-
-	var sv_top := VBoxContainer.new()
-	sv_top.add_theme_constant_override("separation", 3)
-	_status_panel.add_child(sv_top)
-
-	_objective_lbl = Label.new()
-	_objective_lbl.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	_objective_lbl.add_theme_font_size_override("font_size", 16)
-	_objective_lbl.add_theme_color_override("font_color", Color(1.0, 0.88, 0.42))
-	sv_top.add_child(_objective_lbl)
-
-	_weapon_lbl = Label.new()
-	_weapon_lbl.add_theme_font_size_override("font_size", 13)
-	_weapon_lbl.add_theme_color_override("font_color", Color(0.84, 0.90, 0.94))
-	sv_top.add_child(_weapon_lbl)
-
 	# 1. Bunn-venstre: Original 1:1 Pinky live-action helsemedaljong + Gullmynter
 	var bl := HBoxContainer.new()
 	bl.set_anchors_preset(Control.PRESET_BOTTOM_LEFT)

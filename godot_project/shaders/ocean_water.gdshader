@@ -112,14 +112,16 @@ void fragment() {
 
 	vec3 sdir_v = normalize((VIEW_MATRIX * vec4(normalize(sun_dir), 0.0)).xyz);
 	vec3 half_v = normalize(sdir_v + view_dir);
-	float spec_broad = pow(max(dot(vn, half_v), 0.0), 48.0) * 0.45;
-	float spec_glint = pow(max(dot(vn, half_v), 0.0), 220.0) * 2.1 * sparkle_strength;
+	float spec_broad = pow(max(dot(vn, half_v), 0.0), 64.0) * 0.26;
+	float spec_glint = pow(max(dot(vn, half_v), 0.0), 260.0) * 0.85 * sparkle_strength;
 
-	// Automatisk animert hvitt skum langs kystlinjer, bryggestolper og øystrender!
-	float shore_wave = sin(water_depth * 7.5 - t * 2.8 + hc * 4.0) * 0.5 + 0.5;
-	float shore_foam = smoothstep(foam_width, 0.02, water_depth) * smoothstep(0.28, 0.74, shore_wave * 0.65 + hc * 0.65);
-	float crest_foam = smoothstep(0.76, 0.92, hc * 0.78 + v_elev * 0.28) * 0.42;
-	float foam = clamp(shore_foam * 0.92 + crest_foam, 0.0, 1.0);
+	// Mykt organisk kystskum langs strender og brygger (null harde hvite streker!)
+	float foam_breakup = ocean_fbm(xz * 2.1, t * 0.9);
+	float shore_wave = sin(water_depth * 6.5 - t * 2.4 + hc * 3.5) * 0.5 + 0.5;
+	float shore_edge = smoothstep(0.01, 0.16, water_depth);
+	float shore_foam = smoothstep(foam_width * 0.65, 0.08, water_depth) * smoothstep(0.44, 0.82, shore_wave * 0.48 + foam_breakup * 0.72) * 0.48;
+	float crest_foam = smoothstep(0.79, 0.94, hc * 0.76 + v_elev * 0.26) * 0.26;
+	float foam = clamp(shore_foam + crest_foam, 0.0, 0.75);
 
 	// Myke drivende skyskygger på verdenskartet
 	float cloud_sh = 1.0;
@@ -129,13 +131,13 @@ void fragment() {
 	}
 
 	vec3 final_col = refracted * cloud_sh;
-	final_col = mix(final_col, mix(mid_color.rgb, sun_tint, 0.35), fresnel * 0.36);
+	final_col = mix(final_col, mix(mid_color.rgb, sun_tint, 0.28), fresnel * 0.34);
 	final_col = mix(final_col, foam_color.rgb, foam);
 
 	ALBEDO = final_col;
-	EMISSION = sun_tint * (spec_broad * 0.25 + spec_glint * (1.0 - foam * 0.8)) * cloud_sh;
-	METALLIC = 0.04;
-	ROUGHNESS = mix(0.06, 0.52, foam);
-	SPECULAR = 0.95;
-	ALPHA = mix(0.95, 1.0, foam);
+	EMISSION = sun_tint * (spec_broad * 0.18 + spec_glint * (1.0 - foam * 0.8)) * cloud_sh;
+	METALLIC = 0.02;
+	ROUGHNESS = mix(0.09, 0.56, foam);
+	SPECULAR = 0.75;
+	ALPHA = mix(mix(0.78, 0.95, shore_edge), 0.98, foam);
 }

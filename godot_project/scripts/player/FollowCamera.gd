@@ -3,16 +3,16 @@ class_name FollowCamera
 ## Moderne tredjepersons-kamera med fjærarm, myk oppfølging og valgfri mus-rotasjon.
 
 @export var target_path: NodePath
-@export var follow_height: float = 2.6
-@export var default_distance: float = 9.5
-@export var min_distance: float = 4.5
-@export var max_distance: float = 120.0
-@export var smooth_speed: float = 8.0
+@export var follow_height: float = 1.60
+@export var default_distance: float = 4.2
+@export var min_distance: float = 2.4
+@export var max_distance: float = 180.0
+@export var smooth_speed: float = 8.5
 
 var target: Node3D
 var yaw: float = 0.0
-var pitch: float = -0.32
-var distance: float = 9.5
+var pitch: float = -0.18
+var distance: float = 4.2
 var top_down_mode: bool = false
 var side_2d_mode: bool = false
 var side_2d_clamp_enabled: bool = false
@@ -60,7 +60,7 @@ func set_side_2d_bounds(bounds: AABB, cam_dist: float) -> void:
 	global_position.y = clampf(global_position.y, side_2d_min_y, side_2d_max_y)
 
 
-func set_target(node: Node3D, dist: float = 9.5, height: float = 2.6, is_top_down: bool = false, is_side_2d: bool = false) -> void:
+func set_target(node: Node3D, dist: float = 4.2, height: float = 1.60, is_top_down: bool = false, is_side_2d: bool = false) -> void:
 	target = node
 	default_distance = dist
 	distance = dist
@@ -69,14 +69,14 @@ func set_target(node: Node3D, dist: float = 9.5, height: float = 2.6, is_top_dow
 	side_2d_mode = is_side_2d
 	side_2d_clamp_enabled = false
 	if top_down_mode:
-		# 1:1 originalt fugleperspektiv for verdenskartet (ovenfra ned på Den Sorte Dame og øyene)
-		pitch = -1.00
+		# 1:1 originalt oversiktsperspektiv for verdenskartet (ovenfra ned på Den Sorte Dame og horisonten)
+		pitch = -0.92
 		yaw = 0.0
 		if spring_arm:
 			spring_arm.collision_mask = 0
 			spring_arm.spring_length = distance
 		if camera:
-			camera.fov = 42.0
+			camera.fov = 40.0
 	elif side_2d_mode:
 		# 1:1 originalt 2D side-scrolling undervannskamera (mapManager_swimming.ls: rett langs -Z!)
 		pitch = 0.0
@@ -85,13 +85,13 @@ func set_target(node: Node3D, dist: float = 9.5, height: float = 2.6, is_top_dow
 			spring_arm.collision_mask = 0
 			spring_arm.spring_length = distance
 		if camera:
-			camera.fov = 52.0
+			camera.fov = 50.0
 	else:
 		if spring_arm:
 			spring_arm.collision_mask = 1
 			spring_arm.spring_length = distance
 		if camera:
-			camera.fov = 65.0
+			camera.fov = 56.0
 	if target:
 		global_position = target.global_position + Vector3(0.0, follow_height, 0.0)
 

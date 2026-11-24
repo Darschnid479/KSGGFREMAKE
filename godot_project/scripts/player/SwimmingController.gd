@@ -7,8 +7,8 @@ class_name SwimmingController
 
 const SWIM_ANIM_SHADER := preload("res://shaders/swimmer_anim.gdshader")
 
-@export var swim_speed: float = 6.2
-@export var boost_speed: float = 8.4
+@export var swim_speed: float = 3.8
+@export var boost_speed: float = 5.4
 @export var air_drain_rate: float = 4.6
 @export var air_refill_rate: float = 55.0
 

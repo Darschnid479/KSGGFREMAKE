@@ -15,7 +15,8 @@
         0.0,
         10.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "userdata",
@@ -31,7 +32,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"bullseye_anim\", #startxform: [#position: vector( -0.0046, 0.0707, 0.0000 ), #rotation: vector( 0.0000, 0.0000 ",
@@ -47,7 +49,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz, 0.0000 )]] ",
@@ -63,7 +66,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "bullseye_anim",
@@ -79,7 +83,8 @@
         -0.005,
         0.0,
         -0.071
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "hiddenassets",
@@ -95,7 +100,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "cake",
@@ -111,7 +117,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "houses_1",
@@ -127,7 +134,8 @@
         351.602,
         38.884,
         54.832
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "sultan_background",
@@ -143,7 +151,8 @@
         61.509,
         -22.445,
         -103.934
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "bottom_water",
@@ -159,7 +168,8 @@
         115.116,
         -18.092,
         -23.662
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "gate_door_1",
@@ -175,7 +185,8 @@
         -405.776,
         39.089,
         -35.72
-      ]
+      ],
+      "godot_yaw": 0.4822
     },
     {
       "name": "rowboat",
@@ -191,7 +202,8 @@
         -323.693,
         -10.881,
         314.343
-      ]
+      ],
+      "godot_yaw": 0.7307
     },
     {
       "name": "objects",
@@ -207,7 +219,8 @@
         181.961,
         -0.548,
         29.913
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "scene_light",
@@ -223,7 +236,8 @@
         91.254,
         652.303,
         549.711
-      ]
+      ],
+      "godot_yaw": 0.1313
     },
     {
       "name": "scene_light.Target",
@@ -239,7 +253,8 @@
         0.0,
         -123.111,
         -141.036
-      ]
+      ],
+      "godot_yaw": 0.0
     },
     {
       "name": "gate_door_2",
@@ -255,7 +270,8 @@
         -360.453,
         39.089,
         -59.192
-      ]
+      ],
+      "godot_yaw": 0.4735
     },
     {
       "name": "ground",
@@ -271,7 +287,8 @@
         25.058,
         -21.038,
         -28.378
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "houses_2",
@@ -287,7 +304,8 @@
         351.602,
         38.884,
         54.832
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "well_water",
@@ -303,7 +321,8 @@
         -70.998,
         5.822,
         28.596
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "beach_water",
@@ -319,7 +338,8 @@
         59.041,
         -17.219,
         -227.343
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "foginfo",
@@ -335,7 +355,8 @@
         3.164,
         -97.301,
         806.088
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "Rectangle01",
@@ -351,7 +372,8 @@
         -530.722,
         107.27,
         -226.364
-      ]
+      ],
+      "godot_yaw": 0.0
     },
     {
       "name": "MapExportCamera",
@@ -367,7 +389,8 @@
         -53.985,
         2081.823,
         -45.563
-      ]
+      ],
+      "godot_yaw": -0.0004
     },
     {
       "name": "MapExportCamera.Target",
@@ -383,7 +406,8 @@
         -54.223,
         0.004,
         -45.563
-      ]
+      ],
+      "godot_yaw": 0.0
     },
     {
       "name": "shop_obj",
@@ -399,7 +423,8 @@
         137.855,
         7.3,
         126.658
-      ]
+      ],
+      "godot_yaw": 0.0
     },
     {
       "name": "flyingcarpet",
@@ -415,7 +440,8 @@
         0.0,
         -0.025,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"flyingcarpet_fly\", #startxform: [#position: vector( -0.0155, -0.0067, 0.1320 ), #rotation: vector( 0.0000, 0. ",
@@ -431,7 +457,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0000, 0.0000 )]] ",
@@ -447,7 +474,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pelle_pickup\", #startxform: [#position: vector( 0.0000, -0.0708, 7.8118 ), #rotation: vector( 0.0000, 0.0000, ",
@@ -463,7 +491,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #mountstart: \"50\", #mountend: \"79\"] ",
@@ -479,7 +508,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[#modelname: \"pelle_pickup_high\", #startxform: [#position: vector( 0.0000, -0.0708, 7.8118 ), #rotation: vector( 0.0000, 0. ",
@@ -495,7 +525,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz0000, 0.0000 )], #minimumspeed: \"1\", #maximumspeed: \"1\", #mountstart: \"50\", #mountend: \"79\"] ",
@@ -511,7 +542,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "texturerenderformatinfo",
@@ -527,7 +559,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[\"cake\", #rgba8880] ",
@@ -543,7 +576,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[\"magapalace_stonework\", #rgba5550] ",
@@ -559,7 +593,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[\"maga_ride_wellbrick\", #rgba5550] ",
@@ -575,7 +610,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[\"maga_ride_welltop\", #rgba5550] ",
@@ -591,7 +627,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[\"maga_ride_wellwater\", #rgba5550] ",
@@ -607,7 +644,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[\"shop_objcompletemap\", #rgba5550] ",
@@ -623,7 +661,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[\"sultan_bullseye\", #rgba5550] ",
@@ -639,7 +678,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[\"sultan_carpets\", #rgba5550] ",
@@ -655,7 +695,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[\"sultan_ground\", #rgba5550] ",
@@ -671,7 +712,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[\"sultan_plank02\", #rgba5550] ",
@@ -687,7 +729,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[\"sultan_pole\", #rgba5550] ",
@@ -703,7 +746,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[\"sultan_rocks\", #rgba5550] ",
@@ -719,7 +763,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[\"sultan_scaffold\", #rgba5550] ",
@@ -735,7 +780,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "zzz[\"sultan_flying carpet\", #rgba5550] ",
@@ -751,7 +797,8 @@
         0.0,
         0.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     },
     {
       "name": "TestLight",
@@ -767,7 +814,8 @@
         0.0,
         10.0,
         -0.0
-      ]
+      ],
+      "godot_yaw": -0.0
     }
   ],
   "skeletons": [],

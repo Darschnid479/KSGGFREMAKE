@@ -3,17 +3,27 @@ class_name BoatController
 ## Styring av Den Sorte Dame på verdenskartet (1:1 port av sabeltannboat.ls + mapManager_world_map.ls).
 ## Bruker den ekte HD 3D-modellen av Den Sorte Dame (darklady + railing + frontdecoration) fra world_map.glb.
 
-@export var max_speed: float = 28.0
-@export var turn_speed: float = 1.65
+@export var max_speed: float = 38.0
+@export var turn_speed: float = 1.60
 @export var cannon_cooldown: float = 1.1
 
 var camera_rig: FollowCamera
+var target_island_pos: Vector3 = Vector3.ZERO
+var has_target_island: bool = false
 var _cur_speed: float = 0.0
 var _cannon_timer: float = 0.0
 var _bob_t: float = 0.0
 var _ship_visual: Node3D
+var _arrow_node: MeshInstance3D
 
 const ROCK_SCENE := preload("res://scripts/world/SlingshotRock.gd")
+
+
+func set_target_island(pos: Vector3, enabled: bool = true) -> void:
+	target_island_pos = pos
+	has_target_island = enabled
+	if is_instance_valid(_arrow_node):
+		_arrow_node.visible = enabled
 
 
 func _ready() -> void:
@@ -31,12 +41,33 @@ func _ready() -> void:
 		if sc:
 			var inst := sc.instantiate()
 			_ship_visual.add_child(inst)
-			# Vis kun Den Sorte Dame (darklady + railing + frontdecoration), skjul fiendeskip og ikoner
+			var arrow_src: MeshInstance3D = null
+			# Vis Den Sorte Dame (darklady + railing + frontdecoration) og hent original 3D retningspil (directionindicator)
 			for mi in _find_meshes(inst):
 				var nm := mi.name.to_lower()
-				mi.visible = (nm in ["darklady", "railing", "frontdecoration"])
+				if nm == "directionindicator":
+					arrow_src = mi
+					mi.visible = false
+				else:
+					mi.visible = (nm in ["darklady", "railing", "frontdecoration"])
 			inst.scale = Vector3.ONE * 0.48
 			VisualEnhancer.enhance_world_node(inst, "abra", 0.0)
+			if arrow_src and arrow_src.mesh:
+				_arrow_node = MeshInstance3D.new()
+				_arrow_node.name = "DirectionIndicator"
+				_arrow_node.mesh = arrow_src.mesh
+				var arrow_mat := StandardMaterial3D.new()
+				arrow_mat.albedo_color = Color(0.96, 0.72, 0.16)
+				arrow_mat.metallic = 0.30
+				arrow_mat.roughness = 0.32
+				arrow_mat.emission_enabled = true
+				arrow_mat.emission = Color(0.88, 0.54, 0.08)
+				arrow_mat.emission_energy_multiplier = 0.45
+				_arrow_node.material_override = arrow_mat
+				_arrow_node.scale = Vector3.ONE * 0.56
+				_arrow_node.position = Vector3(0.0, 2.8, -7.8)
+				_arrow_node.visible = has_target_island
+				add_child(_arrow_node)
 			loaded_real = true
 
 	if not loaded_real:
@@ -88,7 +119,7 @@ func _physics_process(delta: float) -> void:
 	var throttle := Input.get_axis("move_backward", "move_forward")
 	var steer := Input.get_axis("move_right", "move_left")
 
-	_cur_speed = lerp(_cur_speed, throttle * max_speed, delta * 2.5)
+	_cur_speed = lerp(_cur_speed, throttle * max_speed, delta * 2.6)
 	rotation.y += steer * turn_speed * delta * (0.45 + 0.55 * clampf(absf(_cur_speed) / max_speed, 0.0, 1.0))
 
 	var fwd := -global_transform.basis.z
@@ -101,6 +132,15 @@ func _physics_process(delta: float) -> void:
 	_ship_visual.position.y = sin(_bob_t) * 0.24
 	_ship_visual.rotation.x = sin(_bob_t * 0.85) * 0.035
 	_ship_visual.rotation.z = lerp(_ship_visual.rotation.z, -steer * 0.14, delta * 4.0)
+
+	if is_instance_valid(_arrow_node) and _arrow_node.visible:
+		var flat_delta := Vector3(target_island_pos.x - global_position.x, 0.0, target_island_pos.z - global_position.z)
+		if flat_delta.length_squared() > 1.0:
+			var world_yaw := atan2(-flat_delta.x, -flat_delta.z)
+			var rel_yaw := world_yaw - rotation.y
+			_arrow_node.rotation.y = rel_yaw
+			var rel_dir := Vector3(-sin(rel_yaw), 0.0, -cos(rel_yaw))
+			_arrow_node.position = rel_dir * 7.8 + Vector3(0.0, 2.8 + sin(_bob_t * 1.6) * 0.30, 0.0)
 
 
 func _fire_broadsides() -> void:

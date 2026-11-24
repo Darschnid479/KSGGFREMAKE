@@ -87,73 +87,83 @@ def save_pbr(name: str, alb: np.ndarray, height: np.ndarray, rough: np.ndarray, 
 
 
 def make_wood_planks():
-    """Realistic fine weathered oak planks with crisp anisotropic timber fibers (NO zebra stripes!)."""
+    """Smooth, fine weathered oak timber grain without harsh dotted grid artifacts."""
     n = SIZE
     y = np.linspace(0.0, 1.0, n, endpoint=False, dtype=np.float32)[:, None]
-    x = np.linspace(0.0, 1.0, n, endpoint=False, dtype=np.float32)[None, :]
 
-    # Fine elongated longitudinal wood splinters & micro-pores (fx << fy!)
-    fibers = aniso_fbm(n, 4, 48, 5, 11, persistence=0.60)
-    micro_pores = aniso_fbm(n, 16, 128, 3, 19, persistence=0.58)
-    # Subtle natural grain bend via gentle low-freq warp
-    wx = (aniso_fbm(n, 4, 8, 3, 27) - 0.5) * 10.0
-    wy = (aniso_fbm(n, 3, 6, 3, 31) - 0.5) * 6.0
-    wood_grain = warp_sample(fibers * 0.65 + micro_pores * 0.35, wx, wy)
+    # Fine elongated longitudinal wood fibers & gentle rings
+    fibers = aniso_fbm(n, 3, 64, 5, 11, persistence=0.58)
+    micro_pores = aniso_fbm(n, 16, 160, 3, 19, persistence=0.54)
+    wx = (aniso_fbm(n, 4, 8, 3, 27) - 0.5) * 6.0
+    wy = (aniso_fbm(n, 3, 6, 3, 31) - 0.5) * 4.0
+    wood_grain = warp_sample(fibers * 0.72 + micro_pores * 0.28, wx, wy)
 
-    # Fine dark weathered plank seams (8 narrow oak deck boards)
+    # Subtle 8-plank variation & hairline dark wood joint (no chunky dashed lines!)
     num_planks = 8
     p_idx = np.floor(y * num_planks).astype(np.int32)
     pv = (y * num_planks) % 1.0
     rng = np.random.default_rng(109)
-    p_tint = (0.80 + 0.36 * rng.random(num_planks)).astype(np.float32)[p_idx]
-    p_shift = rng.random(num_planks).astype(np.float32)[p_idx]
-    # Shift grain per plank so seams look genuinely cut from separate boards!
+    p_tint = (0.90 + 0.18 * rng.random(num_planks)).astype(np.float32)[p_idx]
     wood_shifted = np.zeros_like(wood_grain)
     for pi in range(num_planks):
         r0 = pi * (n // num_planks)
         r1 = (pi + 1) * (n // num_planks)
         wood_shifted[r0:r1] = np.roll(wood_grain[r0:r1], int(rng.integers(0, n)), axis=1)
 
-    xu = (x * 2.0 + p_shift) % 1.0
-    seam_h = np.clip(np.minimum(pv, 1.0 - pv) / 0.026, 0.0, 1.0)
-    seam_v = np.clip(np.minimum(xu, 1.0 - xu) / 0.010, 0.0, 1.0)
-    groove = np.minimum(seam_h, seam_v)
+    seam_h = np.clip(np.minimum(pv, 1.0 - pv) / 0.016, 0.0, 1.0)
+    groove = 0.72 + 0.28 * seam_h
 
-    # Crisp dark micro-crevices + warm rich aged oak tone
-    weather = aniso_fbm(n, 6, 12, 4, 45)
-    h = groove * (0.48 + 0.36 * wood_shifted + 0.16 * micro_pores)
-    val = p_tint * (0.58 + 0.58 * wood_shifted) * (0.84 + 0.32 * weather) * (0.22 + 0.78 * groove)
+    weather = aniso_fbm(n, 6, 12, 3, 45)
+    h = groove * (0.45 + 0.38 * wood_shifted + 0.17 * micro_pores)
+    val = p_tint * (0.68 + 0.36 * wood_shifted) * (0.90 + 0.16 * weather) * groove
 
     alb = np.stack([
-        np.clip(val * 0.64, 0.0, 1.0),
-        np.clip(val * 0.45, 0.0, 1.0),
-        np.clip(val * 0.28, 0.0, 1.0),
+        np.clip(val * 0.62, 0.0, 1.0),
+        np.clip(val * 0.46, 0.0, 1.0),
+        np.clip(val * 0.31, 0.0, 1.0),
     ], axis=-1)
-    rough = np.clip(0.50 + 0.34 * (1.0 - wood_shifted) + 0.20 * (1.0 - groove), 0.24, 0.94)
-    save_pbr("wood_planks", alb, h, rough, normal_strength=7.5)
+    rough = np.clip(0.62 + 0.24 * (1.0 - wood_shifted) + 0.10 * (1.0 - seam_h), 0.48, 0.94)
+    save_pbr("wood_planks", alb, h, rough, normal_strength=3.6)
+
+
+def make_rock_natural():
+    """Organic sedimentary & volcanic cavern rock micro-detail (NO repeating brick wallpaper!)."""
+    n = SIZE
+    macro = aniso_fbm(n, 5, 5, 4, 801)
+    strata = aniso_fbm(n, 4, 22, 4, 805, persistence=0.58)
+    grit = aniso_fbm(n, 56, 56, 3, 809, persistence=0.62)
+    wx = (macro - 0.5) * 20.0
+    wy = (aniso_fbm(n, 5, 5, 4, 811) - 0.5) * 16.0
+    rock = warp_sample(strata * 0.50 + grit * 0.50, wx, wy)
+
+    ridge = 1.0 - np.abs(warp_sample(aniso_fbm(n, 8, 8, 4, 820), wx * 1.1, wy * 1.1) - 0.5) * 2.0
+    fissure = np.clip((1.0 - ridge) / 0.20, 0.0, 1.0)
+    h = (0.46 * rock + 0.32 * grit + 0.22 * ridge) * (0.70 + 0.30 * fissure)
+    val = (0.52 + 0.44 * rock) * (0.76 + 0.24 * fissure)
+    alb = np.stack([
+        np.clip(val * 0.58, 0.0, 1.0),
+        np.clip(val * 0.57, 0.0, 1.0),
+        np.clip(val * 0.56, 0.0, 1.0),
+    ], axis=-1)
+    rough = np.clip(0.72 + 0.22 * (1.0 - grit), 0.56, 0.96)
+    save_pbr("rock_natural", alb, h, rough, normal_strength=4.8)
 
 
 def make_stone_masonry():
-    """Photorealistic chiselled dark weathered granite/limestone with deep fine mineral grit (NO Voronoi webs!)."""
+    """Crisp subtle ashlar castle masonry for built stone walls and fortresses."""
     n = SIZE
     y = np.linspace(0.0, 1.0, n, endpoint=False, dtype=np.float32)[:, None]
     x = np.linspace(0.0, 1.0, n, endpoint=False, dtype=np.float32)[None, :]
 
-    # True multi-scale mineral granite rock surface
     macro = aniso_fbm(n, 6, 6, 4, 201)
     med = aniso_fbm(n, 16, 16, 4, 205)
-    fine_grit = aniso_fbm(n, 64, 64, 3, 209, persistence=0.65)
-    wx = (macro - 0.5) * 18.0
-    wy = (aniso_fbm(n, 6, 6, 4, 211) - 0.5) * 18.0
-    rock = warp_sample(med * 0.52 + fine_grit * 0.48, wx, wy)
+    fine_grit = aniso_fbm(n, 64, 64, 3, 209, persistence=0.62)
+    wx = (macro - 0.5) * 10.0
+    wy = (aniso_fbm(n, 6, 6, 4, 211) - 0.5) * 10.0
+    rock = warp_sample(med * 0.50 + fine_grit * 0.50, wx, wy)
 
-    # Organic ridged hairline rock fractures (domain-warped ridge noise!)
-    f1 = np.abs(warp_sample(aniso_fbm(n, 10, 10, 4, 220), wx * 1.4, wy * 1.4) - 0.5) * 2.0
-    micro_crack = np.clip(f1 / 0.055, 0.0, 1.0)
-
-    # Subtle weathered stone courses
     rows, cols = 6, 3
-    w_m = (macro - 0.5) * 0.015
+    w_m = (macro - 0.5) * 0.010
     yr = (y + w_m) * rows
     ri = np.floor(yr).astype(np.int32) % rows
     rv = yr % 1.0
@@ -162,49 +172,45 @@ def make_stone_masonry():
     cu = xr % 1.0
 
     rng = np.random.default_rng(230)
-    b_tone = (0.78 + 0.36 * rng.random((rows, cols))).astype(np.float32)[ri, ci]
-    mh = np.clip(np.minimum(rv, 1.0 - rv) / 0.036, 0.0, 1.0)
-    mv = np.clip(np.minimum(cu, 1.0 - cu) / 0.024, 0.0, 1.0)
+    b_tone = (0.88 + 0.20 * rng.random((rows, cols))).astype(np.float32)[ri, ci]
+    mh = np.clip(np.minimum(rv, 1.0 - rv) / 0.026, 0.0, 1.0)
+    mv = np.clip(np.minimum(cu, 1.0 - cu) / 0.018, 0.0, 1.0)
     mortar = np.minimum(mh, mv)
 
-    h = mortar * (0.40 + 0.42 * rock + 0.18 * fine_grit) * (0.78 + 0.22 * micro_crack)
-    s = b_tone * (0.56 + 0.54 * rock) * (0.74 + 0.26 * micro_crack) * (0.28 + 0.72 * mortar)
-    moss = np.clip((1.0 - mortar * 0.75) * (aniso_fbm(n, 8, 8, 4, 240) - 0.46) * 2.8, 0.0, 1.0)
+    h = (0.65 + 0.35 * mortar) * (0.48 + 0.34 * rock + 0.18 * fine_grit)
+    s = b_tone * (0.68 + 0.34 * rock) * (0.58 + 0.42 * mortar)
 
     alb = np.stack([
-        np.clip(s * 0.56 - moss * 0.10, 0.0, 1.0),
-        np.clip(s * 0.57 + moss * 0.06, 0.0, 1.0),
-        np.clip(s * 0.55 - moss * 0.12, 0.0, 1.0),
+        np.clip(s * 0.62, 0.0, 1.0),
+        np.clip(s * 0.62, 0.0, 1.0),
+        np.clip(s * 0.61, 0.0, 1.0),
     ], axis=-1)
-    rough = np.clip(0.58 + 0.32 * (1.0 - rock) + 0.14 * (1.0 - mortar), 0.30, 0.96)
-    save_pbr("stone_masonry", alb, h, rough, normal_strength=9.0)
+    rough = np.clip(0.70 + 0.22 * (1.0 - rock) + 0.08 * (1.0 - mortar), 0.52, 0.96)
+    save_pbr("stone_masonry", alb, h, rough, normal_strength=4.6)
 
 
 def make_sandstone_wall():
-    """Realistic fine sunlit Arabian sandstone & weathered plaster (NO spiderwebs!)."""
+    """Smooth sunlit matte Arabian desert stucco & warm limestone."""
     n = SIZE
-    macro = aniso_fbm(n, 5, 10, 4, 301)
-    sediment = aniso_fbm(n, 6, 36, 4, 305)
-    grit = aniso_fbm(n, 64, 64, 3, 309, persistence=0.64)
-    wx = (macro - 0.5) * 14.0
-    wy = (aniso_fbm(n, 5, 5, 3, 311) - 0.5) * 10.0
-    stone = warp_sample(sediment * 0.55 + grit * 0.45, wx, wy)
+    macro = aniso_fbm(n, 4, 8, 3, 301)
+    grit = aniso_fbm(n, 56, 56, 3, 309, persistence=0.58)
+    wx = (macro - 0.5) * 8.0
+    wy = (aniso_fbm(n, 4, 4, 3, 311) - 0.5) * 6.0
+    stone = warp_sample(aniso_fbm(n, 8, 18, 3, 305) * 0.45 + grit * 0.55, wx, wy)
 
-    # Subtle weathered plaster pits
-    pits = np.clip((aniso_fbm(n, 12, 12, 4, 320) - 0.22) / 0.12, 0.0, 1.0)
-    h = (0.45 + 0.35 * stone + 0.20 * grit) * (0.78 + 0.22 * pits)
-    s = (0.64 + 0.46 * stone) * (0.80 + 0.20 * pits)
+    h = 0.52 + 0.28 * stone + 0.20 * grit
+    s = 0.78 + 0.24 * stone
     alb = np.stack([
-        np.clip(s * 0.80, 0.0, 1.0),
-        np.clip(s * 0.62, 0.0, 1.0),
-        np.clip(s * 0.38, 0.0, 1.0),
+        np.clip(s * 0.86, 0.0, 1.0),
+        np.clip(s * 0.76, 0.0, 1.0),
+        np.clip(s * 0.60, 0.0, 1.0),
     ], axis=-1)
-    rough = np.clip(0.64 + 0.28 * (1.0 - grit), 0.36, 0.96)
-    save_pbr("sandstone_wall", alb, h, rough, normal_strength=7.2)
+    rough = np.clip(0.80 + 0.14 * (1.0 - grit), 0.70, 0.96)
+    save_pbr("sandstone_wall", alb, h, rough, normal_strength=3.0)
 
 
 def make_roof_shingles():
-    """Weathered overlapping slate roof tiles with crisp fine stone grain."""
+    """Weathered overlapping slate roof tiles with fine stone grain."""
     n = SIZE
     y = np.linspace(0.0, 1.0, n, endpoint=False, dtype=np.float32)[:, None]
     x = np.linspace(0.0, 1.0, n, endpoint=False, dtype=np.float32)[None, :]
@@ -216,81 +222,74 @@ def make_roof_shingles():
     ci = np.floor((x * cols + (ri % 2) * 0.5) % cols).astype(np.int32)
 
     rng = np.random.default_rng(401)
-    tv = (0.74 + 0.40 * rng.random((rows, cols))).astype(np.float32)[ri, ci]
-    grit = aniso_fbm(n, 32, 32, 4, 405, persistence=0.62)
-    ex = np.clip(np.minimum(xu, 1.0 - xu) / 0.045, 0.0, 1.0)
-    ov = np.clip(rv / 0.10, 0.0, 1.0)
+    tv = (0.84 + 0.26 * rng.random((rows, cols))).astype(np.float32)[ri, ci]
+    grit = aniso_fbm(n, 32, 32, 3, 405, persistence=0.58)
+    ex = np.clip(np.minimum(xu, 1.0 - xu) / 0.035, 0.0, 1.0)
+    ov = np.clip(rv / 0.08, 0.0, 1.0)
 
-    h = (0.22 + 0.60 * (1.0 - rv)) * ex * ov + 0.18 * grit
-    s = tv * (0.30 + 0.70 * ov) * (0.40 + 0.60 * ex) * (0.72 + 0.42 * grit)
-    alb = np.stack([np.clip(s * 0.36, 0.0, 1.0), np.clip(s * 0.38, 0.0, 1.0), np.clip(s * 0.44, 0.0, 1.0)], axis=-1)
-    rough = np.clip(0.50 + 0.34 * (1.0 - grit), 0.24, 0.92)
-    save_pbr("roof_shingles", alb, h, rough, normal_strength=8.0)
+    h = (0.28 + 0.54 * (1.0 - rv)) * ex * ov + 0.18 * grit
+    s = tv * (0.55 + 0.45 * ov) * (0.62 + 0.38 * ex) * (0.78 + 0.28 * grit)
+    alb = np.stack([np.clip(s * 0.42, 0.0, 1.0), np.clip(s * 0.43, 0.0, 1.0), np.clip(s * 0.48, 0.0, 1.0)], axis=-1)
+    rough = np.clip(0.64 + 0.26 * (1.0 - grit), 0.45, 0.92)
+    save_pbr("roof_shingles", alb, h, rough, normal_strength=4.5)
 
 
 def make_forged_metal():
-    """Crisp brushed antique brass/gold/iron with fine hammered patina."""
+    """Brushed antique brass/gold/iron with subtle patina."""
     n = SIZE
-    brush = aniso_fbm(n, 8, 96, 4, 501, persistence=0.62)
-    patina = aniso_fbm(n, 10, 10, 4, 505)
+    brush = aniso_fbm(n, 8, 96, 4, 501, persistence=0.58)
+    patina = aniso_fbm(n, 10, 10, 3, 505)
     fine = aniso_fbm(n, 64, 64, 3, 509)
-    h = 0.45 + 0.35 * brush + 0.20 * fine
-    s = (0.68 + 0.36 * brush) * (0.76 + 0.36 * patina)
-    alb = np.stack([np.clip(s * 0.80, 0.0, 1.0), np.clip(s * 0.62, 0.0, 1.0), np.clip(s * 0.26, 0.0, 1.0)], axis=-1)
-    rough = np.clip(0.20 + 0.32 * (1.0 - patina) + 0.10 * (1.0 - brush), 0.14, 0.68)
-    save_pbr("forged_metal", alb, h, rough, normal_strength=5.5)
+    h = 0.48 + 0.32 * brush + 0.20 * fine
+    s = (0.74 + 0.26 * brush) * (0.82 + 0.24 * patina)
+    alb = np.stack([np.clip(s * 0.78, 0.0, 1.0), np.clip(s * 0.64, 0.0, 1.0), np.clip(s * 0.34, 0.0, 1.0)], axis=-1)
+    rough = np.clip(0.24 + 0.26 * (1.0 - patina) + 0.10 * (1.0 - brush), 0.18, 0.64)
+    save_pbr("forged_metal", alb, h, rough, normal_strength=3.4)
 
 
 def make_cutaway_bedrock():
-    """Rich organic Ori/Rayman-style layered subterranean slate cliff cross-section (ZERO geometric Voronoi polygons!)."""
+    """Rich organic subterranean slate cliff cross-section."""
     n = SIZE
     macro = aniso_fbm(n, 5, 10, 4, 601)
-    wx = (macro - 0.5) * 32.0
-    wy = (aniso_fbm(n, 6, 6, 4, 602) - 0.5) * 26.0
+    wx = (macro - 0.5) * 28.0
+    wy = (aniso_fbm(n, 6, 6, 4, 602) - 0.5) * 22.0
 
-    # Deep layered sedimentary slate bands + rugged domain-warped rock shelves
-    strata = warp_sample(aniso_fbm(n, 4, 28, 5, 603, persistence=0.58), wx, wy)
-    fine = aniso_fbm(n, 48, 48, 4, 604, persistence=0.64)
-    # Sharp ridged rocky ledges & deep dark fissures
-    ridge1 = 1.0 - np.abs(warp_sample(aniso_fbm(n, 6, 12, 4, 605), wx * 1.2, wy * 1.2) - 0.5) * 2.0
-    ridge2 = 1.0 - np.abs(warp_sample(aniso_fbm(n, 14, 14, 4, 606), wx * 0.8, wy * 0.8) - 0.5) * 2.0
+    strata = warp_sample(aniso_fbm(n, 4, 24, 5, 603, persistence=0.58), wx, wy)
+    fine = aniso_fbm(n, 48, 48, 3, 604, persistence=0.60)
+    ridge1 = 1.0 - np.abs(warp_sample(aniso_fbm(n, 6, 12, 4, 605), wx * 1.1, wy * 1.1) - 0.5) * 2.0
     cracks = np.clip((1.0 - ridge1) / 0.18, 0.0, 1.0)
-    shelf = np.power(np.clip(ridge1, 0.0, 1.0), 1.8) * 0.55 + np.power(np.clip(ridge2, 0.0, 1.0), 2.0) * 0.45
-
-    # Subtle glowing damp teal-emerald mineral moss veins deep in rock fissures
-    vein = np.clip((1.0 - cracks) * (aniso_fbm(n, 8, 8, 3, 615) - 0.42) * 3.2, 0.0, 1.0)
-
-    h = (0.35 * strata + 0.40 * shelf + 0.25 * fine) * (0.45 + 0.55 * cracks)
-    val = (0.14 + 0.34 * strata + 0.22 * shelf + 0.14 * fine) * (0.35 + 0.65 * cracks)
+    h = (0.42 * strata + 0.34 * ridge1 + 0.24 * fine) * (0.55 + 0.45 * cracks)
+    val = (0.20 + 0.32 * strata + 0.20 * fine) * (0.50 + 0.50 * cracks)
 
     alb = np.stack([
-        np.clip(val * 0.38 + vein * 0.04, 0.0, 1.0),
-        np.clip(val * 0.62 + vein * 0.34, 0.0, 1.0),
-        np.clip(val * 0.80 + vein * 0.40, 0.0, 1.0),
+        np.clip(val * 0.46, 0.0, 1.0),
+        np.clip(val * 0.56, 0.0, 1.0),
+        np.clip(val * 0.66, 0.0, 1.0),
     ], axis=-1)
-    rough = np.clip(0.56 + 0.34 * (1.0 - shelf) - vein * 0.24, 0.24, 0.95)
-    save_pbr("cutaway_bedrock", alb, h, rough, normal_strength=10.5)
+    rough = np.clip(0.72 + 0.20 * (1.0 - fine), 0.55, 0.96)
+    save_pbr("cutaway_bedrock", alb, h, rough, normal_strength=6.0)
 
 
 def make_fabric_detail():
-    """Fine pirate linen/canvas micro-weave for characters."""
+    """Fine linen/canvas micro-weave for characters."""
     n = SIZE
     y = np.linspace(0.0, 1.0, n, endpoint=False, dtype=np.float32)[:, None]
     x = np.linspace(0.0, 1.0, n, endpoint=False, dtype=np.float32)[None, :]
-    wx = np.sin(x * 128.0 * np.pi) * 0.5 + 0.5
-    wy = np.sin(y * 128.0 * np.pi) * 0.5 + 0.5
-    weave = (wx * 0.5 + wy * 0.5) * 0.55 + aniso_fbm(n, 16, 16, 4, 701) * 0.45
+    wx = np.sin(x * 160.0 * np.pi) * 0.5 + 0.5
+    wy = np.sin(y * 160.0 * np.pi) * 0.5 + 0.5
+    weave = (wx * 0.5 + wy * 0.5) * 0.45 + aniso_fbm(n, 20, 20, 3, 701) * 0.55
     alb = np.stack([weave, weave, weave], axis=-1)
-    rough = np.clip(0.64 + 0.26 * (1.0 - weave), 0.42, 0.94)
-    save_pbr("fabric_detail", alb, weave, rough, normal_strength=4.2)
+    rough = np.clip(0.72 + 0.20 * (1.0 - weave), 0.56, 0.94)
+    save_pbr("fabric_detail", alb, weave, rough, normal_strength=2.4)
 
 
 if __name__ == "__main__":
     make_wood_planks()
+    make_rock_natural()
     make_stone_masonry()
     make_sandstone_wall()
     make_roof_shingles()
     make_forged_metal()
     make_cutaway_bedrock()
     make_fabric_detail()
-    print("All 7 photorealistic high-frequency PBR texture sets ready!")
+    print("All 8 clean modern PBR texture sets ready!")

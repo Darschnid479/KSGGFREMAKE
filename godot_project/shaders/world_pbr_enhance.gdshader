@@ -26,10 +26,10 @@ uniform float base_metallic : hint_range(0.0, 1.0) = 0.0;
 uniform float normal_strength : hint_range(0.0, 2.5) = 1.45;
 uniform float pbr_blend : hint_range(0.0, 1.0) = 0.55;
 uniform float pbr_tile_scale : hint_range(0.05, 4.0) = 0.38;
-uniform float contrast_gamma : hint_range(0.8, 1.8) = 1.24;
-uniform float saturation_boost : hint_range(0.7, 1.6) = 1.24;
+uniform float contrast_gamma : hint_range(0.8, 1.8) = 1.03;
+uniform float saturation_boost : hint_range(0.7, 1.6) = 1.04;
 uniform float wet_water_y = -999.0;
-uniform float rim_strength : hint_range(0.0, 1.0) = 0.06;
+uniform float rim_strength : hint_range(0.0, 1.0) = 0.02;
 uniform vec3 rim_color : source_color = vec3(0.85, 0.92, 1.0);
 
 varying vec3 v_world_pos;
@@ -43,10 +43,18 @@ void vertex() {
 void fragment() {
 	vec3 orig = albedo_tint.rgb;
 	if (has_albedo_tex) {
-		orig *= texture(albedo_tex, UV).rgb;
+		vec3 center_t = texture(albedo_tex, UV).rgb;
+		vec2 tx_sz = 1.0 / max(vec2(textureSize(albedo_tex, 0)), vec2(64.0));
+		vec3 blur_t = (
+			texture(albedo_tex, UV + vec2(tx_sz.x, 0.0)).rgb +
+			texture(albedo_tex, UV - vec2(tx_sz.x, 0.0)).rgb +
+			texture(albedo_tex, UV + vec2(0.0, tx_sz.y)).rgb +
+			texture(albedo_tex, UV - vec2(0.0, tx_sz.y)).rgb
+		) * 0.25;
+		// Skarp moderne mikro-skarpning som fjerner uskarp 2005-tekstur uten å forvrenge fargene!
+		orig *= clamp(center_t + (center_t - blur_t) * 0.55, vec3(0.0), vec3(1.15));
 	}
-	// Fjern blass 2005-gamma-vask: dypere, rikere og skarpere moderne fargekontrast!
-	orig = pow(max(orig, vec3(0.0001)), vec3(contrast_gamma)) * 1.08;
+	orig = pow(max(orig, vec3(0.0001)), vec3(contrast_gamma));
 
 	vec3 alb = orig;
 	float rough = base_roughness;
@@ -54,7 +62,7 @@ void fragment() {
 	float ao = 1.0;
 
 	vec3 wn = normalize(v_world_nrm);
-	vec3 tri_wn = wn;
+	vec3 blended_wn = wn;
 	if (has_pbr_pack) {
 		vec3 w = abs(wn);
 		w = pow(w, vec3(5.0));
@@ -71,64 +79,57 @@ void fragment() {
 		         + texture(pbr_rough_tex, uv_y).r * w.y
 		         + texture(pbr_rough_tex, uv_z).r * w.z;
 
-		// Ekte verdensroms UDN triplanar normalmapping – knivskarp 3D-dybde selv på gamle 2005-flater uten UV!
 		vec3 tnx = texture(pbr_normal_tex, uv_x).rgb * 2.0 - 1.0;
 		vec3 tny = texture(pbr_normal_tex, uv_y).rgb * 2.0 - 1.0;
 		vec3 tnz = texture(pbr_normal_tex, uv_z).rgb * 2.0 - 1.0;
-		float ns = normal_strength * 0.68;
+		float ns = normal_strength * 0.36;
 		tnx.xy *= ns;
 		tny.xy *= ns;
 		tnz.xy *= ns;
 		vec3 nx = vec3(wn.x, tnx.y + wn.y, tnx.x + wn.z);
 		vec3 ny = vec3(tny.x + wn.x, wn.y, tny.y + wn.z);
 		vec3 nz = vec3(tnz.x + wn.x, tnz.y + wn.y, wn.z);
-		tri_wn = normalize(nx * w.x + ny * w.y + nz * w.z);
+		vec3 tri_wn = normalize(nx * w.x + ny * w.y + nz * w.z);
+		blended_wn = normalize(mix(wn, tri_wn, 0.55));
 
-		// Skarp detalj-syntese: bevar original fargetone på hus/skute, men erstatt all 2005-grøt med skarpe PBR-fibre & fuger!
+		// Delikat detaljoverlagring som bevarer originalmalt tekstur & bakt lyskart uten prikker/mursteinssøl!
 		float pa_lum = dot(pa, vec3(0.299, 0.587, 0.114));
-		float orig_lum = max(dot(orig, vec3(0.299, 0.587, 0.114)), 0.04);
-		vec3 tinted_pbr = pa * clamp(orig / orig_lum, vec3(0.38), vec3(2.15)) * clamp(orig_lum * 1.48, 0.35, 1.32);
-		vec3 detail_mul = orig * clamp(0.42 + pa_lum * 1.32, 0.22, 1.68);
-		alb = mix(detail_mul, mix(tinted_pbr, pa * albedo_tint.rgb, step(0.85, pbr_blend)), pbr_blend);
-		rough = mix(base_roughness, pr, 0.65);
-		ao = clamp(0.56 + pa_lum * 0.60, 0.38, 1.0);
+		vec3 micro_detail = orig * clamp(0.76 + pa_lum * 0.48, 0.65, 1.25);
+		vec3 pbr_tinted = pa * max(orig, vec3(0.06)) * 1.65;
+		alb = mix(micro_detail, pbr_tinted, pbr_blend * 0.55);
+		rough = mix(base_roughness, pr, 0.48);
+		ao = clamp(0.76 + pa_lum * 0.32, 0.62, 1.0);
 	}
 
 	if (has_orm_tex) {
 		vec3 orm = texture(orm_tex, UV).rgb;
-		ao = min(ao, mix(1.0, orm.r, 0.85));
-		rough = mix(rough, clamp(orm.g * 0.90, 0.12, 0.96), 0.30);
-		metal = max(base_metallic, orm.b);
+		ao = min(ao, mix(1.0, orm.r, 0.70));
+		rough = mix(rough, clamp(orm.g, 0.25, 0.96), 0.28);
+		metal = max(base_metallic, orm.b * 0.7);
 	}
 
-	// Rik moderne fargemetning uten blass pastell-haze
 	float lum = dot(alb, vec3(0.299, 0.587, 0.114));
 	alb = mix(vec3(lum), alb, saturation_boost);
 
-	// Våt, mørk og blank kystsone langs bryggene og vannlinjen
+	// Subtil fuktighet kun rett i vannkanten (+0.38m over vannflaten, aldri på hele skipet!)
 	float wetness = 0.0;
 	if (wet_water_y > -500.0) {
-		wetness = 1.0 - smoothstep(wet_water_y - 0.1, wet_water_y + 1.15, v_world_pos.y);
-		alb *= mix(1.0, 0.52, wetness * 0.84);
+		wetness = 1.0 - smoothstep(wet_water_y - 0.05, wet_water_y + 0.38, v_world_pos.y);
+		alb *= mix(1.0, 0.64, wetness * 0.72);
 	}
-	rough = mix(rough, 0.14, wetness * 0.85);
+	rough = mix(rough, 0.22, wetness * 0.70);
 
-	// Påfør skarp verdensroms PBR-normal (eller original normal på bossmodeller uten PBR-pakke)
 	if (has_pbr_pack) {
-		NORMAL = normalize((VIEW_MATRIX * vec4(tri_wn, 0.0)).xyz);
+		NORMAL = normalize((VIEW_MATRIX * vec4(blended_wn, 0.0)).xyz);
 	} else if (has_normal_tex) {
 		NORMAL_MAP = texture(normal_tex, UV).rgb;
-		NORMAL_MAP_DEPTH = normal_strength * 0.85;
+		NORMAL_MAP_DEPTH = normal_strength * 0.55;
 	}
 
-	// Diskret fysisk kantglans (ingen melkehvit tåke-vask!)
-	float ndotv = clamp(dot(NORMAL, normalize(VIEW)), 0.0, 1.0);
-	float rim = pow(1.0 - ndotv, 4.2) * rim_strength;
-
-	ALBEDO = clamp(alb, vec3(0.0), vec3(1.05));
+	ALBEDO = clamp(alb, vec3(0.0), vec3(1.0));
 	METALLIC = metal;
-	ROUGHNESS = clamp(rough, 0.10, 0.96);
+	ROUGHNESS = clamp(rough, 0.18, 0.96);
 	AO = ao;
-	SPECULAR = mix(clamp(0.62 - rough * 0.45, 0.16, 0.58), 0.92, wetness);
-	EMISSION = emission_color * emission_energy + rim_color * rim * 0.10;
+	SPECULAR = mix(clamp(0.40 - rough * 0.25, 0.12, 0.34), 0.70, wetness);
+	EMISSION = emission_color * emission_energy;
 }

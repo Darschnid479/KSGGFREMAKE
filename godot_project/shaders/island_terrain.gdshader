@@ -47,26 +47,24 @@ void fragment() {
 	vec3 em_col = vec3(0.0);
 
 	if (theme_id == 1) {
-		// Gral: Skummel mørk vulkansk basalt, mørk forhekset lyng + glødende lilla/oransje magiske sprekker!
-		sand_col = to_lin(vec3(0.20, 0.18, 0.24));
-		grass_a = to_lin(vec3(0.14, 0.18, 0.20));
-		grass_b = to_lin(vec3(0.22, 0.17, 0.28));
-		path_col = to_lin(vec3(0.18, 0.15, 0.22));
-		cliff_dark = to_lin(vec3(0.09, 0.08, 0.13));
-		cliff_lit = to_lin(vec3(0.26, 0.22, 0.34));
-		peak_col = to_lin(vec3(0.18, 0.16, 0.24));
-		float crack = smoothstep(0.70, 0.88, n_fine) * smoothstep(1.0, 5.2, v_height) * clamp(cliff_mask + 0.35, 0.0, 1.0);
-		em_col = mix(vec3(0.55, 0.12, 0.95), vec3(1.0, 0.34, 0.08), strata) * crack * 1.6;
+		// Gral: Mørk skifer- og basaltklippe med dyster lyng uten glitrende prikker
+		sand_col = to_lin(vec3(0.22, 0.21, 0.25));
+		grass_a = to_lin(vec3(0.15, 0.20, 0.19));
+		grass_b = to_lin(vec3(0.22, 0.20, 0.26));
+		path_col = to_lin(vec3(0.19, 0.17, 0.22));
+		cliff_dark = to_lin(vec3(0.11, 0.11, 0.15));
+		cliff_lit = to_lin(vec3(0.28, 0.27, 0.34));
+		peak_col = to_lin(vec3(0.20, 0.20, 0.26));
 	} else if (theme_id == 2) {
-		// Fata Morgana: Rike gyldne sanddyner med vindribler + varme terrakotta sandsteinsklipper + grønn oaseflekk!
+		// Fata Morgana: Rike gyldne sanddyner med vindribler + varme terrakotta sandsteinsklipper
 		float ripples = sin(xz.x * 2.5 + xz.y * 1.6 + n_med * 3.8) * 0.5 + 0.5;
-		sand_col = to_lin(mix(vec3(0.86, 0.67, 0.34), vec3(0.94, 0.78, 0.46), ripples * 0.7));
-		grass_a = to_lin(mix(vec3(0.76, 0.52, 0.22), vec3(0.88, 0.68, 0.36), ripples));
-		grass_b = to_lin(vec3(0.68, 0.44, 0.19));
-		path_col = to_lin(vec3(0.58, 0.34, 0.16));
-		cliff_dark = to_lin(vec3(0.42, 0.22, 0.11));
-		cliff_lit = to_lin(vec3(0.68, 0.42, 0.20));
-		peak_col = to_lin(vec3(0.58, 0.34, 0.16));
+		sand_col = to_lin(mix(vec3(0.84, 0.68, 0.38), vec3(0.90, 0.76, 0.48), ripples * 0.7));
+		grass_a = to_lin(mix(vec3(0.76, 0.56, 0.28), vec3(0.84, 0.68, 0.40), ripples));
+		grass_b = to_lin(vec3(0.68, 0.48, 0.24));
+		path_col = to_lin(vec3(0.58, 0.38, 0.20));
+		cliff_dark = to_lin(vec3(0.42, 0.26, 0.15));
+		cliff_lit = to_lin(vec3(0.66, 0.44, 0.24));
+		peak_col = to_lin(vec3(0.58, 0.38, 0.20));
 	} else if (theme_id == 3) {
 		// Maga Khans øy: Dyp frodig smaragd-jungel, mørk vulkansk moseklippe og gylne strender
 		sand_col = to_lin(vec3(0.78, 0.62, 0.34));
@@ -108,22 +106,19 @@ void fragment() {
 	vec3 cliff_col = mix(cliff_dark, cliff_lit, strata_band);
 	vec3 alb = mix(ground, cliff_col, cliff_mask * smoothstep(-0.15, 0.75, v_height));
 
-	// Tydelig finkornet stein-/jordkontrast + mørk sprekk-AO i daler og foten av klipper
-	alb *= (0.78 + 0.42 * n_fine);
-	float crevice_ao = mix(1.0, 0.76, cliff_mask * (1.0 - strata_band));
+	alb *= (0.86 + 0.26 * n_fine);
+	float crevice_ao = mix(1.0, 0.82, cliff_mask * (1.0 - strata_band));
 	alb *= crevice_ao;
 
-	// Våt, mørkere strandlinje rett ved bølgeskvulpet
-	float wet = (1.0 - smoothstep(-0.1, 0.62, v_height)) * smoothstep(-1.4, -0.05, v_height);
-	alb *= mix(1.0, 0.58, wet * 0.75);
+	float wet = (1.0 - smoothstep(-0.1, 0.50, v_height)) * smoothstep(-1.2, -0.05, v_height);
+	alb *= mix(1.0, 0.66, wet * 0.68);
 
-	// Skarp prosedyrell normalmap fra xz-projeksjon (betydelig dypere på klipper!)
-	NORMAL_MAP = texture(detail_normal_tex, xz * 0.28).rgb;
-	NORMAL_MAP_DEPTH = mix(1.05, 2.25, cliff_mask);
+	NORMAL_MAP = texture(detail_normal_tex, xz * 0.24).rgb;
+	NORMAL_MAP_DEPTH = mix(0.65, 1.35, cliff_mask);
 
 	ALBEDO = clamp(alb, vec3(0.0), vec3(1.0));
-	ROUGHNESS = mix(mix(0.88, 0.70, cliff_mask), 0.18, wet);
-	METALLIC = 0.02;
-	SPECULAR = mix(0.42, 0.85, wet);
+	ROUGHNESS = mix(mix(0.88, 0.74, cliff_mask), 0.28, wet);
+	METALLIC = 0.0;
+	SPECULAR = mix(0.28, 0.62, wet);
 	EMISSION = em_col;
 }
