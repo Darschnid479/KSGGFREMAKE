@@ -24,7 +24,7 @@ var _step_timer: float = 0.0
 var _bob_phase: float = 0.0
 var _visual_root: Node3D
 var _sword_pivot: Node3D
-var _sword_mesh: MeshInstance3D
+var _sword_mesh: Node3D
 var _lamp_light: OmniLight3D
 var _interact_targets: Array[Node] = []
 var _last_safe_pos: Vector3 = Vector3.ZERO
@@ -86,65 +86,45 @@ func _setup_visuals() -> void:
 	_sword_pivot.rotation_degrees = Vector3(18.0, -20.0, -12.0)
 	_visual_root.add_child(_sword_pivot)
 
-	_sword_mesh = MeshInstance3D.new()
-	var blade := BoxMesh.new()
-	blade.size = Vector3(0.014, 0.052, 0.72)
-	_sword_mesh.mesh = blade
-	_sword_mesh.position = Vector3(0.0, 0.01, -0.38)
-	var mat := StandardMaterial3D.new()
-	mat.albedo_color = Color(0.46, 0.50, 0.56)
-	mat.metallic = 0.82
-	mat.roughness = 0.30
-	mat.rim_enabled = false
-	_sword_mesh.material_override = mat
+	_sword_mesh = Node3D.new()
+	_sword_mesh.name = "WeaponHolder"
 	_sword_pivot.add_child(_sword_mesh)
 
-	# Spiss sabeltupp fremover
-	var tip := MeshInstance3D.new()
-	var tip_m := PrismMesh.new()
-	tip_m.size = Vector3(0.014, 0.16, 0.052)
-	tip.mesh = tip_m
-	tip.position = Vector3(0.0, 0.0, -0.44)
-	tip.rotation_degrees = Vector3(-90.0, 0.0, 0.0)
-	tip.material_override = mat
-	_sword_mesh.add_child(tip)
+	var saber_path := "res://assets/store/polyhaven/wooden_handle_saber/wooden_handle_saber_1k.gltf"
+	var estoc_path := "res://assets/store/polyhaven/antique_estoc/antique_estoc_1k.gltf"
+	var loaded_gltf_sword := false
+	if ResourceLoader.exists(saber_path):
+		var sc_s := load(saber_path) as PackedScene
+		if sc_s:
+			var sinst := sc_s.instantiate() as Node3D
+			if sinst:
+				sinst.name = "SaberNode"
+				sinst.rotation_degrees = Vector3(-90.0, 0.0, 0.0)
+				sinst.scale = Vector3.ONE * 0.90
+				_sword_mesh.add_child(sinst)
+				loaded_gltf_sword = true
+	if ResourceLoader.exists(estoc_path):
+		var sc_e := load(estoc_path) as PackedScene
+		if sc_e:
+			var ein := sc_e.instantiate() as Node3D
+			if ein:
+				ein.name = "EstocNode"
+				ein.scale = Vector3.ONE * 0.72
+				ein.visible = false
+				_sword_mesh.add_child(ein)
 
-	# Utsmykket gull-parerstang, håndbøyle og sverdfeste i Pinkys hånd
-	var gmat := StandardMaterial3D.new()
-	gmat.albedo_color = Color(0.98, 0.78, 0.22)
-	gmat.metallic = 0.94
-	gmat.roughness = 0.20
-
-	var guard := MeshInstance3D.new()
-	var gbox := BoxMesh.new()
-	gbox.size = Vector3(0.18, 0.16, 0.045)
-	guard.mesh = gbox
-	guard.position = Vector3(0.0, -0.01, 0.44)
-	guard.material_override = gmat
-	_sword_mesh.add_child(guard)
-
-	var grip := MeshInstance3D.new()
-	var gcyl := CylinderMesh.new()
-	gcyl.top_radius = 0.028
-	gcyl.bottom_radius = 0.030
-	gcyl.height = 0.18
-	grip.mesh = gcyl
-	grip.position = Vector3(0.0, -0.01, 0.54)
-	grip.rotation_degrees = Vector3(90.0, 0.0, 0.0)
-	var grip_mat := StandardMaterial3D.new()
-	grip_mat.albedo_color = Color(0.24, 0.12, 0.06)
-	grip_mat.roughness = 0.78
-	grip.material_override = grip_mat
-	_sword_mesh.add_child(grip)
-
-	var pommel := MeshInstance3D.new()
-	var psph := SphereMesh.new()
-	psph.radius = 0.044
-	psph.height = 0.088
-	pommel.mesh = psph
-	pommel.position = Vector3(0.0, -0.01, 0.64)
-	pommel.material_override = gmat
-	_sword_mesh.add_child(pommel)
+	if not loaded_gltf_sword:
+		var fb := MeshInstance3D.new()
+		var blade := BoxMesh.new()
+		blade.size = Vector3(0.014, 0.052, 0.72)
+		fb.mesh = blade
+		fb.position = Vector3(0.0, 0.01, -0.38)
+		var mat := StandardMaterial3D.new()
+		mat.albedo_color = Color(0.46, 0.50, 0.56)
+		mat.metallic = 0.82
+		mat.roughness = 0.30
+		fb.material_override = mat
+		_sword_mesh.add_child(fb)
 
 	# Lykt-lys (Lykte-lampe)
 	_lamp_light = OmniLight3D.new()
@@ -221,25 +201,35 @@ func _on_weapon_changed(weapon_id: String) -> void:
 	var info: Dictionary = GameState.WEAPONS.get(weapon_id, {})
 	var wtype := str(info.get("type", "melee"))
 	_sword_mesh.visible = (wtype == "melee") and (weapon_id != "none")
-	var mat := _sword_mesh.material_override as StandardMaterial3D
-	if mat:
+	var saber := _sword_mesh.get_node_or_null("SaberNode") as Node3D
+	var estoc := _sword_mesh.get_node_or_null("EstocNode") as Node3D
+	if saber and estoc:
+		var use_estoc := (weapon_id == "rapier")
+		saber.visible = not use_estoc
+		estoc.visible = use_estoc
+		var tint_col := Color(0.95, 0.95, 0.98)
+		var met_boost := 0.0
 		match weapon_id:
 			"woodensword":
-				mat.albedo_color = Color(0.48, 0.31, 0.16)
-				mat.metallic = 0.04
-				mat.roughness = 0.80
+				tint_col = Color(0.62, 0.42, 0.24)
 			"goldsword":
-				mat.albedo_color = Color(0.82, 0.64, 0.20)
-				mat.metallic = 0.85
-				mat.roughness = 0.28
+				tint_col = Color(1.0, 0.84, 0.32)
+				met_boost = 0.25
 			"rapier":
-				mat.albedo_color = Color(0.58, 0.62, 0.68)
-				mat.metallic = 0.84
-				mat.roughness = 0.26
-			_:
-				mat.albedo_color = Color(0.46, 0.50, 0.56)
-				mat.metallic = 0.72
-				mat.roughness = 0.30
+				tint_col = Color(0.90, 0.93, 1.0)
+				met_boost = 0.15
+		for m in _find_meshes(estoc if use_estoc else saber):
+			var mat := m.get_active_material(0)
+			if mat is StandardMaterial3D:
+				var sm := (mat as StandardMaterial3D).duplicate() as StandardMaterial3D
+				sm.albedo_color = tint_col
+				if met_boost > 0.0:
+					sm.metallic = clampf(sm.metallic + met_boost, 0.0, 0.92)
+				m.material_override = sm
+	elif _sword_mesh is MeshInstance3D:
+		var fmat := (_sword_mesh as MeshInstance3D).material_override as StandardMaterial3D
+		if fmat:
+			fmat.albedo_color = Color(0.46, 0.50, 0.56)
 	if is_instance_valid(_lamp_light):
 		_lamp_light.visible = GameState.lamp_enabled
 

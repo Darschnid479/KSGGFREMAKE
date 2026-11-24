@@ -82,7 +82,7 @@ void fragment() {
 		vec3 tnx = texture(pbr_normal_tex, uv_x).rgb * 2.0 - 1.0;
 		vec3 tny = texture(pbr_normal_tex, uv_y).rgb * 2.0 - 1.0;
 		vec3 tnz = texture(pbr_normal_tex, uv_z).rgb * 2.0 - 1.0;
-		float ns = normal_strength * 0.36;
+		float ns = normal_strength * 0.58;
 		tnx.xy *= ns;
 		tny.xy *= ns;
 		tnz.xy *= ns;
@@ -90,46 +90,46 @@ void fragment() {
 		vec3 ny = vec3(tny.x + wn.x, wn.y, tny.y + wn.z);
 		vec3 nz = vec3(tnz.x + wn.x, tnz.y + wn.y, wn.z);
 		vec3 tri_wn = normalize(nx * w.x + ny * w.y + nz * w.z);
-		blended_wn = normalize(mix(wn, tri_wn, 0.55));
+		blended_wn = normalize(mix(wn, tri_wn, 0.78));
 
-		// Delikat detaljoverlagring som bevarer originalmalt tekstur & bakt lyskart uten prikker/mursteinssøl!
+		// Ekte 2K photogrammetry detaljoverlagring som fjerner 2004 UV-strekk men bevarer original fargepalett
 		float pa_lum = dot(pa, vec3(0.299, 0.587, 0.114));
-		vec3 micro_detail = orig * clamp(0.76 + pa_lum * 0.48, 0.65, 1.25);
-		vec3 pbr_tinted = pa * max(orig, vec3(0.06)) * 1.65;
-		alb = mix(micro_detail, pbr_tinted, pbr_blend * 0.55);
-		rough = mix(base_roughness, pr, 0.48);
-		ao = clamp(0.76 + pa_lum * 0.32, 0.62, 1.0);
+		vec3 micro_detail = orig * clamp(0.68 + pa_lum * 0.64, 0.58, 1.32);
+		vec3 pbr_tinted = pa * max(orig, vec3(0.05)) * 1.72;
+		alb = mix(micro_detail, pbr_tinted, clamp(pbr_blend * 0.75, 0.0, 0.88));
+		rough = mix(base_roughness, pr, 0.68);
+		ao = clamp(0.66 + pa_lum * 0.44, 0.52, 1.0);
 	}
 
 	if (has_orm_tex) {
 		vec3 orm = texture(orm_tex, UV).rgb;
-		ao = min(ao, mix(1.0, orm.r, 0.70));
-		rough = mix(rough, clamp(orm.g, 0.25, 0.96), 0.28);
-		metal = max(base_metallic, orm.b * 0.7);
+		ao = min(ao, mix(1.0, orm.r, 0.75));
+		rough = mix(rough, clamp(orm.g, 0.22, 0.96), 0.30);
+		metal = max(base_metallic, orm.b * 0.75);
 	}
 
 	float lum = dot(alb, vec3(0.299, 0.587, 0.114));
 	alb = mix(vec3(lum), alb, saturation_boost);
 
-	// Subtil fuktighet kun rett i vannkanten (+0.38m over vannflaten, aldri på hele skipet!)
+	// Realistisk fuktighet og SSR-speiling i vannkanten (+0.42m over vannflaten)
 	float wetness = 0.0;
 	if (wet_water_y > -500.0) {
-		wetness = 1.0 - smoothstep(wet_water_y - 0.05, wet_water_y + 0.38, v_world_pos.y);
-		alb *= mix(1.0, 0.64, wetness * 0.72);
+		wetness = 1.0 - smoothstep(wet_water_y - 0.05, wet_water_y + 0.42, v_world_pos.y);
+		alb *= mix(1.0, 0.58, wetness * 0.76);
 	}
-	rough = mix(rough, 0.22, wetness * 0.70);
+	rough = mix(rough, 0.14, wetness * 0.80);
 
 	if (has_pbr_pack) {
 		NORMAL = normalize((VIEW_MATRIX * vec4(blended_wn, 0.0)).xyz);
 	} else if (has_normal_tex) {
 		NORMAL_MAP = texture(normal_tex, UV).rgb;
-		NORMAL_MAP_DEPTH = normal_strength * 0.55;
+		NORMAL_MAP_DEPTH = normal_strength * 0.72;
 	}
 
 	ALBEDO = clamp(alb, vec3(0.0), vec3(1.0));
 	METALLIC = metal;
-	ROUGHNESS = clamp(rough, 0.18, 0.96);
+	ROUGHNESS = clamp(rough, 0.12, 0.96);
 	AO = ao;
-	SPECULAR = mix(clamp(0.40 - rough * 0.25, 0.12, 0.34), 0.70, wetness);
+	SPECULAR = mix(clamp(0.46 - rough * 0.24, 0.16, 0.40), 0.86, wetness);
 	EMISSION = emission_color * emission_energy;
 }

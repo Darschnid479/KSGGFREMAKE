@@ -7,6 +7,11 @@ render_mode blend_mix, depth_draw_opaque, cull_back, diffuse_burley, specular_sc
 uniform int theme_id = 0; // 0=harbor, 1=castle(Gral), 2=desert(Fata Morgana), 3=jungle(Maga Khan), 4=palm(Skattejakt)
 uniform sampler2D noise_tex : filter_linear_mipmap, repeat_enable;
 uniform sampler2D detail_normal_tex : hint_normal, filter_linear_mipmap, repeat_enable;
+uniform sampler2D rock_tex : source_color, filter_linear_mipmap_anisotropic, repeat_enable;
+uniform sampler2D rock_nrm_tex : hint_normal, filter_linear_mipmap_anisotropic, repeat_enable;
+uniform sampler2D sand_tex : source_color, filter_linear_mipmap_anisotropic, repeat_enable;
+uniform sampler2D sand_nrm_tex : hint_normal, filter_linear_mipmap_anisotropic, repeat_enable;
+uniform bool has_real_pbr = false;
 
 varying vec3 v_world_pos;
 varying vec3 v_world_nrm;
@@ -31,12 +36,10 @@ void fragment() {
 	float ridge_noise = abs(n_med - 0.5) * 2.0;
 
 	float up = clamp(v_world_nrm.y, 0.0, 1.0);
-	// Skarpe fjellklipper på alle bratte skråninger + eksponerte fjellrygger!
 	float slope_cliff = 1.0 - smoothstep(0.68, 0.91, up + (n_med - 0.5) * 0.12);
 	float high_rock = smoothstep(4.2, 7.6, v_height + (n_macro - 0.5) * 2.0) * smoothstep(0.38, 0.72, n_med);
 	float cliff_mask = clamp(max(slope_cliff, high_rock * 0.85), 0.0, 1.0);
 
-	// Temabaserte rike sRGB-paletter konvertert til ekte lineær PBR-farge!
 	vec3 sand_col = to_lin(vec3(0.84, 0.68, 0.40));
 	vec3 grass_a = to_lin(vec3(0.14, 0.42, 0.16));
 	vec3 grass_b = to_lin(vec3(0.28, 0.54, 0.18));
@@ -44,10 +47,8 @@ void fragment() {
 	vec3 cliff_dark = to_lin(vec3(0.20, 0.18, 0.17));
 	vec3 cliff_lit = to_lin(vec3(0.42, 0.37, 0.32));
 	vec3 peak_col = to_lin(vec3(0.34, 0.31, 0.29));
-	vec3 em_col = vec3(0.0);
 
 	if (theme_id == 1) {
-		// Gral: Mørk skifer- og basaltklippe med dyster lyng uten glitrende prikker
 		sand_col = to_lin(vec3(0.22, 0.21, 0.25));
 		grass_a = to_lin(vec3(0.15, 0.20, 0.19));
 		grass_b = to_lin(vec3(0.22, 0.20, 0.26));
@@ -56,7 +57,6 @@ void fragment() {
 		cliff_lit = to_lin(vec3(0.28, 0.27, 0.34));
 		peak_col = to_lin(vec3(0.20, 0.20, 0.26));
 	} else if (theme_id == 2) {
-		// Fata Morgana: Rike gyldne sanddyner med vindribler + varme terrakotta sandsteinsklipper
 		float ripples = sin(xz.x * 2.5 + xz.y * 1.6 + n_med * 3.8) * 0.5 + 0.5;
 		sand_col = to_lin(mix(vec3(0.84, 0.68, 0.38), vec3(0.90, 0.76, 0.48), ripples * 0.7));
 		grass_a = to_lin(mix(vec3(0.76, 0.56, 0.28), vec3(0.84, 0.68, 0.40), ripples));
@@ -66,7 +66,6 @@ void fragment() {
 		cliff_lit = to_lin(vec3(0.66, 0.44, 0.24));
 		peak_col = to_lin(vec3(0.58, 0.38, 0.20));
 	} else if (theme_id == 3) {
-		// Maga Khans øy: Dyp frodig smaragd-jungel, mørk vulkansk moseklippe og gylne strender
 		sand_col = to_lin(vec3(0.78, 0.62, 0.34));
 		grass_a = to_lin(vec3(0.08, 0.32, 0.11));
 		grass_b = to_lin(vec3(0.20, 0.48, 0.14));
@@ -75,7 +74,6 @@ void fragment() {
 		cliff_lit = to_lin(vec3(0.32, 0.34, 0.24));
 		peak_col = to_lin(vec3(0.25, 0.24, 0.20));
 	} else if (theme_id == 4) {
-		// Skattejakt-øya: Varm karibisk strand, gresskledde klipper og lys kalkstein
 		sand_col = to_lin(vec3(0.88, 0.74, 0.42));
 		grass_a = to_lin(vec3(0.16, 0.44, 0.15));
 		grass_b = to_lin(vec3(0.32, 0.58, 0.18));
@@ -85,7 +83,6 @@ void fragment() {
 		peak_col = to_lin(vec3(0.44, 0.38, 0.28));
 	}
 
-	// Organisk gress-/sandblanding + tydelige stier og fargevariasjon
 	vec3 flat_col = mix(grass_a, grass_b, smoothstep(0.22, 0.78, n_macro * 0.62 + n_med * 0.38));
 	float dirt_trail = smoothstep(0.56, 0.80, ridge_noise) * smoothstep(1.2, 2.8, v_height) * (1.0 - smoothstep(4.8, 6.8, v_height));
 	flat_col = mix(flat_col, path_col, dirt_trail * 0.52);
@@ -93,32 +90,45 @@ void fragment() {
 	float beach_t = smoothstep(0.55, 1.85, v_height + (n_med - 0.5) * 0.75);
 	vec3 ground = mix(sand_col, flat_col, beach_t);
 
-	// Dyp turkis-mørk havbunn under vannlinjen
 	float underwater = 1.0 - smoothstep(-2.6, 0.15, v_height);
 	ground = mix(ground, mix(to_lin(vec3(0.05, 0.14, 0.22)), sand_col * 0.65, smoothstep(-4.8, 0.0, v_height)), underwater);
 
-	// Fjelltopp-stein
 	float peak_t = smoothstep(5.4, 9.0, v_height + (n_macro - 0.5) * 1.6);
 	ground = mix(ground, peak_col, peak_t * 0.72);
 
-	// Skarp lagdelt klippevegg med dype skyggesprekker
 	float strata_band = smoothstep(0.22, 0.80, strata * 0.7 + n_fine * 0.3);
 	vec3 cliff_col = mix(cliff_dark, cliff_lit, strata_band);
-	vec3 alb = mix(ground, cliff_col, cliff_mask * smoothstep(-0.15, 0.75, v_height));
+	float cliff_vis = cliff_mask * smoothstep(-0.15, 0.75, v_height);
+	vec3 alb = mix(ground, cliff_col, cliff_vis);
 
-	alb *= (0.86 + 0.26 * n_fine);
-	float crevice_ao = mix(1.0, 0.82, cliff_mask * (1.0 - strata_band));
+	vec3 nrm_sample = texture(detail_normal_tex, xz * 0.24).rgb;
+	if (has_real_pbr) {
+		vec3 s_alb = texture(sand_tex, xz * 0.18).rgb;
+		vec3 r_alb = texture(rock_tex, xz * 0.16 + vec2(v_height * 0.08)).rgb;
+		float s_lum = dot(s_alb, vec3(0.299, 0.587, 0.114));
+		float r_lum = dot(r_alb, vec3(0.299, 0.587, 0.114));
+		float detail_mul = mix(0.66 + s_lum * 0.68, 0.58 + r_lum * 0.84, cliff_vis);
+		alb *= clamp(detail_mul, 0.52, 1.38);
+
+		vec3 s_nrm = texture(sand_nrm_tex, xz * 0.18).rgb;
+		vec3 r_nrm = texture(rock_nrm_tex, xz * 0.16 + vec2(v_height * 0.08)).rgb;
+		nrm_sample = mix(s_nrm, r_nrm, cliff_vis);
+	} else {
+		alb *= (0.86 + 0.26 * n_fine);
+	}
+
+	float crevice_ao = mix(1.0, 0.78, cliff_mask * (1.0 - strata_band));
 	alb *= crevice_ao;
 
-	float wet = (1.0 - smoothstep(-0.1, 0.50, v_height)) * smoothstep(-1.2, -0.05, v_height);
-	alb *= mix(1.0, 0.66, wet * 0.68);
+	float wet = (1.0 - smoothstep(-0.1, 0.55, v_height)) * smoothstep(-1.2, -0.05, v_height);
+	alb *= mix(1.0, 0.58, wet * 0.74);
 
-	NORMAL_MAP = texture(detail_normal_tex, xz * 0.24).rgb;
-	NORMAL_MAP_DEPTH = mix(0.65, 1.35, cliff_mask);
+	NORMAL_MAP = nrm_sample;
+	NORMAL_MAP_DEPTH = mix(0.75, 1.55, cliff_mask);
 
 	ALBEDO = clamp(alb, vec3(0.0), vec3(1.0));
-	ROUGHNESS = mix(mix(0.88, 0.74, cliff_mask), 0.28, wet);
+	ROUGHNESS = mix(mix(0.86, 0.70, cliff_mask), 0.16, wet);
 	METALLIC = 0.0;
-	SPECULAR = mix(0.28, 0.62, wet);
-	EMISSION = em_col;
+	SPECULAR = mix(0.32, 0.78, wet);
+	EMISSION = vec3(0.0);
 }

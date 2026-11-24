@@ -6,7 +6,7 @@ class_name PortalTrigger
 @export var portal_label: String = "Seil videre"
 @export var is_world_map_buoy: bool = false
 
-var _ring: MeshInstance3D
+var _ring: Node3D
 var _lbl: Label3D
 var _t: float = 0.0
 
@@ -15,43 +15,47 @@ func _ready() -> void:
 	add_to_group("interactable")
 	var col := CollisionShape3D.new()
 	var sph := SphereShape3D.new()
-	sph.radius = 4.2 if is_world_map_buoy else 2.6
+	sph.radius = 5.2 if is_world_map_buoy else 2.6
 	col.shape = sph
 	add_child(col)
 
-	# Diskret ankringsbøye-markør kun på verdenskartet (ingen prangende neon-ringer på land/skipsdekk!)
-	_ring = MeshInstance3D.new()
-	var torus := TorusMesh.new()
-	torus.inner_radius = 1.65 if is_world_map_buoy else 0.52
-	torus.outer_radius = 1.82 if is_world_map_buoy else 0.56
-	_ring.mesh = torus
-	_ring.scale = Vector3(1.0, 0.28, 1.0)
-	_ring.position.y = 0.05
-	_ring.visible = is_world_map_buoy
-	var mat := StandardMaterial3D.new()
-	mat.albedo_color = Color(0.76, 0.56, 0.16)
-	mat.metallic = 0.80
-	mat.roughness = 0.30
-	mat.emission_enabled = true
-	mat.emission = Color(0.95, 0.68, 0.18)
-	mat.emission_energy_multiplier = 0.45 if is_world_map_buoy else 0.15
-	_ring.material_override = mat
-	add_child(_ring)
-
 	if is_world_map_buoy:
+		var buoy_root := Node3D.new()
+		var buoy_path := "res://assets/store/polyhaven/ocean_buoy/ocean_buoy_1k.gltf"
+		if ResourceLoader.exists(buoy_path):
+			var sc := load(buoy_path) as PackedScene
+			if sc:
+				var binst := sc.instantiate()
+				binst.scale = Vector3.ONE * 1.45
+				buoy_root.add_child(binst)
+		else:
+			var cyl := MeshInstance3D.new()
+			var cm := CylinderMesh.new()
+			cm.top_radius = 0.4
+			cm.bottom_radius = 0.65
+			cm.height = 2.0
+			cyl.mesh = cm
+			buoy_root.add_child(cyl)
 		var light := OmniLight3D.new()
-		light.position.y = 1.0
-		light.light_color = Color(1.0, 0.78, 0.32)
-		light.light_energy = 1.2
-		light.omni_range = 8.0
-		add_child(light)
+		light.position.y = 2.4
+		light.light_color = Color(1.0, 0.78, 0.34)
+		light.light_energy = 2.2
+		light.omni_range = 12.0
+		buoy_root.add_child(light)
+		_ring = buoy_root
+		add_child(_ring)
+	else:
+		# Hold portaler på land/skipsdekk helt uten prangende torus-ringer
+		_ring = Node3D.new()
+		_ring.visible = false
+		add_child(_ring)
 
-	# Flytende tekst vises KUN når Pinky er rett i nærheten (holder spillbildet rent og kinoaktig!)
+	# Flytende tekst vises KUN når spilleren er rett i nærheten
 	_lbl = Label3D.new()
 	_lbl.text = "[E] " + portal_label
-	_lbl.position.y = 2.4
+	_lbl.position.y = 3.8 if is_world_map_buoy else 2.4
 	_lbl.billboard = BaseMaterial3D.BILLBOARD_ENABLED
-	_lbl.font_size = 30
+	_lbl.font_size = 36 if is_world_map_buoy else 30
 	_lbl.outline_size = 8
 	_lbl.modulate = Color(1.0, 0.94, 0.74, 0.0)
 	_lbl.visible = false
@@ -60,9 +64,10 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	_t += delta
-	if is_instance_valid(_ring):
-		_ring.rotate_y(delta * 1.1)
-		_ring.position.y = 0.14 + sin(_t * 2.2) * 0.06
+	if is_instance_valid(_ring) and is_world_map_buoy:
+		_ring.rotation.y = sin(_t * 0.65) * 0.25
+		_ring.rotation.z = cos(_t * 1.35) * 0.08
+		_ring.position.y = 0.15 + sin(_t * 1.9) * 0.14
 
 	if is_instance_valid(_lbl) and not is_world_map_buoy:
 		var players := get_tree().get_nodes_in_group("player")

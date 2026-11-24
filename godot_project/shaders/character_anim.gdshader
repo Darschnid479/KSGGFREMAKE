@@ -180,18 +180,25 @@ void fragment() {
 			texture(albedo_tex, UV + vec2(0.0, tx_sz.y)).rgb +
 			texture(albedo_tex, UV - vec2(0.0, tx_sz.y)).rgb
 		) * 0.25;
-		alb *= clamp(c_tex + (c_tex - b_tex) * 0.60, vec3(0.0), vec3(1.12));
+		alb *= clamp(c_tex + (c_tex - b_tex) * 0.65, vec3(0.0), vec3(1.14));
 	}
 	float lum = dot(alb, vec3(0.299, 0.587, 0.114));
-	alb = mix(vec3(lum), alb, 1.03);
+	alb = mix(vec3(lum), alb, 1.05);
 
+	float nrm_d = 0.32;
 	if (has_fabric_normal) {
-		NORMAL_MAP = texture(fabric_normal_tex, UV * 9.0).rgb;
-		NORMAL_MAP_DEPTH = 0.20;
+		NORMAL_MAP = texture(fabric_normal_tex, UV * 10.0).rgb;
+		NORMAL_MAP_DEPTH = nrm_d;
 	}
+
+	float ndotv = clamp(dot(normalize(NORMAL), normalize(VIEW)), 0.0, 1.0);
+	float rim = pow(1.0 - ndotv, 4.0) * 0.08;
 
 	ALBEDO = clamp(alb, vec3(0.0), vec3(1.0));
 	METALLIC = base_metallic;
-	ROUGHNESS = clamp(max(base_roughness, 0.58), 0.55, 0.90);
-	SPECULAR = 0.16;
+	ROUGHNESS = clamp(max(base_roughness, 0.52), 0.48, 0.88);
+	SPECULAR = 0.24;
+	BACKLIGHT = alb * 0.22 + vec3(0.06, 0.03, 0.02);
+	RIM = rim;
+	RIM_TINT = 0.45;
 }

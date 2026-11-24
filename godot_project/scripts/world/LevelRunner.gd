@@ -198,6 +198,7 @@ func load_level(level_id: String) -> void:
 		# 7. Spawn NPC-er, fiender, originale 1:1 mynter, historie-objekter, portaler og 1:1 stemme-/historiemotor!
 		_populate_entities(level_id, cfg, gp_data, spawn_pos, level_bounds)
 		_add_biome_atmosphere(level_id, spawn_pos)
+		VisualEnhancer.dress_level_with_asset_store(_world_root, level_id, spawn_pos, water_y, _actors_by_name, _make_hm_callable())
 
 	# 8. Spill av oppskalert animert historie-filmsekvens ved overgangskapitler (cave og abra starter LIVE i 3D med stemmer!)
 	var pending_cut := GameState.get_pending_cutscene(level_id)
@@ -231,32 +232,37 @@ func _setup_modern_environment(cfg: Dictionary) -> void:
 	elif is_cave:
 		env.ambient_light_source = Environment.AMBIENT_SOURCE_COLOR
 		env.ambient_light_color = Color(0.28, 0.25, 0.30) if current_level_id == "cave" else cfg.get("ambient_color", Color(0.22, 0.26, 0.34))
-		env.ambient_light_energy = 0.54 if current_level_id == "cave" else 0.44
+		env.ambient_light_energy = 0.56 if current_level_id == "cave" else 0.46
 	else:
 		env.ambient_light_source = Environment.AMBIENT_SOURCE_SKY
-		env.ambient_light_sky_contribution = 0.68
+		env.ambient_light_sky_contribution = 0.78
 		env.ambient_light_color = cfg.get("ambient_color", Color(0.42, 0.58, 0.82))
-		env.ambient_light_energy = clampf(float(cfg.get("ambient_energy", 0.62)) * 0.56, 0.34, 0.46)
+		env.ambient_light_energy = clampf(float(cfg.get("ambient_energy", 0.64)) * 0.62, 0.38, 0.52)
 
-	# Balansert AgX tone-mapping + naturlig kontrast uten overbrent oransje/gul-stikk
+	# Balansert AgX tone-mapping + SSAO + SSIL + Screen-Space Reflections (SSR) på Forward+
 	env.tonemap_mode = Environment.TONE_MAPPER_AGX
-	env.tonemap_exposure = 1.02 if is_swim else (1.06 if current_level_id == "cave" else (0.98 if not is_cave else 1.00))
+	env.tonemap_exposure = 1.02 if is_swim else (1.06 if current_level_id == "cave" else (1.00 if not is_cave else 1.00))
 	env.ssao_enabled = GameState.ssao_enabled
 	env.ssao_radius = 1.55
 	env.ssao_intensity = 1.45
 	env.ssao_power = 1.25
-	env.ssao_detail = 0.65
+	env.ssao_detail = 0.68
 
-	# Dempet indirekte bounce-lys
+	# Sanntids indirekte bounce-lys + SSR vann-/metall-speiling
 	env.ssil_enabled = GameState.ssil_enabled
-	env.ssil_radius = 3.5
-	env.ssil_intensity = 0.45
+	env.ssil_radius = 3.8
+	env.ssil_intensity = 0.52
+	env.ssr_enabled = (not is_swim)
+	env.ssr_max_steps = 48
+	env.ssr_fade_in = 0.15
+	env.ssr_fade_out = 2.0
+	env.ssr_depth_tolerance = 0.25
 
 	env.glow_enabled = GameState.glow_enabled
 	env.glow_normalized = true
-	env.glow_intensity = 0.22 if is_swim else 0.22
-	env.glow_bloom = 0.05
-	env.glow_hdr_threshold = 1.35
+	env.glow_intensity = 0.24 if is_swim else 0.25
+	env.glow_bloom = 0.06
+	env.glow_hdr_threshold = 1.30
 
 	env.fog_enabled = GameState.fog_enabled
 	env.fog_light_color = cfg.get("fog_color", Color(0.62, 0.78, 0.94))
@@ -562,43 +568,72 @@ func _spawn_modern_ocean(water_y: float, bounds: AABB, is_world_map: bool = fals
 	var pm := PlaneMesh.new()
 	var span: float = maxf(maxf(bounds.size.x, bounds.size.z) * 2.4, 2200.0 if is_world_map else 560.0)
 	pm.size = Vector2(span, span)
-	pm.subdivide_width = 160 if is_world_map else 128
-	pm.subdivide_depth = 160 if is_world_map else 128
+	pm.subdivide_width = 180 if is_world_map else 128
+	pm.subdivide_depth = 180 if is_world_map else 128
 	water.mesh = pm
 	water.position = Vector3(0.0 if is_world_map else bounds.get_center().x, water_y, 0.0 if is_world_map else bounds.get_center().z)
 
+	var bw_path := "res://addons/boujie_water_shader/prefabs/outset_ocean_material.tres"
+	if ResourceLoader.exists(bw_path):
+		var base_bw := load(bw_path) as ShaderMaterial
+		if base_bw:
+			var bmat := base_bw.duplicate() as ShaderMaterial
+			bmat.set_shader_parameter("near_fade_min", 0.05)
+			bmat.set_shader_parameter("near_fade_max", 0.22)
+			bmat.set_shader_parameter("distance_fade_min", 1800.0)
+			bmat.set_shader_parameter("distance_fade_max", 2800.0)
+			bmat.set_shader_parameter("specular", 0.78)
+			bmat.set_shader_parameter("roughness", 0.045)
+			bmat.set_shader_parameter("FoamWaveCount", 0)
+			bmat.set_shader_parameter("foam_fade_min", 0.0)
+			bmat.set_shader_parameter("foam_fade_max", 0.0)
+			bmat.set_shader_parameter("uv_tri_scale", Vector3(5.2, 5.2, 5.2) if is_world_map else Vector3(2.8, 2.8, 2.8))
+			if is_world_map:
+				bmat.set_shader_parameter("albedo", Color(0.014, 0.23, 0.43, 0.56))
+				bmat.set_shader_parameter("albedo_fresnel", Color(0.28, 0.62, 0.90, 1.0))
+				bmat.set_shader_parameter("color_shallow", Color(0.06, 0.62, 0.68, 0.72))
+				bmat.set_shader_parameter("color_deep", Color(0.010, 0.14, 0.34, 0.96))
+				bmat.set_shader_parameter("beers_law", 0.20)
+				bmat.set_shader_parameter("depth_offset", -0.2)
+				bmat.set_shader_parameter("shore_start_blend", 0.20)
+				bmat.set_shader_parameter("shore_end_blend", 1.15)
+				bmat.set_shader_parameter("WaveFrequencies", PackedFloat32Array([0.035, 0.065, 0.11, 0.16, 0.24]))
+				bmat.set_shader_parameter("WaveSteepnesses", PackedFloat32Array([0.36, 0.24, 0.16, 0.12, 0.08]))
+				bmat.set_shader_parameter("WaveAmplitudes", PackedFloat32Array([0.48, 0.34, 0.24, 0.18, 0.12]))
+			elif current_level_id == "fatamorgana_city":
+				bmat.set_shader_parameter("albedo", Color(0.025, 0.38, 0.52, 0.54))
+				bmat.set_shader_parameter("albedo_fresnel", Color(0.42, 0.76, 0.92, 1.0))
+				bmat.set_shader_parameter("color_shallow", Color(0.10, 0.60, 0.64, 0.58))
+				bmat.set_shader_parameter("color_deep", Color(0.015, 0.22, 0.38, 0.92))
+				bmat.set_shader_parameter("beers_law", 0.55)
+				bmat.set_shader_parameter("depth_offset", -0.1)
+				bmat.set_shader_parameter("shore_start_blend", 0.04)
+				bmat.set_shader_parameter("shore_end_blend", 0.38)
+				bmat.set_shader_parameter("WaveFrequencies", PackedFloat32Array([0.16, 0.28, 0.45, 0.72, 1.10]))
+				bmat.set_shader_parameter("WaveSteepnesses", PackedFloat32Array([0.14, 0.10, 0.08, 0.05, 0.03]))
+				bmat.set_shader_parameter("WaveAmplitudes", PackedFloat32Array([0.10, 0.07, 0.05, 0.03, 0.02]))
+			else:
+				bmat.set_shader_parameter("albedo", Color(0.018, 0.28, 0.46, 0.54))
+				bmat.set_shader_parameter("albedo_fresnel", Color(0.36, 0.68, 0.90, 1.0))
+				bmat.set_shader_parameter("color_shallow", Color(0.08, 0.58, 0.64, 0.62))
+				bmat.set_shader_parameter("color_deep", Color(0.012, 0.16, 0.34, 0.94))
+				bmat.set_shader_parameter("beers_law", 0.42)
+				bmat.set_shader_parameter("depth_offset", -0.1)
+				bmat.set_shader_parameter("shore_start_blend", 0.08)
+				bmat.set_shader_parameter("shore_end_blend", 0.60)
+				bmat.set_shader_parameter("WaveFrequencies", PackedFloat32Array([0.14, 0.24, 0.38, 0.62, 0.95]))
+				bmat.set_shader_parameter("WaveSteepnesses", PackedFloat32Array([0.16, 0.12, 0.08, 0.05, 0.03]))
+				bmat.set_shader_parameter("WaveAmplitudes", PackedFloat32Array([0.14, 0.09, 0.06, 0.04, 0.02]))
+			water.material_override = bmat
+			_world_root.add_child(water)
+			return
+
 	var sm := ShaderMaterial.new()
 	sm.shader = OCEAN_SHADER
-	if is_world_map:
-		sm.set_shader_parameter("deep_color", Color(0.015, 0.17, 0.36, 1.0))
-		sm.set_shader_parameter("mid_color", Color(0.02, 0.40, 0.56, 1.0))
-		sm.set_shader_parameter("shallow_color", Color(0.08, 0.72, 0.72, 1.0))
-		sm.set_shader_parameter("depth_fade", 3.4)
-		sm.set_shader_parameter("foam_width", 0.52)
-		sm.set_shader_parameter("wave_height", 0.24)
-		sm.set_shader_parameter("cloud_shadow_strength", 0.16)
-		sm.set_shader_parameter("sparkle_strength", 1.15)
-	elif current_level_id == "fatamorgana_city":
-		sm.set_shader_parameter("deep_color", Color(0.02, 0.28, 0.44, 1.0))
-		sm.set_shader_parameter("mid_color", Color(0.04, 0.52, 0.62, 1.0))
-		sm.set_shader_parameter("shallow_color", Color(0.16, 0.80, 0.78, 1.0))
-		sm.set_shader_parameter("sun_dir", Vector3(0.62, 0.28, -0.74))
-		sm.set_shader_parameter("sun_tint", Color(1.0, 0.90, 0.58))
-		sm.set_shader_parameter("depth_fade", 3.6)
-		sm.set_shader_parameter("foam_width", 0.80)
-		sm.set_shader_parameter("wave_height", 0.12)
-		sm.set_shader_parameter("sparkle_strength", 1.1)
-	else:
-		sm.set_shader_parameter("deep_color", Color(0.015, 0.16, 0.34, 1.0))
-		sm.set_shader_parameter("mid_color", Color(0.02, 0.38, 0.52, 1.0))
-		sm.set_shader_parameter("shallow_color", Color(0.10, 0.70, 0.72, 1.0))
-		sm.set_shader_parameter("sun_dir", Vector3(-0.52, 0.32, -0.78))
-		sm.set_shader_parameter("sun_tint", Color(1.0, 0.94, 0.72))
-		sm.set_shader_parameter("depth_fade", 4.2)
-		sm.set_shader_parameter("foam_width", 0.90)
-		sm.set_shader_parameter("wave_height", 0.16)
-		sm.set_shader_parameter("sparkle_strength", 1.0)
-
+	sm.set_shader_parameter("deep_color", Color(0.015, 0.16, 0.34, 1.0))
+	sm.set_shader_parameter("mid_color", Color(0.02, 0.38, 0.52, 1.0))
+	sm.set_shader_parameter("shallow_color", Color(0.10, 0.70, 0.72, 1.0))
+	sm.set_shader_parameter("wave_height", 0.24 if is_world_map else 0.12)
 	water.material_override = sm
 	_world_root.add_child(water)
 
@@ -892,6 +927,14 @@ func _make_stylized_island_mesh(radius: float, theme: String, height_fn: Callabl
 	smat.set_shader_parameter("theme_id", theme_id)
 	smat.set_shader_parameter("noise_tex", noise_tex)
 	smat.set_shader_parameter("detail_normal_tex", normal_tex)
+	var rock_pk := VisualEnhancer.get_pbr_pack("rock_natural")
+	var sand_pk := VisualEnhancer.get_pbr_pack("coast_sand")
+	if rock_pk.has("albedo") and rock_pk.has("normal") and sand_pk.has("albedo") and sand_pk.has("normal"):
+		smat.set_shader_parameter("rock_tex", rock_pk["albedo"])
+		smat.set_shader_parameter("rock_nrm_tex", rock_pk["normal"])
+		smat.set_shader_parameter("sand_tex", sand_pk["albedo"])
+		smat.set_shader_parameter("sand_nrm_tex", sand_pk["normal"])
+		smat.set_shader_parameter("has_real_pbr", true)
 	mi.material_override = smat
 	return mi
 
