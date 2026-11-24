@@ -7,12 +7,14 @@ class_name VisualEnhancer
 const WORLD_PBR_SHADER := preload("res://shaders/world_pbr_enhance.gdshader")
 const STYLIZED_SKY_SHADER := preload("res://shaders/stylized_sky.gdshader")
 const STORM_SKY_SHADER := preload("res://shaders/storm_sky.gdshader")
+const STYLIZED_PANO_SKY_SHADER := preload("res://shaders/stylized_pano_sky.gdshader")
 
 static var _cached_barrel_albedo: Texture2D
 static var _cached_barrel_normal: Texture2D
 static var _cached_shadow_tex: Texture2D
 static var _cached_glow_tex: Texture2D
 static var _cached_pbr_packs: Dictionary = {}
+static var _cached_sky_panos: Dictionary = {}
 
 
 static func get_pbr_pack(pack_name: String) -> Dictionary:
@@ -31,7 +33,18 @@ static func get_pbr_pack(pack_name: String) -> Dictionary:
 	return d
 
 
-## Oppgrader alle synlige nivåmaterialer til 2026 stilisert 3D-animasjonsfilm-PBR med direkte bruk av bakte CC0-kart.
+static func get_sky_pano(sky_name: String) -> Texture2D:
+	if _cached_sky_panos.has(sky_name):
+		return _cached_sky_panos[sky_name]
+	var p := "res://assets/skies/" + sky_name
+	if ResourceLoader.exists(p):
+		var t := load(p) as Texture2D
+		_cached_sky_panos[sky_name] = t
+		return t
+	return null
+
+
+## Oppgrader alle synlige nivåmaterialer til 2026 Ultra-HD 4K stilisert 3D-animasjonsfilm-PBR med bakte 4K/2K CC0-kart + 4K RNM triplanar detalj.
 static func enhance_world_node(root: Node, biome: String = "abra", water_y: float = -999.0) -> void:
 	var is_cursed_harbor := biome in ["abra", "menu"]
 	var is_cave := biome in ["cave", "cave_end", "cave_end_bosslevel", "magakhan_dungeon", "magakhan_endboss_level"]
@@ -110,11 +123,16 @@ static func enhance_world_node(root: Node, biome: String = "abra", water_y: floa
 			else:
 				sh.set_shader_parameter("has_orm_tex", false)
 
-			# Kun 2D undervanns-tverrsnitt ("blackwall" / "black ") bruker world-space stilisert fjellpakke!
 			var is_cutaway := ("blackwall" in mat_name or rname == "black" or rname.begins_with("black_"))
 			var is_boss := ("phoenixdefuse" in mat_name or "graalboss" in mname)
+			var is_iconic_painted := (
+				"sign" in rname or "flag" in rname or "skull" in rname or "carpet" in rname
+				or "window" in rname or "door" in rname or "hatch" in rname or "map" in rname
+				or "shop" in rname or "boat" in rname or "wagon" in rname or "flame" in rname
+				or "lava" in rname or "cake" in rname or "gong" in rname or is_boss
+			)
 			var pbr_blend := 0.0
-			var tile_scale := 0.14
+			var tile_scale := 0.24
 			var micro_det := 0.0
 			var contrast_gamma := 1.02
 			var rough := clampf(sm.roughness, 0.18, 0.94)
@@ -124,37 +142,82 @@ static func enhance_world_node(root: Node, biome: String = "abra", water_y: floa
 			var rim_col := Color(0.88, 0.94, 1.0)
 			var em_col := Color(0.0, 0.0, 0.0)
 			var em_energy := 0.0
-			var nrm_str := 0.92
+			var nrm_str := 1.12
 
 			if is_cutaway:
-				var cut_pack := get_pbr_pack("cutaway_bedrock")
+				var cut_pack := get_pbr_pack("cutaway_bedrock_4k")
 				if cut_pack.has("albedo") and cut_pack.has("normal") and cut_pack.has("rough"):
 					sh.set_shader_parameter("has_pbr_pack", true)
 					sh.set_shader_parameter("pbr_albedo_tex", cut_pack["albedo"])
 					sh.set_shader_parameter("pbr_normal_tex", cut_pack["normal"])
 					sh.set_shader_parameter("pbr_rough_tex", cut_pack["rough"])
 					pbr_blend = 0.92
-					tile_scale = 0.12
-					rough = 0.88
-					sat = 0.92
+					tile_scale = 0.16
+					rough = 0.86
+					sat = 0.94
 					rim_str = 0.0
+					nrm_str = 1.15
 					sh.set_shader_parameter("has_albedo_tex", false)
 					sh.set_shader_parameter("albedo_tint", Color(0.18, 0.24, 0.30, 1.0))
 			else:
-				# Diskret stilisert CC0 mikrorelieff på store lav-UV fjell-, grotte-, øy- og sandflater (skarp 2026-finish i nærbilde!)
+				# Knivskarpt 4K verdensrom-triplanar RNM-relieff på alle stein-, fjell-, grotte-, mur-, gulv-, tre- og sandflater!
 				var det_pack_name := ""
-				if biome in ["cave", "cave_end", "cave_end_bosslevel"] and ("rock" in mat_name or "cave" in mat_name or "wall" in mat_name or "ground" in mat_name or "floor" in mat_name or "portal" in mat_name):
-					det_pack_name = "rock_natural"
-					micro_det = 0.32
-					tile_scale = 0.26
-				elif is_world_map and ("island" in mname or "complete" in rname):
-					det_pack_name = "rock_natural"
-					micro_det = 0.28
-					tile_scale = 0.06
-				elif biome in ["treasurehunt", "magakhan_beach"] and ("sand" in mat_name or "ground" in mat_name or "beach" in mat_name or "island" in mat_name or "terrain" in mat_name):
-					det_pack_name = "coast_sand"
-					micro_det = 0.30
-					tile_scale = 0.24
+				if not is_iconic_painted:
+					if biome in ["cave", "cave_end", "cave_end_bosslevel"] and ("rock" in mat_name or "cave" in mat_name or "wall" in mat_name or "ground" in mat_name or "floor" in mat_name or "portal" in mat_name or "dripstone" in mat_name or "stone" in mat_name or "cliff" in mat_name):
+						det_pack_name = "rock_boulder_4k" if ("dripstone" in mat_name or "pillar" in mat_name or "rock" in rname) else "rock_cave_4k"
+						micro_det = 0.64
+						tile_scale = 0.36
+						nrm_str = 1.38
+					elif "cliff" in mat_name or "mountain" in mat_name or ("graal" in biome and ("rock" in mat_name or "wall" in mat_name or "tunnel" in mat_name)):
+						det_pack_name = "rock_cliff_4k"
+						micro_det = 0.56
+						tile_scale = 0.30
+						nrm_str = 1.32
+					elif "castle" in mat_name or "brick" in mat_name or "battlement" in mat_name or "tower" in mat_name or "chimney" in mat_name or "foundation" in mat_name:
+						det_pack_name = "stone_castle_4k"
+						micro_det = 0.48
+						tile_scale = 0.32
+						nrm_str = 1.26
+					elif "moss" in mat_name or "well" in mat_name or "dungeon" in biome and ("stone" in mat_name or "wall" in mat_name or "floor" in mat_name):
+						det_pack_name = "stone_mossy_4k"
+						micro_det = 0.52
+						tile_scale = 0.32
+						nrm_str = 1.28
+					elif is_desert and ("floor" in mat_name or "marble" in mat_name or "palace" in biome and "ground" in mat_name):
+						det_pack_name = "marble_4k"
+						micro_det = 0.34
+						tile_scale = 0.24
+						nrm_str = 1.05
+					elif is_desert and ("stone" in mat_name or "wall" in mat_name or "column" in mat_name or "pillar" in mat_name or "block" in mat_name or "sultan" in mat_name or "city" in mat_name):
+						det_pack_name = "sandstone_4k"
+						micro_det = 0.44
+						tile_scale = 0.30
+						nrm_str = 1.22
+					elif "stone" in mat_name or "cobble" in mat_name or "tile" in mat_name or "graalground" in mat_name or "pavement" in mat_name or "bridge02" in mat_name or "alter" in mat_name or "altar" in mat_name:
+						det_pack_name = "slate_floor_4k" if ("floor" in mat_name or "ground" in mat_name or "tile" in mat_name) else "stone_wall_4k"
+						micro_det = 0.48
+						tile_scale = 0.32
+						nrm_str = 1.26
+					elif is_world_map and ("island" in mname or "complete" in rname):
+						det_pack_name = "rock_cliff_4k"
+						micro_det = 0.36
+						tile_scale = 0.07
+						nrm_str = 1.18
+					elif "sand" in mat_name or "beach" in mat_name or "dune" in mat_name:
+						det_pack_name = "coast_sand_4k"
+						micro_det = 0.48
+						tile_scale = 0.32
+						nrm_str = 1.15
+					elif "grass" in mat_name or "jungleground" in mat_name or "meadow" in mat_name:
+						det_pack_name = "grass_lush_4k"
+						micro_det = 0.46
+						tile_scale = 0.30
+						nrm_str = 1.18
+					elif "plank" in mat_name or "wood" in mat_name or "dock" in mat_name or "pier" in mat_name or "bridge01" in mat_name or "deck" in mat_name or "darklady" in rname:
+						det_pack_name = "wood_dark_4k" if ("dark" in mat_name or "dungeon" in biome) else "wood_planks_4k"
+						micro_det = 0.34
+						tile_scale = 0.38
+						nrm_str = 1.18
 
 				if det_pack_name != "":
 					var dpk := get_pbr_pack(det_pack_name)
@@ -244,6 +307,7 @@ static func enhance_character_node(root: Node, add_shadow: bool = true, shadow_r
 			if mat == null or not (mat is StandardMaterial3D):
 				continue
 			var dup := (mat as StandardMaterial3D).duplicate() as StandardMaterial3D
+			dup.vertex_color_use_as_albedo = false
 			dup.diffuse_mode = BaseMaterial3D.DIFFUSE_BURLEY
 			dup.specular_mode = BaseMaterial3D.SPECULAR_SCHLICK_GGX
 			dup.roughness = clampf(dup.roughness, 0.36, 0.90)
@@ -289,10 +353,88 @@ static func add_contact_shadow(parent: Node, radius: float = 0.75) -> void:
 	parent.add_child(sh)
 
 
-## Bygg 2026 stilisert animasjonshimmel tilpasset hvert områdes dokumenterte 2007-fargeskript (null foto-HDRI-bakgrunner!).
+## Bygg 2026 Ultra-HD 4K stilisert animasjonshimmel tilpasset hvert områdes dokumenterte 2007-fargeskript
+## (med malte 4K PureSky-skyer, måne/sol-glød og fjerne fjell-, klippe-, øy- og ørkensilhuetter!).
 static func create_biome_sky(level_id: String, cfg: Dictionary) -> Sky:
 	var sky := Sky.new()
-	sky.radiance_size = Sky.RADIANCE_SIZE_256
+	sky.radiance_size = Sky.RADIANCE_SIZE_512
+
+	# Kartlegg alle utendørs biomer til sine 4K (4096x2048) stiliserte 360-graders himmelpanoramer
+	var pano_file := ""
+	var pano_exposure := 1.08
+	var pano_rot := 0.0
+	var pano_drift := 0.0018
+	var storm_flash := 0.0
+	var mist_str := 0.08
+	var mist_col := Color(0.20, 0.30, 0.36)
+
+	match level_id:
+		"graal_bosslevel", "graal_mountain":
+			pano_file = "sky_graal_storm_4k.png"
+			pano_exposure = 1.24
+			pano_rot = 0.85
+			pano_drift = 0.0028
+			storm_flash = 0.85
+			mist_str = 0.14
+			mist_col = Color(0.11, 0.22, 0.28)
+		"abra":
+			pano_file = "sky_abra_twilight_4k.png"
+			pano_exposure = 1.12
+			pano_rot = 0.35
+			pano_drift = 0.0016
+			mist_str = 0.12
+			mist_col = Color(0.42, 0.42, 0.22)
+		"menu":
+			pano_file = "sky_abra_night_4k.png"
+			pano_exposure = 1.10
+			pano_rot = 0.20
+			pano_drift = 0.0012
+			mist_str = 0.10
+			mist_col = Color(0.18, 0.20, 0.10)
+		"fatamorgana_city", "fatamorgana_palace", "fatamorgana_bosslevel":
+			pano_file = "sky_fatamorgana_4k.png"
+			pano_exposure = 1.10 if level_id != "fatamorgana_bosslevel" else 0.96
+			pano_rot = 1.10
+			pano_drift = 0.0014
+			mist_str = 0.10
+			mist_col = Color(0.94, 0.78, 0.54)
+		"world_map", "treasurehunt", "magakhan_beach":
+			pano_file = "sky_tropical_4k.png"
+			pano_exposure = 1.10
+			pano_rot = 0.60
+			pano_drift = 0.0018
+			mist_str = 0.08
+			mist_col = Color(0.74, 0.90, 0.95)
+		"magakhan_jungle":
+			pano_file = "sky_jungle_4k.png"
+			pano_exposure = 1.12
+			pano_rot = 0.45
+			pano_drift = 0.0015
+			mist_str = 0.12
+			mist_col = Color(0.48, 0.70, 0.52)
+		"magakhan_palace", "outro":
+			pano_file = "sky_outro_sunset_4k.png"
+			pano_exposure = 1.16
+			pano_rot = 0.25 if level_id == "outro" else 1.40
+			pano_drift = 0.0016
+			mist_str = 0.10
+			mist_col = Color(0.96, 0.68, 0.40)
+
+	if pano_file != "":
+		var pano_tex := get_sky_pano(pano_file)
+		if pano_tex != null:
+			var psm := ShaderMaterial.new()
+			psm.shader = STYLIZED_PANO_SKY_SHADER
+			psm.set_shader_parameter("sky_pano", pano_tex)
+			psm.set_shader_parameter("exposure", pano_exposure)
+			psm.set_shader_parameter("rotation_offset", pano_rot)
+			psm.set_shader_parameter("cloud_drift_speed", pano_drift)
+			psm.set_shader_parameter("storm_flash_strength", storm_flash)
+			psm.set_shader_parameter("storm_flash_color", Color(0.55, 0.80, 1.0))
+			psm.set_shader_parameter("horizon_mist_strength", mist_str)
+			psm.set_shader_parameter("horizon_mist_color", mist_col)
+			sky.sky_material = psm
+			return sky
 
 	if level_id in ["graal_bosslevel", "graal_mountain"]:
 		var ssm := ShaderMaterial.new()
@@ -306,84 +448,7 @@ static func create_biome_sky(level_id: String, cfg: Dictionary) -> Sky:
 
 	var mat := ShaderMaterial.new()
 	mat.shader = STYLIZED_SKY_SHADER
-
 	match level_id:
-		"abra":
-			# Original 2007 sz_scr_05.jpg: Forbannet disig oliven-gyllen sjørøver-skumring over Abra Havn!
-			mat.set_shader_parameter("zenith_color", Color(0.14, 0.17, 0.07))
-			mat.set_shader_parameter("mid_color", Color(0.24, 0.27, 0.12))
-			mat.set_shader_parameter("horizon_color", Color(0.38, 0.39, 0.20))
-			mat.set_shader_parameter("ground_color", Color(0.10, 0.13, 0.08))
-			mat.set_shader_parameter("sun_color", Color(0.92, 0.84, 0.44))
-			mat.set_shader_parameter("cloud_lit", Color(0.46, 0.48, 0.24))
-			mat.set_shader_parameter("cloud_shadow", Color(0.13, 0.16, 0.08))
-			mat.set_shader_parameter("sun_dir", Vector3(0.42, 0.22, -0.88))
-			mat.set_shader_parameter("cloud_coverage", 0.68)
-			mat.set_shader_parameter("sun_size", 0.014)
-		"menu":
-			# Original 2007 menu.jpg: Mørk, mystisk natt-skumring i Abra Havn med varme lykter
-			mat.set_shader_parameter("zenith_color", Color(0.05, 0.07, 0.03))
-			mat.set_shader_parameter("mid_color", Color(0.11, 0.14, 0.06))
-			mat.set_shader_parameter("horizon_color", Color(0.20, 0.22, 0.10))
-			mat.set_shader_parameter("ground_color", Color(0.04, 0.06, 0.03))
-			mat.set_shader_parameter("sun_color", Color(0.84, 0.72, 0.36))
-			mat.set_shader_parameter("cloud_lit", Color(0.24, 0.26, 0.13))
-			mat.set_shader_parameter("cloud_shadow", Color(0.05, 0.07, 0.03))
-			mat.set_shader_parameter("sun_dir", Vector3(0.35, 0.16, -0.92))
-			mat.set_shader_parameter("cloud_coverage", 0.72)
-			mat.set_shader_parameter("sun_size", 0.010)
-		"world_map", "treasurehunt":
-			# Original 2007 sz_scr_02.jpg: Frisk eventyrblå sjøhimmel med lyse solskyer
-			mat.set_shader_parameter("zenith_color", Color(0.07, 0.36, 0.84))
-			mat.set_shader_parameter("mid_color", Color(0.22, 0.60, 0.94))
-			mat.set_shader_parameter("horizon_color", Color(0.76, 0.90, 0.98))
-			mat.set_shader_parameter("ground_color", Color(0.04, 0.20, 0.42))
-			mat.set_shader_parameter("sun_color", Color(1.0, 0.95, 0.78))
-			mat.set_shader_parameter("cloud_lit", Color(1.0, 0.98, 0.92))
-			mat.set_shader_parameter("cloud_shadow", Color(0.46, 0.62, 0.84))
-			mat.set_shader_parameter("sun_dir", Vector3(0.48, 0.42, -0.76))
-			mat.set_shader_parameter("cloud_coverage", 0.42)
-		"fatamorgana_city", "fatamorgana_palace", "fatamorgana_bosslevel":
-			# Original 2007 general-pic.jpg: Klar koboltblå ørkenhimmel over varm gyllen sandstein
-			var is_boss := (level_id == "fatamorgana_bosslevel")
-			mat.set_shader_parameter("zenith_color", Color(0.14, 0.18, 0.54) if is_boss else Color(0.06, 0.28, 0.78))
-			mat.set_shader_parameter("mid_color", Color(0.34, 0.36, 0.66) if is_boss else Color(0.18, 0.52, 0.88))
-			mat.set_shader_parameter("horizon_color", Color(0.96, 0.68, 0.40) if is_boss else Color(0.95, 0.82, 0.58))
-			mat.set_shader_parameter("ground_color", Color(0.54, 0.36, 0.22))
-			mat.set_shader_parameter("sun_color", Color(1.0, 0.88, 0.58))
-			mat.set_shader_parameter("cloud_lit", Color(1.0, 0.94, 0.80))
-			mat.set_shader_parameter("cloud_shadow", Color(0.56, 0.52, 0.68))
-			mat.set_shader_parameter("sun_dir", Vector3(0.55, 0.34, -0.76))
-			mat.set_shader_parameter("cloud_coverage", 0.28)
-		"magakhan_beach":
-			# Original 2007 sz_scr_03.jpg: Klar tropisk sommerhimmel over palmer og sandstrand
-			mat.set_shader_parameter("zenith_color", Color(0.06, 0.42, 0.86))
-			mat.set_shader_parameter("mid_color", Color(0.24, 0.68, 0.96))
-			mat.set_shader_parameter("horizon_color", Color(0.76, 0.94, 0.92))
-			mat.set_shader_parameter("ground_color", Color(0.06, 0.34, 0.48))
-			mat.set_shader_parameter("sun_color", Color(1.0, 0.96, 0.80))
-			mat.set_shader_parameter("cloud_lit", Color(1.0, 0.99, 0.94))
-			mat.set_shader_parameter("cloud_shadow", Color(0.50, 0.68, 0.84))
-			mat.set_shader_parameter("sun_dir", Vector3(0.50, 0.45, -0.74))
-			mat.set_shader_parameter("cloud_coverage", 0.36)
-		"magakhan_jungle":
-			mat.set_shader_parameter("zenith_color", Color(0.06, 0.34, 0.28))
-			mat.set_shader_parameter("mid_color", Color(0.18, 0.52, 0.38))
-			mat.set_shader_parameter("horizon_color", Color(0.48, 0.72, 0.52))
-			mat.set_shader_parameter("ground_color", Color(0.08, 0.22, 0.14))
-			mat.set_shader_parameter("sun_color", Color(1.0, 0.94, 0.66))
-			mat.set_shader_parameter("cloud_lit", Color(0.84, 0.94, 0.82))
-			mat.set_shader_parameter("cloud_shadow", Color(0.22, 0.42, 0.32))
-			mat.set_shader_parameter("cloud_coverage", 0.52)
-		"magakhan_palace", "outro":
-			mat.set_shader_parameter("zenith_color", Color(0.14, 0.28, 0.62))
-			mat.set_shader_parameter("mid_color", Color(0.40, 0.46, 0.72))
-			mat.set_shader_parameter("horizon_color", Color(0.98, 0.72, 0.46))
-			mat.set_shader_parameter("ground_color", Color(0.18, 0.22, 0.32))
-			mat.set_shader_parameter("sun_color", Color(1.0, 0.84, 0.52))
-			mat.set_shader_parameter("cloud_lit", Color(1.0, 0.88, 0.68))
-			mat.set_shader_parameter("cloud_shadow", Color(0.38, 0.36, 0.52))
-			mat.set_shader_parameter("cloud_coverage", 0.40)
 		"cave", "magakhan_dungeon", "magakhan_endboss_level":
 			mat.set_shader_parameter("zenith_color", cfg.get("sky_top", Color(0.03, 0.04, 0.08)))
 			mat.set_shader_parameter("mid_color", cfg.get("sky_horizon", Color(0.08, 0.08, 0.14)))
@@ -395,7 +460,6 @@ static func create_biome_sky(level_id: String, cfg: Dictionary) -> Sky:
 			mat.set_shader_parameter("cloud_coverage", 0.20)
 			mat.set_shader_parameter("sun_size", 0.005)
 		_:
-			# Undervannsbrett og cave_end / cave_end_bosslevel
 			mat.set_shader_parameter("zenith_color", cfg.get("sky_top", Color(0.01, 0.14, 0.24)))
 			mat.set_shader_parameter("mid_color", cfg.get("sky_horizon", Color(0.04, 0.28, 0.36)))
 			mat.set_shader_parameter("horizon_color", cfg.get("fog_color", Color(0.03, 0.22, 0.30)))

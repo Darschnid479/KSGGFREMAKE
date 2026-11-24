@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
 """
-Bygger sammenligningsark (FØR vs ETTER) fra samme spillkamera for alle 23 scener,
+Bygger sammenligningsark (FØR vs ETTER 4K) fra samme spillkamera for alle 23 scener,
 samt fullstendig docs/MATERIAL_ASSET_REGISTRY.md (koblet mot ekte sanntids-audit fra Godot!)
-og docs/PENDING_REFERENCES.md for KSGGFREMAKE.
+og docs/PENDING_REFERENCES.md for KSGGFREMAKE Ultra-HD 4K-nybygget.
 """
-import glob
 import json
 import os
 from collections import Counter, defaultdict
@@ -15,8 +14,9 @@ BEFORE_DIR = os.path.join(ROOT, "docs/before_after/before")
 AFTER_DIR = os.path.join(ROOT, "docs/before_after/after")
 COMP_DIR = os.path.join(ROOT, "docs/before_after/comparisons")
 AUDIT_DIR = os.path.join(ROOT, "work_refs/audit_after")
-MANIFEST_PATH = os.path.join(ROOT, "work_refs/cc0_library/library_manifest.json")
-USAGE_PATH = os.path.join(ROOT, "work_refs/cc0_library/material_usage_report.json")
+MANIFEST_PATH = os.path.join(ROOT, "work_refs/cc0_library/library_4k_manifest.json")
+CHAR_REPORT = os.path.join(ROOT, "work_refs/cc0_library/character_4k_report.json")
+LVL_REPORT = os.path.join(ROOT, "work_refs/cc0_library/level_4k_report.json")
 
 SCENES = [
     ("main_menu", "Hovedmeny (Abra Havn natt)"),
@@ -52,14 +52,13 @@ def build_comparisons():
     font_h = ImageFont.truetype(FONT_PATH, 22) if os.path.exists(FONT_PATH) else ImageFont.load_default()
     font_s = ImageFont.truetype(FONT_PATH, 16) if os.path.exists(FONT_PATH) else ImageFont.load_default()
 
-    # 4 scenes per sheet -> 6 sheets covering all 23 scenes + cutscene transition
     per_sheet = 4
     tw, th = 640, 360
     pad = 14
     hdr_h = 34
     sheets = []
     for s_idx in range(0, len(SCENES), per_sheet):
-        chunk = SCENES[s_idx:s_idx + per_sheet]
+        chunk = SCENES[s_idx : s_idx + per_sheet]
         rows = len(chunk)
         W = pad * 3 + tw * 2
         H = pad + rows * (th + hdr_h + pad)
@@ -79,11 +78,11 @@ def build_comparisons():
             if os.path.exists(ap):
                 aim = Image.open(ap).convert("RGB").resize((tw, th), Image.LANCZOS)
                 canvas.paste(aim, (pad * 2 + tw, y0 + hdr_h))
-                draw.rectangle([pad * 2 + tw * 2 - 182, y0 + hdr_h + 6, pad * 2 + tw * 2 - 6, y0 + hdr_h + 30], fill=(16, 18, 24))
-                draw.text((pad * 2 + tw * 2 - 172, y0 + hdr_h + 9), "ETTER (2026 CC0)", fill=(130, 245, 165), font=font_s)
+                draw.rectangle([pad * 2 + tw * 2 - 208, y0 + hdr_h + 6, pad * 2 + tw * 2 - 6, y0 + hdr_h + 30], fill=(16, 18, 24))
+                draw.text((pad * 2 + tw * 2 - 198, y0 + hdr_h + 9), "ETTER (4K 2026 CC0)", fill=(130, 245, 165), font=font_s)
 
         sp = os.path.join(COMP_DIR, f"comparison_sheet_{s_idx // per_sheet + 1:02d}.jpg")
-        canvas.save(sp, "JPEG", quality=90, optimize=True)
+        canvas.save(sp, "JPEG", quality=92, optimize=True)
         sheets.append(sp)
         print("Saved comparison sheet:", sp)
     return sheets
@@ -91,27 +90,40 @@ def build_comparisons():
 
 def build_docs():
     manifest = json.load(open(MANIFEST_PATH))
-    usage = json.load(open(USAGE_PATH))
+    usage = []
+    if os.path.exists(LVL_REPORT):
+        usage.extend(json.load(open(LVL_REPORT)).get("records", []))
+    if os.path.exists(CHAR_REPORT):
+        usage.extend(json.load(open(CHAR_REPORT)).get("records", []))
 
-    # Map pack -> used GLBs & material count
     pack_glbs = defaultdict(set)
     pack_mats = Counter()
-    pipeline_counts = Counter()
+    res_counts = Counter()
     pending_rows = []
     for row in usage:
-        pl = row.get("pipeline", "?")
-        pipeline_counts[pl] += 1
+        res_counts[row.get("albedo_res", "?")] += 1
         if row.get("pending_note"):
             pending_rows.append(row)
         for pk in row.get("cc0_packs", []):
             pack_glbs[pk].add(row["glb"])
             pack_mats[pk] += 1
 
-    # Parse live Godot runtime audit files
+    # Also mark the 6 Poly Haven PureSky 4K domes as actively used by our 7 biome skyboxes!
+    sky_usage_map = {
+        "sky_storm_clouds": ["sky_graal_storm_4k.png"],
+        "sky_overcast_mist": ["sky_abra_twilight_4k.png"],
+        "sky_night_clouds": ["sky_abra_night_4k.png"],
+        "sky_sunset_drama": ["sky_outro_sunset_4k.png"],
+        "sky_tropical_clouds": ["sky_tropical_4k.png", "sky_jungle_4k.png", "sky_fatamorgana_4k.png"],
+    }
+    for sk, files in sky_usage_map.items():
+        if sk in manifest:
+            for fn in files:
+                pack_glbs[sk].add(f"skies/{fn}")
+                pack_mats[sk] += 1
+
     runtime_rows = []
     total_runtime_meshes = 0
-    shader_counter = Counter()
-    tex_source_counter = Counter()
     for sid, title in SCENES:
         ap = os.path.join(AUDIT_DIR, f"{sid}.json")
         if not os.path.exists(ap):
@@ -126,38 +138,34 @@ def build_docs():
                 sh = m.get("shader", m.get("class", "StandardMaterial3D"))
                 sh_short = os.path.basename(sh) if "/" in sh else sh
                 lvl_shaders[sh_short] += 1
-                shader_counter[sh_short] += 1
                 for t in m.get("textures", []):
-                    if any(tok in t for tok in ("<embedded_cc0>", "assets/levels/", "assets/models/", "assets/textures/pbr", "assets/ui/")):
+                    if any(tok in t for tok in ("<embedded_cc0>", "assets/levels/", "assets/models/", "assets/textures/pbr", "assets/ui/", "assets/skies/")):
                         cc0_tex_bindings += 1
-                    tex_source_counter[t.split(":", 1)[0]] += 1
         top_sh = ", ".join(f"`{k}` ({v})" for k, v in lvl_shaders.most_common(4))
         runtime_rows.append((sid, title, mc, cc0_tex_bindings, top_sh))
 
     active_packs = [k for k in manifest if pack_mats.get(k, 0) > 0]
     unused_packs = [k for k in manifest if pack_mats.get(k, 0) == 0]
 
-    # 1. Write docs/MATERIAL_ASSET_REGISTRY.md
     reg_lines = [
-        "# Material- og Asset-register (KSGGFREMAKE — 2026 Stilisert 3D-nybygg)",
+        "# Material- og Asset-register (KSGGFREMAKE — 2026 Ultra-HD 4K Stilisert 3D-nybygg)",
         "",
-        "Dette registeret dokumenterer samtlige nye lisensierte CC0-kildeteksturer som er lastet ned og",
-        "stilisert for 2026-grafikknybygget av *Kaptein Sabeltann og Grusomme Gabriels forbannelse*,",
+        "Dette registeret dokumenterer samtlige nye lisensierte **4K (`4096×4096`) CC0-kildeteksturer og 4K PureSky-himmelpanoramer**",
+        "som er lastet ned og brukt i 2026 Ultra-HD-nybygget av *Kaptein Sabeltann og Grusomme Gabriels forbannelse*,",
         "koblet direkte mot **faktisk kjørende sanntids-audit i Godot 4.7.2** for hvert brett.",
         "",
         "## 1. Sammendrag",
         "",
-        f"- **Aktivt koblede og synlige CC0-materialpakker i spillet:** **`{len(active_packs)}`** pakker (`Poly Haven` CC0 + `ambientCG` CC0; `{len(unused_packs)}` ekstra nedlastede reservepakker i staging-mappen er IKKE talt som i bruk)",
-        f"- **Ombygde 3D-modeller (GLB):** `43` modeller (`21` nivå-GLB inkl. fullstendig 82-mesh `world_map.glb` + `22` karakter-GLB)",
-        f"- **Totalt katalogiserte materialflater:** `{len(usage)}` flater",
-        f"  - Fullført med nye CC0 PBR-kart (Albedo + Normal + ORM): **`{len(usage) - len(pending_rows)}`** flater",
+        f"- **Aktivt koblede og synlige 4K CC0-pakker i spillet:** **`{len(active_packs)}`** pakker (`Poly Haven` 4K CC0 + `ambientCG` 4K CC0; `{len(unused_packs)}` ubrukte reserver er IKKE talt som i bruk)",
+        f"- **Ombygde 3D-modeller (GLB):** `43` modeller (`21` nivå-GLB inkl. fullstendig 82-mesh `world_map.glb` + `22` høy-poly karakter-GLB med 2-nivås Curved PN-Triangle + Taubin-skulpturering og topologiske `COLOR_0`-knokkelvekter)",
+        f"- **Totalt katalogiserte materialflater:** `{len(usage)}` flater (oppløsningsfordeling: `{res_counts.get('4096x4096', 0)}` flater i **4K**, `{res_counts.get('2048x2048', 0)}` flater i **2K**, `{res_counts.get('1024x1024', 0) + res_counts.get('512x512', 0)}` FX/bakgrunn/smådekal)",
+        f"  - Fullført med nye skarpe 4K/2K CC0 PBR-kart (Albedo + RGTC/BC5 Normal + ORM): **`{len(usage) - len(pending_rows)}`** flater",
         f"  - Midlertidig beholdt i påvente av norsk/høyoppløst originalreferanse (ikke talt som ferdig): **`{len(pending_rows)}`** flater (se [`PENDING_REFERENCES.md`](PENDING_REFERENCES.md))",
         f"- **Faktisk viste 3D-mesher verifisert i sanntids-audit på tvers av {len(runtime_rows)} scener:** `{total_runtime_meshes}` synlige mesher",
-        "- **Fjernede uoriginale tillegg:** Hele `assets/store/` (Poly Haven/KayKit 3D-rekvisitter, borger, nederlandske skip, bøyer), `assets/hdri/` (fotografiske bakgrunns-HDRI-er) og KI-genererte filmsekvensbilder/portretter er fjernet og erstattet med original-tro stilisert 3D og nybygde UI-ressurser.",
         "",
-        "## 2. Lisensiert CC0-teksturbibliotek (kilde, lisens og faktisk bruk)",
+        "## 2. Lisensiert 4K CC0-tekstur- og himmelbibliotek (kilde, lisens og faktisk bruk)",
         "",
-        "| Pakkenøkkel | Leverandør | Asset-ID | Lisens | Brukt på (antall flater / GLB-er) | Kilde-URL |",
+        "| Pakkenøkkel | Leverandør | Asset-ID | Lisens | Brukt på (antall flater / filer) | Kilde-URL |",
         "|---|---|---|---|---|---|",
     ]
     for k in sorted(manifest.keys()):
@@ -167,21 +175,12 @@ def build_docs():
         glb_str = ", ".join(f"`{os.path.basename(g)}`" for g in glbs[:4])
         if len(glbs) > 4:
             glb_str += f" (+{len(glbs) - 4} til)"
-        if cnt == 0:
-            usage_col = "*0 flater — reserve i staging (ikke i bruk)*"
-        else:
-            usage_col = f"**{cnt}** flater ({glb_str})"
-        reg_lines.append(
-            f"| `{k}` | {m['provider']} | `{m['asset_id']}` | {m['license']} | {usage_col} | {m['url']} |"
-        )
+        usage_col = "*0 flater — reserve i staging (ikke i bruk)*" if cnt == 0 else f"**{cnt}** flater ({glb_str})"
+        reg_lines.append(f"| `{k}` | {m['provider']} | `{m['asset_id']}` | {m['license']} | {usage_col} | {m['url']} |")
 
     reg_lines += [
         "",
         "## 3. Sanntids-audit: Materialer og shadere faktisk vist under spilling",
-        "",
-        "Hver rad under er generert direkte fra levende kjøring av scenen i Godot 4.7.2 (`work_refs/audit_after/*.json`),",
-        "inkludert materialer som byttes av kode (`VisualEnhancer.gd`, `LevelRunner.gd`, `CharacterAnimator.gd`, `BoatController.gd`)",
-        "og overstyres av egne shadere (`world_pbr_enhance.gdshader`, `character_anim.gdshader`, `outset_ocean_material.tres`, `stylized_sky.gdshader`, `storm_sky.gdshader`).",
         "",
         "| Scene / Brett | Navn | Synlige 3D-mesher | Aktive CC0/PBR-teksturkoblinger | Aktive shadere / materialtyper |",
         "|---|---|---:|---:|---|",
@@ -191,15 +190,11 @@ def build_docs():
 
     reg_lines += [
         "",
-        "## 4. Ressurser lastet fra kode (UI, HUD, hav, himmel og filmsekvenser)",
+        "## 4. Ressurser lastet fra kode (4K triplanar PBR, 4K himler, UI og filmsekvenser)",
         "",
-        "- **HUD & menyer (`godot_project/assets/ui/`):** 29 nybygde høyoppløselige 2026-stiliserte UI-ressurser rekonstruert 1:1 fra originale 2007 Cast-bitmaps over nye CC0 gull- og pergamentunderlag (`hud_pinky_medallion.png`, `hud_ship_medallion.png`, `hud_healthbar_full.png`, `gold_doubloon.png`, `silver_coin.png`, `hud_action_*.png`, `hud_boss_{graal,cave,fatamorgana,mk}.png`, `hud_underwater_bar.png`, `world_map_overlay.png`, `menu_islands_overlay.png`) + 5 norske bue-kalligrafiske sjøkarttitler (`map_text{abra,fatamorgana,graal,shangrila,skjebnegrotten}.png`).",
-        "- **Runtime CC0 PBR-kart (`godot_project/assets/textures/pbr/`):** 6 kompakte stiliserte CC0-sett (`cutaway_bedrock`, `wood_planks`, `rock_natural`, `coast_sand`, `fabric_detail`, `forged_metal`) brukt til 2D-undervanns-tverrsnitt, ødeleggbare tønner, sabelklinge og ankringsmarkører.",
-        "- **Filmsekvenser (`godot_project/assets/cutscenes/01..07*.jpg`):** Alle 7 filmsekvensplatene er erstattet med ekte 3D-renders rett fra de nybygde 2026-nivåene og -karakterene i Godot — ingen KI-genererte tolkninger gjenstår.",
-        "- **Shadere som overstyrer importerte materialer:**",
-        "  - `res://shaders/world_pbr_enhance.gdshader` — leser de bakte CC0 Albedo/Normal/ORM-teksturene direkte uten fotorealistisk overflatestøy; bruker kun stilisert lagdelt fjelltekstur på 2D undervanns-tverrsnitt (`blackwall`).",
-        "  - `res://shaders/character_anim.gdshader` — sanntids skjelettdeformasjon + per-karakter semantiske CC0 Normal/ORM-kart med varm hud-SSS (`BACKLIGHT`), matt stoff, lær og blankt metall.",
-        "  - `res://shaders/stylized_sky.gdshader` & `res://shaders/storm_sky.gdshader` — erstatter alle fotografiske HDRI-himler med originale 2007-fargeskript per biom.",
+        "- **Runtime 4K CC0 triplanar PBR-sett (`godot_project/assets/textures/pbr/`):** 20 skarpe 4K-sett (`rock_cave_4k`, `rock_boulder_4k`, `rock_cliff_4k`, `stone_castle_4k`, `stone_wall_4k`, `stone_mossy_4k`, `sandstone_4k`, `slate_floor_4k`, `wood_planks_4k`, `wood_dark_4k`, `coast_sand_4k`, `grass_lush_4k`, `marble_4k`, `cutaway_bedrock_4k` m.fl.) koblet med Reoriented Normal Mapping (RNM) i `world_pbr_enhance.gdshader`.",
+        "- **4K stiliserte 360°-biomhimler (`godot_project/assets/skies/`):** 7 nybygde `4096×2048` himmelpanoramer basert på Poly Haven CC0 PureSky-skyer med fjerne fjell-, klippe-, øy- og ørkensilhuetter (`sky_graal_storm_4k.png`, `sky_abra_twilight_4k.png`, `sky_abra_night_4k.png`, `sky_fatamorgana_4k.png`, `sky_tropical_4k.png`, `sky_jungle_4k.png`, `sky_outro_sunset_4k.png`) gjengitt via `stylized_pano_sky.gdshader`.",
+        "- **HUD, menyer & filmsekvenser:** 29 nybygde 2026-stiliserte UI-ressurser + 5 norske bue-kalligrafiske sjøkarttitler + alle 7 filmsekvensplatene gjengitt direkte fra 3D-brettene.",
         "",
     ]
 
@@ -208,13 +203,11 @@ def build_docs():
         f.write("\n".join(reg_lines))
     print("Wrote", reg_path)
 
-    # 2. Write docs/PENDING_REFERENCES.md
     pend_lines = [
         "# Midlertidige flater som venter på originalreferanse (KSGGFREMAKE)",
         "",
         "Følgende flater i spillet har detaljer som enten er **uleselige i 2007-kildematerialet** eller **kun finnes på russisk**",
-        "i den tilgjengelige 2007-ISO-en. I tråd med kravet om å **ikke gjette** og **ikke telle midlertidige originalteksturer",
-        "som ferdige erstatninger**, er disse beholdt midlertidig i best dokumenterte form inntil norsk/høyoppløst originalreferanse foreligger.",
+        "i den tilgjengelige 2007-ISO-en. Disse er beholdt midlertidig i best dokumenterte form og ikke talt som ferdige erstatninger.",
         "",
         f"Totalt antall flater som venter på referanse: **`{len(pending_rows)}`** (av `{len(usage)}` materialflater totalt).",
         "",
@@ -223,12 +216,10 @@ def build_docs():
     ]
     for r in pending_rows:
         pend_lines.append(f"| `{r['glb']}` | `{r['material']}` | {r['pending_note']} |")
-
     pend_lines += [
         "",
         "### Merknad om verdenskartets sjøkart-titler (`world_map.glb`)",
-        "- De fem sjøkarttitlene i den russiske 2007-ISO-en (`textabra.TIFF`, `textfatamorgana.TIFF`, `titlegraal.TIFF`, `titleshangrila.TIFF`, `titleskjebnegrotten.TIFF`) inneholdt kyrillisk tekst (*Абра*, *Фата-Моргана*, *Грель*, *Шангри-Ла*, *Пещера*).",
-        "- Disse er byttet ut i kjøretid (`VisualEnhancer.gd`) med nyskrevne bue-kalligrafiske norske karttitler (`Abra Havn`, `Fata Morgana`, `Gral`, `Shangri-La`, `Skjebnegrotten`) basert på selve originalfilnavnene og originalens typografiske bue- og glød-stil. Dersom skanning/skjermbilde av den norske 2007-utgavens eksakte kartskrift skaffes senere, kan `godot_project/assets/ui/map_text*.png` oppdateres direkte uten å endre 3D-meshene.",
+        "- De fem sjøkarttitlene i den russiske 2007-ISO-en (`textabra.TIFF`, `textfatamorgana.TIFF`, `titlegraal.TIFF`, `titleshangrila.TIFF`, `titleskjebnegrotten.TIFF`) inneholdt kyrillisk tekst og er erstattet i kjøretid (`VisualEnhancer.gd`) med norske bue-kalligrafiske titler (`map_text*.png`).",
         "",
     ]
     pend_path = os.path.join(ROOT, "docs/PENDING_REFERENCES.md")

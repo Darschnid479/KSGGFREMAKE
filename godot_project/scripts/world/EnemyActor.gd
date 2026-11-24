@@ -98,7 +98,7 @@ func _align_model(inst: Node3D) -> void:
 	var found := false
 	for m in _find_meshes(inst):
 		var nm := m.name.to_lower()
-		if "shadow" in nm or "crosshair" in nm or "swoosh" in nm:
+		if "shadow" in nm or "crosshair" in nm or "swoosh" in nm or nm == "rapier":
 			m.visible = false
 			continue
 		var aabb: AABB = m.get_aabb()

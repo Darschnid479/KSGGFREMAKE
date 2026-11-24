@@ -100,23 +100,25 @@ func _bind_meshes(root: Node, forward_sign: float) -> void:
 				sm.set_shader_parameter("fabric_normal_tex", fab_nrm)
 			else:
 				sm.set_shader_parameter("has_fabric_normal", false)
+			var has_vcol: bool = (int(mi.mesh.surface_get_format(si)) & Mesh.ARRAY_FORMAT_COLOR) != 0
+			sm.set_shader_parameter("use_vertex_bone_weights", has_vcol)
 			sm.set_shader_parameter("mesh_min_y", min_y)
 			sm.set_shader_parameter("mesh_height", h)
 			sm.set_shader_parameter("torso_half_w", half_w)
 			sm.set_shader_parameter("leg_max_x", leg_mx)
 			sm.set_shader_parameter("z_center", z_mid)
 			sm.set_shader_parameter("forward_sign", forward_sign)
-			# Start umiddelbart med naturlig avslappede armer langs siden (null T/A-pose!)
-			sm.set_shader_parameter("l_arm_out", -0.88)
-			sm.set_shader_parameter("r_arm_out", -0.88)
-			sm.set_shader_parameter("l_elbow_bend", 0.28)
-			sm.set_shader_parameter("r_elbow_bend", 0.30)
+			# Start umiddelbart med naturlig avslappede armer langs siden (null T/A-pose, null albue-knekk!)
+			sm.set_shader_parameter("l_arm_out", -0.05)
+			sm.set_shader_parameter("r_arm_out", -0.05)
+			sm.set_shader_parameter("l_elbow_bend", 0.06)
+			sm.set_shader_parameter("r_elbow_bend", 0.08)
 			mi.set_surface_override_material(si, sm)
 			materials.append(sm)
-	_cur["l_arm_out"] = -0.88
-	_cur["r_arm_out"] = -0.88
-	_cur["l_elbow_bend"] = 0.28
-	_cur["r_elbow_bend"] = 0.30
+	_cur["l_arm_out"] = -0.05
+	_cur["r_arm_out"] = -0.05
+	_cur["l_elbow_bend"] = 0.06
+	_cur["r_elbow_bend"] = 0.08
 
 
 func _collect_body_meshes(node: Node, out: Array[MeshInstance3D]) -> void:
@@ -152,16 +154,16 @@ func update_anim(delta: float, move_speed: float, on_floor: bool, is_talking: bo
 		"hip_bob": 0.0, "hip_twist": 0.0, "torso_lean": 0.0, "torso_twist": 0.0,
 		"head_nod": 0.0, "head_yaw": 0.0,
 		"l_thigh_pitch": 0.0, "l_knee_bend": 0.0, "r_thigh_pitch": 0.0, "r_knee_bend": 0.0,
-		"l_arm_pitch": 0.0, "l_arm_out": -0.88, "l_elbow_bend": 0.28,
-		"r_arm_pitch": 0.0, "r_arm_out": -0.88, "r_elbow_bend": 0.30,
+		"l_arm_pitch": 0.0, "l_arm_out": -0.05, "l_elbow_bend": 0.06,
+		"r_arm_pitch": 0.0, "r_arm_out": -0.05, "r_elbow_bend": 0.08,
 	}
 
 	if is_dead:
 		state = "die"
 		tgt["torso_lean"] = -1.35
 		tgt["hip_bob"] = -0.32
-		tgt["l_arm_out"] = -0.25
-		tgt["r_arm_out"] = -0.25
+		tgt["l_arm_out"] = 0.12
+		tgt["r_arm_out"] = 0.12
 	elif not on_floor:
 		state = "jump"
 		phase += delta * 4.0
@@ -172,10 +174,10 @@ func update_anim(delta: float, move_speed: float, on_floor: bool, is_talking: bo
 		tgt["r_knee_bend"] = 0.78
 		tgt["l_arm_pitch"] = 0.58
 		tgt["r_arm_pitch"] = 0.46
-		tgt["l_arm_out"] = -0.40
-		tgt["r_arm_out"] = -0.40
-		tgt["l_elbow_bend"] = 0.58
-		tgt["r_elbow_bend"] = 0.58
+		tgt["l_arm_out"] = 0.14
+		tgt["r_arm_out"] = 0.14
+		tgt["l_elbow_bend"] = 0.48
+		tgt["r_elbow_bend"] = 0.48
 	elif is_pushing:
 		state = "push"
 		phase += delta * 6.5
@@ -188,8 +190,8 @@ func update_anim(delta: float, move_speed: float, on_floor: bool, is_talking: bo
 		tgt["r_knee_bend"] = maxf(0.0, cos(phase)) * 0.68 + 0.15
 		tgt["l_arm_pitch"] = 1.10
 		tgt["r_arm_pitch"] = 1.10
-		tgt["l_arm_out"] = -0.52
-		tgt["r_arm_out"] = -0.52
+		tgt["l_arm_out"] = -0.04
+		tgt["r_arm_out"] = -0.04
 		tgt["l_elbow_bend"] = 0.22
 		tgt["r_elbow_bend"] = 0.22
 	elif _smooth_speed > 0.30:
@@ -217,10 +219,10 @@ func update_anim(delta: float, move_speed: float, on_floor: bool, is_talking: bo
 
 		tgt["l_arm_pitch"] = -s * arm_amp
 		tgt["r_arm_pitch"] = s * arm_amp
-		tgt["l_arm_out"] = -0.78 if is_run else -0.84
-		tgt["r_arm_out"] = -0.78 if is_run else -0.84
-		tgt["l_elbow_bend"] = (0.80 if is_run else 0.36) + maxf(0.0, -s) * 0.28
-		tgt["r_elbow_bend"] = (0.80 if is_run else 0.36) + maxf(0.0, s) * 0.28
+		tgt["l_arm_out"] = -0.06 if is_run else -0.08
+		tgt["r_arm_out"] = -0.06 if is_run else -0.08
+		tgt["l_elbow_bend"] = (0.58 if is_run else 0.22) + maxf(0.0, -s) * 0.22
+		tgt["r_elbow_bend"] = (0.58 if is_run else 0.22) + maxf(0.0, s) * 0.22
 	elif is_talking:
 		state = "talk"
 		phase += delta * 4.2
@@ -229,22 +231,22 @@ func update_anim(delta: float, move_speed: float, on_floor: bool, is_talking: bo
 		tgt["torso_lean"] = 0.04 + sin(phase * 1.1) * 0.03
 		tgt["head_nod"] = sin(phase * 1.9) * 0.16
 		tgt["head_yaw"] = sin(phase * 0.85) * 0.18
-		tgt["l_arm_pitch"] = 0.36 + sin(phase * 1.3) * 0.24
-		tgt["r_arm_pitch"] = 0.46 + cos(phase * 1.5) * 0.28
-		tgt["l_arm_out"] = -0.72 + sin(phase * 1.1) * 0.08
-		tgt["r_arm_out"] = -0.72 + cos(phase * 1.2) * 0.08
-		tgt["l_elbow_bend"] = 0.68 + sin(phase * 1.7) * 0.20
-		tgt["r_elbow_bend"] = 0.74 + cos(phase * 1.4) * 0.20
+		tgt["l_arm_pitch"] = 0.28 + sin(phase * 1.3) * 0.20
+		tgt["r_arm_pitch"] = 0.34 + cos(phase * 1.5) * 0.22
+		tgt["l_arm_out"] = -0.04 + sin(phase * 1.1) * 0.04
+		tgt["r_arm_out"] = -0.04 + cos(phase * 1.2) * 0.04
+		tgt["l_elbow_bend"] = 0.36 + sin(phase * 1.7) * 0.14
+		tgt["r_elbow_bend"] = 0.40 + cos(phase * 1.4) * 0.14
 	else:
 		state = "idle"
 		phase += delta * 2.0
 		tgt["hip_bob"] = sin(phase) * 0.008
 		tgt["torso_lean"] = sin(phase * 0.8) * 0.02
 		tgt["head_yaw"] = sin(phase * 0.45) * 0.08
-		tgt["l_arm_out"] = -0.88 + sin(phase) * 0.015
-		tgt["r_arm_out"] = -0.88 + sin(phase) * 0.015
-		tgt["l_elbow_bend"] = 0.28
-		tgt["r_elbow_bend"] = 0.30
+		tgt["l_arm_out"] = -0.05 + sin(phase) * 0.015
+		tgt["r_arm_out"] = -0.05 + sin(phase) * 0.015
+		tgt["l_elbow_bend"] = 0.06
+		tgt["r_elbow_bend"] = 0.08
 
 	if attack_t > 0.0:
 		var u := 1.0 - (attack_t / 0.38)
@@ -253,11 +255,11 @@ func update_anim(delta: float, move_speed: float, on_floor: bool, is_talking: bo
 		tgt["torso_twist"] = lerpf(-0.45, 0.58, smoothstep(0.12, 0.78, u))
 		tgt["torso_lean"] = 0.24 * slash
 		tgt["r_arm_pitch"] = swing
-		tgt["r_arm_out"] = -0.15 + 0.35 * slash
-		tgt["r_elbow_bend"] = 0.35 * (1.0 - slash * 0.6)
-		tgt["l_arm_pitch"] = -0.35 * slash
-		tgt["l_arm_out"] = -0.25
-		tgt["l_elbow_bend"] = 0.45
+		tgt["r_arm_out"] = 0.08 + 0.28 * slash
+		tgt["r_elbow_bend"] = 0.30 * (1.0 - slash * 0.6)
+		tgt["l_arm_pitch"] = -0.30 * slash
+		tgt["l_arm_out"] = -0.05
+		tgt["l_elbow_bend"] = 0.36
 
 	if hurt_t > 0.0:
 		var hs := sin((hurt_t / 0.30) * PI)

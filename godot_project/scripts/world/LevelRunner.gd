@@ -297,7 +297,7 @@ func _setup_modern_environment(cfg: Dictionary) -> void:
 		env.fog_mode = Environment.FOG_MODE_EXPONENTIAL
 		var fog_scale := 0.18 if is_world_map else (0.85 if is_abra else (0.42 if is_cave else 0.52))
 		env.fog_density = float(cfg.get("fog_density", 0.0010)) * fog_scale
-		env.fog_sky_affect = 0.36 if is_abra else (0.08 if is_graal else (0.20 if is_cave else 0.08))
+		env.fog_sky_affect = 0.18 if is_abra else (0.06 if is_graal else (0.16 if is_cave else 0.06))
 
 	if GameState.volumetric_fog_enabled and (is_cave or is_graal or is_swim or is_abra):
 		env.volumetric_fog_enabled = true

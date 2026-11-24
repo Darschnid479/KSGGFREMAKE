@@ -80,10 +80,10 @@ func _setup_visuals() -> void:
 	else:
 		_build_fallback_pinky()
 
-	# 2026 Stilisert sjørøversabel (matcher original 2007-silhuett: buet gullbøyle, lærhåndtak og blank stålklinge)
+	# 2026 Stilisert sjørøversabel (plassert nøyaktig i Pinkys målte høyre håndflate med naturlig armstilling!)
 	_sword_pivot = Node3D.new()
-	_sword_pivot.position = Vector3(0.32, 0.88, -0.18)
-	_sword_pivot.rotation_degrees = Vector3(18.0, -20.0, -12.0)
+	_sword_pivot.position = Vector3(0.34, 0.67, -0.21)
+	_sword_pivot.rotation_degrees = Vector3(10.0, -10.0, -6.0)
 	_visual_root.add_child(_sword_pivot)
 
 	_sword_mesh = _build_stylized_cutlass()

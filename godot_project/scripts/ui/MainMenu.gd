@@ -97,7 +97,7 @@ func _setup_3d_backdrop() -> void:
 	env.fog_enabled = true
 	env.fog_light_color = Color(0.16, 0.19, 0.09)
 	env.fog_density = 0.0085
-	env.fog_sky_affect = 0.38
+	env.fog_sky_affect = 0.20
 	env.adjustment_enabled = true
 	env.adjustment_contrast = 1.08
 	env.adjustment_saturation = 1.04
