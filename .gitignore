@@ -12,7 +12,8 @@ godot_project/assets/models/*.png
 # Compiled desktop release builds (published on GitHub Releases)
 builds/
 
-# Temporary files & Python bytecode
+# Temporary files, staging work refs & Python bytecode
+work_refs/
 *.tmp
 __pycache__/
 *.pyc

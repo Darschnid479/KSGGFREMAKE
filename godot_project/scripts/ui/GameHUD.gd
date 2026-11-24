@@ -1,94 +1,164 @@
 extends CanvasLayer
 class_name GameHUD
-## 1:1 original-tro HUD fra Kaptein Sabeltann og Grusomme Gabriels forbannelse (getWidgetData_hud.ls):
-## - Bunn-venstre: Pinkys runde helsemedaljong med buet rød helsemåler + gullmynt-teller
-## - Bunn-høyre: Kontekstuell handlingsmedaljong ([E]) når spilleren er nær NPC/portal
-## - Dialogboks og boss-helsebar kun når aktivt i bruk (ingen våpenlinje 1-6 eller RPG-bokser).
+## 2026 Stilisert 1:1 original-tro HUD for Kaptein Sabeltann og Grusomme Gabriels forbannelse:
+## - Verdenskart: revet pergamentramme (world_map_overlay.png) + Den Sorte Dame-medaljong (hud_ship_medallion.png)
+## - På land/vann: Pinky-medaljong (hud_pinky_medallion.png) med buet rød anker-helsemåler + gull- og sølvmynt
+## - Bunn-høyre: Kontekstuelt originalt handlingsikon (hud_action_*.png) nær NPC/portal/objekt
+## - Boss-helsebar (hud_boss_*.png) og undervanns-luftmåler (hud_underwater_bar.png) kun når aktivt i bruk.
 
 class PirateHealthMedallion extends Control:
 	var health_ratio: float = 1.0
-	var portrait_tex: Texture2D = null
+	var is_ship_mode: bool = false
+	var pinky_tex: Texture2D = null
+	var ship_tex: Texture2D = null
+	var bar_tex: Texture2D = null
 
 	func _init() -> void:
-		custom_minimum_size = Vector2(158, 158)
-		if ResourceLoader.exists("res://assets/ui/pinky_portrait.png"):
-			portrait_tex = load("res://assets/ui/pinky_portrait.png") as Texture2D
+		custom_minimum_size = Vector2(182, 182)
+		if ResourceLoader.exists("res://assets/ui/hud_pinky_medallion.png"):
+			pinky_tex = load("res://assets/ui/hud_pinky_medallion.png") as Texture2D
+		if ResourceLoader.exists("res://assets/ui/hud_ship_medallion.png"):
+			ship_tex = load("res://assets/ui/hud_ship_medallion.png") as Texture2D
+		if ResourceLoader.exists("res://assets/ui/hud_healthbar_full.png"):
+			bar_tex = load("res://assets/ui/hud_healthbar_full.png") as Texture2D
 
 	func set_ratio(r: float) -> void:
 		health_ratio = clampf(r, 0.0, 1.0)
 		queue_redraw()
 
+	func set_ship_mode(ship: bool) -> void:
+		is_ship_mode = ship
+		queue_redraw()
+
 	func _draw() -> void:
-		var c := Vector2(79, 79)
-		# Ytre mørk slitt eik + antikk messingramme
-		draw_circle(c, 71.0, Color(0.08, 0.05, 0.03, 0.92))
-		draw_arc(c, 71.0, 0.0, TAU, 72, Color(0.68, 0.50, 0.22, 0.96), 3.5, true)
-		draw_arc(c, 67.5, 0.0, TAU, 72, Color(0.28, 0.19, 0.08, 0.95), 2.5, true)
+		var w := size.x
+		var h := size.y
+		var frame_tex := ship_tex if (is_ship_mode and ship_tex != null) else pinky_tex
+		# Anker-utskjæringen i hud_pinky_medallion.png / hud_ship_medallion.png (målt eksakt mot original-alfakanal)
+		var bar_rect := Rect2(
+			Vector2(w * 0.038, h * (0.375 if is_ship_mode else 0.365)),
+			Vector2(w * 0.855, h * (0.565 if is_ship_mode else 0.565))
+		)
+		if bar_tex:
+			# Mørkt tomt anker-spor bak
+			draw_texture_rect(bar_tex, bar_rect, false, Color(0.18, 0.05, 0.04, 0.86))
+			# Aktiv rød helsefylling beskåret langs buen fra venstre mot høyre etter helseprosent
+			if health_ratio > 0.01:
+				var tw := float(bar_tex.get_width())
+				var th := float(bar_tex.get_height())
+				var src_w := maxf(tw * health_ratio, 2.0)
+				var dst_w := bar_rect.size.x * health_ratio
+				var tint := Color(1.0, 1.0, 1.0, 1.0) if health_ratio > 0.3 else Color(1.0, 0.55, 0.25, 1.0)
+				draw_texture_rect_region(
+					bar_tex,
+					Rect2(bar_rect.position, Vector2(dst_w, bar_rect.size.y)),
+					Rect2(Vector2.ZERO, Vector2(src_w, th)),
+					tint
+				)
+		if frame_tex:
+			draw_texture_rect(frame_tex, Rect2(Vector2.ZERO, Vector2(w, h)), false)
 
-		# Mørkt spor for buet helsemåler
-		var start_a := PI * 0.72
-		var sweep := PI * 1.56
-		draw_arc(c, 58.0, start_a, start_a + sweep, 56, Color(0.18, 0.08, 0.06, 0.92), 13.0, true)
 
-		# Aktiv dyp karmosinrød helsebue med gyllen kantglans
-		if health_ratio > 0.01:
-			var fill_col := Color(0.76, 0.11, 0.10, 1.0) if health_ratio > 0.3 else Color(0.95, 0.28, 0.08, 1.0)
-			draw_arc(c, 58.0, start_a, start_a + sweep * health_ratio, 56, fill_col, 10.0, true)
-			draw_arc(c, 60.5, start_a, start_a + sweep * health_ratio, 56, Color(1.0, 0.62, 0.42, 0.35), 2.0, true)
-
-		# Live-action portrett av Pinky i midten
-		if portrait_tex:
-			draw_texture_rect(portrait_tex, Rect2(c - Vector2(46, 46), Vector2(92, 92)), false)
-		else:
-			draw_circle(c, 46.0, Color(0.14, 0.18, 0.26, 0.98))
-
-		# Indre antikk messingring rundt portrettet
-		draw_arc(c, 47.0, 0.0, TAU, 64, Color(0.78, 0.58, 0.24, 0.98), 3.2, true)
-		draw_arc(c, 45.0, 0.0, TAU, 64, Color(0.14, 0.09, 0.04, 0.85), 1.5, true)
-
-
-class GoldCoinBadge extends Control:
-	var coin_tex: Texture2D = null
+class PirateBossBar extends Control:
+	var ratio: float = 1.0
+	var boss_title: String = ""
+	var frame_tex: Texture2D = null
+	var _frames: Dictionary = {}
 
 	func _init() -> void:
-		custom_minimum_size = Vector2(64, 64)
-		if ResourceLoader.exists("res://assets/ui/gold_doubloon.png"):
-			coin_tex = load("res://assets/ui/gold_doubloon.png") as Texture2D
+		custom_minimum_size = Vector2(540, 138)
+		for k in ["graal", "cave", "fatamorgana", "mk"]:
+			var p := "res://assets/ui/hud_boss_%s.png" % k
+			if ResourceLoader.exists(p):
+				_frames[k] = load(p) as Texture2D
+		frame_tex = _frames.get("graal", null)
+
+	func set_boss(title: String, cur: float, mx: float, level_id: String) -> void:
+		boss_title = title
+		ratio = clampf(cur / maxf(mx, 0.001), 0.0, 1.0)
+		if "cave" in level_id:
+			frame_tex = _frames.get("cave", frame_tex)
+		elif "fatamorgana" in level_id:
+			frame_tex = _frames.get("fatamorgana", frame_tex)
+		elif "magakhan" in level_id:
+			frame_tex = _frames.get("mk", frame_tex)
+		else:
+			frame_tex = _frames.get("graal", frame_tex)
+		queue_redraw()
 
 	func _draw() -> void:
-		if coin_tex:
-			draw_texture_rect(coin_tex, Rect2(Vector2(4, 4), Vector2(56, 56)), false)
-		else:
-			var cc := Vector2(32, 32)
-			draw_circle(cc, 24.0, Color(0.78, 0.58, 0.14, 0.96))
+		var w := size.x
+		var h := size.y
+		if frame_tex:
+			draw_texture_rect(frame_tex, Rect2(Vector2.ZERO, Vector2(w, h)), false)
+			# Fyll selve målersporet inni gullrammen
+			var tx := w * 0.228
+			var ty := h * 0.655
+			var tw := w * 0.728
+			var th := h * 0.175
+			draw_rect(Rect2(tx, ty, tw, th), Color(0.14, 0.04, 0.04, 0.85), true)
+			if ratio > 0.005:
+				draw_rect(Rect2(tx, ty, tw * ratio, th), Color(0.88, 0.16, 0.10, 0.98), true)
+				draw_rect(Rect2(tx, ty, tw * ratio, th * 0.34), Color(1.0, 0.60, 0.36, 0.45), true)
 
 
+class PirateAirBar extends Control:
+	var ratio: float = 1.0
+	var frame_tex: Texture2D = null
+
+	func _init() -> void:
+		custom_minimum_size = Vector2(316, 105)
+		if ResourceLoader.exists("res://assets/ui/hud_underwater_bar.png"):
+			frame_tex = load("res://assets/ui/hud_underwater_bar.png") as Texture2D
+
+	func set_ratio(r: float) -> void:
+		ratio = clampf(r, 0.0, 1.0)
+		queue_redraw()
+
+	func _draw() -> void:
+		var w := size.x
+		var h := size.y
+		if frame_tex:
+			draw_texture_rect(frame_tex, Rect2(Vector2.ZERO, Vector2(w, h)), false)
+			var tx := w * 0.242
+			var ty := h * 0.635
+			var tw := w * 0.715
+			var th := h * 0.175
+			if ratio > 0.005:
+				var col := Color(0.16, 0.82, 0.98, 0.96) if ratio > 0.28 else Color(1.0, 0.32, 0.18, 0.96)
+				draw_rect(Rect2(tx, ty, tw * ratio, th), col, true)
+				draw_rect(Rect2(tx, ty, tw * ratio, th * 0.36), Color(0.75, 0.98, 1.0, 0.50), true)
+
+
+var _world_map_frame: TextureRect
 var _medallion: PirateHealthMedallion
-var _coin_badge: GoldCoinBadge
+var _gold_icon: TextureRect
 var _coin_label: Label
+var _silver_icon: TextureRect
+var _silver_label: Label
+
+var _action_box: HBoxContainer
+var _action_icon: TextureRect
 var _action_panel: PanelContainer
 var _action_label: Label
+var _action_texs: Dictionary = {}
+
+var _boss_wrap: Control
+var _boss_widget: PirateBossBar
+var _boss_name_lbl: Label
+
+var _air_widget: PirateAirBar
 
 var _dialogue_panel: PanelContainer
 var _dialogue_speaker: Label
 var _dialogue_text: Label
 var _dialogue_queue: Array = []
 
-var _boss_panel: PanelContainer
-var _boss_name_lbl: Label
-var _boss_bar: ProgressBar
-
-var _status_panel: PanelContainer
-var _objective_lbl: Label
-var _weapon_lbl: Label
 var _shop_panel: PanelContainer
 var _shop_title_lbl: Label
 var _shop_coins_lbl: Label
 var _shop_list: VBoxContainer
 var _shop_items: Array = []
-
-var _air_panel: PanelContainer
-var _air_bar: ProgressBar
 
 var _subtitle_panel: PanelContainer
 var _subtitle_speaker: Label
@@ -102,6 +172,7 @@ var _is_paused: bool = false
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
+	_preload_action_icons()
 	_build_ui()
 	GameState.health_changed.connect(_on_health_changed)
 	GameState.air_changed.connect(_on_air_changed)
@@ -118,12 +189,17 @@ func _ready() -> void:
 	_on_health_changed(GameState.health, GameState.max_health)
 	_on_air_changed(GameState.air, GameState.max_air)
 	_on_coins_changed(GameState.coins)
-	_on_weapon_changed(GameState.equipped_weapon)
-	_on_objective_changed(GameState.current_objective)
 	_on_level_changed(GameState.current_level_id)
 
 
-func _make_panel_style(bg: Color = Color(0.11, 0.07, 0.04, 0.92), border: Color = Color(0.84, 0.64, 0.26, 0.95)) -> StyleBoxFlat:
+func _preload_action_icons() -> void:
+	for k in ["talk", "portal", "travel", "underwater", "shop", "sword", "climb", "dig", "gong", "jump", "pickup", "pushpull"]:
+		var p := "res://assets/ui/hud_action_%s.png" % k
+		if ResourceLoader.exists(p):
+			_action_texs[k] = load(p) as Texture2D
+
+
+func _make_panel_style(bg: Color = Color(0.11, 0.07, 0.04, 0.90), border: Color = Color(0.86, 0.66, 0.24, 0.96)) -> StyleBoxFlat:
 	var st := StyleBoxFlat.new()
 	st.bg_color = bg
 	st.border_color = border
@@ -131,53 +207,100 @@ func _make_panel_style(bg: Color = Color(0.11, 0.07, 0.04, 0.92), border: Color 
 	st.set_corner_radius_all(12)
 	st.content_margin_left = 18
 	st.content_margin_right = 18
-	st.content_margin_top = 12
-	st.content_margin_bottom = 12
+	st.content_margin_top = 10
+	st.content_margin_bottom = 10
 	return st
 
 
 func _build_ui() -> void:
-	# 1. Bunn-venstre: Original 1:1 Pinky live-action helsemedaljong + Gullmynter
+	# 0. Verdenskartets ikoniske revne pergamentramme (kun synlig på world_map!)
+	_world_map_frame = TextureRect.new()
+	_world_map_frame.set_anchors_preset(Control.PRESET_FULL_RECT)
+	_world_map_frame.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	_world_map_frame.stretch_mode = TextureRect.STRETCH_SCALE
+	_world_map_frame.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	if ResourceLoader.exists("res://assets/ui/world_map_overlay.png"):
+		_world_map_frame.texture = load("res://assets/ui/world_map_overlay.png") as Texture2D
+	_world_map_frame.visible = false
+	add_child(_world_map_frame)
+
+	# 1. Bunn-venstre: Original 1:1 Pinky/Skute-medaljong med rød anker-helsemåler + gull- og sølvmynt
 	var bl := HBoxContainer.new()
 	bl.set_anchors_preset(Control.PRESET_BOTTOM_LEFT)
-	bl.offset_left = 22
-	bl.offset_right = 360
-	bl.offset_top = -178
-	bl.offset_bottom = -16
+	bl.offset_left = 18
+	bl.offset_right = 440
+	bl.offset_top = -196
+	bl.offset_bottom = -12
 	bl.alignment = BoxContainer.ALIGNMENT_BEGIN
-	bl.add_theme_constant_override("separation", 10)
+	bl.add_theme_constant_override("separation", 6)
+	bl.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	add_child(bl)
 
 	_medallion = PirateHealthMedallion.new()
+	_medallion.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	bl.add_child(_medallion)
 
 	var coin_wrap := HBoxContainer.new()
 	coin_wrap.size_flags_vertical = Control.SIZE_SHRINK_END
 	coin_wrap.add_theme_constant_override("separation", 8)
+	coin_wrap.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	bl.add_child(coin_wrap)
 
-	_coin_badge = GoldCoinBadge.new()
-	coin_wrap.add_child(_coin_badge)
+	_gold_icon = TextureRect.new()
+	_gold_icon.custom_minimum_size = Vector2(44, 48)
+	_gold_icon.expand_mode = TextureRect.EXPAND_FIT_WIDTH_PROPORTIONAL
+	_gold_icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+	if ResourceLoader.exists("res://assets/ui/gold_doubloon.png"):
+		_gold_icon.texture = load("res://assets/ui/gold_doubloon.png") as Texture2D
+	coin_wrap.add_child(_gold_icon)
 
 	_coin_label = Label.new()
 	_coin_label.text = "25"
 	_coin_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
-	_coin_label.add_theme_font_size_override("font_size", 30)
-	_coin_label.add_theme_color_override("font_color", Color(0.98, 0.84, 0.34))
+	_coin_label.add_theme_font_size_override("font_size", 28)
+	_coin_label.add_theme_color_override("font_color", Color(0.99, 0.88, 0.44))
 	_coin_label.add_theme_color_override("font_outline_color", Color(0.08, 0.05, 0.02, 0.96))
 	_coin_label.add_theme_constant_override("outline_size", 7)
 	coin_wrap.add_child(_coin_label)
 
-	# 2. Bunn-høyre: Kontekstuelt handlingsikon (bredt nok til klare norske beskrivelser)
+	var spacer := Control.new()
+	spacer.custom_minimum_size = Vector2(6, 1)
+	coin_wrap.add_child(spacer)
+
+	_silver_icon = TextureRect.new()
+	_silver_icon.custom_minimum_size = Vector2(40, 46)
+	_silver_icon.expand_mode = TextureRect.EXPAND_FIT_WIDTH_PROPORTIONAL
+	_silver_icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+	if ResourceLoader.exists("res://assets/ui/silver_coin.png"):
+		_silver_icon.texture = load("res://assets/ui/silver_coin.png") as Texture2D
+	coin_wrap.add_child(_silver_icon)
+
+	_silver_label = Label.new()
+	_silver_label.text = "0"
+	_silver_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	_silver_label.add_theme_font_size_override("font_size", 26)
+	_silver_label.add_theme_color_override("font_color", Color(0.92, 0.92, 0.94))
+	_silver_label.add_theme_color_override("font_outline_color", Color(0.08, 0.05, 0.02, 0.96))
+	_silver_label.add_theme_constant_override("outline_size", 7)
+	coin_wrap.add_child(_silver_label)
+
+	# 2. Bunn-høyre: Kontekstuelt originalt gull-handlingsikon + klar norsk tekst (kun nær interaksjon!)
+	_action_box = HBoxContainer.new()
+	_action_box.set_anchors_preset(Control.PRESET_BOTTOM_RIGHT)
+	_action_box.offset_left = -430
+	_action_box.offset_right = -24
+	_action_box.offset_top = -108
+	_action_box.offset_bottom = -20
+	_action_box.alignment = BoxContainer.ALIGNMENT_END
+	_action_box.add_theme_constant_override("separation", 10)
+	_action_box.visible = false
+	_action_box.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	add_child(_action_box)
+
 	_action_panel = PanelContainer.new()
-	_action_panel.set_anchors_preset(Control.PRESET_BOTTOM_RIGHT)
-	_action_panel.offset_left = -350
-	_action_panel.offset_right = -24
-	_action_panel.offset_top = -82
-	_action_panel.offset_bottom = -22
+	_action_panel.size_flags_vertical = Control.SIZE_SHRINK_CENTER
 	_action_panel.add_theme_stylebox_override("panel", _make_panel_style())
-	_action_panel.visible = false
-	add_child(_action_panel)
+	_action_box.add_child(_action_panel)
 
 	_action_label = Label.new()
 	_action_label.text = "[E] Snakk"
@@ -187,68 +310,51 @@ func _build_ui() -> void:
 	_action_label.add_theme_color_override("font_color", Color(1.0, 0.90, 0.50))
 	_action_panel.add_child(_action_label)
 
-	# 3. Boss-helsebar (topp-senter, kun synlig i bosskamper som i cave_boss_hud / graal_boss_hud)
-	_boss_panel = PanelContainer.new()
-	_boss_panel.set_anchors_preset(Control.PRESET_CENTER_TOP)
-	_boss_panel.offset_left = -260
-	_boss_panel.offset_right = 260
-	_boss_panel.offset_top = 22
-	_boss_panel.offset_bottom = 86
-	_boss_panel.add_theme_stylebox_override("panel", _make_panel_style(Color(0.16, 0.05, 0.05, 0.92), Color(0.95, 0.35, 0.25)))
-	_boss_panel.visible = false
-	add_child(_boss_panel)
+	_action_icon = TextureRect.new()
+	_action_icon.custom_minimum_size = Vector2(78, 78)
+	_action_icon.expand_mode = TextureRect.EXPAND_FIT_WIDTH_PROPORTIONAL
+	_action_icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+	_action_icon.texture = _action_texs.get("talk", null)
+	_action_box.add_child(_action_icon)
 
-	var bv := VBoxContainer.new()
-	_boss_panel.add_child(bv)
+	# 3. Boss-helsebar (topp-senter med originalt 2007 boss-portrett og gullramme, kun i bosskamper!)
+	_boss_wrap = Control.new()
+	_boss_wrap.set_anchors_preset(Control.PRESET_CENTER_TOP)
+	_boss_wrap.offset_left = -270
+	_boss_wrap.offset_right = 270
+	_boss_wrap.offset_top = 14
+	_boss_wrap.offset_bottom = 152
+	_boss_wrap.visible = false
+	_boss_wrap.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	add_child(_boss_wrap)
+
+	_boss_widget = PirateBossBar.new()
+	_boss_widget.set_anchors_preset(Control.PRESET_FULL_RECT)
+	_boss_wrap.add_child(_boss_widget)
+
 	_boss_name_lbl = Label.new()
-	_boss_name_lbl.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	_boss_name_lbl.add_theme_font_size_override("font_size", 18)
-	_boss_name_lbl.add_theme_color_override("font_color", Color(1.0, 0.84, 0.68))
-	bv.add_child(_boss_name_lbl)
+	_boss_name_lbl.set_anchors_preset(Control.PRESET_TOP_WIDE)
+	_boss_name_lbl.offset_left = 128
+	_boss_name_lbl.offset_right = -24
+	_boss_name_lbl.offset_top = 48
+	_boss_name_lbl.offset_bottom = 78
+	_boss_name_lbl.horizontal_alignment = HORIZONTAL_ALIGNMENT_LEFT
+	_boss_name_lbl.add_theme_font_size_override("font_size", 21)
+	_boss_name_lbl.add_theme_color_override("font_color", Color(1.0, 0.90, 0.58))
+	_boss_name_lbl.add_theme_color_override("font_outline_color", Color(0.08, 0.04, 0.02, 0.96))
+	_boss_name_lbl.add_theme_constant_override("outline_size", 6)
+	_boss_wrap.add_child(_boss_name_lbl)
 
-	_boss_bar = ProgressBar.new()
-	_boss_bar.show_percentage = false
-	_boss_bar.custom_minimum_size = Vector2(480, 18)
-	var bfill := StyleBoxFlat.new()
-	bfill.bg_color = Color(0.92, 0.18, 0.14)
-	bfill.set_corner_radius_all(6)
-	_boss_bar.add_theme_stylebox_override("fill", bfill)
-	bv.add_child(_boss_bar)
-
-	# 3B. Undervanns-luftmåler (1:1 swimming_hud: kun synlig i 2D-svømmenivåer!)
-	_air_panel = PanelContainer.new()
-	_air_panel.set_anchors_preset(Control.PRESET_TOP_LEFT)
-	_air_panel.offset_left = 26
-	_air_panel.offset_right = 310
-	_air_panel.offset_top = 24
-	_air_panel.offset_bottom = 84
-	_air_panel.add_theme_stylebox_override("panel", _make_panel_style(Color(0.04, 0.14, 0.22, 0.90), Color(0.32, 0.86, 0.98, 0.95)))
-	_air_panel.visible = false
-	add_child(_air_panel)
-
-	var av := VBoxContainer.new()
-	av.add_theme_constant_override("separation", 4)
-	_air_panel.add_child(av)
-	var air_lbl := Label.new()
-	air_lbl.text = "LUFT"
-	air_lbl.add_theme_font_size_override("font_size", 14)
-	air_lbl.add_theme_color_override("font_color", Color(0.68, 0.96, 1.0))
-	av.add_child(air_lbl)
-
-	_air_bar = ProgressBar.new()
-	_air_bar.show_percentage = false
-	_air_bar.max_value = 100.0
-	_air_bar.value = 100.0
-	_air_bar.custom_minimum_size = Vector2(246, 16)
-	var abg := StyleBoxFlat.new()
-	abg.bg_color = Color(0.02, 0.08, 0.14, 0.95)
-	abg.set_corner_radius_all(6)
-	var afill := StyleBoxFlat.new()
-	afill.bg_color = Color(0.18, 0.84, 0.98)
-	afill.set_corner_radius_all(6)
-	_air_bar.add_theme_stylebox_override("background", abg)
-	_air_bar.add_theme_stylebox_override("fill", afill)
-	av.add_child(_air_bar)
+	# 3B. Undervanns-luftmåler (1:1 original såpeboble-luftmåler, kun i 2D-svømmenivåer!)
+	_air_widget = PirateAirBar.new()
+	_air_widget.set_anchors_preset(Control.PRESET_TOP_LEFT)
+	_air_widget.offset_left = 20
+	_air_widget.offset_right = 336
+	_air_widget.offset_top = 14
+	_air_widget.offset_bottom = 119
+	_air_widget.visible = false
+	_air_widget.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	add_child(_air_widget)
 
 	# 4. Dialogboks (kun synlig når man snakker med karakterer)
 	_dialogue_panel = PanelContainer.new()
@@ -279,7 +385,7 @@ func _build_ui() -> void:
 	next_btn.pressed.connect(_advance_dialogue)
 	dv.add_child(next_btn)
 
-	# 4B. Kinematisk undertekst-banner for norske karakterstemmer (vises automatisk mens noen snakker!)
+	# 4B. Kinematisk undertekst-banner for norske karakterstemmer
 	_subtitle_panel = PanelContainer.new()
 	_subtitle_panel.set_anchors_preset(Control.PRESET_CENTER_BOTTOM)
 	_subtitle_panel.offset_left = -340
@@ -452,33 +558,57 @@ func _refresh_pause_voice_buttons() -> void:
 
 
 func _process(_delta: float) -> void:
-	# Vis kontekstuelt handlingsikon nederst til høyre når Pinky er nær NPC/portal/historie-objekt
 	var players := get_tree().get_nodes_in_group("player")
 	if players.is_empty() or _dialogue_panel.visible or _shop_panel.visible or _is_paused:
-		_action_panel.visible = false
+		_action_box.visible = false
 		return
 	var p := players[0] as Node3D
 	if not is_instance_valid(p):
-		_action_panel.visible = false
+		_action_box.visible = false
 		return
+	var is_boat := (GameState.current_level_id == "world_map")
 	var nearest_txt := ""
-	var best_d := 5.0
+	var action_key := "talk"
+	var best_d := 42.0 if is_boat else 5.0
 	for node in get_tree().get_nodes_in_group("interactable"):
 		if node is Node3D:
 			var d := p.global_position.distance_to((node as Node3D).global_position)
 			if d < best_d:
 				best_d = d
 				if node is PortalTrigger:
-					nearest_txt = "[E] " + (node as PortalTrigger).portal_label
+					var pt := node as PortalTrigger
+					nearest_txt = "[E] " + pt.portal_label
+					action_key = "underwater" if ("underwater" in pt.target_level_id or "brønn" in pt.portal_label.to_lower() or "dykk" in pt.portal_label.to_lower()) else ("travel" if is_boat else "portal")
 				elif node is NpcActor:
-					nearest_txt = "[E] " + (node as NpcActor).display_name
+					var na := node as NpcActor
+					nearest_txt = "[E] " + na.display_name
+					action_key = "shop" if ("kjøpmann" in na.display_name.to_lower() or "shop" in na.npc_id.to_lower()) else "talk"
 				elif node.has_method("get_interact_prompt"):
 					nearest_txt = str(node.call("get_interact_prompt"))
+					var low := nearest_txt.to_lower()
+					if "katapult" in low or "slå" in low:
+						action_key = "sword"
+					elif "klatre" in low or "stige" in low:
+						action_key = "climb"
+					elif "hopp" in low:
+						action_key = "jump"
+					elif "skyv" in low or "kasse" in low:
+						action_key = "pushpull"
+					elif "gong" in low:
+						action_key = "gong"
+					elif "grav" in low:
+						action_key = "dig"
+					else:
+						action_key = "pickup"
 				else:
 					nearest_txt = "[E] Bruk"
-	_action_panel.visible = (nearest_txt != "")
+					action_key = "pickup"
+	_action_box.visible = (nearest_txt != "")
 	if nearest_txt != "":
 		_action_label.text = nearest_txt
+		var tex: Texture2D = _action_texs.get(action_key, _action_texs.get("talk", null))
+		if tex:
+			_action_icon.texture = tex
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -509,29 +639,25 @@ func _on_health_changed(cur: float, mx: float) -> void:
 
 
 func _on_air_changed(cur: float, mx: float) -> void:
-	if is_instance_valid(_air_bar) and mx > 0.0:
-		_air_bar.max_value = mx
-		_air_bar.value = cur
+	if is_instance_valid(_air_widget) and mx > 0.0:
+		_air_widget.set_ratio(cur / mx)
 
 
 func _on_coins_changed(coins: int) -> void:
 	if is_instance_valid(_coin_label):
 		_coin_label.text = "%d" % coins
+	if is_instance_valid(_silver_label):
+		_silver_label.text = "%d" % (coins % 10)
 	if is_instance_valid(_shop_panel) and _shop_panel.visible:
 		_refresh_shop_list()
 
 
-func _on_weapon_changed(weapon_id: String) -> void:
-	if not is_instance_valid(_weapon_lbl):
-		return
-	var winfo: Dictionary = GameState.WEAPONS.get(weapon_id, {})
-	var wname := str(winfo.get("name", "Ingen"))
-	_weapon_lbl.text = "Våpen: %s   |   [1] Sverd   [2] Sprettert   [L] Lykt   [C] Kamera   [ESC] Pause" % wname
+func _on_weapon_changed(_weapon_id: String) -> void:
+	pass
 
 
-func _on_objective_changed(text: String) -> void:
-	if is_instance_valid(_objective_lbl):
-		_objective_lbl.text = "Mål: " + (text if text != "" else "Utforsk øya")
+func _on_objective_changed(_text: String) -> void:
+	pass
 
 
 func _on_shop_requested(title: String, items: Array) -> void:
@@ -579,15 +705,21 @@ func _refresh_shop_list() -> void:
 
 
 func _on_level_changed(level_id: String) -> void:
-	if is_instance_valid(_boss_panel):
-		_boss_panel.visible = false
+	var cfg := LevelCatalog.get_level(level_id)
+	var mode := str(cfg.get("mode", "adventure"))
+	# Skjul alltid forrige nivå sin boss-bar ved nivåbytte!
+	if is_instance_valid(_boss_wrap):
+		_boss_wrap.visible = false
 	if is_instance_valid(_subtitle_panel):
 		_subtitle_panel.visible = false
 	if is_instance_valid(_shop_panel):
 		_shop_panel.visible = false
-	if is_instance_valid(_air_panel):
-		var cfg := LevelCatalog.get_level(level_id)
-		_air_panel.visible = (str(cfg.get("mode", "")) == "swimming")
+	if is_instance_valid(_air_widget):
+		_air_widget.visible = (mode == "swimming")
+	if is_instance_valid(_world_map_frame):
+		_world_map_frame.visible = (level_id == "world_map")
+	if is_instance_valid(_medallion):
+		_medallion.set_ship_mode(level_id == "world_map")
 
 
 func _on_voice_line_started(speaker_name: String, text: String, _clip_key: String) -> void:
@@ -621,10 +753,12 @@ func _advance_dialogue() -> void:
 
 
 func _on_boss_health_changed(boss_name: String, cur: float, mx: float) -> void:
-	if boss_name == "" or mx <= 0.0:
-		_boss_panel.visible = false
+	if not is_instance_valid(_boss_wrap):
 		return
-	_boss_panel.visible = true
+	var is_boss_lvl := ("boss" in GameState.current_level_id)
+	if boss_name == "" or mx <= 0.0 or not is_boss_lvl:
+		_boss_wrap.visible = false
+		return
+	_boss_wrap.visible = true
 	_boss_name_lbl.text = boss_name
-	_boss_bar.max_value = mx
-	_boss_bar.value = cur
+	_boss_widget.set_boss(boss_name, cur, mx, GameState.current_level_id)

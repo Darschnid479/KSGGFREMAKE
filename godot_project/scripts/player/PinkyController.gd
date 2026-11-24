@@ -80,51 +80,15 @@ func _setup_visuals() -> void:
 	else:
 		_build_fallback_pinky()
 
-	# Sjørøversabel med realistisk slank, buet stål-klinge (ikke hvit lysende firkantpinne!)
+	# 2026 Stilisert sjørøversabel (matcher original 2007-silhuett: buet gullbøyle, lærhåndtak og blank stålklinge)
 	_sword_pivot = Node3D.new()
 	_sword_pivot.position = Vector3(0.32, 0.88, -0.18)
 	_sword_pivot.rotation_degrees = Vector3(18.0, -20.0, -12.0)
 	_visual_root.add_child(_sword_pivot)
 
-	_sword_mesh = Node3D.new()
+	_sword_mesh = _build_stylized_cutlass()
 	_sword_mesh.name = "WeaponHolder"
 	_sword_pivot.add_child(_sword_mesh)
-
-	var saber_path := "res://assets/store/polyhaven/wooden_handle_saber/wooden_handle_saber_1k.gltf"
-	var estoc_path := "res://assets/store/polyhaven/antique_estoc/antique_estoc_1k.gltf"
-	var loaded_gltf_sword := false
-	if ResourceLoader.exists(saber_path):
-		var sc_s := load(saber_path) as PackedScene
-		if sc_s:
-			var sinst := sc_s.instantiate() as Node3D
-			if sinst:
-				sinst.name = "SaberNode"
-				sinst.rotation_degrees = Vector3(-90.0, 0.0, 0.0)
-				sinst.scale = Vector3.ONE * 0.90
-				_sword_mesh.add_child(sinst)
-				loaded_gltf_sword = true
-	if ResourceLoader.exists(estoc_path):
-		var sc_e := load(estoc_path) as PackedScene
-		if sc_e:
-			var ein := sc_e.instantiate() as Node3D
-			if ein:
-				ein.name = "EstocNode"
-				ein.scale = Vector3.ONE * 0.72
-				ein.visible = false
-				_sword_mesh.add_child(ein)
-
-	if not loaded_gltf_sword:
-		var fb := MeshInstance3D.new()
-		var blade := BoxMesh.new()
-		blade.size = Vector3(0.014, 0.052, 0.72)
-		fb.mesh = blade
-		fb.position = Vector3(0.0, 0.01, -0.38)
-		var mat := StandardMaterial3D.new()
-		mat.albedo_color = Color(0.46, 0.50, 0.56)
-		mat.metallic = 0.82
-		mat.roughness = 0.30
-		fb.material_override = mat
-		_sword_mesh.add_child(fb)
 
 	# Lykt-lys (Lykte-lampe)
 	_lamp_light = OmniLight3D.new()
@@ -195,41 +159,121 @@ func _build_fallback_pinky() -> void:
 	_visual_root.add_child(body)
 
 
+func _build_stylized_cutlass() -> Node3D:
+	var root := Node3D.new()
+	var steel_mat := StandardMaterial3D.new()
+	steel_mat.albedo_color = Color(0.76, 0.80, 0.86)
+	steel_mat.metallic = 0.88
+	steel_mat.roughness = 0.22
+	var mpk := VisualEnhancer.get_pbr_pack("forged_metal")
+	if mpk.has("normal"):
+		steel_mat.normal_enabled = true
+		steel_mat.normal_texture = mpk["normal"]
+		steel_mat.normal_scale = 0.35
+
+	var gold_mat := StandardMaterial3D.new()
+	gold_mat.albedo_color = Color(0.92, 0.72, 0.22)
+	gold_mat.metallic = 0.86
+	gold_mat.roughness = 0.26
+
+	var grip_mat := StandardMaterial3D.new()
+	grip_mat.albedo_color = Color(0.28, 0.16, 0.08)
+	grip_mat.roughness = 0.78
+
+	# Lærhåndtak + rund messing-knapp
+	var grip := MeshInstance3D.new()
+	var gc := CylinderMesh.new()
+	gc.top_radius = 0.022
+	gc.bottom_radius = 0.024
+	gc.height = 0.15
+	gc.radial_segments = 14
+	grip.mesh = gc
+	grip.rotation_degrees.x = 90.0
+	grip.position = Vector3(0.0, 0.0, 0.05)
+	grip.material_override = grip_mat
+	root.add_child(grip)
+
+	var pommel := MeshInstance3D.new()
+	var ps := SphereMesh.new()
+	ps.radius = 0.032
+	ps.height = 0.064
+	pommel.mesh = ps
+	pommel.position = Vector3(0.0, 0.0, 0.13)
+	pommel.material_override = gold_mat
+	root.add_child(pommel)
+
+	# Buet gull-parerplate / håndbøyle
+	var guard := MeshInstance3D.new()
+	var gd := CylinderMesh.new()
+	gd.top_radius = 0.062
+	gd.bottom_radius = 0.055
+	gd.height = 0.022
+	gd.radial_segments = 16
+	guard.mesh = gd
+	guard.rotation_degrees.x = 90.0
+	guard.position = Vector3(0.0, 0.0, -0.025)
+	guard.material_override = gold_mat
+	root.add_child(guard)
+
+	# Buet og spiss sabelklinge bygget med SurfaceTool (null klossete BoxMesh!)
+	var st := SurfaceTool.new()
+	st.begin(Mesh.PRIMITIVE_TRIANGLES)
+	var segs := 8
+	var blade_len := 0.74
+	var rings: Array = []
+	for i in range(segs + 1):
+		var t := float(i) / float(segs)
+		var z := -0.03 - t * blade_len
+		var curve_y := sin(t * PI * 0.75) * 0.045
+		var half_w := lerpf(0.028, 0.002, pow(t, 1.35))
+		var thick := lerpf(0.009, 0.002, t)
+		var top_p := Vector3(0.0, curve_y + half_w, z)
+		var bot_p := Vector3(0.0, curve_y - half_w, z)
+		var lft_p := Vector3(-thick, curve_y, z)
+		var rgt_p := Vector3(thick, curve_y, z)
+		rings.append([top_p, rgt_p, bot_p, lft_p])
+	for i in range(segs):
+		var r0: Array = rings[i]
+		var r1: Array = rings[i + 1]
+		for k in range(4):
+			var k2 := (k + 1) % 4
+			st.add_vertex(r0[k]); st.add_vertex(r1[k]); st.add_vertex(r1[k2])
+			st.add_vertex(r0[k]); st.add_vertex(r1[k2]); st.add_vertex(r0[k2])
+	st.generate_normals()
+	var blade := MeshInstance3D.new()
+	blade.name = "BladeMesh"
+	blade.mesh = st.commit()
+	blade.material_override = steel_mat
+	root.add_child(blade)
+	return root
+
+
 func _on_weapon_changed(weapon_id: String) -> void:
 	if not is_instance_valid(_sword_mesh):
 		return
 	var info: Dictionary = GameState.WEAPONS.get(weapon_id, {})
 	var wtype := str(info.get("type", "melee"))
 	_sword_mesh.visible = (wtype == "melee") and (weapon_id != "none")
-	var saber := _sword_mesh.get_node_or_null("SaberNode") as Node3D
-	var estoc := _sword_mesh.get_node_or_null("EstocNode") as Node3D
-	if saber and estoc:
-		var use_estoc := (weapon_id == "rapier")
-		saber.visible = not use_estoc
-		estoc.visible = use_estoc
-		var tint_col := Color(0.95, 0.95, 0.98)
-		var met_boost := 0.0
+	var blade := _sword_mesh.get_node_or_null("BladeMesh") as MeshInstance3D
+	if blade and blade.material_override is StandardMaterial3D:
+		var sm := blade.material_override as StandardMaterial3D
 		match weapon_id:
 			"woodensword":
-				tint_col = Color(0.62, 0.42, 0.24)
+				sm.albedo_color = Color(0.62, 0.42, 0.24)
+				sm.metallic = 0.05
+				sm.roughness = 0.76
 			"goldsword":
-				tint_col = Color(1.0, 0.84, 0.32)
-				met_boost = 0.25
+				sm.albedo_color = Color(1.0, 0.84, 0.30)
+				sm.metallic = 0.92
+				sm.roughness = 0.18
 			"rapier":
-				tint_col = Color(0.90, 0.93, 1.0)
-				met_boost = 0.15
-		for m in _find_meshes(estoc if use_estoc else saber):
-			var mat := m.get_active_material(0)
-			if mat is StandardMaterial3D:
-				var sm := (mat as StandardMaterial3D).duplicate() as StandardMaterial3D
-				sm.albedo_color = tint_col
-				if met_boost > 0.0:
-					sm.metallic = clampf(sm.metallic + met_boost, 0.0, 0.92)
-				m.material_override = sm
-	elif _sword_mesh is MeshInstance3D:
-		var fmat := (_sword_mesh as MeshInstance3D).material_override as StandardMaterial3D
-		if fmat:
-			fmat.albedo_color = Color(0.46, 0.50, 0.56)
+				sm.albedo_color = Color(0.88, 0.93, 1.0)
+				sm.metallic = 0.94
+				sm.roughness = 0.16
+			_:
+				sm.albedo_color = Color(0.76, 0.80, 0.86)
+				sm.metallic = 0.88
+				sm.roughness = 0.22
 	if is_instance_valid(_lamp_light):
 		_lamp_light.visible = GameState.lamp_enabled
 

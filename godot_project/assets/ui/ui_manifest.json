@@ -1,0 +1,234 @@
+[
+  {
+    "file": "res://assets/ui/hud_pinky_medallion.png",
+    "source_ref": "hud/healthbg_pinky.png",
+    "size": [
+      474,
+      464
+    ]
+  },
+  {
+    "file": "res://assets/ui/hud_ship_medallion.png",
+    "source_ref": "hud/healthbg_ship.png",
+    "size": [
+      475,
+      512
+    ]
+  },
+  {
+    "file": "res://assets/ui/hud_healthbar_full.png",
+    "source_ref": "hud/healthbar_amount22.png",
+    "size": [
+      396,
+      264
+    ]
+  },
+  {
+    "file": "res://assets/ui/gold_doubloon.png",
+    "source_ref": "hud/goldcoin.png",
+    "size": [
+      228,
+      255
+    ]
+  },
+  {
+    "file": "res://assets/ui/silver_coin.png",
+    "source_ref": "hud/coppercoin.png",
+    "size": [
+      210,
+      240
+    ]
+  },
+  {
+    "file": "res://assets/ui/hud_item_sword.png",
+    "source_ref": "hud/actionitem_swordstick.png",
+    "size": [
+      238,
+      252
+    ]
+  },
+  {
+    "file": "res://assets/ui/hud_item_goldsword.png",
+    "source_ref": "hud/actionitem_goldsword.png",
+    "size": [
+      214,
+      256
+    ]
+  },
+  {
+    "file": "res://assets/ui/hud_item_slingshot.png",
+    "source_ref": "hud/actionitem_slingshot.png",
+    "size": [
+      190,
+      230
+    ]
+  },
+  {
+    "file": "res://assets/ui/hud_item_lamp.png",
+    "source_ref": "hud/actionitem_lamp.png",
+    "size": [
+      142,
+      256
+    ]
+  },
+  {
+    "file": "res://assets/ui/hud_action_talk.png",
+    "source_ref": "hud/action_talk.png",
+    "size": [
+      256,
+      254
+    ]
+  },
+  {
+    "file": "res://assets/ui/hud_action_sword.png",
+    "source_ref": "hud/action_sword.png",
+    "size": [
+      256,
+      231
+    ]
+  },
+  {
+    "file": "res://assets/ui/hud_action_jump.png",
+    "source_ref": "hud/action_jump.png",
+    "size": [
+      256,
+      238
+    ]
+  },
+  {
+    "file": "res://assets/ui/hud_action_pushpull.png",
+    "source_ref": "hud/action_pushpull.png",
+    "size": [
+      256,
+      198
+    ]
+  },
+  {
+    "file": "res://assets/ui/hud_action_climb.png",
+    "source_ref": "hud/action_climb.png",
+    "size": [
+      213,
+      256
+    ]
+  },
+  {
+    "file": "res://assets/ui/hud_action_portal.png",
+    "source_ref": "hud/action_portal.png",
+    "size": [
+      252,
+      256
+    ]
+  },
+  {
+    "file": "res://assets/ui/hud_action_shop.png",
+    "source_ref": "hud/action_shop.png",
+    "size": [
+      256,
+      254
+    ]
+  },
+  {
+    "file": "res://assets/ui/hud_action_dig.png",
+    "source_ref": "hud/action_dig.png",
+    "size": [
+      226,
+      256
+    ]
+  },
+  {
+    "file": "res://assets/ui/hud_action_underwater.png",
+    "source_ref": "hud/action_underwater.png",
+    "size": [
+      256,
+      252
+    ]
+  },
+  {
+    "file": "res://assets/ui/hud_action_gong.png",
+    "source_ref": "hud/action_gong.png",
+    "size": [
+      238,
+      256
+    ]
+  },
+  {
+    "file": "res://assets/ui/hud_action_travel.png",
+    "source_ref": "hud/action_travel.png",
+    "size": [
+      242,
+      256
+    ]
+  },
+  {
+    "file": "res://assets/ui/hud_action_pickup.png",
+    "source_ref": "hud/action_pickup.png",
+    "size": [
+      215,
+      256
+    ]
+  },
+  {
+    "file": "res://assets/ui/hud_action_thrown.png",
+    "source_ref": "hud/action_thrown.png",
+    "size": [
+      256,
+      239
+    ]
+  },
+  {
+    "file": "res://assets/ui/hud_boss_graal.png",
+    "source_ref": "graal_boss_hud/graalboss_healthbar_background.png",
+    "size": [
+      768,
+      201
+    ]
+  },
+  {
+    "file": "res://assets/ui/hud_boss_cave.png",
+    "source_ref": "cave_boss_hud/skeletonboss_healthbar_background.png",
+    "size": [
+      768,
+      203
+    ]
+  },
+  {
+    "file": "res://assets/ui/hud_boss_fatamorgana.png",
+    "source_ref": "fatamorgana_boss_hud/fatamorganaboss_healthbar_background.png",
+    "size": [
+      768,
+      187
+    ]
+  },
+  {
+    "file": "res://assets/ui/hud_boss_mk.png",
+    "source_ref": "mk_boss_hud/sabeltann_healthbar_background.png",
+    "size": [
+      768,
+      164
+    ]
+  },
+  {
+    "file": "res://assets/ui/hud_underwater_bar.png",
+    "source_ref": "swimming_hud/interface_underwater.png",
+    "size": [
+      422,
+      140
+    ]
+  },
+  {
+    "file": "res://assets/ui/world_map_overlay.png",
+    "source_ref": "world_map/overlay.png",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  {
+    "file": "res://assets/ui/menu_islands_overlay.png",
+    "source_ref": "menu/islands.png",
+    "size": [
+      855,
+      868
+    ]
+  }
+]

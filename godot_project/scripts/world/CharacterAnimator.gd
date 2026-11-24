@@ -74,18 +74,32 @@ func _bind_meshes(root: Node, forward_sign: float) -> void:
 			if orig is StandardMaterial3D:
 				var std := orig as StandardMaterial3D
 				sm.set_shader_parameter("albedo_tint", std.albedo_color)
-				sm.set_shader_parameter("base_roughness", clampf(std.roughness, 0.52, 0.90))
-				sm.set_shader_parameter("base_metallic", minf(std.metallic, 0.12))
+				sm.set_shader_parameter("base_roughness", clampf(std.roughness, 0.45, 0.90))
+				sm.set_shader_parameter("base_metallic", minf(std.metallic, 0.15))
 				if std.albedo_texture:
 					sm.set_shader_parameter("has_albedo_tex", true)
 					sm.set_shader_parameter("albedo_tex", std.albedo_texture)
 				else:
 					sm.set_shader_parameter("has_albedo_tex", false)
+				if std.normal_enabled and std.normal_texture:
+					sm.set_shader_parameter("has_normal_tex", true)
+					sm.set_shader_parameter("normal_tex", std.normal_texture)
+				else:
+					sm.set_shader_parameter("has_normal_tex", false)
+				if std.roughness_texture:
+					sm.set_shader_parameter("has_orm_tex", true)
+					sm.set_shader_parameter("orm_tex", std.roughness_texture)
+				else:
+					sm.set_shader_parameter("has_orm_tex", false)
 			else:
 				sm.set_shader_parameter("has_albedo_tex", false)
-			if fab_nrm:
+				sm.set_shader_parameter("has_normal_tex", false)
+				sm.set_shader_parameter("has_orm_tex", false)
+			if fab_nrm and not bool(sm.get_shader_parameter("has_normal_tex")):
 				sm.set_shader_parameter("has_fabric_normal", true)
 				sm.set_shader_parameter("fabric_normal_tex", fab_nrm)
+			else:
+				sm.set_shader_parameter("has_fabric_normal", false)
 			sm.set_shader_parameter("mesh_min_y", min_y)
 			sm.set_shader_parameter("mesh_height", h)
 			sm.set_shader_parameter("torso_half_w", half_w)

@@ -116,18 +116,18 @@ func load_level(level_id: String) -> void:
 	var water_y := float(cfg.get("water_y", -0.2)) if bool(cfg.get("has_water", false)) else -999.0
 
 	if mode == "boat":
-		# 1:1 Verdenskart: dybdebunn + turkis skumhav + 3D-dekorerte øyer og skip sett ovenfra
+		# 1:1 originalt Verdenskart (alle 82 originale mesher fra world_map.glb: 13 øyer, 5 havtitler, kystskum og skip!)
 		_spawn_world_map_seabed()
 		_build_world_map_islands()
-		_spawn_modern_ocean(0.0, level_bounds, true)
+		_spawn_modern_ocean(water_y, level_bounds, true)
 	elif mode == "swimming":
 		# 1:1 2D side-scrolling undervanns-svømmenivå (graal_underwater, fatamorgana_underwater, magakhan_dungeon_underwater, world_map_underwater!)
 		level_bounds = _load_underwater_world(str(cfg.get("w3d", level_id)))
 	else:
-		# 2. Last original HD .glb nivå-geometri med automatisk kollisjon og AAA PBR-oppgradering
+		# 2. Last original HD .glb nivå-geometri med automatisk kollisjon og 2026 stilisert CC0 PBR-oppgradering
 		level_bounds = _load_level_geometry(str(cfg.get("w3d", level_id)), water_y)
 		await get_tree().physics_frame
-		# 3. Moderne Sea-of-Thieves turkis hav med ekte kystskum og kaustikk
+		# 3. Stilisert hav med dybdeabsorpsjon og kystskum
 		if bool(cfg.get("has_water", false)):
 			_spawn_modern_ocean(water_y, level_bounds, false)
 
@@ -142,13 +142,17 @@ func load_level(level_id: String) -> void:
 
 	# 6. Spawn spiller (Pinky i 3D, Pinky i 2D-svømming, eller Den Sorte Dame på verdenskartet)
 	if mode == "boat":
-		var abra_pos := _get_world_map_island_pos("abra")
-		_player_node = _spawn_boat(abra_pos + Vector3(-24.0, 0.0, 32.0))
-		_player_node.rotation.y = 0.72
+		# Eksakt original startposisjon fra world_map.json (position_abra rett vest for Abra Havn og textabra!)
+		var spawn_abra := Vector3(424.9, 0.0, 309.6)
+		var pa := _find_node_pos(gp_data.get("nodes", []), "position_abra")
+		if pa["found"]:
+			spawn_abra = Vector3(pa["pos"].x, 0.0, pa["pos"].z)
+		_player_node = _spawn_boat(spawn_abra)
+		_player_node.rotation.y = 0.52
 		if _player_node is BoatController:
 			var target_isl := GameState.get_active_story_island()
 			(_player_node as BoatController).set_target_island(_get_world_map_island_pos(target_isl), true)
-		_camera_rig.set_target(_player_node, 96.0, 2.0, true, false)
+		_camera_rig.set_target(_player_node, 152.0, 6.0, true, false)
 	elif mode == "swimming":
 		_build_underwater_spline_walls(gp_data)
 		var swim_pos := _find_swimmer_spawn(level_id, gp_data)
@@ -185,6 +189,18 @@ func load_level(level_id: String) -> void:
 			_camera_rig.yaw = _player_node.rotation.y
 			_camera_rig.pitch = -0.16
 			_camera_rig.rotation = Vector3(_camera_rig.pitch, _camera_rig.yaw, 0.0)
+		elif level_id == "magakhan_jungle":
+			_player_node.rotation.y = -1.08
+			_camera_rig.set_target(_player_node, 4.4, 1.70, false)
+			_camera_rig.yaw = -1.08
+			_camera_rig.pitch = -0.16
+			_camera_rig.rotation = Vector3(_camera_rig.pitch, _camera_rig.yaw, 0.0)
+		elif level_id == "outro":
+			# Heroisk seiersbilde av Den Sorte Dame som seiler ut fra Skjebnegrotten i gyllen solnedgang!
+			_camera_rig.set_target(_player_node, 32.0, 7.5, false)
+			_camera_rig.yaw = 0.62
+			_camera_rig.pitch = -0.16
+			_camera_rig.rotation = Vector3(_camera_rig.pitch, _camera_rig.yaw, 0.0)
 		else:
 			_camera_rig.set_target(_player_node, 4.4, 1.65, false)
 			_camera_rig.yaw = _player_node.rotation.y
@@ -198,9 +214,8 @@ func load_level(level_id: String) -> void:
 		# 7. Spawn NPC-er, fiender, originale 1:1 mynter, historie-objekter, portaler og 1:1 stemme-/historiemotor!
 		_populate_entities(level_id, cfg, gp_data, spawn_pos, level_bounds)
 		_add_biome_atmosphere(level_id, spawn_pos)
-		VisualEnhancer.dress_level_with_asset_store(_world_root, level_id, spawn_pos, water_y, _actors_by_name, _make_hm_callable())
 
-	# 8. Spill av oppskalert animert historie-filmsekvens ved overgangskapitler (cave og abra starter LIVE i 3D med stemmer!)
+	# 8. Spill av filmsekvens ved overgangskapitler (cave og abra starter LIVE i 3D med stemmer!)
 	var pending_cut := GameState.get_pending_cutscene(level_id)
 	if pending_cut != "":
 		GameState.mark_cutscene_seen(pending_cut)
@@ -217,8 +232,9 @@ func load_level(level_id: String) -> void:
 func _setup_modern_environment(cfg: Dictionary) -> void:
 	_env_node = WorldEnvironment.new()
 	var env := Environment.new()
-	var is_cave := current_level_id in ["cave", "cave_end", "cave_end_bosslevel", "magakhan_dungeon"]
+	var is_cave := current_level_id in ["cave", "cave_end", "cave_end_bosslevel", "magakhan_dungeon", "magakhan_endboss_level"]
 	var is_graal := current_level_id in ["graal_bosslevel", "graal_mountain"]
+	var is_abra := current_level_id == "abra"
 	var is_swim := str(cfg.get("mode", "")) == "swimming"
 	var is_world_map := current_level_id == "world_map"
 
@@ -228,46 +244,50 @@ func _setup_modern_environment(cfg: Dictionary) -> void:
 	if is_swim:
 		env.ambient_light_source = Environment.AMBIENT_SOURCE_COLOR
 		env.ambient_light_color = Color(0.10, 0.30, 0.42)
-		env.ambient_light_energy = 0.48
+		env.ambient_light_energy = 0.50
 	elif is_cave:
 		env.ambient_light_source = Environment.AMBIENT_SOURCE_COLOR
-		env.ambient_light_color = Color(0.28, 0.25, 0.30) if current_level_id == "cave" else cfg.get("ambient_color", Color(0.22, 0.26, 0.34))
-		env.ambient_light_energy = 0.56 if current_level_id == "cave" else 0.46
+		env.ambient_light_color = Color(0.30, 0.27, 0.32) if current_level_id == "cave" else cfg.get("ambient_color", Color(0.26, 0.24, 0.30))
+		env.ambient_light_energy = 0.62 if current_level_id == "cave" else 0.58
+	elif is_abra:
+		# Original 2007 Abra Havn: mystisk oliven-gyllen forbannelse med lesbare karakterer og varm havnestemning
+		env.ambient_light_source = Environment.AMBIENT_SOURCE_SKY
+		env.ambient_light_sky_contribution = 0.60
+		env.ambient_light_color = Color(0.42, 0.44, 0.26)
+		env.ambient_light_energy = 0.58
 	else:
 		env.ambient_light_source = Environment.AMBIENT_SOURCE_SKY
 		env.ambient_light_sky_contribution = 0.78
 		env.ambient_light_color = cfg.get("ambient_color", Color(0.42, 0.58, 0.82))
-		env.ambient_light_energy = clampf(float(cfg.get("ambient_energy", 0.64)) * 0.62, 0.38, 0.52)
+		env.ambient_light_energy = clampf(float(cfg.get("ambient_energy", 0.68)) * 0.66, 0.42, 0.56)
 
-	# Balansert AgX tone-mapping + SSAO + SSIL + Screen-Space Reflections (SSR) på Forward+
+	# Balansert AgX tone-mapping + SSAO + SSIL + SSR på Forward+
 	env.tonemap_mode = Environment.TONE_MAPPER_AGX
-	env.tonemap_exposure = 1.02 if is_swim else (1.06 if current_level_id == "cave" else (1.00 if not is_cave else 1.00))
+	env.tonemap_exposure = 1.04 if (is_swim or is_abra) else (1.06 if is_cave else 1.02)
 	env.ssao_enabled = GameState.ssao_enabled
-	env.ssao_radius = 1.55
-	env.ssao_intensity = 1.45
-	env.ssao_power = 1.25
-	env.ssao_detail = 0.68
+	env.ssao_radius = 1.45
+	env.ssao_intensity = 1.38
+	env.ssao_power = 1.20
+	env.ssao_detail = 0.65
 
-	# Sanntids indirekte bounce-lys + SSR vann-/metall-speiling
 	env.ssil_enabled = GameState.ssil_enabled
-	env.ssil_radius = 3.8
-	env.ssil_intensity = 0.52
+	env.ssil_radius = 3.6
+	env.ssil_intensity = 0.48
 	env.ssr_enabled = (not is_swim)
-	env.ssr_max_steps = 48
+	env.ssr_max_steps = 40
 	env.ssr_fade_in = 0.15
 	env.ssr_fade_out = 2.0
 	env.ssr_depth_tolerance = 0.25
 
 	env.glow_enabled = GameState.glow_enabled
 	env.glow_normalized = true
-	env.glow_intensity = 0.24 if is_swim else 0.25
+	env.glow_intensity = 0.22 if is_swim else 0.26
 	env.glow_bloom = 0.06
-	env.glow_hdr_threshold = 1.30
+	env.glow_hdr_threshold = 1.28
 
 	env.fog_enabled = GameState.fog_enabled
 	env.fog_light_color = cfg.get("fog_color", Color(0.62, 0.78, 0.94))
 	if is_swim:
-		# Dybde-tåke starter BAK Pinky (11.2m) slik at Pinky og forgrunnssteinene har NULL gråblå slør over seg!
 		env.fog_mode = Environment.FOG_MODE_DEPTH
 		env.fog_depth_begin = 11.2
 		env.fog_depth_end = 36.0
@@ -275,29 +295,28 @@ func _setup_modern_environment(cfg: Dictionary) -> void:
 		env.fog_sky_affect = 0.20
 	else:
 		env.fog_mode = Environment.FOG_MODE_EXPONENTIAL
-		var fog_scale := 0.22 if is_world_map else (0.40 if current_level_id == "cave" else 0.55)
+		var fog_scale := 0.18 if is_world_map else (0.85 if is_abra else (0.42 if is_cave else 0.52))
 		env.fog_density = float(cfg.get("fog_density", 0.0010)) * fog_scale
-		env.fog_sky_affect = 0.06 if is_graal else (0.20 if is_cave else 0.08)
+		env.fog_sky_affect = 0.36 if is_abra else (0.08 if is_graal else (0.20 if is_cave else 0.08))
 
-	# Diskret volumetrisk tåke kun i dype huler/bossrom
-	if GameState.volumetric_fog_enabled and (is_cave or is_graal or is_swim):
+	if GameState.volumetric_fog_enabled and (is_cave or is_graal or is_swim or is_abra):
 		env.volumetric_fog_enabled = true
-		env.volumetric_fog_density = 0.0030 if is_swim else (0.0065 if current_level_id == "cave" else (0.012 if is_cave else 0.005))
-		env.volumetric_fog_albedo = Color(0.14, 0.66, 0.84) if is_swim else (Color(0.24, 0.85, 0.64) if "end" in current_level_id else Color(0.44, 0.40, 0.54))
-		env.volumetric_fog_emission = Color(0.01, 0.08, 0.14) if is_swim else (Color(0.03, 0.15, 0.11) if "end" in current_level_id else Color(0.02, 0.02, 0.04))
-		env.volumetric_fog_emission_energy = 0.05 if is_swim else (0.18 if current_level_id == "cave" else (0.28 if is_cave else 0.16))
+		env.volumetric_fog_density = 0.0030 if is_swim else (0.0042 if is_abra else (0.0065 if current_level_id == "cave" else (0.010 if is_cave else 0.005)))
+		env.volumetric_fog_albedo = Color(0.14, 0.66, 0.84) if is_swim else (Color(0.42, 0.45, 0.24) if is_abra else (Color(0.24, 0.85, 0.64) if "end" in current_level_id else Color(0.44, 0.40, 0.54)))
+		env.volumetric_fog_emission = Color(0.01, 0.08, 0.14) if is_swim else (Color(0.04, 0.05, 0.02) if is_abra else (Color(0.03, 0.15, 0.11) if "end" in current_level_id else Color(0.02, 0.02, 0.04)))
+		env.volumetric_fog_emission_energy = 0.05 if is_swim else (0.14 if is_abra else (0.18 if current_level_id == "cave" else (0.24 if is_cave else 0.16)))
 		env.volumetric_fog_anisotropy = 0.65
-		env.volumetric_fog_length = 42.0 if is_swim else 55.0
+		env.volumetric_fog_length = 42.0 if is_swim else 65.0
 
 	env.adjustment_enabled = true
 	env.adjustment_brightness = 1.0
-	env.adjustment_contrast = 1.03
-	env.adjustment_saturation = 1.04
+	env.adjustment_contrast = 1.04
+	env.adjustment_saturation = 1.05
 
 	_env_node.environment = env
 	_world_root.add_child(_env_node)
 
-	# Hovedlys med ren skyggekvalitet og balansert eksponering
+	# Hovedlys: ingen harde tak-gitter-skygger fra overliggende bjelker inne i fangehull/grotter!
 	_sun_node = DirectionalLight3D.new()
 	if is_swim:
 		_sun_node.light_color = Color(0.82, 0.96, 1.0)
@@ -305,22 +324,34 @@ func _setup_modern_environment(cfg: Dictionary) -> void:
 	else:
 		_sun_node.light_color = cfg.get("sun_color", Color(1.0, 0.93, 0.78))
 		_sun_node.light_energy = float(cfg.get("sun_energy", 2.15)) * 0.86
-	_sun_node.shadow_enabled = true
-	_sun_node.shadow_blur = 1.4
+	_sun_node.shadow_enabled = not is_cave
+	_sun_node.shadow_blur = 1.6
 	_sun_node.directional_shadow_mode = DirectionalLight3D.SHADOW_PARALLEL_4_SPLITS
-	_sun_node.directional_shadow_max_distance = 320.0 if is_world_map else 220.0
+	_sun_node.directional_shadow_max_distance = 520.0 if is_world_map else 220.0
 	var sang: Vector3 = Vector3(-30.0, 18.0, 0.0) if is_swim else cfg.get("sun_angles", Vector3(-36.0, 36.0, 0.0))
 	_sun_node.rotation_degrees = sang
 	_world_root.add_child(_sun_node)
 
-	# Nøytral kald himmelfylling som løfter skyggedetaljer naturlig
-	if not is_cave:
-		var fill := DirectionalLight3D.new()
-		fill.light_color = Color(0.88, 0.62, 0.36) if is_graal else (Color(0.28, 0.72, 0.90) if is_swim else Color(0.54, 0.72, 0.98))
-		fill.light_energy = 0.24 if is_graal else (0.20 if is_swim else 0.28)
-		fill.shadow_enabled = false
-		fill.rotation_degrees = Vector3(-24.0, sang.y + 165.0, 0.0)
-		_world_root.add_child(fill)
+	# Myk sekundærbelysning for god karakterlesbarhet og 3D-dybde
+	var fill := DirectionalLight3D.new()
+	if is_cave:
+		fill.light_color = Color(0.95, 0.66, 0.36) if "magakhan" in current_level_id else Color(0.42, 0.62, 0.84)
+		fill.light_energy = 0.32
+	elif is_abra:
+		fill.light_color = Color(0.68, 0.72, 0.38)
+		fill.light_energy = 0.34
+	elif is_graal:
+		fill.light_color = Color(0.88, 0.60, 0.32)
+		fill.light_energy = 0.28
+	elif is_swim:
+		fill.light_color = Color(0.28, 0.72, 0.90)
+		fill.light_energy = 0.22
+	else:
+		fill.light_color = Color(0.54, 0.74, 0.98)
+		fill.light_energy = 0.30
+	fill.shadow_enabled = false
+	fill.rotation_degrees = Vector3(-24.0, sang.y + 165.0, 0.0)
+	_world_root.add_child(fill)
 
 
 const LEVEL_GLB_FALLBACKS := {
@@ -548,15 +579,15 @@ func _build_fallback_island() -> void:
 
 
 func _spawn_world_map_seabed() -> void:
-	# Ekte havbunn på Y=-10.5 slik at DEPTH_TEXTURE skaper glødende turkise laguner rundt hver øy og safirblått dyp!
+	# Ekte havbunn på Y=-14.0 over hele det 1:1 originale verdenskartet (3800m x 3800m) for turkis dybdeabsorpsjon!
 	var bed := MeshInstance3D.new()
 	bed.name = "WorldMapSeabed"
 	var pm := PlaneMesh.new()
-	pm.size = Vector2(2400.0, 2400.0)
+	pm.size = Vector2(4200.0, 4200.0)
 	bed.mesh = pm
-	bed.position = Vector3(0.0, -10.5, 0.0)
+	bed.position = Vector3(0.0, -14.0, 0.0)
 	var mat := StandardMaterial3D.new()
-	mat.albedo_color = Color(0.02, 0.08, 0.16)
+	mat.albedo_color = Color(0.015, 0.10, 0.22)
 	mat.roughness = 1.0
 	bed.material_override = mat
 	_world_root.add_child(bed)
@@ -566,10 +597,10 @@ func _spawn_modern_ocean(water_y: float, bounds: AABB, is_world_map: bool = fals
 	var water := MeshInstance3D.new()
 	water.name = "ModernOcean"
 	var pm := PlaneMesh.new()
-	var span: float = maxf(maxf(bounds.size.x, bounds.size.z) * 2.4, 2200.0 if is_world_map else 560.0)
+	var span: float = maxf(maxf(bounds.size.x, bounds.size.z) * 2.4, 3800.0 if is_world_map else 560.0)
 	pm.size = Vector2(span, span)
-	pm.subdivide_width = 180 if is_world_map else 128
-	pm.subdivide_depth = 180 if is_world_map else 128
+	pm.subdivide_width = 160 if is_world_map else 112
+	pm.subdivide_depth = 160 if is_world_map else 112
 	water.mesh = pm
 	water.position = Vector3(0.0 if is_world_map else bounds.get_center().x, water_y, 0.0 if is_world_map else bounds.get_center().z)
 
@@ -580,26 +611,40 @@ func _spawn_modern_ocean(water_y: float, bounds: AABB, is_world_map: bool = fals
 			var bmat := base_bw.duplicate() as ShaderMaterial
 			bmat.set_shader_parameter("near_fade_min", 0.05)
 			bmat.set_shader_parameter("near_fade_max", 0.22)
-			bmat.set_shader_parameter("distance_fade_min", 1800.0)
-			bmat.set_shader_parameter("distance_fade_max", 2800.0)
-			bmat.set_shader_parameter("specular", 0.78)
-			bmat.set_shader_parameter("roughness", 0.045)
+			bmat.set_shader_parameter("distance_fade_min", 2400.0)
+			bmat.set_shader_parameter("distance_fade_max", 3600.0)
+			bmat.set_shader_parameter("specular", 0.72)
+			bmat.set_shader_parameter("roughness", 0.06)
 			bmat.set_shader_parameter("FoamWaveCount", 0)
 			bmat.set_shader_parameter("foam_fade_min", 0.0)
 			bmat.set_shader_parameter("foam_fade_max", 0.0)
-			bmat.set_shader_parameter("uv_tri_scale", Vector3(5.2, 5.2, 5.2) if is_world_map else Vector3(2.8, 2.8, 2.8))
+			bmat.set_shader_parameter("uv_tri_scale", Vector3(6.5, 6.5, 6.5) if is_world_map else Vector3(2.8, 2.8, 2.8))
 			if is_world_map:
-				bmat.set_shader_parameter("albedo", Color(0.014, 0.23, 0.43, 0.56))
-				bmat.set_shader_parameter("albedo_fresnel", Color(0.28, 0.62, 0.90, 1.0))
-				bmat.set_shader_parameter("color_shallow", Color(0.06, 0.62, 0.68, 0.72))
-				bmat.set_shader_parameter("color_deep", Color(0.010, 0.14, 0.34, 0.96))
-				bmat.set_shader_parameter("beers_law", 0.20)
+				# Original 2007 sz_scr_02.jpg: lys turkis kystlagune + klart eventyrblått åpent hav!
+				bmat.set_shader_parameter("albedo", Color(0.016, 0.28, 0.50, 0.62))
+				bmat.set_shader_parameter("albedo_fresnel", Color(0.30, 0.68, 0.94, 1.0))
+				bmat.set_shader_parameter("color_shallow", Color(0.08, 0.72, 0.78, 0.76))
+				bmat.set_shader_parameter("color_deep", Color(0.012, 0.18, 0.42, 0.96))
+				bmat.set_shader_parameter("beers_law", 0.18)
 				bmat.set_shader_parameter("depth_offset", -0.2)
 				bmat.set_shader_parameter("shore_start_blend", 0.20)
-				bmat.set_shader_parameter("shore_end_blend", 1.15)
-				bmat.set_shader_parameter("WaveFrequencies", PackedFloat32Array([0.035, 0.065, 0.11, 0.16, 0.24]))
-				bmat.set_shader_parameter("WaveSteepnesses", PackedFloat32Array([0.36, 0.24, 0.16, 0.12, 0.08]))
-				bmat.set_shader_parameter("WaveAmplitudes", PackedFloat32Array([0.48, 0.34, 0.24, 0.18, 0.12]))
+				bmat.set_shader_parameter("shore_end_blend", 1.40)
+				bmat.set_shader_parameter("WaveFrequencies", PackedFloat32Array([0.025, 0.048, 0.085, 0.13, 0.20]))
+				bmat.set_shader_parameter("WaveSteepnesses", PackedFloat32Array([0.28, 0.20, 0.14, 0.10, 0.06]))
+				bmat.set_shader_parameter("WaveAmplitudes", PackedFloat32Array([0.36, 0.24, 0.18, 0.12, 0.08]))
+			elif current_level_id == "abra":
+				# Original 2007 sz_scr_05.jpg: forbannet disig oliven-sjøgrønt havnevann!
+				bmat.set_shader_parameter("albedo", Color(0.11, 0.22, 0.16, 0.74))
+				bmat.set_shader_parameter("albedo_fresnel", Color(0.32, 0.38, 0.22, 1.0))
+				bmat.set_shader_parameter("color_shallow", Color(0.18, 0.29, 0.19, 0.78))
+				bmat.set_shader_parameter("color_deep", Color(0.06, 0.12, 0.09, 0.96))
+				bmat.set_shader_parameter("beers_law", 0.55)
+				bmat.set_shader_parameter("depth_offset", -0.1)
+				bmat.set_shader_parameter("shore_start_blend", 0.06)
+				bmat.set_shader_parameter("shore_end_blend", 0.45)
+				bmat.set_shader_parameter("WaveFrequencies", PackedFloat32Array([0.14, 0.24, 0.38, 0.62, 0.95]))
+				bmat.set_shader_parameter("WaveSteepnesses", PackedFloat32Array([0.12, 0.09, 0.06, 0.04, 0.02]))
+				bmat.set_shader_parameter("WaveAmplitudes", PackedFloat32Array([0.08, 0.06, 0.04, 0.02, 0.01]))
 			elif current_level_id == "fatamorgana_city":
 				bmat.set_shader_parameter("albedo", Color(0.025, 0.38, 0.52, 0.54))
 				bmat.set_shader_parameter("albedo_fresnel", Color(0.42, 0.76, 0.92, 1.0))
@@ -613,10 +658,10 @@ func _spawn_modern_ocean(water_y: float, bounds: AABB, is_world_map: bool = fals
 				bmat.set_shader_parameter("WaveSteepnesses", PackedFloat32Array([0.14, 0.10, 0.08, 0.05, 0.03]))
 				bmat.set_shader_parameter("WaveAmplitudes", PackedFloat32Array([0.10, 0.07, 0.05, 0.03, 0.02]))
 			else:
-				bmat.set_shader_parameter("albedo", Color(0.018, 0.28, 0.46, 0.54))
-				bmat.set_shader_parameter("albedo_fresnel", Color(0.36, 0.68, 0.90, 1.0))
-				bmat.set_shader_parameter("color_shallow", Color(0.08, 0.58, 0.64, 0.62))
-				bmat.set_shader_parameter("color_deep", Color(0.012, 0.16, 0.34, 0.94))
+				bmat.set_shader_parameter("albedo", Color(0.018, 0.32, 0.50, 0.56))
+				bmat.set_shader_parameter("albedo_fresnel", Color(0.36, 0.70, 0.92, 1.0))
+				bmat.set_shader_parameter("color_shallow", Color(0.08, 0.62, 0.68, 0.66))
+				bmat.set_shader_parameter("color_deep", Color(0.012, 0.18, 0.38, 0.94))
 				bmat.set_shader_parameter("beers_law", 0.42)
 				bmat.set_shader_parameter("depth_offset", -0.1)
 				bmat.set_shader_parameter("shore_start_blend", 0.08)
@@ -668,7 +713,7 @@ func _create_camera_rig() -> FollowCamera:
 	cam.name = "Camera3D"
 	cam.fov = 56.0
 	cam.near = 0.15
-	cam.far = 900.0
+	cam.far = 2800.0
 	cam.current = true
 	arm.add_child(cam)
 	return rig
@@ -686,6 +731,12 @@ func _find_player_spawn(level_id: String, gp_data: Dictionary, bounds: AABB) -> 
 	if level_id == "graal_bosslevel":
 		var gy := _heightmap.sample_y(-6.8, 7.85) if (_heightmap and _heightmap.valid) else 21.48
 		return Vector3(-6.8, (gy if gy > -5000.0 else 21.48) + 0.05, 7.85)
+	# Fata Morgana-bosskampen skjer inne i den fakkelfylte marmorsalen (bossroom X=[-18.5..+19.3], Z=[-28.9..+14.8])
+	if level_id == "fatamorgana_bosslevel":
+		return Vector3(0.2, 0.12, 9.2)
+	# Outro: på akterdekket til Den Sorte Dame idet skuta seiler ut fra Skjebnegrotten!
+	if level_id == "outro":
+		return Vector3(103.6, 2.25, -376.5)
 
 	var nodes: Array = gp_data.get("nodes", [])
 	for n in nodes:
@@ -695,6 +746,9 @@ func _find_player_spawn(level_id: String, gp_data: Dictionary, bounds: AABB) -> 
 			var px := float(gp[0]) * WORLD_SCALE
 			var pz := float(gp[2]) * WORLD_SCALE
 			var py := float(gp[1]) * WORLD_SCALE
+			if level_id == "magakhan_jungle":
+				px += 1.6
+				pz -= 0.4
 			if _heightmap and _heightmap.valid:
 				var hy := _heightmap.sample_y(px, pz)
 				if hy > -5000.0:
@@ -718,11 +772,12 @@ func _find_player_spawn(level_id: String, gp_data: Dictionary, bounds: AABB) -> 
 
 
 const WORLD_MAP_ISLANDS := [
-	{"name": "Abra Havn", "id": "abra", "pos": Vector3(220.0, 0.0, 130.0), "r": 24.0, "seed": 11, "theme": "harbor"},
-	{"name": "Gral", "id": "graal_mountain", "pos": Vector3(-195.0, 0.0, -195.0), "r": 26.0, "seed": 23, "theme": "castle"},
-	{"name": "Fata Morgana", "id": "fatamorgana_city", "pos": Vector3(245.0, 0.0, -145.0), "r": 24.5, "seed": 37, "theme": "desert"},
-	{"name": "Maga Khans øy", "id": "magakhan_beach", "pos": Vector3(-185.0, 0.0, 145.0), "r": 26.0, "seed": 53, "theme": "jungle"},
-	{"name": "Skattejakt-øya", "id": "treasurehunt", "pos": Vector3(10.0, 0.0, -25.0), "r": 18.5, "seed": 71, "theme": "palm"},
+	{"name": "Abra Havn", "id": "abra", "pos": Vector3(542.9, 0.0, 284.6), "dock": Vector3(440.0, 2.0, 295.0)},
+	{"name": "Gral", "id": "graal_mountain", "pos": Vector3(-395.9, 0.0, -409.8), "dock": Vector3(-355.0, 2.0, -338.0)},
+	{"name": "Fata Morgana", "id": "fatamorgana_city", "pos": Vector3(596.0, 0.0, -278.7), "dock": Vector3(452.0, 2.0, -195.0)},
+	{"name": "Maga Khans øy", "id": "magakhan_beach", "pos": Vector3(-392.4, 0.0, 282.3), "dock": Vector3(-308.0, 2.0, 338.0)},
+	{"name": "Skjebnegrotten", "id": "cave_end", "pos": Vector3(106.1, 0.0, -457.0), "dock": Vector3(122.0, 2.0, -392.0)},
+	{"name": "Skattejakt-øya", "id": "treasurehunt", "pos": Vector3(-8.1, 0.0, -37.0), "dock": Vector3(-8.1, 2.0, 18.0)},
 ]
 
 
@@ -734,209 +789,89 @@ func _get_world_map_island_pos(level_id: String) -> Vector3:
 
 
 func _build_world_map_islands() -> void:
-	# Moderne animasjonsspill-øyer fordelt utover et stort åpent karibisk hav (200-440m mellom øyene)!
+	# 1:1 originalt verdenskart med ALLE 82 originale mesher fra world_map.glb:
+	# 13 øyer (Abra, Gral, Fata Morgana, Shangri-La, Skjebnegrotten + 8 skattejaktøyer),
+	# 5 originale hav-navneskilt (textabra..textskjebnegrotten) og 13 kystskumringer (wateredge01..13)!
 	var active_story_id := GameState.get_active_story_island()
-	var islands := WORLD_MAP_ISLANDS
 
-	# Synkron prosedyrell støy- og normaltekstur (100% klar allerede på bilde 1!)
-	var micro_noise := FastNoiseLite.new()
-	micro_noise.seed = 404
-	micro_noise.noise_type = FastNoiseLite.TYPE_SIMPLEX_SMOOTH
-	micro_noise.frequency = 0.08
-	micro_noise.fractal_octaves = 5
-	var noise_img := micro_noise.get_seamless_image(256, 256)
-	var height_noise_tex := ImageTexture.create_from_image(noise_img)
-	var nrm_img := noise_img.duplicate() as Image
-	nrm_img.bump_map_to_normal_map(8.5)
-	var normal_tex := ImageTexture.create_from_image(nrm_img)
-
-	for isl in islands:
-		var root := Node3D.new()
-		root.position = isl["pos"]
-		_world_root.add_child(root)
-
-		var r: float = isl["r"]
-		var theme: String = isl["theme"]
-		var seed_v: int = int(isl["seed"])
-		var isl_id: String = str(isl["id"])
-		var is_active := (isl_id == active_story_id)
-		var unlocked := GameState.is_island_unlocked(isl_id)
-
-		var n_shape := FastNoiseLite.new()
-		n_shape.seed = seed_v
-		n_shape.noise_type = FastNoiseLite.TYPE_SIMPLEX_SMOOTH
-		n_shape.frequency = 0.095
-		n_shape.fractal_octaves = 5
-
-		var n_detail := FastNoiseLite.new()
-		n_detail.seed = seed_v + 99
-		n_detail.noise_type = FastNoiseLite.TYPE_CELLULAR
-		n_detail.frequency = 0.22
-
-		var height_fn := func(fx: float, fz: float) -> float:
-			return _sample_island_height(fx, fz, r, theme, n_shape, n_detail)
-
-		var terrain := _make_stylized_island_mesh(r, theme, height_fn, height_noise_tex, normal_tex)
-		root.add_child(terrain)
-
-		# Dekorer øya med eksakt terrenghøyde (null nedsunkne hus!), brygger, klippesteiner, busker, palmer og landemerker!
-		VisualEnhancer.decorate_world_map_island(root, r, theme, seed_v, is_active, height_fn)
-
-		# Navneskilt over øya (vises tydelig når man seiler i nærheten av øya)
-		var lbl := Label3D.new()
-		lbl.text = str(isl["name"]) + (" ★" if is_active else ("" if unlocked else " (Låst)"))
-		lbl.position = Vector3(0.0, 22.0, 0.0)
-		lbl.billboard = BaseMaterial3D.BILLBOARD_ENABLED
-		lbl.font_size = 76
-		lbl.outline_size = 18
-		lbl.visibility_range_begin = 0.0
-		lbl.visibility_range_end = 180.0
-		lbl.visibility_range_fade_mode = GeometryInstance3D.VISIBILITY_RANGE_FADE_SELF
-		lbl.modulate = Color(1.0, 0.90, 0.44) if is_active else (Color(0.96, 0.94, 0.86) if unlocked else Color(0.65, 0.68, 0.74))
-		root.add_child(lbl)
-
-		# Ankringsbøye ved øya
-		var portal: PortalTrigger = PORTAL_SCRIPT.new()
-		portal.is_world_map_buoy = true
-		portal.target_level_id = isl_id if unlocked else active_story_id
-		portal.portal_label = "Gå i land: " + str(isl["name"])
-		portal.position = (isl["pos"] as Vector3) + Vector3(0.0, 0.25, r * 0.95 + 4.5)
-		_world_root.add_child(portal)
-
-	# 1:1 original dykkebøye ute på havet (world_map_underwater1..10 skipsvrak-dykk i 2D!)
-	var dive_buoy: PortalTrigger = PORTAL_SCRIPT.new()
-	dive_buoy.is_world_map_buoy = true
-	dive_buoy.target_level_id = "world_map_underwater"
-	dive_buoy.portal_label = "Dykk til skipsvraket (2D)"
-	dive_buoy.position = Vector3(115.0, 0.25, 48.0)
-	_world_root.add_child(dive_buoy)
-
-	# Plasser originale patruljerende og senkbare fiendeskip fra world_map.glb langs havrutene!
 	if ResourceLoader.exists("res://assets/levels/world_map.glb"):
 		var sc := load("res://assets/levels/world_map.glb") as PackedScene
 		if sc:
+			var wm_inst := sc.instantiate()
+			wm_inst.name = "OriginalWorldMap"
+			_world_root.add_child(wm_inst)
+			_level_geom = wm_inst
+
+			for mi in _find_all_meshes(wm_inst):
+				var nm := mi.name.to_lower()
+				if nm in ["darklady", "railing", "frontdecoration", "darkladyrb", "directionindicator",
+					"enemyship", "enemyrailing", "enemyshiprb", "enemyship2", "enemyship2rb",
+					"alphaflags", "swimicon", "treasuremapicon", "waterglitter", "beachwater",
+					"bottom", "skybox"] or nm.ends_with("highlight"):
+					mi.visible = false
+					continue
+				if nm.ends_with("collision"):
+					mi.create_trimesh_collision()
+					mi.visible = false
+					continue
+				# Løft originale hav-kalligrafi-navn (textabra, textgraal osv.) opp til vannflaten (y=2.25) slik at de leses klart som i 2007!
+				if nm.begins_with("text"):
+					mi.position.y += 3.98
+					mi.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+				elif nm.begins_with("wateredge") or "xindicator" in nm:
+					mi.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+
+			VisualEnhancer.enhance_world_node(wm_inst, "world_map", 1.80)
+
+			# Original flytende skattekart-ikon ved første skattepunkt (slik som i sz_scr_02.jpg!)
+			for mi_src in _find_all_meshes(wm_inst):
+				if mi_src.name.to_lower() == "treasuremapicon" and mi_src.mesh:
+					for tpos in [Vector3(386.0, 5.5, 252.0), Vector3(74.6, 5.5, 35.0), Vector3(-165.8, 5.5, -55.6)]:
+						var tmi := MeshInstance3D.new()
+						tmi.mesh = mi_src.mesh
+						tmi.position = tpos
+						tmi.rotation_degrees = Vector3(18.0, 22.0, 0.0)
+						tmi.scale = Vector3.ONE * 1.15
+						_world_root.add_child(tmi)
+					break
+
+			# Patruljerende originale fiendeskip fra world_map.glb langs de store havrutene i 1:1 skala!
 			for sp_info in [
-				[Vector3(105.0, 0.0, -45.0), -0.6],
-				[Vector3(-85.0, 0.0, 20.0), 1.1],
-				[Vector3(-75.0, 0.0, -110.0), 2.2],
+				[Vector3(315.0, 0.0, 145.0), -0.6],
+				[Vector3(120.0, 0.0, -85.0), 1.1],
+				[Vector3(-190.0, 0.0, -140.0), 2.2],
+				[Vector3(-150.0, 0.0, 190.0), -1.4],
 			]:
 				var ship_vis := sc.instantiate()
-				ship_vis.scale = Vector3.ONE * 0.46
+				ship_vis.scale = Vector3.ONE * 0.88
 				for mi in _find_all_meshes(ship_vis):
 					var nm := mi.name.to_lower()
 					mi.visible = (nm in ["enemyship", "enemyrailing"])
-				VisualEnhancer.enhance_world_node(ship_vis, "abra", 0.0)
-				VisualEnhancer.attach_ship_wake(ship_vis, 1.8)
+				VisualEnhancer.enhance_world_node(ship_vis, "world_map", 1.80)
+				VisualEnhancer.attach_ship_wake(ship_vis, 2.0)
 				var eship: EnemyShip = ENEMY_SHIP_SCRIPT.new()
 				eship.name = "EnemyShip"
 				_world_root.add_child(eship)
 				eship.setup_ship(ship_vis, sp_info[0], sp_info[1])
 
+	# Ankringspunkter / landgangsportaler ved de 6 hovedøyene
+	for isl in WORLD_MAP_ISLANDS:
+		var isl_id: String = str(isl["id"])
+		var unlocked := GameState.is_island_unlocked(isl_id)
+		var portal: PortalTrigger = PORTAL_SCRIPT.new()
+		portal.is_world_map_buoy = true
+		portal.target_level_id = isl_id if unlocked else active_story_id
+		portal.portal_label = "Gå i land: " + str(isl["name"])
+		portal.position = isl["dock"]
+		_world_root.add_child(portal)
 
-func _sample_island_height(fx: float, fz: float, radius: float, theme: String, n_shape: FastNoiseLite, n_detail: FastNoiseLite) -> float:
-	var r_cur := Vector2(fx, fz).length()
-	var rt := clampf(r_cur / (radius * 1.55), 0.0, 1.0)
-	# Organisk kystlinje med tydelige viker, nes og klippeodder!
-	var ang := atan2(fz, fx)
-	var cove := sin(ang * 3.0 + float(n_shape.seed)) * 0.10 + cos(ang * 5.0 - float(n_shape.seed) * 0.5) * 0.06
-	var coast_warp := n_shape.get_noise_2d(fx * 0.72, fz * 0.72) * 0.34 + cove
-	var nd := (r_cur / radius) + coast_warp * clampf(rt * 2.1, 0.0, 1.0)
-
-	# Flere dramatiske fjellrygger og klippetopper på hver øy (skarpe 3D-skygger!)
-	var ridge := pow(1.0 - absf(n_shape.get_noise_2d(fx * 1.45, fz * 1.45)), 1.85) * 0.85
-	var crag := (0.5 + 0.5 * n_detail.get_noise_2d(fx * 1.15, fz * 1.15)) * 0.55
-	# Sekundære fjellknatter langs kanten slik at øya ikke bare er en jevn kuppel!
-	var sub_peak_a := exp(-Vector2(fx - radius * 0.38, fz + radius * 0.25).length_squared() / (radius * radius * 0.09)) * 4.4
-	var sub_peak_b := exp(-Vector2(fx + radius * 0.36, fz - radius * 0.22).length_squared() / (radius * radius * 0.08)) * 3.8
-
-	var peak := 14.5 if theme == "castle" else (9.6 if theme == "desert" else 11.8)
-	if nd < 0.96:
-		var land_t := clampf(1.0 - nd / 0.96, 0.0, 1.0)
-		var base_cone := pow(land_t, 0.62) * peak * (0.48 + 0.56 * ridge + 0.34 * crag)
-		var extra_crags := (sub_peak_a + sub_peak_b) * smoothstep(0.08, 0.45, land_t)
-		var raw_h := 0.25 + base_cone + extra_crags
-		# Tydelige bratte klippeterrasser med flate platåer (gir skarp 3D-skygge og tydelig klippeshader!)
-		var step_h := 2.6 if theme == "castle" else 2.2
-		var frac := fmod(raw_h, step_h) / step_h
-		var terrace := floorf(raw_h / step_h) * step_h + smoothstep(0.18, 0.58, frac) * step_h
-		var terr_w := 0.72 if theme == "castle" else (0.45 if theme == "desert" else 0.58)
-		return lerpf(raw_h, terrace, terr_w)
-	elif nd < 1.48:
-		var slope_t := clampf((nd - 0.96) / 0.52, 0.0, 1.0)
-		return lerpf(0.25, -11.5, slope_t * slope_t * (3.0 - 2.0 * slope_t))
-	return -11.8
-
-
-func _make_stylized_island_mesh(radius: float, theme: String, height_fn: Callable, noise_tex: Texture2D, normal_tex: Texture2D) -> MeshInstance3D:
-	var rings := 42
-	var segs := 72
-	var max_r := radius * 1.55
-	var st := SurfaceTool.new()
-	st.begin(Mesh.PRIMITIVE_TRIANGLES)
-
-	var ring_verts: Array = []
-	var ring_uvs: Array = []
-
-	for ri in range(rings + 1):
-		var rt := float(ri) / float(rings)
-		var r_cur := rt * max_r
-		var rv: Array[Vector3] = []
-		var ru: Array[Vector2] = []
-		for si in range(segs + 1):
-			var ang := (float(si) / float(segs)) * TAU
-			var fx := cos(ang) * r_cur
-			var fz := sin(ang) * r_cur
-			var h: float = -11.8 if ri == rings else float(height_fn.call(fx, fz))
-			rv.append(Vector3(fx, h, fz))
-			ru.append(Vector2(fx / max_r * 4.0, fz / max_r * 4.0))
-		ring_verts.append(rv)
-		ring_uvs.append(ru)
-
-	for ri in range(rings):
-		for si in range(segs):
-			var v00: Vector3 = ring_verts[ri][si]
-			var v10: Vector3 = ring_verts[ri + 1][si]
-			var v01: Vector3 = ring_verts[ri][si + 1]
-			var v11: Vector3 = ring_verts[ri + 1][si + 1]
-			var u00: Vector2 = ring_uvs[ri][si]
-			var u10: Vector2 = ring_uvs[ri + 1][si]
-			var u01: Vector2 = ring_uvs[ri][si + 1]
-			var u11: Vector2 = ring_uvs[ri + 1][si + 1]
-			for tri in [
-				[v00, u00], [v10, u10], [v11, u11],
-				[v00, u00], [v11, u11], [v01, u01],
-			]:
-				st.set_uv(tri[1])
-				st.add_vertex(tri[0])
-
-	st.generate_normals()
-	st.generate_tangents()
-	var mi := MeshInstance3D.new()
-	mi.mesh = st.commit()
-
-	var theme_id := 0
-	match theme:
-		"castle": theme_id = 1
-		"desert": theme_id = 2
-		"jungle": theme_id = 3
-		"palm": theme_id = 4
-		_: theme_id = 0
-
-	var smat := ShaderMaterial.new()
-	smat.shader = ISLAND_TERRAIN_SHADER
-	smat.set_shader_parameter("theme_id", theme_id)
-	smat.set_shader_parameter("noise_tex", noise_tex)
-	smat.set_shader_parameter("detail_normal_tex", normal_tex)
-	var rock_pk := VisualEnhancer.get_pbr_pack("rock_natural")
-	var sand_pk := VisualEnhancer.get_pbr_pack("coast_sand")
-	if rock_pk.has("albedo") and rock_pk.has("normal") and sand_pk.has("albedo") and sand_pk.has("normal"):
-		smat.set_shader_parameter("rock_tex", rock_pk["albedo"])
-		smat.set_shader_parameter("rock_nrm_tex", rock_pk["normal"])
-		smat.set_shader_parameter("sand_tex", sand_pk["albedo"])
-		smat.set_shader_parameter("sand_nrm_tex", sand_pk["normal"])
-		smat.set_shader_parameter("has_real_pbr", true)
-	mi.material_override = smat
-	return mi
+	# 1:1 original dykkemarkør ute på havet (world_map_underwater skipsvrak-dykk i 2D!)
+	var dive_buoy: PortalTrigger = PORTAL_SCRIPT.new()
+	dive_buoy.is_world_map_buoy = true
+	dive_buoy.target_level_id = "world_map_underwater"
+	dive_buoy.portal_label = "Dykk til skipsvraket (2D)"
+	dive_buoy.position = Vector3(338.7, 2.0, 244.7)
+	_world_root.add_child(dive_buoy)
 
 
 func _snap_to_surface(pos: Vector3, bounds: AABB) -> Vector3:
@@ -1006,9 +941,11 @@ func _find_node_pos(nodes: Array, target_lower: String) -> Dictionary:
 
 
 func _populate_entities(level_id: String, cfg: Dictionary, gp_data: Dictionary, spawn_pos: Vector3, bounds: AABB) -> void:
-	# 1:1 Greven av Gral på dragen (selve GraalBoss-dragemodellen fra graal_bosslevel.glb svever over borgen)
+	# 1:1 Greven av Gral på dragen / Fata Morgana boss-bar
 	if level_id == "graal_bosslevel":
 		GameState.emit_signal("boss_health_changed", "Greven av Gral", 260.0, 260.0)
+	elif level_id == "fatamorgana_bosslevel":
+		GameState.emit_signal("boss_health_changed", "Fatamorganas panter", 240.0, 240.0)
 
 	var hm_cb := _make_hm_callable()
 	var nodes: Array = gp_data.get("nodes", [])
@@ -1032,6 +969,8 @@ func _populate_entities(level_id: String, cfg: Dictionary, gp_data: Dictionary, 
 			Vector3(float(gp[0]) * WORLD_SCALE, float(gp[1]) * WORLD_SCALE, float(gp[2]) * WORLD_SCALE),
 			bounds
 		)
+		if level_id == "fatamorgana_bosslevel" and key == "liger":
+			pos = Vector3(0.0, 0.12, -10.5)
 
 		var matched_role := _match_character_role(key)
 		if matched_role.is_empty():
@@ -1043,6 +982,8 @@ func _populate_entities(level_id: String, cfg: Dictionary, gp_data: Dictionary, 
 
 		occupied_positions.append(pos)
 		var orig_yaw := float(n.get("godot_yaw", 0.0))
+		if level_id == "fatamorgana_bosslevel" and key == "liger":
+			orig_yaw = PI
 		if matched_role["role"] == "npc":
 			var npc: NpcActor = NPC_SCRIPT.new()
 			npc.npc_id = key

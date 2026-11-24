@@ -4,8 +4,12 @@ render_mode blend_mix, depth_draw_opaque, cull_back, diffuse_burley, specular_sc
 // Hierarkiske hofte-, kne-, skulder-, albue-, overkropp- og hode-rotasjoner med myk vekting + skarp PBR-stoffdetalj!
 
 uniform sampler2D albedo_tex : source_color, filter_linear_mipmap_anisotropic;
+uniform sampler2D normal_tex : hint_normal, filter_linear_mipmap_anisotropic;
+uniform sampler2D orm_tex : filter_linear_mipmap_anisotropic;
 uniform sampler2D fabric_normal_tex : hint_normal, filter_linear_mipmap_anisotropic, repeat_enable;
 uniform bool has_albedo_tex = true;
+uniform bool has_normal_tex = false;
+uniform bool has_orm_tex = false;
 uniform bool has_fabric_normal = false;
 uniform vec4 albedo_tint : source_color = vec4(1.0, 1.0, 1.0, 1.0);
 uniform float base_roughness : hint_range(0.05, 1.0) = 0.62;
@@ -172,33 +176,41 @@ void vertex() {
 void fragment() {
 	vec3 alb = albedo_tint.rgb;
 	if (has_albedo_tex) {
-		vec3 c_tex = texture(albedo_tex, UV).rgb;
-		vec2 tx_sz = 1.0 / max(vec2(textureSize(albedo_tex, 0)), vec2(64.0));
-		vec3 b_tex = (
-			texture(albedo_tex, UV + vec2(tx_sz.x, 0.0)).rgb +
-			texture(albedo_tex, UV - vec2(tx_sz.x, 0.0)).rgb +
-			texture(albedo_tex, UV + vec2(0.0, tx_sz.y)).rgb +
-			texture(albedo_tex, UV - vec2(0.0, tx_sz.y)).rgb
-		) * 0.25;
-		alb *= clamp(c_tex + (c_tex - b_tex) * 0.65, vec3(0.0), vec3(1.14));
+		alb *= texture(albedo_tex, UV).rgb;
 	}
 	float lum = dot(alb, vec3(0.299, 0.587, 0.114));
-	alb = mix(vec3(lum), alb, 1.05);
+	alb = mix(vec3(lum), alb, 1.06);
 
-	float nrm_d = 0.32;
-	if (has_fabric_normal) {
-		NORMAL_MAP = texture(fabric_normal_tex, UV * 10.0).rgb;
-		NORMAL_MAP_DEPTH = nrm_d;
+	float rough = base_roughness;
+	float metal = base_metallic;
+	float ao = 1.0;
+
+	if (has_orm_tex) {
+		vec3 orm = texture(orm_tex, UV).rgb;
+		ao = mix(1.0, clamp(orm.r, 0.60, 1.0), 0.65);
+		rough = clamp(orm.g, 0.18, 0.94);
+		metal = clamp(max(base_metallic, orm.b), 0.0, 1.0);
 	}
 
+	if (has_normal_tex) {
+		NORMAL_MAP = texture(normal_tex, UV).rgb;
+		NORMAL_MAP_DEPTH = 0.62;
+	} else if (has_fabric_normal) {
+		NORMAL_MAP = texture(fabric_normal_tex, UV * 6.0).rgb;
+		NORMAL_MAP_DEPTH = 0.20;
+	}
+
+	float is_warm_skin = smoothstep(0.05, 0.18, alb.r - alb.b) * smoothstep(0.32, 0.52, alb.r) * (1.0 - metal);
 	float ndotv = clamp(dot(normalize(NORMAL), normalize(VIEW)), 0.0, 1.0);
-	float rim = pow(1.0 - ndotv, 4.0) * 0.08;
+	float rim = pow(1.0 - ndotv, 3.2) * 0.14;
 
 	ALBEDO = clamp(alb, vec3(0.0), vec3(1.0));
-	METALLIC = base_metallic;
-	ROUGHNESS = clamp(max(base_roughness, 0.52), 0.48, 0.88);
-	SPECULAR = 0.24;
-	BACKLIGHT = alb * 0.22 + vec3(0.06, 0.03, 0.02);
+	METALLIC = metal;
+	ROUGHNESS = rough;
+	AO = ao;
+	SPECULAR = mix(0.40, 0.72, metal);
+	BACKLIGHT = mix(alb * 0.12, vec3(0.42, 0.22, 0.14) * alb, is_warm_skin) * (1.0 - metal);
 	RIM = rim;
-	RIM_TINT = 0.45;
+	RIM_TINT = 0.48;
+	EMISSION = mix(alb, vec3(0.95, 0.92, 0.85), 0.40) * rim * 0.65;
 }

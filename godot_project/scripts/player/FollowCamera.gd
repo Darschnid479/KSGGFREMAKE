@@ -6,7 +6,7 @@ class_name FollowCamera
 @export var follow_height: float = 1.60
 @export var default_distance: float = 4.2
 @export var min_distance: float = 2.4
-@export var max_distance: float = 180.0
+@export var max_distance: float = 280.0
 @export var smooth_speed: float = 8.5
 
 var target: Node3D

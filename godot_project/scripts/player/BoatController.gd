@@ -3,8 +3,8 @@ class_name BoatController
 ## Styring av Den Sorte Dame på verdenskartet (1:1 port av sabeltannboat.ls + mapManager_world_map.ls).
 ## Bruker den ekte HD 3D-modellen av Den Sorte Dame (darklady + railing + frontdecoration) fra world_map.glb.
 
-@export var max_speed: float = 38.0
-@export var turn_speed: float = 1.60
+@export var max_speed: float = 68.0
+@export var turn_speed: float = 1.55
 @export var cannon_cooldown: float = 1.1
 
 var camera_rig: FollowCamera
@@ -42,7 +42,7 @@ func _ready() -> void:
 			var inst := sc.instantiate()
 			_ship_visual.add_child(inst)
 			var arrow_src: MeshInstance3D = null
-			# Vis Den Sorte Dame (darklady + railing + frontdecoration) og hent original 3D retningspil (directionindicator)
+			# Vis Den Sorte Dame i 1:1 original skala mot øyene i world_map.glb + original 3D retningspil (directionindicator)
 			for mi in _find_meshes(inst):
 				var nm := mi.name.to_lower()
 				if nm == "directionindicator":
@@ -50,22 +50,21 @@ func _ready() -> void:
 					mi.visible = false
 				else:
 					mi.visible = (nm in ["darklady", "railing", "frontdecoration"])
-			inst.scale = Vector3.ONE * 0.48
-			VisualEnhancer.enhance_world_node(inst, "abra", 0.0)
+			inst.scale = Vector3.ONE * 1.0
+			VisualEnhancer.enhance_world_node(inst, "world_map", 1.80)
 			if arrow_src and arrow_src.mesh:
 				_arrow_node = MeshInstance3D.new()
 				_arrow_node.name = "DirectionIndicator"
 				_arrow_node.mesh = arrow_src.mesh
 				var arrow_mat := StandardMaterial3D.new()
-				arrow_mat.albedo_color = Color(0.96, 0.72, 0.16)
-				arrow_mat.metallic = 0.30
-				arrow_mat.roughness = 0.32
+				arrow_mat.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
+				arrow_mat.albedo_color = Color(1.0, 0.86, 0.14)
 				arrow_mat.emission_enabled = true
-				arrow_mat.emission = Color(0.88, 0.54, 0.08)
-				arrow_mat.emission_energy_multiplier = 0.45
+				arrow_mat.emission = Color(1.0, 0.82, 0.10)
+				arrow_mat.emission_energy_multiplier = 0.65
 				_arrow_node.material_override = arrow_mat
-				_arrow_node.scale = Vector3.ONE * 0.56
-				_arrow_node.position = Vector3(0.0, 2.8, -7.8)
+				_arrow_node.scale = Vector3.ONE * 1.45
+				_arrow_node.position = Vector3(0.0, 12.0, -14.0)
 				_arrow_node.visible = has_target_island
 				add_child(_arrow_node)
 			loaded_real = true
@@ -73,15 +72,15 @@ func _ready() -> void:
 	if not loaded_real:
 		_build_fallback_ship()
 
-	# Skummende kjølvann bak Den Sorte Dame
-	VisualEnhancer.attach_ship_wake(_ship_visual, 1.05)
+	# Skummende kjølvann bak Den Sorte Dame i 1:1 skala
+	VisualEnhancer.attach_ship_wake(_ship_visual, 2.2)
 
 	# Varm akterlanterne på skuta
 	var lantern := OmniLight3D.new()
-	lantern.position = Vector3(0.0, 3.6, 5.2)
-	lantern.light_color = Color(1.0, 0.76, 0.34)
-	lantern.light_energy = 4.2
-	lantern.omni_range = 20.0
+	lantern.position = Vector3(0.0, 7.2, 8.5)
+	lantern.light_color = Color(1.0, 0.78, 0.34)
+	lantern.light_energy = 5.5
+	lantern.omni_range = 32.0
 	_ship_visual.add_child(lantern)
 
 
